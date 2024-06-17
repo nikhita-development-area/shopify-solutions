@@ -1,0 +1,540 @@
+<!-- sections/mm-hp-banner-slideshow.liquid -->
+
+{%- capture slider_options -%}
+{  
+  "speed": {{ section.settings.autoplay_timeout | times: 100 }},
+  "fade": false,
+  "infinite": true,
+  "slidesToShow": 1,
+  "slidesToScroll": 1,
+  "adaptiveHeight": true,
+  "autoplay": {% if section.settings.enable_autoplay %}true{% else %}false{% endif %},
+  "autoplaySpeed": {{ section.settings.autoplay_timeout | times: 1000 }},
+  "dots": {% if section.blocks.size > 1 and section.settings.show_dots %}true{% else %}false{% endif %},
+  "arrows": true
+}
+{%- endcapture -%}
+
+<div class="mm__hp-banner" data-section-id="{{ section.id }}" data-section-type="homepage--banner-slideshow" data-slider-options='{{ slider_options }}'> 
+  <div class="js-slider-{{ section.id }}">
+    {% for block in section.blocks %}
+      {% if block.type == 'spreads_banner' %}
+         {% if block.settings.banner_link %}
+          <a href="{{ block.settings.banner-content-button-link }}">
+         {% endif %}   
+          <div class="mm__hp-banner-wrapper">
+    
+            {% if block.settings.banner-bg-image != nil %}
+              {% assign desktop_image = block.settings.banner-bg-image %}
+              {% assign mobile_image = block.settings.banner-bg-image-mbl | default: block.settings.banner-bg-image %}
+    
+              {%- capture supported_sizes -%}{%- render 'image-size', sizes: '800,900,1000,1100,1200,1300,1400,1600,1800,2000,2200', image: desktop_image -%}{%- endcapture -%}
+              {%- capture supported_sizes_mobile -%}{%- render 'image-size', sizes: '400,500,600,800,900,1000,1100,1200,1500', image: mobile_image -%}{%- endcapture -%}
+    
+              {% assign image_url = desktop_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+              {% assign image_url_mobile = mobile_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+    
+              <div class="mm-mobile-hide aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: desktop_image.aspect_ratio }}%">
+                <img class="lazyload" 
+                     data-src="{{ image_url }}" 
+                     data-widths="[{{ supported_sizes }}]"
+                     data-sizes="auto" 
+                     alt="{{ desktop_image.alt | default: 'Banner Image' | escape }}">
+              </div>
+              <div class="mm-desktop-hide mm-tablet-hide aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: mobile_image.aspect_ratio }}%">
+                <img class="lazyload" 
+                     data-src="{{ image_url_mobile }}" 
+                     data-widths="[{{ supported_sizes_mobile }}]"
+                     data-sizes="auto" 
+                     alt="{{ mobile_image.alt | default: 'Banner Image' | escape }}">
+              </div>
+            {% endif %}
+    
+            <div class="mm__hp-banner-content">
+              <div class="banner-content-block">
+                {% if block.settings.banner-content-icon != blank %}
+                <div class="mm-tablet-hide mm-mobile-hide banner-content-icon">
+                  <img class="lazyload" 
+                       data-src="{{ block.settings.banner-content-icon | img_url: 'master' }}" 
+                       alt="Banner Icon" />
+                </div>
+                {% endif %}
+    
+                <div class="hp-banner-content-text">          
+                  <div class="hp-banner-content-title">
+                    {% if block.settings.banner-content-icon != blank %}
+                      <img class="mm-desktop-hide" src="{{ block.settings.banner-content-icon | img_url: 'master' }}" alt="{{ block.settings.banner-content-icon.alt | default: 'Icon' }}" />
+                    {% endif %}
+    
+                    {% if block.settings.banner-content-title != blank %}
+                      <h2 class="block-title-{{block.id}} mm-text-black">{{ block.settings.banner-content-title }}</h2>
+                    {% endif %}
+                  </div>
+    
+                  {% if block.settings.banner-content-text != blank %}
+                    <div class="block-content-{{block.id}} mm-text-normal">{{ block.settings.banner-content-text }}</div>
+                  {% endif %}
+                  
+                    {% if block.settings.banner-content-button-link != blank and block.settings.banner-content-button != blank %}
+                      <div class="block-button-{{block.id}} banner-btn mm-text-bold">{{ block.settings.banner-content-button }}</div>
+                    {% endif %}
+                </div>
+              </div>
+            </div>
+    
+          </div>
+         {% if block.settings.banner_link %}
+          </a> 
+         {% endif %}   
+        
+      {% else %}
+
+        {% if block.settings.banner_link %}
+          <a href="{{ block.settings.banner-content-button-link }}">
+         {% endif %}   
+          <div class="mm__hp-banner-wrapper">
+
+            {% if block.settings.banner-bg-image != nil %}
+              {% assign desktop_image = block.settings.banner-bg-image %}
+              {% assign mobile_image = block.settings.banner-bg-image-mbl | default: block.settings.banner-bg-image %}
+
+              {%- capture supported_sizes -%}{%- render 'image-size', sizes: '800,900,1000,1100,1200,1300,1400,1600,1800,2000,2200', image: desktop_image -%}{%- endcapture -%}
+              {%- capture supported_sizes_mobile -%}{%- render 'image-size', sizes: '400,500,600,800,900,1000,1100,1200,1500', image: mobile_image -%}{%- endcapture -%}
+
+              {% assign image_url = desktop_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+              {% assign image_url_mobile = mobile_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+              <div class="mm-mobile-hide aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: desktop_image.aspect_ratio }}%">
+                <img class="lazyload" 
+                     data-src="{{ image_url }}" 
+                     data-widths="[{{ supported_sizes }}]"
+                     data-sizes="auto" 
+                     alt="{{ desktop_image.alt | default: 'Banner Image' | escape }}">
+              </div>
+              <div class="mm-desktop-hide mm-tablet-hide aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: mobile_image.aspect_ratio }}%">
+                <img class="lazyload" 
+                     data-src="{{ image_url_mobile }}" 
+                     data-widths="[{{ supported_sizes_mobile }}]"
+                     data-sizes="auto" 
+                     alt="{{ mobile_image.alt | default: 'Banner Image' | escape }}">
+              </div>
+            {% endif %}
+
+            {% if settings.sale_timer_enable %}
+            <div class="mm__hp-banner-timer">
+              <div class="before-sale-container">
+                {% if block.settings.before-sale-title != blank %}
+                    <h2 class="block-title-{{block.id}} mm-text-black">{{ block.settings.before-sale-title }}</h2>
+                {% endif %}
+                
+                {% if block.settings.before-sale-text != blank %}
+                  <div class="block-content-{{block.id}} mm-text-medium">{{ block.settings.before-sale-text }}</div>
+                {% endif %}
+                
+                <div class="flash__sale-timer">
+                  <div class="flash__sale-timer-block">
+                    <span class="js-sale-start-days flash__sale-block-time flash__sale-block-time-{{block.id}} mm-text-bold"></span>
+                    <span class="flash__sale-block-name flash__sale-block-name-{{block.id}}">Days</span>
+                  </div>
+                  <div class="">
+                    <span class="js-sale-start-hours  flash__sale-block-time flash__sale-block-time-{{block.id}} mm-text-bold"></span>
+                    <span class="flash__sale-block-name flash__sale-block-name-{{block.id}}">Hours</span>
+                  </div>
+                  <div class="">
+                    <span class="js-sale-start-minutes flash__sale-block-time flash__sale-block-time-{{block.id}} mm-text-bold"></span>
+                    <span class="flash__sale-block-name flash__sale-block-name-{{block.id}}">Minutes</span>
+                  </div>
+                  <div class="">
+                    <span class="js-sale-start-secs flash__sale-block-time flash__sale-block-time-{{block.id}} mm-text-bold"></span>
+                    <span class="flash__sale-block-name flash__sale-block-name-{{block.id}}">Seconds</span>
+                  </div>
+                </div>               
+                
+              </div>
+              
+              <div class="during-sale-container">
+                {% if block.settings.during-sale-title != blank %}
+                    <h2 class="block-title-{{block.id}} mm-text-black">{{ block.settings.during-sale-title }}</h2>
+                {% endif %}
+                
+                {% if block.settings.during-sale-text != blank %}
+                  <div class="block-content-{{block.id}} mm-text-medium">{{ block.settings.during-sale-text }}</div>
+                {% endif %}
+                
+                <div class="flash__sale-timer">
+                  <div class="flash__sale-timer-block">
+                    <span class="js-sale-end-days flash__sale-block-time flash__sale-block-time-{{block.id}} mm-text-bold"></span>
+                    <span class="flash__sale-block-name flash__sale-block-name-{{block.id}}">Days</span>
+                  </div>
+                  <div class="flash__sale-timer-block">
+                    <span class="js-sale-end-hours flash__sale-block-time flash__sale-block-time-{{block.id}} mm-text-bold"></span>
+                    <span class="flash__sale-block-name flash__sale-block-name-{{block.id}}">Hours</span>
+                  </div>
+                  <div class="flash__sale-timer-block">
+                    <span class="js-sale-end-minutes flash__sale-block-time flash__sale-block-time-{{block.id}} mm-text-bold"></span>
+                    <span class="flash__sale-block-name flash__sale-block-name-{{block.id}}">Minutes</span>
+                  </div>
+                  <div class="flash__sale-timer-block">
+                    <span class="js-sale-end-secs flash__sale-block-time flash__sale-block-time-{{block.id}} mm-text-bold"></span>
+                    <span class="flash__sale-block-name flash__sale-block-name-{{block.id}}">Seconds</span>
+                  </div>
+                </div> 
+              </div>
+            </div> 
+            {% endif %}
+            
+            <div class="mm__hp-banner-content">
+              <div class="">
+                <div class="hp-banner-content-text">          
+                    {% if block.settings.banner-content-button-link != blank and block.settings.banner-content-button != blank %}
+                      <div class="block-button-{{block.id}} banner-btn mm-text-bold">{{ block.settings.banner-content-button }}</div>
+                    {% endif %}
+                </div>
+              </div>
+            </div>
+
+          </div>
+         {% if block.settings.banner_link %}
+          </a> 
+         {% endif %}
+    
+      {% endif %} 
+    {% endfor %}
+  </div> 
+</div>
+
+<script>
+  // webengage code for banner
+  {% for block in section.blocks %}  
+  $(document).on("click",".block-button-{{block.id}}",function(event) {
+    //let banner_name = $(".block-title-{{block.id}}").html(); 
+    let banner_name = "{{ block.settings.webengage-banner-content-title }}";            
+    let banner_category = $(".block-button-{{block.id}}").html(); 
+    dataLayer.push({
+      'event': 'Banner Clicked',
+      'banner_name': banner_name,
+      'banner_category': banner_category,
+      'offer' : '',
+    });
+  });
+  {% endfor %}
+</script>
+
+<style>
+  {% for block in section.blocks %}  
+    .block-title-{{block.id}}, 
+    .block-content-{{block.id}} p , .flash__sale-block-name-{{block.id}} {
+      color: {{ block.settings.block-title-color | default: '#ffffff' }};
+    }
+    .block-button-{{block.id}}{
+      background-color: {{ block.settings.block-button-bg-color }};
+      color: {{ block.settings.block-button-color | default: '#ffffff' }};
+    }  
+  
+  {% if block.type ==  'sale_timer_banner' %}
+    .flash__sale-block-name-{{block.id}} {
+      color: {{ block.settings.block-title-color | default: '#ffffff' }};
+    }
+  
+    .flash__sale-block-time-{{block.id}}{
+      background-color: {{ block.settings.timer-bg-color | default: '#ffffff' }};
+      color: {{ block.settings.timer-text-color | default: '#000000' }};
+    }
+  {% endif %}
+    
+  {% endfor %}
+</style>
+
+<script>
+  
+// sale timer code goes here
+$(document).ready(function(){
+      function makeTimer() {
+
+        var saleStartTime = new Date(''+ startdate +' GMT+0530');	
+        saleStartTime = (Date.parse(saleStartTime) / 1000);
+        
+        var saleEndTime = new Date(''+ enddate +' GMT+0530');			
+        saleEndTime = (Date.parse(saleEndTime) / 1000);
+
+        var now = new Date();
+        now = (Date.parse(now) / 1000);
+
+        if(now > saleStartTime){
+          var timeLeft = saleEndTime - now;
+
+          var days = Math.floor(timeLeft / 86400); 
+          var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+          var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+          var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+          if (days < "10") { days = "0" + days; }
+          if (hours < "10") { hours = "0" + hours; }
+          if (minutes < "10") { minutes = "0" + minutes; }
+          if (seconds < "10") { seconds = "0" + seconds; }
+
+          $(".js-sale-end-days").html(days);
+          $(".js-sale-end-hours").html(hours);
+          $(".js-sale-end-minutes").html(minutes);
+          $(".js-sale-end-secs").html(seconds);
+          
+          $('.before-sale-container').hide();
+          $('.during-sale-container').show();
+        }
+        
+        if(now < saleStartTime){
+          var timeLeft = saleStartTime - now;
+
+          var days = Math.floor(timeLeft / 86400); 
+          var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+          var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+          var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+          if (hours < "10") { hours = "0" + hours; }
+          if (minutes < "10") { minutes = "0" + minutes; }
+          if (seconds < "10") { seconds = "0" + seconds; }
+
+          $(".js-sale-start-days").html(days);
+          $(".js-sale-start-hours").html(hours);
+          $(".js-sale-start-minutes").html(minutes);
+          $(".js-sale-start-secs").html(seconds);
+          
+          $('.before-sale-container').show();
+          $('.during-sale-container').hide();
+        }
+
+      }
+
+      setInterval(function() { makeTimer(); }, 1000);
+    });
+
+
+</script>
+{% schema %}
+  {
+    "name": "Homepage Banner",
+    "class": "banner-slider",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Slider Option"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_autoplay",
+        "label": "Enable Slider Autoplay",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_dots",
+        "label": "Show Slider Dots",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "autoplay_timeout",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "label": "Autoplay Timeout",
+        "default": 3
+      },
+      {
+        "type": "range",
+        "id": "autoplay_speed",
+        "min": 1,
+        "max": 8,
+        "step": 1,
+        "label": "Autoplay Speed",
+        "default": 3
+      }
+    ],
+	"blocks": [
+      {
+        "type": "spreads_banner",
+        "name": "Banner Slider",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "banner-bg-image",
+            "label": "Banner Image",
+			"info": "Recommended Size: 1440 x 800px"
+          },
+		  {
+            "type": "image_picker",
+            "id": "banner-bg-image-mbl",
+            "label": "Banner Image (Mobile)",
+			"info": "Recommended Size: 375 x 550px"
+          },
+		  {
+            "type": "image_picker",
+            "id": "banner-content-icon",
+            "label": "Title Icon",
+			"info": "Recommended Size: 150 x 100px"
+          },
+		  {
+            "type": "text",
+            "id": "banner-content-title",
+            "label": "Title",
+			"default": "Unleash the best out of food!"
+          },
+		  {
+            "type": "text",
+            "id": "webengage-banner-content-title",
+            "label": "Title for webengage"
+          },
+		  {
+            "type": "richtext",
+            "id": "banner-content-text",
+            "label": "Text"
+          },
+		  {
+            "type": "text",
+            "id": "banner-content-button",
+            "label": "Button",
+			"default": "Shop All"
+          },
+		  {
+            "type": "checkbox",
+            "id": "banner_link",
+            "label": "Link for full banner"
+          },
+		  {
+            "type": "url",
+            "id": "banner-content-button-link",
+            "label": "Link"
+          },
+		  {
+            "type": "header",
+            "content": "Color"
+          },
+          {
+            "type": "color",
+            "id": "block-title-color",
+            "label": "Text Color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "block-button-color",
+            "label": "Button Text Color",
+			"default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "block-button-bg-color",
+            "label": "Section Button Background Color",
+			"default": "#ffffff"
+          }
+        ]
+      },
+	  {
+        "type": "sale_timer_banner",
+        "name": "Sale Timer Slider",
+		"limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "banner-bg-image",
+            "label": "Banner Image",
+			"info": "Recommended Size: 1440 x 800px"
+          },
+		  {
+            "type": "image_picker",
+            "id": "banner-bg-image-mbl",
+            "label": "Banner Image (Mobile)",
+			"info": "Recommended Size: 375 x 550px"
+          },
+		  {
+            "type": "text",
+            "id": "webengage-banner-content-title",
+            "label": "Title for webengage"
+          },
+		  {
+            "type": "text",
+            "id": "banner-content-button",
+            "label": "Button",
+			"default": "Shop All"
+          },
+		  {
+            "type": "checkbox",
+            "id": "banner_link",
+            "label": "Link for full banner"
+          },
+		  {
+            "type": "url",
+            "id": "banner-content-button-link",
+            "label": "Link"
+          },
+		  {
+            "type": "header",
+            "content": "Sale Timer"
+          },
+		  {
+            "type": "text",
+            "id": "before-sale-title",
+            "label": "Sale Title (Before Sale Start)",
+			"default": "Unleash the best out of food!"
+          },
+		  {
+            "type": "richtext",
+            "id": "before-sale-text",
+            "label": "Sale Description (Before Sale Start)"
+          },
+		  {
+            "type": "text",
+            "id": "during-sale-title",
+            "label": "Sale Title (After Sale Start)",
+			"default": "Unleash the best out of food!"
+          },
+		  {
+            "type": "richtext",
+            "id": "during-sale-text",
+            "label": "Sale Title (After Sale Start)"
+          },
+		  {
+            "type": "header",
+            "content": "Color"
+          },
+          {
+            "type": "color",
+            "id": "block-title-color",
+            "label": "Text Color",
+            "default": "#ffffff"
+          },
+		  {
+            "type": "color",
+            "id": "timer-bg-color",
+            "label": "Timer Background Color",
+            "default": "#ffffff"
+          },
+		  {
+            "type": "color",
+            "id": "timer-text-color",
+            "label": "Timer Text Color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "block-button-color",
+            "label": "Button Text Color",
+			"default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "block-button-bg-color",
+            "label": "Section Button Background Color",
+			"default": "#ffffff"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner Slideshow",
+		"category": "Custom"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,42 @@
+<div class="page-width">
+  <form method="POST" id="my-form" action="https://script.google.com/a/macros/marmeto.com/s/AKfycbxQWcE9uKIuVAU9y0NG1FTQXe3sh7raWhQ_fPuaTczlV9UPLbGSViji7aro9KEE6xe2/exec">
+    <div class="grid">
+       <div class="field grid--2-col grid__item">
+        <input name="Name" type="text" id="googleName" placeholder="Name" class="field__input" required>
+        <label class="field__label" for="googleName">Name</label>
+      </div>
+      <div class="field grid--2-col grid__item">
+        <input name="Email" type="email" id="googleEmail" placeholder="Email" class="field__input" required>
+        <label class="field__label" for="googleEmail">Email</label>
+      </div>
+    </div>
+    <button class="button" type="submit">Send</button>
+  </form>  
+</div>
+<script>
+  window.addEventListener("load", function() {
+    const form = document.getElementById('my-form');
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = e.target.action;
+      fetch(action, {
+        method: 'POST',
+        body: data,
+      })
+      .then(() => {
+        alert("Success!");
+      })
+    });
+  });
+</script>
+{% schema %}
+  {
+    "name": "Google Sheet Form",
+    "presets": [
+      {
+        "name": "Google Sheet Form"
+      }
+    ]
+  }
+{% endschema %}
