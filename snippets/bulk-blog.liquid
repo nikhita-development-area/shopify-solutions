@@ -1,0 +1,119 @@
+<style>
+  #startProcessButton {
+    background-color: #4CAF50; /
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  #startProcessButton:hover {
+    background-color: #45a049;
+  }
+</style>
+
+<button id="startProcessButton">Start Process</button>
+
+<script>
+    const accessToken = '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'; 
+    const sheetKey = '1Fggpiv7ruPtE98TvXCktbVHTXsb4eLnqizYpvYZIazU';
+    const shopName = 'nikhita-development-area';
+    const sheetApiKey = 'AIzaSyBvte5VRf_dNcfODHhP5_yo6kZHP9POEhE';
+
+    async function fetchSheetData() {
+      const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetKey}/values/Sheet1?key=${sheetApiKey}`;
+      const response = await fetch(url);
+      const data = await response.json();
+
+      if (data.values) {
+        return data.values;
+      } else {
+        throw new Error('Unable to fetch data from Google Sheets.');
+      }
+    }
+
+    function formatBlogPost(sheetData) {
+      const [headers, ...rows] = sheetData;
+      return rows.map(row => {
+        const post = {};
+        headers.forEach((header, index) => {
+          post[header.toLowerCase()] = row[index];
+        });
+        return post;
+      });
+    }
+
+    function parseMetafields(metafieldsString) {
+      if (!metafieldsString) return [];
+      const metafieldsArray = metafieldsString.split('|');
+      return metafieldsArray.map(metafieldString => {
+        const regex = /(\w+)\.(\w+)\.(\w+):(.+)/;
+        const match = metafieldString.match(regex);
+        if (match) {
+          return {
+            namespace: match[1],
+            key: match[2],
+            value_type: match[3],
+            value: match[4]
+          };
+        }
+        return null;
+      }).filter(metafield => metafield !== null);
+    }
+
+    async function createShopifyBlogPost(post) {
+      const url = `https://${shopName}.myshopify.com/admin/api/2023-04/blogs/${post.blogid}/articles.json`;
+
+      const metafields = parseMetafields(post.metafield);
+
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'X-Shopify-Access-Token': accessToken,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          article: {
+            title: post.title,
+            body_html: post.content || ' ',
+            metafields: metafields
+          }
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.log('response data', errorData)
+        throw new Error(`Failed to create blog post: ${errorData.errors}`);
+      }
+
+      const data = await response.json();
+      return data;
+    }
+
+    async function run() {
+      try {
+        const sheetData = await fetchSheetData();
+        const posts = formatBlogPost(sheetData);
+
+        for (const post of posts) {
+          const result = await createShopifyBlogPost(post);
+          console.log('Created blog post:', result);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+
+  document.getElementById('startProcessButton').addEventListener('click', function() {
+    this.disabled = true;
+    run();
+  });
+</script>
