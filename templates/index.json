@@ -1,1 +1,211 @@
-{"sections":{"block-test":{"type":"section-block","blocks":{"d142f2d6-e575-48c0-aeeb-92859962726c":{"type":"left-block","settings":{"heading":"Summer Sale","sub-heading":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the.","button-text":"shop now","button_link":"shopify:\/\/products\/milkshake-chocolate-180-ml-rs-40-v-bowenpally","paragraph":"$245"}},"f1c98ebe-4a1a-4e98-acfc-6f1b16f28a19":{"type":"left-block","settings":{"heading":"Summer sale 2","sub-heading":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the.","button-text":"shop now","button_link":"shopify:\/\/collections","paragraph":""}}},"block_order":["d142f2d6-e575-48c0-aeeb-92859962726c","f1c98ebe-4a1a-4e98-acfc-6f1b16f28a19"],"disabled":true,"settings":{"home_welcome_message":"Welcome to my shop!","padding_top":36,"padding_bottom":36}},"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Image banner","heading_size":"h0"}},"text":{"type":"text","settings":{"text":"Give customers details about the banner image(s) or content on the template.","text_style":"body"}},"button":{"type":"buttons","settings":{"button_label_1":"Shop all","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading","text","button"],"settings":{"image":"{{ shop.brand.logo }}","image_overlay_opacity":40,"image_height":"large","adapt_height_first_image":false,"desktop_content_position":"bottom-center","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","stack_images_on_mobile":false,"show_text_below":false}},"rich_text":{"type":"rich-text","blocks":{"heading":{"type":"heading","settings":{"heading":"<h1>Talk about your brand<\/h1>","heading_size":"h1"}},"text":{"type":"text","settings":{"text":"<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"}}},"block_order":["heading","text"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":0}},"featured_collection":{"type":"featured-collection","disabled":true,"settings":{"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"all","products_to_show":8,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":true,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":28,"padding_bottom":36}},"collage":{"type":"collage","blocks":{"32e870cb-186d-4670-aac7-a24e7ecc3c75":{"type":"product","settings":{"product":"milkshake-strawberry-180-ml-rs-40-v-dwarka","second_image":false}},"product":{"type":"product","settings":{"product":"epigamia-natural-greek-yogurt-400gm-v-bowenpally","second_image":true}},"3d9c97e4-20b1-4154-8979-af8aaacb317e":{"type":"product","settings":{"product":"milkshake-chocolate-180-ml-rs-40-v-kurla","second_image":false}}},"block_order":["32e870cb-186d-4670-aac7-a24e7ecc3c75","product","3d9c97e4-20b1-4154-8979-af8aaacb317e"],"settings":{"heading":"Multimedia collage","heading_size":"h2","desktop_layout":"left","mobile_layout":"collage","card_styles":"product-card-wrapper","color_scheme":"background-1","padding_top":36,"padding_bottom":36}},"video":{"type":"video","settings":{"heading":"","heading_size":"h1","video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","description":"","full_width":false,"color_scheme":"background-1","padding_top":36,"padding_bottom":36}},"34495eb1-00ec-4914-adb3-ffdb5a0a3e19":{"type":"metaobject-test","custom_css":["h2 {font-size: 30px; font-weight: 600;}",".metaobject-text {color: #000;}",".metaobject--container {display: flex; align-items: center; gap: 5rem; margin: 50px auto;}",".metaobject-img--container {width: 50%; height: 40rem;}",".metaobject-img--container img {width: 100%; height: 100%; object-fit: cover;}",".metaobject-content--container {width: 50%;}"],"settings":{}},"692860df-ac70-48e7-b922-3a06941bea56":{"type":"featured-blog","disabled":true,"settings":{"heading":"Blog posts","heading_size":"h1","blog":"hair-doctors","post_limit":3,"columns_desktop":3,"color_scheme":"background-1","show_image":true,"show_date":true,"show_author":false,"show_view_all":true,"padding_top":36,"padding_bottom":36}},"ef8bed19-3ed5-4fab-af8d-a2642a3523f4":{"type":"prebuild-form-solution","settings":{}},"image_carousel_dMywnp":{"type":"image-carousel","blocks":{"custom_pB86JT":{"type":"custom","settings":{}},"custom_ejFt6J":{"type":"custom","settings":{}},"custom_nAdaQV":{"type":"custom","settings":{}},"custom_GE3CAx":{"type":"custom","settings":{}},"custom_EYAkEY":{"type":"custom","settings":{}},"custom_YXhKtk":{"type":"custom","settings":{}},"custom_9bim7K":{"type":"custom","settings":{}},"custom_kBpzkr":{"type":"custom","settings":{}},"custom_GKeJUq":{"type":"custom","settings":{}}},"block_order":["custom_pB86JT","custom_ejFt6J","custom_nAdaQV","custom_GE3CAx","custom_EYAkEY","custom_YXhKtk","custom_9bim7K","custom_kBpzkr","custom_GKeJUq"],"settings":{}}},"order":["block-test","image_banner","rich_text","featured_collection","collage","video","34495eb1-00ec-4914-adb3-ffdb5a0a3e19","692860df-ac70-48e7-b922-3a06941bea56","ef8bed19-3ed5-4fab-af8d-a2642a3523f4","image_carousel_dMywnp"]}
+{
+  "sections": {
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>What to Expect?<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Delicate, lighter body cup with complex aroma and flavours<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "image_content_blocks_WWNakr": {
+      "type": "image-content-blocks",
+      "blocks": {
+        "testimonial_content_yRffFV": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/coffee_Icon_432c6374-1c3f-4cfe-8fda-a05ce5d8e3d8.png",
+            "block_title": "Coffee Beans",
+            "sub_text": "15g of coffee beans (or pre-ground coffee in size suitable for the specific brewer)",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        },
+        "testimonial_content_JmmQNd": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/coffee_Icon_1.png",
+            "block_title": "Water",
+            "sub_text": "210 ml of water",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        },
+        "testimonial_content_h76Vt8": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/category_icons_Manual_Brewers_1_1.png",
+            "block_title": "Pour Over",
+            "sub_text": "Pour Over brewer and suitable filter paper",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        },
+        "testimonial_content_LK4RU4": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Frame.png",
+            "block_title": "Coffee Cup",
+            "sub_text": "Kettle and coffee cup",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        },
+        "testimonial_content_gfU649": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/coffee_Icon_1.png",
+            "block_title": "Water",
+            "sub_text": "210 ml of water",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        },
+        "testimonial_content_E8aiwT": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Frame_1.png",
+            "block_title": "Scale",
+            "sub_text": "Scale for precision (if required)",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        },
+        "testimonial_content_LwD8ng": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/category_icons_Manual_Brewers_1_1.png",
+            "block_title": "Pour Over",
+            "sub_text": "Pour Over brewer and suitable filter paper",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        },
+        "testimonial_content_KtJVbA": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Frame.png",
+            "block_title": "Coffee Cup",
+            "sub_text": "Kettle and coffee cup",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_content_yRffFV",
+        "testimonial_content_JmmQNd",
+        "testimonial_content_h76Vt8",
+        "testimonial_content_LK4RU4",
+        "testimonial_content_gfU649",
+        "testimonial_content_E8aiwT",
+        "testimonial_content_LwD8ng",
+        "testimonial_content_KtJVbA"
+      ],
+      "settings": {
+        "heading": "<h2>What You'll Need?<\/h2>",
+        "padding_top": 20,
+        "padding_bottom": 50
+      }
+    },
+    "brewer_guide_g3NpiD": {
+      "type": "brewer-guide",
+      "blocks": {
+        "testimonial_content_RPFRjW": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Rectangle_598.png",
+            "block_title": "Place the brewer on top of a carafe or cup",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        },
+        "testimonial_content_wW4KRC": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Frame_2608760.png",
+            "block_title": "Fold the seam of the filter paper and place it onto the cone",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        },
+        "testimonial_content_6w6RB3": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Frame_2608639.png",
+            "block_title": "Fold the seam of the filter paper and place it onto the cone Rinse (pre-wet) the cone by gently pouring hot water over it",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        },
+        "testimonial_content_kRKz9R": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Rectangle_598.png",
+            "block_title": "Discard the water and place the cone over the carafe",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        },
+        "testimonial_content_VVWrHV": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Frame_2608639.png",
+            "block_title": "Fold the seam of the filter paper and place it onto the cone Rinse (pre-wet) the cone by gently pouring hot water over it",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        },
+        "testimonial_content_k8KRjc": {
+          "type": "testimonial-content",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Frame_2608760.png",
+            "block_title": "Fold the seam of the filter paper and place it onto the cone",
+            "heading_font_size": 16,
+            "heading_font_weight": 400
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_content_RPFRjW",
+        "testimonial_content_wW4KRC",
+        "testimonial_content_6w6RB3",
+        "testimonial_content_kRKz9R",
+        "testimonial_content_VVWrHV",
+        "testimonial_content_k8KRjc"
+      ],
+      "settings": {
+        "heading": "<h2>Step-by-Step Guide<\/h2>",
+        "padding_top": 20,
+        "padding_bottom": 51
+      }
+    }
+  },
+  "order": [
+    "rich_text",
+    "image_content_blocks_WWNakr",
+    "brewer_guide_g3NpiD"
+  ]
+}
