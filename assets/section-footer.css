@@ -505,6 +505,10 @@ noscript .localization-selector.link {
   display: none;
 }
 
+a.header__heading-link {
+  padding: 0;
+}
+
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
   @media screen and (max-width: 749px) {
