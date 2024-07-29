@@ -1,0 +1,76 @@
+{% comment %} <button type="button" class="btn btn-primary d-none" data-toggle="modal" data-target=".bd-example-modal-sm">Login</button> {% endcomment %}
+
+<div class="modal fade bd-example-modal-sm login__popup" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-sm login-pop" modal__login>
+<div class="modal-content border rounded-lg text-center">
+    <div class="px-3 pt-2 pt-md-3 pb-4">
+        <button type="button" class="login__primary_btn close text-right" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" close__btn>&times;</span>
+        </button>
+
+        <form name="login_form" class="flex flex-col items-center mt-4">
+            <div class="before__login px-3 px-md-0">
+                <p class="lwo_text mb-5 position-relative">Login with OTP</p>
+                <div class="flex flex-col max-w-xs gap-2 mx-auto text-gray-700 enter_mob px-2 px-md-3" bis_skin_checked="1">
+                    <label for="phone_number" class="phone_number text-xl md:text-2xl mt-3">Enter your mobile
+                        number</label>
+                    <div class="d-flex user__phone"><input class="text-center" id="phone_number_prefix"
+                            name="phone_number" type="tel" value="+91" readonly>
+                        <input id="phone_number" name="phone_number" type="tel"
+                            value="" maxlength="10" onkeypress="return alpha(event)" autocomplete="off" inputmode="numeric">
+                    </div>
+                    <div class="mt-4 phone--number">
+                    </div>
+                    <p class="block text-sm text-brand-gray-light mt-5 mb-3 msg_text text-black"><span class="d-none d-md-block">We will send you an One Time Password<br>on this mobile number</span><span class="d-md-none">We will send you an One Time Password on this mobile number</span>
+                    </p>
+                </div>
+                <div class="enter_otp">
+                    <div class="py-3 px-3">
+                        <h5 class="m-0 text-black font-weight-bold enter_otp_text">Enter OTP</h5>
+                 
+                        <div class="d-flex flex-row justify-content-center border rounded-lg mx-auto my-1 user__otp p-1" id="otp" data-group-name="digits" autocomplete="off" >
+                            <input class="text-center form-control form-control1" type="text" id="digit-1" name="digit-1" data-next="digit-2" maxlength="1" inputmode="numeric"/> 
+                            <input class="text-center form-control form-control2" type="text" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" maxlength="1" inputmode="numeric"/> 
+                            <input class="text-center form-control form-control3" type="text" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" maxlength="1" inputmode="numeric" /> 
+                            <input class="text-center form-control form-control4" type="text" id="digit-4" name="digit-4" data-next="digit-5" data-previous="digit-3" maxlength="1" inputmode="numeric"/> 
+                            <input class="text-center form-control form-control5" type="text" id="digit-5" name="digit-5" data-next="digit-6" data-previous="digit-4" maxlength="1" inputmode="numeric"  /> 
+                            <input class="text-center form-control form-control6" type="text" id="digit-6" name="digit-6" data-previous="digit-5" maxlength="1" inputmode="numeric"  /> 
+                        </div>
+                
+                        <p class="mobile-text wrong___OTP">Enter the OTP send to 
+                            <b class="font-weight-bold mobileNumber" id="resend_phone">+91 86684833</b>
+                        </p>
+                        <div class="text-center mt-5 d-flex justify-content-center text-black" resend_otp_btn>
+                            <button id="resendButton" disabled class="font-weight-bold cursor bg-transparent border-0">
+                                Resend
+                            </button> 
+                            <span class="mobile-text otp_msg">OTP in <span id="resendcountdowntimer">59</span> sec </span>
+                        </div>
+                    </div>
+                </div>
+                <button id="send_otp_btn" type="submit" class="btn px-10 py-2 shadow-md rounded-xl send_otp w-100 text-black">
+                    <span class="capitalize font-weight-bold popup-btn">SEND OTP</span>
+                </button>
+                <button id="go_home_btn" type="submit" class="btn px-10 py-2 shadow-md rounded-xl send_otp w-100 d-none text-black">
+                    <span class="capitalize font-weight-bold  popup-btn">Take The Hair Test</span>
+                </button>
+                <button id="login_btn" type="submit" class="btn px-10 py-2 shadow-md rounded-xl login_btn w-100 text-black">
+                    <span class="capitalize font-weight-bold  popup-btn">LOGIN</span>
+                </button>
+            </div>
+            <div class="after-login px-3 px-md-0 d-none">
+                <div class="px-3 pt-3 text-center">
+                    <p class="font-weight-bold user__name m-0">Hi <span user___name>User</span>,</p>
+                    <p class="user__status mb-5">You're currently logged in.</p>
+                    <hr width="100%" class="my-4" style="background-color: #B3CE8F;">
+                    <p class="user__status">Click Here to <span class="red-color logout_btn" logout__btn> logout.</span></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+{% style %}
+  .lwo_text,.phone_number{font-weight:700;color:#000}#resendButton,.logout_btn{text-decoration:underline}.lwo_text{font-size:26px;line-height:35px;text-align:center}.login_btn,.send_otp{background:#b7d340!important;border-color:#b7d340!important}.phone_number{font-size:14px;line-height:15px}.lwo_text:after{content:"";position:absolute;background:#212529;display:block;height:3px;width:20px;left:50%;transform:translate(-50%);bottom:-25%}.msg_text{font-weight:400;font-size:12px;line-height:15px}.login-pop{top:20%}.enter_otp,.login_btn{display:none}.enter_otp div input{border:unset;border-radius:unset;border-right:1px solid #ced4da;padding:1px;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out;overflow:visible;word-wrap:break-word}.enter_otp div input:nth-child(6n+0){border:unset}.enter_otp .form-control:focus{color:#495057;background-color:#fff;border-color:#000;outline:0;box-shadow:unset}#phone_number_prefix{width:20%;padding:0;border:none;border-right:2px solid #ccc;pointer-events:none}#phone_number{width:80%;border:none;padding:8px 15px 8px 8px;margin-left:1px}.user__name{font-size:26px;line-height:35px;color:#000}.user__status{font-size:18px;line-height:25px;color:#414143}.logout_btn{cursor:pointer}.user__phone{border:1px solid #ccc;padding:6px;border-radius:9px}.popup-btn{font-size:20px;line-height:27px;letter-spacing:normal}#phone_number:focus-visible{outline:black 1px;box-shadow:none}button.login__primary_btn.close{font-weight:400;opacity:1;font-size:24px}.wrong___OTP{font-size:12px;line-height:15px;color:#000}#incorrect__otp{font-size:17px}.after-login-lg{max-width:500px}button#go_home_btn,button#login_btn,button#send_otp_btn{font-size:23px;line-height:33px}.enter_otp_text{font-size:14px;line-height:15px}.red-color{color:red}@media only screen and (max-width:767px){.login-pop{top:25%}.login-pop.after-login-popup{top:60%}.modal-dialog.login-pop{margin:0 2.5rem}.user__status{font-size:13px;line-height:15px}#go_home_btn .popup-btn{font-size:18px}}.login_phone_focus:focus{border:2px solid red!important;-webkit-box-shadow:0 0 0 2px red;box-shadow:0 0 0 2px red;outline:unset}
+{% endstyle %}

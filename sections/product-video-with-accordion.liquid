@@ -1,0 +1,97 @@
+<!-- section/product-video-width-accordion -->
+<div class="product-video-width-accourdion">
+   <div class="container">
+      <div class="main-full">
+         <div class="combo-side combo-side-img">
+          {% for media in product.media %}
+            {% if media.alt == 'how-work' and product.handle != 'traya-hydrate-damage-repair-shampoo-with-baobab-tree-extracts-and-vegan-keratin-100-safe-sulphate-and-paraben-free' and product.handle != 'digest-boost-for-improved-digestive-ability-traya-health' and product.handle != 'traya-repair-damage-repair-conditioner-with-baobab-tree-extracts-and-vegan-keratin-100-safe-sulphate-and-paraben-free' and product.handle != 'ketoconazole-2-night-lotion' and product.handle != 'consti-clear-for-improved-bowel-movement' and product.handle != 'cholest-vati-natural-metabolic-booster-that-lowers-cholesterol' %}
+              {{ media | video_tag: controls: true, image_size: "800x" }}
+            {% elsif media.alt == 'how-work' and product.handle == 'ketoconazole-2-night-lotion' %}
+               <img src="{{ media.preview_image | img_url: '400x', scale: 2 }}" alt="{{ media.alt }}" class="" style="top: 0; transform: translate(0); z-index: 1;" width="" height="">
+            {% elsif media.alt == 'how-work' and product.handle == 'traya-hydrate-damage-repair-shampoo-with-baobab-tree-extracts-and-vegan-keratin-100-safe-sulphate-and-paraben-free' %}
+               <img src="{{ media.preview_image | img_url: '400x', scale: 2 }}" alt="{{ media.alt }}" class="" style="top: 0; transform: translate(0); z-index: 1;" width="" height="">
+              {% elsif media.alt == 'how-work' and product.handle == 'traya-repair-damage-repair-conditioner-with-baobab-tree-extracts-and-vegan-keratin-100-safe-sulphate-and-paraben-free' %}
+               <img src="{{ media.preview_image | img_url: '400x', scale: 2 }}" alt="{{ media.alt }}" class="" style="top: 0; transform: translate(0); z-index: 1;" width="" height="">
+            {% elsif media.alt == 'how-work' and product.handle == 'consti-clear-for-improved-bowel-movement' %}
+               <img src="{{ media.preview_image | img_url: '400x', scale: 2 }}" alt="{{ media.alt }}" class="" style="top: 0; transform: translate(0); z-index: 1;" width="" height="">
+            {% elsif media.alt == 'how-work' and product.handle == 'cholest-vati-natural-metabolic-booster-that-lowers-cholesterol' %}
+               <img src="{{ media.preview_image | img_url: '400x', scale: 2 }}" alt="{{ media.alt }}" class="" style="top: 0; transform: translate(0); z-index: 1;" width="" height="">
+               {% elsif media.alt == 'how-work' and product.handle == 'digest-boost-for-improved-digestive-ability-traya-health' %}
+               <img src="{{ media.preview_image | img_url: '400x', scale: 2 }}" alt="{{ media.alt }}" class="" style="top: 0; transform: translate(0); z-index: 1;" width="" height="">
+             {% elsif media.alt == 'how-work-img' %}
+           <img src="{{ media.preview_image | img_url: '400x', scale: 2 }}" alt="{{ media.alt }}" class="" style="top: 0; transform: translate(0); z-index: 1;" width="" height="">
+            {% endif %}
+          {% endfor %}
+         </div>
+         <div class="combo-side combo-side-text">
+          <h2 class="combo-title l-0" ds="{{ product.handle }}">
+            {{ section.settings.befor_title }}
+            {% if product.handle == 'recap-serum-for-hair-fall-control' %}
+               {{ product.title | remove: '| Contains Redensyl, Procapil and Capixyl' }}
+            {% elsif product.handle == 'hair-growth-serum' %}
+              {{ "Traya’s ReCaP Hair Growth Serum" }}
+            {% else %}
+              {{ product.title }}
+            {% endif %}
+            {{ section.settings.after_title }}
+          </h2>
+          <span class="combo-desc-b l-0">{{ section.settings.video-content }}</span>
+           <div class="combo_p_about-content">
+            {% assign work_content = product.metafields.custom.work.value %}
+            {% if work_content != blank %}
+              {% for field in work_content %}
+                <div class="iwt-box iwt-box-{{ forloop.index }}">
+                  {% assign words = field | split: '->' | first %}
+                  <div class="iwt-head l-0">
+                    {% for word in words %}
+                    <span class="iwt-btn">{{ word }}</span>
+                    {% endfor %}
+                    <span class="minus combo-btn hidden">-</span>
+                    <span class="plus combo-btn">+</span>
+                  </div>
+                  <div class="iwt-body iwt-body-{{ forloop.index }} l-0">
+                    {% assign words = field | split: '->' | last %}
+                    {% for word in words %}
+                      {{ word }}
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endfor %}
+            {% endif %}
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% schema %}
+   {
+    "name": "Video product section",
+    "settings":[
+                {
+                  "type": "text",
+                  "label": "Befor Title",
+                  "id": "befor_title",
+                  "default":"How does"
+                },
+                {
+                  "type": "text",
+                  "label": "After Title",
+                  "id": "after_title",
+                  "default":"work?"
+                },
+                {
+                  "type": "text",
+                  "label": "Video Content",
+                  "id": "video-content"
+                }
+                
+      ],
+      "presets":[
+        {
+          "name":"Video product section",
+          "category":"Custom"
+        }
+      ]
+ }
+{% endschema %}
+

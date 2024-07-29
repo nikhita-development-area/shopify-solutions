@@ -1,0 +1,163 @@
+<div class="container after_login_video">
+  <p class="login-heading">How to Use your Kit?</p>
+ <div class="native-video">
+  <video width="100%" height="auto" class="vid" poster="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353238.png?v=1691151600" class="main-native-videoimg">
+  <source src="https://cdn.shopify.com/videos/c/o/v/6fd261a539fe452c808b892bb8d479fe.mp4" type="video/mp4">
+</video>
+<i id="btn" class="fa fa-play fa-5x"></i>
+  </div>
+<!-- /* app Section */ -->
+
+  <div class="position-relative login_seperator seperator coach">
+    
+    <p class="login-heading">Earn Rewards by Tracking<br/> your Progress on App</p>
+
+    <div class="traya-coach position-relative payment-iconview">
+      <div class="paymentmobile">
+      <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Nothing_Phone_1_1_1.png?v=1691389739">
+      </div>
+      <div class="payment">
+        <a href="https://trayahealth.app.link/xT3UrtZDvyb"> 
+        <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Mask_group_6.webp?v=1682661488" style="margin-bottom:7px;">
+        </a>
+        <a href="https://trayahealth.app.link/xT3UrtZDvyb"> 
+        <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Mask_group_7_21066aa6-baff-4188-853d-7015c1b2b1b7.webp?v=1682661488">
+        </a>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<script>
+  var playPause = document.getElementById('btn');
+var vid = document.querySelector('.vid');
+
+playPause.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (!vid.paused) {
+        vid.pause();
+      } else {
+        vid.play();
+      }
+      playPause.classList.toggle('fa-play');
+      playPause.classList.toggle('fa-pause');
+      return false;
+    }, false);</script>
+ 
+<style>
+  .fa.fa-5x.fa-pause {
+    right: 0;
+    left: auto !important;
+    bottom: 0;
+    top: auto !important;
+    font-size: 25px !important;
+    padding: 15px 16px !important;
+}
+.after_login_video, .native-video {
+    position: relative;
+}
+.login_seperator h3 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 48px;
+    color: rgba(65, 64, 66, 1);
+    font-family: 'fredoka_oneregular' !important;
+    line-height: 55px;
+}
+.seperator h3{
+    color:#414042;
+  }
+ 
+  .payment-iconview{
+    display:flex;
+    align-items: center;
+      border-bottom: 3px solid #D1D0D0;
+  }
+  .paymentmobile{
+    max-width: 60%;
+  }
+  .payment img{
+    max-width:250px;
+  }
+  i#btn {
+    position: absolute;
+    top: 44.5%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(255, 0, 0, 1);
+    opacity: 0.7;
+    padding: 23px 25px;
+    border-radius: 100%;
+}
+  @media(max-width:767px){
+    i#btn {
+    font-size: 20px;
+    padding: 13px 15px;
+}
+    .fa.fa-5x.fa-pause {
+    font-size: 20px !important;
+    padding: 13px 15px !important;
+}
+    .payment img{
+      width:130px;
+    } 
+   .seperator h3 {
+      font-size: 22px;
+  }
+  }
+
+
+</style>
+{% schema %}
+   {
+    "name": "Login Video Section",
+     "settings": [
+          {
+          "id": "heading_regimen",
+          "type": "text",
+          "label": "Regimen heading"
+          },
+          {
+          "id": "subheading_regimen",
+          "type": "html",
+          "label": "Regimen Subheading"
+          },
+          {
+          "id": "subheading_regimen_two",
+          "type": "text",
+          "label": "Regimen Lasthead"
+          },
+          {
+          "type": "url",
+          "label": "Button link",
+          "id": "link_two"
+        },
+        {          
+          "type": "text",
+          "label": "Button text",
+          "id": "linktext_two",
+          "default": "Click Here"
+        },
+          {
+          "id": "coach_image_desktop",
+          "type": "image_picker",
+          "label": "Image Desktop"
+          },
+          {
+          "id": "coach_image_mobile",
+          "type": "image_picker",
+          "label": "Image Mobile"
+          }
+  ],
+          "presets":[
+          {
+          "name":"Login Video Section",
+          "category":"text with img"
+          }
+      ]
+  }
+
+{% endschema %}

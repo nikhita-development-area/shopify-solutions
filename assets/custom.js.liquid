@@ -1,0 +1,1065 @@
+theme.Currency={formatMoney:function(e,s){"string"==typeof e&&(e=e.replace(".",""));var o="",t=/\{\{\s*(\w+)\s*\}\}/,i=s||"${{amount}}";function l(e,s,o,t){if(o=o||",",t=t||".",isNaN(e)||null===e)return 0;var i=(e=(e/100).toFixed(s)).split(".");return i[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g,"$1"+o)+(i[1]?t+i[1]:"")}switch(i.match(t)[1]){case"amount":o=l(e,2);break;case"amount_no_decimals":o=l(e,0);break;case"amount_with_comma_separator":o=l(e,2,".",",");break;case"amount_no_decimals_with_comma_separator":o=l(e,0,".",",");break;case"amount_no_decimals_with_space_separator":o=l(e,0," ");break;case"amount_with_apostrophe_separator":o=l(e,2,"'")}return i.replace(t,o)}},$(document).ready(function(){$(".doctor_testimonials_slides, .doctor_page_slides").slick({dots:!0,arrows:!1,infinite:!0,speed:300,slidesToShow:1,adaptiveHeight:!0})});var header=document.getElementById("myHeader"),sticky=0,headerHeight=$(header).height();function selectProductAndDisplayIngredients(){$("#dropdownMenuButton").text("SELECT A PRODUCT"),$("body").on("click",".list",function(){var e=$(this).attr("data-image"),s=$(this).attr("data-desc"),o=$(this).attr("data-title");console.log("img",e),console.log("desc",s),console.log("title",o),$("#proTitle").text(o),$("#proDescLg").html(s),$("#proFeaturedImgLg").attr("src",e),$("#allIngredientsTitle").hide(),$(".product-details-withingredients").show(),$("#dropdownMenuButton").text(o),o=o.trim().toLowerCase(),console.log(o,"tile"),"customised hair oil"==o&&(o="scalp oil"),$(".IngredientsList > .row > .col-md-6.col-lg-3.mb-3").each(function(){$(this).text().toLowerCase().indexOf(o)>0?$(this).show():$(this).hide()}),$(".IngredientsList > .row .content-2").hide(),$(".IngredientsList > .row .content-1").css({"border-bottom":"none","padding-bottom":"0","margin-bottom":"0"})})}function AddReadMore(){$(".addReadMore").each(function(){if(!$(this).find(".firstSec").length){var e=$(this).text();if(e.length>80){var s=e.substring(0,80),o=e.substring(80,e.length);$(this).html(s+"<span class='SecSec'>"+o+"</span><span class='readMore'  title='Click to Show More'><span class='font-weight-normal'>...</span><span style='text-decoration: underline'>Read More</span></span><span class='readLess' title='Click to Show Less' style='text-decoration: underline;'> Read Less</span>")}}}),$(document).on("click",".readMore,.readLess",function(){$(this).closest(".addReadMore").toggleClass("showlesscontent showmorecontent")}),$(".customer-review-slider").on("afterChange",function(){!0==$(this).find(".customers-review").hasClass("showmorecontent")&&$(".readLess").closest(".addReadMore").removeClass("showmorecontent").addClass("showlesscontent")}),$(".google-review-slide").on("afterChange",function(){!0==$(this).find(".resl-desc").hasClass("showmorecontent")&&$(".readLess").closest(".addReadMore").removeClass("showmorecontent").addClass("showlesscontent")})}header&&$(window).scroll(function(){window.pageYOffset>sticky?(header.classList.add("sticky"),$("#sub_menu_collectionBTN").addClass("sticky-filter").css("top",headerHeight+"px")):(header.classList.remove("sticky"),$("#sub_menu_collectionBTN").removeClass("sticky-filter"))}),$(".category-btn").click(function(){$(".all-products-categories_buttons .category-btn").removeClass("active"),$(this).addClass("active"),$("html").animate({scrollTop:100},"slow");var e=$(this).attr("value");$("#product-grid .grid__item").each(function(){var s=$(this),o=$(this).attr("data-tab-content"),t=$(this).attr("product-type");if("hair"==e){var i=$(".shop-all-toggleBar_tab.active").attr("product_type");t==i?s.addClass("hide_product"):s.removeClass("hide_product"),$(".shop-all-toggleBar-container").show()}else $(".shop-all-toggleBar-container").hide(),o.includes(e)?s.removeClass("hide_product"):s.addClass("hide_product")})}),$(".shop-all-toggleBar_tab").click(function(){$(".shop-all-toggleBar_tab").removeClass("active"),$(this).addClass("active"),$("html").animate({scrollTop:100},"slow");var e=$(this).attr("product_type");$("#product-grid .grid__item").each(function(){var s=$(this);$(this).attr("product-type")==e?s.addClass("hide_product"):s.removeClass("hide_product")})}),$("body").on("click",".product-card",function(){alert();var e=window.location.href;Moengage.track_event("View_Combo",{Source:e,DateTime:new Date,ProductName:$(this).find(".product-card__title").text(),ProductUrl:$(this).find(".full-width-link").attr("href")})}),$(document).ready(function(){$(".hormon-slides").slick({infinite:!0,slidesToShow:1,slidesToScroll:1,dots:!0,autoplay:!0,arrows:!1,responsive:[{breakpoint:767,settings:{slidesToShow:1,slidesToScroll:1,arrows:!1}}]}),$("#show1").click(function(){$(".p2").hide(),$(".p1").show(),$(".men_button").addClass("btn_active"),$(".women_button").removeClass("btn_active"),$(".hormon-slides").slick("unslick"),$(".hormon-slides").slick({dots:!0,infinite:!0,centerMode:!0,centerPadding:"50px",speed:400,slidesToShow:1,slidesToScroll:1,arrows:!1,autoplay:!0,adaptiveHeight:!1})}),$("#show2").click(function(){$(".p1").hide(),$(".p2").show(),$(".women_button").addClass("btn_active"),$(".men_button").removeClass("btn_active"),$(".hormon-slides").slick("unslick"),$(".hormon-slides").slick({dots:!0,infinite:!0,centerMode:!0,centerPadding:"50px",speed:400,slidesToShow:1,slidesToScroll:1,arrows:!1,autoplay:!0,adaptiveHeight:!1})}),$(".logo-slider").slick({infinite:!0,slidesToShow:5,slidesToScroll:2,dots:!1,arrows:!0,autoplay:!0,autoplaySpeed:1e3,responsive:[{breakpoint:767,settings:{slidesToShow:2,slidesToScroll:2}}]}),$(".google-review-slide, .social-reviews, .patient-journey").slick({infinite:!0,autoplay:!0,slidesToShow:3,slidesToScroll:1,dots:!1,arrows:!0,responsive:[{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1}}]})}),$(".home-product-grid").slick({infinite:!0,autoplay:!1,slidesToShow:3,slidesToScroll:1,dots:!1,arrows:!0,responsive:[{breakpoint:769,settings:{slidesToShow:2,slidesToScroll:1}},{breakpoint:481,settings:{slidesToShow:1,slidesToScroll:1}}]}),$(".video-hero").slick({infinite:!0,autoplay:!1,autoplaySpeed:1e3,slidesToShow:1,slidesToScroll:1,dots:!0,arrows:!0,responsive:[{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1,autoplay:!0,autoplaySpeed:1e3}}]}),$(".slick-items-container-3").slick({infinite:!0,autoplay:!1,slidesToShow:3,slidesToScroll:1,dots:!1,arrows:!0,responsive:[{breakpoint:768,settings:{slidesToShow:3,slidesToScroll:1,autoplay:!0,autoplaySpeed:1e3}},{breakpoint:481,settings:{slidesToShow:1,slidesToScroll:1,autoplay:!1,autoplaySpeed:1e3}}]}),$(document).ready(function(){$(".template-product .iwt-box-1 .minus").removeClass("hidden"),$(".template-product .iwt-box-1 .plus").addClass("hidden"),$(".iwt-head").click(function(){$(this).parents(".combo-side-text").find(".iwt-head").not(this).siblings(".iwt-body").slideUp("slow"),$(this).siblings(".iwt-body").toggle("slow"),$(this).parents(".combo-side-text").find(".iwt-head").not(this).find(".minus").addClass("hidden"),$(this).parents(".combo-side-text").find(".iwt-head").not(this).find(".plus").removeClass("hidden"),$(this).find(".minus").toggleClass("hidden"),$(this).find(".plus").toggleClass("hidden")})}),$(document).ready(function(){selectProductAndDisplayIngredients()}),$(function(){AddReadMore()}),$(".stories_slider").slick({dots:!1,arrows:!0,slidesToShow:1,slidesToScroll:1,infinite:!0}),$(".result_doctor_slides").slick({infinite:!0,autoplay:!1,slidesToShow:3,slidesToScroll:1,dots:!1,arrows:!0,responsive:[{breakpoint:768,settings:{slidesToShow:3,dots:!0,slidesToScroll:1,autoplay:!0,autoplaySpeed:1e3}},{breakpoint:481,settings:{slidesToShow:1,slidesToScroll:1,dots:!0,autoplay:!1,autoplaySpeed:1e3}}]}),$(".twoSide-review-slide").slick({infinite:!0,autoplaySpeed:1e3,slidesToShow:1,slidesToScroll:1,dots:!1,arrows:!0,responsive:[{breakpoint:480,settings:{slidesToShow:1,slidesToScroll:1}}]}),$(".doctor_slider, .regrowth-slider").slick({slidesToShow:3,slidesToScroll:1,autoplay:!1,autoplaySpeed:2e3,responsive:[{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1,autoplay:!0}}]}),$(document).ready(function(){"login-modal"==window.location.href.split("#")[1]&&$("#myHeader").find("[profile]").trigger("click")}),$(".double-google-review-slide").slick({slidesToShow:2,slidesToScroll:2,autoplay:!0,autoplaySpeed:2e3,infinite:!1,rows:2,responsive:[{breakpoint:768,settings:{slidesToShow:1.2,slidesToScroll:1,arrows:!1}}]}),$(window).width()>768&&$(".double-doctor-slider").slick({slidesToShow:3,slidesToScroll:1,autoplay:!0,autoplaySpeed:2e3,infinite:!0,rows:1,arrows:!0,dots:!1}),768>$(window).width()&&$(".double-doctor-slider").slick({slidesToShow:1,slidesToScroll:1,autoplay:!0,autoplaySpeed:2e3,infinite:!0,arrows:!1,dots:!0}),$(document).ready(function(){$(".blogs-slider").slick({slidesToShow:3,slidesToScroll:1,dots:!1,arrows:!0,infinite:!0,responsive:[{breakpoint:768,settings:{slidesToShow:2,slidesToScroll:1}},{breakpoint:468,settings:{autoplaySpeed:500,slidesToShow:1,slidesToScroll:1}}]})}),$(".after-traya-journey").slick({slidesToShow:5,slidesToScroll:1,autoplay:!1,autoplaySpeed:2e3,infinite:!1,arrows:!1,dots:!1,responsive:[{breakpoint:768,settings:{slidesToShow:2,slidesToScroll:1,autoplay:!0,infinite:!1}}]}),$(".product_main_list").click(function(){var e=$(this),s=$(".plus"),o=$(".minus");o.hasClass("d-none")?(o.removeClass("d-none"),s.addClass("d-none")):(s.removeClass("d-none"),o.addClass("d-none")),e.parents(".header__products__list").find(".product--list").fadeToggle(),e.parents(".mobile__product__list").find(".product--list").fadeToggle()}),$(".product_main_list2").click(function(){var e=$(this),s=$(".plus2"),o=$(".minus2");o.hasClass("d-none")?(o.removeClass("d-none"),s.addClass("d-none")):(s.removeClass("d-none"),o.addClass("d-none")),e.parents(".header__products__list").find(".product--list2").fadeToggle(),e.parents(".mobile__product__list").find(".product--list2").fadeToggle()}),$(document).ready(function(){var e=localStorage.getItem("rid"),s=localStorage.getItem("user-gender"),o=getCookie("Synthetic_ID");let t=getCookie("form_status");(e=o&&"filled"==t?o:"")?($(".header__icons .assessment-btn").removeClass("d-lg-inline-block").addClass("d-none"),"female"==s&&($(".myresult a").attr("href","/pages/female-result"),$(".BannerUrl").attr("href","/pages/female-result")),"male"==s&&$(".BannerUrl").attr("href","/pages/result4"),$(".myresult").addClass("d-inline-block"),$(".myresult").removeClass("d-none"),$(".take-hair-sticky-bototm .st-text").text("My Result"),$(".take-hair-sticky-bototm .btn").attr("href","/pages/result4")):($(".myresult").addClass("d-none"),$(".myresult").removeClass("d-inline-block"))}),768>$(window).width()&&($(".fix-hair-icons").slick({slidesToShow:3.5,slidesToScroll:1,autoplay:!0,autoplaySpeed:2e3,dots:!1,arrows:!1,infinite:!1}),$(".trust_icon_female-combo").slick({slidesToShow:5,slidesToScroll:1,autoplay:!0,autoplaySpeed:2e3,dots:!1,infinite:!1,arrows:!0}),$(".frequently-bought-together_products").slick({slidesToShow:1,slidesToScroll:1,autoplay:!0,autoplaySpeed:2e3,dots:!1,infinite:!1,arrows:!0})),$(".female-combo-slider").slick({slidesToShow:2,slidesToScroll:1,autoplay:!0,autoplaySpeed:2e3,dots:!1,infinite:!1,arrows:!0,responsive:[{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1}}]}),$(".female-combo .result-gl-rvw .ggl_rvws").click(function(e){768>$(window).width()?$("html").animate({scrollTop:3900},"slow"):$("html").animate({scrollTop:4500},"slow")}),$(".testco .ingredient_slider_result").slick({slidesToShow:2.5,slidesToScroll:1,autoplay:!0,autoplaySpeed:2e3,dots:!1,infinite:!1,arrows:!0,responsive:[{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1}}]}),$(".female-product-slider").slick({slidesToShow:3,slidesToScroll:1,autoplay:!1,dots:!1,arrows:!0,centerMode:!0,centerPadding:"0px",infinite:!0,responsive:[{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1,centerMode:!1}}]}),$(".rootcauseMob_Slide").slick({infinite:!1,slidesToShow:3,slidesToScroll:1}),$(document).ready(function(){$(".impactcard-1").addClass("cardshow"),$(".root-points-1").addClass("root-points-active"),$(".rootcauseMob-1").addClass("activerootcause"),$(".rootcauseMob").click(function(){$(".rootcauseMob").removeClass("activerootcause"),$(this).addClass("activerootcause");var e=$(this).attr("id");$(this).parents(".root-causes-ngredients").find(".impactcard").removeClass("cardshow"),$("[data-target='"+e+"']").addClass("cardshow"),$(this).parents(".root-point-main").find(".root-points").removeClass("root-points-active"),$(this).find(".root-points").addClass("root-points-active")})}),$("[google_review_female]").click(function(e){$(window).width(),$("html").animate({scrollTop:6250},"slow")}),$("[google_review]").click(function(e){768>$(window).width()?$("html").animate({scrollTop:6250},"slow"):$("html").animate({scrollTop:6700},"slow")}),$("[google_review_femalev1]").click(function(e){768>$(window).width()?$("html").animate({scrollTop:6250},"slow"):$("html").animate({scrollTop:6700},"slow")}),$(document).ready(function(){$(".essential_slid_grid").slick({infinite:!0,slidesToShow:4,centerPadding:"60px",dots:!0,centerMode:!0,autoplay:!0,arrows:!1,responsive:[{breakpoint:749,settings:{centerMode:!0,slidesToShow:1,arrows:!1,centerPadding:"40px",slidesToShow:1}}]}),$(".female-reviews").slick({infinite:!0,slidesToShow:5,dots:!1,centerMode:!1,autoplay:!0,arrows:!0,responsive:[{breakpoint:749,settings:{centerMode:!0,slidesToShow:1,arrows:!1,dots:!0,centerPadding:"40px",slidesToShow:1}}]}),$(".santulan_range_slid_grid").slick({infinite:!0,slidesToShow:1,dots:!0,autoplay:!0,arrows:!1})}),$(".top_slider").slick({dots:!1,infinite:!0,slidesToShow:4,slidesToScroll:1,arrows:!0,prevArrow:'<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>',nextArrow:'<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button>',responsive:[{breakpoint:1120,settings:{slidesToShow:3,slidesToScroll:1,arrows:!0}},{breakpoint:800,settings:{slidesToShow:2,slidesToScroll:2,arrows:!0}},{breakpoint:600,settings:{slidesToShow:1,slidesToScroll:1,arrows:!0}}]}),$(document).ready(function(){var e=getUrlParameter("utm_source");"mobileapp"==e&&($(".site-footer").addClass("hcart_footer_mob"),$("#myHeader").addClass("hcart_header_mob")),"mobileapp"==e&&$("#myHeader").addClass("hcart_header_mob");var s=document.getElementById("myHeader");$(s).height(),s&&$(window).scroll(function(){window.pageYOffset>0?$(".cart__ctas").find(".Porder_sticky").addClass("Porder_sticky_desk"):$(".cart__ctas").find(".Porder_sticky").removeClass("Porder_sticky_desk")})});
+
+$(document).ready(function(){
+  var id = localStorage.getItem('rid');
+  var user_gender = localStorage.getItem('user-gender');
+  var Synthetic_ID = getCookie("Synthetic_ID");
+  let form_status = getCookie("form_status");
+  let user = localStorage.getItem('user');
+  let caseid = localStorage.getItem('caseId');
+  if(Synthetic_ID && (form_status == "filled")){
+  id = Synthetic_ID;
+  }else{
+  id = '';
+  }
+  if(user_gender == null) {
+    user_gender = getCookie("gender")
+  }
+  if (id && (user == undefined || user == null)) {
+    $('.header__icons .assessment-btn').removeClass('d-lg-inline-block').addClass('d-none');
+    if(user_gender == 'female' || user_gender == 'F'){
+      $('.myresult a').attr('href',`/pages/female-result?id=${id}`);
+      $('.BannerUrl').attr('href',`/pages/female-result?id=${id}`);
+    }
+    if(user_gender == 'male' || user_gender == 'M'){
+      $('.myresult a').attr('href',`/pages/result4?id=${id}`);
+      $('.BannerUrl').attr('href',`/pages/result4?id=${id}`);
+    }
+    $('.myresult').addClass('d-inline-block');
+    $('.myresult').removeClass('d-none');
+    $('.take-hair-sticky-bototm .st-text').text('My Result');
+    $('.take-hair-sticky-bototm .btn').attr('href','/pages/result4');
+    $(".female_button").addClass("already_result");
+  }else if(id && user) {
+    $('.myresult').removeClass('d-inline-block');
+    $('.myresult').addClass('d-none');
+    $('.reorder').show();
+    $('[homeReorder]').attr("href", `https://form.traya.health/recommendedcart/${caseid}`);
+    $(".female_button").removeClass("already_result");
+  } else {
+    $('.myresult').addClass('d-none');
+    $('.myresult').removeClass('d-inline-block');
+    $(".female_button").removeClass("already_result");
+  }
+
+ $('.slick-products').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 320,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+  
+      /* Male RP Testimonials */
+      $('.customer_reviews_container').slick({
+        autoplay: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplaySpeed : 5000,
+        arrows: true,
+        dots: false,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              arrows: false,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+            }
+          }
+        ]
+      }); 
+    });
+        $('.testimonial-slider').slick({
+        autoplay: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplaySpeed : 5000,
+        arrows: true,
+        dots: false,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              arrows: false,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              autoplaySpeed : 5000,
+              arrows: false,
+              autoplay: true,
+            }
+          }
+        ]
+      }); 
+
+    $('.essential_slid_grid1').slick({
+      infinite: false,
+      autoplay: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1.3,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
+   $('.stage1-customer-review-slider').slick({
+  autoplay: true,
+  arrows: true,
+  swipe : true,
+  autoplaySpeed: 2000,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow:2,
+        slidesToScroll:2,
+        infinite:true,
+        dots:true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
+
+ if ($(window).width() < 768) {
+   $('.pcos_santulan_wrapper').slick({
+        infinite: true,
+        slidesToShow: 4,
+        arrows: false,
+        autoplay: true,
+        dots: true,
+        autoplaySpeed: 5000,
+        slidesToScroll: 4,
+        responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 320,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    }
+
+ $('.hopehair_sldr').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: false,
+  dots: false,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  responsive : [
+  {
+    breakpoint: 989,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      dots: false,
+    }
+  },
+    {
+    breakpoint: 749,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+    }
+  }
+  ]
+  });
+
+  $('.google_reviews_cards').slick({
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  autoplay: true,
+  dots: false,
+  arrows: true,
+  autoplaySpeed: 4000,
+  responsive : [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+      }
+    }
+  ]
+  });
+  
+  $('.transf_slider').slick({
+  slidesToShow: 3,
+  // slidesToScroll: 1,
+  autoplay: true,
+  dots: false,
+  arrows: false,
+  autoplaySpeed: 2000,
+  responsive : [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+      }
+    }
+  ]
+  });
+
+$('.dctr_femalev2_slide').slick({
+  //autoplay: true,
+    arrows: true,
+    dots: true,
+    swipe : true,
+     //autoplaySpeed: 2000,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
+
+// // Show or hide the scroll button based on the user's scroll position
+// window.onscroll = function() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     let el = document.getElementById("BannerScroll");
+//     if(el) {
+//       el.style.display = "block";
+//     }
+//   } else {
+//     let el1 = document.getElementById("BannerScroll");
+//     if(el1) {
+//       el1.style.display = "block";
+//     }
+//   }
+// };
+
+// // Scroll to the bottom of the page when the button is clicked
+// function scrollToBottom() {
+//   window.scrollTo({
+//     top: 800,
+//     behavior: "smooth"
+//   });
+// }
+$(document).ready(function () {
+
+  $(".rootcause_data").click(function(){
+    $('ul#ourdia_login li .root_overlay').removeClass('login_pop_hide');
+           $(this).closest('li').find('.root_overlay').addClass('login_pop_show');
+        });
+  
+  $(".close").click(function(){
+         $('ul#ourdia_login li .root_overlay').removeClass('login_pop_show');
+           $(this).closest('li').find('.root_overlay').addClass('login_pop_hide');
+        });
+
+        });
+
+/* Section Wise Blogs Redirection on Same Page */
+function addClickScrollListeners(className) {
+  const blogsRows = document.querySelectorAll(`.${className} li[data-target-section]`);
+  blogsRows.forEach((row) => {
+    row.addEventListener("click", () => {
+      const targetSectionId = row.getAttribute("data-target-section");
+      const targetSection = document.getElementById(targetSectionId);
+      if(targetSection) {
+        const offset = 80; // Stop Scrolling When Distance is 80px From Top
+        const targetTop = targetSection.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top: targetTop - offset, behavior: "smooth" });
+      }
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  addClickScrollListeners("women");
+  addClickScrollListeners("ayurvedic");
+  addClickScrollListeners("dermatology");
+});
+/* Section Wise Blogs Redirection on Same Page */
+$(document).ready(function () {
+    function rotateLeft(x, n) {
+        return (x << n) | (x >>> (32 - n));
+    }
+
+    function md5(input) {
+        const initialHashValues = [
+            0x67452301, 0xEFCDAB89, 0x98BADCFE, 0x10325476
+        ];
+
+        const words = [];
+        for (let i = 0; i < 64; i++) {
+            words[i] = Math.floor(Math.abs(Math.sin(i + 1)) * 0x100000000);
+        }
+
+        const paddingLength = (input.length + 8 + 64) >> 6 << 4;
+        const paddedMessage = new Uint8Array(paddingLength);
+        for (let i = 0; i < input.length; i++) {
+            paddedMessage[i] = input.charCodeAt(i);
+        }
+        paddedMessage[input.length] = 0x80;
+        paddedMessage[paddingLength - 4] = input.length * 8;
+
+        const hashBuffer = new ArrayBuffer(16);
+        const hashView = new DataView(hashBuffer);
+        initialHashValues.forEach((value, index) => {
+            hashView.setUint32(index * 4, value, false);
+        });
+
+        for (let i = 0; i < paddedMessage.length; i += 64) {
+            const chunk = paddedMessage.subarray(i, i + 64);
+
+            let a = hashView.getUint32(0, false);
+            let b = hashView.getUint32(4, false);
+            let c = hashView.getUint32(8, false);
+            let d = hashView.getUint32(12, false);
+
+            for (let j = 0; j < 64; j++) {
+                let f, g;
+
+                if (j < 16) {
+                    f = (b & c) | ((~b) & d);
+                    g = j;
+                } else if (j < 32) {
+                    f = (d & b) | ((~d) & c);
+                    g = (5 * j + 1) % 16;
+                } else if (j < 48) {
+                    f = b ^ c ^ d;
+                    g = (3 * j + 5) % 16;
+                } else {
+                    f = c ^ (b | (~d));
+                    g = (7 * j) % 16;
+                }
+
+                const temp = d;
+                d = c;
+                c = b;
+                b = b + rotateLeft((a + f + words[g] + chunk[4 * j]), 7);
+                a = temp;
+            }
+
+            hashView.setUint32(0, hashView.getUint32(0, false) + a, false);
+            hashView.setUint32(4, hashView.getUint32(4, false) + b, false);
+            hashView.setUint32(8, hashView.getUint32(8, false) + c, false);
+            hashView.setUint32(12, hashView.getUint32(12, false) + d, false);
+        }
+
+        let result = '';
+        new Uint8Array(hashBuffer).forEach(value => {
+            result += value.toString(16).padStart(2, '0');
+        });
+
+        return result;
+    }
+
+    const currentTime = new Date();
+    const hours = currentTime.getHours();
+    const minutes = currentTime.getMinutes();
+    const seconds = currentTime.getSeconds();
+
+    const formattedTime = `${hours}:${minutes}:${seconds}`;
+    let profile__icon = document.querySelector(".profile_icon");
+      if(profile__icon) {
+        profile__icon.addEventListener('click', function () {
+        let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+        if (tgtcstData) {
+            let hashEmail = md5(tgtcstData.user.email);
+            let hashMobile = md5(tgtcstData.user.phone_number.toString());
+            gtag('event', 'Login_Click', {
+                "EID": hashEmail,
+                "MID": hashMobile,
+                 "NAEID": tgtcstData.user.email,
+                 "NAMID": tgtcstData.user.phone_number,
+                // "Age":
+                "Gender": tgtcstData.user.gender,
+                "Section": "Top Navigation",
+                "userStatus": "Loggedin",
+                'send_to': 'G-KJK84KP0LJ',
+                "Time": formattedTime
+            });
+        }
+        else {
+            gtag('event', 'Login_Click', {
+                'send_to': 'G-KJK84KP0LJ',
+                "Section": "Top Navigation",
+                "Time": formattedTime
+            });
+        }
+    });
+  }
+
+    let tgtlogoutClick = document.querySelector(".logout_btn");
+    if (tgtlogoutClick) {
+        tgtlogoutClick.addEventListener('click', function () {
+            let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+            if (tgtcstData) {
+                let hashEmail = md5(tgtcstData.user.email);
+                let hashMobile = md5(tgtcstData.user.phone_number.toString());
+                gtag('event', 'logout_Clicked', {
+                    "EID": hashEmail,
+                    "MID": hashMobile,
+                     "NAEID": tgtcstData.user.email,
+                    "NAMID": tgtcstData.user.phone_number,
+                    // "Age":
+                    "Gender": tgtcstData.user.gender,
+                    "Section": "Top Navigation",
+                    "userStatus": "Loggedin",
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+                localStorage.removeItem("CstData");
+            }
+            else {
+                gtag('event', 'logout_Clicked', {
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+            }
+
+        })
+    }
+    let tgtresendOtp = document.getElementById("resendButton");
+    if (tgtresendOtp) {
+        tgtresendOtp.addEventListener('click', function () {
+            let tgtresendmobvalue = document.getElementById("resend_phone").innerText;
+            gtag('event', 'ResendOTP_Clicked', {
+                'NAEID': tgtresendmobvalue,
+                'send_to': 'G-KJK84KP0LJ',
+                "Time": formattedTime
+            });
+        })
+    }
+    let tgtcartView = document.getElementById("cart-icon-bubble");
+    if (tgtcartView) {
+        tgtcartView.addEventListener('click', function () {
+            let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+            if (tgtcstData) {
+                let hashEmail = md5(tgtcstData.user.email);
+                let hashMobile = md5(tgtcstData.user.phone_number.toString());
+                gtag('event', 'View_cart', {
+                    "EID": hashEmail,
+                    "MID": hashMobile,
+                    "NAEID": tgtcstData.user.email,
+                    "NAMID": tgtcstData.user.phone_number,
+                    // "Age":
+                    "Gender": tgtcstData.user.gender,
+                    "Section": "Top Navigation",
+                    "userStatus": "Loggedin",
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+            }
+            else {
+                gtag('event', 'View_cart', {
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Section": "Top Navigation",
+                    "Time": formattedTime
+                });
+            }
+
+        })
+    }
+    let tgtheaderWhatsap = document.getElementById("header_whatsapp");
+    if (tgtheaderWhatsap) {
+        tgtheaderWhatsap.addEventListener('click', function () {
+            let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+            if (tgtcstData) {
+                let hashEmail = md5(tgtcstData.user.email);
+                let hashMobile = md5(tgtcstData.user.phone_number.toString());
+                gtag('event', 'Whatsapp_Clicked', {
+                    "EID": hashEmail,
+                    "MID": hashMobile,
+                    "NAEID": tgtcstData.user.email,
+                    "NAMID": tgtcstData.user.phone_number,
+                    // "Age":
+                    "Gender": tgtcstData.user.gender,
+                    "Section": "Top Navigation",
+                    "userStatus": "Loggedin",
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+            }
+            else {
+                gtag('event', 'Whatsapp_Clicked', {
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Section": "Top Navigation",
+                    "Time": formattedTime
+                });
+            }
+
+        })
+    }
+    document.querySelectorAll("#hairtestcta").forEach((item) => {
+        item.addEventListener('click', function () {
+            let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+            if (tgtcstData) {
+                let hashEmail = md5(tgtcstData.user.email);
+                let hashMobile = md5(tgtcstData.user.phone_number.toString());
+                gtag('event', 'HairTest_Started', {
+                    "EID": hashEmail,
+                    "MID": hashMobile,
+                     "NAEID": tgtcstData.user.email,
+                    "NAMID": tgtcstData.user.phone_number,
+                    // "Age":
+                    "Gender": tgtcstData.user.gender,
+                    "Section": "Top Navigation",
+                    "userStatus": "Loggedin",
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+            }
+            else {
+                gtag('event', 'HairTest_Started', {
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+            }
+
+        })
+
+    })
+document.querySelectorAll("#htcard1, #htstickycta, #htcard3, #htcost1, #htcard2, #htcss, #htfaq, #htcostcal, #calculate_btn").forEach((item) => {
+        item.addEventListener('click', function () {
+            let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+            if (tgtcstData) {
+                let hashEmail = md5(tgtcstData.user.email);
+                let hashMobile = md5(tgtcstData.user.phone_number.toString());
+                gtag('event', 'HairTest_Started', {
+                    "EID": hashEmail,
+                    "MID": hashMobile,
+                     "NAEID": tgtcstData.user.email,
+                    "NAMID": tgtcstData.user.phone_number,
+                    "Gender": tgtcstData.user.gender,
+                    "Section": "Top Navigation",
+                    "userStatus": "Loggedin",
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+            }
+            else {
+                gtag('event', 'HairTest_Started', {
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+            }
+
+        })
+    })
+    let recmd_plan_btn = document.querySelector('.login_lead_recommended #myPlanHome');
+    if (recmd_plan_btn) {
+        recmd_plan_btn.addEventListener('click', function () {
+            let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+            if (tgtcstData) {
+                let hashEmail = md5(tgtcstData.user.email);
+                let hashMobile = md5(tgtcstData.user.phone_number.toString());
+                gtag('event', 'myPlan_Clicked', {
+                    "EID": hashEmail,
+                    "MID": hashMobile,
+                     "NAEID": tgtcstData.user.email,
+                    "NAMID": tgtcstData.user.phone_number,
+                    // "Age":
+                    "Gender": tgtcstData.user.gender,
+                    "Section": "Login",
+                    "userStatus": "Loggedin",
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+            }
+          else{
+              gtag('event', 'myPlan_Clicked', {
+                    "userStatus": "Guest",
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+          }
+
+        })
+    }
+
+    let tgtTalkTocoach = document.querySelector('[talk_to_coach]');
+    if (tgtTalkTocoach) {
+        tgtTalkTocoach.addEventListener('click', function () {
+            let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+
+            if (tgtcstData) {
+                let hashEmail = md5(tgtcstData.user.email);
+                let hashMobile = md5(tgtcstData.user.phone_number.toString());
+                gtag('event', 'BookACall_Clicked', {
+                    "EID": hashEmail,
+                    "MID": hashMobile,
+                     "NAEID": tgtcstData.user.email,
+                    "NAMID": tgtcstData.user.phone_number,
+                    // "Age":
+                    "Gender": tgtcstData.user.gender,
+                    "Section": "Login",
+                    "userStatus": "Loggedin",
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+            }
+
+        })
+    }
+  
+    let tgtreorder = document.getElementById("homepage");
+    if (tgtreorder) {
+
+        tgtreorder.addEventListener('click', function () {
+            let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+            if (tgtcstData) {
+                let hashEmail = md5(tgtcstData.user.email);
+                let hashMobile = md5(tgtcstData.user.phone_number.toString());
+                gtag('event', 'Reorder_Clicked', {
+                    "EID": hashEmail,
+                    "MID": hashMobile,
+                    "NAEID": tgtcstData.user.email,
+                    "NAMID": tgtcstData.user.phone_number,
+                    // "Age":
+                    "Gender": tgtcstData.user.gender,
+                    "Section": "Login",
+                    "userStatus": "Loggedin",
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+            }
+
+        })
+    }
+  
+ let tgtMyResult =  document.querySelector('[seemyresult]');
+  if(tgtMyResult)
+  {
+    tgtMyResult.addEventListener('click', function () {
+            let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+            if (tgtcstData) {
+                let hashEmail = md5(tgtcstData.user.email);
+                let hashMobile = md5(tgtcstData.user.phone_number.toString());
+                gtag('event', 'myResult_Clicked', {
+                    "EID": hashEmail,
+                    "MID": hashMobile,
+                    "NAEID": tgtcstData.user.email,
+                    "NAMID": tgtcstData.user.phone_number,
+                    // "Age":
+                    "Gender": tgtcstData.user.gender,
+                    "Section": "Login",
+                    "userStatus": "Loggedin",
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+            }
+      else{
+        gtag('event', 'myResult_Clicked', {
+                    "userStatus": "Guest",
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+      }
+
+        })
+  }
+    let tgtHumburger = document.querySelector(".icon-hamburger");
+    if (tgtHumburger) {
+        tgtHumburger.addEventListener('click', function () {
+            let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+            if (tgtcstData) {
+                let hashEmail = md5(tgtcstData.user.email);
+                let hashMobile = md5(tgtcstData.user.phone_number.toString());
+                gtag('event', 'humburgerMenu_clicked', {
+                    "EID": hashEmail,
+                    "MID": hashMobile,
+                    "NAEID": tgtcstData.user.email,
+                    "NAMID": tgtcstData.user.phone_number,
+                    // "Age":
+                    "Gender": tgtcstData.user.gender,
+                    "Section": "Top Navigation",
+                    "userStatus": "Loggedin",
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+            }
+            else {
+                gtag('event', 'humburgerMenu_clicked', {
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Section": "Top Navigation",
+                    "Time": formattedTime
+                });
+            }
+
+        })
+    }
+
+  let HairTestAgain = document.querySelector(".login_banner_content .banner-hair_test");
+    if (HairTestAgain) {
+        HairTestAgain.addEventListener('click', function () {
+            let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+            if (tgtcstData) {
+                let hashEmail = md5(tgtcstData.user.email);
+                let hashMobile = md5(tgtcstData.user.phone_number.toString());
+                gtag('event', 'retakeHairTest_Started', {
+                    "EID": hashEmail,
+                    "MID": hashMobile,
+                    "NAEID": tgtcstData.user.email,
+                    "NAMID": tgtcstData.user.phone_number,
+                    // "Age":
+                    "Gender": tgtcstData.user.gender,
+                    "Section": "Top Navigation",
+                    "userStatus": "Loggedin",
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Time": formattedTime
+                });
+            }
+            else {
+                gtag('event', 'retakeHairTest_Started', {
+                    'send_to': 'G-KJK84KP0LJ',
+                    "Section": "Top Navigation",
+                    "Time": formattedTime
+                });
+            }
+
+        })
+    }
+
+  
+
+// let tgt_login_guide_images = document.querySelectorAll(".login_guide_images")
+// if (tgt_login_guide_images) {
+//     tgt_login_guide_images.forEach((item) => {
+//         console.log("item", item)
+//         item.addEventListener('click', function () {
+//             alert("dfdfd")
+//             let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+//             if (tgtcstData) {
+//                 let hashEmail = md5(tgtcstData.user.email);
+//                 let hashMobile = md5(tgtcstData.user.phone_number.toString());
+//                 // console.log("item" , item.querySelector("p").textContent.trim())
+//                 let tgtText = item.querySelector("p").textContent.trim();
+//               console.log("tgtText" , tgtText)
+//                 if (tgtText == "Talk to Hair Coach") {
+//                     gtag('event', 'talkToCoach_Clicked', {
+//                         "EID": hashEmail,
+//                         "MID": hashMobile,
+//                         "NAEID": tgtcstData.user.email,
+//                         "NAMID": tgtcstData.user.phone_number,
+//                         // "Age":
+//                         "Gender": tgtcstData.user.gender,
+//                         "Section": "Login",
+//                         "userStatus": "Loggedin",
+//                         'send_to': 'G-KJK84KP0LJ',
+//                         "Time": formattedTime
+//                     });
+//                 }
+//               if (tgtText == "My Diet Plan") {
+//                     gtag('event', 'myDietPlan_Clicked', {
+//                         "EID": hashEmail,
+//                         "MID": hashMobile,
+//                         "NAEID": tgtcstData.user.email,
+//                         "NAMID": tgtcstData.user.phone_number,
+//                         // "Age":
+//                         "Gender": tgtcstData.user.gender,
+//                         "Section": "Login",
+//                         "userStatus": "Loggedin",
+//                         'send_to': 'G-KJK84KP0LJ',
+//                         "Time": formattedTime
+//                     });
+//                 }
+//               if (tgtText == "My Prescription") {
+//                     gtag('event', 'myPrescription_Clicked', {
+//                         "EID": hashEmail,
+//                         "MID": hashMobile,
+//                         "NAEID": tgtcstData.user.email,
+//                         "NAMID": tgtcstData.user.phone_number,
+//                         // "Age":
+//                         "Gender": tgtcstData.user.gender,
+//                         "Section": "Login",
+//                         "userStatus": "Loggedin",
+//                         'send_to': 'G-KJK84KP0LJ',
+//                         "Time": formattedTime
+//                     });
+//                 }
+//               if (tgtText == "Buy Again") {
+//                     gtag('event', 'byAgain_Clicked', {
+//                         "EID": hashEmail,
+//                         "MID": hashMobile,
+//                         "NAEID": tgtcstData.user.email,
+//                         "NAMID": tgtcstData.user.phone_number,
+//                         // "Age":
+//                         "Gender": tgtcstData.user.gender,
+//                         "Section": "Login",
+//                         "userStatus": "Loggedin",
+//                         'send_to': 'G-KJK84KP0LJ',
+//                         "Time": formattedTime
+//                     });
+//                 }
+//             }
+
+//         })
+//     })
+// }
+// console.log("tgt_login_guide_images", tgt_login_guide_images)
+
+  let tgt_login_guide_images = document.querySelectorAll(".login_guide_images")
+function LoginGuide (Eventname)
+{
+   let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+   let hashEmail = md5(tgtcstData.user.email);
+   let hashMobile = md5(tgtcstData.user.phone_number.toString());
+    gtag('event', Eventname, {
+        "EID": hashEmail,
+        "MID": hashMobile,
+        "NAEID": tgtcstData.user.email,
+        "NAMID": tgtcstData.user.phone_number,
+        // "Age":
+        "Gender": tgtcstData.user.gender,
+        "Section": "Login",
+        "userStatus": "Loggedin",
+        'send_to': 'G-KJK84KP0LJ',
+        "Time": formattedTime
+    });
+}
+if (tgt_login_guide_images) {
+    tgt_login_guide_images.forEach((item) => {
+        // console.log("item", item)
+        item.addEventListener('click', function () {
+       
+            let tgtcstData = JSON.parse(localStorage.getItem("CstData"));
+            if (tgtcstData) {
+                let hashEmail = md5(tgtcstData.user.email);
+                let hashMobile = md5(tgtcstData.user.phone_number.toString());
+                // console.log("item" , item.querySelector("p").textContent.trim())
+                let tgtText = item.querySelector("p").textContent.trim();
+              // console.log("tgtText" , tgtText)
+                if (tgtText == "Talk to Hair Coach") {
+                    LoginGuide("talkToCoach_Clicked")
+                }
+              if (tgtText == "My Diet Plan") {
+                LoginGuide("myDietPlan_Clicked")
+                }
+              if (tgtText == "My Prescription") {
+                 LoginGuide("myPrescription_Clicked")
+                }
+              if (tgtText == "Buy Again") {
+                LoginGuide("byAgain_Clicked")
+                }
+            }
+
+        })
+    })
+}
+
+});
+
+$(document).ready(function() {
+  $('#buyagaincta').click(function(e) {
+    var mobile_number = getCookie('user_phone');
+    var gender = localStorage.getItem('user-gender');
+    var user = localStorage.getItem('rid');
+    gtag('event', 'byAgain_Clicked', {
+      'send_to': 'G-KJK84KP0LJ',
+      'NAMID': mobile_number,
+      'Page_Name': 'Home',
+      'gender': gender,
+      'user': user,
+    });
+  });
+});
+
+// Table of Contents On Blog Pages Icon 
+var table_of_contents_toggle_button = document.querySelector(".ruffruff-table-of-contents-toggle-button");
+if (table_of_contents_toggle_button) {
+  table_of_contents_toggle_button.innerHTML = '<img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/imgpsh_fullsize_anim_2_1ed32d86-ba62-4fa5-80fd-9dd3e6e0813b.jpg?v=1695648967" alt="Toggle Icon">';
+}
+document.addEventListener('DOMContentLoaded', function () {
+  var element = document.querySelector('.ruffruff-table-of-contents-toggle-button');
+    if (element) {
+    element.click();
+  }
+});
+
+/* Science Page Changes */
+document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll('.find_btn');
+  const closeButtons = document.querySelectorAll('.close-btn');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', function() {
+      const popupId = this.getAttribute('id');
+      const popups = document.querySelectorAll('.adrich_happens-popup');
+
+      popups.forEach(popup => {
+        if (popup.id === popupId) {
+          popup.style.display = 'block';
+        } else {
+          popup.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  closeButtons.forEach(closeButton => {
+    closeButton.addEventListener('click', function() {
+      const popup = this.closest('.adrich_happens-popup');
+      if (popup) {
+        popup.style.display = 'none';
+      }
+    });
+  });
+});
+/* Science Page Changes */
+
+// -----animation on success story-----------
+const scrollers = document.querySelectorAll(".scroller");
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    const scrollerInners = scroller.querySelectorAll('.scroller__inner');
+    scrollerInners.forEach((scrollerInner) => {
+      const scrollerContent = Array.from(scrollerInner.children);
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.setAttribute('aria-hidden', true);
+        scrollerInner.appendChild(duplicatedItem);
+      });
+    });
+  });
+}
+
+
+// Male RP Read More/Less Button
+let readMore = document.querySelectorAll('.show_less_more b');
+let fullReview = document.querySelectorAll('.review_details.fullReview.webkit-box');
+
+readMore.forEach((readMores, index) => {
+  readMores.addEventListener("click", () => {
+    fullReview[index].classList.toggle('webkit-box');
+    if(readMores.textContent === 'read more') {
+      readMores.textContent = 'read less';
+    }else {
+      readMores.textContent = 'read more';
+    }
+  });
+});
+
+// female
+let readMoreFemale = document.querySelectorAll('.show_less_more_female b');
+let fullReviewFemale = document.querySelectorAll('.review_details_female.fullReview.webkit-box');
+
+readMoreFemale.forEach((readMores, index) => {
+  readMores.addEventListener("click", () => {
+
+    // Toggle the visibility of the clicked review content
+    if (fullReviewFemale[index].classList.contains('webkit-box')) {
+      fullReviewFemale[index].classList.remove('webkit-box');
+      readMores.textContent = 'read less';
+    } else {
+      fullReviewFemale[index].classList.add('webkit-box');
+      readMores.textContent = 'read more';
+    }
+
+    // Close other expanded review contents
+    for (let i = 0; i < fullReviewFemale.length; i++) {
+      if (i !== index) {
+        fullReviewFemale[i].classList.add('webkit-box');
+        readMoreFemale[i].textContent = 'read more';
+      }
+    }
+  });
+});
+

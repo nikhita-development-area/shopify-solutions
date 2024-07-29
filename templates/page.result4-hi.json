@@ -1,0 +1,1147 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "test_result_hindi_iG9iP4": {
+      "type": "test-result-hindi",
+      "settings": {
+      }
+    },
+    "201d730d-62d5-48ba-97aa-4588750bc1a4": {
+      "type": "treatment-month-plan",
+      "settings": {
+      }
+    },
+    "result_products_6XVwAP": {
+      "type": "result-products",
+      "settings": {
+      }
+    },
+    "stage1_why_you_should_hi_eKA7Ca": {
+      "type": "stage1-why-you-should-hi",
+      "blocks": {
+        "gallery_QbCGpX": {
+          "type": "Gallery",
+          "settings": {
+            "stage_img": "shopify:\/\/shop_images\/Frame_1000006337.png",
+            "stage_txt": "स्टेज 1",
+            "percentage_img": "shopify:\/\/shop_images\/Frame_1000006351.png",
+            "percentage_value": "80%"
+          }
+        },
+        "gallery_iU4at9": {
+          "type": "Gallery",
+          "settings": {
+            "stage_img": "shopify:\/\/shop_images\/Frame_1000006337_c593b411-7dbe-43b0-bdb3-98ba027ee782.png",
+            "stage_txt": "स्टेज 3",
+            "percentage_img": "shopify:\/\/shop_images\/Frame_232498d0-3307-444e-b5f6-a74562be98df.png",
+            "percentage_value": "50%"
+          }
+        },
+        "gallery_DUV3Jd": {
+          "type": "Gallery",
+          "settings": {
+            "stage_img": "shopify:\/\/shop_images\/Frame_1000006337_ebf90c4b-3d26-456b-ae1c-194b60ec7dbd.png",
+            "stage_txt": "स्टेज 5",
+            "percentage_img": "shopify:\/\/shop_images\/Frame_1000006352.png",
+            "percentage_value": "30%"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_QbCGpX",
+        "gallery_iU4at9",
+        "gallery_DUV3Jd"
+      ],
+      "settings": {
+        "why_title": "आपको इसी वक़्त क्यों शुरू करना चाहिए?",
+        "why_para": "आप जितनी जल्दी ट्रीटमेंट शुरू करते हैं, आपके हेयर लॉस को रोकना उतना ही आसान होता है। अपने एक्टिव हेयर फॉलिकल्स को बचाने के लिए और अपना हेयर लाइन मेन्टेन करने के लिए, आज ही शुरू करे।"
+      }
+    },
+    "new_testimonial_hi_VDC48a": {
+      "type": "new-testimonial-hi",
+      "settings": {
+      }
+    },
+    "customer_review_hi_XJ8Hkw": {
+      "type": "customer-review-hi",
+      "blocks": {
+        "revies_JPfKFH": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "अपार",
+            "customer_img1": "shopify:\/\/shop_images\/Jan_17_2022..png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Dec_10_2022_1.png",
+            "customer_txt2": "Month 10",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_30_2023.png",
+            "customer_txt3": "Month 18",
+            "review_date": "01 Dec 2022",
+            "review_details": "मुझे पिछले 2 साल से हेयर फॉल का प्रॉब्लम था, ख़ास कर डैंड्रफ की वजह स।  लेकिन Traya का ट्रीटमेंट शुरू करने के बाद, 2-3 हफ्तों के अंदर मेरा डैंड्रफ भी कण्ट्रोल में आ गया था।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_q8DeiD": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "राजेंद्र कुमार",
+            "customer_img1": "shopify:\/\/shop_images\/July_13_2023.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/September_02_2023.png",
+            "customer_txt2": "Month 6",
+            "customer_img3": "shopify:\/\/shop_images\/Nov_02_2023_1.png",
+            "customer_txt3": "Month 10",
+            "review_date": "25 Oct 2022",
+            "review_details": "मैं 2020 से ही अपने हेयर फॉल को लेके बहुत परेशान था। Traya के एड्स देखे तो मैंने सोचा इस्तेमाल करके देखते हैं। ट्रीटमेंट शुरू करने के 2 हफ्ते के अंदर मेरे बाल झड़ने काम हो गायें और धीरे-धीरे मैंने अच्छा हेयर ग्रोथ भी देखा। मैं बहुत खुश हु की मेरे बाल वापस आ गए हैं।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_CGEaKJ": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "अजय",
+            "customer_img1": "shopify:\/\/shop_images\/May_16_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Sep_30_2022_1.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_01_2022_1.png",
+            "customer_txt3": "Month 18",
+            "review_date": "20 Nov 2022",
+            "review_details": "मैं अपने हेयर फॉल के लिए बहुत सारे डॉक्टर्स के पास गया हूँ।  वह मुझे दवाइयां दे देते थे लेकिन मुझे कभी रिजल्ट्स नहीं दीखते थे। मेरे हार मानने से पहले मुझे Traya के एड्स आने लगे।  मुझे अपने ट्रीटमेंट से बहुत अच्छे रिजल्ट्स मिले हैं और मैंने अपने दोस्तों को भी इसे इस्तेमाल करने को कहा है।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_T3yNnd": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "हिमांशु",
+            "customer_img1": "shopify:\/\/shop_images\/Apr_10_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jun_13_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Jul_31_2022_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "20 Jul 2022",
+            "review_details": "अगर मुझे 2 साल पहले Traya मिला होता, तो कितना अच्छा होता। अभी तो मेरे सर पे खाली टकलो पे बाल आ गए हैं।  हेयर कोचेस बहुत अच्छे से बात करते हैं और उनके साथ किसी भी प्रॉब्लम के बारे में बात करना आसान होता है। यह मुझे Traya की सबसे अच्छी बात लगी।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_f4WpTx": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "संजू",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_30_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Sep_07_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_05_2023_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "28 Dec 2022",
+            "review_details": "मेरे पिताजी की तरह मुझे भी जेनेटिक हेयर लोस्स थ।  इसीलिए मुझे हमेशा से लगता था की शायद ये कभी ठीक नहीं होगा।  मैंने हेयर टेस्ट लिया और किट इस्तेमाल करने के 2-3 महीने बाद मुझे बहुत अच्छे रिजल्ट्स दिखने लगें।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_JJDafX": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "रोहन अम्बस्था",
+            "customer_img1": "shopify:\/\/shop_images\/Oct_31_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Dec_05_2022_2.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_11_2023_2.png",
+            "customer_txt3": "Month 12",
+            "review_date": "28 Nov 2022",
+            "review_details": "मेरे बेंगलुरु में शिफ्ट होने के बाद, अचानक मेरे बाल बहुत ज़्यादा झड़ने लगे।  मैंने प्याज, हेयर विटामिन्स, सब कुछ ट्राई किया लेकिन कुछ भी काम नहीं आया।  मैं हेयर ट्रीटमेंट्स के बारे में बहुत रिसर्च करता था और तभी मुझे Traya मिला।  इसके लिए मैं इसीलिए राज़ी हुआ क्यों की Traya आपके अंदर के रुट कॉज को निकलता हैं। मेरा हेयर फॉल 1.5 महीने में ही कम हो गया था।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_PHJT3E": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "लोकेश नैक",
+            "customer_img1": "shopify:\/\/shop_images\/May_30_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_25_2022.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_28_2023_1.png",
+            "customer_txt3": "Month 15",
+            "review_date": "5 Apr 2023",
+            "review_details": "मेरे स्कैल्प पे फंगस और डैंड्रफ, दोनों बहुत ज़्यादा जम गए थे।  ट्रीटमेंट ढूंढ़ते वक़्त मुझे Traya मिला और सिर्फ 3 महीने में मुझे अच्छे रिजल्ट्स दिखने लगे। मेरे क्राउन और हेयर लाइन पे भी छोटे-छोटे बाल उगने लग गए थे।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_kQpRTD": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "भूमि",
+            "customer_img1": "shopify:\/\/shop_images\/Before_3_1f39139a-4bf1-412d-9b97-e06c61c01b1d.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Screenshot_2024-01-02_135615_1.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/After_3_663f42b2-02cf-46b2-9fb6-2520d0e701ba.png",
+            "customer_txt3": "Month 12",
+            "review_date": "24 Dec 2023",
+            "review_details": "बहुत सालो के एड्स देख-देख के मिनोक्सिडिल, शैम्पू, तेल, सब कुछ इस्तेमाल किया लेकिन कभी अच्छे रिजल्ट्स नहीं दीखते थे।  फिर, Traya का ट्रीटमेंट लेने के बाद, मेरे क्राउन पे बालो की एक लेयर आ चुकी हैं।  Traya सिर्फ एक प्रोडक्ट नहीं बल्कि एक पूरा किट देता हैं जिससे मुझे अच्छे रिजल्ट्स मिले हैं।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_wKGV7p": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "वैभव",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_03_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Aug_16_2022_1.png",
+            "customer_txt2": "Month 8",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_18_2023_1.png",
+            "customer_txt3": "Month 12",
+            "review_date": "8 Jan 2023",
+            "review_details": "मुझे हमेशा से अपने बालो के लिए एक आयुर्वेदिक ट्रीटमेंट चाहिए था क्यों की उनके साइड इफेक्ट्स नहीं होते है। यही बात मुझे Traya की अच्छी लगी और मुझे पुरे ट्रीटमेंट के दौरान कोई साइड इफेक्ट्स नहीं महसूस हुए और कुछ ही महीनो में अच्छे रिजल्ट्स भी दिखे।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        }
+      },
+      "block_order": [
+        "revies_JPfKFH",
+        "revies_q8DeiD",
+        "revies_CGEaKJ",
+        "revies_T3yNnd",
+        "revies_f4WpTx",
+        "revies_JJDafX",
+        "revies_PHJT3E",
+        "revies_kQpRTD",
+        "revies_wKGV7p"
+      ],
+      "settings": {
+        "cstm-stage_hi": "cstm-stage_hi_2",
+        "customer-head": "हमारे सक्सेस स्टोरीज"
+      }
+    },
+    "customer_review_hi_MzGWp7": {
+      "type": "customer-review-hi",
+      "blocks": {
+        "revies_JJDafX": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "रोहन अम्बस्था",
+            "customer_img1": "shopify:\/\/shop_images\/Oct_31_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Dec_05_2022_2.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_11_2023_2.png",
+            "customer_txt3": "Month 12",
+            "review_date": "28 Nov 2022",
+            "review_details": "मेरे बेंगलुरु में शिफ्ट होने के बाद, अचानक मेरे बाल बहुत ज़्यादा झड़ने लगे।  मैंने प्याज, हेयर विटामिन्स, सब कुछ ट्राई किया लेकिन कुछ भी काम नहीं आया।  मैं हेयर ट्रीटमेंट्स के बारे में बहुत रिसर्च करता था और तभी मुझे Traya मिला।  इसके लिए मैं इसीलिए राज़ी हुआ क्यों की Traya आपके अंदर के रुट कॉज को निकलता हैं। मेरा हेयर फॉल 1.5 महीने में ही कम हो गया था।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_PHJT3E": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "लोकेश नैक",
+            "customer_img1": "shopify:\/\/shop_images\/May_30_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_25_2022.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_28_2023_1.png",
+            "customer_txt3": "Month 15",
+            "review_date": "5 Apr 2023",
+            "review_details": "मेरे स्कैल्प पे फंगस और डैंड्रफ, दोनों बहुत ज़्यादा जम गए थे।  ट्रीटमेंट ढूंढ़ते वक़्त मुझे Traya मिला और सिर्फ 3 महीने में मुझे अच्छे रिजल्ट्स दिखने लगे। मेरे क्राउन और हेयर लाइन पे भी छोटे-छोटे बाल उगने लग गए थे।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_kQpRTD": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "भूमि",
+            "customer_img1": "shopify:\/\/shop_images\/Before_3_1f39139a-4bf1-412d-9b97-e06c61c01b1d.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Screenshot_2024-01-02_135615_1.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/After_3_663f42b2-02cf-46b2-9fb6-2520d0e701ba.png",
+            "customer_txt3": "Month 12",
+            "review_date": "24 Dec 2023",
+            "review_details": "बहुत सालो के एड्स देख-देख के मिनोक्सिडिल, शैम्पू, तेल, सब कुछ इस्तेमाल किया लेकिन कभी अच्छे रिजल्ट्स नहीं दीखते थे।  फिर, Traya का ट्रीटमेंट लेने के बाद, मेरे क्राउन पे बालो की एक लेयर आ चुकी हैं।  Traya सिर्फ एक प्रोडक्ट नहीं बल्कि एक पूरा किट देता हैं जिससे मुझे अच्छे रिजल्ट्स मिले हैं।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_wKGV7p": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "वैभव",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_03_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Aug_16_2022_1.png",
+            "customer_txt2": "Month 8",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_18_2023_1.png",
+            "customer_txt3": "Month 12",
+            "review_date": "8 Jan 2023",
+            "review_details": "मुझे हमेशा से अपने बालो के लिए एक आयुर्वेदिक ट्रीटमेंट चाहिए था क्यों की उनके साइड इफेक्ट्स नहीं होते है। यही बात मुझे Traya की अच्छी लगी और मुझे पुरे ट्रीटमेंट के दौरान कोई साइड इफेक्ट्स नहीं महसूस हुए और कुछ ही महीनो में अच्छे रिजल्ट्स भी दिखे।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_Mcwp6F": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "सईद सैफ",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_01_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/image_a4651803-aeac-41d4-a727-fb76ec60ab8d.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Feb_18_2023_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "6 Feb 2023",
+            "review_details": "मुझे पिछले 2 साल से हेयर फॉल हो रहा था। पहले भी ट्रीटमेंट करवाया था लेकिन मुझे कुछ ख़ास रिजल्ट्स नहीं मिले। फिर Traya के एड्स देख कर मैंने उनपे थोड़ा रिसर्च किया और मुझे लगा इससे मेरे बाल वापस आ सकते है।  ट्रीटमेंट शुरू करने के 4-5 महीने बाद ही मुझे रिजल्ट्स दिखने शुरू हो गए थे।  मेरे रिजल्ट्स देख के तो मेरे दोस्त और परिवार के लोग काफी हैरान हो गए थे।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_QRAV6y": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "वरुण कुमार",
+            "customer_img1": "shopify:\/\/shop_images\/May_12_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_08_2022_1.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Sep_18_2023_2.png",
+            "customer_txt3": "Month 15",
+            "review_date": "2 Nov 2022",
+            "review_details": "हेयर फॉल की वजह से मेरे कॉन्फिडेंस एकदम काम हो गया था।  ट्रीटमेंट के बाद मेरे बाल वापस आ गए तो मुझे बहुत अच्छा लगा।  मेरी यही सलाह होगी की ट्रीटमेंट और डाइट को रोज़ फॉलो करेंगे, तो रिजल्ट्स ज़रूर मिलेंगे।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_eFFqjk": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "सौभाग्य पटेल",
+            "customer_img1": "shopify:\/\/shop_images\/Jul_05_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_04_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Feb_02_2023_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "26 Jan 2023",
+            "review_details": "मुझे पिछले 3-4 साल से हेयर फॉल हो रहा थ। एक दोस्त के कहने में मैंने Traya का ट्रीटमेंट शुरू किया। क्यों की वो खुद भी इस्तेमाल कर रहा था, उसके रिजल्ट्स देख के, मैंने भी इसे एक मौका दिया। और मुझे भी हेयर ग्रोथ दिखने लगा।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_QfRY8m": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "मनीष",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_30_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Sep_12_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_14_2022_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "10 Dec 2022",
+            "review_details": "मुझे पिछले डेढ़ साल से हेयर फॉल हो रहा था। जब मैंने Traya का ऐड देखा तो मैंने इसे ठीक करने का फैसला लिया। मैं अपनी गोलियां रोज़ लेता था और मुझे रेगुलर रहने के लिए, हेयर कोच ने मेरे हौसला बनाएं रक्खा।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        }
+      },
+      "block_order": [
+        "revies_JJDafX",
+        "revies_PHJT3E",
+        "revies_kQpRTD",
+        "revies_wKGV7p",
+        "revies_Mcwp6F",
+        "revies_QRAV6y",
+        "revies_eFFqjk",
+        "revies_QfRY8m"
+      ],
+      "settings": {
+        "cstm-stage_hi": "cstm-stage_hi_3",
+        "customer-head": "हमारे सक्सेस स्टोरीज"
+      }
+    },
+    "customer_review_hi_gKxcgG": {
+      "type": "customer-review-hi",
+      "blocks": {
+        "revies_Mcwp6F": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "सईद सैफ",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_01_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/image_a4651803-aeac-41d4-a727-fb76ec60ab8d.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Feb_18_2023_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "6 Feb 2023",
+            "review_details": "मुझे पिछले 2 साल से हेयर फॉल हो रहा था। पहले भी ट्रीटमेंट करवाया था लेकिन मुझे कुछ ख़ास रिजल्ट्स नहीं मिले। फिर Traya के एड्स देख कर मैंने उनपे थोड़ा रिसर्च किया और मुझे लगा इससे मेरे बाल वापस आ सकते है।  ट्रीटमेंट शुरू करने के 4-5 महीने बाद ही मुझे रिजल्ट्स दिखने शुरू हो गए थे।  मेरे रिजल्ट्स देख के तो मेरे दोस्त और परिवार के लोग काफी हैरान हो गए थे।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_QRAV6y": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "वरुण कुमार",
+            "customer_img1": "shopify:\/\/shop_images\/May_12_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_08_2022_1.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Sep_18_2023_2.png",
+            "customer_txt3": "Month 15",
+            "review_date": "2 Nov 2022",
+            "review_details": "हेयर फॉल की वजह से मेरे कॉन्फिडेंस एकदम काम हो गया था।  ट्रीटमेंट के बाद मेरे बाल वापस आ गए तो मुझे बहुत अच्छा लगा।  मेरी यही सलाह होगी की ट्रीटमेंट और डाइट को रोज़ फॉलो करेंगे, तो रिजल्ट्स ज़रूर मिलेंगे।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_eFFqjk": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "सौभाग्य पटेल",
+            "customer_img1": "shopify:\/\/shop_images\/Jul_05_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_04_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Feb_02_2023_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "26 Jan 2023",
+            "review_details": "मुझे पिछले ४-५ साल से हेयर फॉल हो रहा थ।  एक दोस्त के कहने में मैंने Traya का ट्रीटमेंट शुरू किया।  क्यों की वो खुद भी इस्तेमाल कर रहा था, उसके रिजल्ट्स देख के, मैंने भी इसे एक मौका दिया। और मुझे भी हेयर ग्रोथ दिखने लगा।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_QfRY8m": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "मनीष",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_30_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Sep_12_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_14_2022_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "10 Dec 2022",
+            "review_details": "मुझे पिछले डेढ़ साल से हेयर फॉल हो रहा था। जब मैंने Traya का ऐड देखा तो मैंने इसे ठीक करने का फैसला लिया। मैं अपनी गोलियां रोज़ लेता था और मुझे रेगुलर रहने के लिए, हेयर कोच ने मेरे हौसला बनाएं रक्खा।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_biUy7p": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "वेद",
+            "customer_img1": "shopify:\/\/shop_images\/Feb_03_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_25_2022_1.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/May_08_2023_1.png",
+            "customer_txt3": "Month 14",
+            "review_date": "03 May 2023",
+            "review_details": "जब मैंने ट्रीटमेंट शुरू किया, तब मैं उतना रेगुलर नहीं था। पर जबसे मैंने मैं लगाकर कोशिश की, मुझे धीरे धीरे अच्छे रिजल्ट्स दिखने लगे। अब लोग मुझे  बोलते हैं कि मेरे बाल कितने घने हो गए हैं।अब मैं बहुत खुश हूँ।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_XBeibY": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "सद्दाम",
+            "customer_img1": "shopify:\/\/shop_images\/Jul_05_2022_3.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Mar_22_2023_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_10_2023_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "3 Dec 2023",
+            "review_details": "कॉलेज के दिनों से ही मेरा हेयर फॉल शुरू हो गया था। बहुत सारे डॉक्टर्स को दिखाए लेकिन कोई रिजल्ट्स नहीं मिले। फिर जब Traya का ट्रीटमेंट शुरू किया, 3-4 महीने में ही रिजल्ट्स दिखने शुरू हो गए। मेरे हेयर कोच ने मुझे बहोत मोटिवेट और गाइड किया और अब मेरा हेल्थ और कॉन्फिडेंस, दोनो बहुत अच्छे हैं!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_m78TPN": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "अजय कुमार",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_16_2023_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Oct_04_2023_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_04_2024_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "28 Sep 2023",
+            "review_details": "मुझे पिछले 15 साल से हेयर फॉल का प्रॉब्लम था और मैंने तो उम्मीद छोड़ दी थी, कि बाल वापस आएंगे। लेकिन एक दोस्त के कहने पर Traya का ट्रीटमेंट मैंने शुरू किया। और मैंने मेडिसिन्स के साथ-साथ डाइट और योगा दोनों फॉलो किया - जिससे मेरे 90% बाल वापस आ चुके हैं!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_CVmqgd": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "देव सिंह",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_18_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_11_2023_1.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Nov_14_2023_1.png",
+            "customer_txt3": "Month 6",
+            "review_date": "7 Nov 2023",
+            "review_details": "मुझे 4 साल से हेयर फॉल का प्रॉब्लम हो रहा था। PRP ट्रीटमेंट लिया लेकिन कोई खास रिजल्ट नहीं मिला। लेकिन Traya का रूटीन रोज़ फॉलो करना जब से शुरू किया है  - तो अब लग रहा है कि मेरे बालो में दिन-रात का फर्क आ गया हैं। मुझे 3 महीने में ही थोड़ा बेबी हेयर ग्रोथ दिखना शुरू कर दिया था और मेरे हेयर कोच ने मुझे रेगुलर बने रहने के लिए बहोत मोटिवेट किया।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        }
+      },
+      "block_order": [
+        "revies_Mcwp6F",
+        "revies_QRAV6y",
+        "revies_eFFqjk",
+        "revies_QfRY8m",
+        "revies_biUy7p",
+        "revies_XBeibY",
+        "revies_m78TPN",
+        "revies_CVmqgd"
+      ],
+      "settings": {
+        "cstm-stage_hi": "cstm-stage_hi_4",
+        "customer-head": "हमारे सक्सेस स्टोरीज"
+      }
+    },
+    "customer_review_hi_BfApk9": {
+      "type": "customer-review-hi",
+      "blocks": {
+        "revies_biUy7p": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "वेद",
+            "customer_img1": "shopify:\/\/shop_images\/Feb_03_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_25_2022_1.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/May_08_2023_1.png",
+            "customer_txt3": "Month 14",
+            "review_date": "03 May 2023",
+            "review_details": "जब मैंने ट्रीटमेंट शुरू किया, तब मैं उतना रेगुलर नहीं था। पर जबसे मैंने मैं लगाकर कोशिश की, मुझे धीरे धीरे अच्छे रिजल्ट्स दिखने लगे। अब लोग मुझे  बोलते हैं कि मेरे बाल कितने घने हो गए हैं।अब मैं बहुत खुश हूँ।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_XBeibY": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "सद्दाम",
+            "customer_img1": "shopify:\/\/shop_images\/Jul_05_2022_3.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Mar_22_2023_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_10_2023_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "3 Dec 2023",
+            "review_details": "कॉलेज के दिनों से ही मेरा हेयर फॉल शुरू हो गया था। बहुत सारे डॉक्टर्स को दिखाए लेकिन कोई रिजल्ट्स नहीं मिले। फिर जब Traya का ट्रीटमेंट शुरू किया, 3-4 महीने में ही रिजल्ट्स दिखने शुरू हो गए। मेरे हेयर कोच ने मुझे बहोत मोटिवेट और गाइड किया और अब मेरा हेल्थ और कॉन्फिडेंस, दोनो बहुत अच्छे हैं!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_m78TPN": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "अजय कुमार",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_16_2023_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Oct_04_2023_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_04_2024_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "28 Sep 2023",
+            "review_details": "मुझे पिछले 15 साल से हेयर फॉल का प्रॉब्लम था और मैंने तो उम्मीद छोड़ दी थी, कि बाल वापस आएंगे। लेकिन एक दोस्त के कहने पर Traya का ट्रीटमेंट मैंने शुरू किया। और मैंने मेडिसिन्स के साथ-साथ डाइट और योगा दोनों फॉलो किया - जिससे मेरे 90% बाल वापस आ चुके हैं!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_CVmqgd": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "देव सिंह",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_18_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_11_2023_1.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Nov_14_2023_1.png",
+            "customer_txt3": "Month 6",
+            "review_date": "7 Nov 2023",
+            "review_details": "मुझे 4 साल से हेयर फॉल का प्रॉब्लम हो रहा था। PRP ट्रीटमेंट लिया लेकिन कोई खास रिजल्ट नहीं मिला। लेकिन Traya का रूटीन रोज़ फॉलो करना जब से शुरू किया है  - तो अब लग रहा है कि मेरे बालो में दिन-रात का फर्क आ गया हैं। मुझे 3 महीने में ही थोड़ा बेबी हेयर ग्रोथ दिखना शुरू कर दिया था और मेरे हेयर कोच ने मुझे रेगुलर बने रहने के लिए बहोत मोटिवेट किया।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_ej4rPi": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "जगन मोहन",
+            "customer_img1": "shopify:\/\/shop_images\/Dec_02_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Aug_31_2023.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_20_2023.png",
+            "customer_txt3": "Month 5",
+            "review_date": "13 Dec 2023",
+            "review_details": "मैंने हमेशा से अपने बालों को बचाने के लिए खूब सारा रिसर्च किया हैं। मैं 44 साल का हूँ और मेरे उम्र के लोग, उम्मीद नहीं करते कि उनके सिर पर बाल वापस आएंगे। लेकिन, Traya का शुक्रिया - मेरे बहुत बाल वापस आ गए हैं। मैंने रूटीन को रोज़ फॉलो किया और मैंने एक भी गोली नहीं छोड़ी। अगर मैं यह कर सकता हूँ, तो आप भी कर सकते हैं।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_fCgEUW": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "राजेश जोशी",
+            "customer_img1": "shopify:\/\/shop_images\/Sep_29_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Dec_18_2022.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_05_2023_2.png",
+            "customer_txt3": "Month 6",
+            "review_date": "2 Jan 2023",
+            "review_details": "मैंने इतने प्रोडक्ट्स ट्राई किये - ओनियन ऑइल्स, शैम्पूस, मेरे हेयर फॉल का इलाज करने के लिए लेकिन कुछ भी काम नहीं आया। पर Traya के कस्टमर रिव्यूज सच्चे लगे तो मैंने भी शुरू किया। मेरे हेयर कोच हमेशा मुझे मोटिवेट करते थे और आज उसी के वजह से मेरे लगभग सारे बाल वापस आ गए हैं। मेरे आस पास के लोग हैरान हो गए हैं मेरे इतने अच्छे रिजल्ट्स देख कर।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_Yrt3GD": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "यासीन",
+            "customer_img1": "shopify:\/\/shop_images\/Sep_28_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jan_26_2023.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/Jul_05_2023.png",
+            "customer_txt3": "Month 11",
+            "review_date": "27 Jun 2023",
+            "review_details": "काफी लोगों ने मुझे बोला की - \"जेनेटिक हेयर फॉल हैं तो कुछ नहीं हो सकता\"। लेकिन Traya ने इसे गलत साबित कर दिया। मुझे पता भी नहीं था कि हेयर फॉल के इंटरनल रूट कॉज़ेस भी होते हैं। मैंने अपना रूटीन स्ट्रिक्टली फॉलो किया और 1 महीने के अंदर मेरे हेयर फॉल रुक गया। और इतना अच्छा हेयर ग्रोथ देखके, मैं और मेरी पूरी फैमिली बहोत खुश हैं।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_wHNMJE": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "सौरभ अम्बिलढुलके",
+            "customer_img1": "shopify:\/\/shop_images\/Dec_01_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Apr_14_2023.png",
+            "customer_txt2": "Month 6",
+            "customer_img3": "shopify:\/\/shop_images\/Sep_17_2023.png",
+            "customer_txt3": "Month 9",
+            "review_date": "12 Sep 2023",
+            "review_details": "मैंने अपने हेयर फॉल को बहुत लंबे समय तक नज़रअंदाज़ किया। 2020 में, मैंने आखिरकार इसके बारे में कुछ करने का फैसला लिया। तब मुझे Traya  का ऐड दिखा। मैंने उनके रीवियुस पढ़ें और उन्होंने मुझे ट्रीटमेंट शुरू करने का कॉन्फिडेंस दिया। रूटीन शुरू करते वक़्त, मैं बहुत तंदुरुस्त महसूस करता था  और बेशक, अब मैं अपने बालों से भी बहुत खुश हूं।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_NUP4mj": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "क्रांतीलाल सुरेश",
+            "customer_img1": "shopify:\/\/shop_images\/May_24_2023.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_26_2023.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Nov_02_2023_7e2fd8cd-422e-4ff4-ae66-711ed7856438.png",
+            "customer_txt3": "Month 6",
+            "review_date": "25 Oct 2023",
+            "review_details": "मेरा हेयर फॉल का प्रॉब्लम इतना बुरा था कि बहुत कम बाल रह गए थे मेरे सर पे। एक दोस्त ने Traya रेकमेंड किया तो मैंने ट्रीटमेंट शुरू किया। और 3 महीने के अंदर ही मुझे बेबी हेयर ग्रोथ दिखने लगे। मैं बहुत खुश था कि मैंने सही जगह पर अपने एफ़ोर्ट्स लगाए हैं। मैंने Traya का कम्युनिटी ग्रुप भी जॉइन किया था - वहाँ पे जो भी मेरे डाउट्स होते थे, उनके जवाब मिल जाते थे और अच्छी गाइडेंस भी मिलता थी।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        }
+      },
+      "block_order": [
+        "revies_biUy7p",
+        "revies_XBeibY",
+        "revies_m78TPN",
+        "revies_CVmqgd",
+        "revies_ej4rPi",
+        "revies_fCgEUW",
+        "revies_Yrt3GD",
+        "revies_wHNMJE",
+        "revies_NUP4mj"
+      ],
+      "settings": {
+        "cstm-stage_hi": "cstm-stage_hi_5",
+        "customer-head": "हमारे सक्सेस स्टोरीज"
+      }
+    },
+    "customer_review_hi_kMjzre": {
+      "type": "customer-review-hi",
+      "blocks": {
+        "revies_YYjYAK": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "उद्देश्य",
+            "customer_img1": "shopify:\/\/shop_images\/Uddeshya01_300x_4c51e29f-1d12-44df-94c7-e71e8b2de6bd.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Uddeshya02_300x_921c4a78-34b8-4f77-9551-775547339218.jpg",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Uddeshya03_300x_e746d8f1-e039-43ee-8ba1-4b2c0e35bd9c.jpg",
+            "customer_txt3": "Month 6",
+            "review_date": "15 Nov 2021",
+            "review_details": "मेरा हेयर लॉस 2016 में शुरू हुआ जब मुझे टी बी का पता चला। मैंने एक डर्मेटोलॉजिस्ट से सलाह ली और कई तरह के इलाज करवाने की कोशिश कि। लेकिन मुझे Traya की तीन साइंस को मिलके ट्रीटमेंट करने का तरीका पसंद आया। जब मैंने उनके किट्स का इस्तेमाल किया, तो मेरे बाल भी घने हो गए और हेयर फॉल भी बिलकुल ना के बराबर हो गया।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_KVAjgE": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "रजत साध",
+            "customer_img1": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_300x_93ca08ad-9a26-431e-9be5-e83d334cd5ad.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/month_4_300x_3fb66938-dd6c-4fb4-b3c4-9cbf5d46ffcd.jpg",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_1_300x_afb0b676-652a-4589-b14e-646c94c0efcb.jpg",
+            "customer_txt3": "Month 8",
+            "review_date": "21st Feb 2022",
+            "review_details": "मैं अपने हेयर लॉस के लिए सर्जरी या किसी अन्य ट्रीटमेंट नहीं लेना चाहता था और मैंने Traya को ढूँढ निकाला। उन्होंने ८ महीनो में मेरे सिर पर पुरे बाल वापस लाने में मदद कि हैं।  मैं मेरे रिजल्ट्स से इतना खुश हूँ! बहुत बहुत धन्यवाद!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_mjC4nr": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "अनाम",
+            "customer_img1": "shopify:\/\/shop_images\/Month-a1_300x_1.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Month-a1_300x_1.jpg",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Month-a5_300x_982f0e9d-ccbc-4806-b6b9-05cae2075224.jpg",
+            "customer_txt3": "Month 5",
+            "review_date": "15th August 2021",
+            "review_details": "सिर्फ 5 महीनों में रिजल्ट्स, मैं तो यकीन ही नहीं कर पाया जब मैंने अपने सिर पर बालों की ग्रोथ देखी। जिनको भी बालों की समस्या है, उन्हें ये प्लान ज़रूर ट्राई करना चाहिए। यह जादू की तरह काम करता है।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_6RiGtz": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "सुनील भदौरिया",
+            "customer_img1": "shopify:\/\/shop_images\/Month_1_3_300x_669c0791-76d3-4cbe-9f8c-7eb09a5cee8e.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Month_5_300x_cd0d7c8c-ddc9-41c2-b84f-78309f3933b9.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Month_7_1_300x_18514b4a-141e-43ae-889c-3596cd96ed89.jpg",
+            "customer_txt3": "Month 7",
+            "review_date": "9th Apr 2022",
+            "review_details": "मैंने क्वोरा पर Traya के बारे में पढ़ा था। मैंने इसके अच्छे रीवियुस पढ़ें तो सोचा कि मुझे भी कोशिश करनी चाहिये। इसने मेरी बहुत मदद की और मुझे अच्छे से फर्क दीखता है कि मेरे कितने बाल वापस उग आए हैं।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_8wDAix": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "संदीप",
+            "customer_img1": "shopify:\/\/shop_images\/april_2023__1__360.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Before_3_19160c21-bcf3-4742-80d1-279e2f7d7df8.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/December_20221.png",
+            "customer_txt3": "Month 6",
+            "review_date": "04th Oct 2023",
+            "review_details": "मैं Traya के लिए बना था, और Traya मेरे लिए।6 महीने बाद, मैंने 80% तक सुधार देखा। Traya के अनुशाषित रूटीन और उनके हेयर कोच कि मदद ने मुझे इस सफर पर बनाएं रक्खा।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_AbMxnH": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "तौकीर अली",
+            "customer_img1": "shopify:\/\/shop_images\/July_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/December_2022_2.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/After_8.png",
+            "customer_txt3": "Month 7",
+            "review_date": "08 0ct 2023",
+            "review_details": "मैं एक शिक्षक हूँ जो लगभग १० साल से हेयर लॉस से झुझता आ रहा हैं। लेकिन Traya मेरी लाइफ में एक सिंपल रूटीन लेकर आया। बस 7 महीनो में, मैंने न केवल स्पष्ट परिणाम देखे बल्कि अधिक तंदुरुस्ती भी महसूस कि।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_HgK6bN": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "सौरभ",
+            "customer_img1": "shopify:\/\/shop_images\/December_2022_07bcf90f-8927-428f-9697-d43d95e5a305.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/June_2023.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/After_1_8e4710ab-a111-4685-8ee7-6f13fe13fdde.png",
+            "customer_txt3": "Month 7",
+            "review_date": "07th oct 2023",
+            "review_details": "मैं कॉलेज के समय से ही अपने हेयर लॉस की कहानी में हूँ, और मैंने हेयर ट्रांसप्लांट के बजाय Traya को चुना। भरोसा, सपोर्ट और पॉजिटिव रिजल्ट्स, मेरे त्रया सफर के स्तंभ बन गए। मेरे रिजल्ट्स कि वजह से, मेरे दोस्तों ने भी Traya को आज़माया हैं।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_UrKbg6": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "अयान",
+            "customer_img1": "shopify:\/\/shop_images\/ayan_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/1669788100790_20221130_113016_720.jpg",
+            "customer_txt2": "Month 3",
+            "customer_img3": "shopify:\/\/shop_images\/ayan_3.png",
+            "customer_txt3": "Month 5",
+            "review_date": "21 oct  2023",
+            "review_details": "मैं २४-२५ वर्ष से ही हेयर लॉस से जूझ रहा हूँ। कोविड के बाद मेरे सिर पर गंजे पैच दिखने लगें। मेरे कॉन्फिडेंस बहुत कम हो गया। शुरुआत में, Traya से रिजल्ट्स नहीं दिखे, और मिनोक्सिडिल ने हेयर फॉल बढ़ा दिया, लेकिन 3 महीने के बाद, मुझे बहुत अच्छा रिग्रोथ दिखाई दिया। मेरा गंजा पैच गायब हो गया, और कुल मिलाकर बालों की देसनीति में सुधार आया।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_XAxCd9": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "आशीष बेनिया",
+            "customer_img1": "shopify:\/\/shop_images\/february_2023_360.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/april_2023_360.png",
+            "customer_txt2": "Month 6",
+            "customer_img3": "shopify:\/\/shop_images\/after__7__360_286e061e-c05f-4fcd-b1be-7f4fcd02c895.png",
+            "customer_txt3": "Month 9",
+            "review_date": "19th oct  2023",
+            "review_details": "मैं 2-3 साल से हेयर फॉल से लड़ रहा हूँ। घरेलू उपाय और डॉक्टर के पास जाने पर भी कुछ काम नहीं आया। Traya के रूटीन के 5-6 महीनों के अंदर, मैंने अच्छी हेयर रिग्रोथ देखि और मेरे बालो कि क्वालिटी भी पहले से बेहतर हो गयी। मुझे जब भी ज़रुरत पड़ती थी, एक हेयर कोच मेरी मदद के लिए हमेशा रहते थे।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_tH9jyg": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "जगन मोहन",
+            "customer_img1": "shopify:\/\/shop_images\/December_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/July_2023.png",
+            "customer_txt2": "Month 8",
+            "customer_img3": "shopify:\/\/shop_images\/After_2_1ce4c3e5-07f4-400a-b8d5-bf40392c2c70.png",
+            "customer_txt3": "Month 12",
+            "review_date": "19th oct 2023",
+            "review_details": "मैंने हमेशा से अपने बालों को बचाने के लिए खूब सारा रिसर्च किया हैं। मैं 44 साल का हूँ और मेरे उम्र के लोग, उम्मीद नहीं करते कि उनके सिर पर बाल वापस आएंगे। लेकिन, Traya का शुक्रिया - मेरे बहुत बाल वापस आ गए हैं। मैंने रूटीन को रोज़ फॉलो किया और मैंने एक भी गोली नहीं छोड़ी। अगर मैं यह कर सकता हूँ, तो आप भी कर सकते हैं।",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        }
+      },
+      "block_order": [
+        "revies_YYjYAK",
+        "revies_KVAjgE",
+        "revies_mjC4nr",
+        "revies_6RiGtz",
+        "revies_8wDAix",
+        "revies_AbMxnH",
+        "revies_HgK6bN",
+        "revies_UrKbg6",
+        "revies_XAxCd9",
+        "revies_tH9jyg"
+      ],
+      "settings": {
+        "cstm-stage_hi": "cstm-stage_hi_TE",
+        "customer-head": "हमारे सक्सेस स्टोरीज"
+      }
+    },
+    "stage1_journey_hi_9jMEFg": {
+      "type": "stage1-journey-hi",
+      "settings": {
+        "journey_title": "मुझे रिजल्ट्स कब तक दिखेंगे?"
+      }
+    },
+    "66d88f09-a613-462b-b9d2-3adddbb55ee0": {
+      "type": "stage1-doctors",
+      "blocks": {
+        "1244f778-1b9a-4f3c-9dcd-79e9e3797d8d": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_1_8932d6a6-9ebf-458b-887b-6aed5dcee1da.png",
+            "doctors_name": "डॉ. हर्ष बालाजी",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "b45df35d-888e-4f75-ba3b-79aa1469c5ca": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_2_35c4af69-06e8-44e8-a862-7b621d8ef9cd.png",
+            "doctors_name": "डॉ. सिद्धि सोनवणे",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "4a2c04f6-6fc0-4340-b997-7c376a535dd5": {
+          "type": "Gallery",
+          "disabled": true,
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_3_1331786f-b7f1-4602-b4ee-4e27e790aa46.png",
+            "doctors_name": "डॉ. आरुषि मित्तल",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353025.png"
+          }
+        },
+        "1d9a0352-2aed-4375-ad8b-d2b00ab2e3ea": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_4_5cd5d8ab-55d8-4207-ab86-93d46b7d2afa.png",
+            "doctors_name": "डॉ. ध्वनि सक्सेना",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353025.png"
+          }
+        },
+        "044f2589-cf20-4ded-8448-48fed121ba9f": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_5_45fbc0ca-d182-496b-acbc-c781f8309327.png",
+            "doctors_name": "डॉ. कल्याणी देशमुख",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353025.png"
+          }
+        },
+        "f507c2cd-ee61-4a25-9687-e81c368ee016": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_6_b5866a73-947a-479a-bd41-06620497c2bd.png",
+            "doctors_name": "डॉ. श्रेया देवघरे",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "f3ca30d1-46c8-4ca0-8ace-ff4c5ac884cd": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_7_dfb5f648-ed21-4111-9993-930921e7d773.png",
+            "doctors_name": "डॉ. श्वेता त्रिपाठी",
+            "doctors_expert": "M.B.B.S, PG (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "d7cd7285-3d30-4e05-aa79-5a3087af2fe1": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_03f96e17-673c-4ece-989e-2b3d398bc210.png",
+            "doctors_name": "डॉ. शैलेन्द्र चैबे",
+            "doctors_expert": "B.A.M.S (Ayurvedic Practitioner)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "1244f778-1b9a-4f3c-9dcd-79e9e3797d8d",
+        "b45df35d-888e-4f75-ba3b-79aa1469c5ca",
+        "4a2c04f6-6fc0-4340-b997-7c376a535dd5",
+        "1d9a0352-2aed-4375-ad8b-d2b00ab2e3ea",
+        "044f2589-cf20-4ded-8448-48fed121ba9f",
+        "f507c2cd-ee61-4a25-9687-e81c368ee016",
+        "f3ca30d1-46c8-4ca0-8ace-ff4c5ac884cd",
+        "d7cd7285-3d30-4e05-aa79-5a3087af2fe1"
+      ],
+      "settings": {
+        "doctors_title": "हमारे डॉक्टर्स"
+      }
+    },
+    "stage1_holistic_safe_hi_6zMyxe": {
+      "type": "stage1-holistic-safe-hi",
+      "blocks": {
+        "gallery_GQc8ig": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/Layer_1_c6a3f0fa-8a52-4a50-90b5-4626e9063f73.png",
+            "svg_txt": "NO SIDE EFFECTS"
+          }
+        },
+        "gallery_EKPyhU": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/Layer_1_2_64757acd-4dbd-4dda-8f7f-30af7352946e.png",
+            "svg_txt": "DERMATOLOGICALLY TESTED"
+          }
+        },
+        "gallery_qaRkJF": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/Group_c4464c50-adfb-4575-9ebf-475daba3b899.png",
+            "svg_txt": "100% HERBAL ACTIVES"
+          }
+        },
+        "gallery_xCKgqz": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/logos_720_3_2edec946-fd52-4ecf-b8a6-233f705ba874.png",
+            "svg_txt": "VEGAN FRIENDLY"
+          }
+        },
+        "gallery_McENth": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/logos_720_6_b625b254-bd2f-4a31-bf31-05d6dba8f50b.png",
+            "svg_txt": "ALLERGEN FREE"
+          }
+        },
+        "gallery_Ar9gEB": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/logos_720_4_1e06d60b-b637-4f7a-ac8b-30531aa3e783.png",
+            "svg_txt": "DOCTOR APPROVED"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_GQc8ig",
+        "gallery_EKPyhU",
+        "gallery_qaRkJF",
+        "gallery_xCKgqz",
+        "gallery_McENth",
+        "gallery_Ar9gEB"
+      ],
+      "settings": {
+        "holistic_txt": "हेयर लॉस के लिए Traya का होलिस्टिक प्लान",
+        "holistic_para": "हमारा दृष्टिकोण तीन विज्ञानों की अच्छाइयों को जोड़ता है। सबसे प्रामाणिक स्रोतों से सामग्री के साथ, हम सुनिश्चित परिणाम प्रदान करते हुए आपके उपचार को वैयक्तिकृत करते हैं।",
+        "safe_txt": "Safe And Scientific"
+      }
+    },
+    "male_treatment_plan_hi_mrFMib": {
+      "type": "male-treatment-plan-hi",
+      "settings": {
+      }
+    },
+    "community_banner_FgU7Gf": {
+      "type": "community-banner",
+      "settings": {
+        "comm_desk_banner": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_de78e955-af5b-43c4-ac97-91126668484f.png",
+        "comm_mob_banner": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1_efc87370-e5c5-4141-b277-288baecb5b5f.png",
+        "comm_content": "अपने ट्रीटमेंट के दौरान तुरंत अपने सवालो का <br> जवाब पाए।"
+      }
+    },
+    "aldrich_faq_HQ3WPe": {
+      "type": "aldrich-faq",
+      "blocks": {
+        "gallery_h7r3pB": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>किट डिलीवर होने में कितना समय लगेगा?<\/p>",
+            "aldrich_ans": "<p>Traya के प्रोडक्ट्स आम तौर पर, आपके परचेज डेट से 3-5 दिनों के अंदर डिलीवर किए जाते हैं।<\/p>"
+          }
+        },
+        "gallery_gpXwhw": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>मुझे मेरा प्रिस्क्रिप्शन कब और कैसे मिलेगा?<\/p>",
+            "aldrich_ans": "<p> जब आप अपने कस्टमाइज्ड किट ऑर्डर करते हैं, Traya के डॉक्टर्स आपके टेस्ट रिजल्ट्स के आधार पर, ट्रीटमेंट और एक डिजिटल प्रेस्क्रिप्शन बनाते हैं । उसके बाद, ये प्रिस्क्रिप्शन ऐप पर उपलब्ध होता है। आप अपने Traya रजिस्टर्ड मोबाइल नंबर से वेबसाइट पर लॉगिन करके भी प्रिस्क्रिप्शन एक्सेस कर सकते हैं।<\/p>"
+          }
+        },
+        "gallery_hcCHdF": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>हेयर कोच कौन है और क्या करते हैं?<\/p>",
+            "aldrich_ans": "<p>Traya के हेयर कोचेज डॉक्टर्स के द्वारा हेयर साइंस और प्रोडक्ट नॉलेज पर महीनों तक की ट्रेनिंग के एक्सपर्ट्स हैं। ये आपके हेयर रीग्रोथ जर्नी के दौरान आपको गाइड करते हैं। वो आपको ट्रीटमेंट शुरू करने में मदद करते हैं, आपके प्रोग्रेस को ट्रैक करते हैं, और ज़रूरत पड़ने पर ट्रीटमेंट में ज़रूरी बदलाव सुझाते हैं, ताकि आपको बेहतर रिजल्ट्स मिल सके। हेयर कोचेज को ऐप के माध्यम से अपॉइंटमेंट बुक करके कभी भी एक्सेस किया जा सकता है।<\/p>"
+          }
+        },
+        "gallery_EPcCNX": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Traya ने मेरे बालो की जांच ऑनलाइन कैसे की?<\/p>",
+            "aldrich_ans": "<p>Traya का ऑनलाइन हेयर टेस्ट डॉक्टर्स के साथ मिलकर बनाया गया है। इसमें आपके ट्रीटमेंट प्लान को बनाते वक्त, सभी स्वास्थ्य स्थितियां शामिल की गई हैं, जो आपके बालों के इलाज के लिए  महत्वपूर्ण है। आपके स्कैल्प की तस्वीर की मदद से, आपके हेयर फॉल का पैटर्न और प्रभाव का पता चलता हैं - जिससे फिजिकल टेस्ट की ज़रूरत नही पड़ती। <\/p>"
+          }
+        },
+        "gallery_nEKJpJ": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>मुझे रिजल्ट्स कब तक दिखेंगे?<\/p>",
+            "aldrich_ans": "<p>बेहतर रिजल्ट्स आम तौर पर 5 से 12 महीनों के बीच में दिखते हैं । यह आपके स्टेज, उम्र और हेयर लॉस टाइप पर डिपेंड करती है। हालांकि, आपको 2-3 महीनों के अंदर ही कुछ सुधर देखने को मिलेंगे जैसे की -  हेयर फॉल कम होना, डैंड्रफ कण्ट्रोल होना, हज़म शक्ति, नींद और एनर्जी लेवल्स बेहतर होना। <\/p>"
+          }
+        },
+        "gallery_Tcqjdn": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>मुझे मेरा डाइट प्लान कहा से मिलेगा?<\/p>",
+            "aldrich_ans": "<p>आर्डर प्लेस करने के बाद, आप अपना डाइट प्लान अपने पसंद के हिसाब से बना सकते हैं।  आप Traya के वेबसाइट पर भी अपना डाइट प्लान देख सकते हैं। <\/p>"
+          }
+        },
+        "gallery_zQxBVC": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>क्या Traya इलाज से जेनेटिक बाल झड़ना कम होगा?<\/p>",
+            "aldrich_ans": "<p>Traya की विशेषता जेनेटिक हेयर लॉस को रोकने और मैनेज करने में है। हालांकि, अगर आप हेयर फॉल के एडवांस्ड स्टेज (स्टेज 6 या 7) पर हैं या फिर हेयर फॉल 5 से 10 साल से पहले हुआ है, तो फिर बाल वापस लाने के चांसेस बहुत कम हैं, क्योंकि आपके सिर पर, ज़रुरत से कम एक्टिव हेयर फोललसिले हैं।   <\/p>"
+          }
+        },
+        "gallery_JaYjzG": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>क्या ट्राया का ट्रीटमेंट मेरे लिए काम करेगा?<\/p>",
+            "aldrich_ans": "<p>हाँ, Traya हेयर लॉस स्टेज 1 से लेकर स्टेज 4 तक सबसे अच्छा काम करता ह। 93% लोग जिन्होंने 5 महीने तक Traya का ट्रीटमेंट लिया है, उन्होंने बहुत अच्छे रिजल्ट्स देखे हैं। 2.5 लाख से भी ज्यादा लोगों ने Traya का हेयर लॉस ट्रीटमेंट अपनाया हैं।  <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_h7r3pB",
+        "gallery_gpXwhw",
+        "gallery_hcCHdF",
+        "gallery_EPcCNX",
+        "gallery_nEKJpJ",
+        "gallery_Tcqjdn",
+        "gallery_zQxBVC",
+        "gallery_JaYjzG"
+      ],
+      "settings": {
+        "enable_faq_accordion": true,
+        "aldrich_title": "FAQ's"
+      }
+    },
+    "0b019c2e-cb1d-4cda-87ec-953926008b27": {
+      "type": "buy-now-atc",
+      "settings": {
+        "heading": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "test_result_hindi_iG9iP4",
+    "201d730d-62d5-48ba-97aa-4588750bc1a4",
+    "result_products_6XVwAP",
+    "stage1_why_you_should_hi_eKA7Ca",
+    "new_testimonial_hi_VDC48a",
+    "customer_review_hi_XJ8Hkw",
+    "customer_review_hi_MzGWp7",
+    "customer_review_hi_gKxcgG",
+    "customer_review_hi_BfApk9",
+    "customer_review_hi_kMjzre",
+    "stage1_journey_hi_9jMEFg",
+    "66d88f09-a613-462b-b9d2-3adddbb55ee0",
+    "stage1_holistic_safe_hi_6zMyxe",
+    "male_treatment_plan_hi_mrFMib",
+    "community_banner_FgU7Gf",
+    "aldrich_faq_HQ3WPe",
+    "0b019c2e-cb1d-4cda-87ec-953926008b27"
+  ]
+}

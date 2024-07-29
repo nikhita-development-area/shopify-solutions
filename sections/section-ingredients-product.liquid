@@ -1,0 +1,178 @@
+<section class="section--products" id="section-{{ section.id }}">
+  <div class="container ingredients-product">
+    <div class="row">
+      <div class="ing-header col-md-6">
+        <h3>{{section.settings.heading}}</h3>
+      </div>
+      <div class="col-md-6 text-md-right">
+        <div class="prod-dorp text-left d-md-inline-block">
+          <p class="label mb-1 ml-2">View ingredients for</p>
+          <div class="dropdown">
+            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              SELECT A PRODUCT
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <div class="ProductList">
+                <div class="row">
+                  <div class="col-12 text-center mb-4 d-md-none" style="font-weight: bold; font-size: 20px; display: flex; justify-content: center; align-items: center; position: relative;">
+                    <button id="displayAllIngredientsBack" type="button" class="btn btn-icon float-left">
+                      <img alt="back-arrow" src="{{ 'back-arrow.svg' | asset_url }}">
+                    </button>
+                    <div>Select a product</div>
+                  </div>
+                  {%- for block in section.blocks -%}
+                  <div class="col-6 col-md-4 mt-4">
+                    <div id="block-{{ block.id }}" class="list" 
+                         data-image="{{ block.settings.productImg | img_url: 'master' }}"
+                         data-desc="{{ block.settings.desc}}"
+                         data-title="{{ block.settings.text }}">
+                      <div class="align-items-start">
+                        {%- if block.settings.productThumb != blank -%}
+                        <img class="mr-3" src="{{ block.settings.productThumb | img_url: '65x150' }}" alt="{{ block.settings.productThumb.alt | escape }}">
+                        {%- endif -%}
+                        <div class="media-body">
+                          <h5 class="m-0">
+                            {%- if block.settings.text != blank -%}
+                            <span class="content text-uppercase">
+                              {{ block.settings.text }}
+                            </span>
+                            {%- endif -%}
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {%- endfor -%}
+                  <div class="col-12 text-center my-4 btnAllIngredient">
+                    <button id="displayAllIngredients" type="button" class="btn btn-success">BACK TO ALL INGREDIENTS</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div> 
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+"name": "Product",
+"class": "section--products",
+"max_blocks": 100,
+"settings": [
+{
+"type": "text",
+"id": "heading",
+"label": "Heading"
+}
+],
+"blocks": [
+{
+"type": "products",
+"name": "Products",
+"settings": [
+{
+"type": "image_picker",
+"id": "productThumb",
+"label": "Product Small Image"
+},
+{
+"type": "image_picker",
+"id": "productImg",
+"label": "Product Large Image"
+},
+{
+"type": "text",
+"id": "text",
+"label": "Heading"
+},
+{
+"type": "richtext",
+"id": "desc",
+"label": "Description"
+}
+] 
+}
+],
+     "presets":[
+          {
+          "name":"Section ingredients product"
+          }]
+}
+{% endschema %}
+{% style %}
+  .prod-dorp .ProductList .list {
+    cursor: pointer;
+  }
+{% endstyle %}
+
+<script>
+      // Ingredient Page Product Show Code
+    function selectProductAndDisplayIngredients() {
+  $('#dropdownMenuButton').text('SELECT A PRODUCT');
+  $('body').on('click', '.list', function() {
+    bebugger;
+    var img = $(this).attr('data-image');
+    var desc = $(this).attr('data-desc');
+    var title = $(this).attr('data-title');
+    $('body').find('#proTitle').text(title);
+    $('#proDescLg').html(desc);
+    $('#proFeaturedImgLg').attr('src', img);
+    $('#allIngredientsTitle').hide();
+    $('.product-details-withingredients').show();
+    $('#dropdownMenuButton').text(title);
+    title = title.trim().toLowerCase();
+    console.log(title, 'tile');
+    if(title == 'customised hair oil'){
+    	title = 'scalp oil';
+    }
+    $('.IngredientsList > .row > .col-md-6.col-lg-3.mb-3').each(function(){
+      if($(this).text().toLowerCase().indexOf(title) > 0 ){
+        $(this).show();
+      }else{
+        $(this).hide();
+      }
+    });
+    
+    $('.IngredientsList > .row .content-2').hide();
+    $('.IngredientsList > .row .content-1').css({ 'border-bottom': 'none', 'padding-bottom': '0', 'margin-bottom': '0' });
+
+//     $('.IngredientsList > .row > .col-md-6.col-lg-3.mb-3:not(:contains(' + title + '))').hide(); 
+//     $('.IngredientsList > .row > .col-md-6.col-lg-3.mb-3:contains(' + title + ')').show();
+  });
+
+  $('body').on('click', '#displayAllIngredients', function() { 
+    $('.product-details-withingredients').hide();
+    $('#allIngredientsTitle').show();
+    $('#dropdownMenuButton').text('SELECT A PRODUCT');
+    $('.IngredientsList > .row > .col-md-6.col-lg-3.mb-3').show();
+    $('.IngredientsList > .row .content-2').show();
+    $('.IngredientsList > .row .content-1').css({ 'border-bottom': 'solid 1px #929497', 'padding-bottom': '15px', 'margin-bottom': '15px' });
+  });
+  if (productsCust === 'customised-hair-oil') {
+    var that = $('#block-29f990b6-e057-4e9e-b0a1-723354d072ed');
+    var img = $(that).attr('data-image');
+    var desc = $(that).attr('data-desc');
+    var title = $(that).attr('data-title');
+    $('#proTitle').text(title);
+    $('#proDescLg').html(desc);
+    $('#proFeaturedImgLg').attr('src', img);
+    $('#allIngredientsTitle').hide();
+    $('.product-details-withingredients').show();
+    $('#dropdownMenuButton').text(title);
+    
+    title = title.trim().toLowerCase();
+    $('.IngredientsList > .row > .col-md-6.col-lg-3.mb-3').each(function(){
+      if($(this).find('.content-2').text().toLowerCase().indexOf(title) > 0 ){ 
+        $(this).show();
+      }else{
+        $(this).hide();
+      }
+    });
+//     $('.IngredientsList > .row > .col-md-6.col-lg-3.mb-3:not(:contains(' + title + '))').hide(); 
+//     $('.IngredientsList > .row > .col-md-6.col-lg-3.mb-3:contains(' + title + ')').show();
+  }
+}
+</script>

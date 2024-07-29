@@ -1,0 +1,181 @@
+{% comment %} <div class="d-flex position-relative mb-2 mb-md-2 breadcrumbs text-grey">
+  <p class="mr-2">Cart</p>
+  <p class="mr-2"><svg width="14" height="14" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 0.5L6.78456 5.12765C7.10533 5.38427 7.10533 5.87214 6.78456 6.12876L1 10.7564" stroke="#808080" stroke-width="0.641026" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg></p>
+  <p class="mr-2">Address</p>
+  <p class="mr-2"><svg width="14" height="14" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 0.5L6.78456 5.12765C7.10533 5.38427 7.10533 5.87214 6.78456 6.12876L1 10.7564" stroke="#808080" stroke-width="0.641026" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg></p>
+  <p class="mr-2">Payment</p>
+  <p class="mr-2"><svg width="14" height="14" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 0.5L6.78456 5.12765C7.10533 5.38427 7.10533 5.87214 6.78456 6.12876L1 10.7564" stroke="#808080" stroke-width="0.641026" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg></p>
+  <p style="color: #71C065;">Order Placed</p>
+</div> {% endcomment %}
+<div class="position-relative seperator pb-md-0 d-none d-md-block">
+<div class="rounded-lg border px-5 pt-4 pb-3 pb-md-4 success">
+<!--   <img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/tick.png" class="mx-auto d-block"> -->
+
+  <div class="d-flex align-items-center" style="position: relative; right: 8px;">
+  <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/imgpsh_fullsize_anim.gif?v=1712231510" height="50" width="50" />
+  
+  {% if order.transactions[0].gateway == 'Cash on Delivery (COD)' %}
+    <p class="order-status m-0">Order placed, thanks!</p>
+  {% else %}
+    <p class="order-status m-0">Order placed, thanks!</p>
+  {% endif %}
+  </div>
+  
+  <div class="chekout-order-status-main">
+      <p class="text-center py-3 m-0 chekout-order-id" chekout-order-id>Order ID #</p>
+      <p class="text-center py-3 m-0 chekout-order-amount" chekout-order-amount>Amount:</p>
+  </div>
+</div>
+   <!-- <p class="text-center font-weight-bold pt-3 m-0 chekout-order-name" chekout-order-name>Thank You </p> -->
+</div>
+<div class="px-0 mt-2 mt-md-3 px-md-0 py-md-4 position-relative checkout-traya-journey seperator">
+<!--   <p class="font-weight-bold checkout-journey m-0">Your Traya Journey</p>
+  <div class="py-3 ml-4 mt-2 mt-md-3 ml-md-0 row steps-check">
+    <p class="py-1 pl-5 border border-green rounded-lg text-chargrey order-placed active-status col-10 checkout-journey-steps col-md-3 font-weight-bold">Order placed</p>
+    <p class="py-1 pl-5 border border-secondary rounded-lg text-black doctor-prescription col-10 checkout-journey-steps col-md-5 mx-md-3">Doctor prescription generated</p>
+    <p class="py-1 pl-5 border border-secondary rounded-lg text-black order-shipped col-10 checkout-journey-steps col-md-3">Order shipped</p>
+    <p class="py-1 pl-5 border border-secondary rounded-lg text-black order-delivered col-10 checkout-journey-steps col-md-4">Order delivered</p>
+    <p class="py-1 pl-5 border border-secondary rounded-lg text-black start-plan col-10 checkout-journey-steps col-md-6 mx-md-3">Start your plan with a hair coach</p>
+  </div>
+  <div class="d-none w-100 justify-content-between align-items-center" login--status>
+    <p class="login-track m-0">Login to track your order</p>
+    <a href="/#login-modal" class="login-btn rounded-lg">LOGIN</a>
+  </div> -->
+
+{% render 'order-confirmation' %}
+    <!-- <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353220.png?v=1683549300" class="d-none d-md-block">
+      <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353220.png?v=1683549300" class="d-md-none"> -->
+</div>
+
+  {% comment %}
+  <div class="d-md-none">{% include 'checkout-customer-info' %}</div>
+  {% endcomment %}
+
+  <div class="pb-md-0 pl-md-0 pt-0 position-relative seperator coach">
+    
+      <!-- <h4>Hair Coach Ab Uplabdh!</h4>
+  <p>Apna <span>free</span> call abhi book karein</p> -->
+
+    
+<!--     <div class="traya-coach position-relative coach-1">
+      <p class="py-3 pb-md-2 pt-md-5 m-0 traya-coach-1 font-weight-bold">The Traya Coach</p>
+      <div class="py-3 traya-coach-2 m-0"><p class="mb-2 mb-md-0">Have more questions?</p><p class="mb-3 d-md-none">Chat with your personal hair coach. They will guide you throughout the treatment.</p><p class="mb-3 d-none d-md-block">Chat with your personal hair coach.<br>They will guide you throughout the treatment.</p></div>
+      <a class="login-btn rounded-lg ml-2 ml-md-0" href="https://wa.me/918828006272?text=Hey%21+I+would+like+to+know+more+about+Traya">CHAT NOW<span class="ml-3"><svg width="20" height="20" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M31.4937 12.1976C30.0286 6.58158 25.5114 2.06436 19.8347 0.660006C14.158 -0.744344 7.99224 1.08731 4.08546 5.48245C-0.736981 10.8543 -1.34742 18.912 2.55937 25.0164C2.25415 27.2139 2.00998 29.4115 1.70476 31.6091C1.58267 32.4026 2.55937 32.952 3.23085 32.7689C5.36737 32.1585 7.56494 31.6091 9.70146 30.9986C15.5006 33.3793 22.2157 32.2806 26.855 28.0075C31.1891 24.0397 32.9594 17.8136 31.4944 12.1976H31.4937ZM27.2206 23.9793C23.558 29.3512 16.3549 31.366 10.434 28.6797H10.3729C10.1288 28.5576 9.82355 28.4966 9.45729 28.5576C7.74807 29.046 6.03885 29.4733 4.32963 29.9616C4.51276 28.4966 4.69589 27.0926 4.87902 25.6275C4.94007 25.1392 5.06215 24.5898 4.81798 24.1014C4.63485 23.7962 4.39068 23.491 4.20755 23.1247C3.78024 22.3922 3.41398 21.5986 3.10876 20.8051C2.13207 17.9971 2.07102 14.8838 2.98667 12.0762C4.57381 7.13167 9.09103 3.40801 14.2187 2.79758C19.5295 2.06505 24.8403 4.62888 27.5869 9.08506C30.3949 13.6633 30.2117 19.5232 27.2206 23.9797V23.9793Z" fill="#414143"/>
+        <path d="M24.4734 18.2413L21.7264 16.1047C20.8718 15.4332 19.712 15.5553 18.9795 16.2879L18.1859 17.0814C17.5755 16.7152 17.0261 16.2879 16.4767 15.7995C15.9883 15.3112 15.561 14.7007 15.1948 14.0903L15.9883 13.2967C16.7209 12.5642 16.7819 11.4044 16.1715 10.5498L14.0349 7.74176C13.6076 7.13133 12.9362 6.76506 12.2036 6.76506C11.4711 6.70402 10.7386 7.00924 10.2503 7.49759L7.86955 9.87828C6.52659 11.2212 6.22138 13.2967 7.07599 15.0059C8.23581 17.2035 9.70086 19.1569 11.4101 20.8661C13.1193 22.5753 15.1337 24.0404 17.2703 25.2002C17.9417 25.5665 18.6132 25.6886 19.2847 25.6886C20.3835 25.6886 21.5433 25.2613 22.3369 24.4066L24.7176 22.0259C25.2059 21.5376 25.5111 20.8051 25.4501 20.0726C25.4501 19.34 25.0838 18.6686 24.4734 18.2413ZM23.0083 20.3167L20.6277 22.6974C20.0172 23.3079 19.1016 23.43 18.369 23.0637C16.4156 22.0259 14.6454 20.744 13.0583 19.1569C11.4711 17.5698 10.1892 15.7995 9.15147 13.8461C8.78521 13.1136 8.90729 12.1979 9.51773 11.5875L11.8984 9.20681H11.9595C12.0205 9.20681 12.0205 9.20681 12.0205 9.26785L13.9739 11.8317L13.1803 12.5642C12.5699 13.1746 12.3868 14.1513 12.8141 14.9449C13.3024 15.9216 13.9739 16.7762 14.7064 17.5087C15.439 18.2413 16.2936 18.9127 17.2703 19.4011C18.0638 19.8284 18.9795 19.6453 19.5899 19.0348L20.4445 18.1802L22.9473 20.1336C22.9473 20.1336 23.0083 20.1336 23.0083 20.1946V20.3167Z" fill="#414143"/>
+        </svg></span></a>
+    </div>  -->
+
+    <!-- Thank You Page Book A Call Button Above The Banner -->
+    {% if classes contains 'page--thank-you' %}
+      <div class="d-none mobile-bookacall" style="padding: 0.8rem 30px; border-radius: 10px; width: 200px; margin: 0 auto 0;">
+        <a id="bookacall" class="thanku_page_book" style="font-family: Nunito Sans,sans-serif!important; font-size: 16px; font-weight: 600; background: transparent;" href="https://wa.me/918828006272?text=Hey%21+I+would+like+to+know+more+about+Traya">BOOK A CALL</a>
+      </div>
+    {% endif %}
+    <!-- Thank You Page Book A Call Button Above The Banner -->
+
+    <div class="book_call_thanku d-none d-md-block">
+      {% comment %}
+      <h2>Book a Call Now</h2>
+      <p><svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.685059 0.858551H16.7497L8.71996 11.3006L0.685059 0.858551Z" fill="#B7D347"/>
+      <path d="M0.685059 10.4973H16.7497L8.71996 20.9393L0.685059 10.4973Z" fill="#B7D347"/>
+      </svg></p>
+      {% endcomment %}
+      <a class="login-btn thanku_page_book rounded-lg ml-2 ml-md-0" href="https://wa.me/918828006272?text=Hey%21+I+would+like+to+know+more+about+Traya">Book a Call</a>
+    </div>
+
+    {% comment %}
+    <div class="traya-coach position-relative coach-2">
+      <!-- Thank You Page Book A Call Banner Changes (Changed Both Banner) -->
+      <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_533.webp?v=1705039335" class="d-none d-md-block">
+      <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_533.webp?v=1705039335" class="d-md-none">
+      <!-- Thank You Page Book A Call Banner Changes (Changed Both Banner) -->
+    </div> 
+    {% endcomment %}
+  </div>
+
+  <div class="pb-md-0 pl-md-0 position-relative seperator coach"> <!-- Thank You Page Sticky Book A Call Button Changes Removed(style="margin-top: 20px;") -->
+    
+ 
+<!--       <h4>Hair Coach - Now Unlocked!</h4> -->
+    <h3 class="d-none d-md-block">Get access to a Hair Coach, your <br>prescription & diet plan on the Traya app.</h3>
+        <h3 class="d-md-none">Get access to a Hair Coach, your <br>prescription & diet plan on the Traya app.</h3>
+
+<!--   <p>Avail your <span>first free call</span> with a hair coach</p> -->
+
+    
+<!--     <div class="traya-coach position-relative coach-1">
+      <p class="py-3 pb-md-2 pt-md-5 m-0 traya-coach-1 font-weight-bold">The Traya Coach</p>
+      <div class="py-3 traya-coach-2 m-0"><p class="mb-2 mb-md-0">Have more questions?</p><p class="mb-3 d-md-none">Chat with your personal hair coach. They will guide you throughout the treatment.</p><p class="mb-3 d-none d-md-block">Chat with your personal hair coach.<br>They will guide you throughout the treatment.</p></div>
+      <a class="login-btn rounded-lg ml-2 ml-md-0" href="https://wa.me/918828006272?text=Hey%21+I+would+like+to+know+more+about+Traya">CHAT NOW<span class="ml-3"><svg width="20" height="20" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M31.4937 12.1976C30.0286 6.58158 25.5114 2.06436 19.8347 0.660006C14.158 -0.744344 7.99224 1.08731 4.08546 5.48245C-0.736981 10.8543 -1.34742 18.912 2.55937 25.0164C2.25415 27.2139 2.00998 29.4115 1.70476 31.6091C1.58267 32.4026 2.55937 32.952 3.23085 32.7689C5.36737 32.1585 7.56494 31.6091 9.70146 30.9986C15.5006 33.3793 22.2157 32.2806 26.855 28.0075C31.1891 24.0397 32.9594 17.8136 31.4944 12.1976H31.4937ZM27.2206 23.9793C23.558 29.3512 16.3549 31.366 10.434 28.6797H10.3729C10.1288 28.5576 9.82355 28.4966 9.45729 28.5576C7.74807 29.046 6.03885 29.4733 4.32963 29.9616C4.51276 28.4966 4.69589 27.0926 4.87902 25.6275C4.94007 25.1392 5.06215 24.5898 4.81798 24.1014C4.63485 23.7962 4.39068 23.491 4.20755 23.1247C3.78024 22.3922 3.41398 21.5986 3.10876 20.8051C2.13207 17.9971 2.07102 14.8838 2.98667 12.0762C4.57381 7.13167 9.09103 3.40801 14.2187 2.79758C19.5295 2.06505 24.8403 4.62888 27.5869 9.08506C30.3949 13.6633 30.2117 19.5232 27.2206 23.9797V23.9793Z" fill="#414143"/>
+        <path d="M24.4734 18.2413L21.7264 16.1047C20.8718 15.4332 19.712 15.5553 18.9795 16.2879L18.1859 17.0814C17.5755 16.7152 17.0261 16.2879 16.4767 15.7995C15.9883 15.3112 15.561 14.7007 15.1948 14.0903L15.9883 13.2967C16.7209 12.5642 16.7819 11.4044 16.1715 10.5498L14.0349 7.74176C13.6076 7.13133 12.9362 6.76506 12.2036 6.76506C11.4711 6.70402 10.7386 7.00924 10.2503 7.49759L7.86955 9.87828C6.52659 11.2212 6.22138 13.2967 7.07599 15.0059C8.23581 17.2035 9.70086 19.1569 11.4101 20.8661C13.1193 22.5753 15.1337 24.0404 17.2703 25.2002C17.9417 25.5665 18.6132 25.6886 19.2847 25.6886C20.3835 25.6886 21.5433 25.2613 22.3369 24.4066L24.7176 22.0259C25.2059 21.5376 25.5111 20.8051 25.4501 20.0726C25.4501 19.34 25.0838 18.6686 24.4734 18.2413ZM23.0083 20.3167L20.6277 22.6974C20.0172 23.3079 19.1016 23.43 18.369 23.0637C16.4156 22.0259 14.6454 20.744 13.0583 19.1569C11.4711 17.5698 10.1892 15.7995 9.15147 13.8461C8.78521 13.1136 8.90729 12.1979 9.51773 11.5875L11.8984 9.20681H11.9595C12.0205 9.20681 12.0205 9.20681 12.0205 9.26785L13.9739 11.8317L13.1803 12.5642C12.5699 13.1746 12.3868 14.1513 12.8141 14.9449C13.3024 15.9216 13.9739 16.7762 14.7064 17.5087C15.439 18.2413 16.2936 18.9127 17.2703 19.4011C18.0638 19.8284 18.9795 19.6453 19.5899 19.0348L20.4445 18.1802L22.9473 20.1336C22.9473 20.1336 23.0083 20.1336 23.0083 20.1946V20.3167Z" fill="#414143"/>
+        </svg></span></a>
+    </div>  -->
+ 
+                 
+    <div class="traya-coach position-relative payment-iconview">
+      <div class="paymentmobile">
+      <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Mask_group_4.webp?v=1682661161">
+      </div>
+      <div class="payment">
+        <a href="https://trayahealth.app.link/xT3UrtZDvyb"> 
+        <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Mask_group_6.webp?v=1682661488" style="margin-bottom:7px;">
+        </a>
+        <a href="https://trayahealth.app.link/xT3UrtZDvyb"> 
+        <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Mask_group_7_21066aa6-baff-4188-853d-7015c1b2b1b7.webp?v=1682661488">
+        </a>
+      </div>
+<!--       <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_533.png?v=1683183233" class="d-none d-md-block">
+      <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_533.png?v=1683183233" class="d-md-none"> -->
+    </div> 
+  </div>
+
+  <!-- Thank You Page Continue Shopping Button with Social Media Icons -->
+  {% if classes contains 'page--thank-you' %}
+    <div class="d-md-none mt-3 mobile">
+      {% include 'checkout-customer-info' %}
+    </div>
+  {% endif %}
+  <!-- Thank You Page Continue Shopping Button with Social Media Icons -->
+  
+<style>
+  /* Thank You Page Clickable Logo CSS */
+  .thank_you_logo:hover {background: transparent;}
+  /* Thank You Page Clickable Logo CSS */
+  
+  .seperator h3{
+    color:#414042;
+  }
+ 
+  .payment-iconview{
+    display:flex;
+    align-items: center;
+      border-bottom: 3px solid #D1D0D0;
+  }
+  .paymentmobile{
+    max-width: 60%;
+  }
+  .payment img{
+    max-width:200px;
+  }
+  @media(max-width:767px){
+    .payment img{
+      width:130px;
+    } 
+   .seperator h3 {
+      font-size: 18px;
+  }
+  }
+  </style>
+  
+<!-- <div class="checkout-form">
+  <iframe style="max-width:100%;" width="820px" height="380px" frameborder="0" align="middle" src="https://www.ref-r.com/campaign_user/p?brandid=46560&campaignid=31003&bid_e=300884C2A434288BF409058AC57A0ACC&t=420&email=&fname="></iframe>
+</div> -->

@@ -1,0 +1,153 @@
+<div class="multiple-root-causes  my-4 my-md-5">
+  {% if section.settings.heading != blank %}
+    <h1 class="multiple-root-causes-heading">{{ section.settings.heading }}</h1>
+  {% endif %}
+  <div class="main-multiple-root-causes">
+    {% for block in section.blocks %}
+      <div class="main-container-multiple-root-causes" style="background: radial-gradient(100% 122.34% at 0% 4.23%, {{ block.settings.background-color-1 }} 0%, {{ block.settings.background-color-2 }} 0.01%, {{ block.settings.background-color-3 }} 100%);">
+        <div class="multiple-root-causes-title">{{ block.settings.title }}</div>
+        <div class="multiple-root-causes-image-container">
+          {% if block.settings.image != blank %}
+            <img class="multiple-root-causes-image" src="{{ block.settings.image | img_url: '' }}">
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "multiple-root-causes",
+  "tag": "section",
+  "class": "multiple-root-causes-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Please Enter the Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "multiple-root-causes",
+      "type": "text",
+        "settings": [
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Title"
+            },
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+              "type": "color",
+              "id": "background-color-1",
+              "label": "Color first"
+            },
+            {
+              "type": "color",
+              "id": "background-color-2",
+              "label": "Color Second"
+            },
+            {
+              "type": "color",
+              "id": "background-color-3",
+              "label": "Color Third"
+            }
+          
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "multiple-root-causes"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+    .multiple-root-causes {
+      max-width: 788px;
+      margin: auto;
+  }
+  /* .main-multiple-root-causes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 32px;
+  } */
+.main-container-multiple-root-causes {
+    border-radius: 6px;
+    padding: 16px 7px;
+    /* background: radial-gradient(100% 122.34% at 0% 4.23%, #D5FDDB 0%, #EEFDF1 0.01%, #86BF8F 100%); */
+    /* display: grid;
+    justify-items: center;
+    align-items: end;
+    gap: 8px; */
+      margin: 0 10px;
+}
+   .multiple-root-causes-heading {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 40px;
+      letter-spacing: 0em;
+      text-align: center;
+      text-transform: capitalize;
+      margin-bottom: 24px;
+  }
+    .multiple-root-causes-title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: center;
+      min-height: 50px;
+      margin-bottom: 8px;
+  }
+  .multiple-root-causes-image-container{
+    display: flex;
+    justify-content: center;
+  }
+  @media screen and (max-width: 767px) {
+   .multiple-root-causes-heading {
+      font-size: 30px;
+      line-height: 30px;
+      padding: 0 10px;
+  }
+  .multiple-root-causes-title {font-size: 16px;}
+  .multiple-root-causes .slick-list.draggable {
+    padding-right: 65px;
+  }  
+}
+</style>
+<script>
+  $(document).ready(function(){
+    $('.main-multiple-root-causes').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      dots: false,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 426,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        }
+      ]      
+    });
+  });
+</script>

@@ -1,0 +1,200 @@
+<!-- Sections -> aldrich-faq.liquid -->
+
+<div class="container aldrich-faq" style="{% if page.handle == 'result4' or page.handle == 'result-hi' or page.handle == 'result-hinglish' %}padding-bottom: 8rem; width: 95%;{% endif %}">
+  <h3 class="aldrich-title font-weight-bold text-center {% if page.handle == 'result4' or page.handle == 'result-hi' or page.handle == 'result-hinglish' %}d-none{% endif %}">{{ section.settings.aldrich_title }}</h3>
+
+  {% if page.handle == 'result4' or page.handle == 'result-hi' or page.handle == 'result-hinglish' %}
+  <div class="d-flex justify-content-between align-items-center cstm" style="border-top: 0.1rem solid rgba(var(--color-foreground),.08); border-bottom: 0.1rem solid rgba(var(--color-foreground),.08); padding: 10px 0;">
+    <h3 class="aldrich-title text-center m-0" style="opacity: 0.8; font-size: 22px; line-height: 0;">{{ section.settings.aldrich_title }}</h3>
+    <span class="icon-down">
+      <svg style="opacity: 0.8;" fill="#414042" height="15px" width="15px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path> </g></svg>
+    </span>
+    <span class="icon-up">
+      <svg style="opacity: 0.8; transform: rotate(-180deg);" fill="#414042" height="15px" width="15px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path> </g></svg>
+    </span>
+  </div>
+  {% endif %}
+  
+  {% if section.settings.enable_faq_accordion %}
+  <!-- Accordion FAQ -->
+  <div class="aldrich-ques-ans">
+    {% for block in section.blocks %}
+      <div class="aldrich-border">
+        <div class="aldrich-ques font-weight-bold accordion-header">
+          {% if page.handle == 'result4' or page.handle == 'result-hi' or page.handle == 'result-hinglish' %}
+            <span class="icon-down">
+              <svg fill="#B7D340" height="15px" width="15px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path> </g></svg>
+            </span>
+            <span class="icon-up">
+              <svg style="transform: rotate(-180deg);" fill="#B7D340" height="15px" width="15px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path> </g></svg>
+            </span>
+          {% else %}
+            <span class="icon-down">+</span>
+            <span class="icon-up">-</span>
+          {% endif %}
+          {{ block.settings.aldrich_ques }}            
+        </div>
+        <div class="aldrich-ans py-2 accordion-content">{{ block.settings.aldrich_ans }}</div>
+      </div>
+    {% endfor %}
+  </div>
+  <!-- Accordion FAQ -->
+  {% else %}
+    <!-- Normal FAQ -->
+    <div class="aldrich-ques-ans">
+      {% for block in section.blocks %}
+        <div class="aldrich-border">
+          <div class="aldrich-ques font-weight-bold">{{ block.settings.aldrich_ques }}</div>
+          <div class="aldrich-ans py-2">{{ block.settings.aldrich_ans }}</div>
+        </div>
+      {% endfor %}
+    </div>
+    <!-- Normal FAQ -->
+  {% endif %}
+</div>
+
+{% style %}
+  .aldrich-faq .aldrich-title {font-size: 48px; line-height: 65px; letter-spacing: 0em;}
+  .aldrich-ques p {font-size: 30px; line-height: 41px;}
+  .aldrich-ans p {font-size: 27px; line-height: 37px;}
+  .aldrich-border {border-bottom: 1.39px solid #414042; margin: 40px 0;}
+
+  /* Accordion FAQ */
+  .accordion-header {display: flex; align-items: center; cursor: pointer;}
+  .aldrich-ques p {margin-left: 10px;}
+  .icon-down, .icon-up {font-size: 30px;}
+  .accordion-content, .icon-up {display: none;}
+  /* Accordion FAQ */
+
+  /* Male RP Changes */
+  .result4 .aldrich-faq {width: 70%;}
+  .result4 .aldrich-border {margin: 20px 0;}
+  .result4 .accordion-header {flex-direction: row-reverse; justify-content: space-between;}
+  .result4 .aldrich-ques p {font-size: 26px; opacity: 0.8; margin: 0;}
+  .result4 .aldrich-ans p {font-size: 22px;}
+  .no-border-bottom {border-bottom: none !important;}
+  /* Male RP Changes */
+  
+  @media only screen and (max-width: 767.98px) {
+    .aldrich-faq .aldrich-title {font-size: 20px; line-height: 28px;}
+    .aldrich-ques p {font-size: 14px; line-height: 17px;}
+    .aldrich-ans p {font-size: 12px; line-height: 14px;}
+    .aldrich-border {border-bottom: 0.49px solid #414042; margin: 20px 0;}
+
+    /* Accordion FAQ */
+    .icon-down, .icon-up {font-size: 20px;}
+    /* Accordion FAQ */
+
+    /* Male RP Changes */
+    .result4 .aldrich-faq {width: 100%;}
+    .result4 .aldrich-ques p {font-size: 14px;}
+    .result4 .aldrich-ans p {font-size: 12px;}
+    /* Male RP Changes */
+  }
+{% endstyle %}
+
+<!-- Accordion FAQ -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const customTrigger = document.querySelector(".cstm");
+    const faqContainer = document.querySelector(".aldrich-ques-ans");
+
+    if (customTrigger && faqContainer) {
+      faqContainer.style.display = "none";
+      customTrigger.addEventListener("click", () => {
+        faqContainer.style.display = faqContainer.style.display === "none" ? "block" : "none";
+
+        const iconDown = customTrigger.querySelector(".icon-down");
+        const iconUp = customTrigger.querySelector(".icon-up");
+        
+        if (faqContainer.style.display === "block") {
+          iconDown.style.display = "none";
+          iconUp.style.display = "inline";          
+          customTrigger.classList.add("no-border-bottom");
+        } else {
+          iconDown.style.display = "inline";
+          iconUp.style.display = "none";          
+          customTrigger.classList.remove("no-border-bottom");
+        }
+      });
+    }
+    
+    // Add Event Listeners To Accordion Headers
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+    accordionHeaders.forEach(header => {
+      header.addEventListener("click", () => {
+        const content = header.nextElementSibling;
+
+        // Toggle Display Clicked Item
+        if (content.style.display === "block") {
+          content.style.display = "none";
+          header.querySelector(".icon-down").style.display = "inline"; 
+          header.querySelector(".icon-up").style.display = "none"; 
+        } else {
+          content.style.display = "block";
+          header.querySelector(".icon-down").style.display = "none";
+          header.querySelector(".icon-up").style.display = "inline";
+        }
+
+        // Close All Other Items
+        const allContents = document.querySelectorAll(".accordion-content");
+        allContents.forEach(item => {
+          if (item !== content) {
+            item.style.display = "none";
+          }
+        });
+
+        // Reset Arrow Icons For Other Items
+        const allHeaders = document.querySelectorAll(".accordion-header");
+        allHeaders.forEach(otherHeader => {
+          if (otherHeader !== header) {
+            otherHeader.querySelector(".icon-down").style.display = "inline"; 
+            otherHeader.querySelector(".icon-up").style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>
+<!-- Accordion FAQ -->
+
+{% schema %}
+  {
+    "name": "Aldrich FAQ",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_faq_accordion",
+        "label": "Enable FAQ Accordion"
+      },
+      {
+        "type": "text",
+        "id": "aldrich_title",
+        "label": "FAQ Title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Gallery",
+        "name": "FAQ Gallery",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "aldrich_ques",
+            "label": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "aldrich_ans",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Aldrich FAQ"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,238 @@
+<div class="containerge d-none">
+  {% render 'breadcrumbs' %}
+</div>
+<section class="section-product section--product-ingredients{% unless page.handle == 'female-combo' or page.handle == 'result-f' %} mt-5{% endunless %}{% if page.handle == 'result-f' %} mb-0{% else%} mb-4{% endif %}" id="section-{{ section.id }}">
+  <div class="container">
+    {%- if section.settings.heading != blank -%}
+    <p class="section-title size_heading_result">{{ section.settings.heading }}</p>
+    {% endif %}
+    {% if page.handle == 'result-f' %}
+     <h2 class="font-weight-bold l-0 text-center mb-4 mb-md-4 cstm_section_titleFR d-none d-md-block">Hand-picked Ingredients for your Hair Goals</h2>
+
+<!--     <h3 class="mb-3 allIngredientsTitle" id="allIngredientsTitle">{{section.settings.subheading}}</h3> -->
+    {% endif %}
+    {% if page.handle == 'traya-ingredients' %}
+     <div class="product-details-withingredients">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+     <div class="proImageLg">
+          	<img src="" alt="proFeaturedImgLg" id="proFeaturedImgLg">
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <h4 id="proTitle"></h4>
+          <div id="proDescLg"></div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    
+    <div class="IngredientsList">
+      <div class="row ingredient_slider_result">
+        {%- for block in section.blocks -%}
+        <div class="col-md-6 col-lg-3 mb-3 autoplay_sub_div">
+          <div id="block-{{ block.id }}" class="border-0 card list-ingredient mb-2 px-2 px-md-3 py-3 rounded-lg shadow text-center">
+            {%- if block.settings.logo != blank -%}
+            <div class="logo-wrap mx-auto">
+              <img src="{{ block.settings.logo | img_url: 'x92' }}" alt="{{ block.settings.logo.alt | escape }}">
+            </div>
+            {%- else -%}
+            {% if page.handle contains 'resultco' or page.handle == 'result' or page.handle == 'result-f' %}
+            <div class="no-image"></div>
+            {% endif %}
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+            <div class="content content-1">
+              <b>{{ block.settings.headingtext }}</b><br>
+              <div class="addReadMore showlesscontent">
+              {{ block.settings.text }}
+              </div>
+              {% if page.handle == 'resultco' or  page.handle == 'result' %}
+              <a href="#" class="result-co-rd-mr text-center mt-3 mt-md-0 text-black-50 text-decoration-none" data-toggle="modal" data-target="#resultco{{forloop.index}}">Read more</a>
+              {% endif %}
+            </div>
+            {% unless page.handle == 'resultco' or  page.handle == 'result' %}
+            <div class="content content-2">              
+              {{ block.settings.desc }}
+            </div>
+            {% endunless %}
+            {%- endif -%}
+          </div>
+        </div>
+        
+        {% cycle '','','','<div class="col-12 mt-3 mb-4 d-none"><hr/></div>' %}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+{% if page.handle == 'resultco' or page.handle == 'result' or page.handle == 'result-male' %}
+{%- for block in section.blocks -%}
+{%- if block.settings.text != blank -%}
+<div class="modal fade" id="resultco{{forloop.index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="d-flex flex-row-reverse modal-content">
+      <div class="border-0 modal-header pb-0 pl-0">
+        <button type="button" class="close pl-2" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="font-size-18">{{ block.settings.text }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{%- endif -%}
+{%- endfor -%}
+{% endif %}
+<style>
+  .s-hero-section.ingredient-hero-section {
+    height: 602px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    text-align: left;
+    background-image: url({{ section.settings.heroImage | img_url: 'master' }});
+}
+</style>
+
+
+
+{% schema %}
+{
+  "name": "Product Ingredients",
+  "class": "section--product-ingredients",
+  "max_blocks": 100,
+  "settings": [
+	{
+       "type": "image_picker",
+       "id": "heroImage",
+       "label": "Banner Image"
+    },
+	{
+       "type": "text",
+       "id": "heading",
+       "label": "Heading"
+    },
+    {
+       "type": "text",
+       "id": "subheading",
+       "label": "Sub Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredients",
+      "name": "Ingredients",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo",
+          "info": "340 x 80px .jpg recommended"
+        },
+        {
+          "type": "text",
+          "id": "headingtext",
+          "label": "Description Head"
+        },
+		{
+          "type": "richtext",
+          "id": "text",
+          "label": "Description"
+        },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Description Products with:"
+        }
+      ]
+    }
+  ],
+          "presets":[
+          {
+          "name":"Ingredients"
+          }
+          ]
+}
+{% endschema %}
+{% if page.handle contains 'resultco' or  page.handle == 'result' or  page.handle == 'result-f' or  page.handle == 'female-combo' or page.handle == 'result-male' or product.handle == 'complete-hair-growth-kit' %}
+<style>  
+  .allIngredientsTitle{
+    display:none;
+  }
+  .autoplay_sub_div .list-ingredient p~p {
+    display: none;
+  }
+  .autoplay_sub_div .logo-wrap img, .no-image {
+    height: 90px;
+    margin: 0 auto;
+  }
+  .autoplay_sub_div .list-ingredient p {
+    overflow: hidden;
+    margin-bottom: 0;
+    height: 93px;
+    margin-bottom: 5px;
+  }
+  @media (max-width: 768px){
+    .content-1{
+      font-size:14px;
+    }
+    .autoplay_sub_div{
+      padding: 0 5px;
+    }
+    .autoplay_sub_div .logo-wrap img,.no-image{
+      height: 40px;
+    }
+    .autoplay_sub_div .list-ingredient p {
+      height: 110px;
+      font-size: 15px;
+
+    }
+  }
+  .ingredient_slider_result .slick-list.draggable{
+    padding: 0px 20% 0 0 !important;
+  }
+  .ingredient_slider_result .slick-prev {
+    left: -10px;
+  }
+  .ingredient_slider_result .slick-next {
+    right: -10px;
+  }
+</style>
+<script>
+  jQuery(document).ready(function(){
+    jQuery('.ingredient_slider_result').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: true,
+      adaptiveHeight: true,  
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });
+
+  });
+</script>
+{% endif %}
+{% style %}
+{% if page.handle == 'traya-ingredients' %}
+  .product-details-withingredients {
+    display: none;
+  }
+{% endif %}
+{% if template.suffix == 'resultco' or page.handle == 'result' or page.handle == 'result-male' %}
+  @media (max-width: 767.98px) {
+    .section-title.size_heading_result {
+      font-size: 22px;
+      padding-bottom: 20px;
+    }
+  }
+{% endif %}
+{% endstyle %}

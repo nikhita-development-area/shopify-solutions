@@ -1,0 +1,271 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "261cce54-e75f-404a-a88e-fc94dba91e40": {
+      "type": "doctor-details",
+      "blocks": {
+        "b3a14064-e25f-4450-941e-85863af66041": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "R",
+            "user_name": "Rajat",
+            "user_content": "With Nishita’s guidance, following the diet plan became so easy as she simplified it so much for me. Thanks to her for being so helpful."
+          }
+        },
+        "772c15e8-dfc2-468f-bd4a-0cfd37f5de72": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "M",
+            "user_name": "Modassir",
+            "user_content": "Nishita made sure that she made a diet plan which was customised according to my allergies and now it is so simple and easy to follow."
+          }
+        },
+        "329b0b74-1e23-49f5-8af9-4d3b62807c6b": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Sheetal",
+            "user_content": "Traya diet plan was very helpful. After cutting down on Gluten and Diary, I feel much lighter and my hair fall has stopped completely.       Thankyou Nishita."
+          }
+        },
+        "eb827cdf-19fa-4adb-a223-1b77a9f468f7": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Soham",
+            "user_content": "Following a diet plan can get really difficult. But I had no worry because Nishita made a very simple daily diet plan for me to build my hair health."
+          }
+        },
+        "52733cc1-90c1-49ba-ae52-dd306a976219": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Sumeka",
+            "user_content": "Traya’s diet plan has been really amazing. Nishita explained me as to why it is important to go gluten free as it affects the hair health. She has been an amazing guidance."
+          }
+        },
+        "c66240db-04ee-4d22-9635-302d45107512": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "A",
+            "user_name": "Anisha",
+            "user_content": "I have had major PCOS problems. Traya’s nutritionist Nishita made a diet plan which was easy to follow and I didnt feel like I am following a diet plan. It has now become a part of my lifestyle."
+          }
+        },
+        "61b50df9-8fa9-4d72-b9b9-d14de37c4318": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Suman",
+            "user_content": "Very thankful to team Traya and Nishita for easing out for my dietary problems while I was on the Traya treatment."
+          }
+        }
+      },
+      "block_order": [
+        "b3a14064-e25f-4450-941e-85863af66041",
+        "772c15e8-dfc2-468f-bd4a-0cfd37f5de72",
+        "329b0b74-1e23-49f5-8af9-4d3b62807c6b",
+        "eb827cdf-19fa-4adb-a223-1b77a9f468f7",
+        "52733cc1-90c1-49ba-ae52-dd306a976219",
+        "c66240db-04ee-4d22-9635-302d45107512",
+        "61b50df9-8fa9-4d72-b9b9-d14de37c4318"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Group_102352436_5e061c31-5568-4289-a423-545f2150d9b0.png",
+        "doctor_name": "Nishita Suratkal",
+        "specialization": "DIETICIAN | NUTRITIONIST, 5 YEARS",
+        "education": "MSc. in Clinical Nutrition & Dietetics",
+        "registration_no": "",
+        "ratings": " 4.5\/5",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "An experienced Clinical Dietician having 5 years of experience in the field of clinical dietetics adept in dietary management of clinical conditions such as obesity, diabetes and most of gut disorders. She has worked with diagnostic healthcare centres and weight loss e-clinic in the past. Miss Suratkal is a health conscious person practicing nutrition with the underlying belief that avoid losing your health in the pursuit of achieving wealth. In her free time, she also likes being one with nature with treks and nature trips and loves to cook delicious meals."
+      }
+    },
+    "919c899e-89ea-4d1d-b172-fa7da8970f60": {
+      "type": "QA-accordion",
+      "blocks": {
+        "d7070a17-13db-4a0f-9269-1d09a6021139": {
+          "type": "faq",
+          "settings": {
+            "Question": "What is a Dietician?",
+            "Answer": "A Dietician is an expert in food and nutrition who helps in treatments in Lifestyle & diet changes that will help treat hair and health."
+          }
+        },
+        "66ff8a23-deb4-47ef-b521-e5d78326633f": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do patients visit Nishita for?",
+            "Answer": "Patients frequently visit Nishita for hyper-acidity, menstrual disorders, anxiety, and clinical depression."
+          }
+        },
+        "739bc52f-c51e-4cb7-8c8f-df10a0436e0c": {
+          "type": "faq",
+          "settings": {
+            "Question": "What is Nishita Suratkal’s education qualification?",
+            "Answer": "Nishita has a BSc.,MSc. in Dietetics. She is a qualified Nutritionist and Dietitian."
+          }
+        }
+      },
+      "block_order": [
+        "d7070a17-13db-4a0f-9269-1d09a6021139",
+        "66ff8a23-deb4-47ef-b521-e5d78326633f",
+        "739bc52f-c51e-4cb7-8c8f-df10a0436e0c"
+      ],
+      "settings": {
+        "Accordiontitle1": "",
+        "Accordiontitle2": ""
+      }
+    },
+    "93f8672e-53a0-4d52-8bc5-64aebdbfeb0b": {
+      "type": "doctor-slide",
+      "blocks": {
+        "22020eb7-1d90-4ea5-b40f-f772d9649ac6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Dr. Jaspreet Sarna",
+            "doctorImage": "shopify:\/\/shop_images\/dr-Jaspreet_large_1.png",
+            "specialist": "DERMATOLOGIST | HAIR SPECIALIST",
+            "experience": "11 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/doctor-jaspreet"
+          }
+        },
+        "3fc9df0c-dc08-46b3-902e-76605a447a16": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr.Shailendra Chaubey",
+            "doctorImage": "shopify:\/\/shop_images\/Chaubey_large_1.png",
+            "specialist": "HEALTH EDUCATOR | AYURVEDIC PRACTITIONER",
+            "experience": "15 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/shailendra-chaubey"
+          }
+        },
+        "2189abc5-81b1-4d72-9842-5d8896e9238f": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Siddhi Sonawane",
+            "doctorImage": "shopify:\/\/shop_images\/9814da57-362f-484e-8e96-552a54fae9c2_532bbea6-399b-4ceb-9224-93b07e69ddde.jpg",
+            "specialist": "DERMATOLOGIST | COSMETOLOGIST",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": " 4.5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/siddhi-sonawane"
+          }
+        },
+        "47fe9e3c-94be-4873-8a5b-9e3397f48d12": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Harish Balaji. R",
+            "doctorImage": "shopify:\/\/shop_images\/dr.harish_large_bff364e3-897a-4bb3-8538-cffcd200e0a9.png",
+            "specialist": "DERMATOLOGIST | MD | AESTHETIC SURGEON",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/doctor-harish"
+          }
+        },
+        "e9d553e0-e555-45e2-a89f-5a093abd96ef": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Sangeeta Menon",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Sangeeta_Menon-1_large_1.png",
+            "specialist": "DIETICIAN | NUTRITIONIST",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/sangeeta-menon"
+          }
+        },
+        "e1b670b1-327f-452d-8ecb-cc135d99a401": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Kalyani Deshmukh",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Kalyani-1_large_13825a4f-756d-4d46-81c3-e78471674508.png",
+            "specialist": "DERMATOLOGIST | HAIR SPECIALIST",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": " 5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/kalyani-deshmukh"
+          }
+        },
+        "df1bb1cb-0294-4203-9f07-54274bb21b83": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Dr. Moyna Vakil",
+            "doctorImage": "shopify:\/\/shop_images\/dr.Moyna-1_large_7f324788-81f4-4aa8-bedf-0d7b2039fabe.png",
+            "specialist": "Dietician ,Nutritionist",
+            "experience": "10 Year Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/moyna-vakil"
+          }
+        },
+        "ba99c569-7b97-4185-8252-a8bea95cab27": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Shefali Saini",
+            "doctorImage": "shopify:\/\/shop_images\/dr_Shefali_6d8c17e2-4bb6-42b9-95a2-4e900cb9b9d4.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "6 YEARS",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "shopify:\/\/pages\/shefali-saini"
+          }
+        },
+        "9d8de5db-6496-4202-bdc7-ca4d03f0315d": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Dhwani Saxena",
+            "doctorImage": "shopify:\/\/shop_images\/Dr._dhwani.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "5 YEARS",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_a94c890a-7e0a-4620-bf47-689acc8c0e68.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_c74a1b89-8159-4c5f-b352-2f6cbece7605.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-dhwani"
+          }
+        }
+      },
+      "block_order": [
+        "22020eb7-1d90-4ea5-b40f-f772d9649ac6",
+        "3fc9df0c-dc08-46b3-902e-76605a447a16",
+        "2189abc5-81b1-4d72-9842-5d8896e9238f",
+        "47fe9e3c-94be-4873-8a5b-9e3397f48d12",
+        "e9d553e0-e555-45e2-a89f-5a093abd96ef",
+        "e1b670b1-327f-452d-8ecb-cc135d99a401",
+        "df1bb1cb-0294-4203-9f07-54274bb21b83",
+        "ba99c569-7b97-4185-8252-a8bea95cab27",
+        "9d8de5db-6496-4202-bdc7-ca4d03f0315d"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "261cce54-e75f-404a-a88e-fc94dba91e40",
+    "919c899e-89ea-4d1d-b172-fa7da8970f60",
+    "93f8672e-53a0-4d52-8bc5-64aebdbfeb0b"
+  ]
+}

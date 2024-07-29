@@ -1,0 +1,20 @@
+{% if page.handle == 'aldrich' or page.handle contains 'return-policy' or page.handle contains 'refund-policy' or page.handle contains 'terms-of-service' or page.handle contains 'privacy-policy' or page.handle contains 'result4' or page.handle contains 'result-repeat' or page.handle contains 'female-result' or page.handle contains 'result4/result' or page.handle contains 'result' or page.handle contains 'female-landing' or page.handle contains 'female-combo' or page.handle contains 'all' %}
+  <meta name="robots" content="noindex, nofollow">
+{% endif %}
+
+{%- if request.path contains '/404'-%}
+  <meta http-equiv = "refresh" content = "0; url= https://traya.health/"/>
+  <script>
+    window.location.href="https://traya.health/";
+  </script>
+{%- endif -%}
+
+{% if template.suffix contains 'calculator' or template.suffix contains 'home-app' 
+  or template.suffix contains 'download-traya-app' 
+  or template.suffix == 'hair-transplant'
+  or blog.title == 'dermatologist'  %}
+  <meta name="robots" content="noindex, nofollow">
+{% endif %}
+
+
+   

@@ -1,0 +1,29 @@
+<!----- choose-hair-doctors.liquid ------->
+<div class="container">
+  <div class="city-hair-doctors rounded-lg">
+    <h2 class="city-hd-heading l-0">{{ section.settings.heading }}</h2>
+    <p class="city-hd-content">{{ section.settings.content }}</p>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Choose hair doctors",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Choose hair doctors"
+      }
+    ]
+  }
+{% endschema %}

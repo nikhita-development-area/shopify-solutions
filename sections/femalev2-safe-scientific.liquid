@@ -1,0 +1,84 @@
+<!-- Sections -> femalev2-safe-scientific.liquid -->
+
+<div class="container femalev2-safe-scientific">
+  <h4 class="femalev2-safe-scientific-title font-weight-bold text-center d-none d-md-block">{{ section.settings.safe_title }}</h4>
+  <p class="femalev2-safe-scientific-sub-title text-center d-none d-md-block">{{ section.settings.safe_sub_title }}</p>
+
+  <div class="regimen-safe-scientific">
+    <div class="regimen position-relative">
+      <img src="{{ section.settings.regimen_img | img_url: 'master' }}" height="auto" width="auto" />
+      <div class="regimen-content position-absolute px-4">
+        <p class="regimen-sub_title text-center m-0">{{ section.settings.regimen_sub_title }}</p>
+        <h2 class="regimen-title text-center">{{ section.settings.regimen_title }}</h2>
+        <p class="regimen-content text-center m-0">{{ section.settings.regimen_content }}</p>
+      </div>
+    </div>    
+
+    <div class="safe-scientific">
+      <img src="{{ section.settings.safe_icon_img | img_url: 'master' }}" height="auto" width="auto" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .femalev2-safe-scientific-title {font-size: 40px; line-height: 55px; letter-spacing: 0em;}
+  .femalev2-safe-scientific-sub-title {font-size: 32px; line-height: 44px; letter-spacing: 0em;}
+  .regimen-safe-scientific {display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;}
+  .regimen-content {top: 5%;}
+  .regimen-sub_title {font-size: 20px; line-height: 44px; letter-spacing: 0em;}
+  .regimen-title {font-size: 60px; line-height: 50px; letter-spacing: 0em;}
+  .regimen-title p {font-size: 45px;}
+  .regimen-content {font-size: 20px; line-height: 30px; letter-spacing: 0em;}
+
+  @media screen and (max-width: 767.98px) {
+    .regimen-safe-scientific {grid-template-columns: repeat(1, 1fr)}
+    .regimen-sub_title {font-size: 16px; line-height: 30px;}
+    .regimen-title {font-size: 50px; line-height: 45px;}
+    .regimen-title p {font-size: 40px;}
+    .regimen-content {font-size: 16px; line-height: 24px;}
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Safe Scientific",
+    "settings": [
+      {
+        "type": "text",
+        "id": "safe_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "safe_sub_title",
+        "label": "Sub-Title"
+      },
+      {
+        "type": "image_picker",
+        "id": "regimen_img",
+        "label": "Regimen Image"
+      },
+      {
+        "type": "text",
+        "id": "regimen_sub_title",
+        "label": "Regimen Sub-Title"
+      },
+      {
+        "type": "html",
+        "id": "regimen_title",
+        "label": "Regimen Title"
+      },
+      {
+        "type": "text",
+        "id": "regimen_content",
+        "label": "Regimen Content"
+      },
+      {
+        "type": "image_picker",
+        "id": "safe_icon_img",
+        "label": "Safe Scientific Image"
+      }
+    ],
+    "presets": [{"name": "Safe Scientific"}]
+  }
+{% endschema %}

@@ -1,0 +1,238 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<div class="solution-section main-section text-center position-relative mb-md-4 mb-2">
+  
+  <p class="font-weight-bold section-title position-relative pt-md-4 sticky-top text-center" style="z-index: 1;">{{ section.settings.sub_title }}</p>
+  
+  <div class="container">
+    <div class="img-section d-md-none mr-n3 mt-n4 col-md-5 text-center text-md-left px-0">
+      {% if template == 'index' %}
+        <img loading="lazy" class="d-none d-md-block doc_pres_image" alt="Doctor Prescription" title="Doctor Prescription" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/1400x1374_750x.jpg" width="715" height="700">
+        <img loading="lazy" class="d-md-none doc_pres_image" alt="Doctor Prescription" title="Doctor Prescription" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/1400x1374_500x.jpg" width="500" height="400">
+      {% else %}
+      {% if section.settings.banner_image != blank %}
+        <img loading="lazy" src="{{ section.settings.banner_image | img_url: 'master' }}" alt="{{ section.settings.banner_image | escape }}" title="{{ 'Doctor Preccription' }}">
+      {% endif %}
+      {% endif %}
+      <div class="caption text-left">
+        {% for i in (1..3) %}
+        {% capture content %}text_{{i}}{% endcapture %}
+        <h5 class="font-fredoka text-green">{{ section.settings[content] }}</h5>
+        {% endfor %}
+      </div>
+    </div>
+    {% if template == 'index' or page.handle == 'homev1' %}
+    <h4 class="mt-4 mt-md-0 col-md-5 text-center text-md-left px-0"><p class="doctor_bottom_text">{{ section.settings.text_1s }}</p></h4>
+    {% else %}
+    <h5 class="mt-4 mt-md-0 col-md-5 text-center text-md-left px-0"><p class="doctor_bottom_text">{{ section.settings.text_1s }}</p></h5>
+    {% endif %}
+  </div>
+  <div class="img-section col-md-7 col-lg-6 ml-auto pr-0 d-none d-md-block mt-md-n5">
+    {% if template == 'index' or page.handle == 'homev1' %}
+        <img loading="lazy" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/1400x1374.jpg" alt="Plan-image" alt="Image" title="Image" width="715" height="700">
+      {% else %}
+      {% if section.settings.banner_image != blank %}
+        <img loading="lazy" src="{{ section.settings.banner_image | img_url: 'master' }}" alt="{{ section.settings.banner_image | escape }}" title="Image" width="500" height="400">
+      {% endif %}
+      {% endif %}
+    <div class="caption">
+      {% for i in (1..3) %}
+      {% capture content %}text_{{i}}{% endcapture %}
+      <h5 class="font-fredoka text-green">{{ section.settings[content] }}</h5>
+      {% endfor %}
+    </div>
+  </div>
+  
+  {% unless page.handle contains 'home-new' or page.handle == 'home-app' or page.handle == "download-traya-app" %}
+  {% if section.settings.btn_text != '' %}
+  <a id="hairtestcta" href="{% if request.path contains '/blogs/hair-care/' %}https://form.traya.health/questions?cohort=1&amp;location=Prescription&page={{ request.path | replace: '/blogs/', 'blogs_' | replace: '/', '_' }}&utm_campaign=blogs_hc_Prescription
+    {% elsif request.path contains '/blogs/hair-doctors/' %}https://form.traya.health/questions?cohort=1&amp;location=Prescription&page={{ request.path | replace: '/blogs/', 'blogs_' | replace: '/', '_' }}&utm_campaign=blogs_hd_Prescription
+    {% else %}{{ section.settings.btn_link }}&page={{ page__hndl }}{% endif %}" 
+    class="btn btn-dark take-the-hair-test mt-3 mt-md-4 shadow hair-form-actn-link">{{ section.settings.btn_text }} <sup>&trade;</sup></a>
+    {% endif %}
+  {% endunless %}
+
+  {% if page.handle == 'home-app' or page.handle == "download-traya-app" %}
+  <div class="download-app text-center">
+    <a href="https://trayahealth.app.link/GsBfukBlAHb" class="btn btn-dark mt-3 mt-md-4 shadow" id="app_download_cta" target="_blank">DOWNLOAD THE APP</a>
+  </div>
+  {% endif %}
+
+  {% if page.handle contains 'home-new' %}
+  {% if section.settings.btn_text != '' %}
+  <a href="https://form.traya.health/v2/book-appointment" class="btn btn-dark take-the-hair-test mt-3 mt-md-4 shadow">Book a Call</a>
+  {% endif %}
+  {% endif %}
+  
+  {%comment%}
+  {% if page.handle == 'homev1' %}
+  {% if section.settings.btn_text != '' %}
+  <a href="https://form.traya.health/v2/book-appointment" class="btn btn-dark mt-3 take-the-hair-test mt-md-4 shadow">Book a Call</a>
+  {% endif %}
+  {% endif %}
+  {%endcomment%}
+  
+</div>
+
+
+{% schema %}
+{
+  "name": "Doctor Plan",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "Sub Title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Select Image"
+    },
+    {
+      "type": "text",
+      "id": "text_1s",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "Content Text"
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Content Text"
+    },
+    {
+      "type": "text",
+      "id": "text_3",
+      "label": "Content Text"
+    }
+  ],
+         "presets": [
+        {
+            "name": "Doctor Plan",
+            "category": "Doctor Plan"
+        }
+    ]
+}
+{% endschema %}
+
+{% style %}
+  {% if page.handle == 'homev5' %}
+  .caption h5{
+    font-size:20px;
+    color: #bf8c6a!important;
+  }
+  p.sub-heading{
+    margin-bottom:20px!important;
+  }
+  h4.headening {
+    font-size: 24px;
+  }
+    {% endif %}
+  .solution-section p .animate>span {
+	display: none;
+  }
+  .solution-section p .animate>span.active {
+	display: block;
+  }
+  .solution-section p .animate {
+    height: auto;
+    display: inline-block;
+/*     overflow: hidden; */
+    vertical-align: top;
+    position: relative;
+  }
+  .solution-section .img-section .caption h5 {
+    position: absolute;
+    width: 170px;
+  }
+  .solution-section .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .doctor_bottom_text {
+    font-weight: 700;
+    font-size: 24px;
+  }
+   {% if page.handle == 'homev5' %}
+  span.text-green.animate {
+    color: #bf8c6a!important;
+}
+     {% endif %}
+  @media only screen and (max-width: 767px) {
+    .solution-section .container {
+      position: static;
+      transform: none;
+    }
+    .solution-section .section-title {
+      margin-bottom: 15px;
+      padding-top: 10px;
+    }
+    .doctor_bottom_text {
+      font-weight: 400;
+      font-size: 20px;
+    }
+    .solution-section .img-section .caption h5 {
+      width: 120px;
+      font-size: 12px;
+    }
+    .solution-section .img-section .caption h5:nth-child(2) {
+      bottom: 18%;
+      left: 3%;
+    }
+    .solution-section .img-section .caption h5:nth-child(3) {
+      bottom: 3%;
+      left: 7%;
+      width: 90px;
+    }
+  }
+  @media only screen and (max-width: 575.98px) {
+    .solution-section .container {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+{% endstyle %}
+
+<script async>
+      if(jQuery('.animate').length > 0 ){
+        jQuery('.animate > span:first-child').addClass('active');
+        var select_el = jQuery('.animate > span');
+        setInterval(function(){
+          if(select_el.hasClass('active')){
+            jQuery('.animate > span.active').removeClass('active').next().addClass('active');
+          }
+          if(jQuery('.animate > span:last-child').hasClass('active')){
+            jQuery('.animate > span:last-child').removeClass('active');
+            jQuery('.animate > span:first-child').addClass('active');
+          }
+        }, 1000);
+      }
+      
+    </script>

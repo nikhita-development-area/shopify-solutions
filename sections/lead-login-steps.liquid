@@ -1,0 +1,47 @@
+<div class="FLogin-product-results mb-5" style="display:none;">
+   <p class="login-heading">What goes in my kit?</p>
+   <div class="container">
+    <div class="row Fproduct_slide login_result_product_slides">
+      
+    </div>
+  </div>
+  <div class="login_buynow">
+    <button class="Flogin_lead_buy_now btn btn-dark">BUY NOW</button>
+  </div>
+</div>
+<div class="container login-lead-steps mb-5">
+  <p class="login-heading">What happens after I purchase?</p>
+  <img class="d-none d-md-block" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_1_04acfc11-2d63-4a89-8d33-2afef0d76fd8.png?v=1692345815" alt="banner_img">
+  <img class="d-md-none d-block" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353253.png?v=1692280060" alt="banner_img">
+</div>
+
+{% schema %}
+  {
+    "name": "Lead Login Steps",
+    "tag": "section",
+    "settings": []
+  }
+{% endschema %}
+
+<style>
+ 
+  .FLogin-product-results .slick-dotted.slick-slider {
+    margin-bottom: 0;
+    justify-content: center;
+}
+  button.Flogin_lead_buy_now.btn.btn-dark {
+    padding: 10px 70px 8px;
+}
+  .login_buynow {
+    text-align: center;
+    margin-top: 10px;
+}
+  @media only screen and (max-width: 767px){
+    button.Mlogin_lead_buy_now.btn.btn-dark {
+    font-size: 18px;
+}
+  }
+</style>
+
+{% javascript %}
+{% endjavascript %}

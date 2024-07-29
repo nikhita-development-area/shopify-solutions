@@ -1,0 +1,141 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "doctor_details_Gct4Y8": {
+      "type": "doctor-details",
+      "blocks": {
+        "text_fpVyXa": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "M",
+            "user_name": "Meenal",
+            "user_content": "Dr. ka friendly nature aur expert advice ne mujhe bohot aaram diya during my treatment."
+          }
+        },
+        "text_Vca8RP": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "A",
+            "user_name": "Ankita",
+            "user_content": "Dr. has latest treatments available, which helped me a lot."
+          }
+        },
+        "text_C8RzqE": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Sneha",
+            "user_content": "Hair transplant ke liye Dr. ko choose karna mera best decision tha, results dekh kar khush hu."
+          }
+        }
+      },
+      "block_order": [
+        "text_fpVyXa",
+        "text_Vca8RP",
+        "text_C8RzqE"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Dr_Glory.webp",
+        "doctor_name": "Dr. Glory Parmar",
+        "specialization": "MBBS, MD (Dermatology) |   5 YEARS",
+        "education": "MBBS MD (Dermatology)",
+        "registration_no": "G 59603",
+        "ratings": "",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "Dr. Glory Parmar is a practicing dermatologist with a unique dual focus on both dermatology and family medicine. This integration allows her to offer patient-centered, holistic care by combining her extensive dermatological expertise with her skills in family medicine."
+      }
+    },
+    "qa_accordion_HtDe9Y": {
+      "type": "QA-accordion",
+      "blocks": {
+        "faq_Q7hwqq": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do people visit Dr. Glory?",
+            "Answer": "People visit Dr. Glory for various skin and hair related conditions."
+          }
+        },
+        "faq_76PWDB": {
+          "type": "faq",
+          "settings": {
+            "Question": "What does Dr Glory specialise in?",
+            "Answer": "Her expertise is in dermatology and she has skills in family medicine."
+          }
+        }
+      },
+      "block_order": [
+        "faq_Q7hwqq",
+        "faq_76PWDB"
+      ],
+      "settings": {
+        "Accordiontitle1": "",
+        "Accordiontitle2": ""
+      }
+    },
+    "doctor_slide_YkHTWr": {
+      "type": "doctor-slide",
+      "blocks": {
+        "text_yaVDYY": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Siddhi Sonawane",
+            "doctorImage": "shopify:\/\/shop_images\/9814da57-362f-484e-8e96-552a54fae9c2_5eeef0b3-1a93-44e5-afb5-2304c1a710a0.jpg",
+            "specialist": "DERMATOLOGIST | COSMETOLOGIST,",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/siddhi-sonawane"
+          }
+        },
+        "text_Ekxw4Q": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Sangeeta Menon",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Sangeeta_Menon-1_compact_db3ee615-d365-4859-8e1c-91fa4ccc9466.png",
+            "specialist": "DIETICIAN | NUTRITIONIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/sangeeta-menon"
+          }
+        },
+        "text_xKzQVb": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Dhwani Saxena",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Dhwani_Saxena.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "5 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_09a07296-d27a-4096-8eb3-2348712bc827.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-dhwani"
+          }
+        }
+      },
+      "block_order": [
+        "text_yaVDYY",
+        "text_Ekxw4Q",
+        "text_xKzQVb"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "doctor_details_Gct4Y8",
+    "qa_accordion_HtDe9Y",
+    "doctor_slide_YkHTWr"
+  ]
+}

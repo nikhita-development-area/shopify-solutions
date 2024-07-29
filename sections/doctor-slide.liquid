@@ -1,0 +1,150 @@
+  <div class="container {% unless page.handle == "femalev2" or page.handle == 'female' or page.handle == 'femalev1' %}mx-3 mx-md-auto{% endunless %} {% if page.handle == "femalev2" or page.handle == 'female' or page.handle == 'femalev1' %}dctr_femalev2_section{% endif %}">
+   {% if page.handle == "femalev2" or page.handle == 'female' or page.handle == 'femalev1' %}
+    <h2 class=" font-weight-bold l-0 text-center mb-4 mb-md-5 section-title"> Meet The Team Of Doctors </h2>
+    {% endif %}
+    <div class="row {% unless page.handle == "femalev2" or page.handle == 'female' or page.handle == 'femalev1' %}doctor_page_slides{% endunless %} {% if page.handle == "femalev2" or page.handle == 'female' or page.handle == 'femalev1' %}dctr_femalev2_slide{% endif %}">
+ 
+    {% for block in section.blocks %}
+  <a href="{{ block.settings.PageUrl }}" class="{% if page.handle == "femalev2" or page.handle == 'female' or page.handle == 'femalev1' %}dctr_femalev2_box_slide{% endif %} box_doc d-flex justify-content-center align-items-center">
+  <div class="img_doctors"><img src="{{ block.settings.doctorImage | img_url: 'compact' }}" alt="dr-abhishek0"></div>
+  <div class="years d-flex {% unless page.handle == "femalev2" or page.handle == 'female' or page.handle == 'femalev1' %} my-md-5 pr-md-1 py-md-3 m-0 px-3 px-md-5 py-2 {% endunless %}">
+    <div class="{% unless page.handle == "femalev2" or page.handle == 'female' or page.handle == 'femalev1' %}m-auto{% endunless %} {{ page.handle }}-slide-des">
+        <h4 class="docter_name_bottom_slide {% unless page.handle == "femalev2" or page.handle == 'female' or page.handle == 'femalev1' %}text_Fredoka {% endunless %}">
+      {{ block.settings.doctorName }}
+      {% unless page.handle == "femalev2" or page.handle == 'female' or page.handle == 'femalev1' %}
+        <img src="{{ block.settings.verified | img_url: 'icon' }}" alt="verified" class="d-inline-flex"> 
+        {% endunless %}
+      </h4>
+        <span class="docter_specilization_bottom_slide">
+      {{ block.settings.specialist }}
+      </span>
+        <span class="docter_experience_bottom_slide">
+      {{ block.settings.experience }}
+      </span>
+      <h6 class="d-flex align-items-center"><img src="{{ block.settings.ratingstar | img_url: 'small' }}" class="Rating_img" alt="rating">{{ block.settings.rating }}</h6> 
+    {% if page.handle == "femalev2" or page.handle == 'female' or page.handle == 'femalev1' %}
+    <p>Learn More</p>
+    {% endif %}
+    </div>
+  </div>
+    
+  </a>
+
+  {% endfor %}
+  </div>
+  </div>
+  <style>
+    .dctr_femalev2_slide.slick-slider {
+    margin:0 -15px;
+}
+.dctr_femalev2_slide .slick-slide {
+    padding:15px 10px;
+    margin-right:15px;
+    margin-left:15px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+    a.dctr_femalev2_box_slide {
+    box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.12);
+    padding: 15px;
+}
+    .dctr_femalev2_box_slide .img_doctors img {
+    width: 100px;
+    height: 100px;
+}
+    .dctr_femalev2_box_slide .img_doctors {
+    padding-right: 15px;
+}
+    a.dctr_femalev2_box_slide:hover {
+      text-decoration: none;
+    }
+    .dctr_femalev2_box_slide h6.d-flex.align-items-center {
+    margin-top: 10px;
+}
+    .dctr_femalev2_box_slide p {
+    text-decoration: underline;
+    padding-top: 10px;
+}
+    .dctr_femalev2_box_slide span {
+     width: 100%;
+}
+    .years.my-md-5.pr-md-1.py-md-3.d-flex.m-0.px-3.px-md-5.py-2{
+          padding: 0 11px !important;
+    }
+    .dctr_femalev2_section h4.docter_name_bottom_slide {
+    font-size: 18px;
+    font-weight: bold;
+          width: 100%;
+      margin-bottom: 7px;
+
+}
+     .dctr_femalev2_section span.docter_specilization_bottom_slide {
+    font-size: 16px;
+           width: 100%;
+
+}
+      @media only screen and (max-width: 767.98px) {
+       
+      }
+  </style>
+{% schema %}
+  {
+    "name": "Doctor Slide",
+    "settings": [],  
+    "blocks": [
+     {
+       "name": "Doctors",
+       "type": "text",
+       "settings": [
+          {
+            "type": "text",
+            "id": "doctorName",
+            "label": "Name"
+          },
+          {
+            "type":"image_picker",
+            "label" :"Doctor Image",
+            "id" :"doctorImage"
+         },
+           {
+            "type": "text",
+            "id": "specialist",
+            "label": "Doctor Specialist"
+          },
+          {
+            "type": "text",
+            "id": "experience",
+            "label": "Experience"
+          },
+           {
+            "type":"image_picker",
+            "label" :"verified Image",
+            "id" :"verified"
+         },
+          {
+            "type": "text",
+            "id": "rating",
+            "label": "Rating"
+          },
+           {
+            "type":"image_picker",
+            "label" :"Ratingstar Image",
+            "id" :"ratingstar"
+         },
+          {
+            "type":"url",
+            "label" :"Url",
+            "id" :"PageUrl"
+         }                   
+        
+       ]
+}    
+      
+ ],
+      "presets": [
+    {
+      "name": "Doctor Slide"
+    }
+  ]
+  }
+{% endschema %}

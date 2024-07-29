@@ -1,0 +1,1067 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+  {% assign login_page__hndl = 'home_login' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+
+
+{%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
+  {%- style -%}
+  @media screen and (max-width: 749px) {
+    #Slider-{{ section.id }}::before,
+    #Slider-{{ section.id }} .media::before,
+    #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+      padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+/*       content: ''; */
+      display: block;
+    }
+     .Desktop-image{
+      display: none;
+    }
+    .Mobile-image{
+      display: block;
+      position:relative;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    #Slider-{{ section.id }}::before, #Slider-{{ section.id }} .media::before {
+    padding-bottom: 45.54537885095753% !important;
+}
+#Slider-{{ section.id }}::before, #Slider-{{ section.id }} .media::before{
+   padding-bottom: 45.54537885095753% !important;
+}
+    #Slider-{{ section.id }}::before,
+    #Slider-{{ section.id }} .media::before {
+      padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+      content: '';
+      display: block;
+    }
+    .Mobile-image{
+      display: none;
+    }
+    .Desktop-image{
+      display: block;
+    }
+  }
+  {%- endstyle -%}
+{%- endif -%}
+  <a class="BannerUrl"  {% if template != 'index.login' %}href="https://form.traya.health/questions?cohort=1&location=HomeSlideshow&page=home" {% endif %}>
+<slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
+  {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
+    <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
+      <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
+      <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+        {%- if section.settings.slider_visual == 'counter' -%}
+          <span class="slider-counter--current">1</span>
+          <span aria-hidden="true"> / </span>
+          <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+          <span class="slider-counter--total">{{ section.blocks.size }}</span>
+        {%- else-%}
+          <div class="slideshow__control-wrapper">
+            {%- for block in section.blocks -%}
+              <button class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}" aria-controls="Slider-{{ section.id }}">
+                {%- if section.settings.slider_visual == 'numbers' -%}{{ forloop.index }}{% else %}<span class="dot"></span>{%- endif -%}
+              </button>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+      <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'sections.slideshow.next_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
+
+      {%- if section.settings.auto_rotate -%}
+        <button type="button" class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}" aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
+          {%- render 'icon-pause' -%}
+          {%- render 'icon-play' -%}
+        </button>
+      {%- endif -%}
+    </div>
+    <noscript>
+      <div class="slider-buttons">
+        <div class="slider-counter">
+          {%- for block in section.blocks -%}
+            <a href="#Slide-{{ section.id }}-{{ forloop.index }}" class="slider-counter__link link" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}">
+              {{ forloop.index }}
+            </a>
+          {%- endfor -%}
+        </div>
+      </div>
+    </noscript>
+  {%- endif -%}
+
+  <div class="slideshow banner banner--{{ section.settings.slide_height }} grid grid--1-col slider slider--everywhere{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %} {{ login_page__hndl }}"
+    id="Slider-{{ section.id }}"
+    aria-live="polite"
+    aria-atomic="true"
+    data-autoplay="{{ section.settings.auto_rotate }}"
+    data-speed="{{ section.settings.change_slides_speed }}"
+  >
+    {%- for block in section.blocks -%}
+      <style>
+        #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
+          opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
+        }
+      </style>
+      <div class="slideshow__slide grid__item grid--1-col slider__slide"
+        id="Slide-{{ section.id }}-{{ forloop.index }}"
+        {{ block.shopify_attributes }}
+        role="group"
+        aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+        aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+        tabindex="-1"
+      >
+       
+      {% if template == 'index.login' %}
+        <div class="{{ login_page__hndl }} login_slide_desk_img login_slide_desk_img slideshow__media Desktop-image{% if block.settings.image == blank %} placeholder{% endif %}">
+          {%- if block.settings.image -%}
+            <img
+              src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352717.webp?v=1693815092"
+              alt="{{ block.settings.image.alt | escape }}"
+            >
+          {%- else -%}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+<!--       Mobile-image -->
+         <div class="{{ login_page__hndl }} login_slide_mob_img slideshow__media Mobile-image{% if block.settings.mbl_image == blank %} placeholder{% endif %}">
+          {%- if block.settings.mbl_image -%}
+            <img
+              src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352721_1.png?v=1693813981"
+              alt="{{ block.settings.mbl_image.alt | escape }}"
+            >
+          {%- else -%}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+            {% else %}
+        <div class="slideshow__media banner__media media Desktop-image{% if block.settings.image == blank %} placeholder{% endif %}">
+          {%- if block.settings.image -%}
+            <img
+              srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
+              {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+              {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if block.settings.image.width >= 1100 -%}{{ block.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+              {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
+              {%- if block.settings.image.width >= 2000 -%}{{ block.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+              {%- if block.settings.image.width >= 3000 -%}{{ block.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
+              {%- if block.settings.image.width >= 3840 -%}{{ block.settings.image | image_url: width: 3840 }} 3840w,{%- endif -%}
+              {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+              sizes="100vw"
+              src="{{ block.settings.image | image_url: width: 1500 }}"
+              alt="{{ block.settings.image.alt | escape }}"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
+            >
+          {%- else -%}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+          <!-- Mobile-image -->
+         <div class="slideshow__media banner__media media Mobile-image{% if block.settings.mbl_image == blank %} placeholder{% endif %}">
+          {%- if block.settings.mbl_image -%}
+            <img
+              srcset="{%- if block.settings.mbl_image.width >= 375 -%}{{ block.settings.mbl_image | image_url: width: 375 }} 375w,{%- endif -%}
+              {%- if block.settings.mbl_image.width >= 550 -%}{{ block.settings.mbl_image | image_url: width: 550 }} 550w,{%- endif -%}
+              {%- if block.settings.mbl_image.width >= 750 -%}{{ block.settings.mbl_image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if block.settings.mbl_image.width >= 1100 -%}{{ block.settings.mbl_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+              {%- if block.settings.mbl_image.width >= 1500 -%}{{ block.settings.mbl_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {%- if block.settings.mbl_image.width >= 1780 -%}{{ block.settings.mbl_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+              {%- if block.settings.mbl_image.width >= 2000 -%}{{ block.settings.mbl_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+              {%- if block.settings.mbl_image.width >= 3000 -%}{{ block.settings.mbl_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+              {%- if block.settings.mbl_image.width >= 3840 -%}{{ block.settings.mbl_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+              {{ block.settings.mbl_image | image_url }} {{ block.settings.mbl_image.width }}w"
+              sizes="100vw"
+              src="{{ block.settings.mbl_image | image_url: width: 1500 }}"
+              alt="{{ block.settings.mbl_image.alt | escape }}"
+              width="{{ block.settings.mbl_image.width }}"
+              height="{{ block.settings.mbl_image.width | divided_by: block.settings.mbl_image.aspect_ratio | round }}"
+            >
+          {%- else -%}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+        {% endif %}
+      <a class="BannerUrl" {% if template != 'index.login' %} href="https://form.traya.health/questions?cohort=1&location=HomeSlideshow&page=home" {% endif %}>
+        <div class="slideshow__text-wrapper  {% if page.handle contains 'transplant-thank-you' %} thank-banner__content {% endif %} banner__content banner__content--{{ block.settings.box_align }} {% unless page.handle == 'transplant' or page.handle == 'femalev1' or page.handle == 'female' %}page-width{% endunless %}{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+          <div class="{% if page.handle == 'transplant' %}col-lg-5 col-md-7 bg-white{% else %}slideshow__text banner__box  {% if page.handle == 'transplant-thank-you' %}thank-content-container {% else %}content-container {% endif %}content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}{% endif %}">
+            <div class="{% if template.suffix == 'indians-trust-traya' %}bg-white p-md-5 px-3 py-4{% else %}text-section{% if page.handle == 'transplant' %} px-md-4 px-2 py-5{% endif %}{% endif %}">
+           {%- if block.settings.heading != blank -%}
+              <h2 class="{% if page.handle == 'femaleoo' %}femalev1-banner__heading mb-3 mb-md-4{% else %}banner__heading{% endif %} {{ block.settings.heading_size }}{% if template != 'index.login' %} text_Fredoka{% endif %}{% if template.name == 'index' %} d-none d-md-block{% endif %}">{{ block.settings.heading }}</h2>
+              {% if template.name == 'index' %}<h2 class="banner__heading {{ block.settings.heading_size }} d-md-none">Doctor Recommended Hair loss<br>Treatment</h2>{% endif %}
+            {%- endif -%}
+              <div class="banner__text mb-0{% if template == 'index.login' %} mb-0 pb-0 mt-md-4{% elsif template.suffix == 'indians-trust-traya' %} pb-2 bdr-bottom{% endif %}" {{ block.shopify_attributes }}>
+                {% if template == 'index.login' %}
+                  <span class="second__text pb-0"><span class="login_first_name">Sumit</span> saw results <br>in <span class="login_dyn_month">6</span> Months.<br>So can you!</span>
+                  <!-- <span class="d-md-none second__text pb-0">93% Of Customers Who Stayed Regular With Their Regime Saw Hair Growth Results.</span> -->
+                {% else %}
+                {%- if block.settings.subheading != blank -%}
+                  <span{% if page.handle == 'new-female' %} class="text_mob_none"{% endif %}{% if page.handle == 'transplant' %} class="font-fredoka"{% elsif template.suffix == 'indians-trust-traya' %} class="font-fredoka pb-0"{% endif %}>{{ block.settings.subheading }}</span>
+                 {% if page.handle == 'new-female' %}
+      <ul class="new-female_content">
+      <li><span>1</span>Take the test below to build your<br>hair routine</li>
+      <li><span>2</span>Buy first month plan</li>
+      <li><span>3</span>Traya doctors will validate the plan and ship your products with prescription</li>
+      </ul>
+        {% endif %}
+                  {%- endif -%}
+                {% endif %}
+     
+              </div>
+          {%- if block.settings.subheading-2 != blank -%}
+              <div class="{% if page.handle == 'femaleoo' %}femalev1-sub-banner__text{% else %}sub-banner__text{% endif %} mt-1{% if page.handle == 'all' %} d-none d-md-block{% endif %}" {{ block.shopify_attributes }}>
+                <span class="l-0">{{ block.settings.subheading-2 }}</span>
+              </div>
+            {%- endif -%}
+            {%- if block.settings.button_label != blank -%}
+              <div class="banner__buttons">
+                <a id="{% if page.handle == 'female' or page.handle == 'new-female' or page.handle == 'femalev2' %}female-hair-test-button2{% elsif page.handle == 'pcos' %}female-hair-test-button2 {% elsif page.handle == 'post-pregnancy' %}female-hair-test-button2 {% elsif page.handle == 'menopause' %}female-hair-test-button2 {% elsif page.handle == 'thyroid' %}female-hair-test-button2 {% elsif page.handle == 'femalev1' %}femalev1-hair-test-button2{% else %}hairtestcta{% endif %}"{% if block.settings.link %} href="{{ block.settings.link }}&page={{ page__hndl }}"{% else %} role="link" aria-disabled="true"{% endif %} class="hair-form-actn-link btn btn-dark{% if page.handle == 'femaleoo' %} f-hair-test-btn btn-hair-test position-relative mt-4{% elsif page.handle == 'homev5' %} homev5CTA{% endif %}">{{ block.settings.button_label | escape }} <sup>&trade;</sup></a>
+                <span class="myresult d-none{% if page.handle == 'femaleoo' %} mt-4{% endif %}">
+                      {% if page.handle == 'home-v3' %}
+                      <a id="myPlanHome" href="/pages/result4-new" class="btn btn-dark mt-4 mt-md-0">My suggested Plan</a>
+   					  {% elsif page.handle == 'homev5'%}
+                      <a id="myPlanHome" href="/pages/result-hi" class="btn btn-dark mt-4 mt-md-0">आपका Traya प्लान</a>
+                      {% else %}
+                      <a id="myPlanHome" href="/pages/result4" class="btn btn-dark{% if template == 'index' or page.handle == 'homev1' %} rcmd_plan_btn mt-4 mt-md-0{% endif %}{% if page.handle == 'femaleoo' %} btn-hair-test{% endif %}">My Recommended Plan</a>
+                      {% endif %}
+                  </span>
+              </div>
+            {%- endif -%}
+      {% if page.handle == 'new-female' %}
+     <div class="new_female_bottom_text">
+      <img class="93%_img" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353298.png?v=1690268128" alt="banner_bottom_img">
+     </div>
+              <div class="new_female_bottom_review">
+       <img class="review_img_desk" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353300_1.png?v=1690268132" alt="banner_bottom_img">
+        <img class="review_img_mob" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353300_2.png?v=1690293785" alt="banner_bottom_img">
+     </div>
+        {% endif %}
+            {%- if page.handle == 'all' and block.settings.subheading-2 != blank -%}
+              <div class="sub-banner__text mt-1 d-md-none" {{ block.shopify_attributes }}>
+                <span>{{ block.settings.subheading-2  }}</span>
+              </div>
+            {%- endif -%}
+          </div>
+            {% if template == 'index.login' %}
+            <div class="btn-section {{ login_page__hndl }} mt-md-4">
+              <!-- <div class="mb-4 mb-md-5 pb-2 pb-md-0 d-none" kit-status>
+                <div class="position-relative">
+                  <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Rectangle_5790_fc0dcca3-d881-448e-9db9-541bf51231f6.png" class="d-none d-md-block" width="70%" loading="lazy">
+                  <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Rectangle_5790_fc0dcca3-d881-448e-9db9-541bf51231f6.png" class="d-md-none" loading="lazy">
+                  <p class="kit_purchase font-weight-bold" kit__status>Your Kit is finished</p>
+                </div>
+              </div> -->
+              <div class="btns {{ login_page__hndl }} mt-md-5">
+                <a id="homepage" reorder__btn href=" " class="btn btn-dark hair-form-actn-link reorder_btn mr-md-4 d-none" style="pointer-events: auto;">Buy Again</a>
+                <span class="talk_to_coach_btn ml-0 ml-md-0"><a id="myPlanHome" talk_to_coach="" href="https://form.traya.health/pages/reschedule-slot/c9beed25-31ab-4710-8c5e-67a38a1697f7" class="btn btn-dark coach_btn">Book a Call</a></span>
+              </div>
+            </div>
+          {% endif %}
+          </div>
+        </div>
+        {% if page.handle == 'about-us' %}
+        <div class="d-md-none trust-badge-image mt-4">
+        <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/HEA_Stamp_e37982ea-f9e5-4b6d-b7f8-114dcf1cc05c_140x.png" loading="lazy">
+        </div>
+        {% endif %}
+      </div>
+      </a>
+    {%- endfor -%}
+  </div>
+{% comment %}
+        {% if page.handle == 'female' or page.handle == 'new-female'%}
+         <a class="ct-btn-scroll ct-js-btn-scroll" id="BannerScroll" onclick="scrollToBottom()"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+        {% endif %}
+      
+      {% if page.handle == 'femalev2' %}
+         <a class="d-none ct-btn-scroll ct-js-btn-scroll" id="BannerScroll" onclick="scrollToBottom()"><img alt="Arrow Down Icon" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353254_1.png?v=1690807259"></a>
+         <a class="d-md-none ct-btn-scroll ct-js-btn-scroll" id="BannerScroll" onclick="scrollToBottom()"><img alt="Arrow Down Icon" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353254.png?v=1690807242"></a>
+      {% endif %}
+    {% endcomment %}
+  
+ {% if template == 'index' or page.handle == 'female' or page.handle == 'femalev1' or page.handle == 'femalev2' or page.handle == 'homev1' %}
+        <p class="banner_disclaimer-content" style="font-size:7.5px;">*As per an internal study conducted by Traya in December 2022</p>
+        {% endif %}
+         {% if page.handle == 'homev5' %}
+        <p class="banner_disclaimer-content" style="font-size:7.5px;">*दिसंबर 2022 में किए गए अध्ययन के अनुसार।</p>
+        {% endif %}
+
+  {%- if section.blocks.size > 1 and section.settings.auto_rotate == false -%}
+    <div class="slideshow__controls slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
+      <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
+      <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+        {%- if section.settings.slider_visual == 'counter' -%}
+          <span class="slider-counter--current">1</span>
+          <span aria-hidden="true"> / </span>
+          <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+          <span class="slider-counter--total">{{ section.blocks.size }}</span>
+        {%- else-%}
+          <div class="slideshow__control-wrapper">
+            {%- for block in section.blocks -%}
+              <button class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}" aria-controls="Slider-{{ section.id }}">
+                {%- if section.settings.slider_visual == 'numbers' -%}{{ forloop.index }}{% else %}<span class="dot"></span>{%- endif -%}
+              </button>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+      <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'sections.slideshow.next_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
+
+      {%- if section.settings.auto_rotate -%}
+        <button type="button" class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}" aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
+          {%- render 'icon-pause' -%}
+          {%- render 'icon-play' -%}
+        </button>
+      {%- endif -%}
+    </div>
+    <noscript>
+      <div class="slider-buttons">
+        <div class="slider-counter">
+          {%- for block in section.blocks -%}
+            <a href="#Slide-{{ section.id }}-{{ forloop.index }}" class="slider-counter__link link" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}">
+              {{ forloop.index }}
+            </a>
+          {%- endfor -%}
+        </div>
+      </div>
+    </noscript>
+  {%- endif -%}
+</slideshow-component>
+  </a>
+{%- if request.design_mode -%}
+  <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.slideshow.name",
+  "tag": "section",
+  "class": "section slideshow_relative",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "full_bleed",
+          "label": "t:sections.slideshow.settings.layout.options__1.label"
+        },
+        {
+          "value": "grid",
+          "label": "t:sections.slideshow.settings.layout.options__2.label"
+        }
+      ],
+      "default": "full_bleed",
+      "label": "t:sections.slideshow.settings.layout.label"
+    },
+    {
+      "type": "select",
+      "id": "slide_height",
+      "options": [
+        {
+          "value": "adapt_image",
+          "label": "t:sections.slideshow.settings.slide_height.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.slideshow.settings.slide_height.options__2.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.slideshow.settings.slide_height.options__3.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.slideshow.settings.slide_height.options__4.label"
+        }
+      ],
+      "default": "adapt_image",
+      "label": "t:sections.slideshow.settings.slide_height.label"
+    },
+    {
+      "type": "select",
+      "id": "slider_visual",
+      "options": [
+        {
+          "value": "dots",
+          "label": "t:sections.slideshow.settings.slider_visual.options__2.label"
+        },
+        {
+          "value": "counter",
+          "label": "t:sections.slideshow.settings.slider_visual.options__1.label"
+        },
+        {
+          "value": "numbers",
+          "label": "t:sections.slideshow.settings.slider_visual.options__3.label"
+        }
+      ],
+      "default": "counter",
+      "label": "t:sections.slideshow.settings.slider_visual.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_rotate",
+      "label": "t:sections.slideshow.settings.auto_rotate.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "change_slides_speed",
+      "min": 3,
+      "max": 9,
+      "step": 2,
+      "unit": "s",
+      "label": "t:sections.slideshow.settings.change_slides_speed.label",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "t:sections.slideshow.settings.mobile.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_below",
+      "label": "t:sections.slideshow.settings.show_text_below.label",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.slideshow.settings.accessibility.content"
+    },
+    {
+      "type": "text",
+      "id": "accessibility_info",
+      "label": "t:sections.slideshow.settings.accessibility.label",
+      "info": "t:sections.slideshow.settings.accessibility.info",
+      "default": "Slideshow about our brand"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "t:sections.slideshow.blocks.slide.name",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+        },
+         {
+          "type": "image_picker",
+          "id": "mbl_image",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Image slide",
+          "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "html",
+          "id": "subheading",
+          "default": "Tell your brand's story through images",
+          "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
+        },
+          {
+          "type": "text",
+          "id": "subheading-2",
+          "default": "#YehKaamKarega",
+          "label": "Subheading 2"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:sections.slideshow.blocks.slide.settings.button_label.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.slideshow.blocks.slide.settings.link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "label": "t:sections.slideshow.blocks.slide.settings.secondary_style.label",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "box_align",
+          "options": [
+            {
+              "value": "top-left",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__1.label"
+            },
+            {
+              "value": "top-center",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__2.label"
+            },
+            {
+              "value": "top-right",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__3.label"
+            },
+            {
+              "value": "middle-left",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__4.label"
+            },
+            {
+              "value": "middle-center",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__5.label"
+            },
+            {
+              "value": "middle-right",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__6.label"
+            },
+            {
+              "value": "bottom-left",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__7.label"
+            },
+            {
+              "value": "bottom-center",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__8.label"
+            },
+            {
+              "value": "bottom-right",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__9.label"
+            }
+          ],
+          "default": "middle-center",
+          "label": "t:sections.slideshow.blocks.slide.settings.box_align.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.box_align.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_text_box",
+          "label": "t:sections.slideshow.blocks.slide.settings.show_text_box.label",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.option_1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.option_2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.option_3.label"
+            }
+          ],
+          "default": "center",
+          "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.label"
+        },
+        {
+          "type": "range",
+          "id": "image_overlay_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "%",
+          "label": "t:sections.slideshow.blocks.slide.settings.image_overlay_opacity.label",
+          "default": 0
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "options": [
+            {
+              "value": "accent-1",
+              "label": "t:sections.all.colors.accent_1.label"
+            },
+            {
+              "value": "accent-2",
+              "label": "t:sections.all.colors.accent_2.label"
+            },
+            {
+              "value": "background-1",
+              "label": "t:sections.all.colors.background_1.label"
+            },
+            {
+              "value": "background-2",
+              "label": "t:sections.all.colors.background_2.label"
+            },
+            {
+              "value": "inverse",
+              "label": "t:sections.all.colors.inverse.label"
+            }
+          ],
+          "default": "background-1",
+          "label": "t:sections.all.colors.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.color_scheme.info"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.slideshow.settings.mobile.content"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment_mobile",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.options__3.label"
+            }
+          ],
+          "default": "center",
+          "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.slideshow.presets.name",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+a.BannerUrl:not([href]) {
+    cursor: default;
+}
+   {% if page.handle == 'femalev2' %}
+    .ct-btn-scroll {
+  width: 80px !important;
+  height: 80px !important;
+}
+  @media only screen and (min-width: 767.98px) {
+      
+       .d-none.ct-btn-scroll.ct-js-btn-scroll{
+          display:block !important;
+       }
+  }
+  {% endif %}
+  .ct-btn-scroll {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 50px;
+  cursor: pointer !important;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 500px;
+  z-index: 9;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
+ 
+  {% if page.handle == 'new-female' %}
+    
+     @media only screen and (max-width: 768.98px) {
+       .review_img_desk{
+         display:none;
+       }
+       .review_img_mob{
+         display:block;
+       }
+       .ct-btn-scroll {
+    width: 20px;
+    height: 20px;
+    bottom: 30px;
+}
+       div#Slider-template--16128638320818__1663823771acb5bafd a#hairtestcta{
+    background: #FFCCBC;
+    border: none;
+    color: #414042;
+       }
+       div#Slider-template--16128638320818__1663823771acb5bafd span.myresult.d-inline-block a#myPlanHome{
+        background: #FFCCBC !important;
+        border: none;
+        color: #414042 !important;
+    margin-top: 10px
+       }
+       div#Slider-template--16128638320818__1663823771acb5bafd .banner__buttons {
+    justify-content: center;
+}
+       div#Slider-template--16128638320818__1663823771acb5bafd a#hairtestcta sup {
+    font-size: 18px;
+    top: -5px;
+    left: -5px;
+}
+       ul.new-female_content li span {
+    font-size: 8px;
+    margin-right: 7px;
+    background: #fff;
+    padding: 1px 4px;
+    border-radius: 50%;
+    line-height: initial !important;
+    text-align: center;
+    justify-content: center;
+             top: -3px !important;
+}
+       ul.new-female_content li {
+         text-shadow: 0px 0.791px 0.791px rgba(0, 0, 0, 0.35);
+         font-family: Nunito Sans,sans-serif!important;
+    font-size: 16px;
+    color: #fff;
+    font-weight: normal !important;
+    margin-bottom: 15px;
+}
+       ul.new-female_content {
+         font-family: Nunito Sans,sans-serif!important;
+    font-weight: 100 !important;
+}
+       .new_female_bottom_text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+       .new_female_bottom_review img {
+    max-width: 100px;
+             margin: 0 auto;
+}
+        .new_female_bottom_text img {
+    max-width: 160px;
+}
+       .text_mob_none{
+         display:none;
+       }
+       .slideshow__text.slideshow__text-mobile--left {
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+}
+       div#Slider-template--16128638320818__1663823771acb5bafd .sub-banner__text span, div#Slider-template--16128638320818__1663823771acb5bafd h2.banner__heading.h1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-family: Nunito Sans,sans-serif!important;
+         margin-bottom: 30px;
+}
+
+    .slideshow__text-wrapper.banner__content.banner__content--middle-center.page-width {
+    position: absolute;
+    top: 55%;
+    transform: translate(0, -50%);
+    text-align: center;
+}
+  }
+     @media only screen and (min-width: 767.98px) {
+      
+       .review_img_desk{
+         display:block;
+       }
+       .review_img_mob{
+         display:none;
+       }
+       ul.new-female_content{
+         display:none;
+       }
+      .new_female_bottom_text {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+       .new_female_bottom_review img {
+    max-width: 130px;
+         margin: 0 auto;
+}
+        .new_female_bottom_text img {
+    max-width: 180px;
+}
+ div#Slider-template--16128638320818__1663823771acb5bafd h2.banner__heading.h1 {
+    font-size: 53px;
+    margin: 0;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-family: Nunito Sans,sans-serif!important;
+}
+ div#Slider-template--16128638320818__1663823771acb5bafd .banner__box .banner__heading+* {
+    margin-top: 1.5rem !important;
+    max-width: 719px;
+    margin:0 auto;
+    margin-bottom: 1.5rem !important;
+}
+       div#Slider-template--16128638320818__1663823771acb5bafd .banner__text span {
+    font-size: 21px;
+    color: #ffffff;
+    margin: 0;
+    max-width: 150px;
+    line-height: 1.2;
+    position: relative;
+    padding-bottom: 1.5rem;
+    font-weight: 100;
+    text-shadow: 0px 0.791px 0.791px rgba(0, 0, 0, 0.35);
+}
+     }
+  
+  {% endif %}
+  
+  .slideshow_relative{
+    position:relative;
+  }
+  p.banner_disclaimer-content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    rotate: 270deg;
+    transform: rotate(270deg);
+    writing-mode: vertical-lr;
+    text-align: center;
+}
+  .thank-content-container{
+    background:#fff;
+  }
+ .thank-content-container .banner__text span{
+      color:#000; 
+ }
+  .thank-banner__content{
+    padding:5rem!important;
+  }
+/*   .transplant .banner__text span {
+    font-family: fredoka_oneregular !important;    
+  } */
+    .transplant .slideshow__text-wrapper.banner__content.banner__content--middle-left.page-width{
+      left:0;
+      right:0;
+    }
+  .transplant .slideshow__text-wrapper.banner__content.banner__content--middle-left.page-width .banner__text span{
+    font-size: 24px!important;
+    line-height: 29px;
+  }
+  @media only screen and (max-width: 767.98px) {
+ 
+    /* span.talk_to_coach_btn [talk_to_coach]{
+      width: 72%;
+    padding: 9px 5px;
+    } */
+    .banner__buttons {
+       gap: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    }
+     span.myresult.d-inline-block {
+    margin-left: 0px;
+}
+    .homev5CTA {
+      width: 50%;
+    }
+  }
+  {% if template == 'index.login' %}
+    .btns.home_login.mt-md-5 a#homepage{
+      display: block;
+        flex-wrap: wrap;
+      margin: 0 0 15px !important;
+    }
+    .hair-form-actn-link.reorder_btn{
+          margin-bottom: 20px;
+    }
+    .home_login h2.banner__heading.h1 {
+    font-size:42px;
+  }
+
+.home_login .slideshow__text-wrapper.banner__content.banner__content--middle-left.page-width {
+    /* max-width: 95%; */
+    position: absolute;
+  top: 45%;
+    left: 65px;
+    transform: translate(0, -50%);
+}
+    .banner__heading {
+      font-size: 42px !important;
+      line-height: normal !important;
+      color: rgba(65, 65, 67, 1) !important;
+      font-weight: normal !important;
+      margin-bottom: 40px !important;
+    }
+    .banner__text .second__text, span.login_first_name, span.login_dyn_month {
+      font-size: 49px !important;
+    line-height: normal !important;
+    color: rgba(65, 65, 67, 1) !important;
+    }
+  .banner__text.mb-0.text_Fredoka.mb-0.pb-0.mt-md-4 {
+    margin: 0 !important;
+}
+    .template-index p.kit_purchase {
+      font-size: 19px;
+      line-height: 22px;
+      letter-spacing: normal;
+      position: absolute;
+      top: 18%;
+      width: 70%;
+      text-align: center;
+    }
+    @media only screen and (max-width: 767.98px) {
+      
+      .banner__box>*+* {
+    margin-top:5px;
+}
+      .slideshow__text-wrapper.banner__content.banner__content--middle-left.page-width {
+        max-width: unset;
+      }
+      .banner__box {
+        padding: 0 15px;
+        height: 735px;
+      }
+      .banner__heading {
+        font-size: 16px !important;
+    line-height: normal !important;
+    text-align: left !important;
+    color: rgba(65, 65, 67, 1);
+      }
+      .banner__box {
+    position: relative;
+    height: fit-content;
+    align-items: center;
+    text-align: left;
+    width: auto;
+    word-wrap: break-word;
+    z-index: 1;
+}
+      .banner__text .second__text, span.login_first_name, span.login_dyn_month {
+        font-size: 16px !important;
+        line-height: normal !important;
+        text-align: center;
+      }
+      .slideshow__text.banner__box {
+        display: block;
+      }
+      /* [reorder__btn], .talk_to_coach_btn {
+        width: 90%;
+      } */
+      [talk_to_coach] {
+        width: 100%;
+      }
+      .btns {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+    }
+  {% elsif template.suffix == 'indians-trust-traya' %}
+    .sub-banner__text span:before {
+      content: unset;
+    }
+    .bdr-bottom {
+      border-bottom: 2px solid;
+    }
+    .sub-banner__text span {
+      font-size: 24px;
+      letter-spacing: normal;
+    }
+    @media only screen and (max-width: 767.98px) {
+      .media>*:not(.zoom):not(.deferred-media__poster-button) {
+        height: 35rem;
+      }
+      .banner__text span {
+        font-size: 36px;
+        font-weight: normal;
+      }
+      .slideshow__text.slideshow__text-mobile--left {
+        align-items: center;
+      }
+      .slideshow__text.banner__box {
+        padding: 0rem 0.5rem;
+      }
+      .banner--mobile-bottom .slideshow__text.banner__box {
+        width: 100%;         
+      }
+      .slideshow__text-wrapper.banner__content.banner__content--middle-left.page-width {
+        max-width: unset;
+      }
+      .banner__content {
+        top: 25%;
+      }
+    }
+  {% endif %}
+  {% if template == 'index.login' %}
+    @media only screen and (max-width: 767.98px) {
+      /* .btn-section {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 85%;
+      } */
+      .template-index p.kit_purchase {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+  .banner__text.mb-0.mb-0.pb-0.mt-md-4 {
+    margin-bottom: 25px !important;
+}
+      span.login_first_name {
+    font-size: 16px !important;
+}
+      .home_login .slideshow__text-wrapper.banner__content.banner__content--middle-left.page-width {
+    max-width: 100%;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: translate(0, -50%);
+    padding: 0 !important;
+}
+      .banner__heading {
+    margin-bottom: 5px !important;
+}
+      .btn-section.home_login.mt-md-4 a#homepage {
+       margin-bottom: 5px !important;
+}
+    }
+  @media only screen and (max-width: 424.98px) {
+    .media>*:not(.zoom):not(.deferred-media__poster-button) {
+      height: unset;
+    }
+    .banner__box {
+      height: unset;
+    }
+  }
+  {% endif %}
+{% endstyle %}

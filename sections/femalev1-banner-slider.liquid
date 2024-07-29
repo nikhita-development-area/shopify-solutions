@@ -1,0 +1,248 @@
+<!-- Sections -> femalev1-banner-slider -->
+
+<div class="container-fluid position-relative p-0 pb-1 banner-bg">
+  <div class="row m-0 banner-img">
+    {% for block in section.blocks %}
+      <div class="col-md-12 p-0">
+        <div class="position-relative">
+          {% if block.settings.desk_img != blank %}
+            <img src="{{ block.settings.desk_img | img_url: 'master' }}" class="w-100 d-none d-md-block">
+          {% endif %}
+          {% if block.settings.mob_img != blank %}
+            <img src="{{ block.settings.mob_img | img_url: 'master' }}" class="w-100 d-md-none">
+          {% endif %}
+
+          <div class="position-absolute vertical-paragraph">
+            <p class="position-absolute d-none {% if forloop.index == 2 %}d-none d-md-block{% endif %}">*As Per An Internal Study Conducted In December 2022</p>
+          </div>
+        </div>
+        
+        <div class="d-flex flex-column p-3 pb-0 p-md-0 position-{{ block.settings.content_position }} banner-content banner-{{ forloop.index }}">
+          <div class="mobile-layout">
+            <h2 class="">{{ block.settings.heading_text }}</h2>
+            <h4 class="{% if forloop.index == 1 %}d-none d-md-block{% endif %}">{{ block.settings.sub_heading_text }}</h4>
+            {% if forloop.index == 1 %}
+            <h4 class="d-md-none">to understand the reasons <br> for YOUR hair loss</h4>
+            {% endif %}
+            <h5>{{ block.settings.sub_heading_text2 }}</h5>
+            <p class="text3">{{ block.settings.sub_heading_text3 }}</p>
+          </div>
+                    
+          <div class="d-flex flex-column both-btn">
+            {% if block.settings.button_text != blank %}
+              <a id="female-hair-test-button2-scroll{{ forloop.index }}" href="https://form.traya.health/questions?cohort=1&location=Slideshow&page={{ page.handle }}" class="btn-dark d-flex justify-content-center align-items-center font-weight-bold">{{ block.settings.button_text }}<sup>TM</sup></a>
+            {% endif %}
+
+            <span class="myresult m-0 mt-2">
+              <a id="myPlanHome" href="/pages/result4" class="d-flex justify-content-center align-items-center font-weight-bold rcmd_plan_btn">My Recommended Plan</a>  
+            </span>
+            <a homeReorder id="buyagaincta" class="hair-form-actn-link btn m-0 mt-2 reorder" style="display: none;">Buy Again</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if section.blocks.size > 1 %}
+    <div class="banner-slider-nav position-absolute d-flex justify-content-between w-100">
+      <div class="banner-slider-prev px-1 px-md-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" viewBox="0 0 85 139" fill="none">
+          <path d="M73.5 12L16 69.5L73.5 127" stroke="#EEEEEE" stroke-width="22.0833" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="banner-slider-next px-1 px-md-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" viewBox="0 0 86 139" fill="none">
+          <path d="M12 12L69.5 69.5L12 127" stroke="#EEEEEE" stroke-width="22.0833" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="banner-dots d-md-none"></div> 
+</div>
+
+<style>      
+   #myHeader {background: #414042;}
+  .banner-bg {margin-top: 40px;}
+  .banner-dots .slick-dots li button {display: none;}
+  .banner-dots .slick-dots li {background: #E5E1E1; border-radius: 50px; height: 10px; width: 10px;}
+  .banner-dots .slick-dots li.slick-active {border: 2px solid #404142;}
+  .banner-slider-nav {top: 50%;}
+  .banner-slider-prev, .banner-slider-next {cursor: pointer;}
+
+  .vertical-paragraph {bottom: 30px; right: 15px; transform-origin: top right; transform: translate(-50%, 0) rotate(-90deg); white-space: nowrap;}
+  .vertical-paragraph p {font-size: 10px; line-height: 14px; letter-spacing: 0em;}
+
+  .banner-content h2 {font-size: 45px; letter-spacing: 0em; font-weight: 800;}
+  .banner-content h4 {font-size: 24px; line-height: 30px; letter-spacing: 0em; margin: 10px 0;}
+  .banner-content h5 {font-size: 18px; line-height: 28px; letter-spacing: 0em; color: #CD6464; margin-bottom: 40px;}
+  
+  .banner-content .text3 {line-height: 30px; letter-spacing: 0em; font-size: 18px;}
+  .banner-content a {width: 301px; height: 47px; border-radius: 9px; font-size: 18px; letter-spacing: 0em; text-transform: uppercase; border: 2px solid #414042; text-decoration: none;}
+  .rcmd_plan_btn:hover, .reorder:hover {background: #414042; color: #fff;}
+
+  @media (min-width: 769px) {    
+    {% for block in section.blocks %}
+    .banner-content {position: absolute; margin-left: 80px;}
+    {% endfor %}
+    .position-top-left {top: 0; left: 0;}
+    .position-top-center {top: 0; left: 50%; transform: translateX(-50%);}
+    .position-top-right {top: 0; right: 0;}
+    .position-middle-left {top: 50%; left: 0; transform: translateY(-50%);}
+    .position-middle-center {top: 50%; left: 50%; transform: translate(-50%, -50%);}
+    .position-middle-right {top: 50%; right: 0; transform: translateY(-50%);}
+    .position-bottom-left {bottom: 0; left: 0;}
+    .position-bottom-center {bottom: 0; left: 50%; transform: translateX(-50%);}
+    .position-bottom-right {bottom: 0; right: 0;}
+    .banner-content {width: 720px;}
+  }
+  
+  @media (max-width: 768px) {
+    .banner-bg {background: linear-gradient(284.21deg, #FFFFFF 2.21%, #F6EDDF 132.6%); margin-top: 40px;}
+    .banner-slider-nav {top: 70%; display: none !important;}
+    .banner-slider-nav svg {width: 12px; height: 20px;}
+    .banner-slider-prev path, .banner-slider-next path {stroke: #414042; opacity: 0.5;}
+
+    .banner-content {text-align: center;}    
+    .banner-content h2 {line-height: 34px; font-size: 26px;}
+    .banner-content h4 {font-size: 18px; margin: 10px 0;}
+    .banner-content h5 {order: 4; font-weight: 600; font-size: 16px;}
+
+    .banner-content .text3 {font-size: 15px; margin-top: 20px;}
+    .banner-content .both-btn {margin: auto;}
+
+    .mobile-layout {position: absolute; width: 100%; top: 20px; left: 0;}
+  } 
+</style>
+
+<script>
+  $(document).ready(function () {
+    initializeSlick();
+    
+    $('.banner-slider-nav').on('click', '.banner-slider-prev', function () {
+      $('.banner-img').slick('slickPrev');
+    });
+  
+    $('.banner-slider-nav').on('click', '.banner-slider-next', function () {
+      $('.banner-img').slick('slickNext');
+    });
+  });
+
+  function initializeSlick() {
+    $('.banner-img').slick({
+      slidesToShow: 1,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      pauseOnHover: false,
+      pauseOnFocus: false, 
+      {% if section.blocks.size > 1 %}
+        arrows: true,
+        prevArrow: $('.banner-slider-prev'),
+        nextArrow: $('.banner-slider-next'),
+      {% else %}
+        arrows: false,
+      {% endif %}
+      dots: true, 
+      appendDots: $('.banner-dots'), 
+    });
+  }
+</script>
+
+{% schema %}
+  {
+    "name": "Femalev1 Banner Slider",
+    "blocks": [
+      {
+        "name": "Banner Slider",
+        "type": "gallery",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "desk_img",
+            "label": "Desktop Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mob_img",
+            "label": "Mobile Image"
+          },
+          {
+            "type": "text",
+            "id": "heading_text",
+            "label": "Heading Text"
+          },
+          {
+            "type": "text",
+            "id": "sub_heading_text",
+            "label": "Sub-Heading Text"
+          },
+          {
+            "type": "text",
+            "id": "sub_heading_text2",
+            "label": "Sub-Heading Text2"
+          },
+          {
+            "type": "text",
+            "id": "sub_heading_text3",
+            "label": "Sub-Heading Text3"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+          },
+          {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button URL"
+          },
+          {
+            "type": "select",
+            "id": "content_position",
+            "label": "Desktop Content Position",
+            "options": [
+              {
+                "value": "top-left", 
+                "label": "Top Left"
+              },
+              {
+                "value": "top-center", 
+                "label": "Top Center"
+              },
+              {
+                "value": "top-right", 
+                "label": "Top Right"
+              },
+              {
+                "value": "middle-left", 
+                "label": "Middle Left"
+              },
+              {
+                "value": "middle-center", 
+                "label": "Middle Center"
+              },
+              {
+                "value": "middle-right", 
+                "label": "Middle Right"
+              },
+              {
+                "value": "bottom-left", 
+                "label": "Bottom Left"
+              },
+              {
+                "value": "bottom-center", 
+                "label": "Bottom Center"
+              },
+              {
+                "value": "bottom-right", 
+                "label": "Bottom Right"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "presets": [{"name": "Femalev1 Banner Slider"}]
+  }
+{% endschema %}

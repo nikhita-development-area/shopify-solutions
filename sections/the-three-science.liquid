@@ -1,0 +1,209 @@
+<div class="section-{{ section.id }}-padding traya_sciences position-relative">
+  <div class="container pt-md-2 pt-4">
+    {% if section.settings.heading != blank %}
+      <div class="pb-3 position-relative"><p class="traya_sciences_heading text-center">{{ section.settings.heading }}</p></div>  
+    {% endif %}
+    {% if section.settings.description != blank %}
+      <div class="pt-lg-5 pt-md-4 pt-3 col-md-9 col-10 m-auto">
+        <p class="text-center traya_sciences_description">{{ section.settings.description }}</p>
+      </div>
+    {% endif %}
+  </div>
+  <div class="d-flex flex-wrap pt-lg-4 pt-2">
+    {%- for block in section.blocks -%}
+      <div class="col-12 px-0 pt-lg-5 pt-4 pb-3 d-flex flex-wrap align-items-center justify-content-center{% if block.settings.left_align == 'image' %} flex-row-reverse{% endif %}" style="background: {{ block.settings.background_color }}">
+        <div class="col-lg-4 col-md-5 col-7">
+          <div class="d-flex align-items-center pb-lg-4 pb-md-3 pb-2 science_wrapper position-relative">
+            {% if block.settings.science_name != blank %}<p class="font-fredoka m-0 science_name">{{ block.settings.science_name }}</p>{% endif %}
+            {% if block.settings.science_image != blank %}
+              {% assign width = block.settings.science_image.width | divided_by: 2 %}
+              {% assign height = block.settings.science_image.height | divided_by: 2 %}
+              {{ block.settings.science_image | image_url: width: 80 | image_tag: alt: block.settings.science_image.alt, title: block.settings.science_image.alt, width: width, height: height, loading: 'lazy', class: 'science_image ml-md-4 ml-2' }}
+            {% endif %}
+          </div>
+          {% if block.settings.science_description != blank %}
+            <div class="pt-md-4 pt-3"><p class="science_description">{{ block.settings.science_description }}</p></div>
+          {% endif %}
+        </div>
+        <div class="col-lg-5 col-md-6 col-5 px-md-2 px-0">
+          {% if block.settings.science_desc_image != blank %}
+            {%- assign width = block.settings.science_desc_image.width | divided_by: 2 -%}
+            {%- assign height = block.settings.science_desc_image.height | divided_by: 2 -%}
+            {%- assign alt = block.settings.science_desc_image.alt | default: 'Image' -%}
+            {{ block.settings.science_desc_image | image_url: width: 550 | image_tag: alt: alt, title: alt, width: width, height: height, loading: 'lazy', class: 'science_description_image d-block m-auto' }}
+          {% endif %}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "The Three Science",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Enter Heading",
+        "info": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "description",
+        "label": "Enter Description",
+        "info": "Description"
+      },
+      {
+        "type": "image_picker",
+        "id": "left_image",
+        "label": "Select Left Image",
+        "info": "Left Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image",
+        "label": "Select Right Image",
+        "info": "Right Image"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Science",
+        "type": "Science",
+        "settings": [
+          {
+            "type": "color",
+            "id": "background_color",
+            "label": "Select Background Color",
+            "info": "Background Color",
+            "default": "#fff"
+          },
+          {
+            "type": "text",
+            "id": "science_name",
+            "label": "Enter Science Name",
+            "info": "Science Name"
+          },
+          {
+            "type": "image_picker",
+            "id": "science_image",
+            "label": "Select Science Image",
+            "info": "Science Image"
+          },
+          {
+            "type": "text",
+            "id": "science_description",
+            "label": "Enter Science Description",
+            "info": "Science Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "science_desc_image",
+            "label": "Select Science Description Image",
+            "info": "Science Description Image"
+          },
+          {
+            "type": "select",
+            "id": "left_align",
+            "label": "Select Left Side",
+            "options": [
+              {
+                "value": "description",
+                "label": "Description"
+              },
+              {
+                "value": "image",
+                "label": "Image"
+              }
+            ],
+            "default": "description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "The Three Science"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  #shopify-section-{{ section.id }} .traya_sciences:before {content: '';background: url({{ section.settings.left_image | image_url: width: 300 }}) no-repeat;position: absolute;left: 0;top: 0;width: 265px;height: 290px;transform: translate(0, 0);z-index: -1;background-size: contain;}
+  #shopify-section-{{ section.id }} .traya_sciences:after {content: '';background: url({{ section.settings.right_image | image_url: width: 300 }}) no-repeat;position: absolute;right: 0;top: 0;width: 245px;height: 250px;transform: translate(0, 0);z-index: -1;background-size: contain;}
+  #shopify-section-{{ section.id }} .traya_sciences_heading {font-size: 48px;line-height: 65.47px;font-weight: 800;}
+  #shopify-section-{{ section.id }} .traya_sciences_heading:before {content: '';position: absolute;bottom: 0;left: 50%;transform: translate(-50%, 0);background: #C4695B;height: 2px;width: 50%;}
+  #shopify-section-{{ section.id }} .traya_sciences_description {font-size: 20px;line-height: 30px;font-weight: 400;}
+  #shopify-section-{{ section.id }} .science_name {font-size: 48px;line-height: 58.08px;color: #C4695B;}
+  #shopify-section-{{ section.id }} .science_wrapper:before {content: '';position: absolute;bottom: 0;left: 0;transform: translate(0, 0);background: #C4695B;height: 3px;width: 35%;}
+  #shopify-section-{{ section.id }} .science_description {font-size: 20px;line-height: 30px;}
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    #shopify-section-{{ section.id }} .traya_sciences:before {width: 200px;height: 210px;background-size: contain;top: 60px;}
+    #shopify-section-{{ section.id }} .traya_sciences:after {width:200px;height: 210px;background-size: contain;}
+    #shopify-section-{{ section.id }} .science_name {font-size: 44px;line-height: 53.08px;}
+    #shopify-section-{{ section.id }} .science_description {font-size: 18px;line-height: 26px;}
+    #shopify-section-{{ section.id }} .science_description_image {width: 100%;height: 100%;}
+    #shopify-section-{{ section.id }} .science_image {width: 44px;height: 53px;}
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .traya_sciences:before {width: 150px;height: 170px;background-size: contain;z-index: -1;top: 60px;}
+    #shopify-section-{{ section.id }} .traya_sciences:after {width:140px;height: 170px;background-size: contain;z-index: -1;}
+    #shopify-section-{{ section.id }} .traya_sciences_heading {font-size: 40px;line-height: 55.47px;}
+    #shopify-section-{{ section.id }} .traya_sciences_heading:before {width: 40%;}
+    #shopify-section-{{ section.id }} .traya_sciences_description {font-size: 16px;line-height: 25px;}
+    #shopify-section-{{ section.id }} .science_name {font-size: 35px;line-height: 45.08px;}
+    #shopify-section-{{ section.id }} .science_image {width: 35px;height: 45px;}
+    #shopify-section-{{ section.id }} .science_description {font-size: 14px;line-height: 25px;}
+    #shopify-section-{{ section.id }} .science_description_image {width: 100%;height: 100%;}
+  }
+  @media only screen and (max-width: 767.98px) {
+    #shopify-section-{{ section.id }} .traya_sciences:before {width: 150px;height: 150px;top: 25px;z-index: -1;background-size: contain;}
+    #shopify-section-{{ section.id }} .traya_sciences:after {width: 98px;height: 120px;top: -15px;z-index: -1;background-size: contain;}
+    #shopify-section-{{ section.id }} .traya_sciences_heading {font-size: 20px;line-height: 27.28px;}
+    #shopify-section-{{ section.id }} .traya_sciences_description {font-size: 12px;line-height: 18px;}
+    #shopify-section-{{ section.id }} .traya_sciences_heading:before {width: 40%;}
+    #shopify-section-{{ section.id }} .science_name {font-size: 16px;line-height: 19.36px;}
+    #shopify-section-{{ section.id }} .science_image {width: auto;height: 20px;}
+    #shopify-section-{{ section.id }} .science_description {font-size: 10px;line-height: 15px;}
+    #shopify-section-{{ section.id }} .science_description_image {width: 100%;height: 100%;}
+    #shopify-section-{{ section.id }} .science_wrapper:before {width: 25%;}
+  }
+{% endstyle %}

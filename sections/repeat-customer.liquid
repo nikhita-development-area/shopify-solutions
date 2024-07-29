@@ -1,0 +1,572 @@
+{% assign pageurlv = content_for_header | split: 'pageurl":"' | last | split: '",'| first %}
+    {% assign order-count = pageurlv | split: 'order_count=' | last | split: '\'| first %}
+    {% assign orderCount =  order-count | plus: 0  %}
+{% if pageurlv contains 'items=' %}
+  {% assign allvariants = pageurlv | split: 'items=' | last | split: ',' %}
+  {% assign discount_value = pageurlv | split: 'discount_value=' | last | split: '&' | first | split: '\' | first  | split: '%' | first%}
+  {% if pageurlv contains 'discount_type=' %}
+  {% assign discount_type = pageurlv | split: 'discount_type=' | last | split: '&' | first | split: '\' | first  | split: '%' | first %}
+  {% else %}
+  {% assign discount_type = '' %} 
+  {% endif %}
+  {% assign allProducts = collections.all.products %}
+  {% assign kit_price = 0 %}
+  {% for variant in allvariants %}
+      {% assign crntVariant = variant | split: ':' | first  %}
+      {% assign crntVariantQty = variant | split: ':' | last  %}
+      {% for product in allProducts %}
+        {% if crntVariant contains product.selected_or_first_available_variant.id %}
+          {% assign crntVariantPrce = product.selected_or_first_available_variant.price | times: crntVariantQty  %}
+          {% assign kit_price = kit_price | plus: crntVariantPrce %}
+        {% endif %}
+      {% endfor %}
+  {% endfor %}
+  {% assign kit_price = kit_price | divided_by: 100 %}
+  {% assign dis_kit_price = kit_price   %}
+  {% assign total_price = kit_price | plus: 1500  %}
+<!-- vvvk  {{ discount_type }} <>discount_value<> {{ discount_value }} -->
+  {% if pageurlv contains 'discount=' %}
+  {% if discount_type contains 'percent' %}
+    {% assign discountedPrice = kit_price | times:discount_value | divided_by: 100 %}
+    {% assign dis_kit_price = kit_price | minus: discountedPrice %}
+  {% elsif discount_type contains 'value' %}
+    {% assign dis_kit_price = kit_price | minus: discount_value %}
+  {% endif %}
+  {% endif %}  
+{% assign discountOff = total_price | minus: dis_kit_price | times: 100.0 | divided_by: total_price | round: 2 %}
+{% endif %}  
+
+{% assign variantcount = allvariants | size %}
+{% assign value3 = 1 %}
+<div class="repeat-customer-main">
+
+  <div class="container pt-4 pt-md-5 mt-4 mt-md-5">
+              <div class=" d-flex align-items-center justify-content-between customer_sub_div row mx-0 pl-3 pl-md-0 mx-md-auto">
+                  <div class="visitor-info col-7 col-md-8 px-0 px-md-auto">
+                    <h1 class="font-weight-bold text-white UserName">Hey <span data-user-name class="text-capitalize">User</span>,</h1>
+                    {% comment %}
+                    <h3 class="d-none d-md-block monthpara">Congratulations on consistently following the Traya Plan. <br><span class="text-white"></span></h3>
+                    <h3 class="d-md-none monthpara">Congratulations on consistently following the Traya Plan. <br> <span class="text-white"></span> <br> </h3>
+                    {% endcomment %}
+                    
+                    {% if pageurlv contains 'order_count=' %}
+                         {% if value3 == variantcount and orderCount != 0 %}
+                            <p class="monthpara">Your next order cart is ready</p>
+                          {% elsif value3 != variantcount and orderCount != 0 %}
+                           <p class="d-none d-md-block monthpara pt-3">All you need for Hair Growth is consistency and your next month's kit!</p>
+                           <p class="d-md-none monthpara">All you need for Hair Growth is consistency and your next month's kit!</p>
+                     {% elsif value3 == variantcount and orderCount == 0 %}
+                           <p class="monthpara">Congratulations on taking the first step towards managing your hair loss!</p>
+                      {% elsif value3 != variantcount and orderCount == 0 %}
+                            <p class="monthpara">Congratulations on taking the first step towards managing your hair loss!</p>
+                            {% endif %}
+                        {% else %}
+                        {% if value3 == variantcount %}
+                        <p class="monthpara">Congratulations on taking the first step towards managing your hair loss!</p>
+                        {% elsif value3 != variantcount %}
+                          <p class="monthpara">Congratulations on taking the first step towards managing your hair loss!</p>
+                           {% endif %}
+                      {% endif %}
+                      
+                  </div>
+                <div class="col-5 col-md-4 px-0 px-md-auto">
+              <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/asdfdsa.png" class="d-none d-md-block lazyload">
+              <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/asdfdsa.png" class="d-md-none" height="170">
+            </div>
+         
+            </div>
+         <div class="py-3 py-md-5">
+           {% if pageurlv contains 'order_count=' %}
+              <p class="ml-2 text-white bottompara">You are on the path to see your desired hair growth</p>
+             {% else %}
+              <p class="ml-2 text-white bottompara">Your desired hair growth results are in the making.</p>
+            {% endif %}
+              </div>
+</div>
+</div>
+
+
+{% unless value3 == variantcount %}
+
+  <div class="product-section-list pt-1 pt-md-1 d-none">
+        {% if pageurlv contains 'order_count=' %}
+    <h2 class="font-weight-bold l-0 text-center mt-md-5 mt-5 mb-3 mb-md-3 section-title">Your Next month’s kit is ready</h2>
+             {% else %}
+    <h2 class="font-weight-bold l-0 text-center my-md-3 my-3 mb-md-5 section-title">Your Doctor- recommended Treatment Plan</h2>
+              {% endif %}
+    <div class="container months_kit_box">
+      <div class="card shadow p-0 overflow-hidden w-md-adjust">
+        <div class="card-header bg-dark shadow text-center">
+           {% if pageurlv contains 'order_count=' %}
+          <p class="mb-0 l-0 font-weight-bold text-white">Month <span kitcount>0</span> kit</p>
+             {% else %}
+          <p class="mb-0 l-0 font-weight-bold text-white">Month 1 kit</p>
+                   {% endif %}
+        </div>
+        <div class="card-body mt-4 p-0 pb-md-4 new_svg_color">
+          <div class="d-flex justify-content-between align-items-center mb-3 mb-md-4">
+            <span class="align-items-center d-flex kit-items">
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-3 d-none">
+                <circle cx="22" cy="22" r="22" fill="#A5C174"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.9366 24.2737H24.0158C23.5729 24.2737 23.2249 23.901 23.2249 23.4516C23.2249 22.9912 23.5729 22.6295 24.0158 22.6295H26.9366C27.3794 22.6295 27.7274 22.9912 27.7274 23.4516C27.7274 23.901 27.3794 24.2737 26.9366 24.2737ZM31.8922 19.3097C31.4704 18.8055 31.0486 18.5753 30.4054 18.5753H16.1654C15.828 18.5753 15.5538 18.3123 15.5222 17.9605L15.3218 15.5053C15.2902 15.1326 15.0266 14.8268 14.6681 14.7599L12.1533 14.3664C11.721 14.2996 11.3097 14.5966 11.2359 15.0449C11.1621 15.4833 11.4574 15.9108 11.8791 15.9875L13.4713 16.2725L14.4414 28.2208C14.5574 29.6676 15.7173 30.7845 17.1196 30.7845H28.6235C29.9626 30.7845 31.1014 29.7662 31.2912 28.3841L32.2929 21.1939C32.3878 20.5373 32.314 19.8139 31.8922 19.3097Z" fill="white"/>
+              </svg>
+                  <img class="mr-md-3 mr-2" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/unnamed_2.png">
+              <span>Your hair growth kit</span>
+            </span><div class="between-space mx-3 d-none d-md-block"></div>
+            <p class="font-weight-bold prices total-price">₹ {{ kit_price }}/-</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-3 mb-md-4">
+            <span class="align-items-center d-flex kit-items">
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-3 d-none">
+                <circle cx="22" cy="22" r="22" fill="#A5C174"/>
+                 <path fill-rule="evenodd" clip-rule="evenodd" d="M28.4056 32L24.7906 28.5192L26.6838 26.6937L28.4056 28.3542L35.1108 21.9083L37 23.7351L28.4056 31.9987V32ZM23.0501 28.8918H11V26.3134H23.0501V28.8918ZM28.4056 23.7351H11V21.1567H28.4056V23.7351ZM28.4056 18.5784H11V16H28.4056V18.5784Z" fill="#EFF5FC"/>
+              </svg>
+                   <img class="mr-md-3 mr-2" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/unnamed.png">
+              <span>Doctor plan</span>
+            </span><div class="between-space mx-3 d-none d-md-block"></div>
+            <p class="font-weight-bold prices">₹ 1000/-</p>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-3 mb-md-4">
+            <span class="align-items-center d-flex kit-items">
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-3 d-none">
+                <circle cx="22" cy="22" r="22" fill="#A5C174"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 34L19 31H14.3333C13.0447 31 12 30.1046 12 29V16C12 14.8954 13.0447 14 14.3333 14H30.6667C31.9553 14 33 14.8954 33 16V29C33 30.1046 31.9553 31 30.6667 31H26L22.5 34ZM14.3333 16V29H20.1667L22.5 31L24.8333 29H30.6667V16H14.3333ZM27.1667 26.986H17.8333V26.6C17.9714 24.5051 20.055 22.8978 22.5 23C24.945 22.8978 27.0286 24.5051 27.1667 26.6V26.985V26.986ZM22.5 22C21.8748 22.0186 21.2686 21.8139 20.8262 21.4347C20.3838 21.0555 20.1449 20.5359 20.1667 20C20.1453 19.4642 20.3842 18.9447 20.8266 18.5656C21.2689 18.1865 21.8749 17.9817 22.5 18C23.1251 17.9817 23.7311 18.1865 24.1734 18.5656C24.6158 18.9447 24.8547 19.4642 24.8333 20C24.8551 20.5359 24.6162 21.0555 24.1738 21.4347C23.7314 21.8139 23.1252 22.0186 22.5 22Z" fill="#EFF5FC"/>
+              </svg>
+                   <img class="mr-md-3 mr-2" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/unnamed_1.png">
+              <span>Personal hair coach</span>
+            </span><div class="between-space mx-3 d-none d-md-block"></div>
+            <p class="font-weight-bold prices">₹ 500/-</p>
+          </div>
+
+          <div class="d-inline-flex border-top justify-content-center align-items-center w-100 pt-2 pt-md-3 cart-subtotal">
+            <h2 class="font-weight-bold l-0 d-inline-flex mb-0 d-flex price_model_text my-2 my-md-0 align-items-center">Your Plan @&nbsp;₹&nbsp;<span class="total-price"> {{ dis_kit_price  }}</span>/- &nbsp;<span class=""><del class="font-weight-normal ml-2 del-font">₹<span class="all-total-price"> {{ total_price }}</span>/-</del></span></h2>
+          </div>
+        </div>
+        <div class="card-footer border-0 bg-transparent p-0">
+          <button id="add-to-cart-result-page" class="btn d-flex justify-content-center align-items-center py-2 py-md-3 px-1 buy_btn_color mb-3">
+            <span class="mr-0 mr-md-0 buy_now_card_svg">BUY NOW</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endunless %}        
+  <div class="pt-md-5 pt-4">
+    {% unless value3 == variantcount %}
+    <h2 class=" font-weight-bold l-0 text-center mb-md-3 section-title text-capitalize">Your next month kit is ready</h2>
+      {% endunless %}
+    <div class="container">
+
+   {% include 'repeat-customer-product-list' %}
+
+    </div>
+  </div>
+
+
+    <h2 class="font-weight-bold l-0 text-center mt-3 mt-md-5 mb-2 mb-md-3 section-title text-capitalize">Talk to your hair coach</h2>
+<div class="container">
+    <div class="d-flex position-relative justify-content-center align-items-end seperator_coach border rounded-lg">
+    <div class="traya-coach coach1">
+      <div class="hair_coach_text mb-3"><span class="hair-text">HAIR </span><br class="d-md-none"><span class="coach">COACH</span></div>
+      <div class="mx-2 mb-5 pb-3 pb-md-0 position-relative main_text_div">
+      <p class="py-1 pb-md-2 pt-md-1 m-0 traya-coach-text font-weight-bold">If you have questions, <br> we have the answers </p>
+      <div class="py-1 traya-coach-text2 m-0 mb-md-3"><p class="mb-2 mb-md-0">Get expert advise, motivation and more</p></div>
+      <a class="chat_now rounded-lg ml-2 ml-md-0 btn" href="https://wa.me/918828006272?text=Hey%21+I+would+like+to+know+more+about+Traya">CHAT NOW<span class="ml-3"><svg width="20" height="20" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M31.4937 12.1976C30.0286 6.58158 25.5114 2.06436 19.8347 0.660006C14.158 -0.744344 7.99224 1.08731 4.08546 5.48245C-0.736981 10.8543 -1.34742 18.912 2.55937 25.0164C2.25415 27.2139 2.00998 29.4115 1.70476 31.6091C1.58267 32.4026 2.55937 32.952 3.23085 32.7689C5.36737 32.1585 7.56494 31.6091 9.70146 30.9986C15.5006 33.3793 22.2157 32.2806 26.855 28.0075C31.1891 24.0397 32.9594 17.8136 31.4944 12.1976H31.4937ZM27.2206 23.9793C23.558 29.3512 16.3549 31.366 10.434 28.6797H10.3729C10.1288 28.5576 9.82355 28.4966 9.45729 28.5576C7.74807 29.046 6.03885 29.4733 4.32963 29.9616C4.51276 28.4966 4.69589 27.0926 4.87902 25.6275C4.94007 25.1392 5.06215 24.5898 4.81798 24.1014C4.63485 23.7962 4.39068 23.491 4.20755 23.1247C3.78024 22.3922 3.41398 21.5986 3.10876 20.8051C2.13207 17.9971 2.07102 14.8838 2.98667 12.0762C4.57381 7.13167 9.09103 3.40801 14.2187 2.79758C19.5295 2.06505 24.8403 4.62888 27.5869 9.08506C30.3949 13.6633 30.2117 19.5232 27.2206 23.9797V23.9793Z" fill="#414143"/>
+        <path d="M24.4734 18.2413L21.7264 16.1047C20.8718 15.4332 19.712 15.5553 18.9795 16.2879L18.1859 17.0814C17.5755 16.7152 17.0261 16.2879 16.4767 15.7995C15.9883 15.3112 15.561 14.7007 15.1948 14.0903L15.9883 13.2967C16.7209 12.5642 16.7819 11.4044 16.1715 10.5498L14.0349 7.74176C13.6076 7.13133 12.9362 6.76506 12.2036 6.76506C11.4711 6.70402 10.7386 7.00924 10.2503 7.49759L7.86955 9.87828C6.52659 11.2212 6.22138 13.2967 7.07599 15.0059C8.23581 17.2035 9.70086 19.1569 11.4101 20.8661C13.1193 22.5753 15.1337 24.0404 17.2703 25.2002C17.9417 25.5665 18.6132 25.6886 19.2847 25.6886C20.3835 25.6886 21.5433 25.2613 22.3369 24.4066L24.7176 22.0259C25.2059 21.5376 25.5111 20.8051 25.4501 20.0726C25.4501 19.34 25.0838 18.6686 24.4734 18.2413ZM23.0083 20.3167L20.6277 22.6974C20.0172 23.3079 19.1016 23.43 18.369 23.0637C16.4156 22.0259 14.6454 20.744 13.0583 19.1569C11.4711 17.5698 10.1892 15.7995 9.15147 13.8461C8.78521 13.1136 8.90729 12.1979 9.51773 11.5875L11.8984 9.20681H11.9595C12.0205 9.20681 12.0205 9.20681 12.0205 9.26785L13.9739 11.8317L13.1803 12.5642C12.5699 13.1746 12.3868 14.1513 12.8141 14.9449C13.3024 15.9216 13.9739 16.7762 14.7064 17.5087C15.439 18.2413 16.2936 18.9127 17.2703 19.4011C18.0638 19.8284 18.9795 19.6453 19.5899 19.0348L20.4445 18.1802L22.9473 20.1336C22.9473 20.1336 23.0083 20.1336 23.0083 20.1946V20.3167Z" fill="#414143"/>
+        </svg></span></a>
+          </div>
+          <div class="mob-designcoach"></div>
+         </div>
+
+            <div class="traya-coach2 position-relative coach-2">
+              <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Ishani_Hair_Coach_Shoot_2_2_b7103aff-451f-4156-82ab-f66cc8b0afff.png?v=1664348170" class="d-none d-md-block">
+              <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Ishani_Hair_Coach_Shoot_2_3.png?v=1664348542" class="d-md-none">
+            </div>
+  </div>
+</div>
+<style>
+  .seperator_coach{
+    background:#E2F9F5;
+    border: 2px solid #B7D340 !important;
+    padding-top: 25px;
+  }
+  .traya-coach-text{
+    font-size: 34.1966px;
+    line-height: 39px;
+    color: #414042;
+  }
+  .chat_now{
+    background: #B7D340;
+  }    
+  .chat_now:hover{
+    background: #414042;
+  }
+  .chat_now:hover svg path{
+    fill: #fff;
+  }    
+  .hair_coach_text{
+    font-weight: 800;
+    font-size: 99.1149px;
+    line-height: 135px;
+    text-transform: uppercase;
+    color: #8B8B8B;
+    opacity: 0.1;
+  }
+  .repeat-customer-main{
+    background: #B3D37B;
+    border-radius: 0px 0px 45px 45px;
+  }
+  .repeat-customer-main .UserName{
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 100px;
+    font-family: fredoka_oneregular !important;
+  }
+  .repeat-customer-main .monthpara{
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 56px;
+    color: #414143;
+  }
+  .repeat-customer-main .bottompara{
+    font-weight: 400;
+    font-size: 39.1459px;
+    line-height: 48px;
+  }
+  .customer_sub_div{
+    border-bottom: 5px solid #fff;
+    /*         margin-right: 5rem!important;
+    margin-left: 5rem!important; */
+  }
+  .result-repeat .card{ 
+    background: #FFFFFF;
+    border: 1.5px solid #B7D340;
+    border-radius: 17px;
+  }
+  .result-repeat .buy_btn_color{
+    background: #B7D340;
+    width: 90% !important;
+    margin: auto;
+    font-size: 26px;
+    line-height: 37px;
+  }
+  .result-repeat .buy_btn_color:hover .buy_now_card_svg{
+    color:#fff;
+  }
+  .result-repeat .price_model_text {
+    font-size: 25.422px;
+    line-height: 35px; 
+    color: #414143;
+    font-weight: 900;
+  }
+  .result-repeat .card-header p{
+    font-family: fredoka_oneregular !important;
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .new_svg_color{
+    width:90%;
+    margin:auto;
+  }
+  /*        .result-repeat .card-body span, .result-repeat .card-body p{
+    font-size: 19.0665px;
+    line-height: 26px;
+  } */
+  .result-repeat .product_title{
+    font-size:18px;
+  }
+  .result-repeat .product_des p{
+    font-size:15px
+  }
+  .result-repeat .product_des li{
+    font-size:14px;
+  }
+  .result-repeat, .html_result-repeat{
+    padding-bottom: 0% !important;
+  }
+  .productCount{
+    position: absolute;
+    right: 10%;
+    top: -5%;
+    /*     width: 25px; 
+    height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #b7d340; */
+    font-size: 18px;
+    padding: 1px;
+    color: #b7d340;
+    font-weight: 700;
+  }
+  .card-header {
+    padding: 1.3rem 1.25rem;
+  }
+  .between-space {
+    flex-grow: 1;
+    border-bottom: 1px solid #00000036;
+    height: 10px;
+  }
+  .traya-coach-text2 {
+    font-size: 26px;
+    line-height: 38px;
+  }
+  .months_kit_box{
+    max-width: 1000px;
+  }
+  .secondTextPara{
+        font-size: 41px;
+  }
+  .productPoints li{
+    list-style:unset;
+  }
+  .del-font{
+    font-size:20px;
+  }
+   .result-repeat .snap_emi_txt{
+    text-align: center;
+  }
+   .result-repeat .snap-emi-inst{
+    font-size:11px !important;
+  }
+  .result-repeat .product_title{
+  font-size: 20px;
+}
+ .result-repeat .single-product-price h5, .result-repeat .kit-product-price h6{
+        font-size: 26px;
+  }
+ .result-repeat .product_img_div{
+    max-width:160px;
+  }
+     .result-repeat .product_quantity{
+           font-size: 21px;
+    }
+
+      .result-repeat  .del-price{font-weight: 400;
+    font-size: 20.4692px;
+    opacity: 0.5;
+   }
+ .result-repeat .offer_text{
+    font-size: 23.5035px;
+    line-height: 0px;
+    letter-spacing: 0.0037018px;
+    color: #71C065;
+  }
+  @media only screen and (max-width: 767px) {
+    .mob-pd-img {
+      width: 85px;
+    }
+    .seperator_coach{
+      background:#98E2D5;
+      border: none;
+      padding-top: 0;
+    }
+    .hair_coach_text{
+      font-size: 77px;
+      line-height: 56px;
+    }
+    .traya-coach-text{
+      font-size: 22.7893px;
+      line-height: 29px;
+      color: #FFFFFF;
+    }
+    .traya-coach-text2 p{
+      font-weight: 400;
+      font-size: 17.092px;
+      line-height: 25px;
+      color: #FFFFFF;
+    }
+    .coach1{
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      width:100%;
+    }
+    .traya-coach2{
+      width: 100%;
+      text-align: end;
+    }
+    .mob-designcoach{
+      background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      opacity: 0.7;
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      position: absolute;
+      bottom: 0%;
+      width: 100%;
+      height: 50%;
+      border-radius: 10px 10px 0px 0px;
+    }
+    .chat_now{ 
+      position: absolute;
+      bottom: -25%;
+      z-index: 1;
+      font-size: 20px;
+      line-height: 27px;
+    }
+    .result-repeat .main_text_div{
+      border-top: 1px solid #FFFFFF80;
+    }
+    .repeat-customer-main .UserName{
+      font-size: 26px;
+      line-height: 35px;
+    }
+    .repeat-customer-main .monthpara{
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .repeat-customer-main .bottompara{
+      font-size: 15px;
+      line-height: 18px;
+    }
+    .repeat-customer-main {
+      border-radius: 0px 0px 15px 15px;
+    }
+    .customer_sub_div{
+      border-bottom: 2px solid #fff;
+    }
+    .result-repeat .card{ 
+      border: 1px solid #B7D340;
+      border-radius: 13px;
+    }
+    .result-repeat .price_model_text {
+      font-size: 18px;
+      line-height: 25px;  
+    }
+    /*      .result-repeat .card-body span, .result-repeat .card-body p{
+      font-size: 14.1359px;
+      line-height: 19px;
+    } */
+    .result-repeat .product_title{
+      font-size:16px;
+    }
+    .result-repeat .product_des p{
+      font-size:13px
+    }
+    .result-repeat .product_des li{
+      font-size:12px;
+    }
+    .result-repeat .text-center {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    .result-repeat ul.slick-dots {
+      margin: -8px 0;
+    }
+    .productCount{
+      top:-10%;
+      font-size:15px;
+    }
+    .result-repeat .card-header p {
+      font-size: 21px;
+      line-height: 25px;
+    }
+    .prices, .kit-items {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    del.font-weight-normal.ml-2 {
+      font-size: 14px;
+    }
+    .result-repeat .buy_btn_color {
+      font-size: 20px;
+      left: 27px;
+    }
+    .coach {
+      font-size: 56px;
+      line-height: 77px;
+    }
+    .main_text_div svg {
+      width: 25px;
+      height: 25px;
+    }
+    .del-font{
+    font-size:14px;
+  }
+.result-repeat .product_title{
+  font-size: 13px;
+}
+ .result-repeat .single-product-price h5, .result-repeat .kit-product-price h6{
+       font-size: 16px;
+  }
+   .card{
+    width:100% !important;
+  }
+   .result-repeat .product_quantity{
+           font-size: 11px;
+    }
+    .result-repeat .del-price{
+    font-size: 12px;
+   }
+ .result-repeat .offer_text{
+    font-size: 11px;
+  } 
+  .kit_product {  
+   border-width: 1px!important;
+  }
+  .repeat-customer-products .card-header:first-child {
+    border-radius: 13px 13px 0 0;
+  }
+  .cart-subtotal .offer-text {
+    font-size: 16px;
+  }
+  }
+  .result-repeat.price__regular {
+    margin-top: -1rem;
+  }
+  /*   aditi css */
+  .result-repeat header{
+    background-color: #B3D37B;
+  }
+  .result-repeat .h3 {
+    margin-bottom: 2.5rem;
+  }
+/*   .result-repeat .border-top {
+    border-top: 2px solid #B7D340!important;
+  } */
+  .result-repeat .card{
+    width:70%;
+  }
+  .kit_product {  
+   border-bottom: 2px solid #00000033;
+  }
+  .kit_product:last-child {
+    border-color: #B7D340;
+    margin-bottom: 0!important;
+  }
+  .repeat-customer-products .card-header:first-child {
+    border-radius: 17px 17px 0 0;
+  }
+  .cart-subtotal .offer-text {
+    color: #71C065;
+    font-size: 18px;
+  }
+  @media (min-width: 768px){
+    .result-repeat  .mb-md-5 {
+      margin-bottom: 3rem!important;
+    }
+    .result-repeat .my-md-3 {
+    margin-top: 5rem!important;
+    }
+  }
+  .col-12.mb-4.single-product:last-child {
+    border-bottom: 2px solid #B7D340;
+  }
+  .purchase_cart_text {
+    font-size: 14px !important;
+    line-height: 19px !important;
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Repeat Customer",
+    "settings": [],
+    
+      "presets": [
+    {
+      "name": "Repeat Customer"
+    }
+  ]
+  }
+{% endschema %}

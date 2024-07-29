@@ -1,0 +1,153 @@
+{% if product.handle == "hair-growth-serum" or product.handle == "scalp-oil-with-growth-therapy-booster-shots" or product.handle == 'herbal-hair-oil' or product.handle == 'hair-growth-herbs' or product.handle == 'anti-dandruff-shampoo' or product.handle == 'shatavari-ghrita' or product.handle == 'hair-vitamins' or product.handle == 'traya-minoxidil-5' or product.handle == 'minoxidil-2' or product.handle == 'herbal-tablets' or product.handle == 'hair-root-serum' or product.handle == 'avipattikar-digestion-tablets' or product.handle == 'shampoo' or product.handle == 'hair-fall-tablets' or product.handle == 'recap-serum-for-hair-fall-control'%}
+
+<nav class="breadcrumb l-0" role="navigation" aria-label="breadcrumbs">
+  <a href="/" title="Home">Home</a>
+  <span aria-hidden="true">&rsaquo;</span>
+  <a href="/collections/products" title="Hair Care Products">Hair Care Products</a>
+  <span aria-hidden="true">&rsaquo;</span>
+  <span>
+    {% if product.handle == 'avipattikar-digestion-tablets' %}
+    Digestion Tablets
+    {% elsif product.handle == 'hair-fall-tablets' %}
+    Hair Growth Tablets
+    {% elsif product.handle == 'herbal-tablets' %}
+    Herbal Tablets
+    {% elsif product.handle == 'minoxidil-2' %}
+    Minoxidil 2 Solution
+    {% elsif product.handle == 'traya-minoxidil-5' %}
+    Minoxidil 5
+    {% elsif product.handle == 'hair-vitamins' %}
+    Multivitamin Tablets
+    {% elsif product.handle == 'shatavari-ghrita' %}
+    Nasal Drops
+    {% elsif product.handle == 'herbal-hair-oil' %}
+    Herbal Hair Oil
+    {% elsif product.handle == 'anti-dandruff-shampoo' %}
+    Anti-Dandruff Shampoo
+    {% elsif product.handle == 'shampoo' %}
+    Hair Fall Shampoo
+    {% elsif product.handle == 'hair-growth-herbs' %}
+    Hair Growth Tablets
+    {% elsif product.handle == 'hair-root-serum' %}
+    Hair Root Serum
+    {% elsif product.handle == 'recap-serum-for-hair-fall-control' %}
+    Recap Serum for Hair Fall Control
+    {% elsif product.handle == 'hair-growth-serum' %}
+    Hair Growth Serum
+   {% elsif product.handle == 'scalp-oil-with-growth-therapy-booster-shots' %}
+    Scalp-oil-With-Growth-Therapy-Booster-Shots
+    {% else %}
+    {{ product.title }}
+    {% endif %}
+  </span>
+</nav>
+
+
+{% elsif product.handle == 'sleep-well-combo' or product.handle == 'energy-boost-combo' or product.handle == 'ultimate-hair-supplements-for-hair-growth-nourishment' or product.handle == 'gut-health-combo' or product.handle == 'men-complete-customised-hair-loss-treatment-plan' or product.handle == 'hairline-defender' or product.handle == 'anti-dandruff-treatment-kit' or product.handle == 'traya-gut-kit' or product.handle == 'dht-blocker' or product.handle == 'all-natural-hair-loss-kit' or product.handle == 'anti-dandruff-kit' or product.handle == 'female-complete-customised-hair-loss-treatment-plan' %}
+
+<nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+  <a href="/" title="Home">Home</a>
+  <span aria-hidden="true">&rsaquo;</span>
+  <a href="/collections/all-products" title="Our Treatment Plans">Our Treatment Plans</a>
+  <span aria-hidden="true">&rsaquo;</span>
+  <span>
+    {% if product.handle == 'men-complete-customised-hair-loss-treatment-plan' %}
+    Men's Hair Care Products
+    {% elsif product.handle == 'female-complete-customised-hair-loss-treatment-plan' %}
+    Hair Loss Treatment Plan for Female
+    {% elsif product.handle == 'all-natural-hair-loss-kit' %}
+    Hair Fall Kit
+    {% elsif product.handle == 'anti-dandruff-kit' %}
+    Anti Dandruff Kit
+    {% elsif product.handle == 'hairline-defender' %}
+    Hairline Defender
+    {% elsif product.handle == 'dht-blocker' %}
+    DTH Blocker
+    {% elsif product.handle == 'traya-gut-kit' %}
+    Gut Health Supplements
+    {% elsif product.handle == 'anti-dandruff-treatment-kit' %}
+    Anti Dandruff Kit
+    {% else %}
+    {{ product.title }}
+    {% endif %}
+  </span>
+</nav>
+
+{% elsif page.handle == 'shivogi-hair-loss-journey' or page.handle == 'mayil-hair-loss-journey' or page.handle == 'shweta-hair-loss-journey' or page.handle == 'hemant-hair-loss-journey' or page.handle == 'swati-hair-loss-journey' %}
+ 
+<nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+  <a href="/" title="Home">Home</a>
+  <span aria-hidden="true">&rsaquo;</span>
+  <a href="/pages/reviews" title="Our Treatment Plans">Reviews</a>
+  <span aria-hidden="true">&rsaquo;</span>
+  <span>{{ page_title }}</span>
+</nav>
+
+{% elsif page.handle == 'traya-coupons-offers-discounts' %}
+ 
+<nav class="offer-breadcrumb_desk breadcrumb" role="navigation" aria-label="breadcrumbs">
+  <a href="/" title="Home">Home</a>
+  <span aria-hidden="true"><svg width="5" height="11" viewBox="0 0 5 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.9449 5.34191C4.93963 5.20035 4.89886 5.06583 4.82974 4.96146L1.67007 0.21346C1.59079 0.0949099 1.48077 0.0248487 1.36426 0.0187354C1.24775 0.0127061 1.1343 0.071046 1.04884 0.181107C0.963312 0.29108 0.912864 0.443681 0.908517 0.605296C0.904109 0.766902 0.94623 0.924264 1.02551 1.04281L3.90824 5.37602L1.02551 9.70922V9.7093C0.94623 9.82785 0.904109 9.9852 0.908517 10.1468C0.912864 10.3084 0.963312 10.461 1.04884 10.571C1.13431 10.681 1.24774 10.7394 1.36426 10.7333C1.48076 10.7273 1.59078 10.6572 1.67007 10.5387L4.82974 5.79065C4.91049 5.66887 4.95212 5.50684 4.9449 5.34168V5.34191Z" fill="#414042"/>
+</svg></span>
+  <span>OFFER PAGE </span>
+   <span aria-hidden="true"><svg width="5" height="11" viewBox="0 0 5 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.9449 5.34191C4.93963 5.20035 4.89886 5.06583 4.82974 4.96146L1.67007 0.21346C1.59079 0.0949099 1.48077 0.0248487 1.36426 0.0187354C1.24775 0.0127061 1.1343 0.071046 1.04884 0.181107C0.963312 0.29108 0.912864 0.443681 0.908517 0.605296C0.904109 0.766902 0.94623 0.924264 1.02551 1.04281L3.90824 5.37602L1.02551 9.70922V9.7093C0.94623 9.82785 0.904109 9.9852 0.908517 10.1468C0.912864 10.3084 0.963312 10.461 1.04884 10.571C1.13431 10.681 1.24774 10.7394 1.36426 10.7333C1.48076 10.7273 1.59078 10.6572 1.67007 10.5387L4.82974 5.79065C4.91049 5.66887 4.95212 5.50684 4.9449 5.34168V5.34191Z" fill="#414042"/>
+</svg></span>
+</nav>
+
+<nav class="offer-breadcrumb_mob breadcrumb" role="navigation" aria-label="breadcrumbs">
+    <a href="/" title="Home"><svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.7895 19.1726C10.527 19.4351 10.1709 19.5825 9.7997 19.5825C9.42847 19.5825 9.07244 19.4351 8.8099 19.1726L0.409901 10.7726C0.147441 10.5101 0 10.154 0 9.7828C0 9.41157 0.147441 9.05554 0.409901 8.793L8.8099 0.392996C9.07394 0.137975 9.42759 -0.00313686 9.79466 5.29237e-05C10.1617 0.00324271 10.5129 0.150479 10.7724 0.410051C11.032 0.669622 11.1793 1.02076 11.1824 1.38783C11.1856 1.75491 11.0445 2.10855 10.7895 2.3726L4.7793 8.3828H20.9997C21.371 8.3828 21.7271 8.5303 21.9897 8.79285C22.2522 9.0554 22.3997 9.41149 22.3997 9.7828C22.3997 10.1541 22.2522 10.5102 21.9897 10.7727C21.7271 11.0353 21.371 11.1828 20.9997 11.1828H4.7793L10.7895 17.193C11.052 17.4555 11.1994 17.8116 11.1994 18.1828C11.1994 18.554 11.052 18.9101 10.7895 19.1726Z" fill="#414143"/>
+</svg></a>
+  <span>OFFER PAGE </span>
+ 
+</nav>
+  
+{% else %}
+
+{% unless template == 'index' or template == 'cart' or template == 'list-collections' %}
+<nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+  <a href="/" title="Home">Home</a>
+  {% if template contains 'page' %}
+    <span aria-hidden="true">&rsaquo;</span>
+    <span>{{ page.title }}</span>
+  {% elsif template contains 'product' %}
+      <span aria-hidden="true">&rsaquo;</span>
+  <a href="/collections/products">Products</a>
+    <span aria-hidden="true">&rsaquo;</span>
+    <span>{{ product.title }}</span>
+  {% elsif template contains 'collection' and collection.handle %}
+    <span aria-hidden="true">&rsaquo;</span>
+    {% if current_tags %}
+      {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+      {{ collection.title | link_to: url }}
+      <span aria-hidden="true">&rsaquo;</span>
+<!--       <span>{{ current_tags | join: " + " }}</span> -->
+    {% else %}
+  	  <a href="/collections" title="Collections">Collections</a>
+  	  <span aria-hidden="true">&rsaquo;</span>
+      <span>{{ collection.title }}</span>
+    {% endif %}
+  {% elsif template == 'blog' %}
+    <span aria-hidden="true">&rsaquo;</span>
+    {% if current_tags %}
+      {{ blog.title | link_to: blog.url }}
+      <span aria-hidden="true">&rsaquo;</span>
+      <span>{{ current_tags | join: " + " }}</span>
+    {% else %}
+    <span>{{ blog.title }}</span>
+    {% endif %}
+  {% elsif template == 'article' %}
+    <span aria-hidden="true">&rsaquo;</span>
+    {{ blog.title | link_to: blog.url }}
+    <span aria-hidden="true">&rsaquo;</span>
+    <span>{{ article.title }}</span>
+  {% else %}
+   <span aria-hidden="true">&rsaquo;</span>
+   <span>{{ page_title }}</span>
+  {% endif %}
+</nav>
+{% endunless %}
+
+{% endif %}

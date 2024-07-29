@@ -1,0 +1,100 @@
+<div class="container">
+  <h2 class="hair_quiz_title text-center mb-2 l-0">{{ section.settings.Section_title }}</h2>
+  <p class="sub-heading mb-0 text-center l-0">{{ section.settings.Sub_title }}</p>
+  <div class="img_text_para d-flex justify-content-between">
+    {% for block in section.blocks %}
+      <div class="img_text_para_wrpr pt-4">
+        <h5 class="hair_quiz_subHe l-0 pt-3">{{ block.settings.para }}</h5>
+        <div class="hair_qui_img">
+          <image src="{{ block.settings.image | img_url:'' }}"></image>
+        </div>
+        <p class="l-0 hair_quiz_para">{{ block.settings.content }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Learn Hair Quiz",
+    "settings": [
+      {
+        "type":"text",
+        "id":"Section_title",
+        "label":"Add Your Title"
+      },
+      {
+        "type":"text",
+        "id":"Sub_title",
+        "label":"Add Your Sub Title"
+      }
+    ],
+    "blocks":[
+      {
+        "name":"hair-quiz",
+         "type":"text",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label":"Select Image"
+          },
+          {
+            "type": "text",
+            "id": "para",
+            "label":"Text"
+          },
+          {
+            "type": "text",
+            "id": "content",
+            "label":"Text"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name":"Learn Hair Quiz"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+.hair-quiz .img_text_para_wrpr {
+    width: 30% ;
+}
+h2.hair_quiz_title {
+    font-size: 30px;
+}
+h5.hair_quiz_subHe {
+  font-size: 18px;
+  font-weight: 700;
+} 
+.hair_qui_img img{
+  width: 400px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 767px)  {
+  .img_text_para{
+    flex-wrap: wrap;
+  }
+  h2.hair_quiz_title{
+    font-size: 25px;
+  }
+  h5.hair_quiz_subHe{
+    font-size: 16px;
+  }
+  .hair-quiz .img_text_para_wrpr{
+    width: 100% ;
+    text-align: center;
+  }
+  .hair_qui_img img {
+    width: 100%;
+  }
+}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

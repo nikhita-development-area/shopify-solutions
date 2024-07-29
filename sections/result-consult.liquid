@@ -1,0 +1,39 @@
+<div class="page-width  pt-5 mt-5">
+  <div class="">
+    <div class="">
+      <div class="section-header text-center">
+<!--         <h1>{{ page.title }}</h1> -->
+      </div>
+
+      <div class="rte d-flex">
+        {{ page.content }}
+        
+        <iframe class="calendly-app m-auto overflow-auto" src="https://form.traya.health/v2/book-appointment"></iframe>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Result Consult",
+    "settings": [],
+          "presets":[
+          {
+          "name":"Result Consult"
+          }
+      ]
+  }
+{% endschema %}
+<style>
+  .calendly-app{
+    height:600px;
+        width: 75%;
+  }
+    @media only screen and (max-width: 767.98px) {
+        .calendly-app{
+      width: 100% !important;
+    }
+</style>

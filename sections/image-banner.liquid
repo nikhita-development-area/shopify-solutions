@@ -1,0 +1,862 @@
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.adapt_height_first_image and section.settings.image != blank -%}
+  {%- style -%}
+  @media screen and (max-width: 749px) {
+    #Banner-{{ section.id }}::before,
+    #Banner-{{ section.id }} .banner__media::before,
+    #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+      padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+      content: '';
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    #Banner-{{ section.id }}::before,
+    #Banner-{{ section.id }} .banner__media::before {
+      padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+      content: '';
+      display: block;
+    }
+  }
+  {%- endstyle -%}
+{%- endif -%}
+
+{%- style -%}
+  #Banner-{{ section.id }}::after {
+    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+  }
+{%- endstyle -%}
+
+<div id="Banner-{{ section.id }}" class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+  {%- if section.settings.image != blank -%}
+    <div class="banner__media media d-none d-md-block {% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
+      {%-liquid
+        assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+        if section.settings.image_2 != blank
+          assign image_class = "banner__media-image-half"
+        endif
+        if section.settings.image_2 != blank and section.settings.stack_images_on_mobile
+          assign sizes = "(min-width: 750px) 50vw, 100vw"
+        elsif section.settings.image_2 != blank
+          assign sizes = "50vw"
+        else
+          assign sizes = "100vw"
+        endif
+      -%}
+      {{ section.settings.image | image_url: width: 1500 | image_tag:
+        loading: 'lazy',
+        width: section.settings.image.width,
+        height: image_height,
+        class: image_class,
+        sizes: sizes,
+        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+        alt: section.settings.image.alt | escape
+      }}
+    </div>
+      <div class="banner__media media d-md-none {% if section.settings.mblimage == blank  %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
+      {%-liquid
+        assign image_height = section.settings.mblimage.width | divided_by: section.settings.mblimage.aspect_ratio
+        if section.settings.mblimage_2 != blank
+          assign image_class = "banner__media-image-half"
+        endif
+        if section.settings.image_2 != blank and section.settings.stack_images_on_mobile
+          assign sizes = "(min-width: 750px) 50vw, 100vw"
+        elsif section.settings.image_2 != blank
+          assign sizes = "50vw"
+        else
+          assign sizes = "100vw"
+        endif
+      -%}
+      {{ section.settings.mblimage | image_url: width: 1500 | image_tag:
+        loading: 'lazy',
+        width: section.settings.mblimage.width,
+        height: image_height,
+        class: image_class,
+        sizes: sizes,
+        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+        alt: section.settings.mblimage.alt | escape
+      }}
+    </div>
+  {%- elsif section.settings.image_2 == blank -%}
+    <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
+      {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+    </div>
+  {%- endif -%}
+  {%- if section.settings.image_2 != blank -%}
+    <div class="banner__media media{% if section.settings.image != blank %} banner__media-half{% endif %}">
+      {%-liquid
+        assign image_height_2 = section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio
+        if section.settings.image != blank
+          assign image_class_2 = "banner__media-image-half"
+        endif
+        if section.settings.image != blank and section.settings.stack_images_on_mobile
+          assign sizes = "(min-width: 750px) 50vw, 100vw"
+        elsif section.settings.image != blank
+          assign sizes = "50vw"
+        else
+          assign sizes = "100vw"
+        endif
+      -%}
+      {{ section.settings.image_2 | image_url: width: 1500 | image_tag:
+        loading: 'lazy',
+        width: section.settings.image_2.width,
+        height: image_height_2,
+        class: image_class_2,
+        sizes: sizes,
+        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+        alt: section.settings.image_2.alt | escape
+      }}
+    </div>
+  {%- endif -%}
+  <div class="row banner__content banner__content--{{ section.settings.desktop_content_position }}{% unless page.handle != 'transplant' or page.handle != 'the-science' %} page-width{% endunless %}{% if page.handle == 'faq' %} faq-main-div{% elsif page.handle == 'the-science' %} ml-md-4{% endif %}">
+    <div class="cstm-banner {% unless page.handle == 'faq' or page.handle == 'the-science' %}banner__box {% endunless %} content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient {% if page.handle == 'transplant-thank-you' or page.handle == 'hair-fall-solution-men' or page.handle == 'hair-fall-solution-women' %} col-md-7 {% elsif page.handle == 'faq' or page.handle == 'the-science'  %} col-md-12 {% elsif template.suffix == 'cholestrol' or page.handle == 'transplant'%} col-md-6{% elsif page.handle == 'hair-fall-solution-for-men' or page.handle == 'hair-loss-treatment-for-women' %}col-md-6 ml-md-5{% else %} col-lg-4 col-md-7{% endif %}"> <!-- Hair Treatment for Women Page Banner Changes Added Class(cstm-banner) -->
+      <div class="{% if page.handle == 'hair-fall-solution-men' or page.handle == 'hair-fall-solution-women' or  template == 'page.hair-fall-solution-men' or template == 'page.hair-fall-solution-women'  %}main-hair-loss px-2 py-5 {% elsif page.handle =='faq' %} home-text-wrap {% elsif page.handle =='the-science' %} home-text-wrap px-2 py-md-0 py-2 {% elsif page.handle == 'transplant' %} home-text-wrap px-2 py-md-5 {% else %} home-text-wrap px-2 py-5 {% endif %}{% unless page.handle == 'the-science' %} text-left {% endunless %}">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'heading' -%}
+            <h2 class="banner__heading px-2 {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+              <span class="{% if page.handle == 'hair-fall-solution-men' or page.handle == 'hair-fall-solution-women' or  template == 'page.hair-fall-solution-men' or template == 'page.hair-fall-solution-women'  %}hair-loss{% elsif page.handle == 'transplant' %}font-fredoka {% elsif page.handle == 'the-science' %} py-1 py-md-3{% elsif template.suffix == 'holistic-hair-loss-plan' %}text-white{% endif %}">{{ block.settings.heading }}</span>
+            </h2>
+          {%- when 'text' -%}
+          {% if block.settings.heading1 != blank  %}
+            <div class="{% if page.handle == 'hair-fall-solution-men' or page.handle == 'hair-fall-solution-women' %} font-fredoka {% else %}{% if page.handle != 'transplant' %} px-2{% endif %} mb-4 {% endif %} banner__text {{ block.settings.text_style }} custom-head " {{ block.shopify_attributes }}>
+              <span class="{{ template }} {{ page.handle }} {% if page.handle == 'hair-fall-solution-men' or page.handle == 'hair-fall-solution-women' or  template == 'page.hair-fall-solution-men' or template == 'page.hair-fall-solution-women' %} font-weight-bold text-black {% elsif page.handle == 'transplant' or page.handle == 'the-science' %} font-weight-normal{% elsif page.handle == 'faq' %}font-fredoka px-2 mb-md-4 m-0 p-0{% elsif template.suffix == 'holistic-hair-loss-plan' %}text-white{% else %} px-2 mb-4{% endif %}">{{ block.settings.heading1 }}</span>
+            </div>
+            {% endif %}
+
+            <!-- Hair Treatment for Women Page Banner Changes -->
+            <div class="banner__buttons px-2 mb-3 d-flex flex-wrap">
+              <a href="https://form.traya.health/questions?cohort=1&location=HomeSlideshow&page={{ page__hndl }}" class="btn btn-dark hair-form-actn-link" id="hairtestcta">Take The Hair Test <span>&trade;</span></a>
+              <span class="myresult d-none">
+                <a id="myPlanHome" href="/pages/result4" class="btn btn-dark rcmd_plan_btn">{{ 'My Recommended Plan' }}</a>
+              </span>
+              <span class="reorder__btn">
+                <a homeReorder id="buyagaincta" class="hair-form-actn-link btn btn-dark ml-md-2 reorder" style="display: none;">Buy Again</a>
+              </span>
+            </div>
+            <!-- Hair Treatment for Women Page Banner Changes -->
+        
+          {% if block.settings.text != blank %}
+            <div class="{% if page.handle == 'hair-fall-solution-men' or page.handle == 'hair-fall-solution-women' %} font-fredoka {% elsif page.handle == 'faq' %} faq_main {% elsif  page.handle == 'transplant'  %} mb-4 pb-2 pb-md-0 mb-md-4 {% else %}{% if page.handle != 'hair-fall-solution-for-women' %}px-2 mb-4{% endif %}{% endif %} banner__text {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+              <span class="text-span {% if page.handle == 'hair-fall-solution-men' or page.handle == 'hair-fall-solution-women' or  template == 'page.hair-fall-solution-men' or template == 'page.hair-fall-solution-women'  %} {% elsif page.handle == 'faq' or page.handle == 'transplant' %} faq_span  {% elsif page.handle == 'the-science' %} {%  else %} font-fredoka px-2 mb-4 111{% endif %}">{{ block.settings.text  }}</span>
+            </div>
+          {% endif %}
+          {%- when 'buttons' -%}
+            <div class="banner__buttons-1{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %} {% if page.handle == 'transplant' %} lead-btn col-md-7 p-0 col-9{% endif %}" {{ block.shopify_attributes }}>
+              {%- if block.settings.button_label_1 != blank -%}
+                <a id="hairtestcta"{% if block.settings.button_link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_1 }}"{% endif %} class="button{% if block.settings.button_style_secondary_1 %} button--secondary-1{% else %} button--primary-1{% endif %} btn btn-dark px-2{% if template.suffix == 'cholestrol' or page.handle == 'transplant' %} p-md-3{% else %} p-md-4{% endif %}{% unless template.suffix == 'cholestrol' or template.suffix == 'holistic-hair-loss-plan' %} w-100{% endunless %}">{{ block.settings.button_label_1 | escape }}</a>
+              {%- endif -%}
+              {%- if block.settings.button_label_2 != blank -%}
+                <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
+              {%- endif -%}
+
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% if page.handle == 'transplant' %}
+<div class="transplant-btn-sticky stuck">
+  <a id="transplant" href="https://formv2s.traya.health/v2/mini-questions?cohort=1&amp;location=Prescription" class="btn w-100 btn-dark hair-form-actn-link" aria-describedby="a11y-external-message" style="pointer-events: auto;">Book Free Consultation</a>
+</div>
+{% style %}
+.transplant-btn-sticky.stuck {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+.transplant-btn-sticky.stuck .btn {
+  border-radius: 0px;
+}
+@media only screen and (max-width: 767.98px){
+  .banner--small:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+    min-height: unset !important;
+    position: absolute;
+    top: 35%;
+    width: 85%;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+  .banner__text span {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .question, .answer {
+    font-size: 13px;
+    line-height: 18px;
+    padding: 15px 0px !important;
+  }
+  .banner__box {
+    position: absolute !important;
+    top: 10%;
+  }
+}
+{% endstyle %}
+<script>
+  jQuery(function($) {
+    $('body').on('click', '.transplant-book-consult-close', function(e) {
+      $('.form-message--success').hide();
+      $('.form-data-v').removeAttr('style');
+    });
+    $(window).on('scroll', function() { 
+     if (window.pageYOffset > 300) {
+      $('.transplant-btn-sticky-0').hide();
+      $('.transplant-btn-sticky').show();
+      }else{
+      $('.transplant-btn-sticky-0').show();
+      $('.transplant-btn-sticky').hide();
+      }
+    });
+});
+</script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "t:sections.image-banner.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "mblimage",
+      "label": "Mobile view"
+    },
+    {
+      "type": "range",
+      "id": "image_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
+      "default": 0
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "options": [
+        {
+          "value": "small",
+          "label": "t:sections.image-banner.settings.image_height.options__1.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.image-banner.settings.image_height.options__2.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.image-banner.settings.image_height.options__3.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.image-banner.settings.image_height.label",
+      "info": "t:sections.image-banner.settings.image_height.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "adapt_height_first_image",
+      "default": false,
+      "label": "t:sections.image-banner.settings.adapt_height_first_image.label",
+      "info": "t:sections.image-banner.settings.adapt_height_first_image.info"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "top-center",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "top-right",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__3.label"
+        },
+        {
+          "value": "middle-left",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__4.label"
+        },
+        {
+          "value": "middle-center",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__5.label"
+        },
+        {
+          "value": "middle-right",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__6.label"
+        },
+        {
+          "value": "bottom-left",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__7.label"
+        },
+        {
+          "value": "bottom-center",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__8.label"
+        },
+        {
+          "value": "bottom-right",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__9.label"
+        }
+      ],
+      "default": "middle-center",
+      "label": "t:sections.image-banner.settings.desktop_content_position.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_box",
+      "default": true,
+      "label": "t:sections.image-banner.settings.show_text_box.label"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.image-banner.settings.desktop_content_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.image-banner.settings.color_scheme.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.image-banner.settings.header.content"
+    },
+    {
+      "type": "select",
+      "id": "mobile_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.image-banner.settings.mobile_content_alignment.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_images_on_mobile",
+      "default": true,
+      "label": "t:sections.image-banner.settings.stack_images_on_mobile.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_below",
+      "default": true,
+      "label": "t:sections.image-banner.settings.show_text_below.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.image-banner.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Image banner",
+          "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.image-banner.blocks.text.name",
+      "limit": 1,
+      "settings": [
+         {
+          "type": "text",
+          "id": "heading1",
+          "label": "Heading "
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Give customers details about the banner image(s) or content on the template.",
+          "label": "t:sections.image-banner.blocks.text.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__1.label"
+            },
+            {
+              "value": "subtitle",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__2.label"
+            },
+            {
+              "value": "caption-with-letter-spacing",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__3.label"
+            }
+          ],
+          "default": "body",
+          "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "t:sections.image-banner.blocks.buttons.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "default": "Button label",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_1",
+          "default": false,
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "default": "Button label",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_2",
+          "default": false,
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image-banner.presets.name",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "buttons"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<!-- Hair Treatment for Women Page Banner Changes -->
+<style>
+  @media (max-width: 767.98px){
+    .hair-loss-treatment-for-women .cstm-banner {position: absolute; top: 5px;}
+    .hair-loss-treatment-for-women .main-hair-loss .custom-head span {font-size: 40px!important;}
+  }
+</style>
+<!-- Hair Treatment for Women Page Banner Changes -->
+
+{% style %}
+{% if page.handle == 'transplant-thank-you' %}
+.home-text-wrap {
+background: transparent;
+}
+.banner__text span{
+color:#fff;
+}
+.banner__text span:after{
+content:unset;
+}
+.banner__heading span {
+font-size:40px;
+color:#fff;
+}
+.banner__content {
+padding: 5rem 0;
+}
+{% endif %}
+{% if page.handle == 'hair-fall-solution-men' or page.handle == 'hair-fall-solution-women' or  template == 'page.hair-fall-solution-men' or template == 'page.hair-fall-solution-women'  %}
+.banner__content{
+padding:5rem 0;
+}
+.main-hair-loss h2.banner__heading.h1{
+font-size:26px;
+font-weight:600;
+margin-bottom: 12px;
+}
+.main-hair-loss  .custom-head span{
+font-size: 51px!important;
+}
+.custom-head span.hair-fall-solution-women{
+font-size: 45px!important;
+}
+.banner__text span{
+color:#fff;
+font-weight: 400;
+font-stretch: normal;
+font-style: normal;
+text-align:center;
+line-height: 1.35;
+letter-spacing: -.26px;
+font-size: 26px;
+}
+.banner__text span:after{
+content:unset;
+}
+.hair-loss{
+color:#fff;
+} 
+{% endif %}
+{% if page.handle == 'the-science' %}
+h2.banner__heading.h1{
+font-size: 26px;
+font-weight: 700;
+color: #f9af5f;
+line-height: 27.2px;
+letter-spacing: .65px;
+}
+.banner__text span.the-science {
+font-size: 51px!important;
+font-weight: 700!important;
+line-height: 1.14;
+letter-spacing: -.26px;
+}
+.banner__text.subtitle span{
+font-size: 23px;
+font-weight: 400;
+line-height: 1.35;
+letter-spacing: -.26px;
+margin-bottom: 10px;
+}
+.banner__text.subtitle span.text-span  {
+color:#939598;
+}
+.banner__text.subtitle span.second{
+font-size: 18px;
+color: #939598;
+font-weight: 300;
+}
+.home-text-wrap{
+text-align:left;
+}
+.banner__content{
+padding:0;
+}
+.home-text-wrap{
+max-width: 568px;
+}
+@media (max-width: 767.98px){
+h2.banner__heading.h1{
+font-size: 16px;
+text-align:center;
+}
+.banner__text.subtitle span.the-science {
+font-size: 30px!important;
+color:#000;
+}
+.banner__text.subtitle.custom-head{
+text-align:center;
+line-height:0.94;
+}
+.banner__text.subtitle span, .banner__text.subtitle span.second{
+font-size: 15px;
+}
+.banner__media{
+height:auto!important;
+}
+}
+{% endif %}}
+{% if page.handle == 'faq' %}
+.home-text-wrap {
+background: transparent!important;
+}
+.banner__text span:after{
+content:unset;
+}
+.banner__text span.faq {
+font-family: Nunito Sans,sans-serif!important;
+font-size: 69.5px;
+font-weight: 900;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.14;
+letter-spacing: -.35px;
+}
+.banner__text span.custom_text{
+font-size: 200px;
+font-weight: 900;
+color: #fff;
+}
+.faq_main .faq_span {
+font-family: Nunito Sans,sans-serif!important;
+font-size: 26px;
+font-weight: 400;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.35;
+letter-spacing: -.26px;
+text-align: left;
+color: #fff;
+max-width: 544px;
+}
+.banner__box, .banner__content{
+padding:0;
+}
+.faq-main-div{
+padding: 2%;
+margin-left: 15px;
+}
+@media (max-width: 767.98px){
+.home-text-wrap {
+padding: 40px 15px 0;
+max-width: 90%;
+margin: -80px auto 0;
+background: #fff;
+border-radius: 8px 8px 0 0;
+}
+.banner__text span.faq{
+font-size: 27.5px;
+font-weight: 900;
+font-stretch: normal;
+font-style: normal;
+line-height: 38px;
+letter-spacing: -.14px;
+}
+.banner__text span.custom_text{
+font-size: 60px;
+font-weight: 900;
+color: #adb99e;
+}
+.faq_main .faq_span{
+font-size: 15px;
+font-weight: 400;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.35;
+letter-spacing: -.26px;
+text-align: left;
+color: #939598;
+max-width: 544px;
+}
+.banner__box{
+margin-top:-40%;
+}
+}
+{% endif %}
+
+{% if page.handle == 'transplant' or template.suffix == 'cholestrol' %}
+.home-text-wrap{
+background:transparent;
+}
+.banner__box, .banner__content{
+padding:0;
+}
+.banner__heading.h1 span{
+font-weight: normal;
+font-size: 40px;
+line-height: 48px;
+color: #175e53!important;
+}
+span.transplant{
+font-family: Nunito Sans,sans-serif!important;
+font-size: 30px;
+line-height: 41px;
+}
+.banner__text span:after{
+content:unset;
+}
+.banner__text span{
+font-size: 34px;
+line-height: 46px;
+}
+.lead-btn{
+padding-left:0;
+}
+@media (max-width: 767.98px){
+.banner__heading.h1 span{
+font-size: 24px;
+line-height: 29px;
+}
+.banner__text span {
+font-size: 14px;
+line-height: 19px;
+}
+span.faq_span{
+font-size: 20px!important;
+line-height: 27px;
+}
+}
+{% endif %}
+{% if template.suffix == 'cholestrol' %}
+.banner__heading.h1 span{
+font-family: Fredoka One!important;
+font-weight: normal;
+font-size: 40px;
+line-height: 48px;
+color: #175e53!important;
+}
+.banner__text.body.custom-head{
+ padding:0!important;
+}
+.home-text-wrap{
+background:none;
+}
+.banner__text span {
+font-size: 42px;
+text-transform: capitalize !important;
+ padding:0!important;
+line-height: 1.2em;
+letter-spacing: normal;
+}
+.banner__text span.text-span{
+font-size: 26px;
+color: #494949;
+font-weight: 400!important;
+padding:0!important;
+}
+.banner__text.body {
+padding:0!important;
+}        
+.banner__buttons-1 a{
+background-color: #EE9A3C;
+border-color: #EE9A3C;
+min-width: 250px;
+}
+@media (max-width: 767.98px){
+  .banner__media{
+    position: relative;
+  }
+  .banner__content{
+    position: absolute; 
+  }
+  .banner__text.body.custom-head, .banner__text span.text-span, .banner__buttons-1 {
+    padding: 0 15px!important;
+  }
+.banner__text span{
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    font-family: Nunito Sans !important;
+}
+ .banner__text span.text-span{
+      font-size: 20px !important;
+}
+  }
+{% endif %}
+  @media (max-width: 767.98px) {  
+{% if template.suffix == 'holistic-hair-loss-plan' %}
+    .banner__content {
+      position: absolute;
+      top: 20%;
+    }
+    .banner--small:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+      height: 35rem;
+    }
+    .media>*:not(.zoom):not(.deferred-media__poster-button) {
+      height: 100%;
+    }
+    .banner__heading.h1 span {
+      color: #545454 !important;
+      font-size: 36px !important;
+      font-weight: 800 !important;
+      font-family: Nunito Sans !important;
+      line-height: 48.56px;
+    }
+{% endif %}
+  }
+{% endstyle %}

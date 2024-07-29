@@ -1,0 +1,1523 @@
+ let transactionId,customer_id;
+ var downloadTimer;
+function userOTP(phone_number) {
+  let formData = {'phone': phone_number};
+fetch('https://api.hav-g.in/auth/challenge', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => {
+      return response.json();
+    }).then(result => {
+       // console.log("result> ", result);
+      if(result.message === 'Unable to find user') {
+        $('#empty_phone__number').remove();
+        if($('.phone--number').children().length == 0) {
+        $('.phone--number').append('<p class="red-color m-0 error__text font-weight-bold" id="error_text"><sup>**</sup>You&#39;re Not Registered :(</p>');
+        $('.msg_text').removeClass('mt-5 mb-3').addClass('mt-1 mb-1 invisible');
+        var input = document.getElementById('phone_number');
+        input.addEventListener('keydown', ({key}) => {
+        if (["Backspace", "Delete"].includes(key)) {
+          $('#go_home_btn').addClass('d-none');
+          $('#error_text').remove();
+          $('#send_otp_btn').removeClass('d-none');
+        }
+        });
+        // $('#phone_number').attr('readonly', true);
+        }
+        $("#send_otp_btn").addClass('d-none');
+        $('#go_home_btn').removeClass('d-none');
+      }
+      else {
+      let sendStatus = result.phoneDelivery.sendStatus;
+      if(sendStatus === 'SUCCESS') {
+       transactionId = result.transactionId;
+      let phone_number = result.phoneDelivery.contact;
+        $('.mobileNumber').text(phone_number);
+        $(".enter_otp, .login_btn").show();
+        $(".enter_mob, .send_otp").hide();
+         timer(59);
+          const currentTime = new Date();
+          const hours = currentTime.getHours();
+          const minutes = currentTime.getMinutes();
+          const seconds = currentTime.getSeconds();
+          const formattedTime = `${hours}:${minutes}:${seconds}`;
+         gtag('event', 'Otp_sent', {
+        'NAEID':phone_number,
+      'send_to':'G-KJK84KP0LJ',
+      "Time":formattedTime
+  });
+      }
+    }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+}
+
+function userValidate(transactionid, user__get__otp) {
+  let formData = {
+      'transactionId': transactionid,
+      'token': user__get__otp
+    };
+  fetch('https://api.hav-g.in/auth/validate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => {
+        return response.json();
+      }).then(result => {
+        // console.log("result> ", result);
+        customer_id = result.accessToken;
+         // console.log("customer_id> ", customer_id);
+         if(result.status === 'FAILED') {
+           if($('.wrong___OTP').children().length == 1) {
+           $('[resend_otp_btn]').removeClass('mt-5').addClass('mt-3');
+           $('.form-control').addClass('red-color');
+           $('.wrong___OTP').append('<p class="red-color font-weight-bold text-center mt-5 mb-4" id="incorrect__otp">Incorrect OTP!</p>');
+           }
+        gtag('event', 'Login_Fail', {
+        'NAEID':phone_number,
+      'Event_label':"Login Fail",
+      'send_to':'G-KJK84KP0LJ',
+  });
+         }else {
+          $('#incorrect__otp').remove();
+          $(".template-index").addClass("login-index");
+           // Cookies.set("user__id", customer_id);
+           // localStorage.setItem('viewcontent', 'login');
+           // localStorage.setItem('user__id',customer_id);
+           // window.location.href = '/?view=login';
+              localStorage.removeItem('rid');
+              localStorage.removeItem('user-gender');
+              localStorage.removeItem('state/questions');
+              eraseCookie('Synthetic_ID');
+              removeCookie('Synthetic_ID', "/", "traya.health");
+              $.ajax({
+                type: "POST",
+                url: '/cart/clear.js',
+                success: function(){
+                  // checkout();
+                },
+                dataType: 'json'
+              });
+              CustomerInfo(customer_id, true);
+                       gtag('event', 'Login_successfull', {
+        'NAEID':phone_number,
+      'Event_label':"Login Successfull",
+      'send_to':'G-KJK84KP0LJ',
+  });
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+}
+
+let cart_price = 0;
+function CustomerInfo(accessToken, user_varified) {
+  var tokens = {
+    "Authorization": `Bearer ${accessToken}`
+  };
+  jQuery.ajax({
+    url: 'https://api.hav-g.in/getCustomerDetails',
+    dataType: 'json',
+    headers: tokens
+  }).done(function(data){
+    $('[modal__login]').addClass('after-login-popup');
+    $('.login_click').addClass('d-none');
+    $('.logout_click').removeClass('d-none'); 
+    localStorage.setItem("CstData", JSON.stringify(data));
+    // console.log("data",data);
+    $('#ourdia_login li').hide();
+    var type = data.Recommendations.Type;
+    var Genetic = data.Recommendations.Genetic;
+    var User_Analysis = data.User_Analysis;
+    var Recommendations = data.Recommendations;
+    var hair_goals = data.hair_goals;
+    var stageTE = data.User_Analysis.stage;
+    var experienced_one_year = data.User_Analysis.experienced_in_one_year;
+    var month_x = data.Recommendations.Max_months;
+    //var login_first_name = data.User_Analysis.first_name;
+    var id = localStorage.getItem('rid');
+    var login_gender = data.User_Analysis.gender;
+    var login_form_status = data.form_status;
+    var login_stage = data.User_Analysis.stage;
+    var latest_synthetic_id = data.latest_synthetic_id;
+      // console.log('latest_synthetic_id', latest_synthetic_id, 'login_gender', login_gender, 'login_form_status', login_form_status);
+
+      if(latest_synthetic_id && (login_form_status == "filled")){
+        id = latest_synthetic_id;
+      }else{
+        id = '';
+      }
+        if (id) {
+           $('.header__icons .assessment-btn').removeClass('d-lg-inline-block').addClass('d-none');
+          if(login_gender == 'F'){
+            $('.myresults a').attr('href','/pages/female-result' + '?id='+ latest_synthetic_id );
+             $('.myresult a').attr('href','/pages/female-result' + '?id='+ latest_synthetic_id );
+          }
+          if(login_gender == 'M'){
+             $('.myresults a').attr('href','/pages/result4' + '?id='+ latest_synthetic_id );
+              $('.myresult a').attr('href','/pages/result4' + '?id='+ latest_synthetic_id );
+          }
+             $('.myresults').removeClass('d-none');
+           $('.myresult').removeClass('d-none');
+           $('.myresult').addClass('d-inline-block');
+      } else {
+          $('.myresults').addClass('d-none');
+           $('.myresult').addClass('d-none');
+           $('.myresult').removeClass('d-inline-block');
+      }
+    let order__length = data.orders.length;
+        let customer_name = data.user.first_name;
+        let orderCount = data.latest_order_count, orders = data.orders;
+        let order_stage = data.User_Analysis.stage,
+        formStatus = data.form_status;
+        // console.log("order_stage>> ", order_stage, 'formStatus', formStatus);
+        localStorage.setItem('user__name',customer_name);
+        var user__information = localStorage.getItem('user__name');
+        if (user__information != ' ') {
+          $('.before__login').addClass('d-none');
+          $('.after-login').removeClass('d-none');
+          $('[user___name]').text(user__information);
+          $('[close__btn]').addClass('red-color');
+          $('[modal__login]').removeClass('modal-sm').addClass('after-login-lg');
+        }
+       // console.log("orders> ",orders);
+        // console.log("user_varified> ",user_varified);
+          //console.log('orders[0].status', orders[0].status);
+    if(formStatus.toLowerCase() == "semi-filled" || formStatus.toLowerCase() == "draft") {
+      localStorage.removeItem('viewcontent');
+      if(window.location.href != "https://traya.health/") {
+        window.location.href = "/";
+      }
+    } else {
+        if(orderCount >= 1 && user_varified){
+             localStorage.setItem('user__id',customer_id);
+          if(orders[0].status == 'void' && orders.length == 1) {
+            localStorage.setItem('viewcontent', 'login-lead');
+            window.location.href = '/?view=login-lead';
+          }else if(orders[0].status == 'void' && orders.length > 1) {
+            localStorage.setItem('viewcontent', 'login');
+            window.location.href = '/?view=login';
+          }else if(order_stage == 'Coin Size Patch') {
+            localStorage.setItem('viewcontent', '');
+            window.location.href = '/';
+          }
+          else if(order_stage == 'Stage-6') {
+           localStorage.setItem('viewcontent', '')
+            window.location.href = '/';
+          }
+          else {
+            localStorage.setItem('viewcontent', 'login');
+            window.location.href = '/?view=login';
+          }
+          return false;
+        }else if(orderCount >= 1){
+           $('[order__status]').removeClass("d-none");
+        }else if(orderCount != 1 && user_varified){
+          if(formStatus != 'semi-filled' || formStatus != 'draft') {
+            localStorage.setItem('viewcontent', 'Nologin');
+          }
+           if(order_stage == 'Coin Size Patch') {
+            localStorage.setItem('user__id',customer_id);  
+            window.location.href = '/';  
+           }
+             else if(order_stage == 'Stage-6') {
+            localStorage.setItem('user__id',customer_id);  
+            window.location.href = '/';  
+           }
+          else{
+            localStorage.setItem('user__id',customer_id); 
+            if(formStatus == 'semi-filled' || formStatus == 'draft') {
+              window.location.href = '/';
+            }else {
+              window.location.href = '/?view=login-lead';
+            } 
+          }
+          return false;
+        }
+        
+    var baseurl = '';
+  
+    if(login_gender == 'M') {
+      baseurl = `https://api.hav-g.in/dgReport/male?id=${latest_synthetic_id}`;
+    }else if(login_gender == 'F') {
+      baseurl = `https://api.hav-g.in/dgReport/female?id=${latest_synthetic_id}`;
+    }
+    UserDetails(baseurl);
+
+if (login_gender == 'M'){
+
+         let count=0;
+          if (stageTE == "Heavy Hair Fall Across The Head" || stageTE == "Heavy Hair Fall"){
+       for(var i=0; i < experienced_one_year.length; i++){
+        //console.log("experienced_one_year", experienced_one_year[i]);
+         let experienced_one = experienced_one_year[i];
+        //console.log("experienced_one", experienced_one);
+      if (experienced_one == "Severe Illness (Dengue, Malaria, Typhoid or Covid)" && count<4){
+    $('#login_Severe-Illness').css('display','flex');
+       // console.log("illness");
+         count++;
+      } 
+           if (experienced_one == "Heavy weight loss / heavy weight gain" && count<4){
+    $('#login_Weight-change').css('display','flex');
+              count++;
+        //console.log("weight-change");
+           }
+         if (experienced_one == "Surgery / heavy medication" && count<4){
+    $('#login_Surgery').css('display','flex');
+            count++;
+        //console.log("surgery");
+           }
+      } 
+  }
+  if (User_Analysis.dandruff_response == "No"){
+     $('#login_Dandruff').css('display','none');
+  }
+  else{
+     $('#login_Dandruff').css('display','flex');
+      count++;
+  }
+       if ((type == 1 || type==2 ) && Genetic == "Yes" && count<4){
+      $('#login_genetics').css('display','flex');
+
+      count++;
+    } 
+    if (JSON.parse(User_Analysis.stress) <1  && count<4){
+      $('#login_Stress').css('display','flex');
+      count++;
+    }
+    if (JSON.parse(User_Analysis.sleep) <1  && count<4){
+      $('#login_sleep').css('display','flex');
+      count++;
+    }
+    if (JSON.parse(User_Analysis.gut_health) <1  && count<4){
+      $('#login_digestion').css('display','flex');
+      count++;
+    }
+    if (Recommendations.Deficiency == "Yes"  && count<4){
+      $('#login_vitamin').css('display','flex');
+      count++;
+    }
+    if (Recommendations.Dieting == "Yes" && count<4){
+      $('#login_Weight-loss').css('display','flex');
+      count++;
+    }
+    if (count<4){
+      $('#login_nutrition').css('display','flex');
+      count++;
+    }
+    if (count<4){
+      $('#login_lifestyle').css('display','flex');
+      count++;
+    }
+    if (type === 5 && count<4) {
+      $('ul#ourdia li').hide();
+      $('#malfunction').css('display','flex');
+    }
+}
+        // $('.login_first_name').text(login_first_name);
+        $('.login_dyn_month').text(month_x);
+        if (month_x == '5'){
+          $('.traya_month_dynamic1').text('Month 1-2');
+          $('.traya_month_dynamic2').text('Month 3-4');
+          $('.traya_month_dynamic3').text('Month 5-6');
+        }
+        else if (month_x == '8'){
+        $('.traya_month_dynamic1').text('Month 1-3');
+          $('.traya_month_dynamic2').text('Month 4-5');
+          $('.traya_month_dynamic3').text('Month 6-8');
+    }
+        else if (month_x == '12'){
+        $('.traya_month_dynamic1').text('Month 1-3');
+          $('.traya_month_dynamic2').text('Month 4-6');
+          $('.traya_month_dynamic3').text('Month 7-12');
+    }
+        
+        if (login_gender == 'M'){
+              if (login_stage == 'Stage-1' || login_stage == 'Heavy Hair Fall Across The Head' || login_stage == "Heavy Hair Fall"){
+                $('.login_first_name').text("Anand");
+                $(".login_slide_desk_img img").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352729_1.png?v=1693815053");
+                $(".login_slide_mob_img img").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352740_1_1.png?v=1693813973");
+              $("img.banner_desk").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352729_57b012c1-fd12-4c19-b066-9f1e73ee7920.png?v=1692361835");
+                $("img.banner_mob").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102353358.png?v=1692361825");
+              }
+        else if (login_stage == 'Stage-2' || login_stage == 'Stage-3'){
+          $('.login_first_name').text("Sumit");
+                $(".login_slide_desk_img img").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352717.webp?v=1693815092");
+                $(".login_slide_mob_img img").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352721_1.png?v=1693813981");
+             $("img.banner_desk").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352717.jpg?v=1692276684");
+                $("img.banner_mob").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352716.png?v=1692289211");
+        }
+       else if (login_stage == 'Stage-4' || login_stage == 'Stage-5' || login_stage == 'Stage-6' || login_stage == 'Stage-7' || login_stage == 'Coin Size Patch'){
+           $('.login_first_name').text("Sumesh");      
+           $(".login_slide_desk_img img").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352727_1.png?v=1693815054");
+           $(".login_slide_mob_img img").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352739_1_db190228-f47c-41e5-9d01-63852281b4e5.png?v=1693813985");
+           $("img.banner_desk").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352727.png?v=1692361834");
+           $("img.banner_mob").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Rectangle_6324_3.png?v=1692361827");
+       }
+        }
+        
+        if (login_gender == 'F'){
+           $('.login_first_name').text("Swati");  
+                $(".login_slide_desk_img img").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352731_1.png?v=1693815053");
+                $(".login_slide_mob_img img").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352741_1_1.png?v=1693813977");
+               $("img.banner_desk").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352731.png?v=1692361832");
+                $("img.banner_mob").attr("src", "https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Rectangle_6324_2.png?v=1692361825");
+        }
+        if(orderCount >= 1){
+        let order__id = data.latest_order_display_id;
+        let orders__my = data.orders;
+        let diet__plan = data.user.diet_plan_link;
+          
+        let meta__data = data.meta,
+          reorder_link,orderStatus,trakingLink,caseID,talkToCoach,order_delivery_date,order_items,my_prescription;
+        var case__id = data?.User_Analysis?.case_id;
+        var caseuser__id = data.user_id;
+          //console.log('caseuser__id', caseuser__id);
+         
+        reorder_fetch(case__id);
+        
+        // console.log("sssubham>> ", order__id);
+        for(x in orders__my) {
+           var caseorder__id = orders__my[x].id;
+          // console.log('caseorder__id', caseorder__id);
+          if(orders__my[x]['order_display_id'] === order__id) {
+            // console.log("orders__my>>>>" ,orders__my[x]);
+            orderStatus = orders__my[x].status;
+             //console.log('orderStatus', orderStatus);
+            trakingLink = orders__my[x].tracking_url;
+            caseID = orders__my[x].case_id;
+            reorderBut = 'https://form.traya.health/nextcart/' + caseID;
+            talkToCoach = 'https://form.traya.health/pages/reschedule-slot/' + caseID;
+            my_prescription ='https://myrecords.traya.health/prescription?userId=' + caseuser__id + '&orderId=' + caseorder__id;
+            order_delivery_date = orders__my[x].delivery_date;
+            order_items = orders__my[x].order_meta.line_items;
+            orderbulk = orders__my[x].is_bulk_order;
+            orderbulkduration = orders__my[x].bulk_order_duration;
+            ordersingle = orders__my[x].is_single_order;
+          }
+        }
+    
+        // Kit Status
+          if(order_delivery_date != null){
+          if (orderbulk != false && orderbulkduration != null) {
+             var deleveryDate = new Date(order_delivery_date),
+               deleverdLastBefore = new Date;
+            var Overdays = dateDifference(deleverdLastBefore, deleveryDate);
+            var leftDays = (30*orderbulkduration - Overdays);
+            if(leftDays >= 0) {
+              let kit_status = "Your kit runs out in " + leftDays + " day.";
+              $('[kit-status]').removeClass('d-none');
+              $('[kit__status]').text(kit_status);
+            }
+            else {
+              let kit_status = "Your Kit is finished";
+              $('[kit-status]').removeClass('d-none');
+              $('[kit__status]').text(kit_status);
+            }
+          }
+          else if (ordersingle != false) {
+            var deleveryDate = new Date(order_delivery_date),
+               deleverdLastBefore = new Date;
+            var Overdays = dateDifference(deleverdLastBefore, deleveryDate);
+            var leftDays = (30 - Overdays);
+            if(leftDays >= 0) {
+              let kit_status = "Your kit runs out in " + leftDays + " day.";
+              $('[kit-status]').removeClass('d-none');
+              $('[kit__status]').text(kit_status);
+            }
+            else {
+              let kit_status = "Your Kit is finished";
+              $('[kit-status]').removeClass('d-none');
+              $('[kit__status]').text(kit_status);
+            }
+          }
+          else {
+            var deleveryDate = new Date(order_delivery_date),
+               deleverdLastBefore = new Date;
+            var Overdays = dateDifference(deleverdLastBefore, deleveryDate);
+            var leftDays = (30 - Overdays);
+
+            if(leftDays > 0) {
+              let kit_status = "Your kit runs out in " + leftDays + " day.";
+              $('[kit-status]').removeClass('d-none');
+              $('[kit__status]').text(kit_status);
+            }
+            else {
+              let kit_status = "Your Kit is finished";
+              $('[kit-status]').removeClass('d-none');
+              $('[kit__status]').text(kit_status);
+            }
+          }
+        }
+        $('[orderid]').text(order__id);
+          
+    // Order Status tracking conditions
+    // COD confirmed
+    if(orderStatus == 'in_progress' || orderStatus == 'pending_prescription'){
+       $('[COD_confirmed]').addClass("completed");
+       $('[order_placed]').addClass("completed");
+      $('[COD_confirmed]').find('[order-status-bdr]').addClass("active_order");
+      $('[COD_confirmed]').find('.dots').addClass("active_order");
+      $('[order_placed]').find('.dots').removeClass("active_dot").addClass('dots_covered');
+      $('[order_placed]').removeClass("active_status");
+      $('[COD_confirmed]').addClass("active_status");
+      $('[COD_confirmed]').find('.dots').addClass("active_dot");
+      $('[order___status]').text('Order Placed');
+    }
+    // Order assign_to_doctors 
+    // if(orderStatus == 'pending_prescription'){
+    //   $('[COD_confirmed]').find('[order-status-bdr]').addClass("active_order");
+    //   $('[assign_to_doctors]').find('[order-status-bdr]').addClass("active_order");
+    //   $('[order_placed]').find('.dots').removeClass("active_dot").addClass('dots_covered');
+    //   $('[COD_confirmed]').find('.dots').addClass("dots_covered");
+    //   $('[order_placed]').removeClass("active_status");
+    //   $('[assign_to_doctors]').addClass("active_status");
+    //   $('[assign_to_doctors]').find('.dots').addClass("active_dot");
+    //   $('[order___status]').text('Verified by Doctors');
+    //   $('.bordered').addClass('width');
+    // }
+
+    // Order shipping_pending
+    if(orderStatus == 'shipping_pending') {
+       $('[COD_confirmed]').addClass("completed");
+      $('[assign_to_doctors]').addClass("completed");
+      $('[shipping__pending]').addClass("completed");
+      $('[order_placed]').addClass("completed");
+      $('[COD_confirmed]').find('[order-status-bdr]').addClass("active_order");
+      $('[assign_to_doctors]').find('[order-status-bdr]').addClass("active_order");
+      $('[shipping__pending]').find('[order-status-bdr]').addClass("active_order");
+      $('[order_placed]').find('.dots').removeClass("active_dot").addClass('dots_covered');
+      $('[COD_confirmed]').find('.dots').addClass("dots_covered");
+      $('[assign_to_doctors]').find('.dots').addClass("dots_covered");
+      $('[order_placed]').removeClass("active_status");
+      $('[shipping__pending]').addClass("active_status");
+      $('[shipping__pending]').find('.dots').addClass("active_dot");
+      $('[order___status]').text('Verified by Doctors');
+    }
+
+    // Order Track Here
+    if(orderStatus == 'shipped'){
+      $('[COD_confirmed]').addClass("completed");
+      $('[assign_to_doctors]').addClass("completed");
+      $('[shipping__pending]').addClass("completed");
+      $('[track_here]').addClass("completed");
+      $('[order_placed]').removeClass("completed");
+      $('[COD_confirmed]').find('[order-status-bdr]').addClass("active_order");
+      $('[assign_to_doctors]').find('[order-status-bdr]').addClass("active_order");
+      $('[shipping__pending]').find('[order-status-bdr]').addClass("active_order");
+      $('[track_here]').find('[order-status-bdr]').addClass("active_order");
+      $('[order_placed]').find('.dots').removeClass("active_dot").addClass('dots_covered');
+      $('[COD_confirmed]').find('.dots').addClass("dots_covered");
+      $('[assign_to_doctors]').find('.dots').addClass("dots_covered");
+      $('[shipping__pending]').find('.dots').addClass("dots_covered");
+      $('[order_placed]').removeClass("active_status");
+      $('[track_here]').addClass("active_status");
+      $('[track_here]').find('.dots').addClass("active_dot");
+       $('[track_here]').addClass("completed");
+      $('[order___status]').text('Order shipped');
+    }
+    
+    // Order Delivered
+    if(orderStatus == 'delivered'){
+      // $('[COD_confirmed]').addClass("completed");
+      // $('[assign_to_doctors]').addClass("completed");
+      // $('[shipping__pending]').addClass("completed");
+      // $('[track_here]').addClass("completed");
+      // $('[order_placed]').addClass("completed");
+      // $('[order__delivered]').addClass("completed");
+      // $('[COD_confirmed]').find('[order-status-bdr]').addClass("active_order");
+      // $('[assign_to_doctors]').find('[order-status-bdr]').addClass("active_order");
+      // $('[shipping__pending]').find('[order-status-bdr]').addClass("active_order");
+      // $('[track_here]').find('[order-status-bdr]').addClass("active_order");
+      // $('[order__delivered]').find('[order-status-bdr]').addClass("active_order");
+      // $('[order_placed]').find('.dots').removeClass("active_dot").addClass('dots_covered');
+      // $('[COD_confirmed]').find('.dots').addClass("dots_covered");
+      // $('[assign_to_doctors]').find('.dots').addClass("dots_covered");
+      // $('[shipping__pending]').find('.dots').addClass("dots_covered")
+      // $('[shipping__pending]').find('.dots').addClass("dots_covered")
+      // $('[COD_confirmed]').find('.dots').addClass("dots_covered");
+      // $('[assign_to_doctors]').find('.dots').addClass("dots_covered");
+      // $('[track_here]').find('.dots').addClass("dots_covered");
+      // $('[track_here]').find('.dots').addClass("dots_covered");
+      // $('[order__delivered]').find('.dots').addClass("dots_covered");
+      // $('[order_placed]').removeClass("active_status");
+      // $('[order__delivered]').addClass("active_status");
+      // $('[order__delivered]').find('.dots').addClass("active_dot");
+      // $('[order___status]').text('Delivered');
+      $('[order__status]').addClass('d-none');
+      $('.template-index.login .slideshow_relative').css('padding-top', '40px');
+    }
+  // console.log(orderStatus);
+          
+          var wahts_link = 'https://api.whatsapp.com/send/?phone=918828006272&text=Hey%21+I+would+like+to+know+more+about+Traya&type=phone_number&app_absent=0';
+   //    console.log(wahts_link);
+      // if(orderStatus != 'delivered'){
+      //     $('[talk_to_coach]').attr("href", wahts_link);
+      //     }else{
+      //     $('[talk_to_coach]').attr("href", talkToCoach);
+      // }
+          $('[login_prescription]').attr("href", my_prescription);
+           $('[talk_to_coach]').attr("href", talkToCoach);
+          // console.log('trakingLink', trakingLink);
+          if(trakingLink != null && (trakingLink.includes('clickpost.ai') || trakingLink.includes('ithinklogistics'))) {
+            $('[track_url]').attr('href', trakingLink);
+          }else {
+            $('[track_url]').hide();
+          }
+          
+       if(diet__plan != null){
+        $('[view_diet_plan]').attr("href", diet__plan);
+       }
+       if(caseID != null){
+         $('[talk_to_coach]').removeClass("invisible");
+       }
+        // console.log('cart__link>>>', meta__data.cart_link);
+        // console.log('first>>>', meta__data.first_order_cart_link);
+      if(meta__data != null && ((meta__data.cart_link != false) && (meta__data.cart_link != undefined))) { 
+        reorder_link = meta__data.cart_link;
+      }else if((meta__data.cart_link == false) || (meta__data.cart_link == undefined)) {
+        reorder_link = meta__data.first_order_cart_link;
+      }else {
+        reorder_link = ' ';
+      }
+       //  let ref = reorder_link.replace('$1', '/?');
+       //  ref = ref.replace('$2', '?');
+       //  $('[reorder__btn]').attr("href", reorderBut);
+       //   if(reorder_link != ' '){
+       //   $('[reorder__btn]').removeClass("d-none");
+       // }
+     }
+    }
+  });
+}
+  
+$(document).ready(function() {
+   let storage_user_id = localStorage.getItem('user__id');
+  if(storage_user_id != null && storage_user_id != 'undefined'){
+     CustomerInfo(storage_user_id);
+  }
+    $('.send_otp').click(function(e){
+    e.preventDefault();
+      let phone__number = $("#phone_number").val();
+      let phone = "+91" + phone__number;
+      if (phone === '+91'){
+        if($('.phone--number').children().length == 0) {
+          $('.phone--number').append('<p class="font-weight-bold red-color" id="empty_phone__number"><sup>**</sup>Please enter a valid mobile number</p>');
+        }
+        }
+      else {
+         userOTP(phone);
+      }
+    });
+    $('body').delegate('#phone_number','keyup',function() {  
+         let phoneNum = $("#phone_number").val();
+      // var phoneNum = $(this).val().replace(/\s/g,'');
+       var phone_regex = /^[6789][0-9]{4}([ ]?)[0-9]{5}$/;
+       if(phone_regex.test(phoneNum)) {
+         $('#send_otp_btn').prop('disabled',false);
+          $('#phone_number').removeClass("login_phone_focus");
+       } else{
+            $('#send_otp_btn').prop('disabled',true);
+             $('#phone_number').focus();
+               $('#phone_number').addClass("login_phone_focus");
+                $('.EP_error_text').show();
+            }
+    });
+    $('.login_btn').click(function(e){
+    e.preventDefault();
+      let user__get__otp = ($('.form-control1').val()+$('.form-control2').val()+$('.form-control3').val()+$('.form-control4').val()+$('.form-control5').val()+$('.form-control6').val());
+      // console.log("transactionId>>", transactionId, user__get__otp);
+      userValidate(transactionId, user__get__otp);
+    });  
+     $('#resendButton').click(function(e){
+       e.preventDefault();
+       let phonenum = $("#resend_phone").text();
+       userOTP(phonenum);
+       $("#resendButton").attr("disabled", true);
+       $(".otp_msg").show();
+     });
+});
+ 
+$('.login__popup').bind("DOMSubtreeModified",function(){
+    let popupState = $(this).css('display');
+    if(popupState == "none"){
+     var phone = $('#phone_number').val("");
+      $('#error_text, #incorrect__otp, #empty_phone__number').remove();
+      $('.form-control').val('');
+      $(".enter_otp, .login_btn").hide();
+      $(".enter_mob, .send_otp").show();
+      $('.msg_text').removeClass('invisible mt-1 mb-1').addClass('mt-5 mb-3');
+      $('#phone_number').attr('readonly', false);
+      $("#send_otp_btn").removeClass('d-none');
+      $('#send_otp_btn').prop('disabled',false);
+      $('#go_home_btn').addClass('d-none');
+      $('.form-control').removeClass('red-color');
+    }
+});
+    // OTP read
+document.addEventListener("DOMContentLoaded", function(event) {
+   function OTPInput() {
+       const editor = document.getElementById('digit-1');
+       editor.onpaste = pasteOTP;
+       const inputs = document.querySelectorAll('#otp > *[id]');
+       for (let i = 0; i < inputs.length; i++) { 
+           inputs[i].addEventListener('input', function(event) { 
+               if(!event.target.value || event.target.value == '' ){
+                   // if(event.target.previousSibling.previousSibling){
+                   //     event.target.previousSibling.previousSibling.focus();    
+                   // }
+               
+               }else{ 
+                   // if(event.target.nextSibling.nextSibling){
+                   //     event.target.nextSibling.nextSibling.focus();
+                   // }
+               }               
+           });             
+       } 
+   } 
+   OTPInput(); 
+});
+
+function pasteOTP(event){
+   event.preventDefault();
+   let elm = event.target;
+   let pasteVal = event.clipboardData.getData('text').split("");
+   if(pasteVal.length > 0){
+       while(elm){
+           elm.value = pasteVal.shift();
+           elm = elm.nextSibling.nextSibling;
+       }
+   }
+}
+// End OTP Read
+
+  // resend btn by Shubham
+function timer(timeleft) {
+   if(timeleft > 0){
+     // console.log("downloadTimer",downloadTimer);
+     clearInterval(downloadTimer);
+     downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("resendcountdowntimer").textContent = timeleft;
+    if(timeleft == 0) {
+        clearInterval(downloadTimer);
+      document.querySelector('.otp_msg').style.display = "none"; 
+      document.getElementById("resendButton").removeAttribute("disabled");
+    }
+    },1000);
+    }else{clearInterval(downloadTimer)}
+  };
+
+  // login template By Shubham
+
+function index_login() {
+    fetch('/?view=login', {
+       credentials: 'same-origin',
+       method: 'GET'
+    }).then(function (content) {
+       content.text().then(function (html) {
+         // console.log(html);
+          $('body').html(html);
+       });
+    });
+};
+
+$(document).ready(function() {
+    $('.login_click').click(function(){
+    $(".menu-container").find('.js-mobile-nav-toggle').trigger('click');
+    }); 
+  // logout function
+    $('[logout__btn], .logout_click').click(function() {
+      localStorage.removeItem('viewcontent');
+      localStorage.removeItem('user__id');
+      localStorage.removeItem('user__name');
+      localStorage.removeItem('rid');
+      localStorage.removeItem('user-gender');
+      eraseCookie('Synthetic_ID');
+      removeCookie('Synthetic_ID', "/", "traya.health");
+      localStorage.removeItem('state/questions');
+        $('.logout_click').addClass('d-none');
+        $('.login_click').removeClass('d-none');
+      window.location.href = '/';
+  
+      $.ajax({
+        type: "POST",
+        url: '/cart/clear.js',
+        success: function(){
+          // checkout();
+        },
+        dataType: 'json'
+      });
+    });
+    $('#go_home_btn').click(function(e) {
+      e.preventDefault();
+      takehairtest();
+    });
+    $('.form-control').click(function() {
+      $('.form-control').removeClass('red-color');
+    });
+
+    $("#otp").find("input").each(function () {
+    $(this).on("keyup", function (event) {
+        var parent = $($(this).parent());
+        if (event.keyCode == 8 || event.keyCode == 37) {
+            var prev = parent.find("input#" + $(this).data("previous"))
+            if (prev.length) {
+                $(prev).select();
+            }
+        } else if ((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode >= 65 && event.keyCode <= 90) || (event.keyCode >= 96 && event.keyCode <= 105) || event.keyCode === 39) {
+            var next = parent.find("input#" + $(this).data("next"));
+            if (next.length) {
+                $(next).select();
+            }
+        }
+    });
+});
+
+});
+
+// date difference 
+function dateDifference(date2, date1) {
+  const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+  const utc1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
+  const utc2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
+  return Math.floor((utc2 - utc1) / _MS_PER_DAY);
+}
+
+// Refresh Function
+function refresh() {
+  window.location.href = '/';
+}
+  
+// Take Hair Test Function 
+function takehairtest() {
+  window.location.href = 'https://form.traya.health/questions?cohort=1&location=TopBar';
+}
+
+// dont enter special characters
+function alpha(e) {
+    var k;
+    document.all ? k = e.keyCode : k = e.which;
+    return ((k >= 48 && k <= 57));
+}
+
+var inputenter = document.getElementById("phone_number");
+inputenter.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("send_otp_btn").click();
+  }
+});
+
+var otpenter = document.getElementById("otp");
+otpenter.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("login_btn").click();
+  }
+});
+
+function reorder_fetch(caseid) {
+  // fetch(`https://api.hav-g.in/repeat-link-v3/${caseid}`, {
+  //   method: 'GET',
+  //   headers: {
+  //     "Authorization": "Bearer d7ef603e-71ea-44a1-93f2-2bacd08c4a90"
+  //   }
+  // }).then((response) => {
+  //   return response.json();
+  // }).then((result) => {
+  //     var reorder_btn_link = '';
+  //     if(result.Error == "Wrong Token") {
+  //       reorder_btn_link = `https://form.traya.health/nextcart/${caseid}`;
+  //     }else if(!result.Error) {
+  //       let url = result?.url;
+  //       reorder_btn_link = `/pages/Result-repeat?${url}`;
+  //       console.log("reorder_btn_link",reorder_btn_link);
+  //     }
+  //     $('[reorder__btn]').attr("href", reorder_btn_link);
+  //     $('[reorder__btn]').removeClass("d-none");
+  // }).catch((error) => {
+  //   console.log('error', error);
+  //   let failed_reorder_btn_link= `https://form.traya.health/nextcart/${caseid}`;
+  //     $('[reorder__btn]').attr("href", failed_reorder_btn_link);
+  //     $('[reorder__btn]').removeClass("d-none");
+  // });
+  $('[reorder__btn]').attr("href", `https://form.traya.health/recommendedcart/${caseid}?utm_source=website&utm_medium=post_login&utm_campaign=reorder`);
+  $('[reorder__btn]').removeClass("d-none");
+}
+
+function UserDetails(baseurl) {
+  fetch(baseurl, {
+    method: 'GET',
+    headers: {
+      "Authorization": `Bearer d7ef603e-71ea-44a1-93f2-2bacd08c4a90`
+    }
+  }).then((response) => {
+    return response.json();
+  }).then((response) => {
+    // console.log('response 807', response);
+    var gender = response?.User_Analysis?.gender;
+    var cart_price = response?.cart_price;
+    console.log(cart_price, 'prices');
+    
+    if(gender == 'F' || gender == 'f') {
+       var primaryRootcause = response.root_causes?.primaryRootCause;
+     var defaultRootcause = response.root_causes?.defaultRootCause;
+     for(var i=0; i < primaryRootcause.length; i++){
+      // console.log("primaryRootcause", primaryRootcause[i].title);
+       let itemvalue = primaryRootcause[i].title;
+       if (itemvalue == 'Pregnancy' )  {
+             $('#login_Pregnancy').css('display','flex');
+         
+       } 
+       if (itemvalue == 'Post Pregnancy' )  {
+             $('#login_Post-Pregnancy').css('display','flex');
+         
+       } 
+        if (itemvalue == 'PCOS' )  {
+             $('#login_Pcos').css('display','flex');
+            
+       } 
+       if (itemvalue == 'Hormonal Imbalance' )  {
+             $('#login_FHormonal').css('display','flex');
+             
+       } 
+        if (itemvalue == 'Sleep' )  {
+             $('#login_FSleep').css('display','flex');
+              
+       } 
+       if (itemvalue == 'Genetics' )  {
+             $('#login_Fgenetics').css('display','flex');
+              
+       } 
+       if (itemvalue == 'Stressmoderate')  {
+             $('#login_FStress').css('display','flex');
+             
+       } 
+       if (itemvalue == 'Deficiency' )  {
+             $('#login_Fvitamin').css('display','flex');
+             
+       } 
+       if (itemvalue == 'Digestion' )  {
+             $('#login_Fdigestion').css('display','flex');
+              
+       } 
+      
+       if (itemvalue == 'Thyroid' )  {
+             $('#login_FThyroid').css('display','flex');
+             
+       } 
+       if (itemvalue == 'Stresslow' )  {
+             $('#login_FStress').css('display','flex');
+             
+       } 
+       if (itemvalue == 'Menopause' )  {
+           // console.log(itemvalue);
+             $('#login_FMenopause').css('display','flex');
+              
+       } 
+       if (itemvalue == 'Stresshigh' )  {
+             $('#login_FStress').css('display','flex');
+              
+       } 
+       if (itemvalue == 'Stress' )  {
+             $('#login_FStress').css('display','flex');
+              
+       } 
+        if (itemvalue == 'Metabolism')  {
+             $('#login_Metabolism').css('display','flex');
+              
+       } 
+        if (itemvalue == 'Constipation' )  {
+             $('#login_Fconstipation').css('display','flex');
+               
+       } 
+       if (itemvalue == 'Autoimmune' )  {
+             $('#login_Fautoimmune').css('display','flex');
+                
+       } 
+       if (itemvalue == 'Gut' )  {
+             $('#login_Fgut').css('display','flex');
+              
+       } 
+        if (itemvalue == 'Lifestyle' )  {
+             $('#login_Flifestyle').css('display','flex');
+             
+       } 
+         if (itemvalue == 'Nutrition' )  {
+             $('#login_Fnutrition').css('display','flex');
+             
+       } 
+          
+        }
+   let count=0;
+     for(var i=0; i < defaultRootcause.length; i++){
+      // console.log("defaultRootcause", defaultRootcause[i].title);
+           let itemvalue = defaultRootcause[i].title;
+      
+       if (itemvalue == 'Pregnancy' && count<3 )  {
+             $('#login_Pregnancy').css('display','flex');
+                count++;
+       } 
+       if (itemvalue == 'Post Pregnancy' && count<3 )  {
+             $('#login_Post-Pregnancy').css('display','flex');
+         
+       } 
+        if (itemvalue == 'PCOS' && count<3 )  {
+             $('#login_Pcos').css('display','flex');
+                count++;
+       } 
+       if (itemvalue == 'Hormonal Imbalance' && count<3 )  {
+             $('#login_FHormonal').css('display','flex');
+                count++;
+       } 
+        if (itemvalue == 'Sleep' && count<3 )  {
+             $('#login_FSleep').css('display','flex');
+                count++;
+       } 
+       if (itemvalue == 'Genetics' && count<3 )  {
+             $('#login_Fgenetics').css('display','flex');
+                count++;
+       } 
+       if (itemvalue == 'Stressmoderate' && count<3 )  {
+             $('#login_FStress').css('display','flex');
+                count++;
+       } 
+       if (itemvalue == 'Deficiency' && count<3 )  {
+             $('#login_Fvitamin').css('display','flex');
+                count++;
+       } 
+       if (itemvalue == 'Digestion' && count<3 )  {
+             $('#login_Fdigestion').css('display','flex');
+                count++;
+       } 
+      
+       if (itemvalue == 'Thyroid' && count<3 )  {
+             $('#login_FThyroid').css('display','flex');
+                count++;
+       } 
+       if (itemvalue == 'Stresslow' && count<3 )  {
+             $('#login_FStress').css('display','flex');
+                count++;
+       } 
+       if (itemvalue == 'Menopause' && count<3 )  {
+           // console.log(itemvalue);
+             $('#login_FMenopause').css('display','flex');
+                count++;
+       } 
+       if (itemvalue == 'Stresshigh' && count<3 )  {
+             $('#login_FStress').css('display','flex');
+                count++;
+       } 
+        if (itemvalue == 'Stress' && count<3 )  {
+             $('#login_FStress').css('display','flex');
+                count++;
+       } 
+        if (itemvalue == 'Metabolism' && count<3 )  {
+             $('#login_Metabolism').css('display','flex');
+                count++;
+       } 
+        if (itemvalue == 'Constipation' && count<3 )  {
+             $('#login_Fconstipation').css('display','flex');
+                count++;
+       } 
+       if (itemvalue == 'Autoimmune' && count<3 )  {
+             $('#login_Fautoimmune').css('display','flex');
+                count++;
+       } 
+       if (itemvalue == 'Gut' && count<3 )  {
+             $('#login_Fgut').css('display','flex');
+                count++;
+       } 
+        if (itemvalue == 'Lifestyle' && count<3 )  {
+             $('#login_Flifestyle').css('display','flex');
+                count++;
+       } 
+         if (itemvalue == 'Nutrition' && count<3 )  {
+             $('#login_Fnutrition').css('display','flex');
+                count++;
+       } 
+          
+        }
+  }
+    if(gender == 'M' || gender == 'm') {
+      var { Calm_Therapy_Booster_Oil, Dandruff_Therapy_Booster_Oil, Genetic, Ghrit, Growth_Therapy_Booster_Oil, Gut_shuddi, Digest_Boost, Hair_ras, Hair_vitamin, Health_tatva, Kevon, Minoxidil, Nasal, Nasya, RCP, Scalp_Therapy_Booster_Oil, Scalp_oil, Serum, Shampoo } = response?.Recommendations;
+      var recProducts = [];
+      if(Health_tatva === 'Yes') {
+        recProducts.push({
+          'handle': 'herbal-tablets'
+        });
+      }
+      if(Gut_shuddi === 'Yes') {
+        recProducts.push({
+          'handle': 'avipattikar-digestion-tablets'
+        });
+      }
+      if(Minoxidil === 'Yes') {
+        recProducts.push({
+          'handle': 'traya-minoxidil-5'
+        });
+      }
+      	  if(Shampoo === 'Normal') {
+        recProducts.push({
+          'handle': 'shampoo'
+        });
+      }
+	  if(Shampoo === 'Anti dandruff') {
+        recProducts.push({
+          'handle': 'anti-dandruff-shampoo'
+        });
+      }
+      if(Hair_vitamin === 'Yes') {
+        recProducts.push({
+          'handle': 'hair-vitamin-with-dht-blockers-biotin-and-bhringraj'
+        });
+      }
+	  if(Serum === 'Yes') {
+        recProducts.push({
+          'handle': 'recap-serum-for-hair-fall-control'
+        });
+      }
+	  if(RCP === 'Yes') {
+        recProducts.push({
+          'handle': 'recap-serum-for-hair-fall-control'
+        });
+      }
+	  if(Hair_ras === 'Yes') {
+        recProducts.push({
+          'handle': 'hair-growth-herbs'
+        });
+      }
+	  if(Calm_Therapy_Booster_Oil === 'Yes') {
+        recProducts.push({
+          'handle': 'scalp-oil-with-calm-oil-shot-50ml'
+        });
+      }
+	  if(Dandruff_Therapy_Booster_Oil === 'Yes') {
+        recProducts.push({
+          'handle': 'scalp-oil-with-dandruff-oil-shot-50ml'
+        });
+      }
+	  if(Growth_Therapy_Booster_Oil === 'Yes') {
+        recProducts.push({
+          'handle': 'scalp-oil-with-growth-oil-shot-50ml'
+        });
+      }
+      // it was added along with the below condition if something breaks add this below condition back
+      // if(Scalp_oil === 'bergamot and ylang ylang' || Scalp_Therapy_Booster_Oil === 'Yes') {
+	  if(Scalp_Therapy_Booster_Oil === 'Yes') {
+        recProducts.push({
+          'handle': 'scalp-oil-with-scalp-health-oil-shot-50ml'
+        });
+      }
+	  if(Kevon === 'Yes') {
+        recProducts.push({
+          'handle': 'ketoconazole-2-night-lotion'
+        });
+      }
+	  if(Nasya === 'Yes') {
+        recProducts.push({
+          'handle': 'shatavari-ghrita'
+        });
+      }
+	  if(Digest_Boost === 'Yes') {
+        recProducts.push({
+          'handle': 'digest-boost-for-improved-digestive-ability-traya-health'
+        });
+      }
+      if(recProducts.length != 0) {
+        productDetails(recProducts, gender);
+      }
+    }else if(gender == 'F' || gender == 'f') {
+      var { her_vitamin, na_minox, Anti_danruff_shampoo, Calm_Therapy_Booster_Oil, Dandruff_Therapy_Booster_Oil, Genetic, Ghrit, Growth_Therapy_Booster_Oil, Gut_shuddi, Digest_Boost, Hair_ras, Hair_vitamin, Health_tatva, Kevon, Minoxidil, Nasal, Nasya, RCP, Scalp_Therapy_Booster_Oil, Scalp_oil, Serum, Shampoo, Defence_shampoo, Defence_shampoo_180ml, meno_santulan, mom_santulan, pcos_santulan, thyro_santulan, Nourish_Hair_Oil } = response?.Recommendations;
+      var widening = response?.User_Analysis.hair_fall_stage, dandruff_case = response?.User_Analysis.describe_dandruff;
+      var recProducts = [];
+      if(Health_tatva === 'Yes') {
+        recProducts.push({
+          'handle': 'herbal-tablets'
+        });
+      }
+      if(her_vitamin === 'Yes') {
+        recProducts.push({
+          'handle': 'hair-vitamin-for-her'
+        });
+      }
+	  if(Gut_shuddi === 'Yes') {
+        recProducts.push({
+          'handle': 'avipattikar-digestion-tablets'
+        });
+      }
+       if(Defence_shampoo === 'Yes') {
+        recProducts.push({
+          'handle': 'shampoo'
+        });
+      }
+      if(Defence_shampoo_180ml == "Yes") {
+        recProducts.push({
+            'handle': 'defence-shampoo-180-ml'
+        });
+      }
+	  if(Minoxidil === 'Yes') {
+        recProducts.push({
+          'handle': 'minoxidil-2'
+        });
+      }
+	  if(Shampoo === 'Normal') {
+        recProducts.push({
+          'handle': 'shampoo'
+        });
+      }
+	  if(Shampoo === 'Anti dandruff') {
+        recProducts.push({
+          'handle': 'anti-dandruff-shampoo'
+        });
+      }
+	  if(Anti_danruff_shampoo === 'Yes') {
+        recProducts.push({
+          'handle': 'anti-dandruff-shampoo'
+        });
+      }
+	  if(pcos_santulan === 'Yes') {
+        recProducts.push({
+          'handle': 'pcos-santulan-for-pcos-and-hormone-related-hair-loss'
+        });
+      }
+	  if(meno_santulan === 'Yes') {
+        recProducts.push({
+          'handle': 'meno-santulan-tablets-for-menopause-support-and-menopausal-hair-fall'
+        });
+      }
+	  if(mom_santulan === 'Yes') {
+        recProducts.push({
+          'handle': 'mom-santulan-tablets-for-hair-fall-in-post-pregnancy-or-post-childbirth-period'
+        });
+      }
+	  if(thyro_santulan === 'Yes') {
+        recProducts.push({
+          'handle': 'thyro-santulan-tablets-for-supporting-thyroid-health'
+        });
+      }
+      // if(Hair_vitamin === 'Yes') {
+      //   recProducts.push({
+      //     'handle': 'hair-vitamin-with-dht-blockers-biotin-and-bhringraj'
+      //   });
+      // }
+      if(na_minox === "Yes") {
+        recProducts.push({
+          'handle': 'minoxidil-2-alcohol-free-advanced-lipid-technology-for-improved-hair-growth-60-ml'
+        });
+      }
+	  if(Serum === 'Yes') {
+        recProducts.push({
+          'handle': 'hair-vitamins'
+        });
+      }
+	  if(Hair_ras === 'Yes') {
+        recProducts.push({
+          'handle': 'hair-growth-herbs'
+        });
+      }
+	  if(Scalp_oil === 'Yes' || Scalp_oil === 'bergamot and ylang ylang') {
+        recProducts.push({
+          'handle': 'herbal-hair-oil'
+        });
+      }
+	  if(Kevon === 'Yes') {
+        recProducts.push({
+          'handle': 'ketoconazole-2-night-lotion'
+        });
+      }
+	  if(Nasya === 'Yes') {
+        recProducts.push({
+          'handle': 'shatavari-ghrita'
+        });
+      }
+	  if(Digest_Boost === 'Yes') {
+        recProducts.push({
+          'handle': 'digest-boost-for-improved-digestive-ability-traya-health'
+        });
+      }
+      if(Nourish_Hair_Oil == "Yes" && (widening == 'No widening' || widening == 'Starting to see widening') && dandruff_case == 'No') {
+        recProducts.push({
+          'handle': 'nourish-hair-oil-suitable-for-all-hair-types-100ml-with-argan-oil-castor-oil-rosemary-extract'
+        });
+      } else {
+        if(Calm_Therapy_Booster_Oil === 'Yes') {
+          recProducts.push({
+            'handle': 'scalp-oil-with-calm-oil-shot-100ml'
+          });
+        }
+  	   if(Dandruff_Therapy_Booster_Oil === 'Yes') {
+          recProducts.push({
+            'handle': 'scalp-oil-with-dandruff-oil-shot-100ml'
+          });
+        }
+  	   if(Growth_Therapy_Booster_Oil === 'Yes') {
+          recProducts.push({
+            'handle': 'scalp-oil-with-growth-oil-shot-100ml'
+          });
+        }
+  	   if(Scalp_Therapy_Booster_Oil === 'Yes') {
+          recProducts.push({
+            'handle': 'scalp-oil-with-scalp-health-oil-shot-100ml'
+          });
+        }
+      }
+	   if(RCP === 'Yes') {
+        recProducts.push({
+          'handle': 'recap-serum-for-hair-fall-control'
+        });
+      }
+      if(recProducts.length != 0) {
+        productDetails(recProducts, gender);
+      }
+    }
+  }).catch((error) => {
+    console.log('Error: ', error);
+  });
+}
+var variantId = [];
+function productDetails(products, gender) {
+  products.forEach((product) => {
+    fetch(`/products/${product.handle}.js`)
+    .then((response) => {
+      return response.json();
+    }).then((response) => {
+      //console.log('response',response);
+      if(gender == 'F' || gender == 'f') {
+          $('.FLogin-product-results').show();
+      if(response.title == 'Minoxidil 5% Hair Growth Serum for Hair Fall Control (60 ml)'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/minoxdi-5.webp?v=1678098085`
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/minoxidil-5.webp?v=1678098080`;
+      }
+      if(response.title == 'Hair Vitamin with DHT Blockers | Biotin and Bhringraj'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/mob-hair-vitamin.webp?v=1678098388`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/hair-vitamin.webp?v=1678098158`;
+      }
+      if(response.handle == 'hair-vitamin-with-dht-blockers-biotin-and-bhringraj'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/mob-hair-vitamin.webp?v=1678098388`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/hair-vitamin.webp?v=1678098158`;
+      }
+      if(response.handle == 'minoxidil-2-alcohol-free-advanced-lipid-technology-for-improved-hair-growth-60-ml'){
+        var resultImg = `//cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102353668_f150090e-7f37-4c50-b436-ab8a3edecee1.webp`;
+        var resultImgdesk = `//cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353011.png`;
+      }
+      if(response.handle == 'hair-vitamin-for-her'){
+        var resultImg = `//cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102353646_1.webp`;
+        var resultImgdesk = `//cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353015_6c9fed4a-f0d9-4a45-95cd-5eb8277db467.png`;
+      }
+      if(response.title == 'Hair Ras Ayurvedic Hair Herbs | 100% Natural Hair Supplement with Bhringraj'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/hair-ras.webp?v=1678098446`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/hair-ras-main.webp?v=1678098440`;
+      }
+      
+        if(response.handle == 'scalp-oil-with-scalp-health-oil-shot-100ml'){
+          var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102353713.webp?v=1718977511`;
+          var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Rectangle_6193.webp?v=1718974743`;
+        }
+        if(response.handle == 'scalp-oil-with-growth-oil-shot-100ml'){
+          var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102353712.webp?v=1718977511`;
+          var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353529.webp?v=1718974743`;
+        }
+        if(response.handle == "nourish-hair-oil-suitable-for-all-hair-types-100ml-with-argan-oil-castor-oil-rosemary-extract") {
+          var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102353632.webp`;
+          var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353516.png`;
+        }
+        if(response.handle == 'scalp-oil-with-dandruff-oil-shot-100ml'){
+          var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102353710.webp?v=1718977511`;
+          var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353526.webp?v=1718974743`;
+        }
+        if(response.handle == 'scalp-oil-with-calm-oil-shot-100ml'){
+          var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102353711.webp?v=1718977511`;
+          var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353527.webp?v=1718974743`;
+        }
+      if(response.handle == 'digest-boost-for-improved-digestive-ability-traya-health'){
+          var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Digest-food.webp?v=1678098808`;
+          var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/digest_food.webp?v=1678098794`;
+        }
+      if(response.title == 'Health Tatva for Energy | Absorption | Immunity | Fatigue'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/tatva.webp?v=1678098851`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/health-tatva.webp?v=1678098842`;
+      }
+      if(response.title == 'Recap Serum for Better Scalp Health | Contains Redensyl, Procapil, and Capixyl (30 ml)'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Recap_mobile_version.webp?v=1690458943`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Recap_desktop_version.webp?v=1690458943`;
+      }
+      if(response.title == 'Minoxidil 2% Hair Growth Serum for Hair Fall Control (60 ml)'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/minoxidil-2.webp?v=1678098949`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/minoxil2.webp?v=1678098962`;
+      }
+      if(response.title == 'Gutt Shuddhi - Natural Supplement for Improved Digestion and Gut Health'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/gutt--suddhi.webp?v=1678099050`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/gutt-suddhi.webp?v=1678099042`;
+      }
+      if(response.title == 'Traya Nasal Drops with Shatavari for Nourishing Hair Follicles'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/nasal-drop.webp?v=1678099093`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/nasal-drops.webp?v=1678099083`;
+      }
+      if(response.title == 'Defence shampoo | Mild Shampoo with Biotin (100 ml)'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353009.webp?v=1678099191`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/defence-shampoo.webp?v=1678099154`;
+      }
+      if(response.title == 'Defence shampoo | Mild Shampoo with Biotin (180 ml)'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group-102352879.webp?v=1719206166`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352885.webp?v=1719316541`;
+      }
+      if(response.title == 'Anti-Dandruff Shampoo with Ichthammol & Aloevera | Paraben Free'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/dandruff-shampoo.webp?v=1678099427`
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/anti-dandruff-shampoo.webp?v=1678099421`;
+      }
+      if(response.title == 'Scalp Controller | Plant Based Dandruff Treatment for Itchy Scalp'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/dandruff-therapy-mob.png?v=1678940170`
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/dandruff-therapy.png?v=1678940167`;
+      }
+      if(response.title == 'Anti-Dandruff Night Lotion'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/antidandruff-night-lotion.webp?v=1678099571`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/anti-dandruff-night-lotion.webp?v=1678099550`;
+      }
+      
+// if(response.title == 'Kevon 2% Anti-fungal lotion for heavy dandruff'){
+//         var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352731.jpg?v=1670602207`;
+//         var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352738.jpg?v=1670603575`;
+//       }          
+       if(response.title == 'Meno Santulan Tablets'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/meno-santulan.webp?v=1678099616`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/meno.webp?v=1678099605`;
+      }
+      if(response.title == 'Mom Santulan Tablets'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/mom-santulan.webp?v=1678099656`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/mom-santulan_da5991a4-0701-4216-82fa-a44894c10b80.webp?v=1678099666`;
+      }
+      if(response.title == 'PCOS Santulan'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/pcos.webp?v=1678099709`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/pcos-santulan.webp?v=1678099716`;
+      }
+      if(response.title == 'Thyro Santulan Tablets'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/thyro-santulan-mob.webp?v=1678099751`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/thyro-santulan.webp?v=1678099767`;
+      }
+        var html = `<div class="col-md-10 pt-2 pt-md-0 result-product m-auto">
+          <div class="product-item h-100 mb-0">
+            <img id="${product.handle}" src="${resultImg}" class="mx-auto d-md-none card border-0 rounded-lg shadow"><img id="${product.handle}" src="${resultImgdesk}" class="mx-auto d-none d-md-block card border-0 rounded-lg shadow">
+          </div>
+    	</div>`;
+       
+        $('.FLogin-product-results .container > .row').append(html);
+          setTimeout(function(){
+        $('.login_result_product_slides').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: false,
+          dots: true,
+          arrows: false,
+          autoplaySpeed: 2000,
+          infinite: false,
+        });
+      }, 1500);
+      }
+      var vid = response?.variants[0]?.id;
+      variantId.push({
+        'id': vid,
+        'quantity': 1
+      });
+    }).catch((error) => {
+      console.error('Error: ', error);
+    });
+    if(gender == 'M' || gender == 'm') {
+       $('.MLogin-product-results').show();
+      fetch(`/products/${product.handle}?view=result-product-list`)
+      .then(response => {
+        return response.text();
+      }).then(result => {
+        var html = result;
+          $('.MLogin-product-results .container > .row').append(html);
+      });
+        setTimeout(function(){
+        $('.login_result_product_slides').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: false,
+          dots: true,
+          arrows: false,
+          autoplaySpeed: 2000,
+          infinite: false,
+        });
+      }, 1500);
+    }
+  })
+}
+function spanPriceLogin(prices) {
+  document.querySelectorAll('.snap_dp_value #dp').forEach((dpElement) => {
+    dpElement.setAttribute('data-snap-price', prices / 100);
+    let priceDevide = prices / 100;
+    let roundedValue = Math.round(priceDevide / 3); // Rounds to the nearest whole number
+    dpElement.innerHTML = roundedValue;
+  });
+  popPriceUpdate(prices);
+}
+
+function Logincheckout() {
+  let formData = {
+    'items': variantId,
+    sections: 'cart-drawer',
+    attributes: {
+    }
+  };
+  variantId.forEach(e => {
+    e.properties = {'Plan': 'Auto'};
+  });
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => {  
+    localStorage.setItem('User_location', "cart");
+    return response.json();
+  }).then(result => { 
+    var t = document.querySelector('cart-drawer');
+    let cart_drawer = result.sections['cart-drawer'];
+    CartDrawerUpdate(t, cart_drawer);
+  }).catch((error) => {
+    console.error('Error:', error);
+  }).finally(() => {
+    let priceElement = document.querySelector('.totals__subtotal-value .money');
+    let priceText = priceElement.textContent || priceElement.innerText;
+    let priceValue = priceText.replace(/[^0-9]/g, '') + '00';
+    console.log(priceValue);
+    document.querySelector('#sm-widget-btn') && spanPriceLogin(priceValue);
+  });;
+}
+ $('body').on('click', '.Mlogin_lead_buy_now', function() {
+    $.ajax({
+      type: "POST",
+      url: '/cart/clear.js',
+      success: function(){
+        Logincheckout();
+      },
+      dataType: 'json'
+    });
+  });
+  
+   $('body').on('click', '.Flogin_lead_buy_now', function() {
+    $.ajax({
+      type: "POST",
+      url: '/cart/clear.js',
+      success: function(){
+        Logincheckout();
+      },
+      dataType: 'json'
+    });
+  });

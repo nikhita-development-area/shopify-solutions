@@ -1,0 +1,246 @@
+{
+  "sections": {
+    "1663938672051f4869": {
+      "type": "image-banner",
+      "blocks": {
+        "166393867297a469a5-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hair and How",
+            "heading_size": "h1"
+          }
+        },
+        "166393867297a469a5-1": {
+          "type": "text",
+          "settings": {
+            "heading1": "Hair Fall Treatment for Women",
+            "text": "Traya has pioneered the science of hair and wellness. With the concept of health first hair later, we treat the root cause of the hair loss by targeting key imbalances in the body",
+            "text_style": "body"
+          }
+        },
+        "166393867297a469a5-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "166393867297a469a5-0",
+        "166393867297a469a5-1",
+        "166393867297a469a5-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/frame_66.webp",
+        "mblimage": "shopify:\/\/shop_images\/frame_65.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "166332215421be523b": {
+      "type": "women-hair-fall",
+      "blocks": {
+        "acdfb560-6c7f-4ded-809d-9372198f24fd": {
+          "type": "content",
+          "settings": {
+            "top_heading": "",
+            "top_text": "<p>Male baldness might be more common, but the ladies have to face this problem as well. The current lifestyle issues ensure that they have to put in those extra hours to sort out the hairy complications, and look attractive at the same time. Apparently, the number of women who have a full head of hair throughout their lives, is less than 45%. That is a telling statistic; a majority of women have to deal with pregnancy issues, anaemia and thyroid disorders, and a host of other problems, to preserve their crowning glory. That is why hair fall treatment for women becomes necessary in most cases.<\/p><p>Maintaining those tresses for most women has become extremely difficult, and the solutions are more crucial as it affects their self-esteem. Hair loss caused by hormonal changes will disappear once the body accepts those changes. Similarly, problems associated with any deficiency could be solved with the help of a proper dietary plan, a plan for the hair fall treatment for women.<\/p><p>There are quite a few home remedies as well and they have proved to be quite effective when followed diligently. Women need to take care of their nutritional requirements, as the hair loss is quite frequently connected to their iron, protein or zinc deficiency.<\/p><p>However, any ailment that involves a medical condition would need to be addressed by a medical practitioner, in a comprehensive manner. These would include medications like Rogaine, hormone therapy and transplants, which are medically certified hair fall treatments for women.<\/p>",
+            "top_content": "<p class=\"text-left\"><\/p>\n      <ul class=\"list-group list-group-flush ml-0 my-3\">\n                <li class=\"list-group-item pl-0 py-1\"> •\t<strong>Minodixil or Rogaine<\/strong>, is one of the most successful drugs for the treatment of hair loss with a high success rate. The hair thickens after its use, and helps reduce the bald patches. It is considered one of the best medicines for hair fall and regrowth for females.<\/li>\n                <li class=\"list-group-item pl-0 py-1\"> •\tLow-light therapy is also quite effective, and it enhances the benefits achieved after the use of Rogaine.<\/li>\n                <li class=\"list-group-item pl-0 py-1\"> •\tAnti-dandruff solution is a drug that has been found to be quite useful in cases, where the inflammation of hair follicles contributes to hair loss. Stronger doses can however be administered only on the recommendation of a doctor.<\/li>\n                <li class=\"list-group-item pl-0 py-1\"> •\tInjecting corticosteroid into bald patches can encourage fresh growth of hair. Creams and lotions with similar benefits are also available.<\/li>\n                <li class=\"list-group-item pl-0 py-1\"> •\tPlatelet-rich plasma injections have also become very popular, wherein it is injected back into the affected patch to expedite tissue repair.<\/li> <li class=\"list-group-item pl-0 py-1\"> •\t<strong>Hormone therapy<\/strong> is suggested for specific problems like polycystic ovary syndrome, which leads to increased production of androgens that contribute to hair loss. However, since these medications can cause side effects, expert supervision is required to suggest those suitable hair fall treatment procedures for women.<\/li> <li class=\"list-group-item pl-0 py-1\"> •\tSome also opt for expensive hair transplant procedures, wherein parts of the scalp are taken and replaced over bald patches.<\/li> <li class=\"list-group-item pl-0 py-1\"> •\t Hair loss shampoos are used to clean dead pores and promote good hair growth.<\/li>\n              <\/ul>",
+            "right_subheading": "",
+            "right_heading": "<p>It is estimated that 75% of females would lose hair as a result of this condition when they reach 65 years of age, requiring hair fall treatment for the women.<\/p><p><strong>66% of women lose hair after menopause, and require effective remedies for hair loss.<\/strong><\/p>",
+            "right_ctatext": "Get an Online Hair Diagnosis",
+            "right_ctalink": "https:\/\/form.traya.health\/questions?cohort=1&location=HairFallWomen",
+            "bottom_heading": "Patterns of Female Hair Loss",
+            "bottom_text-t": "<p>One of the main reasons responsible for the hair loss in women is androgenetic alopecia, which is a genetic condition. It starts with a wide hair parting in the scalp, which progressively becomes more noticeable.<\/p><p><\/p>",
+            "bottom_image1": "shopify:\/\/shop_images\/ezgif.com-gif-maker_10.jpg",
+            "bottom_image2": "shopify:\/\/shop_images\/ezgif.com-gif-maker_11.jpg",
+            "bottom_image3": "shopify:\/\/shop_images\/ezgif.com-gif-maker_12.jpg",
+            "bottom_image4": "shopify:\/\/shop_images\/ezgif.com-gif-maker_13.jpg",
+            "bottom_image5": "shopify:\/\/shop_images\/ezgif.com-gif-maker_14.jpg",
+            "bottom_image6": "shopify:\/\/shop_images\/ezgif.com-gif-maker_15.jpg",
+            "bottom_content": "<p class=\"text-left\">Female pattern baldness is quite a vexing problem as the growing phase of the hair stops, and new hair takes time to grow. The hair follicles shrink, and the new hair become more fragile and brittle. It can largely be differentiated into 3 types:<\/p>\n      <ul class=\"list-group list-group-flush ml-0 my-3\">\n                <li class=\"list-group-item pl-0 py-1\"> •\tType I starts with a little thinning in a section of the scalp.<\/li>\n                <li class=\"list-group-item pl-0 py-1\"> •\t Type II grows into a little widening of that section and the thinning increases<\/li>\n                <li class=\"list-group-item pl-0 py-1\"> •\tIn Type III is thinning is seen all over, with a patch on the vertex of the scalp<\/li>\n<br>    <li class=\"list-group-item pl-0 py-1\"> The female baldness could also be the result of an endocrine condition, or a tumour which secretes hormones. There could be other symptoms like a severe acne, which might necessitate a visit to the doctor, who would be able to recommend the appropriate hair fall treatment for women.\n<br>\nWomen rarely develop this condition before their 40s, following which there is a possibility of rapid hair loss. It is commonly believed that androgens are responsible for this problem. Smoking could, of course, aggravate the problem.<\/li>\n               \n              <\/ul>"
+          }
+        },
+        "dae3c72a-efd8-4c02-a261-a3f7f5332cf5": {
+          "type": "content",
+          "settings": {
+            "top_heading": "Triggers for Hair Fall in Women",
+            "top_text": "<p>Traya Health comes up with those innovative solutions by combining Ayurveda and allopathy, supplemented with a curated diet plan that takes care of individual requirements. We get to the heart of the matter with those potent ingredients - which are a great combination of the natural and the innovated - and curate some excellent ways for the hair fall treatment for women.<\/p><p>Our experts diagnose the problem, and then suggest those solutions based on the scalp and skin type of the individual. We have a range of Ayurvedic products designed to solve every complicated women’s hair loss issues, apart from of course products that are the result of the latest medical research.<\/p><p>In addition to this Ayurveda has a variety of remedies, recommended for hair fall treatment for women including:<\/p>",
+            "top_content": "<ul class=\"list-group list-group-flush ml-0 my-3\">\n                  <li class=\"list-group-item pl-0 py-1\">• \t<strong>Shirodhara<\/strong> wherein specially prepared herbal oils are poured on the forehead and gently massaged, to improve blood circulation and better growth.<\/li>\n                  <li class=\"list-group-item pl-0 py-1\">•\t<strong>Shiro Lepa<\/strong> is a process in which a paste is prepared from different herbs, put evenly on the scalp and a banana leaf is used to cover it. Herbal oils are then poured on the section of the scalp cover with the lepa and this enhances hair growth.<\/li>\n                  <li class=\"list-group-item pl-0 py-1\">• <strong>Shiro Abhyanga<\/strong> wherein the shoulders, upper back, neck and head are massaged with warm oils. This helps relieve stress, and relaxes your upper body and muscles. <\/li>\n          <\/ul>",
+            "right_subheading": "",
+            "right_heading": "",
+            "right_ctatext": "",
+            "right_ctalink": "",
+            "bottom_heading": "Triggers for Hair Fall in Women",
+            "bottom_text-t": "<p>There could be multiple reasons for hair loss in women.<\/p>",
+            "bottom_content": "<ul>\n              <li class=\"mb-2\"> • Stress is one of the primary reasons as it disturbs the balance of hormones in the body of any person. It could also result in dandruff, a malfunctioning digestive system or affect your eating habits. This could weaken the hair roots or result in hair loss, which would require hair fall treatment for women.  <\/li>\n              <li class=\"mb-2\"> • Hormonal imbalance can lead to a number of issues, as the level of Androgens (male hormones) in the body increase as compared to the Oestrogens (female hormones), and this affects the hair growth cycle. An endocrine disorder such as Polycystic Ovarian Syndrome could lead to hair loss, as it results in an excess of the Androgen levels in the body. <\/li>\n              <li class=\"mb-2\"> • The lack of proper nutrition or a balanced diet could also aggravate hair problems. For example, if food rich in iron and zinc do not form part of your regular meals, then it could affect your hair growth. While in most cases, including nutritional vegetables or fruits in your diet should suffice, a more serious condition could demand medical intervention in the form of supplements, as part of a detailed hair fall treatment process for women. <\/li>\n              <li class=\"mb-2\"> • Any thyroid imbalance can affect the hair follicles, but hypothyroidism without proper medication may cause anaemia, which can damage the hair. This would necessitate more complex hair fall treatments for women.<\/li>\n              <li class=\"mb-2\"> • Vitamin B12 deficiency affects the red blood cells and can cause hair loss. It is most common in vegans, as animal proteins are the primary source of B12.<\/li>\n              <li class=\"mb-2\"> • For women about to enter menopause, the changes in their body may also affect their hair. As we get older, our hair experiences thinning and is therefore more prone to damage. This would require natural remedies for hair thinning in females.<\/li>\n              <li> •\tAn abnormal drop in your weight can impact your tresses. After 6-12 weeks of dramatic weight shedding, one also experiences corresponding hair loss.<\/li>\n          <\/ul>"
+          }
+        },
+        "640e42d0-deec-453c-ae80-60b2e4933f4d": {
+          "type": "content",
+          "settings": {
+            "top_heading": "Tips for Controlling Hair Fall in Women",
+            "top_text": "<p>There are many things that one could do to stop hair loss. However, the steps for hair fall treatment for women that you opt for, depend essentially on the reason why you’re losing your hair. While some conditions, like hair loss after pregnancy, sort themselves out on their own, if the problem persists a visit to your medical consultant is recommended. Here are some remedies for female hair loss.<\/p>",
+            "top_content": "<ul class=\"list-group list-group-flush ml-0 my-3\">\n                  <li class=\"list-group-item pl-0 py-1\">•\tA diet full of raw vegetables and fresh herbs may mitigate the risk of androgenic alopecia or delay it. \n                      Addressing nutritional deficiencies, including low levels of amino acids, with foods like eggs, fish, nuts, beans and peas help greatly.<\/li>\n                  <li class=\"list-group-item pl-0 py-1\">• Food rich in Vitamin A (sweet potatoes, sweet peppers, and spinach) can improve hair growth and also help in sebum production.\n                       This will keep the scalp healthier and enhance the capacity to retain more hair. <\/li>\n                  <li class=\"list-group-item pl-0 py-1\">•\tDaily multivitamins A, B, C, D, iron, selenium and zinc are essential for hair growth and retention. \n                      They can be taken after asking a doctor to suggest a course that is in line with the procedures for hair fall treatment for women. <\/li>\n\t\t\t\t<li class=\"list-group-item pl-0 py-1\">•\tBiotin is crucial to the <a href=\"https:\/\/traya.health\/blogs\/hair-care\/all-you-need-to-know-about-the-stages-of-hair-growth\"><b>hair life cycle<\/b><\/a> and hair loss could occur if your body does not have the adequate levels. <\/li>\n                  <li class=\"list-group-item pl-0 py-1\">•\tIt is important to maintain hair hygiene by washing your hair daily, as it keeps the scalp healthy, clean and free from infection. Use a mild shampoo, as the regular use of stronger varieties might not be good for your hair. The basis towards ensuring a good healthy head of hair, \n                      and avoid those complicated hair fall treatment procedures for women, starts from here.<\/li>\n                  <li class=\"list-group-item pl-0 py-1\">•\tA hairbrush is more effective than a comb. The sharper teeth of combs could damage your hair tissue or injure your scalp, which leads to hair loss. \n                      A hair brush is smoother for there is less attrition, and it still manages to create the perfect parting.<\/li>\n                  <li class=\"list-group-item pl-0 py-1\">•\tOlive\/Coconut oil is also recommended as it is believed to arrest genetic hair loss.  \n                      It is also advisable to go slow on chemical treatment, as it might damage your hair permanently.<\/li>\n                  <li class=\"list-group-item pl-0 py-1\">•\tOnion juice has been found to be extremely beneficial for people with alopecia areata. Regular application could facilitate regrowth.<\/li>\n                  <li class=\"list-group-item pl-0 py-1\">•\tYoga and massages have also proved to be therapeutic and rejuvenating, and apart from relieving stress have also enhanced hair growth. <\/li>\n                  <li class=\"list-group-item pl-0 py-1\">•\tOf late the derma roller is a new trend that has been catching on, and has received a lot of positive reviews. The derma roller stimulates the scalp, augments blood circulation and has significant benefits for long term hair health. A derma roller with needle sizes around 0.25-0.5 mm is suggested for best results.\n                       This is one of the advanced ways for hair fall treatment for women.<\/li>\n              <\/ul>",
+            "right_subheading": "",
+            "right_heading": "",
+            "right_ctatext": "",
+            "right_ctalink": "",
+            "bottom_heading": "",
+            "bottom_text-t": "",
+            "bottom_content": ""
+          }
+        },
+        "7ecbdb55-e35b-4408-991a-f3b403175798": {
+          "type": "content",
+          "settings": {
+            "top_heading": "Natural Remedies to Treat Hair Fall",
+            "top_text": "",
+            "top_content": "<p class=\"text-left\">  <\/p>\n          <ul>\n              <li class=\"mb-2\"> •\tUse an egg mask by adding olive oil and honey to an egg. Apply it to your hair and scalp and leave it on for 20 minutes. Wash it off with a mild shampoo. Eggs are rich in sulphur, phosphorous, selenium, iodine, zinc and protein, which can be a potent combination in improving your hair dramatically.<\/li>\n              <li class=\"mb-2\"> •\t Apply <strong><a href=\"https:\/\/traya.health\/blogs\/hair-care\/coconut-oil-for-hair\"> coconut oil<\/a><\/strong>; this has protein and essential fats, useful in promoting hair growth and preventing hair loss. It is considered the best and most simple natural way of enabling your hair to grow longer thicker and faster. This is a convenient and popular way for the hair fall treatment for women. <\/li>\n              <li class=\"mb-2\"> •Massage your scalp with Bhringaraj oil to stimulate the hair roots, and take advantage of its considerable health-giving qualities. It is considered the most effective ancient herb and is rich in proteins. <\/li>\n              <li class=\"mb-2\"> •\tUse the gel of the aloe vera on your scalp. It penetrates your follicles to rejuvenate your dry and damaged tresses. It is a very efficient cleaner, while at the same time proving useful in strengthening your hair.<\/li>\n              <li class=\"mb-2\"> •\tPour a cup of lukewarm green tea over your scalp and hair, as you lightly massage your head. It is an excellent antioxidant and can boost hair growth.<\/li>\n              <li class=\"mb-2\"> • Apply the paste of fenugreek seeds on your scalp, after soaking the seeds overnight in water. Keep it for 40 minutes and then wash it off.<\/li>\n              \n          <\/ul>",
+            "right_image": "shopify:\/\/shop_images\/thesciencepage.webp",
+            "right_subheading": "There are a host of natural remedies that you can try, if you’re trying to regrow lost hair or are attempting to better the quality and look of your existing crop. Here are some home remedies for hair loss in females.",
+            "right_heading": "",
+            "right_ctatext": "",
+            "right_ctalink": "",
+            "bottom_heading": "",
+            "bottom_text-t": "",
+            "bottom_content": ""
+          }
+        },
+        "52bd37ae-5840-41ea-89dd-c4cad78371e1": {
+          "type": "content",
+          "settings": {
+            "top_heading": "Diet for Healthy Hair",
+            "top_text": "",
+            "top_content": "<p class=\"text-left\"> <\/p>\n          <ul>\n    <li class=\"mb-2\"> •\tSpinach contains vitamin A which is necessary for the production of sebum. The correct balance of sebum helps maintain the right amount of oil in the scalp. Spinach also contains iron and its deficiency is connected with baldness. <\/li>\n              <li class=\"mb-2\"> •\tUnsweetened yoghurt has probiotics or good bacteria. The probiotics assist in absorbing nutrients, it has vitamin B5, which helps with hair thinning issues. <\/li>\n              <li class=\"mb-2\"> • Walnuts have protein, biotin, copper, vitamin E and omega fatty acids, and are beneficial in hair fall treatment for women. The omega 3s, omega 6s, omega 9s strengthen the hair follicles. Walnuts are also a rich source of selenium, which protect your hair from the sun. <\/li>\n              <li> \t•\tSweet Potatoes are rich in iron, copper, potassium, magnesium and beta-carotene. Beta-carotene helps in cell growth, stops hair from thinning and brings back the shine and bounce in your hair.<\/li>\n   <li class=\"mb-2\"> • The sweating caused by spicy food is harmful for your scalp and skin. It pollutes your scalp and causes excessive sweating. This creates a lot of grime, which blocks the pores in your scalp, and leads to hair fall. <\/li>\n            \n            <br>  <li> \tThere are a range of treatments possible for every hair condition and while one can play doctor and opt for those home remedies, there will be those occasions when medical supervision will be necessary. It would be erroneous to generalise hair fall treatment procedures for women, as some problems would need intervention from an experienced practitioner.\n<br><br>\nA bit of advice for the ladies; leave this one to the expert, there is no one better qualified to deal with those hair issues than your dermatologist. Get those reviews on that trusted dermatologist near you and make sure to meet them at least twice a year. You should get your scalp, skin and other parameters checked and ensure good hair fall treatment for yourself. This is just to make sure that you are forewarned about those probable issues\n<br><br>\nAt <strong>Traya Health<\/strong>, you can submit your details through an online form, to help our medical team suggest an appropriate hair loss treatment procedure for you. We use the most modern scientific methods and adopt a holistic method of looking at any hair issue with Ayurvedic, allopathic as well as integrative medicine. Our herbs are handpicked, and our methods transparent as our specialised team of doctors make the necessary adjustments to provide customised solutions to every problem.<\/li>\n          <\/ul>",
+            "right_subheading": "",
+            "right_heading": "<p>It therefore makes sense to follow a proper nutritional schedule, with the right dose of vitamins and minerals, to lengthen the life of your strands.<br\/><strong>Hair fall treatment for women would not be required if you follow the following steps.<\/strong><\/p><p><\/p>",
+            "right_ctatext": "Learn more about Traya Ingredients",
+            "right_ctalink": "https:\/\/traya.health\/pages\/traya-ingredients",
+            "bottom_heading": "",
+            "bottom_text-t": "",
+            "bottom_content": ""
+          }
+        }
+      },
+      "block_order": [
+        "acdfb560-6c7f-4ded-809d-9372198f24fd",
+        "dae3c72a-efd8-4c02-a261-a3f7f5332cf5",
+        "640e42d0-deec-453c-ae80-60b2e4933f4d",
+        "7ecbdb55-e35b-4408-991a-f3b403175798",
+        "52bd37ae-5840-41ea-89dd-c4cad78371e1"
+      ],
+      "settings": {
+        "text-box": "What Causes Hair Loss in women?"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email-form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email-form"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "1663938662e69aa8f6": {
+      "type": "image-with-text",
+      "blocks": {
+        "166393866238cc5a33-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "166393866238cc5a33-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "166393866238cc5a33-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "166393866238cc5a33-0",
+        "166393866238cc5a33-1",
+        "166393866238cc5a33-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "1663938672051f4869",
+    "166332215421be523b",
+    "main",
+    "newsletter",
+    "1663938662e69aa8f6"
+  ]
+}

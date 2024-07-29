@@ -1,0 +1,185 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+  <div class="page-width custom-essential section-{{ section.id }}-padding" page_type="normal" cstm-stories-stage-3>
+    <div class="collection__title title-wrapper title-wrapper--no-top-margin mb-0"><h2 class="{% if page.handle == 'female-result' or page.handle == 'result-fe' %}font-fredoka mb-4{% endif %} section-title title h0 text-center">{{ section.settings.Heading }}</h2></div>
+  {% if page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %}
+    <img class="santulan_page_img" src="{{ section.settings.santulan_img | img_url: 'master' }}" alt="santulan-image">
+     {% endif %}
+    <div class="row {% if page.handle == 'female-result' or page.handle == 'result-fe'%}female-reviews py-md-4 {% elsif section.settings.slide_class != blank %} {{ section.settings.slide_class }} {% else %}essential_slid_grid{% endif %}">
+   {% for block in section.blocks %}
+    <div class="essential_fe_img">
+      {% if page.handle == 'female-result' or page.handle == 'result-fe' or page.handle == 'femalev2' or page.handle == 'female' or page.handle == 'femalev1' %}
+         <img src="{{ block.settings.Image | img_url: 'master' }}" alt="Products Slide">
+      {% else %} 
+      <a href="{{ block.settings.link }}"> 
+        <img src="{{ block.settings.Image | img_url: 'master' }}" alt="Products Slide">
+      </a>
+        {% endif %}
+     </div>
+   {% endfor %}
+  </div>
+    {% if page.handle == 'femalev2' or page.handle == 'female' or page.handle == 'femalev1' %} 
+    {% if section.settings.hide_text != blank%}
+   <p class="femalev2_slide_text" style="text-align:center;margin-bottom: 0;">Use the Traya test to know your root cause and <br>get customised treatment plans</p>
+      <div class="text-center">
+      <a id="female-hair-test-button3" href="https://form.traya.health/female?cohort=1&location=Santulan&page={{ page__hndl }}" class="btn btn-dark my-3 shadow hair-form-actn-link">Take The Hair Test <sup>TM</sup></a>
+    </div>
+      {% endif %} 
+    {% endif %}
+     {% if page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %} 
+    <div class="text-center">
+      <a id="hairtestcta" href="https://form.traya.health/?santulan=1&location=SantulanPage&page={{ page__hndl }}" class="btn btn-dark my-3 shadow hair-form-actn-link">Take The Hair Test <sup>TM</sup></a>
+    </div>
+     {% endif %}
+    
+  </div>
+
+  <style>
+   
+    .femalev2_cursor a, .femalev2_cursor a{
+ pointer-events: none;
+-webkit-pointer-events: none;
+}
+    
+   .essential_fe_img{
+     margin-left:0;
+     margin-right:0;
+      padding-left: 7px !important;
+  padding-right: 7px !important;
+   }
+    @media screen and (max-width: 749px) {
+      .femalev2_slide_text{
+        font-size:14px;
+      }
+.custom-essential {
+    padding-left: 15px !important;
+  padding-right: 15px !important;
+   margin-left: 15px !important;
+  margin-right: 15px !important;
+}
+       .custom-essential .essential_fe_img img{
+        width:100%;
+      }
+      .custom-essential .slick-list {
+    margin: 10px; 
+}
+       {% if page.handle == 'pcos' %} 
+       .essential_slid_grid{
+         display:none;
+       }
+      .santulan_page_img{
+        display:block;
+      }
+         {% endif %}
+    }
+     @media screen and (min-width: 750px) {
+       .femalev2_slide_text{
+        font-size:24px;
+      }
+       {% if page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %} 
+       .essential_slid_grid{
+         display:block;
+       }
+       .santulan_page_img{
+        display:none;
+      }
+         {% endif %}
+    .custom-essential ul.slick-dots {
+    display: none;
+}    
+.custom-essential {
+    padding-left: 0 !important;
+   padding-right: 0 !important;
+}
+    }
+  </style>
+{% schema %}
+  {
+    "name": "Stage3 Customer Stories",
+    "settings": [
+      {
+            "type":"text",
+            "label" :"hide bottom section",
+            "id" :"hide_text"
+         },
+      {
+            "type":"text",
+            "label" :"Slider Class",
+            "id" :"slide_class"
+         },
+      {
+            "type":"text",
+            "label" :"heading",
+            "id" :"Heading"
+         },
+      {
+            "type":"image_picker",
+            "label" :"Santulan Page image",
+            "id" :"santulan_img"
+         },
+      {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+    ],  
+    "blocks": [
+     {
+       "name": "ThreeStep",
+       "type": "text",
+       "settings": [
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type":"image_picker",
+            "label" :"Image",
+            "id" :"Image"
+         }
+       
+       ]
+}    
+      
+ ],
+      "presets": [
+    {
+      "name": "Stage3 Customer Stories"
+    }
+  ]
+  }
+{% endschema %}

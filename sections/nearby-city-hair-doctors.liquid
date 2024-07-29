@@ -1,0 +1,62 @@
+{% comment %}  for metaobject 
+<div class="nearby-city-hd container">
+  <h2 class="text_Fredoka center nb-city-heading">{{ section.settings.heading }}</h2>
+  <div class="nb-content">
+    {% for near_by_city in article.metafields.custom.near_by_city.value %}
+      {% if near_by_city.city_name != blank %}
+        <div class="nb-block">
+          <a class="nb-city l-0" href="{{ near_by_city.city_url }}">{{ near_by_city.city_name }}</a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endcomment %}
+
+<div class="nearby-city-hd container">
+  <h2 class="text_Fredoka center nb-city-heading">{{ section.settings.heading }}</h2>
+  <div class="nb-content">
+    {% for block in section.blocks %}
+      {% if block.settings.city != blank %}
+        <div class="nb-block">
+          <a class="nb-city l-0" href="{{ block.settings.url }}">{{ block.settings.city }}</a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Nearby city",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "city",
+        "name": "City",
+        "settings": [
+          {
+            "type": "text",
+            "id": "city",
+            "label": "City name"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "City url"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Nearby city"
+      }
+    ]
+  }
+{% endschema %}

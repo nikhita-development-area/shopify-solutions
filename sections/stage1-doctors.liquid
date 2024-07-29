@@ -1,0 +1,108 @@
+<!-- Sections -> stage1-doctors.liquid -->
+
+<div class="container stage1-doctors my-3 my-md-5" style="{% unless page.handle == 'best-hair-treatment-in-india' %}display: none;{% endunless %}">
+  <h3 class="stage1-doctors-title font-weight-bold text-center mb-4">{{ section.settings.doctors_title }}</h3>
+
+  <div class="doctors-gallery">
+    {% for block in section.blocks %}
+      <div class="doctors-data d-flex align-items-center m-2">
+        <div class="doctors-img">
+          <img src ="{{ block.settings.doctors_img | img_url: '64x64' }}" alt="Doctors-{{ forloop.index }}" title="Doctors{{ forloop.index }}" height="64" width="64" />
+        </div>
+
+        <div class="doctors-content">
+          <h4 class="font-weight-bold">{{ block.settings.doctors_name }}</h4>
+          <p>{{ block.settings.doctors_expert }}</p>
+          <img src ="{{ block.settings.ratings_img | img_url: 'master' }}" alt="Ratings-{{ forloop.index }}" title="Ratings{{ forloop.index }}" height="15" width="100" />
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .stage1-doctors-title {font-size: 44px; line-height: 32px; letter-spacing: 0em;}
+  .doctors-data {box-shadow: 1px 2px 4px 2px #0000001A; border-radius: 8px; gap: 10px; padding: 10px;}
+  .doctors-content h4 {font-size: 15px; line-height: 20px; letter-spacing: 0.22918352484703064px;}
+  .doctors-content p {font-size: 11px; line-height: 14px; letter-spacing: 0.22918352484703064px; margin: 5px 0;}
+  .doctors-content img {height: 15px;}
+
+  @media screen and (max-width: 767.98px) {
+    .stage1-doctors-title {font-size: 24px; line-height: 24px;}
+  }
+</style>
+
+<script>
+  $(document).ready(function(){
+    $('.doctors-gallery').slick({
+      {% if page.handle == 'best-hair-treatment-in-india' %}
+      slidesToShow: 3,
+      {% else %}
+      slidesToShow: 4,
+      {% endif %}
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      dots: false,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 426,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+      ]      
+    });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Stage1 Doctors",
+    "settings": [
+      {
+        "type": "text",
+        "id": "doctors_title",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Gallery",
+        "name": "Doctors Gallery",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "doctors_img",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id": "doctors_name",
+            "label": "Name"
+          },
+          {
+            "type": "text",
+            "id": "doctors_expert",
+            "label": "Expert"
+          },
+          {
+            "type": "image_picker",
+            "id": "ratings_img",
+            "label": "Select Image"
+          }
+        ]
+      }
+    ],
+    "presets": [{"name": "Stage1 Doctors"}]
+  }
+{% endschema %}

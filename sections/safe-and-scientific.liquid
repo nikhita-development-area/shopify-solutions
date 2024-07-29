@@ -1,0 +1,216 @@
+
+{% if page.handle != 'result-f' %}
+<div class="{% if template == 'index.login' or template == 'index.login-lead' %}login_space{% endif %} {% if template == 'index.login-lead' %}safe_login_lead{% endif %} traya-section-p {% if page.handle == 'femalev2' or page.handle == 'female' or page.handle == 'femalev1' %}container {% else %} container{% endif %}"> 
+  {% if template == 'index.login' %}
+    <p class="login-heading">Safe & Effective</p>
+    {% else %}
+  <p class="{{page.handle}} {% if template == 'index.login-lead' %}login-heading{% endif %} section-title">{{ section.settings.title }}</p>
+
+  <!-- Homev1 Page Changes -->
+  {% if page.handle == 'homev1' %}
+  <p class="text-center homev1-sub-title">Treatment With No Side-Effects</p>
+  {% endif %}
+  <!-- Homev1 Page Changes -->
+  
+  {% endif %}
+  {%- if page.handle == 'femalev2' or page.handle == 'female' or page.handle == 'femalev1' or page.handle == 'home-app' or page.handle == "download-traya-app" -%}
+        <h5 class="femalev2 native-subitle-review section-sub-title">Treatment with no side effects</h5>
+        {%- endif -%}
+  
+  <div class="transplant_bg1">
+    {% if section.settings.slider_transplant !=blank %}
+      <img class="desktop_img d-none d-md-block" loading="lazy" alt="Safe-Scientific" title="Safe and Scientific" src="{{ section.settings.slider_transplant | img_url:''}}" width="100%" height="510">  
+    {% endif %}
+    {% if section.settings.mobile_view !=blank %}
+      <img class="mobile_img d-md-none" loading="lazy" alt="Safe-Scientific" title="Safe and Scientific" src="{{ section.settings.mobile_view | img_url:''}}" width="100%" height="580">  
+    {% endif %}
+    <div class="traya-section-box {{ page.handle }}">  
+      {% for block in section.blocks %}
+      <div class="traya-section">
+        <div class="image12">
+          <img loading="lazy" class="d-none d-md-block" {% if page.handle == 'homev5' %}src="{{ block.settings.section_traya | img_url: '160x160', scale: 2 }}"{% else %}src="{{ block.settings.section_traya | img_url:'160x'}}"{% endif %} alt="Safe-{{ forloop.index }}" title="Safe {{ forloop.index }}" width="90" height="90">
+          <img loading="lazy" class="d-md-none" {% if page.handle == 'homev5' %}src="{{ block.settings.section_traya | img_url: '80x80', scale: 2 }}"{% else %}src="{{ block.settings.section_traya | img_url:'80x'}}"{% endif %} alt="Safe-{{ forloop.index }}" title="Safe {{ forloop.index }}" width="60" height="60">
+        </div>
+        <div class="imgtext12">{{ block.settings.traya-section1 }}</div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+
+  {% if page.handle == 'home-app' or page.handle == "download-traya-app" %}
+  <div class="download-app text-center">
+    <a href="https://trayahealth.app.link/GsBfukBlAHb" class="btn btn-dark mt-3 mt-md-4 shadow" id="app_download_cta" target="_blank">DOWNLOAD THE APP</a>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+{% if page.handle == 'result-f' %}
+  {% include 'safe-and-scientific' %}
+{% endif %}
+{% schema %}
+  {
+    "name": "Safe And Scientific",
+    "settings": [
+       {
+     "type": "text",
+  	 "id": "title",
+  	 "label": "Heading",
+     "default":"Safe And Scientific"    
+     },
+       {
+     "type": "image_picker",
+  	 "id": "slider_transplant",
+  	 "label": "Desktop image"
+     },
+        {
+     "type": "image_picker",
+  	 "id": "mobile_view",
+  	 "label": "Mobile image"
+     }
+    ],
+  "blocks": [
+    {
+      "type": "Head",
+      "name": "Icon Text",
+      "settings": [
+    {
+    "type": "image_picker",
+  	"id": "section_traya",
+  	"label": "Logo image"
+    },
+    {
+      "type": "text",
+      "id": "traya-section1",
+      "label": "Heading",
+      "default": "Content"
+    }
+  ]
+  }
+  ],
+  "presets":[
+  {
+    "name":"Safe And Scientific",
+    "category":"Safe And Scientific"
+  }
+  ]
+}
+ {% endschema %}
+<style>
+  .home-app .section-title, .download-traya-app .section-title {margin: 0 !important;}
+   .femalev2.cust_reviews.mb-5 , .female.cust_reviews.mb-5, .femalev1.cust_reviews.mb-5 {
+    margin-bottom: 15px !important;
+}
+   {% if page.handle == 'homev2b' or page.handle == 'homev5' %}
+  .traya-section{
+    text-align:center;
+   padding:0px 10px!important;
+    width:100%!important;
+  }
+  .traya-section-box{    
+     width:100%!important;
+     padding:30px!important;
+    position:unset!important;
+    flex-wrap:unset!important;
+  }
+    @media only screen and (max-width: 767px){
+     .traya-section-box{
+       flex-wrap:wrap!important;
+     }
+      .traya-section{
+        width:33.33%!important;
+      }
+    }
+{% endif %}
+  .transplant_bg1{
+    position:relative;
+  }
+  .traya-section-box{
+     width:64%;
+     display:flex;
+     flex-wrap: wrap;
+     padding:30px;
+    position:absolute;
+    top:10%;
+} 
+  .traya-section{
+    text-align:center;
+   padding:0px 30px;
+    width:33.33%;   
+  }
+ .imgtext12{
+   text-align:center;
+   font-size:16px;
+   padding:0px;
+   font-weight:600;
+   letter-spacing: normal;
+ }
+  .image12 img{
+    padding:10px;
+  }
+  @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .traya-section-box{
+      position:absolute;
+      top:0%;
+    } 
+  }
+  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .imgtext12{
+      text-align:center;
+      font-size:16px;
+      padding:0px;
+      font-weight:600;
+    }
+    .image12 img{
+      padding:10px;
+      width:85px;
+    }
+    .traya-section-box{
+      position:absolute;
+      top:0%;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .login_space.safe_login_lead.traya-section-p.page-width {
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+    .traya-section-box {
+      width: 100% !important;
+      padding: 10px !important;
+      align-items: center;
+      row-gap: 20px;
+      top: 5%;
+    }
+    .image12 img{
+      width:60px;
+      padding:0px;
+    }
+    .imgtext12{
+      text-align:center;
+      font-size:10px;
+      padding:0px;
+      font-weight:800;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .image12 img{
+      width:40px;
+      padding:0px;
+      height: 40px;
+    }
+    .traya-section-box{
+      position:absolute;
+      top:7%;
+    }
+  }
+  {% if page.handle == 'homev1' %}
+  .desktop_img{
+    padding-bottom:30px;
+  }
+    {% endif %}
+     {% if page.handle == 'femalev1' %}
+  .transplant_bg1{
+    padding-bottom:0;
+  }
+    {% endif %}
+  </style>

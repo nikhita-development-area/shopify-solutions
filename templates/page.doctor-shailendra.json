@@ -1,0 +1,304 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email-form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email-form"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "1663045023f8babc62": {
+      "type": "doctor-details",
+      "blocks": {
+        "22fb4cfe-1363-477a-93f6-e2c55083e164": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Suyog",
+            "user_content": "I immediately felt at ease after getting expert medical advice from Dr. Shailendra."
+          }
+        },
+        "e16be7f4-a600-4bf7-bfd8-5f3a50057258": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "M",
+            "user_name": "Mahesh",
+            "user_content": "Excellent results. Very happy with the treatment offered by Traya. I booked a call with Dr. Shailendra and he carefully looked into my medical history. Recommended me with do’s and dont’s about diet too."
+          }
+        },
+        "f129c777-f998-46ee-a348-550989a962ba": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "P",
+            "user_name": "Priya",
+            "user_content": "I never believed in Ayurveda before I had hair fall. Then I started Traya and also got in touch with Shailendra to treat my PCOS induced hair fall. After 3 months my hair fall is under control and my periods have been regular ever since his prescribed diet plan"
+          }
+        },
+        "59d71fe0-44b9-4ff8-bd13-b691e811e8dd": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "J",
+            "user_name": "Jafrin",
+            "user_content": "My hairs used to be very thick and strong before but after I started doing night shifts my health and hair conditioned worsened. Dr. Shailendra explained to me how sleep plays an important role in hair health and got me started on Nasal drops. It works like magic. I literally sleep 7-8 hours daily and my stress is also less."
+          }
+        },
+        "99356df7-a1da-4d72-913b-f06cb4326206": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Sandeep",
+            "user_content": "I have been facing genetic hair fall since the past few years. This affected my confidence. My friend recommended Traya and since then I have been consistent with the prescription provided by Dr. Chaubey. Hoping to see results."
+          }
+        }
+      },
+      "block_order": [
+        "22fb4cfe-1363-477a-93f6-e2c55083e164",
+        "e16be7f4-a600-4bf7-bfd8-5f3a50057258",
+        "f129c777-f998-46ee-a348-550989a962ba",
+        "59d71fe0-44b9-4ff8-bd13-b691e811e8dd",
+        "99356df7-a1da-4d72-913b-f06cb4326206"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Chaubey_compact_0936c6a4-d63f-450e-a76b-52e95315ba60.png",
+        "doctor_name": "Dr.Shailendra Chaubey",
+        "specialization": "HEALTH EDUCATOR | AYURVEDIC PRACTITIONER, 15 YEARS",
+        "education": "B.A.M.S",
+        "registration_no": "I - 51420 - A",
+        "ratings": "4.8\/5",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "Dr. Shailendra Chaubey is a qualified Ayurvedic Practitioner and a Pancha Karma Consultant, having over 15 years of experience in this field. He has a specialization in treating chronic disorders and runs a Healing school of his own, treating patients using ayurvedic therapies. He also works as a medical officer for a yoga organization for a renowned Yoga Club in Mumbai and has spent years perfecting his preventive hair loss all - natural treatment."
+      }
+    },
+    "1663045053f0934f77": {
+      "type": "QA-accordion",
+      "blocks": {
+        "98c612e8-62f9-4b77-bf70-c59b33401206": {
+          "type": "faq",
+          "settings": {
+            "Question": "What is Pancha Karma Therapy?",
+            "Answer": "Panchakarma Therapy is a method of complete body detoxification from all the toxins and waste in the body."
+          }
+        },
+        "37952329-4db1-4bef-890d-13fe2b335f9f": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do patients visit Dr. Shailendra Chaubey?",
+            "Answer": "Patients frequently visit Dr. Chaubey for digestive problems, high blood pressure, high cholesterol levels, and asthma."
+          }
+        },
+        "e476d348-c6ac-4036-96e9-d38e6d5f7e92": {
+          "type": "faq",
+          "settings": {
+            "Question": "What is Dr. Shailendra Chaubey's education qualification?",
+            "Answer": "Dr. Chaubey has a qualified degree in B.A.M.S and is also a Pancha Karma Practitioner."
+          }
+        },
+        "ace7ad1e-722a-4ce3-adf5-43009b40d882": {
+          "type": "Awards",
+          "settings": {
+            "AwardsContent": "Founder of Dr. Shailendra Healing School that helps patients recover chronic conditions through the Ayurvedic way of life. He is a consultant for Sahasrara (a herbal tea brand)."
+          }
+        },
+        "07db8b19-5a16-42f5-a677-18f5592ffd75": {
+          "type": "Awards",
+          "settings": {
+            "AwardsContent": "Medical officer for a Yoga Organization for a renowned Yoga Club in Mumbai."
+          }
+        }
+      },
+      "block_order": [
+        "98c612e8-62f9-4b77-bf70-c59b33401206",
+        "37952329-4db1-4bef-890d-13fe2b335f9f",
+        "e476d348-c6ac-4036-96e9-d38e6d5f7e92",
+        "ace7ad1e-722a-4ce3-adf5-43009b40d882",
+        "07db8b19-5a16-42f5-a677-18f5592ffd75"
+      ],
+      "settings": {
+        "Accordiontitle1": "",
+        "Accordiontitle2": "Awards & Recognition"
+      }
+    },
+    "1663045060dfd068c6": {
+      "type": "doctor-slide",
+      "blocks": {
+        "3c7c5d5e-3220-409c-8bc6-9d6c1dd85a40": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Dr. Jaspreet Sarna",
+            "doctorImage": "shopify:\/\/shop_images\/doct1_270x270_76dbdb54-9db4-4ab1-b703-af1f6f88172e.png",
+            "specialist": "DERMATOLOGIST | HAIR SPECIALIST,",
+            "experience": "11 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/doctor-jaspreet"
+          }
+        },
+        "12f7fc5c-9b92-4c99-a58c-767ee7d48385": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Kalyani Deshmukh",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Kalyani-1_compact_ef50a4f5-47ea-415e-ba4f-0df0def67e7a.png",
+            "specialist": "DERMATOLOGIST | HAIR SPECIALIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/kalyani-deshmukh"
+          }
+        },
+        "068ba645-e820-4ee1-b84d-504042750455": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Siddhi Sonawane",
+            "doctorImage": "shopify:\/\/shop_images\/9814da57-362f-484e-8e96-552a54fae9c2_532bbea6-399b-4ceb-9224-93b07e69ddde.jpg",
+            "specialist": "DERMATOLOGIST | COSMETOLOGIST,",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/siddhi-sonawane"
+          }
+        },
+        "2418afa8-5121-4d85-a357-b75c002a8acc": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Sangeeta Menon",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Sangeeta_Menon-1_compact_f6f857e8-df9e-4d0c-9a4f-3a5e4d59cd22.png",
+            "specialist": "DIETICIAN | NUTRITIONIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/sangeeta-menon"
+          }
+        },
+        "12e9d35f-5b37-462b-b89a-638326c1de4b": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Harish Balaji. R",
+            "doctorImage": "shopify:\/\/shop_images\/dr.harish_compact_618a6300-f9a1-4fe6-b780-748f8d8a0c62.png",
+            "specialist": "DERMATOLOGIST | MD | AESTHETIC SURGEON,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-harish"
+          }
+        },
+        "2b0fbc28-3864-4128-bdbd-1ea6aae98e11": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Nishita Suratkal",
+            "doctorImage": "shopify:\/\/shop_images\/Group_102352436_5e061c31-5568-4289-a423-545f2150d9b0.png",
+            "specialist": "DIETICIAN | NUTRITIONIST",
+            "experience": "5 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/nishita-suratkal"
+          }
+        },
+        "6dec572c-9c22-4cec-a4bc-128c030d2210": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Dr. Moyna Vakil",
+            "doctorImage": "shopify:\/\/shop_images\/dr.Moyna-1_large_7f324788-81f4-4aa8-bedf-0d7b2039fabe.png",
+            "specialist": "Dietician ,Nutritionist",
+            "experience": "10 years",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/moyna-vakil"
+          }
+        },
+        "ba99c569-7b97-4185-8252-a8bea95cab27": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Shefali Saini",
+            "doctorImage": "shopify:\/\/shop_images\/dr_Shefali_6d8c17e2-4bb6-42b9-95a2-4e900cb9b9d4.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "6 YEARS",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "shopify:\/\/pages\/shefali-saini"
+          }
+        },
+        "9d8de5db-6496-4202-bdc7-ca4d03f0315d": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Dhwani Saxena",
+            "doctorImage": "shopify:\/\/shop_images\/Dr._dhwani.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "5 YEARS",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_a94c890a-7e0a-4620-bf47-689acc8c0e68.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_c74a1b89-8159-4c5f-b352-2f6cbece7605.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-dhwani"
+          }
+        }
+      },
+      "block_order": [
+        "3c7c5d5e-3220-409c-8bc6-9d6c1dd85a40",
+        "12f7fc5c-9b92-4c99-a58c-767ee7d48385",
+        "068ba645-e820-4ee1-b84d-504042750455",
+        "2418afa8-5121-4d85-a357-b75c002a8acc",
+        "12e9d35f-5b37-462b-b89a-638326c1de4b",
+        "2b0fbc28-3864-4128-bdbd-1ea6aae98e11",
+        "6dec572c-9c22-4cec-a4bc-128c030d2210",
+        "ba99c569-7b97-4185-8252-a8bea95cab27",
+        "9d8de5db-6496-4202-bdc7-ca4d03f0315d"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "newsletter",
+    "1663045023f8babc62",
+    "1663045053f0934f77",
+    "1663045060dfd068c6"
+  ]
+}

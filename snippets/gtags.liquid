@@ -1,0 +1,32 @@
+<script>
+  function ssGetURLParameter(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+  }
+</script>
+
+{% comment %}for adding utm parameters{% endcomment %}
+<script language="javascript" type="text/javascript">
+  var ssSessionId = '';
+  if(ssGetURLParameter( 'utm_source') != null) {
+    ssSessionId = ssGetURLParameter('utm_source');
+    var utmCampaign = ssGetURLParameter('utm_campaign');
+    var utmTerm = ssGetURLParameter('utm_term');
+    var utmcontent = ssGetURLParameter('utm_content');
+    if((ssSessionId.toLowerCase() == 'facebook') || ((ssSessionId.toLowerCase() == 'google') && utmCampaign == 'PM-Direct-06052022') || ((ssSessionId.toLowerCase() == 'google') && utmCampaign == 'YT-Direct-06052022')){
+      jQuery('.hair-form-actn-link').each( function($){
+        let href = jQuery(this).attr('href').split('?')[1];
+        let preLink = jQuery(this).attr('href').split('?')[0];
+        jQuery(this).attr('href', `${preLink}?${href}`);
+      });
+    }
+  }
+  jQuery(document).ready(function(){
+    jQuery('.hair-form-actn-link').css('pointer-events','auto');  
+  });
+  {% if page.handle == 'homev1b'%}
+    jQuery(document).ready(function(){
+      jQuery('.hair-form-actn-link').attr('href', 'https://form.traya.health/guest-form');
+    });
+  {%endif%}
+</script>
+{% comment %}End for adding utm parameters{% endcomment %}

@@ -1,0 +1,121 @@
+<!-- ---section/instagramReels---- -->
+<div class="main_instagramReels container mt-3">
+  {% for block in section.blocks %}
+    <div class="instagramReels m-2 position-relative">
+      <a href="{{ block.settings.reels-url }}" target="_blank">
+   
+      <div class="img position-relative">
+         <div class="cstm-gradient d-block position-absolute"></div>
+        <img class="w-100 h-100" src="{{ block.settings.instaReels-img | img_url: 'master' }}"/>
+      </div>
+      <div class="txt position-absolute">
+        <p class="l-0 text-white">{{ block.settings.txt-content }}</p>
+      </div>
+      <div class="logoImg position-absolute">
+        <img class="w-100 h-100" src="{{ block.settings.logoImg | img_url: 'small' }}"/>
+      </div>
+      </a>
+    </div>
+    {% endfor %}
+</div>
+{% schema %}
+  {
+    "name": "instaReels name",
+    "tag" : "section",
+    "class": "instaReels-section",
+    "settings": [],
+    "blocks": [
+      {
+        "name": "Blocks",
+        "type": "text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "instaReels-img",
+            "label": "Drag the images"
+          },
+          {
+            "type": "text",
+            "id": "txt-content",
+            "label" : "Enter the text"
+          },
+          {
+            "type": "image_picker",
+            "id": "logoImg",
+            "label" : "Enter the SVG"
+          },
+          {
+            "type": "url",
+            "id": "reels-url",
+            "label" : "Enter the url"
+          }
+        ]
+      }
+    ],
+    "presets":[
+    {
+        "name":"imstaReels Section",
+        "category": "custom"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  .instagramReels .logoImg{
+     left : 4%;
+     bottom: 2%;
+  }
+    .instagramReels .txt {
+     left : 4%;
+     bottom: 14%;
+     font-size: 14px;
+     line-height: 18px;
+    }
+    .instagramReels .img img{
+       border-radius: 13px;
+    }
+    .cstm-gradient.d-block.position-absolute{
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient( #00000000 20% , #000000 42%);
+        opacity: 0.5;
+        border-radius: 13px;
+    }
+    @media(width <= 989px){
+      .main_instagramReels .slick-list.draggable{
+        padding-right: 50px;
+  }
+      .instagramReels .txt{
+        font-size: 12px;
+        bottom: 16%;
+      }
+    }
+</style>
+<script>
+  $(document).ready(function(){
+  $('.main_instagramReels').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+   responsive: [
+    {
+      breakpoint: 989,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+      {
+        breakpoint: 749,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+      }
+    }
+  ]
+  });
+});
+</script>

@@ -1,0 +1,105 @@
+<div class="position-relative pt-md-5 pt-0 aldrich_wrapper">
+  <div>
+    {% if section.settings.desktop_banner != blank %}
+      {%- assign desktop_width = section.settings.desktop_banner.width | divided_by: 2 -%}
+      {%- assign desktop_height = section.settings.desktop_banner.height | divided_by: 2 -%}
+      {%- assign desktop_alt = section.settings.desktop_banner.alt | default: 'Desktop Banner' -%}
+      {{ section.settings.desktop_banner | image_url: width: 1600 | image_tag: width: desktop_width, height: desktop_height, alt: desktop_alt, title: desktop_alt, loading: 'eager', class: 'd-none d-md-block aldrich_banner' }}
+    {% endif %}
+    {% if section.settings.mobile_banner != blank %}
+      {%- assign mobile_width = section.settings.mobile_banner.width | divided_by: 2 -%}
+      {%- assign mobile_height = section.settings.mobile_banner.height | divided_by: 2 -%}
+      {%- assign mobile_alt = section.settings.mobile_banner.alt | default: 'Desktop Banner' -%}
+      {{ section.settings.mobile_banner | image_url: width: 800 | image_tag: width: mobile_width, height: mobile_height, alt: mobile_alt, title: mobile_alt, loading: 'eager', fetchpriority: 'high', class: 'd-md-none aldrich_banner' }}
+    {% endif %}
+  </div>
+  <div class="aldrich_text_section">
+    <p class="m-0 font-fredoka pb-4 aldrich_heading text-white d-none d-md-block">
+      <span>{{ section.settings.heading_part_1 }}</span> <span class="main_heading_part">{{ section.settings.heading_part_2 }}</span> <span>{{ section.settings.heading_part_3 }}</span>
+    </p>
+    <p class="m-0 font-fredoka pb-4 aldrich_heading text-white d-md-none">
+      <span>{{ section.settings.heading_part_1 }}</span><br/><span class="main_heading_part">{{ section.settings.heading_part_2 }}</span><br/><span>{{ section.settings.heading_part_3 }}</span>
+    </p>
+    <p class="text-white aldrich_description">{{ section.settings.description }}</p>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Aldrich Banner",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "desktop_banner",
+        "label": "Select Desktop Banner",
+        "info": "Desktop Banner"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_banner",
+        "label": "Select Mobile Banner",
+        "info": "Mobile Banner"
+      },
+      {
+        "type": "text",
+        "id": "heading_part_1",
+        "label": "Enter Heading Part 1",
+        "info": "Heading Part 1"
+      },
+      {
+        "type": "text",
+        "id": "heading_part_2",
+        "label": "Enter Heading Part 2",
+        "info": "Heading Part 2"
+      },
+      {
+        "type": "text",
+        "id": "heading_part_3",
+        "label": "Enter Heading Part 3",
+        "info": "Heading Part 3"
+      },
+      {
+        "type": "text",
+        "id": "description",
+        "label": "Enter Description",
+        "info": "Description"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Aldrich Banner"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  #shopify-section-{{ section.id }} .aldrich_banner {width: 100%;}
+  #shopify-section-{{ section.id }} .aldrich_wrapper {position: relative;}
+  #shopify-section-{{ section.id }} .main_heading_part {color: #933828 !important;}
+  #shopify-section-{{ section.id }} .aldrich_text_section {position: absolute;width: 35%;left: 35%;top: 50%;transform: translate(-65%, -50%);}
+  #shopify-section-{{ section.id }} .aldrich_heading {font-size: 48px;line-height: 58.08px;}
+  #shopify-section-{{ section.id }} .aldrich_description {font-size: 24px;line-height: 29.05px;}
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    #shopify-section-{{ section.id }} .aldrich_heading {font-size: 32px;line-height: 43.08px;}
+    #shopify-section-{{ section.id }} .aldrich_description {font-size: 22px;line-height: 28.05px;}
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .aldrich_heading {font-size: 25px;line-height: 30.08px;}
+    #shopify-section-{{ section.id }} .aldrich_description {font-size: 16px;line-height: 22.05px;}
+  }
+  @media only screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .aldrich_banner {width: 100%;height: 100%;}
+  }
+  @media only screen and (max-width: 767.98px) {
+    #shopify-section-{{ section.id }} .aldrich_heading {font-size: 28px;line-height: 33.88px;}
+    #shopify-section-{{ section.id }} .aldrich_description {font-size: 12px;line-height: 14.52px;}
+    #shopify-section-{{ section.id }} .aldrich_text_section {width: 65%;left: 10%;top: 30%;transform: translate(0%, -50%);}
+  }
+  @media only screen and (max-width: 400px) {
+    #shopify-section-{{ section.id }} .aldrich_banner {width: 100%;height: 100%;}
+    #shopify-section-{{ section.id }} .aldrich_heading {font-size: 26px;line-height: 31.88px;}
+  }
+{% endstyle %}

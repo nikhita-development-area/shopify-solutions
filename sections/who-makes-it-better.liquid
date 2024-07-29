@@ -1,0 +1,138 @@
+<div class="container section-{{ section.id }}-padding">
+  {% if section.settings.heading != blank %}
+    <div class="pb-3">
+      <p class="text-center who_makes_heading">{{ section.settings.heading }}</p>
+    </div>  
+  {% endif %}
+  <div class="d-flex flex-wrap justify-content-center who_makes_better_main">
+    {%- for block in section.blocks -%}
+      <div class="col-md-4 col-6 p-0 d-flex flex-wrap">
+        {% if block.settings.image != blank %}
+          <div class="col-12 text-center pb-md-2 pb-3">
+            {%- assign width = block.settings.image.width | divided_by: 2 -%}
+            {%- assign height = block.settings.image.height | divided_by: 2 -%}
+            {%- assign alt = block.settings.image.alt | default: 'Image' -%}
+            {{ block.settings.image | image_url: width: 200 | image_tag: width: width, height: height, alt: alt, title: alt, loading: 'lazy', class: 'better_step_image m-auto d-block' }}
+          </div>
+        {% endif %}
+        <div class="col-12 text-center">
+          {% if block.settings.name != blank %}<p class="m-0 pb-2 font-weight-bold makes_better_step_name">{{ block.settings.name }}</p>{% endif %}
+          {% if block.settings.description != blank %}<p class="m-0 pb-0 makes_better_step_description">{{ block.settings.description }}</p>{% endif %}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Who Makes It Better",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Settings"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Enter Heading",
+        "info": "Heading"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Step",
+        "type": "step",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select Image",
+            "info": "Image"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Enter Name",
+            "info": "Name"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Enter Description",
+            "info": "Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Who Makes It Better"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  #shopify-section-{{ section.id }} .who_makes_heading {font-size: 48px;line-height: 65.47px;font-weight: 800;}
+  #shopify-section-{{ section.id }} .who_makes_better_main {row-gap: 35px;}
+  #shopify-section-{{ section.id }} .makes_better_step_name {font-size: 26px;line-height: 31.47px;}
+  #shopify-section-{{ section.id }} .makes_better_step_description {min-height: 72px;font-size: 16px;line-height: 19.36px;font-weight: 300;}
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    #shopify-section-{{ section.id }} .who_makes_heading {font-size: 44px;line-height: 60.47px;}
+    #shopify-section-{{ section.id }} .better_step_image {width: 120px;height: 120px;}
+    #shopify-section-{{ section.id }} .makes_better_step_name {font-size: 24px;line-height: 28.47px;}
+    #shopify-section-{{ section.id }} .makes_better_step_description {font-size: 14px;line-height: 17.36px;}
+    #shopify-section-{{ section.id }} .who_makes_better_main {row-gap: 20px;}
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .who_makes_heading {font-size: 30px;line-height: 45.47px;}
+    #shopify-section-{{ section.id }} .better_step_image {width: 100px;height: 100px;}
+    #shopify-section-{{ section.id }} .makes_better_step_name {font-size: 22px;line-height: 26.47px;}
+    #shopify-section-{{ section.id }} .makes_better_step_description {min-height: 65px;font-size: 13px;line-height: 17.36px;}
+    #shopify-section-{{ section.id }} .who_makes_better_main {row-gap: 25px;}
+  }
+  @media only screen and (max-width: 767.98px) {
+    #shopify-section-{{ section.id }} .who_makes_heading {font-size: 20px;line-height: 27.28px;}
+    #shopify-section-{{ section.id }} .better_step_image {width: 65px;height: 65px;}
+    #shopify-section-{{ section.id }} .makes_better_step_name {font-size: 14px;line-height: 16.94px;}
+    #shopify-section-{{ section.id }} .makes_better_step_description {min-height: 75px;font-size: 12px;line-height: 14.52px;}
+    #shopify-section-{{ section.id }} .who_makes_better_main {row-gap: 15px;}
+  }
+{% endstyle %}

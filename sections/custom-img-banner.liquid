@@ -1,0 +1,173 @@
+  <div class="{% if section.settings.full_width %}banner-full {% else %}container{% endif %}">
+    {% for block in section.blocks %}
+        {%if block.settings.heading_coach != blank%}
+      <p class="section-title">{{ block.settings.heading_coach }}</p>
+          {% endif %}
+        {%if block.settings.subheading_coach != blank%}
+      <h4 class="col-md-10 mx-auto text-center mb-5">{{ block.settings.subheading_coach }}</h4>
+        {%endif%}
+        {% if block.settings.coach_image_desktop != blank %}
+      <img src="{{ block.settings.coach_image_desktop | img_url: 'master' }}" alt="{{ block.settings.coach_image_desktop | escape }}" class="d-none d-md-block  {% unless page.handle == 'traya-coupons-offers-discounts' %}mx-auto w-100{% endunless %}">
+          {%endif%}
+            {%if block.settings.coach_image_mobile != blank%}
+              
+      <img src="{{ block.settings.coach_image_mobile | img_url: 'master' }}" alt="{{ block.settings.coach_image_mobile | escape }}" class="d-md-none">
+          {%endif%}
+      {% endfor %}
+    </div>
+    <style>
+      {% if page.handle == 'traya-coupons-offers-discounts' %}
+        div#shopify-section-template--16019510919346__6a4b3904-537a-481c-ad05-21f6c946522a p.section-title {
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+      .discount-code-ofer h3 {
+    font-size: 25px !important;
+    padding: 7px 0;
+    font-weight: bold;
+    font-family: 'nunito-sans-extrabold', sans-serif !important;
+}
+.discount-code-ofer {
+    text-align: center;
+    background: #B7D340;
+    border-radius: 14.32px;
+}
+.discount-code-ofer h3 {
+    font-size: 25px !important;
+    padding: 7px 0;
+    font-weight: bold;
+}
+    div#shopify-section-template--16017440506034__eb0629c2-9f35-434c-a8f5-31d765cfa595 p.section-title {
+    padding-bottom: 20px;
+}
+div#shopify-section-template--16017440506034__e6fbdc34-a540-4e38-b830-1541dd69da12 {
+    padding-bottom: 40px;
+}
+    .section-template--16017440506034__2bc0a148-f165-4f92-8228-23a2323f3e55-padding {
+    padding-bottom: 0 !important;
+}
+.section-title {
+    font-size: 45px !important;
+            margin-bottom: 21px!important;
+}
+      div#shopify-section-template--16017440506034__cd776a4c-1686-4974-ad5b-19872e9f8297 {
+    padding-top: 30px;
+}
+ div#shopify-section-template--16017440506034__7dca8dbf-f588-441d-8b98-353ea193d39e {
+    padding-top: 30px;
+}
+p.stories-content {
+    margin-top: 25px!important;
+    font-size: 28px;
+    max-width: 680px;
+    text-align: center;
+    line-height: initial;
+    margin: 0 auto 35px;
+}
+      div#shopify-section-template--16017440506034__6aedb91e-b3eb-49ab-a0c3-7962a5ab2244 .html_area.page-width.mt-3.my-md-5.pb-2.pb-md-auto {
+    margin-top: 20px!important;
+}
+
+     @media only screen and (min-width: 768px) {
+
+     }
+    
+       @media only screen and (max-width: 767.98px) {
+div#shopify-section-template--16017440506034__cd776a4c-1686-4974-ad5b-19872e9f8297 {
+    padding-bottom: 25px !important;
+}
+    .discount-code-ofer h3 {
+    font-size: 11px !important;
+    padding: 7px 0;
+    font-weight: bold;
+    margin: 0;
+}
+    .discount-code-ofer {
+    margin: 0 12px;
+}
+         .section-template--16017440506034__2bc0a148-f165-4f92-8228-23a2323f3e55-padding {
+    padding-bottom: 25px;
+}
+      p.stories-content {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+         .section-title {
+    font-size: 17px !important;
+           margin-bottom: 20px!important;
+}
+       div#shopify-section-template--16017440506034__cd776a4c-1686-4974-ad5b-19872e9f8297 {
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+         div#shopify-section-template--16017440506034__15878e44-b1d3-489f-82af-62ec7b6c65d8 {
+    padding-top: 10px;
+}
+         .doctors-section.container p.font-weight-bold.h1.l-0.mb-4.text-center.section-title {
+    margin-bottom: 0 !important;
+}
+         doctors-section.container .row.text-center.double-doctor-slider.mt-4.slick-initialized.slick-slider.slick-dotted {
+    margin-top: 0 !important;
+}
+         div#shopify-section-template--16017440506034__7dca8dbf-f588-441d-8b98-353ea193d39e {
+    padding-top: 0;
+}
+         doctors-section.container .row.text-center.double-doctor-slider.mt-4.slick-initialized.slick-slider.slick-dotted {
+    margin-bottom: 0 !important;
+}
+       }
+      div#shopify-section-template--16017440506034__cd776a4c-1686-4974-ad5b-19872e9f8297 {
+    padding-bottom: 50px;
+}
+      div#shopify-section-template--16017440506034__cd776a4c-1686-4974-ad5b-19872e9f8297 p.section-title {
+    margin-bottom: 30px !important;
+}
+      {% endif %}
+     
+    </style>
+{% schema %}
+  {
+    "name": "Custom IMG Banner",
+    "settings": [
+      {
+          "type": "checkbox",
+          "id": "full_width",
+          "label": "Full width",
+          "default": false
+        }
+    ],
+  "blocks": [
+  {
+  "type": "content",
+  "name": "Content",
+  "settings": [
+          {
+          "id": "heading_coach",
+          "type": "text",
+          "label": "Doctor coach heading"
+          },
+          {
+          "id": "subheading_coach",
+          "type": "text",
+          "label": "Doctor coach Subheading"
+          },
+          {
+          "id": "coach_image_desktop",
+          "type": "image_picker",
+          "label": "Image Desktop"
+          },
+          {
+          "id": "coach_image_mobile",
+          "type": "image_picker",
+          "label": "Image Mobile"
+          }
+       ]
+    }
+  ],
+          "presets":[
+          {
+          "name":"Custom IMG Banner",
+          "category":"Custom"
+          }]
+  }
+{% endschema %}

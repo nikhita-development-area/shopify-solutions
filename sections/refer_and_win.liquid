@@ -1,0 +1,73 @@
+<div class="refer_win container py-md-3 py-0">
+  <h3 class="refer_win_title text_Fredoka text-center" style="font-size:40px !important; color: #585A5B;">{{ section.settings.refer_win_title }}</h3>
+  <div class="refer_win_content rounded-lg">
+         {%- for block in section.blocks -%}
+    <div class="refer_win_para">
+      <p class="refer_win_Firstpara">{{ block.settings.refer_win_Firstpara }}</p>
+    </div>
+         {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Referal & Win",
+  "settings": [
+    {
+      "type":"text",
+      "id":"refer_win_title",
+      "label":"Add your Heading"
+    }
+  ],
+        "blocks": [
+           {
+            "name": "blocks",
+            "type": "colomn",
+            "settings": [
+               {
+                "type":"text",
+                "id":"refer_win_Firstpara",
+                "label":"Add your Content"
+              }
+            ]
+           }
+        ],
+  
+    "presets":[
+          {
+          "name":"refer & win"
+          }
+      ]
+}
+{% endschema %}
+<style>
+
+  .refer_win_title{
+    font-size:30px;
+    font-weight:700;
+    padding-bottom:10px;
+  }
+  .refer_win_content{
+    display:flex;
+    justify-content:center;
+    background: #D3E5EE;
+  }
+  .refer_win_para{
+    display:flex;
+    text-align:center;
+    border-radius: 8px;
+    margin: 10px;
+  }
+  .refer_win_Firstpara{
+    padding:20px 20px;
+    font-size:20px;
+    color:#585A5B;
+    border-radius:8px;
+    background:white;
+  }
+   .refer_win_Firstpara strong{font-size:25px;}
+  @media only screen and (min-width:767.98px){.refer_win_content{width:85%; margin:0 auto;} .refer_win_Firstpara{font-size:35px} .refer_win_Firstpara strong{font-size:40px;} .refer_win_Firstpara{padding:20px 40px;} .refer_win_para{padding:0 10px;}}
+  @media only screen and (max-width:576px){.refer_win{text-align:center;}}
+  @media only screen and (max-width:374px){.refer_win_Firstpara,.refer_win_Firstpara strong{font-size:20px;}.refer_win_Firstpara{padding:20px 18px;}}
+
+</style>

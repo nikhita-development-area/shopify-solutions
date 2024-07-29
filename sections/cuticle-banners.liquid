@@ -1,0 +1,332 @@
+<div class="product__slide d-none" page_type="cuticle">
+  <div class="cuticle-banner">
+    <div class="result-area">
+      <p class="font-weight-bold text_Fredoka username">Hi <span userName>User</span>,</p>
+      <p class="resultText">Thanks for telling us about your precious <span hair_type>wavy</span> hair.</p>
+      <p class="resultText">Based on your responses, we have identified that <span class="font-weight-bold" cuticle_reasons>environmental factors, chemical treatments <span class="font-weight-normal">and</span> usage of styling tools</span> are top reasons behind your <span class="font-weight-bold" cuticle_causes>dull, dry, frizzy hair, split ends, hair breakage and tangling</span> concerns.</p>
+      <p class="resultText mb-3">But don't worry, we have the perfect hair care routine to address all your concerns.</p>
+    </div>
+    <div class="product-area">
+      <p class="font-weight-bold routine mb-0 pb-2 pb-md-3">Your Customized Hair Routine :</p>
+      <div class="row pt-md-4 justify-content-center" cuticle_products>
+        
+      </div>
+    </div>
+  </div>
+  <div class="button_shadow mb-4">
+    <div class="d-flex justify-content-between cuticle__button_container align-items-center py-2">
+      <div>
+        <p class="m-0 ttl_cart_value pb-md-1 pb-2">Total</p>
+        <p class="font-weight-bold m-0 cart__price pb-md-1 pb-2"><sup>₹</sup><span cart_value>300</span> /-</p>
+        <p class="incl_tax m-0">Inclusive of all taxes</p>
+      </div>
+      
+      <div class="female_buy_price_wd">
+        <p id="add-to-cart-result-page-frp" class="btn new-female-buynowATC">
+          <span class="mr-2"><img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/dddd.png" width="" height="" loading="eager" title="Buy Now" alt="Buy Now"></span>BUY NOW
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Cuticle Banner",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "backgroud_color",
+        "label": "Select Background Color",
+        "default": "#fff"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Cuticle Banner",
+        "category": "slideshow"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .cuticle__button_container {
+    padding: 0 9rem;
+  }
+  #shopify-section-{{ section.id }} .cuticle-banner {
+    margin-top: 45px;
+    padding: 30px 9rem 0;
+    background: {{ section.settings.backgroud_color }};
+  }
+  #shopify-section-{{ section.id }} .username {
+    font-size: 25px;
+    line-height: 32.74px;
+  }
+  #shopify-section-{{ section.id }} .resultText {
+    font-size: 24px;
+    line-height: 32.74px;
+  }
+  #shopify-section-{{ section.id }} .routine {
+    font-size: 24px;
+    line-height: 26.88px;
+  }
+  .cuticle__buyBTN {
+    font-size: 21.85px;
+    line-height: 29.81px;
+    min-width: 300px;
+    background: #B7D340;
+    border: 1px solid #B7D340;
+    border-radius: 30px;
+    color: #414042;
+    font-weight: 700;
+  }
+  .cuticle_pd_name {
+    font-size: 24px;
+    line-height: 26.88px;
+  }
+  .cuticle_pd_uses {
+    font-size: 20px;
+    line-height: 22.4px;
+  }
+  .cuticle_pd_uses::marker {
+    color: #9E83D7;
+  }
+  .cuticle__product__price, .cuticle_product_prices {
+    font-size: 32px;
+    line-height: 35.84px;
+  }
+  .product__size {
+    font-size: 20px;
+    line-height: 22.4px;
+  }
+  li.cuticle_pd_uses {
+    list-style: inherit;
+  }
+  [cuticle_products] .slick-prev {
+    left: -15px;
+    top: 50%;
+    background: #EEEAFB;
+    padding: 5px;
+    height: 35px;
+    width: 35px!important;
+    border-radius: 50%;
+  }
+  [cuticle_products] .slick-prev:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    display: block;
+    transform: rotate(-135deg);
+    margin: auto;
+  }
+  [cuticle_products] .slick-next:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    display: block;
+    transform: rotate(45deg);
+    margin: auto;
+  }
+  [cuticle_products] .slick-next {
+    right: 0;
+    top: 50%;
+    background: #EEEAFB;
+    padding: 5px;
+    height: 35px;
+    width: 35px!important;
+    border-radius: 50%;
+  }
+  .incl_tax {
+    font-size: 14px;
+    line-height: 19.1px;
+    color: #41404280;
+  }
+  .ttl_cart_value {
+    font-size: 24px;
+    line-height: 32.74px;
+    font-weight: 600;
+  }
+  .cart__price {
+    font-size: 36px;
+    line-height: 40.32px;
+    color: #3E3E3E;
+  }
+  .button_shadow {
+    box-shadow: 0px 4.565333366394043px 4.565333366394043px 0px #00000040;
+  }
+  [btn_sticky] {
+    width: 100%;
+    background: #fff;
+    bottom: 0;
+    z-index: 9;
+  }
+  .cuticle_sticky_btn {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 98;
+  }
+  .cuticle__buyBTN:hover {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+  }
+  .cuticle__buyBTN:hover img {
+    filter: brightness(0) invert(1);
+  }
+  .cuticle__product__price:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: #9E83D7;
+    border-radius: 30px;
+  }
+  @media only screen and (max-width: 1199.98px) and (min-width: 768px) {
+    .cuticle__button_container {
+      padding: 0 60px;
+    }
+    #shopify-section-{{ section.id }} .cuticle-banner {
+      padding: 30px 60px 0;
+    }
+    #shopify-section-{{ section.id }} .resultText {
+      font-size: 20px;
+      line-height: 26.74px;
+    }
+    #shopify-section-{{ section.id }} .routine {
+      font-size: 20px;
+      line-height: 24.88px
+    }
+    .cuticle_pd_name {
+      font-size: 22px;
+      line-height: 24.88px;
+    }
+    .cuticle_pd_uses {
+      font-size: 18px;
+      line-height: 20.4px;
+    }
+    .cuticle__product__price, .cuticle_product_prices {
+      font-size: 25px;
+      line-height: 30.84px;
+    }
+    .product__size {
+      font-size: 15px;
+      line-height: 18.4px;
+    }
+  }
+  @media only screen and (max-width: 767.98px) and (min-width: 576px) {
+    .cuticle__button_container {
+      padding: 0 30px;
+    }
+    #shopify-section-{{ section.id }} .cuticle-banner {
+      margin-top: 40px;
+      padding: 30px 30px 0;
+    }
+    #shopify-section-{{ section.id }} .username {
+      line-height: 24.36px;
+    }
+    #shopify-section-{{ section.id }} .resultText {
+      font-size: 18.98px;
+      line-height: 26.74px;
+    }
+    #shopify-section-{{ section.id }} .routine {
+      font-size: 20px;
+      line-height: 24.88px;
+      text-align: center;
+    }
+    .cuticle__buyBTN {
+      font-size: 15.84px;
+      line-height: 21.6px;
+      min-width: unset;
+      width: 50%;
+    }
+  }
+  @media only screen and (max-width: 575.98px) {
+    .cuticle__button_container {
+      padding: 0 30px;
+    }
+    #shopify-section-{{ section.id }} .cuticle-banner {
+      margin-top: 40px;
+      padding: 30px 30px 0;
+    }
+    #shopify-section-{{ section.id }} .username {
+      line-height: 24.36px;
+    }
+    #shopify-section-{{ section.id }} .resultText {
+      font-size: 15.98px;
+      line-height: 24.36px;
+    }
+    #shopify-section-{{ section.id }} .routine {
+      font-size: 18.28px;
+      line-height: 20.47px;
+      text-align: center;
+    }
+    .cuticle__buyBTN {
+      font-size: 15.84px;
+      line-height: 21.6px;
+      min-width: unset;
+      width: 50%;
+    }
+  }
+  @media only screen and (max-width: 767.98px) {
+    [cuticle_products]:not(.slick-initialized) > [product_card]:first-of-type ~ * {
+      display: none;
+    }
+    .cuticle_pd_name {
+      font-size: 18.28px;
+      line-height: 20.47px;
+    }
+    .cuticle_pd_uses {
+      font-size: 14px;
+      line-height: 15.68px;
+    }
+    .cuticle__product__price, .cuticle_product_prices {
+      font-size: 22.22px;
+      line-height: 24.89px;
+    }
+    .product__size {
+      font-size: 16.67px;
+      line-height: 18.67px;
+    }
+    .ttl_cart_value {
+      font-size: 14.8px;
+      line-height: 20.18px;
+    }
+    .cart__price {
+      font-size: 26.67px;
+      line-height: 29.87px;
+    }
+    .cuticle__product__price:before {
+      width: 1px;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .cuticle__product__price, .cuticle_product_prices {
+      font-size: 20.22px;
+      line-height: 24.89px;
+    }
+    .product__size {
+      font-size: 14.67px;
+      line-height: 18.67px;
+    }
+    .cart__price {
+      font-size: 22.67px;
+      padding-bottom: 0!important;
+    }
+    .incl_tax {
+      font-size: 11px;
+    }
+    .cuticle__button_container {
+      padding: 0 14px 10px;
+    }
+  }
+{% endstyle %}

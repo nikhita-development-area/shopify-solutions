@@ -1,0 +1,352 @@
+<!--- snippets/stage-modal.liquid -->
+<div class="modal fade" id="doctorModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="d-flex flex-row-reverse modal-content">
+      <div class="border-0 modal-header pb-0 pl-0">
+        <button type="button" class="close pl-2" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="font-size-18">Dr. Sarna is an MD (Skin & VD) and Gold Medalist from Baroda Medical College. She has a decade long experience in treating hair loss and working on hair regrowth. She believes stress management is the key to good health.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="doctorModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="d-flex flex-row-reverse modal-content">
+      <div class="border-0 modal-header pb-0 pl-0">
+        <button type="button" class="close pl-2" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="font-size-18">A modern day Vaidya with 11 years of experience. A BAMS graduate from Pune, Dr. Chaubey is also a pancha karma practitioner and a spiritual healer. He has spent years perfecting his preventive hair loss all-natural treatment.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="doctorModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="d-flex flex-row-reverse modal-content">
+      <div class="border-0 modal-header pb-0 pl-0">
+        <button type="button" class="close pl-2" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="font-size-18">With a degree in Food Science and Nutrition, Dr. Menon is our nutrition whisperer. She believes that exercise is the key to a great digestive system. She is here to help you heal from within using food.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="doctorModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="d-flex flex-row-reverse modal-content">
+      <div class="border-0 modal-header pb-0 pl-0">
+        <button type="button" class="close pl-2" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="font-size-18">An assistant professor at the Department of Dermatology, KEM Hospital, Dr. Saini is a merit holder and has an MD (Dermatology, Venereology and Leprosy). Apart from conducting excellent diagnosis and providing treatment, she is an avid marathon runner and enjoys theatre.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="doctorModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="d-flex flex-row-reverse modal-content">
+      <div class="border-0 modal-header pb-0 pl-0">
+        <button type="button" class="close pl-2" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="font-size-18">With more than 4 years of experience, Dr. Deshmukh is an MD (Dermatology, Venerolgy and Leprosy) who successfully runs her own practice. She believes that a personalized service maximizes customer satisfaction and strives to achieve high success rates.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="doctorModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="d-flex flex-row-reverse modal-content">
+      <div class="border-0 modal-header pb-0 pl-0">
+        <button type="button" class="close pl-2" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="font-size-18">After gathering a decade long work experience at the finest medical schools in India, Dr. Rane is currently involved in teaching and practicing dermatology. As an MD (Dermatology) she is broadening her scope of practice while deeply following her love for music.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="stageModalCenter" tabindex="-1" role="dialog" aria-labelledby="stageModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content border-0 rounded-lg">
+      <div class="modal-header border-0">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <nav>
+          <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-sleep-tab" data-toggle="tab" href="#nav-sleep" role="tab" aria-controls="nav-sleep" aria-selected="true" data-targets="sleepissues">{% if page.handle == 'result-hi' %}नींद{% elsif page.handle == 'result-hinglish' %}Sleep{% else %}Sleep Issues{% endif %}</a>
+            <a class="nav-item nav-link" id="nav-weight-change-tab" data-toggle="tab" href="#nav-weight-change" role="tab" aria-controls="nav-weight-change" aria-selected="false" data-targets="weight-change">{% if page.handle == 'result-hi' %}वजन में बदलाव{% else %}Weight Change{% endif %}</a>
+            <a class="nav-item nav-link" id="nav-illness-tab" data-toggle="tab" href="#nav-illness" role="tab" aria-controls="nav-illness" aria-selected="false" data-targets="illness">{% if page.handle == 'result-hi' %}गंभीर बीमारी{% elsif page.handle == 'result-hinglish' %}Serious Bimaari{% else %}Severe illness{% endif %}</a>
+            <a class="nav-item nav-link" id="nav-Surgery-tab" data-toggle="tab" href="#nav-Surgery" role="tab" aria-controls="nav-Surgery" aria-selected="false" data-targets="surgery">{% if page.handle == 'result-hi' %}सर्जरी{% else %}Surgery{% endif %}</a>
+            <a class="nav-item nav-link" id="nav-genetics-tab" data-toggle="tab" href="#nav-genetics" role="tab" aria-controls="nav-genetics" aria-selected="false" data-targets="genetics">{% if page.handle == 'result-hi' %}आनुवंशिकी{% else %}Genetics{% endif %}</a>
+            <a class="nav-item nav-link" id="nav-digestion-tab" data-toggle="tab" href="#nav-digestion" role="tab" aria-controls="nav-digestion" aria-selected="false" data-targets="digestion">{% if page.handle == 'result-hi' %}पाचन-शक्ति{% else %}Digestion{% endif %}</a>
+            <a class="nav-item nav-link" id="nav-lifestyle-tab" data-toggle="tab" href="#nav-lifestyle" role="tab" aria-controls="nav-lifestyle" aria-selected="false" data-targets="lifestyle">{% if page.handle == 'result-hi' %}जीवन शैली{% else %}Lifestyle{% endif %}</a>
+            <a class="nav-item nav-link" id="nav-stress-tab" data-toggle="tab" href="#nav-stress" role="tab" aria-controls="nav-stress" aria-selected="false" data-targets="stress">{% if page.handle == 'result-hi' %} स्ट्रेस{% else %}Stress{% endif %}</a>
+            <a class="nav-item nav-link" id="nav-weight-tab" data-toggle="tab" href="#nav-weight" role="tab" aria-controls="nav-weight" aria-selected="false" data-targets="weightloss">{% if page.handle == 'result-hi' %}वजन घटना{% else %}Weight Loss{% endif %}</a>
+            <a class="nav-item nav-link" id="nav-deficiency-tab" data-toggle="tab" href="#nav-deficiency" role="tab" aria-controls="nav-deficiency" aria-selected="false" data-targets="deficiency">{% if page.handle == 'result-hi' %}डेफिशियेंसी{% else %}Deficiency{% endif %}</a>
+            <a class="nav-item nav-link" id="nav-nutrition-tab" data-toggle="tab" href="#nav-nutrition" role="tab" aria-controls="nav-nutrition" aria-selected="false" data-targets="nutrition">{% if page.handle == 'result-hi' %}पोषण{% else %}Nutrition{% endif %}</a>
+            <a class="nav-item nav-link" id="nav-dandruff-tab" data-toggle="tab" href="#nav-dandruff" role="tab" aria-controls="nav-dandruff" aria-selected="false" data-targets="dandruff">{% if page.handle == 'result-hi' %}डैंड्रफ{% else %}Dandruff{% endif %}</a>
+            <a class="nav-item nav-link" id="nav-malfunction-tab" data-toggle="tab" href="#nav-malfunction" role="tab" aria-controls="nav-malfunction" aria-selected="false" data-targets="malfunction">{% if page.handle == 'result-hi' %}ऑटो इम्यून{% elsif page.handle == 'result-hinglish' %}Auto-Immune{% else %}AUTO-IMMUNE MALFUNCTION{% endif %}</a>            
+          </div>
+        </nav>
+        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-sleep" role="tabpanel" aria-labelledby="nav-sleep-tab" data-targets="sleepissues">
+            <div class="row">
+              <div class="col-md-4 align-items-center d-flex justify-content-center">
+                {%- render 'result-icons', icon: 'modal-sleep' -%}
+              </div>
+              <div class="col-md-8">
+                {% if page.handle == 'result-hi' %}
+                <p>अच्छी नींद के लिए कुछ आदतें, ना होने के कारण शरीर को और तनाव होता है जो आपके बालों के विकास को बिगाड़ देता है। अच्छी नींद पूरी करने से आपके बाल बढ़ते हैं और हेयर फॉल भी काम होता हैं। आपके बालों का एक हेयर ग्रोथ साइकिल होता है, जो नींद पूरी न होने के कारण बिगड़ सकता है। नींद में समस्या अक्सर परिवार, पैसे, रिश्तों, और काम के कारण होती है जिससे हेयर लॉस होने लगता है।</p>
+                {% elsif page.handle == 'result-hinglish' %}  
+                <p>Raat me sahi se neend puri na hone ke wajah se sharir ko aur tanaav hota hai jo aapke baalo ke growth ko bigaad deta hai. Acche sleep techniques use karke, aap apne baal grow sakte hain aur hair fall kam kar sakte hain. Aapke hair growth ka ek cycle rehta hai jo neend puri na hone ke wajah se bigad sakta hai. Neend me samasya aksar parivaar, paise, relationships aur kaam ke wajah se hota hai jisse hair loss hone lagta hai.</p>
+                {% else %}
+                <p>Not sleeping well at night can lead to more stress which damages the growth of your hair. Developing healthy sleeping habits can help your hair grow and reduce hair fall.</p>
+                <p>Your hair follows a life cycle of growth, rest & shedding phases. Stress induced by lack of sleep pushes the hair follicles into a premature resting phase instead of growth, which then leads to a premature shedding phase. Common causes of lack of sleep: Concerns about family, relationships, finances & a demanding work schedule can cause hair loss.</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-illness" role="tabpanel" aria-labelledby="nav-illness-tab" data-targets="illness">
+            <div class="row">
+              <div class="col-md-4 align-items-center d-flex justify-content-center">
+               {%- render 'result-icons', icon: 'modal-illness' -%}
+              </div>
+              <div class="col-md-8">
+                {% if page.handle == 'result-hi' %}
+                <p>टाइफाइड, डेंगू, मलेरिया या कोविड-19 जैसे बीमारियों  के कारण हेयर लॉस हो सकता है। इन बीमारियों को ठीक करने के लिए जो दवाई इस्तेमाल की जाती है उनके कारण बाल पतले या हेयर लॉस हो सकता है। ज्यादा बुखार होने के कारण बालों का ग्रोथ साइकिल बिगड़ जाता है और बालों के फॉलिकल छोटे होने लगते हैं।</p>
+                {% elsif page.handle == 'result-hinglish' %} 
+                <p>Typhoid, dengue, malaria ya Covid-19 jaise bimariyon ki wajah se hair loss ho sakta hai. Inn bimaariyo ko theek karne ke liye jo dawai diye jaate hai, unke wajah se hair thinning ya hair loss ho sakta hai. Zyada bukhaar hone ki wajah se hair growth cycle bigad jaata hai aur hair follicles chote hone lagte hai.</p>
+                {% else %}
+                <p>Severe illnesses such as typhoid, dengue, malaria, or COVID-19 can result in hair loss. The medications used to treat these illnesses may have side effects that include thinning or loss of hair. A high fever during a severe illness can disrupt the natural cycle of hair growth and even cause the hair follicles to shrink.</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-weight-change" role="tabpanel" aria-labelledby="nav-weight-change-tab" data-targets="weight-change">
+            <div class="row">
+              <div class="col-md-4 align-items-center d-flex justify-content-center">
+               {%- render 'result-icons', icon: 'modal-weight-change' -%}
+              </div>
+              <div class="col-md-8">
+                {% if page.handle == 'result-hi' %}
+                <p>वज़न घटने से तो हेयर लॉस होता ही है, लेकिन अचानक से वज़न बढ़ने से भी हेयर लॉस होता है। वज़न में अचानक ऊपर नीचे होने के कारण, शरीर  का हॉर्मोनल बैलेंस और हेयर ग्रोथ  साइकिल बिगड़ने लगता है।वज़न बढ़ते समय कम पोषण वाला खाना खाने से आपके बालों में ज़रूरी पोषण की कमी हो जाती है।</p>
+                {% elsif page.handle == 'result-hinglish' %} 
+                <p>Weight kam hone se toh hair loss hota hee hai, lekin achanak se weight badhne se bhi hair loss hota hai. Wajan me achanak se upar-niche hone ki wajah se, body ka hormonal balance aur hair growth ka cycle bigadne lagta hai.Aur wajan badhte samay kam nutrition wala khana khane se aapke baalo me zaruri nutrition ki kami ho jaati hai.</p>
+                {% else %}
+                <p>While weight loss is often the primary concern, sudden weight gain can also contribute to hair loss. Fluctuations in weight can disrupt the body's hormonal balance, which in turn affects the hair growth cycle. Moreover, poor dietary choices during weight gain can deprive your hair of essential nutrients.</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-Surgery" role="tabpanel" aria-labelledby="nav-Surgery-tab" data-targets="surgery">
+            <div class="row">
+              <div class="col-md-4 align-items-center d-flex justify-content-center">
+               {%- render 'result-icons', icon: 'modal-surgery' -%}
+              </div>
+              <div class="col-md-8">
+                {% if page.handle == 'result-hi' %}
+                <p>सर्जरी शरीर को तनाव में डालती है, जिससे हेयर लॉस हो सकता है। सर्जरी के दौरान जो दवाई इस्तेमाल की जाती है उससे भी हेयर लॉस हो सकता है। ऐसे समय पर उपवास और कुछ खाने पीने में बदलाव की वजह से  बालों की सेहत पर असर पड़ता है।</p>
+                {% elsif page.handle == 'result-hinglish' %} 
+                <p>Surgery body ko stress me daalti hai jisse hair loss ho sakta hai. Surgery ke time pe jo dawaai diye jaate hai, usse bhi hair loss ho sakta hai. Aise time par, bhukhe rehne se aur diet mein rok-tok ki wajah se baalo ke health pe asar padta hai.</p>
+                {% else %}
+                <p>Surgery can stress the body and cause hair loss. Anesthesia and medications used during surgery may have side effects, including hair loss. Fasting and dietary restrictions before or after the surgery can also affect hair health.</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-genetics" role="tabpanel" aria-labelledby="nav-genetics-tab" data-targets="genetics">
+            <div class="row">
+              <div class="col-md-4 align-items-center d-flex justify-content-center">
+                {%- render 'result-icons', icon: 'modal-genetics' -%}
+              </div>
+              <div class="col-md-8">
+                {% if page.handle == 'result-hi' %}
+                <p>यह आपके जीन की वजह से होता हैं ! मां या पिता के जीनों के कारण, अक्सर छोटी उम्र में हेयर लॉस होने लग जाता है। यह हेयर लॉस एक पैटर्न बन जाता है, जिसे सही दवाई और उपचार की मदद से रोका जा सकता है।</p>
+                {% elsif page.handle == 'result-hinglish' %} 
+                <p>Aap ka maa-baap ke genes ki wajah se aksar choti umar mein hair loss hone lag jaata hai. Yeh hair loss ek pattern bann jaata hai jo sahi dawai aur treatment ke madad se roka jaa sakta hai.</p>
+                {% else %}
+                <p>Blame it on your genes! Genetics play an important role in knowing when you’ll start to lose hair as you age. You may have probably heard about your mother’s father being bald, but in reality it may arise from either or both of your parents.</p>
+                <p>Fortunately, this root cause leads to a predictable hair loss pattern that can be stopped if medicated on time.</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-digestion" role="tabpanel" aria-labelledby="nav-digestion-tab" data-targets="digestion">
+            <div class="row">
+              <div class="col-md-4 align-items-center d-flex justify-content-center">
+                {%- render 'result-icons', icon: 'modal-digestion' -%}
+              </div>
+              <div class="col-md-8">
+                {% if page.handle == 'result-hi' %}
+                <p> पेट खराब होने के कारण आपकी सेहत खराब होने लगती है, जिससे बाल झड़ना शुरू हो जाता है। पेट खराब हो जाने पर आपका शरीर में आवश्यक पोषण अब्सॉर्ब नहीं हो पाता। इसके कारण, आपके बालों को जो पोषण की आवश्यकता होती है, वह उन्हें मिलना बंद हो जाता है।</p>
+                {% elsif page.handle == 'result-hinglish' %}
+                <p>Pet kharab hone ke wajah se aap ki sehat kharab hone lagti hai, jiss wajah se hair loss shuru ho jaata hai. Pet kharab hota hai toh aap ki body zaruri nutrition ko absorb nahi kar pata. Iss wajah se aapke baalo ko jo nutrition ki zarurat hai woh unhe milna bandh ho jaata hai.</p>
+                {% else %}
+                <p>A bad stomach can affect your hair’s health and lead to hair thinning which in turn results in hair loss. Maintaining a good diet and healthy eating habits can help improve your hair and reduce hair fall.</p>
+                <p>Certain substances in the stomach such as Enzymes, play a vital role in the repair & building functions, ensuring nutritional absorption. If the digestion process is disturbed even while maintaining a healthy diet, it could affect your hair as the nutrients required to build your hair have not been replenished.</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-lifestyle" role="tabpanel" aria-labelledby="nav-lifestyle-tab" data-targets="lifestyle">
+            <div class="row">
+              <div class="col-md-4 align-items-center d-flex justify-content-center">
+                {%- render 'result-icons', icon: 'modal-lifestyle' -%}
+              </div>
+              <div class="col-md-8">
+                {% if page.handle == 'result-hi' %}
+                <p>कुछ आदतें जैसे कि टेंशन लेना, सिगरेट पीना, सही डाइट न रखना - आपके बालों को बिगाड़ सकती हैं। दूसरी ओर, ज्यादा धूप में रहना, बालों को कलर करना - भी हेयर फॉल की समस्या को बढ़ा सकते हैं। इसलिए, अच्छी आदतें बनाएं रखना और अपने शरीर का ध्यान रखना, हेयर फॉल को कम कर सकता है और आपके बालों को स्वस्थ रखने में मदद कर सकता है।</p>
+                {% elsif page.handle == 'result-hinglish' %}
+                <p>Kuch aadatein jaise ki tension lena, smoke karna, acha diet nahi rakhna -aapke baalo ko bigaad sakti hai. Dusri taraf, zyada dhoop mein rehna, baalo ko colour karne se bhi hair fall hone lagta hai. Isliye achi aadatein banaye rakhna aur apne shareer ka khayal rakhne se hair loss kam ho sakta hai aur aapke hair ko healthy rakhne mein bhi madad kar sakta hai.</p>
+                {% else %}
+                <p>Certain parts of your daily routine tend to have a negative impact on your hair’s health such as an improper diet, smoking & stress. Other factors such as spending too much time under the sun, bleaching or dying your hair often can also trigger hair loss.</p>
+                <p>So when it comes to your lifestyle, maintaining healthy habits and taking care of yourself can reduce hair loss and help improve your hair’s health.</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-stress" role="tabpanel" aria-labelledby="nav-stress-tab" data-targets="stress">
+            <div class="row">
+              <div class="col-md-4 align-items-center d-flex justify-content-center">
+                {%- render 'result-icons', icon: 'modal-stress' -%}
+              </div>
+              <div class="col-md-8">
+                {% if page.handle == 'result-hi' %}
+                <p>जब आप स्ट्रेस लेते हैं, आपकी हेयर ग्रोथ रुकने लगती है। कुछ समय बाद, हेयर फॉल शुरू हो जाता है। स्ट्रेस कम करने की गतिविधियाँ सही हेयर उपचार के साथ हेयर फॉल को रोकने में मदद कर सकती हैं। आम कारण जो स्ट्रेस बढ़ाते हैं: ज्यादा दबाव वाला काम, पैसों का तनाव, परिवार में समस्या।</p>
+                {% elsif page.handle == 'result-hinglish' %}
+                <p>Jab aap stress lete ho, aapka hair growth rukne lagta hai. Kuch time baad hair fall shuru ho jaata hai. Stress kam karne ke activities ek sahi hair treatment ke saath hair fall rokne mein madad kar sakti hai. Aam wajah jo stress badhate hai: Zyada pressure wala kaam, paiso ki tension, family tension.</p>
+                {% else %}
+                <p>When you experience stress, the hair stops growing and goes into a rest phase while new hair growth is stopped. Over time the hair starts to fall (usually in patches) and more so easily while you undertake day-to-day activities.</p>
+                <p>Undertaking de-stressing activities along with hair treatment can help reverse the hair fall. Common reasons contributing to stress: A demanding job, financial worries, relationship issues, etc.</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-weight" role="tabpanel" aria-labelledby="nav-weight-tab" data-targets="weightloss">
+            <div class="row">
+              <div class="col-md-4 align-items-center d-flex justify-content-center">
+                {%- render 'result-icons', icon: 'modal-weight' -%}
+              </div>
+              <div class="col-md-8">
+                {% if page.handle == 'result-hi' %}
+                <p>मर्दों में हेयर लॉस अचानक वज़न घटने के वजह से भी होता है । इससे हॉर्मोन का बैलेंस और बालो के बढ़ने का साइकिल बिगड़ जाता है। और ठीक से पौष्टिक भोजन नहीं खाने के वजह से, बालों को ज़रूरी पोषण नहीं मिलता है, जिससे हमारे स्वास्थ्य भी बिगड़ने लगता है।</p>
+                {% elsif page.handle == 'result-hinglish' %}
+                <p>Mardo me hair loss achanak se weight loss ki wajah se bhi hota hai. Isse hormonal balance aur hair growth ka cycle bigad jaata hai. Aur theek se nutritious khaana nahi khane ke wajah se, aapke baalo ko zaruri nutrition nahi milta hai jisse humari health bhi bigadne lagti hai.</p>
+                {% else %}
+                <p>A sudden change in eating habits or lifestyle that results in weight loss can cause hair fall. Maintaining a good diet even while going through a weight loss programme is essential to help the body absorb the right amount of nutrients.</p>
+                <p>An unhealthy eating pattern can cause fluctuations in body mass index leading to physical stress. The body under stress, signals the hair to move to a premature resting phase that ultimately leads to hair fall.</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-deficiency" role="tabpanel" aria-labelledby="nav-deficiency-tab" data-targets="deficiency">
+            <div class="row">
+              <div class="col-md-4 align-items-center d-flex justify-content-center">
+                {%- render 'result-icons', icon: 'modal-deficiency' -%}
+              </div>
+              <div class="col-md-8">
+                {% if page.handle == 'result-hi' %}
+                <p>ज़रूरी पोषण की कमी की वजह से आपके बाल बहुत झड़ने लगते हैं। एक अच्छा आहार जिससे आपको सभी ज़रूरी पोषण मिले, बहुत ज़रूरी है। पोषण की कमी के कारण सिर्फ हेयर लॉस ही नहीं होता, बल्कि आपके बालों के फॉलिकल भी खराब होने लगते हैं।</p>
+                {% elsif page.handle == 'result-hinglish' %}
+                <p>Zaroori nutrition ke kami ki wajah se aap ka excess hair fall hone lagta hai. Ek accha diet iske liye bahut zaroori hai. Nutrition ki kami ke wajah se sirf hair loss hee nahi hota balki aapke hair follicles bhi kharab hone lagte hai.</p>
+                {% else %}
+                <p>The lack of essential vitamins in your body can lead to hair fall or make existing hair loss worse. It is important to get the right amount of vitamins through medications and a strict healthy diet.</p>
+                <p>Vitamin deficiencies not only lead to the loss of hair but also damage the hair follicles faltering the hair’s growth phase.</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-nutrition" role="tabpanel" aria-labelledby="nav-nutrition-tab" data-targets="nutrition">
+            <div class="row">
+              <div class="col-md-4 align-items-center d-flex justify-content-center">
+                {%- render 'result-icons', icon: 'modal-nutrition' -%}
+              </div>
+              <div class="col-md-8">
+                {% if page.handle == 'result-hi' %}
+                <p>एक अच्छा डाइट आपके शरीर में आवश्यक पोषण को अब्सॉर्ब करने के लिए आवश्यक है, जो आपके हेयर ग्रोथ में मदद करता है। आवश्यक पोषण की कमी के कारण  हेयर फॉल शुरू हो जाता हैं और आपके बालों को ज़रूरी पोषण नहीं मिलता है।। इसलिए सही खाना और डाइट बहुत आवश्यक है आपके बालों को स्वस्थ रखने के लिए।</p>
+                {% elsif page.handle == 'result-hinglish' %}
+                <p>Ek acha diet aap ke body me zaroori poshan ka absorption karne ke liye zaroori hai jo aapke baalo ko badhne me madad karta hai. Zaroori poshan ki kami ke wajah se hair fall shuru ho jaati hai aur aapke baalo tak zaruri nutrition nahi pochane deti hain. Isliye sahi khana aur diet aapke hair ko healthy rakhne ke liye bahut zaroori hai .</p>
+                {% else %}
+                <p>A good diet can help your body absorb the key nutrients required to support your hair’s growth. A lack of good food and exercise can lead the body into losing hair and not providing it with the essential building blocks for hair growth.</p>
+                <p>Maintaining a balanced diet along with whole foods can help improve your hair’s health.</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>         
+          <div class="tab-pane fade" id="nav-dandruff" role="tabpanel" aria-labelledby="nav-dandruff-tab" data-targets="dandruff">
+            <div class="row">
+              <div class="col-md-4 align-items-center d-flex justify-content-center">
+                {%- render 'result-icons', icon: 'modal-dandruff' -%}
+              </div>
+              <div class="col-md-8">
+                {% if page.handle == 'result-hi' %}
+                <p>डैंड्रफ, जो एक आम स्कैल्प कंडीशन है, इससे हेयर लॉस हो सकता है। अगर डैंड्रफ को ट्रीट नहीं किया जाए तो स्कैल्प पर सूजन होता है, जो बालों के फॉलिकल को बंद करके, नए, अच्छे बाल बढ़ने से रोकता है।</p>
+                {% elsif page.handle == 'result-hinglish' %}
+                <p>Dandruff, jo ek bahut common problem hain, isse hair loss ho sakta hai. Agar dandruff ko treat nahi kiya jaaye toh scalp par sujan hoti hai, jo baalo ke follicle ko bandh karke naye ache baal badhne se rokta hain.</p>
+                {% else %}
+                <p>Dandruff, a common scalp condition with excessive skin cell flaking, can lead to hair loss.</p>
+                <p>Untreated dandruff causes inflammation that damages hair follicles and clogs them, preventing healthy hair growth.</p>
+                {% endif %}
+                </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-malfunction" role="tabpanel" aria-labelledby="nav-malfunction-tab" data-targets="malfunction">
+            <div class="row">
+              <div class="col-md-4 align-items-center d-flex justify-content-center">
+                {%- render 'result-icons', icon: 'modal-malfunction' -%}
+              </div>
+              <div class="col-md-8">
+                {% if page.handle == 'result-hi' %}
+                <p>एलोपीशिया अरियाटा तब होता है जब आपके बॉडी का इम्यून सिस्टम अचानक आपके बालों के फॉलिकल्स पर हमला करता है , जिससे हेयर लॉस होने लगता है। दूसरे बीमारियों जैसे कि थायरॉयड, विटिलिगो, डायबिटीज़ से भी यह समस्या हो सकती है।</p>
+                {% elsif page.handle == 'result-hinglish' %}
+                <p>Jab aap ki body ka immune system achanak se aapke baalo ke follicles pe attack karte hai toh Alopecia Areata hota hai, jisse hair loss hone lagta hai. Doosre kai immune-related bimaariyaan jaise ki thyroid, diabetes se bhi yeh samasya ho sakti hai.</p>
+                {% else %}
+                <p>Alopecia areata happens when the body's immune system mistakenly attacks hair follicles, causing hair loss. It often occurs with other immune-related conditions like vitiligo, thyroid issues, and diabetes, among others.</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>     
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% style %}
+  #nav-tab a {display: none; justify-content: center;}
+  #nav-malfunction svg path {fill: #B7D340; stroke: #B7D340;}
+  #stageModalCenter .nav-link {padding: 0.5rem 0.4rem;}
+  #stageModalCenter .nav-tabs .nav-item .nav-link, #stageModalCenter .nav-tabs .nav-link {color: #b7d340;}
+  #stageModalCenter .nav-tabs .nav-item.show .nav-link, #stageModalCenter .nav-tabs .nav-link.active {border: none;color: #b7d340;font-weight: 700;position: relative;}
+  #stageModalCenter .nav-tabs .nav-item {margin-bottom: 0;}
+  #stageModalCenter .nav-tabs .nav-item.show .nav-link:after, #stageModalCenter .nav-tabs .nav-link.active:after {content: "";background: #b7d340;bottom: -2px;left: 0;height: 2px;width: 100%;position: absolute;}
+  #stageModalCenter .nav-tabs .nav-link:focus, #stageModalCenter .nav-tabs .nav-link:hover {border: none;}
+  #stageModalCenter .nav-tabs .nav-link {border: none;letter-spacing: normal;}
+{% endstyle %}

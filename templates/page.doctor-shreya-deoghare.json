@@ -1,0 +1,149 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "doctor_details_mLL6dw": {
+      "type": "doctor-details",
+      "blocks": {
+        "text_9Lr9i9": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "H",
+            "user_name": "Hitesh",
+            "user_content": "Dr. Shreya's professional attitude and knowledge is impressive. I would recommend her."
+          }
+        },
+        "text_LfRjNw": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "R",
+            "user_name": "Rakesh",
+            "user_content": "Psoriasis ke liye Dr. ne achha treatment kiya, deeply thankful.\""
+          }
+        },
+        "text_CtKAxT": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "N",
+            "user_name": "Neelam",
+            "user_content": "Dr. se treatment lena mera sabse sahi decision tha, highly satisfied!\""
+          }
+        }
+      },
+      "block_order": [
+        "text_9Lr9i9",
+        "text_LfRjNw",
+        "text_CtKAxT"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Dr_Shriya.webp",
+        "doctor_name": "Dr. Shreya Deoghare",
+        "specialization": "MBBS, MD (Dermatology) |  6 YEARS",
+        "education": "MBBS, MD (Dermatology)",
+        "registration_no": "MMC 2018\/08\/4440",
+        "ratings": "5\/5",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "Dr. Shreya Deoghare is an accomplished dermatologist with over five years of experience. She is an Assistant Professor in Dermatology at NKPSIMS and a Consultant Dermatologist at Alexis (Max) Multispeciality Hospital, Nagpur. She is the Founder & CEO of The Good Research Project."
+      }
+    },
+    "qa_accordion_T4x3PH": {
+      "type": "QA-accordion",
+      "blocks": {
+        "faq_eXGaef": {
+          "type": "faq",
+          "settings": {
+            "Question": "What is Dermatology?",
+            "Answer": "Dermatology focuses on studying, diagnosing, and managing conditions related to the skin, hair, and nails"
+          }
+        },
+        "faq_Taa9Mg": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do people visit Dr. Shreya Deoghare?",
+            "Answer": "Patients seek Dr. Deoghare’s expertise for hair and other skin-related conditions."
+          }
+        },
+        "faq_NqfYMU": {
+          "type": "faq",
+          "settings": {
+            "Question": "What does Dr Shreya Deoghare Specialise in?",
+            "Answer": "Dr. Deoghare specialises in both dermatology and cosmetology."
+          }
+        }
+      },
+      "block_order": [
+        "faq_eXGaef",
+        "faq_Taa9Mg",
+        "faq_NqfYMU"
+      ],
+      "settings": {
+        "Accordiontitle1": "",
+        "Accordiontitle2": ""
+      }
+    },
+    "doctor_slide_MMYyiY": {
+      "type": "doctor-slide",
+      "blocks": {
+        "text_BYmhVg": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Dhwani Saxena",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Dhwani_Saxena.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "5 YEARS  Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": ""
+          }
+        },
+        "text_PHWFCz": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Shefali Saini",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Shefali_79c32e40-1947-4a30-8292-8f5d3ca1d112.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/shefali-saini"
+          }
+        },
+        "text_7hM34z": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr.Shailendra Chaubey",
+            "doctorImage": "shopify:\/\/shop_images\/Chaubey_compact_94feda1e-2064-42a0-b2d8-90aaf8b0ee62.png",
+            "specialist": "HEALTH EDUCATOR | AYURVEDIC PRACTITIONER,",
+            "experience": "15 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/shailendra-chaubey"
+          }
+        }
+      },
+      "block_order": [
+        "text_BYmhVg",
+        "text_PHWFCz",
+        "text_7hM34z"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "doctor_details_mLL6dw",
+    "qa_accordion_T4x3PH",
+    "doctor_slide_MMYyiY"
+  ]
+}

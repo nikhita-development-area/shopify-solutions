@@ -1,0 +1,95 @@
+<div class="hair_and_how">
+   <div class="row mt-5">
+      <div class="col-md-6 p-4 p-md-5">
+         <div class="how_hair">
+            <h1 class="font-weight-bold how_hair_heading">{{ section.settings.how-hair }}</h1>
+         </div>
+         <div class="the_root">
+            <h2 class="the_root_para">
+            {{ section.settings.the-root}}
+            <h2>
+         </div>
+         <div class="hair_loss">
+            <p class="my-2 my-md-4 hair-loss-text">{{ section.settings.hair-loss}}</p>
+         </div>
+      </div>
+      <div class="col-md-6 mx-auto text-md-right">
+         <div class="image-plant">
+            <img src="{{ section.settings.image-plant | img_url:'' }}"/>
+         </div>
+      </div>
+   </div>
+</div>
+
+{% schema %}
+  {
+    "name": "image-text",
+    "settings": [
+        {
+    "type": "text",
+  	"id": "how-hair",
+  	"label": "Heading"
+    },
+       {
+    "type": "text",
+  	"id": "the-root",
+  	"label": "Title"
+    },
+      {
+    "type": "text",
+  	"id": "hair-loss",
+  	"label": "Paragrogh"
+    },
+      {
+    "type": "image_picker",
+  	"id": "image-plant",
+  	"label": "Logo image"
+    }
+    ],
+
+  "presets":[
+  {
+    "name":"hair and how Banner",
+    "category":"image-text"
+  }
+  ]
+}
+ {% endschema %}
+
+<style>
+  .quiz-hair-breadcrumb {
+    position: absolute;
+    top: 25px;
+    left: 50px;
+}
+ .how_hair .how_hair_heading {
+     font-size: 64px;
+     letter-spacing: normal;
+}
+  .the_root_para {
+    letter-spacing: normal;
+  }
+ .hair_loss .hair-loss-text{
+     font-size:24px;
+     letter-spacing: normal;
+}
+ @media only screen and (max-width: 1199px) and (min-width: 768px) {
+     .the_root .the_root_para {
+         font-size: 36px;
+    }
+}
+ @media screen and (max-width: 767.98px){
+     .how_hair .how_hair_heading {
+         font-size: 48px;
+    }
+     .the_root .the_root_para {
+         font-size: 24px;
+         border-bottom: 1px solid #AEAEAE;
+         padding-right: 4rem;
+         padding-bottom: 9px;
+    }
+     .hair_loss .hair-loss-text {
+         font-size:14px;
+    }
+}
+</style>

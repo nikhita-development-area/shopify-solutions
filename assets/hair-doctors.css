@@ -1,0 +1,499 @@
+/*  hair-transplant-graph */
+.transplant_graph_main {
+  margin-top: 60px;
+}
+.empty_graph1 {
+  height: 52px;
+  width: 48px;
+  background: #4E8CE8;
+}
+.graphs_text {
+  padding: 10px;
+  background: #F2F3F4;
+  border-radius: 8px;
+
+}
+.graphs_text p strong {
+  font-size: 16px;
+}
+.graphs_text p strong:before {
+  /* content: '\2022';  */
+  font-size: 1.5em;
+  margin-right: 5px; 
+}
+.empty_graph2 {
+  height: 96px;
+  width: 48px;
+  background: #4E8CE8;
+}
+.empty_graph3 {
+  height: 160px;
+  width: 48px;
+  background: #4E8CE8;
+}
+.empty_graph {position: relative;}
+.empty_graph:after {content: ""; height: 10px; width: 2px; position: absolute; bottom: -10px; left: 50%; background: #000000;}
+.transplant_graph_content,.transplant_graph {width: 45%}
+.transplant_graph {justify-content: space-evenly;}
+.graphs_text_type {font-size: 14px; color:#9A9A9A;}
+/*  End hair-transplant-graph */
+
+#hair_doc_loader {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.hide{
+  display:none;
+}
+body.hair-doctors{
+  padding-top: 0;
+  position: relative;
+}
+/* banner */
+.template-article.dermatologist {padding-top: 1.8rem}
+.template-article.dermatologist .hair-doctors-banner-wrapper {padding-top: 40px;}
+
+.banner-hd .assessment-btn{
+  display: inline-block;
+}
+
+/* end banner */
+/* faq */
+.hair-quiz .accordion-body p a {
+  color: #b7d340;
+}
+.faq-hd-heading{
+  font-family: Fredoka One !important;
+}
+.faq-hair-doctors .faq-hd-heading{
+  font-size: 24px;
+}
+.faq-hd .accordion-item{
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+}
+.faq-hd .accordion-button{
+  border: 0;
+  width: 95%;
+  text-align: left;
+  font-size: 18px;
+  color: #414042;
+  font-weight: 700;
+  background: none;
+  position: relative;
+}
+.faq-hd .accordion-button::after {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  content: "";
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: transform .2s ease-in-out;
+  right: -5%;
+  top: 5px;
+  position: absolute;
+  display: inline-block;
+}
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(-180deg);
+}
+.faq-hd .accordion-collapse .metafield-rich_text_field > * {
+  padding-left: 15px;
+  color: #7D7D7D;
+  margin: 0;
+}
+.faq-hd .accordion-collapse li{
+  margin-left: 20px;
+}
+.faq-hd .accordion-collapse p{
+  padding-left: 0;
+}
+.loadMoreWrapper {
+  width:100%; text-align:center;padding:10px;
+}
+.loadMore{
+  padding:10px 15px; position:relative;text-decoration:underline; cursor:pointer; color:#3AADED;
+}
+.loadMore:after {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  content: "";
+  background-image: url(https://cdn.shopify.com/s/files/1/0100/1622/7394/files/expand_more.png?v=1690877871);
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: transform .2s ease-in-out;
+  right: -5%;
+  top: 11.5px;
+  position: absolute;
+  display: inline-block;
+ }
+.loadMore.less:after {
+  transform: rotate(-180deg);
+}
+/* end faq */
+/* city */
+.city-hair-doctors{
+  background: #6795C0;
+  position: relative;
+  padding: 30px 18px;
+  overflow: hidden;
+}
+.city-hd-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.city-hd-content{
+  color: #ffffff;
+}
+.city-hd-content p{
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding-top: 8px;
+}
+.city-hair-doctors:after {
+  content: "";
+  position: absolute;
+  background: url(https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102353404.png?v=1690810818) no-repeat;
+  width: 53px;
+  height: 57px;
+  display: inline-block;
+  right: 0;
+  bottom: 0;
+}
+.city-hair-doctors:before {
+  content: "";
+  position: absolute;
+  background: url(https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Vector_Stroke.png?v=1690810818) no-repeat;
+  width: 36px;
+  height: 30px;
+  display: inline-block;
+  left: 0;
+  top: 50px;
+}
+/* end city */
+
+/* doctors-list */
+
+.hair-transplant .city-hair-doctors  { padding: 0px;}
+.next_paginationBTN.disabled, .previous_paginationBTN.disabled{
+  display: none;
+}
+.doc_detail_right{width:50%;}
+.traya_doctor .image_section {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  background: #EAEAEA;
+  padding: 60px 0 0 28px;
+  margin: 40px 0;
+}
+.traya_doctor .text_contain, .traya_doctor .img_contain {
+  width: 50%;
+}
+.traya_doctor .text_contain{
+  margin: auto;
+  padding-bottom: 50px;
+}
+.dl-img-para {
+  margin: 25px 0;
+  color: #414042;
+}
+.doctor_deatils_main p {
+  padding: 1px 0;
+}
+.traya_doctor .text_contain h2 span{
+    font-weight:600;
+}
+.traya_doctor .doctor_deatils_main {
+  box-shadow: 3px 4px 15px 0px #0000001F;
+  margin-top:8px;
+  padding: 15px;
+}
+.doc_details_bottom{
+  border-top: 1px solid #E0E0E0;
+}
+.traya_doctor .doc_detail_left p,
+.traya_doctor .doc_detail_right p,
+.traya_doctor .doc_details_bottom p{
+  margin: 0;
+}
+.traya_doctor .doc_details_top{
+  display:flex;
+}
+.traya_doctor .doctor_deatils_main {
+  background: #fff;
+  border-radius: 8px;
+}
+.traya_doctor p.doc_add_details{
+  color: #999999;
+}
+.traya_doctor .doc_detail_left h3.doc_name,
+.traya_doctor .doc_detail_right p.doc_add {
+  font-size: 18px;
+}
+.traya_doctor .doc_detail_left p,
+.traya_doctor .doc_detail_right p{
+  font-size: 15px;
+}
+.traya_doctor p.sep{
+  font-size:16px;
+}
+.traya_doctor .sep_detail{
+  font-size:14px;
+}
+.traya_doctor .sep_detail_truncate{
+    display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
+}
+.doc_detail_right{
+  margin: auto;
+}
+.mobile_image__new{
+  display: none;
+}
+.traya_doctor .img_contain{
+  position: relative;
+}
+.desktop_image__new{
+  position: absolute;
+  bottom: 0;
+  max-height: 100%;
+  right: 0;
+}
+.doctors-list-heading{
+  font-size: 24px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.doctor_deatils_main{
+  margin: 10px 0;
+}
+.dl-see-more{
+  color: #3AADED;
+  cursor: pointer;
+}
+.paginationBTN_wrapper{
+  margin-top: 30px;
+}
+.paginationBTN{
+  border: 1px solid #A2A2A2;
+  box-shadow: 0px 0px 8px 0px #0000001F;
+  padding: 6px 15px;
+  border-radius: 4px;
+  color: #A2A2A2;
+  cursor:pointer;
+  margin: 0 8px;
+  font-size: 20px;
+}
+.paginationBTN:hover{
+  text-decoration: none;
+  color: #A2A2A2;
+}
+.paginationBTN.active{
+  border: 1px solid #B7D340;
+  color: #B7D340;
+}
+.sep_detail{
+  color: #999999;
+}
+.doc_fee{
+  font-weight: 600;
+}
+.previous_paginationBTN, .next_paginationBTN{
+  background-color: #f1f1f1;
+  color: black;
+}
+.paginationBTN_wrapper span:hover {
+  background-color: #b7d340;
+  transition: .5s;
+  color: black;
+}
+.paginationBTN_wrapper span{
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius:10px;
+  }
+/* end doctors-list */
+/* nearby-city-hair-doctors */
+.nb-block{
+  padding: 8px 0;
+  display: inline-block;
+}
+.nb-city {
+  border-right: 1.6px solid #727272;
+  color: #727272;
+  padding: 0 8px;
+  text-decoration: underline;
+  font-size: 14px;
+}
+.nb-city-heading{
+  font-size: 24px;
+}
+/* end nearby-city-hair-doctors */
+
+/* Start hair-transplant pages */
+.hair-transplant .city-hair-doctors {
+  background: #fff;
+}
+.hair-transplant .city-hd-heading {
+  color: black;
+}
+.hair-transplant .city-hair-doctors:after, .hair-transplant .city-hair-doctors:before {
+  display: none;
+}
+
+/* end hair-transplant pages */
+
+.readMore img { width: 18px;height: 10px;margin: 0 2px;}
+@media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+}
+@media only screen and (max-width: 991.98px) and (min-width: 768px) {
+  .banner-hd .faq-hd-heading{
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 767.98px){
+  .doc_detail_right{width:100%;}
+  .city-hd-heading {font-size: 20px}
+  .nb-city { font-size: 12px; }
+  .transplant_graph_content{width: 100%} .transplant_graph_main{margin-top: 0px;} .graphs_text{margin: 0px;}
+  .hair-transplant .section-title {font-size: 28px}
+}
+@media only screen and (max-width: 767.98px) and (min-width: 576px) {
+  .banner-hd .faq-hd-heading{
+    font-size: 24px;
+    text-align: left;
+  }
+  .dlist-heading{
+    width: 150%;
+  }
+  .doc_details_bottom{
+    border: 0;
+  }
+  .doc_detail_right{
+    border-top: 1px solid #E0E0E0;
+  }
+  .doctor_deatils_main p,.doctor_deatils_main h3.doc_name {
+    padding: 3px 0;
+  }
+  .doc_detail_right{
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .banner-hd .faq-hd-heading{
+    font-size: 24px;
+  }
+  .doctors-list-heading{font-size:20px;}
+  .banner-hair-doctors {
+    padding-top:50px;
+  }
+  .faq-hd .accordion-collapse *{
+    padding-left: 5px;
+  }
+  .banner-hd{
+    overflow: hidden;
+  }
+  .banner-hd .image, .desktop_image__new{
+    display: none;
+  }
+  .mobile_image__new{
+    display: block;
+  }
+  .banner-hd .image_mob{
+    display: block;
+    margin-top: 12px;
+  }
+  .dlist-heading{
+    font-size: 20px;
+    width: 115%;
+  }
+  .dl-img-para{
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  .traya_doctor .img_contain{
+    position: relative;
+  }
+  .mobile_image__new{
+    position: absolute;
+    bottom: 0;
+  }
+  .traya_doctor .text_contain a{
+    display: inline-block;
+    font-size: 12px;
+  }
+  .traya_doctor .image_section{
+    padding: 12px 0 0 15px;
+  }
+  .traya_doctor .doc_details_top {
+    flex-wrap: wrap;
+  }
+  .traya_doctor .text_contain{
+    padding-bottom: 12px;
+    z-index: 1;
+  }
+  .doc_details_bottom{
+    border: 0;
+  }
+  .doc_detail_right{
+    border-top: 1px solid #E0E0E0;
+  }
+  .doc_detail_right{
+    margin: 0;
+  }
+  .doctor_deatils_main p,.doctor_deatils_main h3.doc_name {
+    padding: 3px 0;
+  }
+  .traya_doctor .image_section{
+    margin: 20px 0;
+  }
+  .doctor_deatils_main{
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .paginationBTN_wrapper span{
+    font-size:12px;
+    padding: 8px 10px;
+    
+  }
+  .previous_paginationBTN, .next_paginationBTN {font-size: 13px;}
+  .paginationBTN {font-size: 15px;}
+  .paginiation_parent{ margin: 0 5px;}
+  .paginationBTN{
+    padding:4px 12px;
+    margin:0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .city-hd-heading{
+    font-size: 20px;
+  }
+  .graphs_text p strong, .graphs_text_type {font-size: 10px;}  
+  .traya_doctor .text_contain a{
+    font-size: 8px;
+    text-wrap: nowrap;
+  }
+  .dl-img-para{
+    line-height: 1.3;
+    font-size: 12px;
+  }
+  .dlist-heading{
+    width: 152%;
+    line-height: 1;
+  }
+}

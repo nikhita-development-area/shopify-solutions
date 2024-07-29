@@ -1,0 +1,85 @@
+<div class="magic-unfold pt-md-5 position-relative">
+    <div class="container">
+     <p class="section-title"> {{ section.settings.Heading }}</p>
+        <div class="row">
+            <div class="col-md-9 mx-auto pb-3">
+                <div class="row video-hero">  
+                    {%- for block in section.blocks -%}
+                  <div class="slick-video-box">
+                     <div class="col-12 pb-4" style="width: 855px;">
+                         <div class="box-video" id="block-{{ block.id }}" style="">
+                            <div class="shadowing border-0 card p-3 p-md-4 p-lg-5 shadow  text-center">
+                                    <video width="100%" height="auto" controls="">
+                                        <source src="{{ block.settings.main_video }}" type="video/mp4">
+                                    </video>
+                                    <div class="font mt-4">
+                                        <p>{{ block.settings.desc }}</p>
+                                    </div>
+                            </div>
+                       </div>
+                      </div>
+                </div>
+                    {% endfor %}
+                </div>
+             </div>
+          </div>
+       </div>
+</div>
+
+{% schema %}
+  
+{
+    "name": "Video Review",
+    "settings": [
+        {
+            "type": "text",
+            "id": "Heading",
+            "label": "Add Heading"
+        }
+    ],
+  "blocks": [
+    {
+      "type": "columns",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "url",
+          "id": "main_video",
+          "label": "Select Video"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "Description"
+        }        
+      ]
+    }
+  ],
+     "presets": [
+      {
+          "name": "Video Review",
+          "category": "Video Review"
+      }
+    ]
+}
+  
+
+{% endschema %}
+<!-- CSS -->
+{% stylesheet %}
+ .font{
+    font-size:18px;
+  }
+  .shadowing{
+    position: relative;
+    border-radius: 15px !important;
+    margin: auto;
+    padding: 58px !important;
+  }
+ 
+{% endstylesheet %}

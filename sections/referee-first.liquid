@@ -1,0 +1,54 @@
+<!-- Sections -> referee-first -->
+
+<div class="container-fluid p-0 referee-first">
+  <div class="row m-0">
+    <div class="col-12 p-0">
+      <div class="text-center my-3 first-section">
+        <h3 class="font-weight-bold">{{ section.settings.referee-title }}</h3>
+        <p>{{ section.settings.referee-sub_title }}</p>
+      </div>
+
+      <div class="text-center py-3 second-section">
+        <p>{{ section.settings.referee-para }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .referee-first {margin-top: 60px;}
+  .first-section h3 {font-size: 52px; line-height: 50px; letter-spacing: 0em;}
+  .first-section p {font-size: 35px; line-height: 40px; letter-spacing: 0em; color: #817F7F;}
+  .second-section {background: #F4F4F4;}
+  .second-section p {font-size: 35px; line-height: 42px; letter-spacing: 0em;}
+
+  @media screen and (max-width: 767px) {
+    .referee-first {margin-top: 40px;}
+    .first-section h3 {font-size: 26px; line-height: 28px;}
+    .first-section p {font-size: 19px; line-height: 21px;}
+    .second-section p {font-size: 19px; line-height: 23px;}
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Referee First Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "referee-title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "referee-sub_title",
+        "label": "Sub title"
+      },
+      {
+        "type": "html",
+        "id": "referee-para",
+        "label": "Paragraph"
+      }
+    ]
+  }
+{% endschema %}

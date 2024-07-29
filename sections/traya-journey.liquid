@@ -1,0 +1,232 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<div class="container text-center traya-main{% if template.suffix == 'cholestrol' %} cholestrol-journey page_link{% endif %}">
+  {% if section.settings.title != '' %}
+    <p class="section-title pt-0">{{ section.settings.title }}</p>
+  {% endif %}
+  <div class="row">
+    {% for block in section.blocks %}
+    <div class="custom text-jurney col-12 col-md-4 mb-4 mb-md-0 {{ page__hndl }}">
+           {% if block.settings.card_link != blank %}
+      <a href="{% if page.handle == 'female' or page.handle == 'new-female' %}https://form.traya.health/female?cohort=1&location=TrayaJourney&page={{ page__hndl }} {% elsif request.path contains '/blogs/hair-care' %}{{ block.settings.card_link }}&page={{ request.path | replace: '/blogs/', 'blogs_' | replace:'/','_'}}{{ page__hndl }}{% else %}{{ block.settings.card_link }}&page={{ page__hndl }}{% endif %}" id="homepage" data-resultForm class="text-decoration-none card border-0 shadow rounded-lg p-4 h-100 text-left hair-form-actn-link">
+      {% else %}
+        <div class="text-decoration-none card border-0 shadow rounded-lg p-4 h-100 text-left hair-form-actn-link">
+      {% endif %}
+        <div class="{% unless page.handle == 'femalev2' or page.handle == 'female' or page.handle == 'femalev1' %} row {% endunless %} journey-main">
+          <div class="{% unless page.handle == 'femalev2' or page.handle == 'female' or page.handle == 'femalev1' %}{% if template.suffix == 'cholestrol' %}col-12{% else %}col-8 col-md-12{% endif %}{% endunless %} for_female_pages">
+        {% if page.handle == 'femalev2' or page.handle == 'female' or page.handle == 'femalev1' %}
+          <h3 class="font-weight-bold mb-0 text-blue"> {% unless page.handle == 'homev5' %} Step {% endunless %} {{ forloop.index }}</h3>
+        {% endif %}      
+        {% if block.settings.heading != '' %}
+            <h4 class="font-weight-bold mb-3{% if template.name == 'index' %} text-charcol{% endif %}">{{ block.settings.heading }}</h4>
+            {% endif %}
+            {% if block.settings.content != '' %}
+            <h5 class="mb-lg-5">{{ block.settings.content }}</h5>
+            {% endif %}
+          </div>
+          <div class="{% unless page.handle == 'femalev2' or page.handle == 'female' or page.handle == 'femalev1' %}{% if template.suffix == 'cholestrol' %}col-12{% else %}col-4 col-md-12 pl-0 pl-md-3 pr-2 pr-md-3{% endif %}{% endunless %}">
+            <div class="{% if template.suffix == 'cholestrol' %}align-items-center d-flex{% else %}align-items-end d-md-flex{% endif %} flex-grow-1 justify-content-between pt-md-4 text-md-left text-right">
+              {% if block.settings.icon != blank %}
+                <img alt="{{ block.settings.icon | escape }}" src="{{ block.settings.icon | img_url: '100x' }}" loading="lazy" width="84" height="70" title="Icon {{ forloop.index }}">
+              {% endif %}
+              <div class="text-right mt-2 mt-md-0">
+                {% unless page.handle == 'femalev2' or page.handle == 'female' or page.handle == 'femalev1' %}
+                   <h3 class="font-weight-bold mb-0 text-blue"> {% unless page.handle == 'homev5' %} STEP {% endunless %} {{ forloop.index }}</h3>
+               {% endunless %}
+                {% if block.settings.read_time != blank %}
+                <p class="text-black-50">{{ block.settings.read_time }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+        </div>
+         {% if page.handle == 'femalev2' or page.handle == 'female' or page.handle == 'femalev1' or page.handle == 'traya-for-women-reviews' %}
+          {% if section.settings.card_link_text != '' %}
+            <p id="{% if page.handle == 'femalev2' %}female-hair-test-button6{% else %}female-hair-test-button5{% endif %}" class="femalev2-journey-btn {{ page__hndl }} start-journey-btn female-review-work btn btn-dark text-center take-the-hair-test mt-4 shadow hair-form-actn-link{% if page.handle == 'femalev2' %} femalev2Btns{% elsif page.handle == "traya-for-women-reviews" %} female-review-work female-reviews-button{% endif %}">{% if page.handle == 'female' %}{% if forloop.index == 1 %}TAKE FREE HAIR TEST<sup>TM</sup>{% endif %}{% else %}{{ block.settings.card_link_text }}{% endif %}</p>
+            {% endif %}
+        {% endif %}
+      {% if block.settings.card_link != blank %}
+        </a>
+      {% else %}
+        </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+
+  </div>
+  {% if template.name == 'index' or page.handle == 'homev1' or page.handle == 'home-v3' or page.handle == 'homev1b'  or page.handle == 'homev2b' %}
+  <h5 class="text-center{% if template == 'index' or page.handle == 'homev1' %} mb-2 mt-2 {% else %} mb-3 mt-4 mt-md-5 {% endif %} traya_journy_bottom_text">{{ section.settings.sub_title }}</h5>
+  {% endif %}
+  
+  {% unless template.name == 'index' or page.handle == 'homev1' or page.handle == 'home-v3' or page.handle == 'homev1b'  or page.handle == 'homev2b' %}
+  <h5 class="text-center mb-3 mt-md-5 px-4 px-md-0">{{ section.settings.sub_title }}</h5>
+  {% endunless %}
+
+  {% unless page.handle contains 'home-new' %}
+  {% if section.settings.btn_text != '' %}
+  <a id="{% if page.handle == 'female' or page.handle == 'new-female' %}female-hair-test-button5{% elsif page.handle == 'femalev1' %}femalev1-hair-test-button5{% else %}hairtestcta{% endif %}" href="{% if page.handle == 'female' or page.handle == 'new-female' %}https://form.traya.health/female?cohort=1&location=TrayaJourney&page={{ page__hndl }}{% else %}{{ section.settings.btn_link }}&page={{ page__hndl }}{% endif %}" class="start-journey-btn btn btn-dark take-the-hair-test mt-3 shadow hair-form-actn-link">{{ section.settings.btn_text }} <sup>&trade;</sup></a>
+  {% endif %}
+  {% endunless %}
+  {% if page.handle == 'traya-for-women-reviews' %}
+    <div class="text-center">
+      <a id="female-hair-test-button3" href="https://form.traya.health/female?cohort=1&location=reviews&page={{ page__hndl }}" class="btn btn-dark my-md-5 shadow hair-form-actn-link " style="pointer-events: auto; background: #884D3B; ">Know the Root Cause</a>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Traya Journey",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+	{
+      "type": "html",
+      "id": "sub_title",
+      "label": "Sub Title"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Journey",
+      "settings": [
+		{
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Content"
+        },
+		{
+          "type": "text",
+          "id": "read_time",
+          "label": "Reading Time"
+        },
+		{
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "card_link_text",
+          "label": "Text Link on Card"
+        },
+		{
+          "type": "url",
+          "id": "card_link",
+          "label": "Link on Card"
+        }
+      ]
+    }
+  ],
+   "presets": [
+    {
+      "name": "Traya Journey"
+    }
+  ]
+}
+{% endschema %}
+
+{% if template.suffix == 'cholestrol' %}
+  {% style %}
+    @media only screen and (max-width: 575.98px) {
+      .text-jurney h4 {
+        font-size: 20px;
+      }
+      .text-jurney h5, .traya-main h5 {
+        font-size: 17px;
+      }
+    }
+  {% endstyle %}
+{% endif %}
+<style>
+  p:empty {
+    display: none !important;
+  }
+  @media only screen and (max-width: 767.98px) {
+  .femalev2.start-journey-btn ,.female.start-journey-btn, .femalev1.start-journey-btn {
+    width: 90% !important;
+    margin: 0 auto;
+    font-size: 16px;
+}
+  }
+  .template-page.femalev1 .container.text-center.traya-main img.lazyloaded, .template-page.femalev2 .container.text-center.traya-main img.lazyloaded, .template-page.female .container.text-center.traya-main img.lazyloaded {
+    height: initial !important;
+    width: 100% !important;
+}
+  .template-page.femalev1 .text-right.mt-2.mt-md-0, .template-page.femalev2 .text-right.mt-2.mt-md-0, .template-page.female .text-right.mt-2.mt-md-0 {
+    text-align: center !important;
+}
+  .template-page.femalev1 .text-right.mt-2.mt-md-0 p, .template-page.femalev2 .text-right.mt-2.mt-md-0 p, .template-page.female .text-right.mt-2.mt-md-0 p {
+    font-size: 12px;
+}
+  .template-page.femalev1 .align-items-end.d-md-flex.flex-grow-1.justify-content-between.pt-md-4.text-md-left.text-right, .template-page.femalev2 .align-items-end.d-md-flex.flex-grow-1.justify-content-between.pt-md-4.text-md-left.text-right, .template-page.female .align-items-end.d-md-flex.flex-grow-1.justify-content-between.pt-md-4.text-md-left.text-right  {
+    text-align: center;
+}
+  .template-page.femalev1 h3.font-weight-bold.mb-0.text-blue, .template-page.femalev2 h3.font-weight-bold.mb-0.text-blue, .template-page.female h3.font-weight-bold.mb-0.text-blue {
+    font-size: 20px;
+    margin-bottom: 15px !important;
+}
+  .template-page.femalev1 .text-jurney h5, .traya-main h5, .template-page.femalev2 .text-jurney h5, .traya-main h5, .template-page.female .text-jurney h5, .traya-main h5 {
+    letter-spacing: normal;
+    margin-bottom: 0 !important;
+    font-size: 16px;
+    color: rgba(65, 64, 66, 1);
+    opacity: 0.7;
+}
+  h4.font-weight-bold.mb-3 {
+    color: rgba(145, 78, 59, 1);
+    text-transform: capitalize;
+    font-size: 17px;
+    margin-bottom: 10px !important;
+  }
+  .template-page.femalev1 .row.journey-main, .template-page.femalev2 .row.journey-main, .template-page.female .row.journey-main {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin:0 !important;
+  }
+.template-page.femalev1 .align-items-end.d-md-flex.flex-grow-1.justify-content-between.pt-md-4.text-md-left.text-right, .template-page.femalev2 .align-items-end.d-md-flex.flex-grow-1.justify-content-between.pt-md-4.text-md-left.text-right, .template-page.female .align-items-end.d-md-flex.flex-grow-1.justify-content-between.pt-md-4.text-md-left.text-right {
+    display: block !important;
+  }
+  .femalev1.start-journey-btn, .femalev2.start-journey-btn, .female.start-journey-btn {
+    text-align: center;
+    width: 100%;
+  }
+  {% if page.handle == 'homev5' %}
+    .container h5.text-center{
+      margin-top:48px!important;
+    }
+  {% endif %}
+  {% if page.handle == 'traya-for-women-reviews' %}
+    .take-the-hair-test.female-reviews-button, .take-the-hair-test.female-reviews-button:hover {
+      background: #884D3B!important;
+      border: 1px solid #884D3B!important;
+    }
+  {% endif %}
+</style>

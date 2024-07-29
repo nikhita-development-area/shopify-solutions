@@ -1,0 +1,124 @@
+<!-- Sections -> cuticle-hair-damage.liquid -->
+
+<div class="container cuticle-hair-damage">
+  <h2 class="text-center font-weight-bold mb-4">{{ section.settings.damage_title }}</h2>
+
+  <div class="cuticle-hair-damage-content position-relative">
+    {% for block in section.blocks %}
+      <div class="hair-damage-img-txt p-md-5 p-2">
+        <div class="hair-damage-img">
+          {% if block.settings.hair_damage_img != blank %}
+            <img src="{{ block.settings.hair_damage_img | img_url: 'master' }}" alt="Hair Damage Images" title="Image {{ forloop.index }}" width="" height="" loading="lazy" />
+          {% endif %}
+        </div>
+        <div class="hair-damage-txt mt-md-4 mt-1">
+          <p class="font-weight-bold">{{ block.settings.hair_damage_title }}</p>
+          <div class="solution-icons">
+            {{ block.settings.hair_damage_solution }}
+            {% if block.settings.hair_damage_img != blank %}
+              <img src="{{ block.settings.hair_damage_icon | img_url: 'medium' }}" alt="Solution Icons" title="Image {{ forloop.index }}" width="" height="" loading="lazy" />
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="text-center">
+    <a href="https://form.traya.health/questions?cohort=1&amp;location=HomeSlideshow&amp;page=cuticle-damage" class="btn btn-dark hair-form-actn-link" id="cuticle-female-hair-test-button2" style="pointer-events: auto;">Take The Hair Test <span>™</span></a>
+  </div>
+</div>
+
+<style>
+  .cuticle-hair-damage h2 {font-size: 48px; line-height: 60px; letter-spacing: 0em;}
+  /* .cuticle-hair-damage-content {box-shadow: 0px 0px 24px 4px #00000014; border-radius: 12px;} */
+  .hair-damage-img-txt {display: grid !important; grid-template-columns: 1fr 2fr; gap: 40px; box-shadow: 0px 0px 24px 4px #00000014; border-radius: 12px; margin: 20px;}
+  .hair-damage-txt p {font-size: 40px; font-weight: 700; line-height: 50px;}
+  .solution-icons {display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-left: 30px;}
+  .solution-icons li {font-size: 35px; line-height: 44px; letter-spacing: 0em; list-style-type: disc; opacity: 0.8;}
+  .cuticle-hair-damage-content .slick-dots li.slick-active button:before {color: #9E83D7;}
+  .cuticle-hair-damage-content .slick-prev {display: flex; justify-content: center; align-items: center; top: unset; bottom: 10%; left: 32%; z-index: 1; height: 30px; width: 30px; background: #9E83D7; border-radius: 50px;}
+  .cuticle-hair-damage-content .slick-next {display: flex; justify-content: center; align-items: center; top: unset; bottom: 10%; right: 52%; height: 30px; width: 30px; background: #9E83D7; border-radius: 50px;}
+  .cuticle-hair-damage-content .slick-next:before, .cuticle-hair-damage-content .slick-prev:before {height: 10px; width: 10px; border-color: #fff; opacity: 1;}
+  .cuticle-hair-damage-content .slick-next:before {margin-right: 3px;}
+  .cuticle-hair-damage-content .slick-prev:before {margin-left: 3px;}  
+  .cuticle-hair-damage-content ul.slick-dots {position: absolute; bottom: 12%; left: 36%;}
+  
+  @media screen and (max-width: 768px) {
+    .cuticle-hair-damage h2 {font-size: 30px; line-height: 40px;}
+    /* .cuticle-hair-damage-content {box-shadow: none;} */
+    .hair-damage-img-txt {grid-template-columns: 1fr 1.5fr; gap: 20px; box-shadow: none; margin: 0;}
+    .hair-damage-txt p {font-size: 18px; line-height: 22px;}
+    .solution-icons {grid-template-columns: 1fr 3fr; gap: 0px; margin-left: 20px;}
+    .solution-icons li {font-size: 16px; line-height: 20px; width: 100px;}
+    .cuticle-hair-damage-content .slick-prev {left: 45%; bottom: 0; height: 25px; width: 25px;}
+    .cuticle-hair-damage-content .slick-next {right: 10%; bottom: 0; height: 25px; width: 25px;}
+    .solution-icons img {height: 50px; width: 50px;}
+    .cuticle-hair-damage-content ul.slick-dots {bottom: 3%; left: 55%;}
+    .cuticle-hair-damage a.btn {font-size: 16px;}
+  }
+</style>
+
+<script>
+  jQuery(document).ready(function($) {
+    $('.cuticle-hair-damage-content').slick({
+      slidesToShow: 1.05,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      arrows: true,
+      dots: true,
+      infinite: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Cuticle Hair Damage",
+    "settings": [
+      {
+        "type": "text",
+        "id": "damage_title",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Hair Damage Gallery",
+        "type": "Gallery",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "hair_damage_img",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id": "hair_damage_title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "hair_damage_solution",
+            "label": "Points"
+          },
+          {
+            "type": "image_picker",
+            "id": "hair_damage_icon",
+            "label": "Select Icon"
+          }
+        ]
+      }
+    ],
+    "presets": [{"name": "Cuticle Hair Damage"}]
+  }
+{% endschema %}

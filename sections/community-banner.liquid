@@ -1,0 +1,73 @@
+<!-- Sections -> community-banner.liquid -->
+
+<div class="container community-banner-result-page mb-4">
+  <div class="comunity-banner position-relative" style="border-radius: 10px;">
+    {% if section.settings.comm_desk_banner != 'blank' %}
+      <img src="{{ section.settings.comm_desk_banner | img_url: 'master' }}" height="auto" width="auto" alt="Community Banner" class="d-none d-md-block w-100" style="border-radius: 10px;" />
+    {% endif %}
+
+    {% if section.settings.comm_mob_banner != 'blank' %}
+      <img src="{{ section.settings.comm_mob_banner | img_url: 'master' }}" height="auto" width="auto" alt="Community Banner" class="d-md-none w-100" style="border-radius: 10px;" />
+    {% endif %}
+
+    <div class="community-content position-absolute">
+      {% if page.handle == 'result4' %}
+        <h2 class="text_Fredoka d-none d-md-block">Buy the plan and <br> get access to <br> Traya’s Community</h2>
+        <h2 class="text_Fredoka d-md-none">Buy the plan and get access <br> to Traya’s Community</h2>
+      {% endif %}
+
+      {% if page.handle == 'result-hi' %}
+        <h2 class="text_Fredoka d-none d-md-block">आज ही प्लान खरीदें और Traya <br> की बढ़ती कम्युनिटी से जुड़ें</h2>
+        <h2 class="text_Fredoka d-md-none">आज ही प्लान खरीदें और Traya की <br> बढ़ती कम्युनिटी से जुड़ें </h2>
+      {% endif %}
+
+      {% if page.handle == 'result-hinglish' %}
+        <h2 class="text_Fredoka d-none d-md-block">Plan khareedein aur Traya <br> ki community join karein!</h2>
+        <h2 class="text_Fredoka d-md-none">Plan khareedein aur Traya <br> ki community join karein!</h2>
+      {% endif %}
+      <p>{{ section.settings.comm_content }}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .community-banner-result-page {width: 60%;}
+  .community-content {top: 50%; left: 5%; transform: translate(-5%, -50%);}
+  .community-content h2 {font-size: 38px; line-height: 50px; letter-spacing: 0em;}
+  .community-content p {font-size: 22px; line-height: 33px; letter-spacing: 0em; margin-top: 30px;}
+
+  @media only screen and (max-width: 767.98px) {
+    .community-banner-result-page {width: 100%;}
+    .community-content {top: 5%; left: unset; transform: unset; width: 100%;}
+    .community-content h2 {font-size: 25px; line-height: 33px; text-align: center;}
+    .community-content p {font-size: 16px; line-height: 22px; text-align: center; margin-top: 20px;}
+  }
+
+  @media only screen and (max-width: 375.98px) {
+    .community-content h2 {font-size: 22px; line-height: 30px;}
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Community Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "comm_desk_banner",
+        "label": "Select Desktop Banner"
+      },
+      {
+        "type": "image_picker",
+        "id": "comm_mob_banner",
+        "label": "Select Mobile Banner"
+      },
+      {
+        "type": "html",
+        "id": "comm_content",
+        "label": "Content"
+      }
+    ],
+    "presets": [{"name": "Community Banner MRP"}]
+  }
+{% endschema %}

@@ -1,0 +1,305 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "b88ba125-67f0-4e5f-a151-95cb406a808d": {
+      "type": "male-combo-main",
+      "blocks": {
+        "3bff9df3-83b3-437a-8f1c-a4e1fbeee600": {
+          "type": "stage",
+          "settings": {
+            "stage_image": "shopify:\/\/shop_images\/mlps-1-new_120x120_c37f8b6c-ee5f-429c-8fc8-5b8198d1ef66.png",
+            "stage_paragraph": "Put a pause to that hairline, forever.",
+            "stage_desc": "The hair on the top of the head begins thinning. Traya will prevent any further hair loss and will thicken the hair.",
+            "stage_product": ""
+          }
+        },
+        "25261c4a-b27b-42bc-8e7f-5f3750ee9eef": {
+          "type": "stage",
+          "settings": {
+            "stage_image": "shopify:\/\/shop_images\/Group_331_120x120_6cb89f8d-683f-4af1-b675-60b6405119b3.png",
+            "stage_paragraph": "Let’s get your lost hair back.",
+            "stage_desc": "The scalp starts to become visible and forehead gets larger. Traya will work on hair regrowth.",
+            "stage_product": ""
+          }
+        },
+        "73710c6c-0ce2-469d-be6c-3f24a1a07221": {
+          "type": "stage",
+          "settings": {
+            "stage_image": "shopify:\/\/shop_images\/stage4-removebg-preview_medium_056814f7-b9e4-41d4-9e9d-038352bed2e9.png",
+            "stage_paragraph": "Let’s get your lost hair back.",
+            "stage_desc": "The hairline recedes and a coin size patch on top of the head. Regrowth is possible if started at this stage.",
+            "stage_product": ""
+          }
+        },
+        "2930b608-310e-4a99-9fc0-f9de506bb91c": {
+          "type": "stage",
+          "settings": {
+            "stage_image": "shopify:\/\/shop_images\/stage5-removebg-preview_medium_57127df5-142c-4a45-92b3-cc7b79d7065c.png",
+            "stage_paragraph": "Let’s get your lost hair back.",
+            "stage_desc": "A lot of hair is lost on top of the head. Very important to start treatment for this stage. ",
+            "stage_product": ""
+          }
+        },
+        "174bbed8-6a0b-4e02-9ac4-f9fe22d5d790": {
+          "type": "stage",
+          "settings": {
+            "stage_image": "shopify:\/\/shop_images\/stage4-removebg-preview_medium_1.png",
+            "stage_paragraph": "Oops, too late.Only hair transplant can help.",
+            "stage_desc": "Traya might not be able to help too much. Only way is transplant.",
+            "stage_product": ""
+          }
+        },
+        "d809aebc-627c-4c53-a956-88bb9b0513ae": {
+          "type": "stage",
+          "settings": {
+            "stage_image": "shopify:\/\/shop_images\/stage6-removebg-preview_medium_3f9e4272-c9aa-401d-b65b-90adc8c75d17.png",
+            "stage_paragraph": "Oops, too late.Only hair transplant can help.",
+            "stage_desc": "Completely bald. Too late. Only way is transplant.",
+            "stage_product": ""
+          }
+        },
+        "23290650-64b2-40e0-a984-c3288e8d72f3": {
+          "type": "combo",
+          "settings": {
+            "feature_product": "hairline-defender",
+            "product_img": "shopify:\/\/shop_images\/1-01_821e9000-960c-4e25-a461-d499edb05db3.jpg",
+            "product_desc": "<p>This unique combo for men is clinically proven to increase hair growth, improve hair thickness and give a fantastic hairline.<\/p><p><strong>This combo contains:<br\/><\/strong>1. Scalp oil 80 ml<br\/>2. Hair Ras 120 tablets <br\/>3. Hair Root Serum 60 ml<br\/><\/p>",
+            "stage_1": true,
+            "stage_2": true,
+            "stage_3": false,
+            "stage_4": false,
+            "stage_5": false,
+            "stage_6": false
+          }
+        },
+        "d8ed52ee-7ef4-47da-b5d2-118acd55d5e4": {
+          "type": "combo",
+          "settings": {
+            "feature_product": "dht-blocker",
+            "product_img": "shopify:\/\/shop_images\/1-02_62fab7fe-bb37-4d8a-af8b-0bf8aa9100ce.jpg",
+            "product_desc": "<p>This unique combo for men will ensure regrowth. It has natural DHT blocker property with no side effects.<\/p><p><strong>This combo contains:<br\/><\/strong>1. Scalp oil 80 ml<br\/>2. Hair Ras 120 tablets <br\/>3. Hair Root Serum 60 ml <br\/>4. Hair Vitamins 60 capsules<\/p>",
+            "stage_1": false,
+            "stage_2": false,
+            "stage_3": true,
+            "stage_4": true,
+            "stage_5": false,
+            "stage_6": false
+          }
+        }
+      },
+      "block_order": [
+        "3bff9df3-83b3-437a-8f1c-a4e1fbeee600",
+        "25261c4a-b27b-42bc-8e7f-5f3750ee9eef",
+        "73710c6c-0ce2-469d-be6c-3f24a1a07221",
+        "2930b608-310e-4a99-9fc0-f9de506bb91c",
+        "174bbed8-6a0b-4e02-9ac4-f9fe22d5d790",
+        "d809aebc-627c-4c53-a956-88bb9b0513ae",
+        "23290650-64b2-40e0-a984-c3288e8d72f3",
+        "d8ed52ee-7ef4-47da-b5d2-118acd55d5e4"
+      ],
+      "settings": {
+        "banner_image": "shopify:\/\/shop_images\/1-03.webp",
+        "Heading1": "#savethathairline",
+        "sub-heading": "ayurvedic wisdom meets dermatology + nutrition",
+        "stage_heading1": "Where do you stand?"
+      }
+    },
+    "57686932-7a9c-4ce6-968f-ea2fea96ffa9": {
+      "type": "things-have-many-cause",
+      "blocks": {
+        "96d77424-91b3-4769-8921-38bebd2bb874": {
+          "type": "Stress",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stress_1_24a8c5cd-e04f-4f3d-969d-3384363b6bf0.png",
+            "question": "How do we help ?",
+            "answer": "<p><strong>Ashwagandha: <\/strong> Helps you manage stress, relax, sleep well.<\/p><p><strong>Shankhpushpi:<\/strong> Aids in de-stressing.<\/p><p><strong>Ylang Ylang Essential Oil:<\/strong> Reduces stress level.<\/p><p><strong>Camellia Sinensis Leaf Extract:<\/strong> Alleviates oxidative stress to the skin<\/p>"
+          }
+        },
+        "4b55edf4-9a47-4a6b-b484-4224d77b65e2": {
+          "type": "Stress",
+          "settings": {
+            "question": "How it affects hair ?",
+            "answer": "<p>There’s a deep relationship between stress and hair loss, and a lot of evidence showing stress can lead to hair breakage. Telogen effluvium is a type of excessive hair fall that is often triggered due to stress. This type of stress makes your follicles go dormant, so hair that’s in the middle of a growth cycle may break off. Leading to hair fall. Stress management is essential for healthy hair. <\/p><p><\/p><p><br\/><strong>Because stress puts your hair in distress.<\/strong><\/p>"
+          }
+        },
+        "276b1bc0-d74d-444c-9fd1-3a216d142ace": {
+          "type": "Hormones",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hormones_6ba99f3b-db58-4db2-b8d5-a2ed13fbc86e.png",
+            "question": "How we help ?",
+            "answer": "<p><strong>Shatavari:<\/strong> Provides hormonal balance, rejuvenates your body inside out, and gives you radiant skin.<br\/><strong>Bhringraj:<\/strong> Acts as a liver tonic and hair tonic. Detoxifies the body.<br\/><strong>Ashwagandha:<\/strong> Treats thyroid imbalances.<br\/><strong>Caffeine:<\/strong> Prevent hereditary and hormonal hair loss in men by acting as a natural DHT blocker with no side effects. <br\/><strong>Pumpkin seed extract:<\/strong> A natural DHT blocker.<\/p>"
+          }
+        },
+        "c97e226a-1033-44a5-b87f-89caff18b814": {
+          "type": "Hormones",
+          "settings": {
+            "question": "How it affects hair ?",
+            "answer": "<p>Hormonal changes lead to unwanted changes to your hair. For instance, hormonal imbalances, such as a decrease in estrogen, may lead to hair loss. Other effects of hormonal imbalance on hair  could be thinning of hair, hair loss, dry, brittle, oily  and graying hair.<\/p><p><\/p><p><strong>For hair that’s not a wreck,We need to keep those raging hormones in check.<\/strong><\/p>"
+          }
+        },
+        "e3816146-df94-41ed-86e3-9b622d715592": {
+          "type": "Metabolism",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Metabolism_1.png",
+            "question": "How do we help ?",
+            "answer": "<p><strong>Bhringraj<\/strong> - Acts as a liver tonic and hair tonic. Detoxifies the body.<\/p><p><strong>Ashwagandha<\/strong> - Treats thyroid imbalances<\/p>"
+          }
+        },
+        "bf68a012-7dc9-497d-91e6-3e1ec1eddc49": {
+          "type": "Metabolism",
+          "disabled": true,
+          "settings": {
+            "question": "How it affects hair ?",
+            "answer": "<p>Metabolism is a process through which we get the energy we need to breathe, move, think and do . . . anything. It keeps us alive. And, if our metabolism is slow or ineffective it affects our hair  in the form of hair thinning, hair loss and other hair problems. Reason? Our cells were not able to generate energy to power healthy hair.<\/p><p>A full head of hair comes with a fully functional metabolism.<\/p>"
+          }
+        },
+        "f4b67de7-c97d-4e61-a84b-df90b0a6ce52": {
+          "type": "Nutrition",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nutrition_1.png",
+            "question": "How do we help ?",
+            "answer": "<p><strong>Tapyadi Lauh<\/strong> - Improves iron\/ hemoglobin content, enhances skin radiance, and acts as a blood purifier.<\/p><p><strong>Amalaki<\/strong> - Provides vitamin C needed for hair. <\/p><p><strong>Biotin<\/strong> - Acts as a growth supplement to nourish thinning hair and help promote hair growth<\/p>"
+          }
+        },
+        "2c63dd92-5205-4d5e-a462-a1dda57fe761": {
+          "type": "Nutrition",
+          "disabled": true,
+          "settings": {
+            "question": "How it affects hair ?",
+            "answer": "<p>Hair in particular is slow to respond to any stimulus. That is why correct nutrition is instrumental in healthy hair growth, and conversely many deficiencies correlate with hair loss. Hair nutrition is therefore a vital part of any treatment regime.<\/p><p>Give your hair what they need, and keep them growing.<\/p>"
+          }
+        },
+        "bb527a36-9411-47c3-a53b-4044eb06c76b": {
+          "type": "Dosha-Imbalance",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dosha_Imbalance.png",
+            "question": "How do we help ?",
+            "answer": "<p><strong>Shankhapushpi:<\/strong> Pacifies Tridoshas and stimulates digestion.<\/p><p><strong>Lauh:<\/strong> Helps in balancing the pitta dosha, which is one of the causes of hair loss.<\/p><p><strong>Bhasma:<\/strong> Pacifies the irregularities related to Kapha and Vata and it also acts as a natural alkalizer that counteracts the hydrochloric acid secretion and eases acidity.<\/p>"
+          }
+        },
+        "55f93d21-2aa6-4f1c-82d1-100710ffea5a": {
+          "type": "Dosha-Imbalance",
+          "disabled": true,
+          "settings": {
+            "question": "How it affects hair ?",
+            "answer": "<p>Kapha, Pitta, and Vata<\/p><p>Imoderate or imbalanced doshas can block the flow of the food nutrients that supply nourishment to the hair cells, leading to dry scalp, dry hair, split ends, and finally, thin hair or hair loss.<\/p><p>The dosha imbalance could also lead to balding, premature greying, scalp issues like irritation, and inflammation and it is highly important to take the right treatment to balance these doshas.<\/p><p>Kapha, Pitta, and Vata<\/p><p>Get rid of these three, so your hair can be free.<\/p><p>Free to flow.<\/p>"
+          }
+        },
+        "d8331a9b-13d5-4ca1-9e74-6903c87f6cb5": {
+          "type": "Scalp",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Scalp_Health.png",
+            "question": "How do we help ?",
+            "answer": "<p><strong>Shatavari:<\/strong> Protects against breakage of hair and gives a natural shine to the hair. It also helps in maintaining a good scalp.<\/p><p><strong>Aloe Vera:<\/strong> Contains healing enzymes, which repair dead skin cells on the scalp.<\/p><p><strong>Coconut:<\/strong> Promotes the scalp health.<\/p><p><strong>Yashtimadhu:<\/strong> Helps improve scalp and hair health. It also helps soothe scalp irritation, infections, and dandruff.<\/p><p><strong>Menthol:<\/strong> Acts as a stimulant for hair follicles.<\/p><p><strong>Brahmi:<\/strong> Treats dry scalp and prevents hair fall.<\/p><p><strong>Bergamout Essential Oil:<\/strong> Helps facilitate wound healing and reduce inflammation. This may help promote hair growth and a healthy scalp.<\/p><p><strong>Motia Rosha Essential Oil:<\/strong> Stimulates the dormant hair follicles and increases circulation to the scalp. Helps in hair growth.<\/p>"
+          }
+        },
+        "4d9335d8-a048-4b61-8a5b-4ebef8a6a4f6": {
+          "type": "Scalp",
+          "settings": {
+            "question": "How it affects hair ?",
+            "answer": "<p>Is a happy, bouncy, head of hair truly possible without a nourished, healthy scalp? No.<\/p><p>As we age, the skin on our scalp can have premature aging and it’s cell regeneration capacity can diminish causing hair to become thinner and lusture-less. Protecting and nourishing the scalp is important if you wish to have healthy hair.<\/p><p><strong>You know where hair comes from?<br\/>Scalp...lets take care of it.<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "96d77424-91b3-4769-8921-38bebd2bb874",
+        "4b55edf4-9a47-4a6b-b484-4224d77b65e2",
+        "276b1bc0-d74d-444c-9fd1-3a216d142ace",
+        "c97e226a-1033-44a5-b87f-89caff18b814",
+        "e3816146-df94-41ed-86e3-9b622d715592",
+        "bf68a012-7dc9-497d-91e6-3e1ec1eddc49",
+        "f4b67de7-c97d-4e61-a84b-df90b0a6ce52",
+        "2c63dd92-5205-4d5e-a462-a1dda57fe761",
+        "bb527a36-9411-47c3-a53b-4044eb06c76b",
+        "55f93d21-2aa6-4f1c-82d1-100710ffea5a",
+        "d8331a9b-13d5-4ca1-9e74-6903c87f6cb5",
+        "4d9335d8-a048-4b61-8a5b-4ebef8a6a4f6"
+      ],
+      "settings": {
+        "section-heading": "Thinning hair has multiple root causes",
+        "bk-color": "rgba(0,0,0,0)"
+      }
+    },
+    "1af2a67c-14d2-4524-b2bc-efeebd82fdb9": {
+      "type": "male-foundation",
+      "blocks": {
+        "f938d20c-227a-49e5-8a48-ecafe36f7d1d": {
+          "type": "Head",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/sfhg-1.png",
+            "image_heading": "Caffeine",
+            "image_paragraph": "Natural DHT blocker"
+          }
+        },
+        "28f0ac75-daf8-4162-8835-f90ae3cad9e6": {
+          "type": "Head",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/sfhg-2.png",
+            "image_heading": "Shatavari",
+            "image_paragraph": "Balance body doshas"
+          }
+        },
+        "57ab4ed7-68f8-4b63-8d87-2117232e685f": {
+          "type": "Head",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/sfhg-3.png",
+            "image_heading": "Motia Rosha Essential Oil",
+            "image_paragraph": "Fights Dandruff"
+          }
+        },
+        "7f750b90-f6ad-47ea-8f84-6c72adddd54c": {
+          "type": "Head",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/pumpkin-seeds.jpg",
+            "image_heading": "Pumpkin Seed Extract",
+            "image_paragraph": "Natural DHT blocker"
+          }
+        },
+        "8216c560-633a-4f80-b677-8bc0c479e9a2": {
+          "type": "Head",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/sfhg-5.png",
+            "image_heading": "Redensyl®",
+            "image_paragraph": "Hair regrowth"
+          }
+        },
+        "7705f718-8244-40d4-9935-c0859992d604": {
+          "type": "Head",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/sfhg-6.png",
+            "image_heading": "Biotin",
+            "image_paragraph": "Ultimate hair supplement"
+          }
+        }
+      },
+      "block_order": [
+        "f938d20c-227a-49e5-8a48-ecafe36f7d1d",
+        "28f0ac75-daf8-4162-8835-f90ae3cad9e6",
+        "57ab4ed7-68f8-4b63-8d87-2117232e685f",
+        "7f750b90-f6ad-47ea-8f84-6c72adddd54c",
+        "8216c560-633a-4f80-b677-8bc0c479e9a2",
+        "7705f718-8244-40d4-9935-c0859992d604"
+      ],
+      "settings": {
+        "headings1": "Strong foundation for hair growth",
+        "male_foundation_p": "Featuring our patented Redensyl®, a proprietary blend of effective ayurvedic herbs<br>in unique ratios for your specific hair growth needs."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b88ba125-67f0-4e5f-a151-95cb406a808d",
+    "57686932-7a9c-4ce6-968f-ea2fea96ffa9",
+    "1af2a67c-14d2-4524-b2bc-efeebd82fdb9"
+  ]
+}

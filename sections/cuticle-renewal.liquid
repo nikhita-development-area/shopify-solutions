@@ -1,0 +1,166 @@
+<!-- Sections -> cuticle-renewal.liquid -->
+
+<div class="container cuticle-renewal p-0">
+  <h2 class="text-center font-weight-bold">{{ section.settings.renewal_title }}</h2>
+  <p class="text-center cuticle-renewal-sub-title">{{ section.settings.renewal_sub_title }}</p>
+
+  <div class="renewal-content position-relative py-3">
+    {% for block in section.blocks %}
+      <div class="renewal-inner-content">
+        <h3 class="text-center">{{ block.settings.renewal_gallery_title }}</h3>
+
+        <div class="renewal-img-txt div-{{ forloop.index }}">
+          <div class="renewal-img div1">
+            <img src="{{ block.settings.renewal_gallery_img | img_url: 'master' }}" alt="Renewal Images" title="Image {{ forloop.index }}" width="" height="" />
+          </div>
+          <div class="renewal-txt div2">
+            <p class="renewal-gallery-content">{{ block.settings.renewal_gallery_content }}</p>
+            {{ block.settings.renewal_gallery_solution }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="text-center"><a href="https://form.traya.health/questions?cohort=1&amp;location=HomeSlideshow&amp;page=cuticle-damage" class="btn btn-dark hair-form-actn-link" id="cuticle-female-hair-test-button3" style="pointer-events: auto;">Take The Hair Test <span>™</span></a></div>
+</div>
+
+<style>
+  .cuticle-renewal h2 {font-size: 48px; line-height: 65px; letter-spacing: 0em; width: 80%; margin: auto;}
+  .cuticle-renewal-sub-title {font-size: 36px; line-height: 49px;}
+  .renewal-content {border-radius: 12px; box-shadow: 0px 0px 24px 4px #00000014;}
+  .renewal-content .slick-dots li.slick-active button:before {color: #9E83D7;}
+  .renewal-content .slick-prev {display: flex; justify-content: center; align-items: center; top: unset; bottom: 1%; left: 42%; height: 30px; width: 30px; background: #9E83D7; border-radius: 50px;}
+  .renewal-content .slick-next {display: flex; justify-content: center; align-items: center; top: unset; bottom: 1%; right: 42%; height: 30px; width: 30px; background: #9E83D7; border-radius: 50px;}
+  .renewal-content .slick-next:before, .renewal-content .slick-prev:before {height: 10px; width: 10px; border-color: #fff; opacity: 1;}
+  .renewal-content .slick-next:before {margin-right: 3px;}
+  .renewal-content .slick-prev:before {margin-left: 3px;}  
+  .renewal-inner-content h3 {font-family: fredoka_oneregular!important; font-size: 44px; line-height: 55px; letter-spacing: 0em;}
+  .renewal-img-txt {display: grid; gap: 20px; align-items: center;}
+  .renewal-gallery-content {font-size: 29px; line-height: 37px; color: #989898;}
+  .renewal-txt ul {margin-left: 25px;}
+  .renewal-txt li {font-size: 29px; line-height: 37px; list-style-type: disc;}
+  .renewal-img-txt li strong {font-family: fredoka_oneregular!important;}
+  .renewal-txt li::marker {color: #9E83D7;}
+  .div-1 {grid-template-columns: 1fr 1.5fr; grid-template-areas: "div1 div2"}
+  .div-2 {grid-template-columns: 1.5fr 1fr; grid-template-areas: "div2 div1"}
+  .div1 {grid-area: div1;}
+  .div2 {grid-area: div2;}
+  .div-1 .div1 {transform: scale(1.25);}
+  .div-2 .div2 {margin-left: 40px;}
+  
+  @media screen and (max-width: 768px) {
+    .cuticle-renewal h2 {font-size: 30px; line-height: 40px; width: unset; margin: unset;}
+    .cuticle-renewal-sub-title {font-size: 19px; line-height: 25px;}
+    .renewal-content {border-radius: 0px; box-shadow: 0px 5px 11px 2px #00000040;}
+    .renewal-inner-content h3 {font-size: 20px; line-height: 25px;}
+    .renewal-img-txt {gap: 0;}
+    .renewal-content .slick-prev {left: 35%; bottom: 3%; height: 25px; width: 25px; z-index: 1;}
+    .renewal-content .slick-next {right: 32%; bottom: 3%; height: 25px; width: 25px; z-index: 1;}
+    .renewal-gallery-content {font-size: 13px; line-height: 16px;}
+    .renewal-txt li {font-size: 13px; line-height: 16px;}
+    .div-1 .div2 {margin-right: 20px;}
+    .div-2 .div2 {margin-left: 20px;}
+    .cuticle-renewal a.btn {font-size: 16px;}
+  }
+
+  @media screen and (max-width: 400px) {
+    .renewal-content {height: 300px;}
+    .renewal-content ul.slick-dots {position: absolute; left: 45%; bottom: 1%;}
+    .renewal-content .slick-next, .renewal-content .slick-prev {bottom: 0;}
+  }
+</style>
+
+<script>
+  jQuery(document).ready(function($) {
+    var $renewalContent = $('.renewal-content');
+
+    $renewalContent.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      arrows: true,
+      dots: true,
+      infinite: true
+    });
+
+    // Initialize State of Arrows
+    var $slickPrev = $renewalContent.find('.slick-prev');
+    var $slickNext = $renewalContent.find('.slick-next');
+
+    // Hide Previous Arrow Initially
+    $slickPrev.hide();
+
+    // Function To Toggle Arrows Based on Current Slide Index
+    function toggleArrows(slick, currentSlide) {
+      if (currentSlide === 0) {
+        $slickPrev.hide();
+        $slickNext.show();
+      } else if (currentSlide === slick.slideCount - 1) {
+        $slickPrev.show();
+        $slickNext.hide();
+      } else {
+        $slickPrev.show();
+        $slickNext.show();
+      }
+    }
+
+    // Handle beforeChange Event To Toggle Arrows
+    $renewalContent.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+      toggleArrows(slick, nextSlide);
+    });
+
+    // Handle afterChange Event To Toggle Arrows
+    $renewalContent.on('afterChange', function(event, slick, currentSlide) {
+      toggleArrows(slick, currentSlide);
+    });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Cuticle Renewal",
+    "settings": [
+      {
+        "type": "text",
+        "id": "renewal_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "renewal_sub_title",
+        "label": "Sub-Title"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Renewal Gallery",
+        "type": "Gallery",
+        "settings": [
+          {
+            "type": "html",
+            "id": "renewal_gallery_title",
+            "label": "Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "renewal_gallery_img",
+            "label": "Select Image"
+          },
+          {
+            "type": "html",
+            "id": "renewal_gallery_content",
+            "label": "Content"
+          },
+          {
+            "type": "richtext",
+            "id": "renewal_gallery_solution",
+            "label": "Points"
+          }
+        ]
+      }
+    ],
+    "presets": [{"name": "Cuticle Renewal"}]
+  }
+{% endschema %}

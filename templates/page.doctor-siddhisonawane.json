@@ -1,0 +1,284 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1663050275e311662d": {
+      "type": "doctor-details",
+      "blocks": {
+        "8c46f2a0-9804-445e-a39d-87bda329a6e4": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "N",
+            "user_name": "Nalini",
+            "user_content": "I was worried about my hair fall and then I found Dr. Siddhi, I am very happy with the results."
+          }
+        },
+        "text_NA3fWi": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "R",
+            "user_name": "Rahul:",
+            "user_content": "I was facing dandruff issues, Dr, Siddhi helped me. My mother was also satisfied with the results."
+          }
+        },
+        "text_WjWzpV": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "P",
+            "user_name": "Payal",
+            "user_content": "Agar kisi ko hair ya skin issues hain, toh main Dr. Siddhi ko zaroor recommend karungi. Woh bahut helpful hain"
+          }
+        },
+        "4044ba57-7fd2-4bce-b662-941eb1dc1b36": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "D",
+            "user_name": "David",
+            "user_content": "Dr. Siddhi explains the concern and root cause of problem very nicely. She even suggests me foods to be avoided."
+          }
+        },
+        "55ee5a35-ad95-430f-bd26-cdc98050b92e": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "A",
+            "user_name": "Abdul",
+            "user_content": "The Doctor did a great job. My hair quality has really improved with the Traya Products and the doctor helped me understand the right          dosage of the medicines and explained to me how long will it take to see results."
+          }
+        },
+        "04bcbfc8-375d-4d1b-818c-929dbb7d03fb": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "UserFirstLater": "N",
+            "user_name": "Niraj",
+            "user_content": "My father was having severe hair fall for years. He got onto Traya’s plan and got in touch with the doctor. He has seen results like never          before. Thankyou Dr. Siddhi."
+          }
+        },
+        "88911887-6304-48d6-b267-09246214fda2": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Sumant S",
+            "user_content": "Doctor Siddhi very nicely explained to me about the type of my hair fall. It’s my 3rd month now, and my hair fall has reduced a lot."
+          }
+        },
+        "3198fa47-c9ee-445e-bb27-8b51ea91deb2": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "UserFirstLater": "G",
+            "user_name": "Gaurav",
+            "user_content": "Since my college days, I was having circular patches on my head. After the diagnosis with Traya, Doctor Siddhi explained to me about this          condition which is Alopecia Areata and suggested the required medications as well. My patch has reduced as compared to before."
+          }
+        }
+      },
+      "block_order": [
+        "8c46f2a0-9804-445e-a39d-87bda329a6e4",
+        "text_NA3fWi",
+        "text_WjWzpV",
+        "4044ba57-7fd2-4bce-b662-941eb1dc1b36",
+        "55ee5a35-ad95-430f-bd26-cdc98050b92e",
+        "04bcbfc8-375d-4d1b-818c-929dbb7d03fb",
+        "88911887-6304-48d6-b267-09246214fda2",
+        "3198fa47-c9ee-445e-bb27-8b51ea91deb2"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Dr_Siddhi.png",
+        "doctor_name": "Dr. Siddhi Sonawane",
+        "specialization": "DERMATOLOGIST | COSMETOLOGIST, 5 YEARS",
+        "education": "MBBS, MD (Dermatology)",
+        "registration_no": "2015\/05\/2929",
+        "ratings": "4.5\/5",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "Dr Siddhi Sonawane is a consultant dermatologist at La Peau Dermatology and Cosmetic Laser Clinic, Thane, with a specialisation in cosmetology and advanced facial aesthetics. Her expertise includes dermal fillers, botulinum toxin, non-surgical facelifts, hair transplants, and laser therapy."
+      }
+    },
+    "1663050289e9ca557e": {
+      "type": "QA-accordion",
+      "blocks": {
+        "05a718a7-b87b-4983-ab15-ef5383b931d8": {
+          "type": "faq",
+          "settings": {
+            "Question": "Who is a Cosmetologist?",
+            "Answer": "A Cosmetologist is an expert in treatments and therapies for Hair and Skin."
+          }
+        },
+        "22451744-4d08-456c-9c30-b4cc846139a0": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do patients visit Dr Siddhi?",
+            "Answer": "Patients visit Dr. Siddhi Sonawane for concerns related to hair fall and premature hair greying."
+          }
+        },
+        "814069c6-95da-4f05-965e-aca669562b8f": {
+          "type": "faq",
+          "settings": {
+            "Question": "What does Dr. Siddhi specialise in?",
+            "Answer": "Dr. Siddhi specializes in cosmetology and advanced facial aesthetics, including procedures such as dermal fillers, botulinum toxin treatments, non-surgical facelifts, hair transplants, and laser therapy."
+          }
+        }
+      },
+      "block_order": [
+        "05a718a7-b87b-4983-ab15-ef5383b931d8",
+        "22451744-4d08-456c-9c30-b4cc846139a0",
+        "814069c6-95da-4f05-965e-aca669562b8f"
+      ],
+      "settings": {
+        "Accordiontitle1": "",
+        "Accordiontitle2": ""
+      }
+    },
+    "1663050295f0842f8d": {
+      "type": "doctor-slide",
+      "blocks": {
+        "96eec7e7-c8ee-49df-b830-d12f1d998a8d": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Sangeeta Menon",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Sangeeta_Menon-1_compact_f6f857e8-df9e-4d0c-9a4f-3a5e4d59cd22.png",
+            "specialist": "DIETICIAN | NUTRITIONIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/sangeeta-menon"
+          }
+        },
+        "cb186906-77c1-40e4-9ccc-8dc87a35aedc": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Harish Balaji. R",
+            "doctorImage": "shopify:\/\/shop_images\/dr.harish_compact_618a6300-f9a1-4fe6-b780-748f8d8a0c62.png",
+            "specialist": "DERMATOLOGIST | MD | AESTHETIC SURGEON,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-harish"
+          }
+        },
+        "37aeddf5-eb24-448b-8648-418dca0e13aa": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr.Shailendra Chaubey",
+            "doctorImage": "shopify:\/\/shop_images\/Chaubey_compact_0936c6a4-d63f-450e-a76b-52e95315ba60.png",
+            "specialist": "HEALTH EDUCATOR | AYURVEDIC PRACTITIONER,",
+            "experience": "15 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/shailendra-chaubey"
+          }
+        },
+        "f3ff0ca5-2368-4a77-93b1-2130210b04f4": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Dr. Jaspreet Sarna",
+            "doctorImage": "shopify:\/\/shop_images\/doct1_270x270_76dbdb54-9db4-4ab1-b703-af1f6f88172e.png",
+            "specialist": "DERMATOLOGIST | HAIR SPECIALIST,",
+            "experience": "11 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-jaspreet"
+          }
+        },
+        "18b6a5a3-7922-4a44-b31d-07efa1b28f9d": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Nishita Suratkal",
+            "doctorImage": "shopify:\/\/shop_images\/Group_102352436_5e061c31-5568-4289-a423-545f2150d9b0.png",
+            "specialist": "DIETICIAN | NUTRITIONIST",
+            "experience": "5YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": " 4.5\/5 ",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/nishita-suratkal"
+          }
+        },
+        "2aed4cfc-c91b-4233-a65a-13c127e02562": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Kalyani Deshmukh",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Kalyani-1_compact_ef50a4f5-47ea-415e-ba4f-0df0def67e7a.png",
+            "specialist": "DERMATOLOGIST | HAIR SPECIALIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/kalyani-deshmukh"
+          }
+        },
+        "c94e1b1e-69e3-40c7-8bfb-a801446ca6c4": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Dr. Moyna Vakil",
+            "doctorImage": "shopify:\/\/shop_images\/dr.Moyna-1_large_7f324788-81f4-4aa8-bedf-0d7b2039fabe.png",
+            "specialist": "Dietician ,Nutritionist",
+            "experience": "10 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": " 4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/moyna-vakil"
+          }
+        },
+        "ba99c569-7b97-4185-8252-a8bea95cab27": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Shefali Saini",
+            "doctorImage": "shopify:\/\/shop_images\/dr_Shefali_6d8c17e2-4bb6-42b9-95a2-4e900cb9b9d4.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "6 YEARS  Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "shopify:\/\/pages\/shefali-saini"
+          }
+        },
+        "9d8de5db-6496-4202-bdc7-ca4d03f0315d": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Dhwani Saxena",
+            "doctorImage": "shopify:\/\/shop_images\/Dr._dhwani.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "5 YEARS  Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_a94c890a-7e0a-4620-bf47-689acc8c0e68.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_c74a1b89-8159-4c5f-b352-2f6cbece7605.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-dhwani"
+          }
+        }
+      },
+      "block_order": [
+        "96eec7e7-c8ee-49df-b830-d12f1d998a8d",
+        "cb186906-77c1-40e4-9ccc-8dc87a35aedc",
+        "37aeddf5-eb24-448b-8648-418dca0e13aa",
+        "f3ff0ca5-2368-4a77-93b1-2130210b04f4",
+        "18b6a5a3-7922-4a44-b31d-07efa1b28f9d",
+        "2aed4cfc-c91b-4233-a65a-13c127e02562",
+        "c94e1b1e-69e3-40c7-8bfb-a801446ca6c4",
+        "ba99c569-7b97-4185-8252-a8bea95cab27",
+        "9d8de5db-6496-4202-bdc7-ca4d03f0315d"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1663050275e311662d",
+    "1663050289e9ca557e",
+    "1663050295f0842f8d"
+  ]
+}

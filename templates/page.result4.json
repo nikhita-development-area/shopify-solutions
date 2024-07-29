@@ -1,0 +1,1558 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "16642732012e5f65b5": {
+      "type": "test-result",
+      "settings": {
+      }
+    },
+    "1664273324b1385128": {
+      "type": "treatment-month-plan",
+      "settings": {
+      }
+    },
+    "88681d4b-2fce-412f-a708-f55e0f69822e": {
+      "type": "result-products",
+      "settings": {
+      }
+    },
+    "9a67c001-eefe-4d3b-bb47-fff82a99e213": {
+      "type": "stage1-why-you-should",
+      "blocks": {
+        "a6da98d4-79c4-4583-8f64-07e24c6f754b": {
+          "type": "Gallery",
+          "settings": {
+            "stage_img": "shopify:\/\/shop_images\/Frame_1000006337_373b4a51-96ab-4baa-8731-f1068763c8d3.png",
+            "stage_txt": "Stage 1",
+            "percentage_img": "shopify:\/\/shop_images\/Frame_1000006351.png",
+            "percentage_value": "80%"
+          }
+        },
+        "32c19bed-4af9-4e8e-b913-7c630b5189b8": {
+          "type": "Gallery",
+          "settings": {
+            "stage_img": "shopify:\/\/shop_images\/Frame_1000006337_1.png",
+            "stage_txt": "Stage 3",
+            "percentage_img": "shopify:\/\/shop_images\/Frame_232498d0-3307-444e-b5f6-a74562be98df.png",
+            "percentage_value": "50%"
+          }
+        },
+        "029aafe4-2991-491f-9d55-c15993aedcfa": {
+          "type": "Gallery",
+          "settings": {
+            "stage_img": "shopify:\/\/shop_images\/Frame_1000006337_2.png",
+            "stage_txt": "Stage 5",
+            "percentage_img": "shopify:\/\/shop_images\/Frame_1000006352.png",
+            "percentage_value": "30%"
+          }
+        }
+      },
+      "block_order": [
+        "a6da98d4-79c4-4583-8f64-07e24c6f754b",
+        "32c19bed-4af9-4e8e-b913-7c630b5189b8",
+        "029aafe4-2991-491f-9d55-c15993aedcfa"
+      ],
+      "settings": {
+        "why_title": "Why you should start now?",
+        "why_para": "Preventing hair loss is easier when you act early. Start your treatment now to save your active hair follicles &amp; maintain your hairline."
+      }
+    },
+    "pcos_causing_male_rp_mKNrCB": {
+      "type": "PCOS-causing-MaleRP",
+      "settings": {
+      }
+    },
+    "b4049736-520b-4743-beda-f6fd0bd9cd77": {
+      "type": "new-testimonial",
+      "settings": {
+      }
+    },
+    "16642750938b921f1d": {
+      "type": "customer-reviews",
+      "blocks": {
+        "026833cc-e184-488a-abb2-8718b967f5d6": {
+          "type": "content",
+          "settings": {
+            "name": "Uddeshya",
+            "gender": "M",
+            "used_for": "4 Months",
+            "review_on": "15th Nov 2021",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "My hair loss started in 2016 after I was diagnosed with tuberculosis. I had consulted a dermatologist and tried many treatments before nearly giving up hope. I liked Traya’s approach of combining three sciences. After I used the recommended product kits, I have seen a lot of benefits like thicker hair and negligible Hair fall.",
+            "icon_1": "shopify:\/\/shop_images\/Uddeshya01_300x_4c51e29f-1d12-44df-94c7-e71e8b2de6bd.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Uddeshya02_300x_921c4a78-34b8-4f77-9551-775547339218.jpg",
+            "month_title_2": "Month 5",
+            "icon_3": "shopify:\/\/shop_images\/Uddeshya03_300x_e746d8f1-e039-43ee-8ba1-4b2c0e35bd9c.jpg",
+            "month_title_3": "Month 6",
+            "month_title_4": ""
+          }
+        },
+        "c20b4ef4-6816-47f8-a5b2-bdc3a21857f5": {
+          "type": "content",
+          "settings": {
+            "name": "Rajat Sadh",
+            "gender": "M",
+            "used_for": "8 months",
+            "review_on": "21st Feb 2022",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I didn't want to resort to surgery or any other invasive treatment for my hair loss and I found Traya. They have helped me grow back a full head of hair in just eight months. I'm so happy with the results, thank you so much!",
+            "icon_1": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_300x_93ca08ad-9a26-431e-9be5-e83d334cd5ad.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/month_4_300x_3fb66938-dd6c-4fb4-b3c4-9cbf5d46ffcd.jpg",
+            "month_title_2": "Month 4",
+            "icon_3": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_1_300x_afb0b676-652a-4589-b14e-646c94c0efcb.jpg",
+            "month_title_3": "Month 8",
+            "month_title_4": ""
+          }
+        },
+        "3c7966bc-998b-4bf7-9574-70d4dea3ecc5": {
+          "type": "content",
+          "settings": {
+            "name": "Anonymous",
+            "gender": "M",
+            "used_for": "5 months",
+            "review_on": "15th August 2021",
+            "kit_purchased": "",
+            "content": "Results in just 5 months, couldn't believe my eyes when I saw hair growth on my head. Anyone with hair problems should get on their plan. It works like magic.",
+            "icon_1": "shopify:\/\/shop_images\/Month-a1_300x_1.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Month-a3_300x_1.jpg",
+            "month_title_2": "Month 3",
+            "icon_3": "shopify:\/\/shop_images\/Month-a5_300x_1.jpg",
+            "month_title_3": "Month 5",
+            "month_title_4": ""
+          }
+        },
+        "298a4e3e-7af6-4bba-9c27-77bd38e7d05c": {
+          "type": "content",
+          "settings": {
+            "name": "Sunil Bhadouriya",
+            "gender": "M",
+            "used_for": "7 Months",
+            "review_on": "9th Apr 2022",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I read about Traya on Quora. I had read reviews on it and they seemed positive so I thought that I would give it a go.  It's helped me so much and I can tell the difference in how much my hair has grown back.",
+            "icon_1": "shopify:\/\/shop_images\/Month_1_3_300x_669c0791-76d3-4cbe-9f8c-7eb09a5cee8e.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Month_5_300x_cd0d7c8c-ddc9-41c2-b84f-78309f3933b9.png",
+            "month_title_2": "Month 5",
+            "icon_3": "shopify:\/\/shop_images\/Month_7_1_300x_18514b4a-141e-43ae-889c-3596cd96ed89.jpg",
+            "month_title_3": "Month 7",
+            "month_title_4": ""
+          }
+        },
+        "f72fad6f-5a30-48c1-9459-56768d327abc": {
+          "type": "content",
+          "settings": {
+            "name": "Sandeep",
+            "gender": "M",
+            "used_for": "6 Months",
+            "review_on": "04th Oct 2023",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I was made for Traya, and Traya was made for me. Six months later, I've seen an impressive 80% improvement. Traya's disciplined approach and the constant support from their fantastic hair coaches kept me going.",
+            "icon_1": "shopify:\/\/shop_images\/April_2023_1.png",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Before_3_19160c21-bcf3-4742-80d1-279e2f7d7df8.png",
+            "month_title_2": "Month 3",
+            "icon_3": "shopify:\/\/shop_images\/December_20221.png",
+            "month_title_3": "Month 6",
+            "month_title_4": ""
+          }
+        },
+        "366f2f06-7406-4a36-8251-4f17a8a81d54": {
+          "type": "content",
+          "settings": {
+            "name": "Taukeer Ali",
+            "gender": "M",
+            "used_for": "7 Months",
+            "review_on": "08th 0ct 2023",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I'm a teacher facing a relentless battle with hair loss for nearly a decade. But Traya came into my life with a simple routine. Just 7 months in, I have not only witnessing visible results but also feeling more energetic. Traya's progressive approach has truly transformed my journey.",
+            "icon_1": "shopify:\/\/shop_images\/July_2022.png",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/December_2022_2.png",
+            "month_title_2": "Month 3",
+            "icon_3": "shopify:\/\/shop_images\/After_8.png",
+            "month_title_3": "Month 7",
+            "month_title_4": ""
+          }
+        },
+        "bd5cb194-c28d-4db6-b06f-a20342207c4a": {
+          "type": "content",
+          "settings": {
+            "name": "Sourabh",
+            "gender": "M",
+            "used_for": "7 Months",
+            "review_on": "07th oct 2023",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I have been in my hair loss saga since college, and I chose Traya over a hair transplant. Trustworthiness, consistent support, and positive outcomes became the pillars of my Traya journey. And guess what? My positive results even inspired my friends to join the Traya adventure.",
+            "icon_1": "shopify:\/\/shop_images\/December_2022_07bcf90f-8927-428f-9697-d43d95e5a305.png",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/June_2023.png",
+            "month_title_2": "Month 4",
+            "icon_3": "shopify:\/\/shop_images\/After_1_8e4710ab-a111-4685-8ee7-6f13fe13fdde.png",
+            "month_title_3": "Month 7",
+            "month_title_4": ""
+          }
+        },
+        "687cc2fb-9caa-4f65-9ba0-78d925ed42ec": {
+          "type": "content",
+          "settings": {
+            "name": "Ayan",
+            "gender": "M",
+            "used_for": "4 Months",
+            "review_on": "21st oct  2023",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I have been dealing with hair loss since my mid-20s. The visible bald patch post-COVID hit my confidence hard. Initially, Traya didn't show results, and minoxidil increased hair fall, but after 3 months, the regrowth was phenomenal. My bald patch is gone, and overall hair quality and density have improved.",
+            "icon_1": "shopify:\/\/shop_images\/ayan_1.png",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/1669788100790_20221130_113016_720.jpg",
+            "month_title_2": "Month 3",
+            "icon_3": "shopify:\/\/shop_images\/ayan_3.png",
+            "month_title_3": "Month 4",
+            "month_title_4": ""
+          }
+        },
+        "c6793905-b3a3-49d3-946b-83902a4568ba": {
+          "type": "content",
+          "settings": {
+            "name": "Ashis beniya",
+            "gender": "M",
+            "used_for": "9 Months",
+            "review_on": "19th oct  2023",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I have been battling hair loss for 2-3 years. Home remedies and doctor visits didn't work. Within 5-6 months of Traya's routine, I witnessed better hair regrowth and improved my hair quality. The constant support from the hair coaches, gave me hope and assurance when I needed it the most.",
+            "icon_1": "shopify:\/\/shop_images\/february_2023_360.png",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/april_2023_360.png",
+            "month_title_2": "Month 5",
+            "icon_3": "shopify:\/\/shop_images\/after__7__360_286e061e-c05f-4fcd-b1be-7f4fcd02c895.png",
+            "month_title_3": "Month 9",
+            "month_title_4": ""
+          }
+        },
+        "27d9cfa9-8c6d-4a3f-8706-768b60fecb1e": {
+          "type": "content",
+          "settings": {
+            "name": "Jagan Mohan",
+            "gender": "M",
+            "used_for": "12 Months",
+            "review_on": "19th oct 2023",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I have been facing hair loss since 2012-2013. After trying ayurvedic treatments without success, I contemplated surgery. Traya became my last resort, and the testimonials felt real, giving me hope. In the end, Traya delivered satisfying results.",
+            "icon_1": "shopify:\/\/shop_images\/December_2022_1.png",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/July_2023.png",
+            "month_title_2": "Month 6",
+            "icon_3": "shopify:\/\/shop_images\/After_2_1ce4c3e5-07f4-400a-b8d5-bf40392c2c70.png",
+            "month_title_3": "Month 12",
+            "month_title_4": ""
+          }
+        }
+      },
+      "block_order": [
+        "026833cc-e184-488a-abb2-8718b967f5d6",
+        "c20b4ef4-6816-47f8-a5b2-bdc3a21857f5",
+        "3c7966bc-998b-4bf7-9574-70d4dea3ecc5",
+        "298a4e3e-7af6-4bba-9c27-77bd38e7d05c",
+        "f72fad6f-5a30-48c1-9459-56768d327abc",
+        "366f2f06-7406-4a36-8251-4f17a8a81d54",
+        "bd5cb194-c28d-4db6-b06f-a20342207c4a",
+        "687cc2fb-9caa-4f65-9ba0-78d925ed42ec",
+        "c6793905-b3a3-49d3-946b-83902a4568ba",
+        "27d9cfa9-8c6d-4a3f-8706-768b60fecb1e"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Our Customers",
+        "sub_title": "",
+        "btn_text": "Take The Hair Test",
+        "btn_link": "shopify:\/\/blogs\/heres-how-your-traya-hair-loss-treatment-is-curated"
+      }
+    },
+    "customer_review_stage_2_BL8txa": {
+      "type": "customer-review-stage-2",
+      "blocks": {
+        "revies_ELRjDk": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Apaar",
+            "customer_img1": "shopify:\/\/shop_images\/Jan_17_2022..png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Dec_10_2022_1.png",
+            "customer_txt2": "Month 10",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_30_2023.png",
+            "customer_txt3": "Month 18",
+            "review_date": "01 Dec 2022",
+            "review_details": "Hair fall ka issue mujhe 2 saal se tha mainly because of dandruff. Mujhe Traya ka approach to hair fall kaafi wholesome laga and that's why I went for it. I actually saw my dandruff get controlled in just 2-3 weeks.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_q8DeiD": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Rajendra Kumar",
+            "customer_img1": "shopify:\/\/shop_images\/July_13_2023.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/September_02_2023.png",
+            "customer_txt2": "Month 6",
+            "customer_img3": "shopify:\/\/shop_images\/Nov_02_2023_1.png",
+            "customer_txt3": "Month 10",
+            "review_date": "25 Oct 2022",
+            "review_details": "2020 se mai hair fall ko leke bohot hi pareshaan tha. Traya ke ads dekh ke maine socha chalo try kar lete hai. Treatment ke first 10-15 days me thoda hair fall kam hua aur dheere dheere maine accha hair growth notice kiya. Jab baal nahi the tab accha nahi lagta tha but ab baal aa gaye so I am happy.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_CGEaKJ": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ajay",
+            "customer_img1": "shopify:\/\/shop_images\/May_16_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Sep_30_2022_1.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_01_2022_1.png",
+            "customer_txt3": "Month 18",
+            "review_date": "20 Nov 2022",
+            "review_details": "I went to lots of doctors for my hair fall. They used to give me tablets but I didn't see any results. I had almost given up until I saw Trayas ads. I have seen amazing results with the treatment and even recommended it to my friends!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_T3yNnd": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Himanshu",
+            "customer_img1": "shopify:\/\/shop_images\/Apr_10_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jun_13_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Jul_31_2022_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "20 Jul 2022",
+            "review_details": "Agar mujhe Traya 2 saal pehle milta toh kaafi acha hota. Abhi toh mere empty patches cover ho rahe hai aur baby hairs bhi dikh rahe hai. Hair coaches bohot friendly hai, toh problems unke saath share karne bhi easy hota hai. It's the best thing about Traya.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_f4WpTx": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Sanju",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_30_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Sep_07_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_05_2023_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "28 Dec 2022",
+            "review_details": "Mere papa ki tarah, mujhe bhi genetic hair loss tha aur mujhe laga iska kuch nahi hoga. Fir I saw Traya's ad where they were talking about genetic hair loss and woh solve bhi ho sakta hai. Maine hair test le liya aur after 2-3 months mujhe hair growth dikha.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_JJDafX": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Rohan Ambastha",
+            "customer_img1": "shopify:\/\/shop_images\/Oct_31_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Dec_05_2022_2.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_11_2023_2.png",
+            "customer_txt3": "Month 12",
+            "review_date": "28 Nov 2022",
+            "review_details": "When I shifted to Bangalore, suddenly hair fall start hua. Maine onion try kiya, vitamins khaya par kuch kaam nahi kiya. I used to search a lot about hair treatments and I found Traya. What convinced me is that they work on hair fall by understanding what is messed up inside. Traya se mera hair fall 1.5 months mein stop ho gaya.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_PHJT3E": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Lokesh Naik",
+            "customer_img1": "shopify:\/\/shop_images\/May_30_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_25_2022.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_28_2023_1.png",
+            "customer_txt3": "Month 15",
+            "review_date": "5 Apr 2023",
+            "review_details": "I had a lot of fungal formation and dandruff on my hair. I was browsing for treatment options when I found Traya. In 3 months I saw great results. I could see hair growth on my crown and hairline as well.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_kQpRTD": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Bhumi",
+            "customer_img1": "shopify:\/\/shop_images\/Before_3_1f39139a-4bf1-412d-9b97-e06c61c01b1d.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Screenshot_2024-01-02_135615_1.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/After_3_663f42b2-02cf-46b2-9fb6-2520d0e701ba.png",
+            "customer_txt3": "Month 12",
+            "review_date": "24 Dec 2023",
+            "review_details": "Bohot saalo se ad dekh ke maine minoxidil, shampoo, tel sab try kiya but results nahi aate the. Fir Traya dikha toh socha try kar leta hoon.Traya ka treatment lene ke baad mere crown area mein ek hair la layer form hua hai. Traya sirf ek product nahi deta but ek proper kit deta hai jisse mujhe results dikhe.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_wKGV7p": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Vaibhav",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_03_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Aug_16_2022_1.png",
+            "customer_txt2": "Month 8",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_18_2023_1.png",
+            "customer_txt3": "Month 12",
+            "review_date": "8 Jan 2023",
+            "review_details": "I always wanted an Ayurvedic treatment for my hair kyunki uske side effects nahi hote hain. Search karte waqt maine dekha ki Traya gives you an ayurvedic treatment toh maine try kiya. Their products are very good, there are no side effects and I saw results in a few months.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        }
+      },
+      "block_order": [
+        "revies_ELRjDk",
+        "revies_q8DeiD",
+        "revies_CGEaKJ",
+        "revies_T3yNnd",
+        "revies_f4WpTx",
+        "revies_JJDafX",
+        "revies_PHJT3E",
+        "revies_kQpRTD",
+        "revies_wKGV7p"
+      ],
+      "settings": {
+        "customer-head": "Our Success Stories"
+      }
+    },
+    "customer_review_stage_3_LYLWJA": {
+      "type": "customer-review-stage-3",
+      "blocks": {
+        "revies_JJDafX": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Rohan Ambastha",
+            "customer_img1": "shopify:\/\/shop_images\/Oct_31_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Dec_05_2022_2.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_11_2023_2.png",
+            "customer_txt3": "Month 12",
+            "review_date": "28 Nov 2022",
+            "review_details": "When I shifted to Bangalore, suddenly hair fall start hua. Maine onion try kiya, vitamins khaya par kuch kaam nahi kiya. I used to search a lot about hair treatments and I found Traya. What convinced me is that they work on hair fall by understanding what is messed up inside. Traya se mera hair fall 1.5 months mein stop ho gaya.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_PHJT3E": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Lokesh Naik",
+            "customer_img1": "shopify:\/\/shop_images\/May_30_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_25_2022.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_28_2023_1.png",
+            "customer_txt3": "Month 15",
+            "review_date": "5 Apr 2023",
+            "review_details": "I had a lot of fungal formation and dandruff on my hair. I was browsing for treatment options when I found Traya. In 3 months I saw great results. I could see hair growth on my crown and hairline as well.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_kQpRTD": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Bhumi",
+            "customer_img1": "shopify:\/\/shop_images\/Before_3_1f39139a-4bf1-412d-9b97-e06c61c01b1d.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Screenshot_2024-01-02_135615_1.png",
+            "customer_txt2": "Month 8",
+            "customer_img3": "shopify:\/\/shop_images\/After_3_663f42b2-02cf-46b2-9fb6-2520d0e701ba.png",
+            "customer_txt3": "Month 12",
+            "review_date": "24 Dec 2023",
+            "review_details": "Bohot saalo se ad dekh ke maine minoxidil, shampoo, tel sab try kiya but results nahi aate the. Fir Traya dikha toh socha try kar leta hoon.Traya ka treatment lene ke baad mere crown area mein ek hair la layer form hua hai. Traya sirf ek product nahi deta but ek proper kit deta hai jisse mujhe results dikhe.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_wKGV7p": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Vaibhav",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_03_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Aug_16_2022_1.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_18_2023_1.png",
+            "customer_txt3": "Month 12",
+            "review_date": "8 Jan 2023",
+            "review_details": "I always wanted an Ayurvedic treatment for my hair kyunki uske side effects nahi hote hain. Search karte waqt maine dekha ki Traya gives you an ayurvedic treatment toh maine try kiya. Their products are very good, there are no side effects and I saw results in a few months.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_Mcwp6F": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Syed Saif",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_01_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/image_a4651803-aeac-41d4-a727-fb76ec60ab8d.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Feb_18_2023_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "6 Feb 2023",
+            "review_details": "Mujhe 2 years se hair fall ho raha tha. Pehle bhi treatment karaya tha but kuch khaas results nahi mile. Fir Traya ke ads dekh kar maine unpe thoda research kya. Mujhe laga isse mere baal wapas aa sakte hai toh maine treatment start kiya. Maine 4-5 months mein results dekhe aur mere friends aur family bhi results se shock ho gaye.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_QRAV6y": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Varun Kumar",
+            "customer_img1": "shopify:\/\/shop_images\/May_12_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_08_2022_1.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Sep_18_2023_2.png",
+            "customer_txt3": "Month 15",
+            "review_date": "2 Nov 2022",
+            "review_details": "Hair fall ke wajah se mera confidence bohot low tha. Traya ka treatment leke mere hair wapas aaye toh mujhe bohot accha laga. My advice is treatment aur diet roz follow karenge toh results dikhenge.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_eFFqjk": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Soubhagya Patel",
+            "customer_img1": "shopify:\/\/shop_images\/Jul_05_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_04_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Feb_02_2023_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "26 Jan 2023",
+            "review_details": "Mujhe 4-5 saal se hair fall hai. Maine kabhi bhi koi treatment nahi liya fir mere friend ne Traya recommend kiya. Woh actually khud bhi use karta tha. Uske results dekh ke hi maine treatment start kiya. Aur fir mujhe bhi hair growth dikhne laga.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_QfRY8m": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Manish",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_30_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Sep_12_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_14_2022_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "10 Dec 2022",
+            "review_details": "Mujhe pichle 1-1.5 years se hair fall ka problem ho raha tha aur Traya ka ad dekhne ke baad, maine finally isey solve karne ka decision liya. Mujhe mere baal badhane they, to regularly main medicines leta tha aur Hair Coach ne bhi mujhe bohot motivate kiya regular rehne ke liye.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        }
+      },
+      "block_order": [
+        "revies_JJDafX",
+        "revies_PHJT3E",
+        "revies_kQpRTD",
+        "revies_wKGV7p",
+        "revies_Mcwp6F",
+        "revies_QRAV6y",
+        "revies_eFFqjk",
+        "revies_QfRY8m"
+      ],
+      "settings": {
+        "customer-head": "Our Success Stories"
+      }
+    },
+    "customer_review_stage_4_dpCDft": {
+      "type": "customer-review-stage-4",
+      "blocks": {
+        "revies_Mcwp6F": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Syed Saif",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_01_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/image_a4651803-aeac-41d4-a727-fb76ec60ab8d.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Feb_18_2023_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "6 Feb 2023",
+            "review_details": "Mujhe 2 years se hair fall ho raha tha. Pehle bhi treatment karaya tha but kuch khaas results nahi mile. Fir Traya ke ads dekh kar maine unpe thoda research kya. Mujhe laga isse mere baal wapas aa sakte hai toh maine treatment start kiya. Maine 4-5 months mein results dekhe aur mere friends aur family bhi results se shock ho gaye.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_QRAV6y": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Varun Kumar",
+            "customer_img1": "shopify:\/\/shop_images\/May_12_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_08_2022_1.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Sep_18_2023_2.png",
+            "customer_txt3": "Month 15",
+            "review_date": "2 Nov 2022",
+            "review_details": "Hair fall ke wajah se mera confidence bohot low tha. Traya ka treatment leke mere hair wapas aaye toh mujhe bohot accha laga. My advice is treatment aur diet roz follow karenge toh results dikhenge.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_eFFqjk": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Soubhagya Patel",
+            "customer_img1": "shopify:\/\/shop_images\/Jul_05_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_04_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Feb_02_2023_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "26 Jan 2023",
+            "review_details": "Mujhe 4-5 saal se hair fall hai. Maine kabhi bhi koi treatment nahi liya fir mere friend ne Traya recommend kiya. Woh actually khud bhi use karta tha. Uske results dekh ke hi maine treatment start kiya. Aur fir mujhe bhi hair growth dikhne laga.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_QfRY8m": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Manish",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_30_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Sep_12_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_14_2022_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "10 Dec 2022",
+            "review_details": "Mujhe pichle 1-1.5 years se hair fall ka problem ho raha tha aur Traya ka ad dekhne ke baad, maine finally isey solve karne ka decision liya. Mujhe mere baal badhane they, to regularly main medicines leta tha aur Hair Coach ne bhi mujhe bohot motivate kiya regular rehne ke liye.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_biUy7p": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ved",
+            "customer_img1": "shopify:\/\/shop_images\/Feb_03_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_25_2022_1.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/May_08_2023_1.png",
+            "customer_txt3": "Month 14",
+            "review_date": "03 May 2023",
+            "review_details": "Maine jab treatment shuru kiya, tab main utna regular nahi tha. But jabse maine isey regularly follow karne ka effort liya, mujhe dheere dheere acche results dikhne lage. Ab log mujhe compliments dete hain aur bolte hai ki mere baal kitne ghane ho gaye hain. I'm very happy.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_XBeibY": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Saddam",
+            "customer_img1": "shopify:\/\/shop_images\/Jul_05_2022_3.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Mar_22_2023_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_10_2023_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "3 Dec 2023",
+            "review_details": "College ke dino se hi mera hair fall shuru ho gaya tha. Bohot saare doctors ko dikhaaye lekin koi results nahi mile. Phir jab Traya ka treatment shuru kiya, 3-4 mahine mein hi results dikhne shuru ho gaye. Mere Hair Coach ne mujhe bohot motivate aur guide kiya aur ab mera overall health aur confidence, dono bohot acche condition mein hain!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_m78TPN": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ajay Kumar",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_16_2023_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Oct_04_2023_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_04_2024_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "28 Sep 2023",
+            "review_details": "Mujhe pichle 15 saal se hair fall ka problem tha aur maine to umeed chor di thi, ki baal wapas ayenge. Lekin ek dost ke recommendation pe Traya ka treatment maine shuru kiya. Aur maine medicines ke saath-saath diet aur yoga dono follow kiya - jisse mere 90% baal wapas aa chuke hain!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_CVmqgd": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Dev Singh",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_18_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_11_2023_1.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Nov_14_2023_1.png",
+            "customer_txt3": "Month 6",
+            "review_date": "7 Nov 2023",
+            "review_details": "4 saal se hair fall ka problem ho raha tha. PRP treatment try kiya lekin koi khaas result nahi mila. Lekin Traya ka routine regularly follow karna jab shuru kiya - to ab lag raha hai ki din aur raat ka difference hain mere baalo mein. Mujhe 3 mahine mein hi thoda baby hair growth dekhna shuru kar dya tha and mere Hair Coach ne mujhe regular rehne ke liye bohot motivate kiya.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        }
+      },
+      "block_order": [
+        "revies_Mcwp6F",
+        "revies_QRAV6y",
+        "revies_eFFqjk",
+        "revies_QfRY8m",
+        "revies_biUy7p",
+        "revies_XBeibY",
+        "revies_m78TPN",
+        "revies_CVmqgd"
+      ],
+      "settings": {
+        "customer-head": "Our Success Stories"
+      }
+    },
+    "customer_review_stage_5_yYqR7n": {
+      "type": "customer-review-stage-5",
+      "blocks": {
+        "revies_biUy7p": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ved",
+            "customer_img1": "shopify:\/\/shop_images\/Feb_03_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_25_2022_1.png",
+            "customer_txt2": "Month 8",
+            "customer_img3": "shopify:\/\/shop_images\/May_08_2023_1.png",
+            "customer_txt3": "Month 14",
+            "review_date": "03 May 2023",
+            "review_details": "Maine jab treatment shuru kiya, tab main utna regular nahi tha. But jabse maine isey regularly follow karne ka effort liya, mujhe dheere dheere acche results dikhne lage. Ab log mujhe compliments dete hain aur bolte hai ki mere baal kitne ghane ho gaye hain. I'm very happy.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_XBeibY": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Saddam",
+            "customer_img1": "shopify:\/\/shop_images\/Jul_05_2022_3.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Mar_22_2023_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_10_2023_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "3 Dec 2023",
+            "review_details": "College ke dino se hi mera hair fall shuru ho gaya tha. Bohot saare doctors ko dikhaaye lekin koi results nahi mile. Phir jab Traya ka treatment shuru kiya, 3-4 mahine mein hi results dikhne shuru ho gaye. Mere Hair Coach ne mujhe bohot motivate aur guide kiya aur ab mera overall health aur confidence, dono bohot acche condition mein hain!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_m78TPN": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ajay Kumar",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_16_2023_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Oct_04_2023_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_04_2024_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "28 Sep 2023",
+            "review_details": "Mujhe pichle 15 saal se hair fall ka problem tha aur maine to umeed chor di thi, ki baal wapas ayenge. Lekin ek dost ke recommendation pe Traya ka treatment maine shuru kiya. Aur maine medicines ke saath-saath diet aur yoga dono follow kiya - jisse mere 90% baal wapas aa chuke hain!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_CVmqgd": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Dev Singh",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_18_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_11_2023_1.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Nov_14_2023_1.png",
+            "customer_txt3": "Month 6",
+            "review_date": "7 Nov 2023",
+            "review_details": "4 saal se hair fall ka problem ho raha tha. PRP treatment try kiya lekin koi khaas result nahi mila. Lekin Traya ka routine regularly follow karna jab shuru kiya - to ab lag raha hai ki din aur raat ka difference hain mere baalo mein. Mujhe 3 mahine mein hi thoda baby hair growth dekhna shuru kar dya tha and mere Hair Coach ne mujhe regular rehne ke liye bohot motivate kiya.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_ej4rPi": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Jagan Mohan",
+            "customer_img1": "shopify:\/\/shop_images\/Dec_02_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Aug_31_2023.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_20_2023.png",
+            "customer_txt3": "Month 5",
+            "review_date": "13 Dec 2023",
+            "review_details": "I was always very research-oriented while looking for solutions to save my hair. I am 44 and people my age don't expect hair to come back on their heads. But, all thanks to Traya - I saw immense hair growth. I was very regular with the routine and I never missed a single pill. If I can do it, so can you.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_fCgEUW": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Rajesh Joshi",
+            "customer_img1": "shopify:\/\/shop_images\/Sep_29_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Dec_18_2022.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_05_2023_2.png",
+            "customer_txt3": "Month 6",
+            "review_date": "2 Jan 2023",
+            "review_details": "Maine itne products try kiye - onion oils, shampoos to treat my hair fall lekin kuch bhi kaam nahi aaya. But Traya ke customer reviews genuine lage to maine bhi shuru kiya. Mere Hair Coach hamesha mujhe positively motivate karte they aur aaj usi ke wajah se mere almost saare baal wapas aa gaye hain. Mere aas paas log shock ho gaye hai mere itne acche results dekh kar.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_Yrt3GD": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Yaseen",
+            "customer_img1": "shopify:\/\/shop_images\/Sep_28_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jan_26_2023.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/Jul_05_2023.png",
+            "customer_txt3": "Month 11",
+            "review_date": "27 Jun 2023",
+            "review_details": "Kaafi logo ne mujhe bola ki - \"Genetic hair fall hain to kuch nahi ho sakta.\" Lekin Traya ne isey galat saabit kar dya. Mujhe pata bhi nahi tha ki hair fall ke internal root causes bhi hote hain. Maine apna routine strictly follow kiya aur mera 1 mahine ke andar hair fall stop ho gaya. Aur itna accha hair growth dekh ke, main aur meri puri family bohot khush hain.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_wHNMJE": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Sourabh Ambildhuke",
+            "customer_img1": "shopify:\/\/shop_images\/Dec_01_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Apr_14_2023.png",
+            "customer_txt2": "Month 6",
+            "customer_img3": "shopify:\/\/shop_images\/Sep_17_2023.png",
+            "customer_txt3": "Month 9",
+            "review_date": "12 Sep 2023",
+            "review_details": "I ignored my hair fall for the longest time. In 2020, I finally decided to do something about it. That's when I came across Traya's ad. I read their customer reviews and they gave me the confidence to start the treatment. I definitely felt more energetic and I could focus more while being on their routine and of course, I'm very happy with my hair now too.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_NUP4mj": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Krantilal Suresh",
+            "customer_img1": "shopify:\/\/shop_images\/May_24_2023.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_26_2023.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Nov_02_2023_7e2fd8cd-422e-4ff4-ae66-711ed7856438.png",
+            "customer_txt3": "Month 6",
+            "review_date": "25 Oct 2023",
+            "review_details": "Mera hair fall ka problem itna bura tha ki bohot kam baal reh gaye mere they mere scalp pe. Ek dost ne Traya recommend kiya to maine  treatment shuru kiya. Aur 3 mahine ke andar hi mujhe baby hair growth dekhna shuru ho gaya tha. I was very happy ki maine sahi jagah efforts lagaye hain. Maine Traya ka community group bhi join kiya tha - waha pe jo bhi mere doubts hote they, unke jawab mil jaate they aur proper guidance bhi milta tha.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        }
+      },
+      "block_order": [
+        "revies_biUy7p",
+        "revies_XBeibY",
+        "revies_m78TPN",
+        "revies_CVmqgd",
+        "revies_ej4rPi",
+        "revies_fCgEUW",
+        "revies_Yrt3GD",
+        "revies_wHNMJE",
+        "revies_NUP4mj"
+      ],
+      "settings": {
+        "customer-head": "Our Success Stories"
+      }
+    },
+    "customer_review_te_mF87GA": {
+      "type": "customer-review-TE",
+      "blocks": {
+        "revies_YYjYAK": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Uddeshya",
+            "customer_img1": "shopify:\/\/shop_images\/Uddeshya01_300x_4c51e29f-1d12-44df-94c7-e71e8b2de6bd.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Uddeshya02_300x_921c4a78-34b8-4f77-9551-775547339218.jpg",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Uddeshya03_300x_e746d8f1-e039-43ee-8ba1-4b2c0e35bd9c.jpg",
+            "customer_txt3": "Month 6",
+            "review_date": "15 Nov 2021",
+            "review_details": "My hair loss started in 2016 after I was diagnosed with tuberculosis. I had consulted a dermatologist and tried many treatments before nearly giving up hope. I liked Traya’s approach of combining three sciences. After I used the recommended product kits, I have seen a lot of benefits like thicker hair and negligible Hair fall.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_KVAjgE": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Rajat Sadh",
+            "customer_img1": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_300x_93ca08ad-9a26-431e-9be5-e83d334cd5ad.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/month_4_300x_3fb66938-dd6c-4fb4-b3c4-9cbf5d46ffcd.jpg",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_1_300x_afb0b676-652a-4589-b14e-646c94c0efcb.jpg",
+            "customer_txt3": "Month 8",
+            "review_date": "21st Feb 2022",
+            "review_details": "I didn't want to resort to surgery or any other invasive treatment for my hair loss and I found Traya. They have helped me grow back a full head of hair in just eight months. I'm so happy with the results, thank you so much!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_mjC4nr": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Anonymous",
+            "customer_img1": "shopify:\/\/shop_images\/Month-a1_300x_1.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Month-a1_300x_1.jpg",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Month-a5_300x_982f0e9d-ccbc-4806-b6b9-05cae2075224.jpg",
+            "customer_txt3": "Month 5",
+            "review_date": "15th August 2021",
+            "review_details": "Results in just 5 months, couldn't believe my eyes when I saw hair growth on my head. Anyone with hair problems should get on their plan. It works like magic.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_6RiGtz": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Sunil Bhadouriya",
+            "customer_img1": "shopify:\/\/shop_images\/Month_1_3_300x_669c0791-76d3-4cbe-9f8c-7eb09a5cee8e.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Month_5_300x_cd0d7c8c-ddc9-41c2-b84f-78309f3933b9.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Month_7_1_300x_18514b4a-141e-43ae-889c-3596cd96ed89.jpg",
+            "customer_txt3": "Month 7",
+            "review_date": "9th Apr 2022",
+            "review_details": "I read about Traya on Quora. I had read reviews on it and they seemed positive so I thought that I would give it a go.  It's helped me so much and I can tell the difference in how much my hair has grown back.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_8wDAix": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Sandeep",
+            "customer_img1": "shopify:\/\/shop_images\/april_2023__1__360.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Before_3_19160c21-bcf3-4742-80d1-279e2f7d7df8.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/December_20221.png",
+            "customer_txt3": "Month 6",
+            "review_date": "04th Oct 2023",
+            "review_details": "I was made for Traya, and Traya was made for me. Six months later, I've seen an impressive 80% improvement. Traya's disciplined approach and the constant support from their fantastic hair coaches kept me going.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_AbMxnH": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Taukeer Ali",
+            "customer_img1": "shopify:\/\/shop_images\/July_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/December_2022_2.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/After_8.png",
+            "customer_txt3": "Month 7",
+            "review_date": "08 0ct 2023",
+            "review_details": "I'm a teacher facing a relentless battle with hair loss for nearly a decade. But Traya came into my life with a simple routine. Just 7 months in, I have not only witnessing visible results but also feeling more energetic. Traya's progressive approach has truly transformed my journey.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_HgK6bN": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Sourabh",
+            "customer_img1": "shopify:\/\/shop_images\/December_2022_07bcf90f-8927-428f-9697-d43d95e5a305.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/June_2023.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/After_1_8e4710ab-a111-4685-8ee7-6f13fe13fdde.png",
+            "customer_txt3": "Month 7",
+            "review_date": "07th oct 2023",
+            "review_details": "I have been in my hair loss saga since college, and I chose Traya over a hair transplant. Trustworthiness, consistent support, and positive outcomes became the pillars of my Traya journey. And guess what? My positive results even inspired my friends to join the Traya adventure.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_UrKbg6": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ayan",
+            "customer_img1": "shopify:\/\/shop_images\/ayan_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/1669788100790_20221130_113016_720.jpg",
+            "customer_txt2": "Month 3",
+            "customer_img3": "shopify:\/\/shop_images\/ayan_3.png",
+            "customer_txt3": "Month 5",
+            "review_date": "21 oct  2023",
+            "review_details": "I have been dealing with hair loss since my mid-20s. The visible bald patch post-COVID hit my confidence hard. Initially, Traya didn't show results, and minoxidil increased hair fall, but after 3 months, the regrowth was phenomenal. My bald patch is gone, and overall hair quality and density have improved.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_XAxCd9": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ashis beniya",
+            "customer_img1": "shopify:\/\/shop_images\/february_2023_360.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/april_2023_360.png",
+            "customer_txt2": "Month 6",
+            "customer_img3": "shopify:\/\/shop_images\/after__7__360_286e061e-c05f-4fcd-b1be-7f4fcd02c895.png",
+            "customer_txt3": "Month 9",
+            "review_date": "19th oct  2023",
+            "review_details": "I have been battling hair loss for 2-3 years. Home remedies and doctor visits didn't work. Within 5-6 months of Traya's routine, I witnessed better hair regrowth and improved my hair quality. The constant support from the hair coaches, gave me hope and assurance when I needed it the most.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_tH9jyg": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Jagan Mohan",
+            "customer_img1": "shopify:\/\/shop_images\/December_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/July_2023.png",
+            "customer_txt2": "Month 8",
+            "customer_img3": "shopify:\/\/shop_images\/After_2_1ce4c3e5-07f4-400a-b8d5-bf40392c2c70.png",
+            "customer_txt3": "Month 12",
+            "review_date": "19th oct 2023",
+            "review_details": "I have been facing hair loss since 2012-2013. After trying ayurvedic treatments without success, I contemplated surgery. Traya became my last resort, and the testimonials felt real, giving me hope. In the end, Traya delivered satisfying results.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        }
+      },
+      "block_order": [
+        "revies_YYjYAK",
+        "revies_KVAjgE",
+        "revies_mjC4nr",
+        "revies_6RiGtz",
+        "revies_8wDAix",
+        "revies_AbMxnH",
+        "revies_HgK6bN",
+        "revies_UrKbg6",
+        "revies_XAxCd9",
+        "revies_tH9jyg"
+      ],
+      "settings": {
+        "customer-head": "Our Success Stories"
+      }
+    },
+    "16644404393094bcd4": {
+      "type": "result-doctors-card",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "6263aa49-63fa-4de2-86bb-ac682220b971": {
+      "type": "female-collection-slide",
+      "blocks": {
+        "19d6f0cc-a707-4f61-b993-13f68a56ab81": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_1023223.jpg"
+          }
+        },
+        "741aa9a2-e729-4389-a230-e60bda6ca7d1": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_1023224.jpg"
+          }
+        },
+        "3e252b57-f531-42b6-bef4-c8d27920e219": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_1023225.jpg"
+          }
+        },
+        "bc8dfa6f-1444-4d06-999d-f74c3a277193": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_1023226.jpg"
+          }
+        },
+        "58cc5c46-3c1c-4c34-a252-879b3425a769": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_1023227.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "19d6f0cc-a707-4f61-b993-13f68a56ab81",
+        "741aa9a2-e729-4389-a230-e60bda6ca7d1",
+        "3e252b57-f531-42b6-bef4-c8d27920e219",
+        "bc8dfa6f-1444-4d06-999d-f74c3a277193",
+        "58cc5c46-3c1c-4c34-a252-879b3425a769"
+      ],
+      "disabled": true,
+      "settings": {
+        "hide_text": "",
+        "slide_class": "",
+        "Heading": "Real Men, Real Stories",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "b4b8f914-4658-46d1-a2c8-67b3f603a299": {
+      "type": "stage3-customer-stories",
+      "blocks": {
+        "18226b97-8405-485b-b1da-280b7ec0c2b3": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_0d3976f4-1fe0-4d31-ac7e-2a791ec0373b.png"
+          }
+        },
+        "378836e1-9089-47f8-bd38-ef79c0e1739a": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1_f3f4536e-52d3-44b1-b67c-e01a0963d0ed.png"
+          }
+        },
+        "dd10abd9-a1df-4d73-a5ef-8d9168f7853d": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_2_de2ee7f0-78b7-4aae-acd3-e22b00dcb259.png"
+          }
+        },
+        "9efec9c3-99e3-41fd-abe5-87ebbcc9f5b6": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_3_8af5b056-82c8-4936-a464-7f04e445d26a.png"
+          }
+        },
+        "566a991a-a1dc-4483-9443-c23de3cf1cab": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_4_8c77ce2f-b14d-463f-ae1a-b3243e72712b.png"
+          }
+        }
+      },
+      "block_order": [
+        "18226b97-8405-485b-b1da-280b7ec0c2b3",
+        "378836e1-9089-47f8-bd38-ef79c0e1739a",
+        "dd10abd9-a1df-4d73-a5ef-8d9168f7853d",
+        "9efec9c3-99e3-41fd-abe5-87ebbcc9f5b6",
+        "566a991a-a1dc-4483-9443-c23de3cf1cab"
+      ],
+      "disabled": true,
+      "settings": {
+        "hide_text": "",
+        "slide_class": "",
+        "Heading": "Real Men, Real Stories",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "7d7f6011-4522-411e-a04b-0de7a97b1ff9": {
+      "type": "stage2-3-journey",
+      "disabled": true,
+      "settings": {
+        "enable_journey": true,
+        "journey_title": "When will I see results ?"
+      }
+    },
+    "e8d6f548-2e8f-492a-b004-b5e340c7075e": {
+      "type": "stage2-3-safe-scientific",
+      "blocks": {
+        "4504190f-6465-4a1f-b7e0-e9d22de65ae3": {
+          "type": "gallery",
+          "settings": {
+            "scientific_img": "shopify:\/\/shop_images\/Isolation_Mode.png",
+            "scientific_name": "Cruelty Free"
+          }
+        },
+        "ee3b16f5-c955-4b30-b02b-85b1defba21b": {
+          "type": "gallery",
+          "settings": {
+            "scientific_img": "shopify:\/\/shop_images\/Isolation_Modea.png",
+            "scientific_name": "Made Safe"
+          }
+        },
+        "78d38c78-c8d3-40ab-aa74-8316837649cb": {
+          "type": "gallery",
+          "settings": {
+            "scientific_img": "shopify:\/\/shop_images\/Group_4676dee8-3113-4360-93d5-cc901b57400e.png",
+            "scientific_name": "Allergen free"
+          }
+        },
+        "94214696-26d3-4ea7-a361-644802f9287a": {
+          "type": "gallery",
+          "settings": {
+            "scientific_img": "shopify:\/\/shop_images\/Vector_558a3ad1-0063-4b84-8fd4-06b6abe06f73.png",
+            "scientific_name": "Vegan Friendly"
+          }
+        },
+        "908fe57f-990d-42e5-8ca0-054d59b69152": {
+          "type": "gallery",
+          "settings": {
+            "scientific_img": "shopify:\/\/shop_images\/Groups.png",
+            "scientific_name": "Non Toxic"
+          }
+        },
+        "e25efdca-7dc2-4f58-867f-f7e2b78383bf": {
+          "type": "gallery",
+          "settings": {
+            "scientific_img": "shopify:\/\/shop_images\/Groupss.png",
+            "scientific_name": "Doctor Prescribed"
+          }
+        }
+      },
+      "block_order": [
+        "4504190f-6465-4a1f-b7e0-e9d22de65ae3",
+        "ee3b16f5-c955-4b30-b02b-85b1defba21b",
+        "78d38c78-c8d3-40ab-aa74-8316837649cb",
+        "94214696-26d3-4ea7-a361-644802f9287a",
+        "908fe57f-990d-42e5-8ca0-054d59b69152",
+        "e25efdca-7dc2-4f58-867f-f7e2b78383bf"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_scientific": true,
+        "scientific_title": "Safe and Scientific"
+      }
+    },
+    "0a62ebc6-7ebc-41d4-8f6b-8661a54816b1": {
+      "type": "stage1-journey",
+      "settings": {
+        "journey_title": "What Your Journey look like"
+      }
+    },
+    "66d88f09-a613-462b-b9d2-3adddbb55ee0": {
+      "type": "stage1-doctors",
+      "blocks": {
+        "1244f778-1b9a-4f3c-9dcd-79e9e3797d8d": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_1_8932d6a6-9ebf-458b-887b-6aed5dcee1da.png",
+            "doctors_name": "Dr. Harish Balaji",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "b45df35d-888e-4f75-ba3b-79aa1469c5ca": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_2_35c4af69-06e8-44e8-a862-7b621d8ef9cd.png",
+            "doctors_name": "Dr. Siddhi Sonawane",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "4a2c04f6-6fc0-4340-b997-7c376a535dd5": {
+          "type": "Gallery",
+          "disabled": true,
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_3_1331786f-b7f1-4602-b4ee-4e27e790aa46.png",
+            "doctors_name": "Dr. Aarushi Mittal",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353025.png"
+          }
+        },
+        "1d9a0352-2aed-4375-ad8b-d2b00ab2e3ea": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_4_5cd5d8ab-55d8-4207-ab86-93d46b7d2afa.png",
+            "doctors_name": "Dr. Dhwani Saxena",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353025.png"
+          }
+        },
+        "044f2589-cf20-4ded-8448-48fed121ba9f": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_5_45fbc0ca-d182-496b-acbc-c781f8309327.png",
+            "doctors_name": "Dr. Kalyani Deshmukh",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353025.png"
+          }
+        },
+        "f507c2cd-ee61-4a25-9687-e81c368ee016": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_6_b5866a73-947a-479a-bd41-06620497c2bd.png",
+            "doctors_name": "Dr. Shreya Deoghare",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "f3ca30d1-46c8-4ca0-8ace-ff4c5ac884cd": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_7_dfb5f648-ed21-4111-9993-930921e7d773.png",
+            "doctors_name": "Dr. Shweta Tripati",
+            "doctors_expert": "M.B.B.S, PG (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "d7cd7285-3d30-4e05-aa79-5a3087af2fe1": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_03f96e17-673c-4ece-989e-2b3d398bc210.png",
+            "doctors_name": "Dr. Shailendra Chaubey",
+            "doctors_expert": "B.A.M.S (Ayurvedic Practitioner)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "1244f778-1b9a-4f3c-9dcd-79e9e3797d8d",
+        "b45df35d-888e-4f75-ba3b-79aa1469c5ca",
+        "4a2c04f6-6fc0-4340-b997-7c376a535dd5",
+        "1d9a0352-2aed-4375-ad8b-d2b00ab2e3ea",
+        "044f2589-cf20-4ded-8448-48fed121ba9f",
+        "f507c2cd-ee61-4a25-9687-e81c368ee016",
+        "f3ca30d1-46c8-4ca0-8ace-ff4c5ac884cd",
+        "d7cd7285-3d30-4e05-aa79-5a3087af2fe1"
+      ],
+      "settings": {
+        "doctors_title": "Meet Our Team of Doctors"
+      }
+    },
+    "a8ef976b-7d20-407b-ae90-88f7fbfadbb5": {
+      "type": "stage1-holistic-safe",
+      "blocks": {
+        "57b4a20f-9f47-4886-bf37-226fe7a5b337": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/Layer_1_c6a3f0fa-8a52-4a50-90b5-4626e9063f73.png",
+            "svg_txt": "NO SIDE EFFECTS"
+          }
+        },
+        "5d6fccd6-6636-43d6-9faf-a2192b0d5827": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/Layer_1_2_64757acd-4dbd-4dda-8f7f-30af7352946e.png",
+            "svg_txt": "DERMATOLOGICALLY TESTED"
+          }
+        },
+        "f4b44fdc-3a80-464d-bcbb-e399d79c6338": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/Group_c4464c50-adfb-4575-9ebf-475daba3b899.png",
+            "svg_txt": "100% HERBAL ACTIVES"
+          }
+        },
+        "3d2346bc-d638-40d0-89e5-33a3ee2c562f": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/logos_720_3_2edec946-fd52-4ecf-b8a6-233f705ba874.png",
+            "svg_txt": "VEGAN FRIENDLY"
+          }
+        },
+        "a9c6d25e-8821-4baa-adb6-bf8918f5c7c0": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/logos_720_6_b625b254-bd2f-4a31-bf31-05d6dba8f50b.png",
+            "svg_txt": "ALLERGEN FREE"
+          }
+        },
+        "a9271d66-7a95-44c9-b72b-0551597634ff": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/logos_720_4_1e06d60b-b637-4f7a-ac8b-30531aa3e783.png",
+            "svg_txt": "DOCTOR APPROVED"
+          }
+        }
+      },
+      "block_order": [
+        "57b4a20f-9f47-4886-bf37-226fe7a5b337",
+        "5d6fccd6-6636-43d6-9faf-a2192b0d5827",
+        "f4b44fdc-3a80-464d-bcbb-e399d79c6338",
+        "3d2346bc-d638-40d0-89e5-33a3ee2c562f",
+        "a9c6d25e-8821-4baa-adb6-bf8918f5c7c0",
+        "a9271d66-7a95-44c9-b72b-0551597634ff"
+      ],
+      "settings": {
+        "holistic_txt": "Traya Holistic Plan For Hair Loss",
+        "holistic_para": "Our approach combines the goodness of <br> three sciences. With ingredients from the <br> most authentic sources, we personalise <br> your treatment delivering assured results.",
+        "safe_txt": "Safe And Scientific"
+      }
+    },
+    "54223bd2-d6c3-4d86-ae93-6c9f3d0f61ce": {
+      "type": "male-treatment-plan",
+      "settings": {
+      }
+    },
+    "community_banner_CNGzaG": {
+      "type": "community-banner",
+      "settings": {
+        "comm_desk_banner": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_de78e955-af5b-43c4-ac97-91126668484f.png",
+        "comm_mob_banner": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1_efc87370-e5c5-4141-b277-288baecb5b5f.png",
+        "comm_content": "Get answers &amp; guidance instantly while <br> on the treatment."
+      }
+    },
+    "050f2b86-729b-4080-842f-c29eb598429b": {
+      "type": "aldrich-faq",
+      "blocks": {
+        "cd5d0abf-08fe-4186-8a37-b506501222ed": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Why should I consider Traya's treatment plan when I can simply use shampoo or oil?<\/p>",
+            "aldrich_ans": "<p>Shampoo and oil only address external factors temporarily. Traya's holistic plan tackles hair loss from within, ensuring long-lasting results by addressing the root causes.<\/p>"
+          }
+        },
+        "1fc09e68-b795-47dd-b47e-737d7a4db62f": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>How long does it take for the kit to be delivered?<\/p>",
+            "aldrich_ans": "<p>Traya products are typically delivered within 3-5 working days from the date of purchase.<\/p>"
+          }
+        },
+        "4eb2a321-5968-4122-9133-309fccfc9b7f": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>When and how do I get a prescription?<\/p>",
+            "aldrich_ans": "<p>Once you place the order for your customised kit, Traya's doctors review your test results to approve your treatment and create a digital prescription. Post that, the prescription will be available on the app. Alternatively, you can access your prescription by logging onto the website using your Traya registered mobile number.<\/p>"
+          }
+        },
+        "e2e985dc-e761-456a-93a6-5caf257330a0": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Who is a hair coach and what do they do?<\/p>",
+            "aldrich_ans": "<p>Traya's hair coaches are experts trained by doctors over months on hair science and product knowledge. They guide you throughout your hair regrowth journey. They help you start the treatment, track your progress and suggest necessary tweaks in the treatment to ensure best results for you. Hair coaches are accessible anytime by simply booking an appointment through the app.<\/p>"
+          }
+        },
+        "422386b5-5d83-4d05-8116-35142da2c167": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>How does Traya diagnose my hair online?<\/p>",
+            "aldrich_ans": "<p>Traya's online hair test is co-created with doctors. It captures all necessary health conditions that should be taken into consideration while curating your treatment plan. The scalp picture helps assess the pattern and extent of hair loss, thereby eliminating the need for any physical tests.<\/p>"
+          }
+        },
+        "99bf569d-c1d9-49de-9492-7ee9aeea113c": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>When can I expect results?<\/p>",
+            "aldrich_ans": "<p>Best results are seen anywhere between 5 to 12 months depending on the stage, age and type of hair loss. However, you will see early positive signs like reduction in hair fall, dandruff control or improvement in digestion, sleep and energy levels within 2-3 months.<\/p>"
+          }
+        },
+        "a13c11d7-0f8d-4bbf-9a41-dbc6e0a148d0": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>How can I access my diet plan?<\/p>",
+            "aldrich_ans": "<p>You can build your customized diet plan basis cuisine and other preferences on the Traya app once you have placed the order. Alternatively, you can access your diet plan by logging onto the website.<\/p>"
+          }
+        },
+        "d8ff5eb1-0c0b-4d49-96af-e602c6d88e6b": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Will Traya's treatment be effective in genetic hairloss cases?<\/p>",
+            "aldrich_ans": "<p>Traya specialises in preventing and managing genetic hair loss. However, if you are at an advanced stage of hair loss (stage 6 or 7) or the hair loss occurred more than 5 to 10 years ago then chances of reversal are very less as you might not have sufficient active hair follicles.<\/p>"
+          }
+        },
+        "ac7cfbf7-59bc-4103-a6ba-6be0be7fc137": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Does Traya have a money-back guarantee?<\/p>",
+            "aldrich_ans": "<p>Traya offers a 100% money-back guarantee, if you don't see results despite following the treatment as recommended for at least 5 months. You can find the detailed eligibility criteria on Traya's website.<\/p>"
+          }
+        },
+        "e6578289-911f-4fb2-b8ec-84b23c2cdffc": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Is Traya treatment safe?<\/p>",
+            "aldrich_ans": "<p>Traya's treatments are doctor backed and have no side effects. All topical products are dermatologically tested and all ayurvedic products are AYUSH certified.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "cd5d0abf-08fe-4186-8a37-b506501222ed",
+        "1fc09e68-b795-47dd-b47e-737d7a4db62f",
+        "4eb2a321-5968-4122-9133-309fccfc9b7f",
+        "e2e985dc-e761-456a-93a6-5caf257330a0",
+        "422386b5-5d83-4d05-8116-35142da2c167",
+        "99bf569d-c1d9-49de-9492-7ee9aeea113c",
+        "a13c11d7-0f8d-4bbf-9a41-dbc6e0a148d0",
+        "d8ff5eb1-0c0b-4d49-96af-e602c6d88e6b",
+        "ac7cfbf7-59bc-4103-a6ba-6be0be7fc137",
+        "e6578289-911f-4fb2-b8ec-84b23c2cdffc"
+      ],
+      "settings": {
+        "enable_faq_accordion": true,
+        "aldrich_title": "FAQ's"
+      }
+    },
+    "0461588f-ec61-4969-9c34-ed86945c2d7e": {
+      "type": "buy-now-atc",
+      "settings": {
+        "heading": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16642732012e5f65b5",
+    "1664273324b1385128",
+    "88681d4b-2fce-412f-a708-f55e0f69822e",
+    "9a67c001-eefe-4d3b-bb47-fff82a99e213",
+    "pcos_causing_male_rp_mKNrCB",
+    "b4049736-520b-4743-beda-f6fd0bd9cd77",
+    "16642750938b921f1d",
+    "customer_review_stage_2_BL8txa",
+    "customer_review_stage_3_LYLWJA",
+    "customer_review_stage_4_dpCDft",
+    "customer_review_stage_5_yYqR7n",
+    "customer_review_te_mF87GA",
+    "16644404393094bcd4",
+    "6263aa49-63fa-4de2-86bb-ac682220b971",
+    "b4b8f914-4658-46d1-a2c8-67b3f603a299",
+    "7d7f6011-4522-411e-a04b-0de7a97b1ff9",
+    "e8d6f548-2e8f-492a-b004-b5e340c7075e",
+    "0a62ebc6-7ebc-41d4-8f6b-8661a54816b1",
+    "66d88f09-a613-462b-b9d2-3adddbb55ee0",
+    "a8ef976b-7d20-407b-ae90-88f7fbfadbb5",
+    "54223bd2-d6c3-4d86-ae93-6c9f3d0f61ce",
+    "community_banner_CNGzaG",
+    "050f2b86-729b-4080-842f-c29eb598429b",
+    "0461588f-ec61-4969-9c34-ed86945c2d7e"
+  ]
+}

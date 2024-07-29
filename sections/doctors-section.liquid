@@ -1,0 +1,314 @@
+<div class="doctors-section container" page_type="normal">
+    {%if section.settings.expert-box-head-desktop != blank%}
+    <p class=" {% if page.handle == 'traya-coupons-offers-discounts' %}offer-desktop-head{% endif %}font-weight-bold h1 l-0 mb-4 text-center{% if page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' or page.handle == 'female-result2' %} female-result-heading font-fredoka{% else %} section-title{% endif %}">{{section.settings.expert-box-head-desktop}}</p>
+    {%endif%}
+
+   {%if page.handle == 'traya-coupons-offers-discounts'%}
+    <p class="offer-mobile-head font-weight-bold h1 l-0 mb-4 text-center">Meet The Experts Who<br> Curate Your Plan</p>
+    {%endif%}
+      {% if page.handle == 'traya-coupons-offers-discounts' %}
+         <p class="d-md-none offer-text  text-center">A team of doctors have carefully analyzed your case and customized a treatment plan for you.</p>
+      {% endif %}
+
+    {%if section.settings.expert-box-head-two != blank%}
+      {% if page.handle == 'all' %}
+        <p class="text-center">{{section.settings.expert-box-head-two}}</p>
+      {% else %}
+        <h3 class="text-center{% if page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' %} l-0 mb-md-5 mb-4 fw-bold female-result-subheading{% endif %}">{{section.settings.expert-box-head-two}}</h3>
+      {% endif %}
+    {%endif%}
+    <div class="row text-center{% if page.handle == 'all' or page.handle == 'traya-coupons-offers-discounts' or product.template_suffix == 'kit-product' or page.handle == 'femalev1' or page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' or page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %} double-doctor-slider mt-4{% else %} doctor-slider{% endif %}">
+      
+      {% for block in section.blocks %}
+
+        <div class="{% if page.handle == 'all' or page.handle == 'traya-coupons-offers-discounts' or product.template_suffix == 'kit-product' or page.handle == 'femalev1' or page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' or page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %}doctor_mb_slide col-md-12 position-relative mb-5 mb-md-5{% else %}col-6 col-md-4{% endif %} mt-4 mt-md-5">
+        <div class="col-md-7 px-0 mx-auto mb-4{% if page.handle == 'all' or page.handle == 'traya-coupons-offers-discounts' or product.template_suffix == 'kit-product' or page.handle == 'femalev1' or page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' or page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %} position-absolute doc-image{% endif %}">
+         {% if page.handle == 'female-result' or page.handle == 'result-fe' or page.handle == 'female-result2' %}
+     <div class="doctor-img position-relative rounded-circle">
+            {%if block.settings.doctor_image != blank%}
+            <img src="{{block.settings.doctor_image | img_url: 'master'}}" alt="{{block.settings.doctor_image | escape}}" class="h-100 rounded-circle{% if page.handle == 'all' or page.handle == 'traya-coupons-offers-discounts' or product.template_suffix == 'kit-product' or page.handle == 'femalev1' or page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' or page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %} d-block m-auto{% else %} w-100{% endif %}" {% if page.handle == 'all' or page.handle == 'traya-coupons-offers-discounts' or product.template_suffix == 'kit-product' or page.handle == 'femalev1' or page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' or page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %}width="150"{% endif %}>
+            {%endif%}
+     </div>
+           {% else %}
+           <a href="{{block.settings.Doctor_ctalink}}" class="doctor-img position-relative rounded-circle">
+            {%if block.settings.doctor_image != blank%}
+            <img src="{{block.settings.doctor_image | img_url: 'master'}}" alt="{{block.settings.doctor_image | escape}}" class="h-100 rounded-circle{% if page.handle == 'all' or page.handle == 'traya-coupons-offers-discounts' or product.template_suffix == 'kit-product' or page.handle == 'femalev1' or page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' or page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %} d-block m-auto{% else %} w-100{% endif %}" {% if page.handle == 'all' or page.handle == 'traya-coupons-offers-discounts' or product.template_suffix == 'kit-product' or page.handle == 'femalev1' or page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' or page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %}width="150"{% endif %}>
+            {%endif%}
+          </a>
+           {% endif %}
+        </div>
+        <div class="doc-info">
+          {% if block.settings.doctor_heading != blank %}
+          <p class="font-weight-bold doc-name{% if page.handle != 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' or page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %} mb-2{% endif %}">{{block.settings.doctor_heading}}</p>
+            {% endif %}
+            {% if block.settings.doctor_subheading != blank %}
+            <p class="doc-position{% if page.handle != 'female-result' or page.handle == 'female-result2' or page.handle != 'result-fe' or page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %} mb-2{% endif %}">{{block.settings.doctor_subheading}}</p>
+            {% endif %}
+            {% if block.settings.Doctor_ctatext != blank %}
+              {% unless page.handle == 'femalev1' or page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' %}
+                <a href="{{block.settings.Doctor_ctalink}}" class="font-size-18 text-decoration-none l-0 view-more-btn{% if page.handle == 'all' %} doc-btn{% endif %}{% if page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' or page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %} d-md-none{% endif %}">{{block.settings.Doctor_ctatext}}</a>
+              {% endunless %}
+            {% endif %}
+        </div>
+        </div>
+     
+      {% endfor %}
+    </div>
+</div>
+{% schema %}
+   {
+    "name": "Doctors Section",
+    "settings": [
+      {
+        "id": "expert-box-head-desktop",
+        "type": "text",
+        "label": "Heading"
+      },
+      {
+        "id": "expert-box-head-two",
+        "type": "text",
+        "label": "Heading"
+      }
+    ],
+"blocks": [
+  {
+  "type": "Doctor",
+  "name": "Doctor",
+  "settings": [
+         {
+          "id": "doctor_image",
+          "type": "image_picker",
+          "label": "Right Top Image"
+          },
+          {
+          "id": "doctor_heading",
+          "type": "text",
+          "label": "Doctor heading"
+          },
+          {
+          "id": "doctor_subheading",
+          "type": "text",
+          "label": "Doctor Subheading"
+          },
+          {
+          "id": "Doctor_ctatext",
+          "type": "text",
+          "label": "Doctor Link Add Text"
+          },
+          {
+          "id": "Doctor_ctalink",
+          "type": "url",
+          "label": "Add CTA Link"
+          }     
+      ]
+    }
+  ],
+          "presets":[
+          {
+          "name":"Doctors Section",
+          "category":"text"
+          }]
+  }
+  
+
+  
+{% endschema %}
+
+{% style %}
+   {% if page.handle == 'female-result' or page.handle == 'result-fe' or page.handle == 'female-result2' %}
+     .doctor-img{
+pointer-events: none;
+     }
+     {% endif %}
+  .doc-name, .doc-position {
+       font-size: 18px;
+  }
+  {% if page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' or page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %}
+    .view-more-btn {
+      font-size: 12px;
+      line-height: 16.37px;
+      font-weight: 700;
+      text-decoration: none;
+      color: #414042;
+    }
+  {% else %}
+  .view-more-btn {
+    color: #618E3D;
+    border-bottom: 1px solid #618E3D;
+    font-size: 18px;
+  }
+  {% endif %}
+  .view-more-btn:hover {
+    color: #272728 !important;
+    border-color: #272728 !important;
+  }
+  .doctor-img img {
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border: 4px solid #9bba70;
+  }
+  {% if page.handle == 'all' or page.handle == 'traya-coupons-offers-discounts' or product.template_suffix == 'kit-product' or page.handle == 'femalev1' or page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' or page.handle == 'pcos' or page.handle == 'result4-a' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %}
+    .doc-name {
+      font-size: 18px;
+      line-height: 25px;
+      color: #000;
+      margin-bottom: 0;
+    }
+    .doc-position {
+      font-size: 16px;
+      line-height: 20px;
+      color: #000;
+      opacity: 0.5;
+    }
+    .doc-btn {
+      border-bottom: 1px solid #000;
+      font-size: 14px;
+      color: #000;
+      font-weight: 700;
+      font-style: normal;
+    }
+    .doc-info {
+      border: 1px solid #A5C174;
+      padding: 65px 20px 20px;
+      margin-top: 55px;
+      border-radius: 9px;
+      box-shadow: 0px 3.49484px 3.49484px rgb(0 0 0 / 10%);
+    }
+    .section-title {
+      margin-bottom: 10px!important;
+    }
+    @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+      .doc-btn {
+        font-size: 12px;
+      }
+      .doc-position {
+        font-size: 14px;
+      }
+      .doc-name {
+        font-size: 15px;
+      }
+      .doc-info {
+        min-height: 190px;
+      }
+    }
+    @media only screen and (max-width: 767.98px) and (min-width: 576px) {
+      .doc-btn {
+        font-size: 12px;
+      }
+      .doc-name {
+        font-size: 14px;
+      }
+      .doc-position {
+        font-size: 14px;
+        margin-bottom: 0px;
+      }
+      .doctor-img img {
+        width: 115px;
+      }
+    }
+    @media only screen and (max-width: 575.98px) {
+      {% if page.handle == 'female-result' or page.handle == 'female-result2' or page.handle == 'result-fe' or page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %}
+        .double-doctor-slider .doctor_mb_slide {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+        .double-doctor-slider .slick-list {
+    padding: 0 30% 0 0 !important;
+}
+      .doc-name {
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 5px;
+      }
+      .doc-position {
+        font-size: 10px;
+        line-height: 11px;
+        margin-bottom :5px;
+      }
+      {% else %}
+      .doc-name {
+        font-size: 13px;
+      }
+      .doc-position {
+        font-size: 13px;
+        margin-bottom :0;
+      }
+      {% endif %}
+      .doc-btn {
+        font-size: 11px;
+      }
+      .doc-info {
+        min-height: 175px;
+      }
+      .doctor-img img {
+        width: 115px;
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      .doc-info {
+        min-height: unset;
+      }
+      .doc-name {
+        font-size: 11px;
+        margin-top:20px;
+      }
+      .doc-position {
+        font-size: 11px;
+      }
+      .doc-btn {
+        font-size: 9px;
+      }
+      .doctor-img img {
+        width: 100px;
+      }
+    }
+  {% endif %}
+  {% if page.handle == 'all' %}
+    .doc-image {
+      left: 50%;
+      bottom: 50%;
+      transform: translate(-50%, 10%);
+    }
+  {% elsif page.handle == 'femalev1' or page.handle == 'traya-coupons-offers-discounts' or product.template_suffix == 'kit-product' or page.handle == 'female-result' or page.handle == 'female-result2'  or page.handle == 'result-fe' or page.handle == 'pcos' or page.handle == 'menopause' or page.handle == 'post-pregnancy' or page.handle == 'thyroid' %}
+    .doc-image {
+      left: 50%;
+      bottom: 50%;
+      transform: translate(-50%, 20%);
+    }
+    p.offer-mobile-head.font-weight-bold.h1.l-0.mb-4.text-center {
+     display:none;
+}
+      p.offer-desktop-headfont-weight-bold.h1.l-0.mb-4.text-center.section-title{
+        display:block;
+      }
+    @media only screen and (max-width: 767.98px) {
+     p.offer-mobile-head.font-weight-bold.h1.l-0.mb-4.text-center {
+    font-size: 24px !important;
+     display:block !important;
+}
+      p.offer-desktop-headfont-weight-bold.h1.l-0.mb-4.text-center.section-title{
+        display:none !important;
+      }
+       .traya-coupons-offers-discounts .doctors-section.container p.font-weight-bold.h1.l-0.mb-4.text-center.section-title{
+    font-size: 21px !important;
+    }
+      {% if page.handle == 'femalev1' or page.handle == 'traya-coupons-offers-discounts' %}
+       
+  .row.text-center.double-doctor-slider.mt-4.slick-initialized.slick-slider.slick-dotted {
+    margin-top: 0 !important;
+}
+  p.d-md-none.offer-text.text-center {
+    margin-bottom: 0;
+    margin-top: 18px;
+    font-size: 13px;
+}
+   {% endif %}
+      .doc-info {
+        min-height: 200px;
+        padding:75px 20px 20px;
+      }
+    }
+  {% endif %}
+  
+{% endstyle %}

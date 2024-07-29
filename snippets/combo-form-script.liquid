@@ -1,0 +1,75 @@
+
+<script>
+  $('body').on('click', '.addto-cart_btn', function(e) {
+    let pro_items = $(this).parents('.product-form').attr('data-items');
+     var variantsIDs = JSON.parse(pro_items);
+    e.preventDefault();
+      checkout(variantsIDs);
+  });
+  
+  function checkout(variantsIDs) {
+    var qty =$('[name="quantity"]').val();
+   variantsIDs.forEach(e => {
+    e.quantity = qty;
+  });
+    
+    let formData = {
+      'items': variantsIDs,
+      sections: 'cart-drawer'
+    };
+     // console.log("variantsIDs", formData);
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => {
+      return response.json();
+    }).then(result => { 
+      var t = document.querySelector('cart-drawer');
+      let cart_drawer = result.sections['cart-drawer'];
+      CartDrawerUpdate(t, cart_drawer);
+    }).catch((error) => {
+      console.error('Error:', error);
+    });
+  }
+
+  $('body').on('click', '.checkout__btns', function(e) {
+    let pro_items = $(this).parents('.product-form').attr('data-items');
+     var variantsIDs = JSON.parse(pro_items);
+    e.preventDefault();
+      checkoutbuynow(variantsIDs);
+  });
+  
+  function checkoutbuynow(variantsIDs) {
+    var qty =$('[name="quantity"]').val();
+   variantsIDs.forEach(e => {
+    e.quantity = qty;
+  });
+    
+    let formData = {
+      'items': variantsIDs,
+      sections: 'cart-drawer'
+    };
+     // console.log("variantsIDs", formData);
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => {
+      document.location.href = '/cart/checkout';
+      return response.json();
+    }).then(result => { 
+      var t = document.querySelector('cart-drawer');
+      let cart_drawer = result.sections['cart-drawer'];
+      CartDrawerUpdate(t, cart_drawer);
+    }).catch((error) => {
+      console.error('Error:', error);
+    });
+  }
+</script>

@@ -1,0 +1,155 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "doctor_details_7d3REn": {
+      "type": "doctor-details",
+      "blocks": {
+        "text_rjdXB7": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "A",
+            "user_name": "Anil",
+            "user_content": "Sensitive skin ke liye Dr. ne achha ilaj kiya, no more irritation."
+          }
+        },
+        "text_ePpD96": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "G",
+            "user_name": "Gauravi",
+            "user_content": "Dr. se consultation ke baad meri skin problems finally solve hui, very effective."
+          }
+        },
+        "text_PTCXTa": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "N",
+            "user_name": "Nehal",
+            "user_content": "Dr. ne mere doubts clear kiye aur treatment explain kiya, making me feel secure."
+          }
+        }
+      },
+      "block_order": [
+        "text_rjdXB7",
+        "text_ePpD96",
+        "text_PTCXTa"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Dr_Komal.webp",
+        "doctor_name": "Dr. Komal Rathi",
+        "specialization": "BBS, DDV (DERMATOLOGY) | 3 YEARS",
+        "education": "MBBS, DDV (Dermatology)",
+        "registration_no": "2019\/01\/0117",
+        "ratings": "4.8\/5",
+        "Plan_patients": "",
+        "known_languages": "",
+        "about_doctors": "Dr. Komal Rathi has two years of clinical practice specializing in the care of skin, hair, and nails. Her expertise lies in lasers and injectables, with a focus on achieving optimal results and ensuring patient satisfaction."
+      }
+    },
+    "qa_accordion_J6Xbz8": {
+      "type": "QA-accordion",
+      "blocks": {
+        "faq_XYF9dR": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do people visit Dr. Komal?",
+            "Answer": "Patients visit Dr Komal to diagnose and treat hair and other skin-related issues."
+          }
+        },
+        "faq_RMj77h": {
+          "type": "faq",
+          "settings": {
+            "Question": "What does Dr Komal specialize in?",
+            "Answer": "Her expertise lies in lasers and injectables, with a focus on achieving optimal results and ensuring patient satisfaction"
+          }
+        }
+      },
+      "block_order": [
+        "faq_XYF9dR",
+        "faq_RMj77h"
+      ],
+      "settings": {
+        "Accordiontitle1": "",
+        "Accordiontitle2": ""
+      }
+    },
+    "doctor_slide_QNUpXC": {
+      "type": "doctor-slide",
+      "blocks": {
+        "text_DDENdG": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Siddhi Sonawane",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Siddhi_69e310aa-8b4d-41e9-b58a-e3b338cf20f7.png",
+            "specialist": "DERMATOLOGIST | COSMETOLOGIST,",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/siddhi-sonawane"
+          }
+        },
+        "text_XQJkgP": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Sangeeta Menon",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Sangeeta_Menon-1_compact_db3ee615-d365-4859-8e1c-91fa4ccc9466.png",
+            "specialist": "DIETICIAN | NUTRITIONIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/sangeeta-menon"
+          }
+        },
+        "text_RchKD4": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Harish Balaji. R",
+            "doctorImage": "shopify:\/\/shop_images\/dr.harish_compact_8705e678-693a-4c80-a8e2-9e9580a997b3.png",
+            "specialist": "DERMATOLOGIST | MD | AESTHETIC SURGEON,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-harish"
+          }
+        },
+        "text_yiyTwr": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Dhwani Saxena",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Dhwani_Saxena.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "5 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-dhwani"
+          }
+        }
+      },
+      "block_order": [
+        "text_DDENdG",
+        "text_XQJkgP",
+        "text_RchKD4",
+        "text_yiyTwr"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "doctor_details_7d3REn",
+    "qa_accordion_J6Xbz8",
+    "doctor_slide_QNUpXC"
+  ]
+}

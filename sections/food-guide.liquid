@@ -1,0 +1,251 @@
+<div class="container food-guide-main my-md-5 mt-5">
+    <p class="text-center font-weight-bold home-heading d-none d-md-block" style="width:70%"> {{section.settings.heading_desktop}}</p>
+    <div class="food-guide">
+        <p class="text-center font-weight-bold home-heading d-md-none mob-heading">{{ section.settings.heading_mob }}</p>
+        <div class="food-desc position-relative">
+            <div class="text-left text-side">
+                <div class="position-absolute coconut d-none d-md-block">
+                  {% if section.settings.coconut_nut !=blank %}
+                    <img src="{{ section.settings.coconut_nut | img_url: '' }}" alt="Image Not Found..." class="coconut-image">
+                    {% endif %}
+                </div>
+                <div class="consult m-auto">
+                    <div class="quote position-absolute">
+                      <img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/quotes.png" class="quote-image">
+                    </div>
+                    <p class="doctor-consult font-weight-bold">{{ section.settings.doctor_consult }}
+                    </p>
+                    <p class="doctor-name"><span class="font-weight-bold">{{ section.settings.doctor-name }},</span> {{ section.settings.doctor-specialist }}</p>
+                </div>
+                <p class="diet-text font-weight-normal mt-4 mx-auto" diet__text="">{{ section.settings.Diet-Plan }}</p>
+                <div class="m-auto diet-btns">
+                     {% if section.settings.button_text != blank %}
+                    <div class="d-none d-md-flex justify-content-between">
+                        <a class="btn btn-dark food-guide-btn view_plan_btn" view_diet_plan href="/blogs/diet-plan/customised-diet-plan-code-2506?_pos=4&amp;_sid=5ede16cf2&amp;_ss=r">{{ section.settings.button_text }}</a>
+                    </div>
+                       {% endif %}
+                </div>
+            </div>
+            <div class="image-side">
+                <div class="mob">
+                   {% if section.settings.desktop_img != blank %}
+                    <img class="mobile-image d-none d-md-block lazyloaded" data-src="{{ section.settings.desktop_img |img_url: ' ' }}"  src="{{ section.settings.desktop_img | img_url: ' ' }}">
+                     {% endif %}
+                     {% if section.settings.mobile_img !=blank %}
+                    <img class="d-md-none lazyloaded" data-src="{{section.settings.mobile_img  | img_url: ' '}}" width="238" height="245" src=" {{section.settings.mobile_img | img_url: ' ' }}">
+                       {% endif %}
+                      {% if section.settings.button_text != blank %}
+                    <div class="d-flex flex-wrap d-md-none px-3 row-gap">
+                        <a class="btn btn-dark food-guide-btn w-100" href="/blogs/diet-plan/customised-diet-plan-code-2506?_pos=4&amp;_sid=5ede16cf2&amp;_ss=r">{{ section.settings.button_text }}</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Food Guide",
+    "settings": [
+      {
+        "type":"text",
+        "id":"heading_desktop",
+        "label":"Enter Your Desktop Heading"
+      },
+         {
+          "type": "image_picker",
+          "id": "desktop_img",
+          "label": "Select Desktop Images"
+          },
+      {
+        "type":"text",
+        "id":"heading_mob",
+        "label":"Enter Your Mobile Heading"
+      },
+      {
+      "type": "image_picker",
+      "id": "mobile_img",
+      "label": "Select Mobile Images"
+      },
+      {
+        "type":"text",
+        "id":"doctor_consult",
+        "label":"Doctor Consult"
+      },
+        {
+        "type":"text",
+        "id":"doctor-name",
+        "label":"Doctor Name"
+      },
+       {
+        "type":"text",
+        "id":"doctor-specialist",
+        "label":"Doctor Specialist"
+      },{
+         "type":"text",
+         "id":"Diet-Plan",
+         "label":"Diet Plan"
+      }, 
+      {
+          "type":"text",
+          "id":"button_text",
+          "label":"Enter button Name"
+        },
+       {
+          "type": "image_picker",
+          "id": "coconut_nut",
+          "label": "Select Coconut Images"
+          }
+    ],"presets":[
+      {
+        "name":"Food Guide",
+        "category":"Food Guide & Hair Grouth"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .food-guide-btn{
+    text-transform:uppercase
+  }
+  .home-heading {
+    font-size: 26px;
+    line-height: 35px;
+    color: #000;
+  }
+  .food-guide {
+    background: rgb(244 247 239 / 0.8);
+    border-radius: 10px;
+  }
+  .food-desc {
+    padding: 65px 50px 50px;
+    background: rgb(244 247 239 / 0.8);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 65% 35%;
+  }
+  .mob {
+    position: absolute;
+    top: -20%;
+    right: 8%;
+  }
+  .consult {
+    background: rgba(255,255,255,.35);
+    border: 1px solid #96CF8D;
+    border-radius: 20px;
+    width: 76%;
+    padding: 40px;
+  }
+  .doctor-consult {
+    color: #414143;
+    font-size: 27px;
+    line-height: 128%;
+  }
+  .doctor-name {
+    color: rgb(0 0 0 / 0.5);
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .coconut {
+    left: -10%;
+    bottom: 5%;
+  }
+  .diet-text {
+    font-size: 20px;
+    line-height: 28px;
+    color: #000;
+    width: 76%;
+  }
+  .diet-btns {
+    width: 100%;
+  }
+  .template-index .page-container .btn {
+    font-size: 20px;
+    line-height: 27px;
+    border-radius: 12px;
+    padding: 9px 35px;
+  }
+  .view_plan_btn {
+    margin-left: 75px;
+  }
+  .quote {
+    top: calc(35px);
+  }
+  @media only screen and (max-width: 991px) and (min-width: 768px) {
+    .home-heading {
+      font-size: 18px;
+    }
+    .diet-text {
+      padding-left: 35px;
+    }
+    .coconut {
+      left: -5%;
+      bottom: 5%;
+      width: 26%;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .home-heading {
+      font-size: 22px;
+    }
+    .doctor-consult {
+      font-size: 17px;
+    }
+  }
+  @media only screen and (max-width: 767.98px){
+    .mob-heading {
+        padding: 35px 0px 0px;
+    }
+  .doctor-consult {
+    font-size: 20px;
+    text-align: center;
+}
+  consult {
+    width: 90%;
+    padding: 25px 10px;
+}
+  .food-desc {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0px;
+}
+  .quote {
+    top: 1.5%;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+  }
+  .doctor-name {
+    text-align: center;
+  }
+  .diet-text {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+}
+  .row-gap {
+    row-gap: 20px;
+}
+  .template-index .page-container .btn {
+    border-radius: 10px;
+  }
+      .text-side, .image-side {
+    width: 100%;
+    }
+    .mob {
+    position: initial;
+    text-align: center;
+  }
+    .mob-heading {
+    padding: 35px 0px 0px;
+  }
+    .consult {
+    width: 90%;
+    padding: 25px 10px;
+  }
+}
+{% endstyle %}

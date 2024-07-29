@@ -1,0 +1,378 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "aca67e9c-bf9e-4357-944d-55ea0bc987d5": {
+      "type": "female-review-banner",
+      "settings": {
+      }
+    },
+    "8271cab9-b210-4240-a093-e60180ee370b": {
+      "type": "google-female-reviews",
+      "blocks": {
+        "b5e2be60-082e-436a-b279-a9b5daf723af": {
+          "type": "blocks",
+          "settings": {
+            "name": "Preeti Singh",
+            "name_logo": "",
+            "city": "",
+            "details": "I am so happy to talk to my coach sohail khan, he motivates me that I can regain my hairs and reverse the grey hair in 4-5 months. He encourage me to follow the diet & recommended hair treatment course.",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "011852cd-a4c9-4561-b5d7-06bfbf516521": {
+          "type": "blocks",
+          "settings": {
+            "name": "Prajakta Sonkusare",
+            "name_logo": "",
+            "city": "",
+            "details": "Sohail explained the entire process very well, was very soft spoken and resolved all my doubts. It was a good starting experience, I hope this continues till the end of my hair renewal journey!",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "980ed1ff-344f-4d13-b570-d42e9e5b629f": {
+          "type": "blocks",
+          "settings": {
+            "name": "Priya Singh",
+            "name_logo": "",
+            "city": "",
+            "details": "I have just ordered my first kit and received a call from Sohail khan. He explained all the steps that I have to follow.He asked all my problems regarding my hair issues and explained what all we are going to do for it. Very excited and will surely update my hair growth journey once I follow it for a month at least.",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "4532b916-f746-4f58-9eec-862c2b17fd90": {
+          "type": "blocks",
+          "settings": {
+            "name": "Khan Ifra",
+            "name_logo": "",
+            "city": "",
+            "details": "I ordered Traya products and got a call from hair expert Sohail khan. He cleared my queries really well and explained everything very nicely. Looking forward for the amazing results.",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "bb63d436-d64b-4790-a901-cfed7b660cec": {
+          "type": "blocks",
+          "settings": {
+            "name": "Shreeja V",
+            "name_logo": "",
+            "city": "",
+            "details": "I have been using Traya treatment for over 2 months now and I am extremely happy with the results. My hair fall has reduced a lot, and I can significant changes in my hairline. I would recommend Traya for sure.",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "6e861aef-6f2c-4634-ba70-c9fd1001e6d2": {
+          "type": "blocks",
+          "settings": {
+            "name": "Neha Ganar",
+            "name_logo": "",
+            "city": "",
+            "details": "Just had my first call with the hair coach Mr. Sohail Khan and it was really helpful.I received all the information about the kit and how to use it.I had some queries and they were answered well.Looking forward to see the expected changes.",
+            "rating_num": "4.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "433c0f57-0c09-4f67-bfb9-1e433e4bb37b": {
+          "type": "blocks",
+          "settings": {
+            "name": "Priyanka pateriya",
+            "name_logo": "",
+            "city": "",
+            "details": "Sohaib was extremely helpful in going through the prescription and suggesting necessary steps ahead. He smoothly navigated me through the whole session and helped me place an order as per my hair health requirements.",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "c2fed8c0-1d91-40ed-a729-b2ae290855ed": {
+          "type": "blocks",
+          "settings": {
+            "name": "Arpita Behera",
+            "name_logo": "",
+            "city": "",
+            "details": "For the first time I am starting my hair treatment with Traya. I was getting concerned about my thinning hair, my partitions are widening and my scalp is visible. Today I had an appointment with hair coach Sohail Khan. He asked about each and every thing regarding my hair health and health issues if any. He detailed all the prescribed products in a very positive and friendly manner. He made me feel so comfortable and answered all of the questions. I have complete faith in the team and hoping for good results.",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "b75d8f3e-23d2-46cf-88bb-babdc4e753eb": {
+          "type": "blocks",
+          "settings": {
+            "name": "Sonali satapathy",
+            "name_logo": "",
+            "city": "",
+            "details": "I am very glad to talk with sohail khan. He is my hair treatment coach. He guided me how to use all the products which is prescribed for my according to my hair condition. He is a very nice coach.",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "f0d5ff1a-1b20-49aa-8a89-79c13c72f104": {
+          "type": "blocks",
+          "settings": {
+            "name": "Megha Katiyar",
+            "name_logo": "",
+            "city": "",
+            "details": "My experience with Traya has far been amazing and my hair coach Misba is so helpful towards the consistency of the  treatment and whatever queries i had was also solved. So far its been great and really looking forward to see new growth and improvement in my hair journey.",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "3e45f46f-1798-4bd2-95eb-d21e2e7b1b2d": {
+          "type": "blocks",
+          "settings": {
+            "name": "Ashwini Shetty",
+            "name_logo": "",
+            "city": "",
+            "details": "Traya medication has helped me a lot to revive my hair. Condition has improved a lot and still.continuing the medication to get the futher desired results.Thanks a lot Traya.",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "9f7847a0-9899-41cf-a8d2-6dcfadf4607c": {
+          "type": "blocks",
+          "settings": {
+            "name": "Priyanka Mohanty",
+            "name_logo": "",
+            "city": "",
+            "details": "It was nice talking to aisha and providing the details regarding the problems I'm having with my hair. Appreciate the patience and follow up. I hope I can see positive results in a couple of months",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "5faf4c3a-8fef-4556-b73c-6cb2f7bee28a": {
+          "type": "blocks",
+          "settings": {
+            "name": "Sanvi Mohanty",
+            "name_logo": "",
+            "city": "",
+            "details": "I was using many different products and there was no visible result. Decided to try Traya, just to see if it makes any difference and honestly, I am really satisfied with the results. There are no side effects and my hair coach (Irfan Gaffar) was very patient and polite, clearing any doubts. I would definitely recommend.",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "49623aa3-dcc5-4df7-880d-86534b3d4af8": {
+          "type": "blocks",
+          "settings": {
+            "name": "Garima Verma",
+            "name_logo": "",
+            "city": "",
+            "details": "I am so happy to talk with my hair coach Pankaj sir .he is a great motivator. I am filling little  bit  embarrassed  for  my hair and he is motivated me, telling me dont worry about your hair problem and he says take a patience in few months your hair must be regrowth.........😊👍👏🏻",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        },
+        "ee4c7299-4e6a-4c12-96ce-21c0a230d8de": {
+          "type": "blocks",
+          "settings": {
+            "name": "Vidya Dhide",
+            "name_logo": "",
+            "city": "",
+            "details": "Beneficial hair treatment! Thanks to my coach Rahul for motivating me. I started this treatment 2 months ago and I can see the healthy growth in my hair. Thanks to the Traya Team!",
+            "rating_num": "5.0",
+            "rating": 5,
+            "color": 5
+          }
+        }
+      },
+      "block_order": [
+        "b5e2be60-082e-436a-b279-a9b5daf723af",
+        "011852cd-a4c9-4561-b5d7-06bfbf516521",
+        "980ed1ff-344f-4d13-b570-d42e9e5b629f",
+        "4532b916-f746-4f58-9eec-862c2b17fd90",
+        "bb63d436-d64b-4790-a901-cfed7b660cec",
+        "6e861aef-6f2c-4634-ba70-c9fd1001e6d2",
+        "433c0f57-0c09-4f67-bfb9-1e433e4bb37b",
+        "c2fed8c0-1d91-40ed-a729-b2ae290855ed",
+        "b75d8f3e-23d2-46cf-88bb-babdc4e753eb",
+        "f0d5ff1a-1b20-49aa-8a89-79c13c72f104",
+        "3e45f46f-1798-4bd2-95eb-d21e2e7b1b2d",
+        "9f7847a0-9899-41cf-a8d2-6dcfadf4607c",
+        "5faf4c3a-8fef-4556-b73c-6cb2f7bee28a",
+        "49623aa3-dcc5-4df7-880d-86534b3d4af8",
+        "ee4c7299-4e6a-4c12-96ce-21c0a230d8de"
+      ],
+      "settings": {
+      }
+    },
+    "f9409c9f-4265-4472-aa87-9293df973e6a": {
+      "type": "female-collection-slide",
+      "blocks": {
+        "5c0524d6-526e-41f8-adbc-6aec141e3c09": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_102353603_dd72978c-0c35-4c56-a7dd-f02f31ba1105.png"
+          }
+        },
+        "f171b21a-23ab-4ea4-92ab-59c1e1de9d33": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_102353604_36d800dc-613e-4d9a-a2a6-ce4350dd9634.png"
+          }
+        },
+        "94ea2bdc-0d72-4b06-b0d6-9833e3968051": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_102353605_136749b9-3d6a-44e3-8e24-f5e82446b8c6.png"
+          }
+        },
+        "56c5e7f4-acaf-4100-99e0-475d75043f29": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Poonam_27607630-b338-4aa6-a7e8-230ed1caa85c.png"
+          }
+        },
+        "19c4f798-0499-4ff8-80b0-7d3c3ec13cea": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Anuu_78f38cc7-8d3b-4360-b821-851afac0a02c.png"
+          }
+        }
+      },
+      "block_order": [
+        "5c0524d6-526e-41f8-adbc-6aec141e3c09",
+        "f171b21a-23ab-4ea4-92ab-59c1e1de9d33",
+        "94ea2bdc-0d72-4b06-b0d6-9833e3968051",
+        "56c5e7f4-acaf-4100-99e0-475d75043f29",
+        "19c4f798-0499-4ff8-80b0-7d3c3ec13cea"
+      ],
+      "settings": {
+        "hide_text": "",
+        "slide_class": "female-reviews py-md-4",
+        "Heading": "Real Women, Real Stories",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "8ecf3b00-0bde-457f-8424-8a74b3782b4c": {
+      "type": "traya-transformation",
+      "blocks": {
+        "93e9e347-6c3e-4fb0-b2ca-ece0052e68f4": {
+          "type": "blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_102353334.png",
+            "details": "“New baby hair growth after postpartum hair fall”",
+            "name": "Sharon, Andhra Pradesh",
+            "start": "shopify:\/\/shop_images\/Frame_102353024_fef19cdd-5bc9-43ac-b0ba-9f3f7c073fbd.png"
+          }
+        },
+        "4587ecd7-35ae-49ff-bd66-ae0453029ddb": {
+          "type": "blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_102353334_1.png",
+            "details": "“Very friendly hair coach. Theyeven guide you with a diet plan”",
+            "name": "Bhawna, Mumbai",
+            "start": "shopify:\/\/shop_images\/Frame_102353024_fef19cdd-5bc9-43ac-b0ba-9f3f7c073fbd.png"
+          }
+        },
+        "b367a017-0b68-4400-94ad-aff332c10e7a": {
+          "type": "blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_102353334_2.png",
+            "details": "“I had no expectations at all.Traya worked like magic”",
+            "name": "Arundhati, Mumbai",
+            "start": "shopify:\/\/shop_images\/Frame_102353024_fef19cdd-5bc9-43ac-b0ba-9f3f7c073fbd.png"
+          }
+        }
+      },
+      "block_order": [
+        "93e9e347-6c3e-4fb0-b2ca-ece0052e68f4",
+        "4587ecd7-35ae-49ff-bd66-ae0453029ddb",
+        "b367a017-0b68-4400-94ad-aff332c10e7a"
+      ],
+      "settings": {
+        "section-title": "Traya’s Transformation"
+      }
+    },
+    "170003046597e17167": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "49c92b68-7e75-4a2e-ada6-92f97833ba5d": {
+      "type": "traya-journey",
+      "blocks": {
+        "5ce7304d-1c66-4ff6-90fd-c93613e7f6ce": {
+          "type": "content",
+          "settings": {
+            "heading": "Take The Hair Test",
+            "content": "An online test that assess the root cause of your hair loss.",
+            "read_time": "(takes 2-4 mins)",
+            "icon": "shopify:\/\/shop_images\/in1_large_a6dbc17f-eda3-4133-817d-59267fe834dc.png",
+            "card_link_text": "Take the Hair Test",
+            "card_link": "https:\/\/form.traya.health\/female?cohort=1&location=RootCauses"
+          }
+        },
+        "c805b9f4-702f-4ab2-97f5-1ea9a3381657": {
+          "type": "content",
+          "settings": {
+            "heading": "Buy the Plan",
+            "content": "Based on your responses, our doctors recommend a customized hair treatment plan.",
+            "read_time": "(takes 5 mins)",
+            "icon": "shopify:\/\/shop_images\/in2_large_f53022a3-92a1-42fd-bb95-a4c8dafc48eb.png",
+            "card_link_text": "",
+            "card_link": ""
+          }
+        },
+        "58951cd7-4a94-4f1b-9dba-f3cfeeb05788": {
+          "type": "content",
+          "settings": {
+            "heading": "Start Hair Growth",
+            "content": "You get a free diet plan and a hair coach to guide you throughout your journey.",
+            "read_time": "(takes 3-5 months)",
+            "icon": "shopify:\/\/shop_images\/live-chat-01_2.png",
+            "card_link_text": "",
+            "card_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "5ce7304d-1c66-4ff6-90fd-c93613e7f6ce",
+        "c805b9f4-702f-4ab2-97f5-1ea9a3381657",
+        "58951cd7-4a94-4f1b-9dba-f3cfeeb05788"
+      ],
+      "settings": {
+        "title": "",
+        "sub_title": "",
+        "btn_text": "",
+        "btn_link": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "aca67e9c-bf9e-4357-944d-55ea0bc987d5",
+    "8271cab9-b210-4240-a093-e60180ee370b",
+    "f9409c9f-4265-4472-aa87-9293df973e6a",
+    "8ecf3b00-0bde-457f-8424-8a74b3782b4c",
+    "170003046597e17167",
+    "49c92b68-7e75-4a2e-ada6-92f97833ba5d"
+  ]
+}

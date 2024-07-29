@@ -1,0 +1,264 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1663658377ec696209": {
+      "type": "custom-img-banner",
+      "blocks": {
+        "4844cee1-e321-43a9-b898-5a8a57307782": {
+          "type": "content",
+          "settings": {
+            "heading_coach": "",
+            "subheading_coach": "",
+            "coach_image_desktop": "shopify:\/\/shop_images\/referral_page_desktop_1600x_b12f0744-181d-41c3-9a13-1f1bababa17c.jpg",
+            "coach_image_mobile": "shopify:\/\/shop_images\/referral_page_mobile_6af9d70e-9290-4b33-a7ec-b78ba001ff12.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "4844cee1-e321-43a9-b898-5a8a57307782"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "e93e13be-1a7b-460b-86b3-45ec58212ad8": {
+      "type": "refer_and_win",
+      "blocks": {
+        "cec19d8c-ff31-4fb8-8d66-b6e3c6111118": {
+          "type": "colomn",
+          "settings": {
+            "refer_win_Firstpara": "Give<br><strong>20% OFF<\/strong>"
+          }
+        },
+        "d944404c-f72b-402f-a38f-d38e8a2b6d39": {
+          "type": "colomn",
+          "settings": {
+            "refer_win_Firstpara": "Get<br><strong>20% OFF<\/strong>"
+          }
+        }
+      },
+      "block_order": [
+        "cec19d8c-ff31-4fb8-8d66-b6e3c6111118",
+        "d944404c-f72b-402f-a38f-d38e8a2b6d39"
+      ],
+      "settings": {
+        "refer_win_title": "Refer & Win"
+      }
+    },
+    "eae548b5-5dfa-4792-8f62-3ceff9baf9f2": {
+      "type": "referral-form",
+      "settings": {
+        "form_link": "<iframe style=\"max-width:100%;\" width=\"820px\" height=\"380px\" frameborder=\"0\" align=\"middle\" src=\"https:\/\/www.ref-r.com\/campaign_user\/p?brandid=46560&campaignid=31003&bid_e=300884C2A434288BF409058AC57A0ACC&t=420&email=&fname=\"><\/iframe>",
+        "bg_color": "#d3e5ee"
+      }
+    },
+    "33683e10-c2cb-4cd0-9c6e-52267abd3587": {
+      "type": "main-video",
+      "settings": {
+        "heading_regimen": "",
+        "subheading_regimen": "",
+        "coach_image_desktop": "shopify:\/\/shop_images\/Group_102353120_50c9ad26-57e5-4ca3-944f-961e24c517a9.png",
+        "videourl": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e8beb9b7cd7043b8966812f3262e8864.mp4"
+      }
+    },
+    "166365849672093706": {
+      "type": "referral-how-work",
+      "blocks": {
+        "054fbccb-5032-48fc-97a1-39ecb8df1451": {
+          "type": "image",
+          "settings": {
+            "how_work_img": "shopify:\/\/shop_images\/Group_102353304_1_e9ad7805-6520-4a3d-9a35-9d5cfe493251.png",
+            "how_work_img_mob": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_10_ce5cb381-9e10-476c-98b7-79e672660a55.png"
+          }
+        },
+        "e6125a3e-d95a-4eb2-80e5-ce1520052f2e": {
+          "type": "image",
+          "settings": {
+            "how_work_img": "shopify:\/\/shop_images\/Group_102353299_3daf9858-be1d-40c5-89a4-7d3d09d7e675.png",
+            "how_work_img_mob": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_9_648fd96e-eb2e-4565-916f-675ed617abfe.png"
+          }
+        },
+        "f55e03e1-e638-479f-abf7-cb3afbf5eff8": {
+          "type": "image",
+          "settings": {
+            "how_work_img": "shopify:\/\/shop_images\/Group_102353300_14475f1d-faea-4655-962d-b90089de88aa.png",
+            "how_work_img_mob": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_8_8355d1b0-7fef-4176-bedf-42aa35919bc8.png"
+          }
+        }
+      },
+      "block_order": [
+        "054fbccb-5032-48fc-97a1-39ecb8df1451",
+        "e6125a3e-d95a-4eb2-80e5-ce1520052f2e",
+        "f55e03e1-e638-479f-abf7-cb3afbf5eff8"
+      ],
+      "settings": {
+        "sec_head": "How Does this work?"
+      }
+    },
+    "1663658781c701beaf": {
+      "type": "referral-programme",
+      "blocks": {
+        "8c64edf2-ae77-42c0-89fc-6653ec3e4892": {
+          "type": "text",
+          "settings": {
+            "prgm_bk_color": "#cbdbe6",
+            "prgm_image": "shopify:\/\/shop_images\/Group_102353257_e0ca52ee-5ec3-4072-af0d-57593f49a3de.png",
+            "prgm_text": "<strong>Step1:<\/strong> Enter your details below and generate your referral link"
+          }
+        },
+        "567fe635-ed38-4b52-8887-8e2e99f6ff1d": {
+          "type": "text",
+          "settings": {
+            "prgm_bk_color": "#cbdbe6",
+            "prgm_image": "shopify:\/\/shop_images\/Group_102353258_933f8f6c-fbd1-43a6-b076-e5541a2f9016.png",
+            "prgm_text": "<strong>Step 2:<\/strong> Copy the referral link and share it with your friends using any of the given channels"
+          }
+        },
+        "c3604387-97c9-4530-9143-a4ee3c4e6872": {
+          "type": "text",
+          "settings": {
+            "prgm_bk_color": "#cbdbe6",
+            "prgm_image": "shopify:\/\/shop_images\/Group_102353259_852dd1ec-b2d5-45be-8284-7d59d5a4a45e.png",
+            "prgm_text": "<strong>Step 3:<\/strong> Voila! Now your friend can order using your link and you get a 20% OFF once your friend places an order"
+          }
+        }
+      },
+      "block_order": [
+        "8c64edf2-ae77-42c0-89fc-6653ec3e4892",
+        "567fe635-ed38-4b52-8887-8e2e99f6ff1d",
+        "c3604387-97c9-4530-9143-a4ee3c4e6872"
+      ],
+      "settings": {
+        "bk_color": "#ffffff",
+        "ref_prg_head": "A journey becomes more fun with friends",
+        "ref_prg_last_head": "Give your friend 20% off on their first order & get 20% off for yourself. The more friends you invite, the more you can save."
+      }
+    },
+    "16636589729b8fa91e": {
+      "type": "terms-and-conditions",
+      "blocks": {
+        "65e0a40c-f563-4593-af9d-eb516db9442b": {
+          "type": "text",
+          "settings": {
+            "term_text": "The referral discount is only applicable for new Traya customers who have never placed the order before."
+          }
+        },
+        "dcc7c9f6-b3e6-46e4-9196-9c8e3b12a183": {
+          "type": "text",
+          "settings": {
+            "term_text": "The referral discount is applicable to customised kit purchases only, with a cart value of ₹2,000\/- or more."
+          }
+        },
+        "866d6786-48e1-45be-bbed-3e2741cad2e1": {
+          "type": "text",
+          "settings": {
+            "term_text": "The person recieving the referral link should fill out the Traya Hair Test on the app\/website to get the customised kit."
+          }
+        },
+        "d8a2f118-bf00-4902-bc7e-68852e41552f": {
+          "type": "text",
+          "settings": {
+            "term_text": "The existing customer sharing the referral link with the new user can only avail the discount coupon after the new user has successfully placed the order for the customised kit."
+          }
+        }
+      },
+      "block_order": [
+        "65e0a40c-f563-4593-af9d-eb516db9442b",
+        "dcc7c9f6-b3e6-46e4-9196-9c8e3b12a183",
+        "866d6786-48e1-45be-bbed-3e2741cad2e1",
+        "d8a2f118-bf00-4902-bc7e-68852e41552f"
+      ],
+      "settings": {
+        "bk_color": "#f6f6f6",
+        "term_heading": "Terms and conditions"
+      }
+    },
+    "16636642849bf14b76": {
+      "type": "FAQs",
+      "blocks": {
+        "d25660a4-464c-4692-8c06-379af87425b2": {
+          "type": "text",
+          "settings": {
+            "question": "What is the validity of the referral code?",
+            "answer": "It has an ongoing validity."
+          }
+        },
+        "5d0cfc7d-9b97-4004-b7dd-757e7984a433": {
+          "type": "text",
+          "settings": {
+            "question": "How many people can I refer to using my link?",
+            "answer": "You can refer to as many people as you want using your link."
+          }
+        },
+        "c30ba701-9f88-4da5-981c-bd49b5d18e21": {
+          "type": "text",
+          "settings": {
+            "question": "What benefits do I get for referring?",
+            "answer": "Once your friend makes a successful purchase using your link you will get FLAT 20% off on the purchase of your next Traya Treatment Kit."
+          }
+        },
+        "d066f457-ac5c-4ae3-a2ec-9e3e5e9539d4": {
+          "type": "text",
+          "settings": {
+            "question": "What benefits does the referee get?",
+            "answer": "Once your friend makes a successful purchase using your link they get FLAT 20% off on a minimum purchase of ₹2000."
+          }
+        },
+        "af124a95-e799-4df4-8d2e-b6e7b99e5a44": {
+          "type": "text",
+          "settings": {
+            "question": "Can I transfer my referral coupon to someone else?",
+            "answer": "No, the referral code is only valid on orders placed by you."
+          }
+        },
+        "05133667-128c-4dae-8f7e-fbf13b6e864f": {
+          "type": "text",
+          "settings": {
+            "question": "Can my referred guest in turn refer to someone else?",
+            "answer": "On their successful purchase they will have their own referral link and can refer to people further."
+          }
+        },
+        "0090d5b9-7948-4bcb-b547-56098a204759": {
+          "type": "text",
+          "settings": {
+            "question": "On which products will the guest get a discount?",
+            "answer": "The guest will get a 20% discount sitewide on a minimum purchase of  ₹2000."
+          }
+        }
+      },
+      "block_order": [
+        "d25660a4-464c-4692-8c06-379af87425b2",
+        "5d0cfc7d-9b97-4004-b7dd-757e7984a433",
+        "c30ba701-9f88-4da5-981c-bd49b5d18e21",
+        "d066f457-ac5c-4ae3-a2ec-9e3e5e9539d4",
+        "af124a95-e799-4df4-8d2e-b6e7b99e5a44",
+        "05133667-128c-4dae-8f7e-fbf13b6e864f",
+        "0090d5b9-7948-4bcb-b547-56098a204759"
+      ],
+      "settings": {
+        "faq_head": "FAQs",
+        "faq_bk_color": "#ffffff",
+        "accordion_id": "ReferralPageAccordion"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1663658377ec696209",
+    "e93e13be-1a7b-460b-86b3-45ec58212ad8",
+    "eae548b5-5dfa-4792-8f62-3ceff9baf9f2",
+    "33683e10-c2cb-4cd0-9c6e-52267abd3587",
+    "166365849672093706",
+    "1663658781c701beaf",
+    "16636589729b8fa91e",
+    "16636642849bf14b76"
+  ]
+}

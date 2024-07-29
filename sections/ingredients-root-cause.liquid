@@ -1,0 +1,505 @@
+{% if template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<div class="mycontainer mt-5" id="shopify-section-rootcause-ingredient">
+  <p class="section-title">{{ section.settings.section_title }}</p>
+  <p class="section-sub-title">{{ section.settings.section_sub_title }}</p>
+
+  <div class="row justify-content-around root-causes-ngredients">
+    <div class="d-md-none col-10 rootcauseMob_Slide my-4 px-0">
+      {% for block in section.blocks %}
+        <p
+          class="m-2 my-0 text-center font-fredoka p-1 rootcauseMob rootcauseMob-{{ forloop.index }}"
+          id="{{ block.settings.rootID }}"
+        >
+          {% if block.settings.roottext == 'Lack of Sleep' -%}
+            {{- 'Sleep' -}}
+          {%- else -%}
+            {{- block.settings.roottext -}}
+          {%- endif %}
+        </p>
+      {% endfor %}
+    </div>
+
+    <div class="col-10 col-md-3 card m-2 p-3 d-none d-md-block">
+      <div class="d-flex justify-content-center mt-2 mb-5">
+        <p class="card-text px-3 py-1">Root Causes</p>
+      </div>
+      <div class="root-point-main">
+        {% for block in section.blocks %}
+          <div
+            class="d-flex justify-content-between align-items-center my-3 {{ block.settings.roottext }} position-relative rootcauseMob rootcauseMob-{{ forloop.index }}"
+            id="{{ block.settings.rootID }}"
+          >
+            <p class="m-0 ml-md-5">{{ forloop.index }}. {{ block.settings.roottext }}</p>
+            <div class="root-points root-points-{{ forloop.index }}"> </div>
+          </div>
+        {% endfor %}
+      </div>
+<!--         <div><img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/lines.svg?v=1669892192"></div> -->
+    </div>
+
+    {% for block in section.blocks %}
+      
+      <div class="d-md-none col-10" style="background: #F7F9EF; border-radius: 10px;">
+      <div
+        class="impactcard impfirst impactcard-{{ forloop.index }}"
+        style="border-bottom: 0.5px dashed rgba(63, 63, 63, 0.51);"
+        data-target="{{ block.settings.rootID }}"
+      >
+        <div class="d-flex mt-2 justify-content-end">
+          <p class="card-text px-2 py-1"">Impact</p>
+        </div>
+      <div class="row align-items-center my-2">
+        <div class="col-4 pb-4">
+          <div class="root-cause-border rounded-circle p-2 mt-md-4 mt-3 mx-auto">
+            <img
+              class="rounded-circle m-3 m-auto p-1 mobileIMG"
+              alt="{{ block.settings.roottext }}"
+              src="{{ block.settings.root_img | img_url: '100x' }}"
+              width="100"
+            >
+          </div>
+        </div>
+        <div class="col-8">
+          <p class="text-left rootpara">{{ block.settings.rootpara }}</p>
+        </div>
+      </div>
+      </div>
+
+      <div
+        class="impactcard impactcard-{{ forloop.index }}"
+        data-target="{{ block.settings.rootID }}"
+      >
+        <div class="d-flex mt-2 justify-content-end">
+          <p class="card-text px-2 py-1">How we target</p>
+        </div>
+      <div class="row align-items-center my-2 pb-3">
+        <div class="col-4">
+               <p class="fw-bold text-center text-black font-fredoka fs-10">{{ block.settings.ingredientstext }}</p>
+           <div class="root-cause-border rounded-circle p-2 mt-md-4 mt-3 mx-auto">
+            <img
+              class="rounded-circle m-3 m-auto p-1 mobileIMG"
+              alt="{{ block.settings.roottext }}"
+              src="{{ block.settings.ingredients_img | img_url: '100x' }}"
+              width="100"
+            >
+          </div>
+        </div>
+        <div class="col-8">
+          <p class="text-left rootpara text-black">{{ block.settings.ingredientspara }}</p>
+        </div>
+      </div>
+      </div>
+      </div>
+
+
+
+
+    
+      <div
+        class="col-10 col-md-3 card m-2 py-3 px-0 impactcard deskCard impfirst impactcard-{{ forloop.index }}"
+        data-target="{{ block.settings.rootID }}"
+      >
+        <div class="d-flex justify-content-md-center mt-2 mb-md-5 mb-2 ml-md-0 ml-3">
+          <p class="card-text px-3 py-1">Impact</p>
+        </div>
+        <div class="root-cause-content position-relative">
+          <div class="root-cause-border rounded-circle p-3 mt-md-4 mt-3 mx-auto">
+            <img
+              class="rounded-circle m-3 m-auto p-3"
+              alt="{{ block.settings.roottext }}"
+              src="{{ block.settings.root_img | img_url: '100x' }}"
+              width="100"
+            >
+          </div>
+        </div>
+        <div class="p-3">
+          <p class="text-center rootpara position-relative">{{ block.settings.rootpara }}</p>
+        </div>
+      </div>
+
+      <div
+        class="col-10 col-md-3 card m-2 py-3 px-0 impactcard deskCard impactcard-{{ forloop.index }}"
+        data-target="{{ block.settings.rootID }}"
+      >
+        <div class="d-flex justify-content-md-center mt-2 mb-md-5 mb-2 ml-md-0 ml-3">
+          <p class="card-text px-2 py-1">How we target</p>
+        </div>
+        <div class="root-cause-content position-relative">
+          <div class="root-cause-border rounded-circle p-3 mt-md-4 mt-3 mx-auto">
+            <img
+              class="rounded-circle m-3 m-auto p-3"
+              alt="{{ block.settings.roottext }}"
+              src="{{ block.settings.ingredients_img | img_url: '100x' }}"
+              width="100"
+            >
+          </div>
+        </div>
+        <div class="p-3">
+          <p class="fw-bold text-center text-black font-fredoka fs-16">{{ block.settings.ingredientstext }}</p>
+          <p class="text-center text-black">{{ block.settings.ingredientspara }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="text-center mt-md-5 mt-3">
+    <a
+      id="{% if page.handle == 'femalev1' %}femalev1-hair-test-button3{% else %}hairtestcta{% endif %}"
+      href="https://form.traya.health/female?cohort=1&location=HomeSlideshow&page={{ page__hndl }}"
+      class="start-journey-btn btn btn-dark mt-3 shadow hair-form-actn-link btn-hair-test f-hair-test-btn position-relative"
+      >Take The Hair Test <sup>&trade;</sup></a
+    >
+  </div>
+</div>
+
+{% schema %}
+ {
+   "name": "Root-Causes Ingredients",
+   "settings": [
+     {
+       "id":"section_title",
+       "label":"Section Title",
+       "type": "text"
+     },
+     {
+       "id":"section_sub_title",
+       "label":"Section Sub Title",
+       "type": "text"
+     }
+   ],
+   "blocks": [
+    {
+      "name": "impact",
+      "type": "text",
+      "settings": [
+        {
+           "type": "text",
+           "id": "rootID",
+           "label": "Root-Causes Ingredients ID"
+         },
+         {
+           "type": "text",
+           "id": "roottext",
+           "label": "Root Cause Name"
+         },
+         {
+           "type": "text",
+           "id": "rootpara",
+           "label": "Root Cause Content"
+         },
+          {
+           "type": "image_picker",
+           "id": "root_img",
+           "label": "Root Cause Image"
+         },
+        {
+           "type": "text",
+           "id": "ingredientstext",
+           "label": "Ingredients Name"
+         },
+         {
+           "type": "text",
+           "id": "ingredientspara",
+           "label": "Ingredients Content"
+         },
+          {
+           "type": "image_picker",
+           "id": "ingredients_img",
+           "label": "Ingredients Image"
+         }
+      ]
+   }
+  ],
+  "presets": [
+    {
+      "name": "Ingredients Root Cause"
+    }
+  ]
+ }
+{% endschema %}
+
+{% style %}
+ .template-page.femalev1 .card-text{
+     background: #FFFFFF;
+     border: 0.511617px solid #B4C96C;
+     border-radius: 4.60456px;
+     width: fit-content;
+     color: #000000;
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 19px;
+     text-align: center;
+}
+ .root-cause-border{
+     border: 1px solid #C2D758;
+     width:fit-content;
+}
+ .template-page.femalev1 #shopify-section-rootcause-ingredient .card{
+     background: #F7F9EF;
+     border-radius: 10px;
+}
+/* .root-points{
+     width: 12px;
+     height: 12px;
+     background: rgba(194, 215, 88, 0.35);
+     border-radius: 50%;
+} */
+ .root-point-main p{
+     font-size:20px;
+}
+ .impactcard{
+     display:none;
+}
+ .cardshow{
+     display:block;
+}
+/* .root-points-active{
+    background: #C2D758;
+} */
+ .root-cause-content img{
+     background: #F9F6F6;
+     box-shadow: 2px 1px 7px rgb(0 0 0 / 25%);
+}
+ .rootcauseMob:hover {
+     cursor: pointer;
+}
+ .fs-16 {
+     font-size: 16px;
+}
+ @media only screen and (min-width: 767.99px) {
+     .rootcauseMob.activerootcause{
+         font-size:22px;
+         font-weight:900;
+    }
+    /* .Genetics:after {
+         content: '';
+         position: absolute;
+         left: 100%;
+         top: 40%;
+         background-image: url(//cdn.shopify.com/s/files/1/0100/1622/7394/files/arrow-1st.png);
+         background-repeat: no-repeat;
+         background-size: 135px 56px;
+         width: 140px;
+         height: 90px;
+         z-index: 1;
+    }
+     .Hormones:after {
+         content: '';
+         position: absolute;
+         left: 100%;
+         top: 38%;
+         background-image: url(//cdn.shopify.com/s/files/1/0100/1622/7394/files/arrow-2nd.png);
+         background-repeat: no-repeat;
+         background-size: 134px 12px;
+         width: 140px;
+         height: 50px;
+         z-index: 1;
+    }
+     .Stress:after {
+         content: '';
+         position: absolute;
+         background-image: url(//cdn.shopify.com/s/files/1/0100/1622/7394/files/arrow-3rd.png);
+         background-repeat: no-repeat;
+         z-index: 1;
+         background-size: 131px 43px;
+         width: 140px;
+         height: 58px;
+         left: 100%;
+         bottom: 0%;
+    }
+     .Gut:after {
+         background-image: url(//cdn.shopify.com/s/files/1/0100/1622/7394/files/arrow-7th.png);
+         position: absolute;
+         left: 100%;
+         bottom: 0;
+         z-index: 1;
+         content: '';
+         background-size: 130px 228px;
+         width: 140px;
+         height: 238px;
+         background-repeat: no-repeat;
+    }
+     .Lack:after {
+         content: '';
+         position: absolute;
+         background-image: url(//cdn.shopify.com/s/files/1/0100/1622/7394/files/arrow-4th.png);
+         background-repeat: no-repeat;
+         z-index: 1;
+         background-size: 136px 97px;
+         width: 125px;
+         height: 109px;
+         left: 100%;
+         bottom: 0%;
+    }
+     .Metabolism:after {
+         content: '';
+         position: absolute;
+         background-image: url(//cdn.shopify.com/s/files/1/0100/1622/7394/files/arrow-5th.png);
+         background-repeat: no-repeat;
+         z-index: 1;
+         background-size: 133px 134px;
+         width: 135px;
+         height: 150px;
+         left: 100%;
+         bottom: 0%;
+    }
+     .Nutrition:after {
+         content: '';
+         position: absolute;
+         background-image: url(//cdn.shopify.com/s/files/1/0100/1622/7394/files/arrow-6th.png);
+         background-repeat: no-repeat;
+         z-index: 1;
+         background-size: 135px 189px;
+         width: 114px;
+         height: 202px;
+         left: 100%;
+         bottom: 0%;
+    }
+     */
+     .root-cause-content:before{
+         content: " ";
+         width: 30%;
+         height: 1px;
+         top: 50%;
+         left: 0;
+         display: block;
+         position: absolute;
+         background: #C2D758;
+    }
+     .root-cause-content:after{
+         content: " ";
+         width: 30%;
+         height: 1px;
+         top: 50%;
+         right: 0;
+         display: block;
+         position: absolute;
+         background: #C2D758;
+    }
+     .template-page.femalev1 #shopify-section-rootcause-ingredient .card {
+         min-height: 495px;
+    }
+     .Geneticscon {
+         position: absolute;
+         z-index: 1;
+         height: 57px;
+         width: 136px;
+         top: 40%;
+    }
+     .contactors {
+         opacity: 0.5;
+    }
+     .root-points-active .contactors {
+         opacity: 1;
+    }
+}
+ @media only screen and (max-width: 767.98px) {
+     .template-page.femalev1 .section-sub-title{
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 20px;
+    }
+     .rootcauseMob_Slide .slick-next:before, .rootcauseMob_Slide .slick-prev:before{
+         width:9px;
+         height:9px;
+    }
+     .rootcauseMob_Slide .rootcauseMob{
+         font-size: 16px;
+         line-height: 26px;
+         font-weight: normal;
+    }
+     .rootcauseMob.activerootcause{
+         background: #B4C96C;
+         border: 0.511617px solid #B4CA6C;
+         box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+         border-radius: 4.60456px;
+         font-weight: 900 !important;
+         transform: scale(1.1);
+    }
+     .rootcauseMob{
+         background: #FFFFFF;
+         border: 0.511617px solid #B4C96C;
+         border-radius: 4.60456px;
+    }
+     .rootcauseMob p{
+         font-weight: 700;
+         font-size: 10px;
+         line-height: 14px;
+         text-align: center;
+         color: #000000;
+    }
+     .rootcauseMob_Slide .slick-list .slick-track{
+         display: flex;
+         align-items: center;
+    }
+     .root-cause-content:before {
+         content: " ";
+         width: 1px;
+         height: 52%;
+         top: -52%;
+         left: 50%;
+         display: block;
+         position: absolute;
+         background: #C2D758;
+    }
+     .root-cause-content:after {
+         content: " ";
+         width: 1px;
+         height: 10%;
+         bottom: -10% !important;
+         left: 50%;
+         display: block;
+         position: absolute;
+         background: #C2D758;
+    }
+     .impfirst:after {
+         content: '';
+         position: absolute;
+         background: #C2D758;
+         width: 1px;
+         height: 7%;
+         left: 17%;
+         bottom: 0;
+    }
+     .impfirst:before {
+         content: '';
+         position: absolute;
+         background: #C2D758;
+         width: 1px;
+         height: 17%;
+         left: 17%;
+         top: 0;
+    }
+     .rootcauseMob_Slide:not(.slick-initialized) > .rootcauseMob:first-of-type ~ * {
+         display: none;
+    }
+     .root-causes-ngredients .slick-prev {
+         left: -10px;
+         z-index: 5;
+    }
+     .root-causes-ngredients .slick-list {
+         height: 55px;
+    }
+     .rootpara{
+         font-size:11px;
+         height: 105px;
+         text-align: center;
+         display: flex;
+         align-items: center;
+    }
+     .fs-10{
+         font-size:10px;
+    }
+     .deskCard{
+         display:none !important;
+    }
+     .mobileIMG{
+         background: #F9F6F6;
+         box-shadow: 2px 1px 7px rgb(0 0 0 / 25%);
+    }
+}
+{% endstyle %}

@@ -1,0 +1,29 @@
+<!----- conditions-hair-doctors.liquid ------->
+<div class="container">
+  <div class="city-hair-doctors rounded-lg">
+    <h2 class="city-hd-heading">{{ section.settings.heading }}</h2>
+    <p class="city-hd-content">{{ section.settings.content }}</p>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Conditions hair doctors",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Conditions hair doctors"
+      }
+    ]
+  }
+{% endschema %}

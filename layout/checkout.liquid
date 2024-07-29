@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>{% include 'moe.liquid' %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preload" href="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" as="script">
+    {% render 'dl-head' %}
+
+    <title>{{ page_title }}</title>
+
+        <script>
+        addEventListener('DOMContentLoaded', (event) => {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://in.fw-cdn.com/30646525/349934.js';
+        script.setAttribute('chat', 'false');
+        document.getElementsByTagName('head')[0].appendChild(script);
+         });
+        </script>
+    
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+    <style>
+      [data-shipping-methods] {
+        display: grid;
+      }
+      [data-shipping-methods]>.content-box__row {
+        order: 2;
+      }
+      [data-shipping-methods] .content-box__row~.content-box__row {
+        border-bottom: 1px solid #d9d9d9;
+        order: 1;
+      }
+      .loader {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background:url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/We_are_processing..._1_300x.gif?v=1666021267') 50% 50% no-repeat #fff;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: 300px;
+        opacity: 1;
+      }
+      .breadcrumb .breadcrumb__item:nth-child(3) {
+        display: none;
+      }
+      a.step__footer__previous-link {
+        display: none;
+      }
+      .logo__image--medium {
+        max-height: 2.285714em !important;
+      }
+      .step__footer__continue-btn.btn {
+        padding: 0.9em 2em;
+      }
+      .field__input-btn.btn {
+        background: #414042;
+        color: #fff;
+      }
+      .step__footer__continue-btn.btn:hover, .field__input-btn.btn:hover {
+        background: #B7D340 !important; // Address Field Length Validation with Error Message
+        border-color: #B7D340;
+        color: #414042;
+      }
+    </style>
+
+<style>
+  .payment-method-wrapper .radio__label__primary {font-size: 12px;}
+  .radio__label.payment-method-wrapper{
+    position: relative;
+  }
+ .payment-method-wrapper .radio__label__primary{
+   position: absolute;
+    margin-right: auto;
+    margin-left: 0;
+    width: 100%;
+    z-index: 9999999999999;
+}
+  .payment-method-wrapper .radio__label__accessory{
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+  }
+    @media(max-width:1170px){
+   .payment-method-wrapper .radio__label__accessory{
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+  }
+    .payment-method-wrapper .radio__label__primary {
+<!--     position: absolute;  -->
+    margin-right: auto;
+    margin-left: 0;
+    width: 100%;
+    z-index: 9999999999999;
+    position: relative;
+    display: inline-block;
+}
+  }
+
+    @media only screen and (max-width: 999px) {.mob-logo {display: none;}}
+  </style>
+
+  
+   {%- assign pincode_list = settings.cstm_zipcode | strip_newlines | strip | split: ',' -%}
+   {%- assign phone_list = settings.cstm_phone | strip_newlines | strip | split: ',' -%}
+
+    <script>
+    var total_value = {{ checkout.total_price | divided_by: 100 }};
+    function codOption() {
+      setTimeout(function() {
+        if(Shopify.Checkout.step === "payment_method") {
+          let shippingType = localStorage.getItem('shippingType');
+          var pincodeList = {{ pincode_list | json }};
+          let pincode = localStorage.getItem('pincode');
+          var shippingCODChck = setInterval(function() {
+            let shippingMethod = document.querySelector('[data-gateway-group="manual"]');
+            if((total_value < 1000 && shippingMethod != null) || (total_value > 10000 && shippingMethod != null)) {
+              shippingMethod.style.display = "none";
+              clearInterval(shippingCODChck);
+            }else {
+              if((shippingMethod != null) && (shippingType == "Prepaid")) {
+                shippingMethod.style.display = "none";
+                clearInterval(shippingCODChck);
+              }else if((total_value < 1000) && (total_value > 10000) && ($.inArray(pincode, pincodeList) > -1)) {
+                shippingMethod.style.display = "none";
+                clearInterval(shippingCODChck);
+              }else if(shippingMethod != null) {
+                clearInterval(shippingCODChck);
+              }
+            }
+          }, 200);
+        }
+      }, 300);
+    }
+    
+    (function($) {
+      $(document).on("page:load page:change", function() {
+        codOption();
+      }); 
+    })(Checkout.$);  
+    
+      document.addEventListener("DOMContentLoaded", function(){
+        codOption();
+      });
+    </script>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {%- assign checkout-classes = checkout_html_classes -%}
+    {% if checkout-classes contains 'page--thank-you' %}
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" async="async">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" async="async"></script>
+    {% endif %}
+
+    <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-M9ZWNZW');</script>
+    <!-- End Google Tag Manager -->
+
+    {% comment %}
+    <!-- Checkout COD -->
+    <script>
+      var total_value = {{ checkout.total_price | divided_by: 100 }};
+      function codOption() {
+        setTimeout(function() {
+          if(Shopify.Checkout.step === "payment_method") {
+            let shippingType = localStorage.getItem('shippingType');
+            var shippingCODChck = setInterval(function() {
+              let shippingMethod = document.querySelector('[data-gateway-group="manual"]');
+              if((total_value < 1000 || total_value > 10000) && shippingMethod !== null) {
+                shippingMethod.style.display = "none";
+                clearInterval(shippingCODChck);
+              } else {
+                shippingMethod.style.display = "block";
+              }
+            }, 200);
+          }
+        }, 300);
+      }
+  
+      (function($) {
+        $(document).on("page:load page:change", function() {
+          codOption();
+        }); 
+      })(Checkout.$);  
+          
+      document.addEventListener("DOMContentLoaded", function() {
+        codOption();
+      });
+    </script>
+    <!-- Checkout COD -->
+    {% endcomment %}
+
+    <!-- Address Field Length Validation with Error Message -->
+    <script>
+    $(document).ready(function () {    
+      function checkAddressField() {
+        var inputValue = $('#checkout_shipping_address_address1').val();
+        var errorMessageElement = $('[data-address-field=address1] .error-message');
+      
+        if (inputValue.length < 15 && inputValue.length > 0) {
+          if (errorMessageElement.length === 0) {
+            $('[data-address-field=address1]').append('<p class="error-message" style="color: red;">Enter address with min 15 characters</p>');
+          }
+          $('#continue_button').attr('disabled', true);
+        } else {
+          errorMessageElement.remove();
+          $('#continue_button').removeAttr('disabled');
+        }
+        $('#continue_button').css('background-color', inputValue.length === 0 ? '#c4c4c4' : '#414042');
+      }
+      
+      $('#checkout_shipping_address_address1').on('blur', function () {
+        checkAddressField(); 
+      });
+      
+      $('#checkout_shipping_address_address1').on('focusin', function () {
+        var errorMessageElement = $('[data-address-field=address1] .error-message');
+        errorMessageElement.remove();
+      });
+    });
+    </script>
+    <!-- Address Field Length Validation with Error Message -->
+    <style>
+     @font-face {
+      font-family: fredoka_oneregular;
+      font-display: "swap";
+      src: url('//cdn.shopify.com/s/files/1/0100/1622/7394/files/fredokaone.eot');
+      src: url('//cdn.shopify.com/s/files/1/0100/1622/7394/files/fredokaone.eot') format('embedded-opentype'), url('//cdn.shopify.com/s/files/1/0100/1622/7394/files/fredokaone.woff2') format('woff2'), url('//cdn.shopify.com/s/files/1/0100/1622/7394/files/fredokaone.woff') format('woff'), url('//cdn.shopify.com/s/files/1/0100/1622/7394/files/fredokaone.ttf') format('truetype'), url('//cdn.shopify.com/s/files/1/0100/1622/7394/files/fredokaone.svg') format('svg');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  </head>
+  <body>
+    {{ skip_to_content_link }}
+    {% render 'dl-checkout-end' %}
+    
+    {%- assign classes = checkout_html_classes -%}
+    <header class="banner" id="bannertnq" data-header role="banner">
+      <div class="wrap">
+        <!-- Thank You Page Clickable Logo & CSS on checkout-order-status.liquid -->
+        {% if classes contains 'page--thank-you' %}
+        <a href="/" class="thank_you_logo">
+          <img alt="Traya" class="logo__image logo__image--medium" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/TrayaLogoDark_efc3f4cc-621c-48e0-98ef-5661fc2f1c34.png?157730">
+        </a>
+        {% else %}
+          <img alt="Traya" class="logo__image logo__image--medium" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/TrayaLogoDark_efc3f4cc-621c-48e0-98ef-5661fc2f1c34.png?157730">
+        {% endif %}
+        <!-- Thank You Page Clickable Logo & CSS on checkout-order-status.liquid -->
+      </div>
+    </header>
+
+    {% if classes contains 'page--thank-you' %}
+      <div class="position-relative seperator pb-md-0 d-md-none mb-3">
+        <div class="rounded-lg border px-5 pt-4 pb-3 pb-md-4 success">
+          <div class="d-flex align-items-center" style="position: relative; right: 8px;">
+            <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/imgpsh_fullsize_anim.gif?v=1712231510" height="40" width="40" />
+            {% if order.transactions[0].gateway == 'Cash on Delivery (COD)' %}
+              <p class="order-status m-0">Order placed, thanks!</p>
+            {% else %}
+              <p class="order-status m-0">Order placed, thanks!</p>
+            {% endif %}
+          </div>
+          
+          <div class="chekout-order-status-main">
+            <p class="text-center py-3 m-0 chekout-order-id" chekout-order-id>Order ID #</p>
+            <p class="text-center py-3 m-0 chekout-order-amount" chekout-order-amount>Amount:</p>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            <!-- Thank You Page Clickable Logo & CSS on checkout-order-status.liquid -->
+            {% if classes contains 'page--thank-you' %}
+            <a href="/" class="thank_you_logo">
+              <img alt="Traya" class="logo__image logo__image--medium mob-logo" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/TrayaLogoDark_efc3f4cc-621c-48e0-98ef-5661fc2f1c34.png?157730">
+            </a>
+            {% else %}
+              <img alt="Traya" class="logo__image logo__image--medium mob-logo" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/TrayaLogoDark_efc3f4cc-621c-48e0-98ef-5661fc2f1c34.png?157730">
+            {% endif %}
+            <!-- Thank You Page Clickable Logo & CSS on checkout-order-status.liquid -->
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content{% if classes contains 'page--thank-you' %} position-relative seperator{% endif %}" role="main">
+            {% if classes contains 'page--thank-you' %}
+              {% include 'checkout-order-status' %}
+              {% else %}
+              {%- assign attributes = checkout.attributes -%}
+              {%- assign name = attributes.first_name -%}
+              {%- assign first-name = name | split: ' ' | first -%}
+              {%- assign last-name = name | split: ' ' | last -%}
+              {%- assign phone = attributes.phone | split: '+91' | last -%}
+              {%- assign email = attributes.email -%}
+              {%- assign user-gender = attributes.gender -%}
+              {%- assign plan = ' ' -%}
+              {%- for line_item in checkout.line_items -%}
+                {% assign plan = line_item.properties.Plan %}
+              {%- endfor -%}
+              {{ content_for_layout  }}
+            {% endif %} 
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+          
+          <!-- Continue Shopping & Social Media Icons on Below Order Summary Of Thank You Page -->
+          {% if classes contains 'page--thank-you' %}
+            <div class="d-none d-md-block desktop">
+              {% include 'checkout-customer-info' %}
+            </div>
+          {% endif %}
+          <!-- Continue Shopping & Social Media Icons on Below Order Summary Of Thank You Page -->
+        </aside>
+      </div>
+    </div>
+
+    <!-- Thank You Page Sticky Book A Call Button Below The Banner -->
+    {% if classes contains 'page--thank-you' %}
+      <div class="bottom-sticky-btn d-md-none" style="width: 100%; height: 70px; background: #fff; position: fixed; bottom: 0; z-index: 1111; bottom: 0;">
+        <a id="bookacall" class="sticky-btn thanku_page_book" href="https://wa.me/918828006272?text=Hey%21+I+would+like+to+know+more+about+Traya">BOOK A CALL</a>
+      </div>
+    {% endif %}
+    <!-- Thank You Page Sticky Book A Call Button Below The Banner -->
+    
+    <div class="loader" style="display: none;"></div>
+    {{ tracking_code }}
+    
+  <script>
+  (function($) {
+  $(document).on("page:load page:change", function() {
+      if(Shopify.Checkout.step === "shipping_method") {
+      var shippingbtnChck = setInterval( function(){
+      let shippingbtn = $('.step__footer__continue-btn:not(.btn--disabled)');
+          if(shippingbtn.length > 0){
+            $('.step__footer__continue-btn').trigger('click');
+            clearInterval(shippingbtnChck);
+      }else{
+      }
+      },150);
+      $('.loader').css("display","block");
+      var pageUrl = window.location.href;
+      // document.querySelector('#continue_button').addEventListener('click', (event) => {
+      // Moengage.track_event("Initiate_Payment ", {
+      // "Source":pageUrl,
+      // "DateTime": new Date(),
+      // "TotalPrice": {{checkout.total_price | divided_by: 100}}
+      // });
+      // });
+      }
+  
+     if (Shopify.Checkout.step === "contact_information") {
+             var gender = localStorage.getItem('user__gender');
+      var synthetic_ID = localStorage.getItem('caseId');
+      // console.log('id>>', synthetic_ID);
+      // console.log('gender>>', gender);
+      $('body').on('click', '.step__footer__continue-btn', function (e) {
+        var pageUrl = window.location.href;
+        let pincode = document.querySelector('#checkout_shipping_address_zip').value;
+        localStorage.setItem('pincode', pincode);
+        
+        let phoneNumber = document.querySelector('#checkout_email_or_phone').value;
+        let phoneRealNumber = phoneNumber.replace(/\D/g, '').slice(-10);
+        {% comment %} console.log("number", phoneRealNumber);{% endcomment %}
+        var pincodeList = {{pincode_list | json }};
+        var phonenumberList = {{phone_list | json }}; 
+        {% comment %} console.log("phonenumberList ", phonenumberList); {% endcomment %}
+        {% comment %} console.log(phonenumberList.includes(phoneRealNumber)); {% endcomment %}
+        if(phonenumberList.includes(phoneRealNumber) == true){
+            localStorage.setItem('shippingType', 'Prepaid');
+        }else if(phonenumberList.includes(phoneRealNumber) == false){
+          if(($.inArray(pincode, pincodeList) > -1) && (total_value >= 1000) && (total_value <= 10000)){
+            localStorage.setItem('shippingType', 'COD');
+            {% comment %} debugger; {% endcomment %}
+          }else{
+            localStorage.setItem('shippingType', 'Prepaid');
+          }
+        }
+    });
+      // console.log('I am contact_information');
+      // console.log("Shopify.Checkout.step" , Shopify.Checkout.step); 
+    }
+    
+     if (Shopify.Checkout.step === "payment_method") {
+       let pincode = localStorage.getItem('pincode');
+       let codMethod = document.querySelector('[data-gateway-group="manual"]');
+       
+      // console.log('I am payment_method');
+      // console.log('shippingType', shippingType);
+      // console.log("Shopify.Checkout.step" , Shopify.Checkout.step);
+        var pincodeList = {{pincode_list | json }};
+        var phonenumberList = {{phone_list | json }};
+        // console.log('pincodeLists', pincodeList);
+        // console.log('phonenumberList', phonenumberList);
+        var checkouttotal_price = {{ checkout.total_price }};
+        // console.log('checkouttotal_price', checkouttotal_price);
+        // console.log('total_value', total_value);
+        // console.log('pincode', pincode);
+
+        if((total_value >= 1000) && (total_value <= 10000) && ($.inArray(pincode, pincodeList) > -1)){
+            localStorage.setItem('shippingType', 'COD');
+            // console.log('total_value COD', total_value);
+          }else{
+            localStorage.setItem('shippingType', 'Prepaid');
+          // console.log('total_value Prepaid', total_value);
+
+            codMethod.style.display = 'none';
+          }
+    }
+    
+ 
+  });
+})(Checkout.$);
+  </script>
+  <script>
+    // var fname = {{first-name | json}}, lname = {{last-name | json}}, phone = {{phone | json}}, email = {{email | json}}, plan = {{plan | json}};
+    // if(plan != null) {
+    //   jQuery(document).on("page:load page:change", function() {
+    //     jQuery('#checkout_email_or_phone').val(phone);
+    //     jQuery('[data-email-or-phone-input-wrapper]').find('input').attr('value', phone);
+    //     jQuery('#checkout_shipping_address_first_name').val(fname);
+    //     jQuery('[data-address-field="phone"]').addClass('hidden');
+    //     if(fname != lname) {
+    //       jQuery('#checkout_shipping_address_last_name').val(lname);
+    //     }
+    //   // jQuery('#checkout_shipping_address_phone').val(phone);
+    //   });
+    //   jQuery('body').delegate('#checkout_email_or_phone', 'keyup', function(){
+    //     var val = jQuery('.fieldset').find('input').val();
+    //     if(val == '') {
+    //       jQuery('.field.field--email_or_phone').removeClass('field--error');
+    //     }
+    //   });
+    // }
+
+    var fname = {{first-name | json}}, lname = {{last-name | json}}, phone = {{phone | json}}, email = {{email | json}}, plan = {{plan | json}};
+    if(plan != null) {
+      jQuery(document).on("page:load page:change", function() {
+        jQuery('#checkout_email_or_phone').val(email);
+        jQuery('[data-email-or-phone-input-wrapper]').find('input').attr('value', email);
+        jQuery('#checkout_shipping_address_first_name').val(fname);
+        if(fname != lname) {
+          jQuery('#checkout_shipping_address_last_name').val(lname);
+        }
+      jQuery('#checkout_shipping_address_phone').val(phone);
+      });
+      jQuery('body').delegate('#checkout_email_or_phone', 'keyup', function(){
+        var val = jQuery('.fieldset').find('input').val();
+        if(val == '') {
+          jQuery('.field.field--email_or_phone').removeClass('field--error');
+        }
+      });
+    }
+    
+    if (Shopify.Checkout.step === "thank_you") {
+    localStorage.setItem('user', true); // Home Page Reorder Button
+    document.addEventListener("DOMContentLoaded", function(){
+    var gender = localStorage.getItem('user__gender');
+      var synthetic_ID = localStorage.getItem('caseId');
+      // console.log('id>>', synthetic_ID);
+      // console.log('gender>>', gender);
+      $(".thanku_page_book").attr("href", "https://form.traya.health/pages/reschedule-slot/" + synthetic_ID );
+     setTimeout(function(){
+     // console.log('datalayer>>', window.dataLayer);
+            dataLayer.push({
+              'Gender': gender
+          });},1e3); 
+    });
+    }
+  </script>
+
+  <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9ZWNZW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+          
+  </body>
+  <!-- Begin Shopify–payment-cart JavaScript -->
+<script type="text/javascript">
+
+  var mid = '1798';
+
+  //1. Add this if need to show popup on cart page
+      var snapCartPrice = {{ cart.total_price | json }}
+  //This will be the element class name where we want to insert the UI
+      var snapCartElName = '.cart-subtotal'
+
+
+  //2. Add this if need to show popup on sidebar cart
+      var snapCartPrice = {{ cart.total_price | json }}
+  //This will be the element class name where we want to insert the UI
+      var snapCart = '.ajaxcart__footer-inner .row'
+
+  //3. Add this if need to show popup on product page
+      var snapProdDetail = {{ product | json }}
+  //This will be the element class name where we want to insert the UI    
+  var snapProdElName = '.product-form .d-flex.justify-content-between.mb-md-2'
+
+  //targeted price 
+  var productTargetedPrice = '.product-form .price-item'
+  var productTargetedPriceVariant = '.product-form .price-item'
+
+
+</script>
+<script>
+var snapmintLogo = 'https://assets.snapmint.com/assets/shopify-payments/onethird_shopifyplus.png'; //Only logo
+var snapmintLogoHeight = '49px'; // Recommended height = 24px
+var snapmintText = '&#9679; <span style="font-weight: 600;">0%</span> Interest EMI &#9679;<span style="font-weight: 600;"> Just Pay 25% Now </span> Rest In 3/6/9 EMIs Later &#9679; No Credit Card Required &#9679; Instant Approval' //snapmint text
+
+var snapmintDescImg = 'https://assets.snapmint.com/assets/shopify-payments/2month_intrest_free.png'; //Snapmint Description image
+var snapmintDescImgHeight = 'auto'; //Snapmint Description image height
+
+var gatewayId = '74600251570';
+
+var gatewayName = "snapmint"; //gateway to scrap
+{% if content_for_layout contains 'data-step="payment_method"' %}
+if(gatewayId){
+document.querySelectorAll(`[data-select-gateway='${gatewayId}'] .radio__label`)[0].children[0].innerHTML = `<img style="height:${snapmintLogoHeight};vertical-align:middle;width:auto" src="${snapmintLogo}"></img> `;
+(document.querySelectorAll(`[data-subfields-for-gateway='${gatewayId}']`)[0].children[0]).innerHTML = `<img style="height:${snapmintDescImgHeight};" src="${snapmintDescImg}">`
+}
+else{
+var options = document.querySelectorAll(".radio-wrapper");
+for (var i = options.length - 1; i >= 0; i--)
+{
+if(options[i].children[1] && options[i].children[1].classList.contains('radio__label') && options[i].children[1].children[0] && options[i].children[1].children[0].textContent.toLowerCase().includes(gatewayName))
+{
+options[i].children[1].children[0].innerHTML = `<img style="height:${snapmintLogoHeight};vertical-align:middle;" src="${snapmintLogo}"></img> <span style="font-weight: 500;">${snapmintText}</span>`;
+options[i].nextElementSibling.children[0].innerHTML = `<img style="height:${snapmintDescImgHeight};" src="${snapmintDescImg}">`;
+}
+}
+}
+{% endif %}
+
+</script>
+  <style>
+    .checkout_email_or_phone_focus:focus{
+  border: 1px solid #ff0000 !important;
+    -webkit-box-shadow: 0 0 0 1px #ff0000;
+    box-shadow: 0 0 0 1px #ff0000;
+}
+    .flag-selector flag-selector--visible{
+          pointer-events: none;
+    }
+    .EP_error_text{
+        margin-left: 7px;
+    }
+    .content-box__row--tight-spacing-vertical .review-block:nth-child(3){
+        display: none !important;
+    }
+
+    /* Thank You Page Sticky Book A Call Button Changes */
+    .sticky-btn {font-family: Nunito Sans,sans-serif!important; font-size: 16px; font-weight: 600; text-align: center; width: 95%; margin: 10px; padding: 0.8rem 0; border-radius: 10px; position: fixed; bottom: 0; transition: color 0.2s ease-in-out; background: #B7D340; color: #414143;}
+    .sticky-btn:hover {background: #414143; color: #fff;}
+    /* Thank You Page Sticky Book A Call Button Changes */
+  </style>
+<script>
+ $(document).ready(function(){
+   var error_text = false;
+  $('body').delegate('#checkout_email_or_phone','keyup',function() {   
+          // console.log("keyup");
+          var phoneNum = $(this).val().replace(/\s/g,'');
+          var email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,9}$/i;
+          var phone_regex = /^[6789][0-9]{4}([ ]?)[0-9]{5}$/;
+          if(phone_regex.test(phoneNum)) {
+            $('#continue_button').prop('disabled',false);
+              $('#checkout_email_or_phone').removeClass("checkout_email_or_phone_focus");
+             // $(".flag-selector__select").attr("data-gtm-form-interact-field-id", "1");
+              // $("#checkout_email_or_phone").attr("maxlength", "10");
+            $('.EP_error_text').hide();
+          }
+            else if(email_regex.test(phoneNum)){
+                $('#continue_button').prop('disabled',false);
+             $('#checkout_email_or_phone').removeClass("checkout_email_or_phone_focus");
+                $('.EP_error_text').hide();
+            }
+          else{
+            $('#continue_button').prop('disabled',true);
+             $('#checkout_email_or_phone').focus();
+               $('#checkout_email_or_phone').addClass("checkout_email_or_phone_focus");
+            if(!error_text){
+            $(this).parents(".fieldset").append('<p class="field__message field__message--error EP_error_text" style="display:block;">Enter a valid mobile phone number</p>');
+           error_text= true;
+            }
+            else{
+                $('.EP_error_text').show();
+            }
+          }
+            
+        });
+     var error_text1 = false;
+             $('body').delegate('#checkout_shipping_address_phone','keyup',function() {   
+          // console.log("keyup");
+          var phoneNum1 = $(this).val().replace(/\s/g,'');
+          var phone_regex1 = /^[6789][0-9]{4}([ ]?)[0-9]{5}$/;
+          if(phone_regex1.test(phoneNum1)) {
+            $('#continue_button').prop('disabled',false);
+              $('#checkout_shipping_address_phone').removeClass("checkout_email_or_phone_focus");
+              $("#checkout_shipping_address_phone").attr("maxlength", "11");
+            $('.EP_error_text1').hide();
+          }
+          else{
+            $('#continue_button').prop('disabled',true);
+             $('#checkout_shipping_address_phone').focus();
+               $('#checkout_shipping_address_phone').addClass("checkout_email_or_phone_focus");
+            if(!error_text1){
+            $(this).parents(".field__input-wrapper--icon-right").append('<p class="field__message--error EP_error_text1" style="display:block;">Enter a valid mobile phone number</p>');
+           error_text1= true;
+            }
+            else{
+                $('.EP_error_text1').show();
+            }
+          }
+            
+        });
+      });
+</script>
+<style>
+#checkout_shipping_address_province option[value="MN"]{
+display:none !important;
+}
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  {% if content_for_layout contains 'data-step="contact_information"' %}
+  const selectElement = document.getElementById("checkout_shipping_address_province");
+  for (let i = 0; i < selectElement.options.length; i++) {
+    if (selectElement.options[i].value === "MN" || selectElement.options[i].text === "Manipur") {
+      selectElement.remove(i);
+      break;
+    }
+  }
+  {% endif %}
+});
+</script>
+
+  
+<!-- <div id='invtrflfloatbtn'></div> -->
+
+  
+<script>
+  if (Shopify.Checkout.step === "thank_you") {
+var ir = ir || function(){(window.ir.q = window.ir.q || []).push(arguments)};
+var invite_referrals = window.invite_referrals || {}; (function() { 
+    invite_referrals.auth = { bid_e :'300884C2A434288BF409058AC57A0ACC',
+                                bid : '46560', 
+                                t : '420', 
+                                email : '', userParams : {'fname': ''}};    
+                                invite_referrals.async = false;
+var script = document.createElement('script');
+script.src = "//cdn.invitereferrals.com/js/invite-referrals-1.0.js";
+var entry = document.getElementsByTagName('script')[0];entry.parentNode.insertBefore(script, entry); })();
+ 
+ir('track', {
+    orderID: '{{order.order_number.}}',
+    event: 'sale', 
+    fname: '{{order.customer.first_name}}',
+    email: '{{order.email}}',
+    mobile: '{{order.phone}}',
+    purchaseValue: '{{order.total_price | money_without_currency}}',
+    order_custom_val: ''
+}
+  );
+// console.log("irtacking");
+  }
+</script>
+
+<script src="https://assets.snapmint.com/assets/merchant/1798/snm_shopify_popup_min.js"></script>
+  
+<!-- End Shopify-payment JavaScript -->
+{% if classes contains 'page--thank-you' %}
+  {% include 'checkout-code' %}
+{% endif %}
+  <style>
+    [data-select-gateway="PaymentContractConfiguration_158007474"] .payment-icon {
+      display: none !important;
+    }
+  </style>
+</html>

@@ -1,0 +1,132 @@
+<!-- >>>>>>>you-may-like.liquid<<<<<<<<<<<<<< -->
+<div class="container text-center mb-3">
+  <h4 class="font-weight-bold text_Fredoka mb-3">{{ section.settings.title }}</h4>
+  <div class="row may_you_like">
+    {% comment %}  for you_may_like_hair_doctor in article.metafields.custom.you_may_like_hair_doctor.value {% endcomment %}
+    {% for block in section.blocks %}
+      {% assign article = articles[block.settings.article] %}
+      <div class="col-md-4 p-0">
+        <div class="mx-2 my-1 faq__cards">
+          <div class="card border-0 rounded-0">
+            <div style="background: #B4CA6C;">
+              <img src="{{ article.image | img_url:'700x' }}" width="100%" height="100%" alt="image" title="image">
+            </div>
+            <div class="p-3 left l-0" style="line-height:21px; font-weight:600;">{{ article.title }}</div>
+            <div class="d-flex justify-content-between align-items-center p-2 mt-3">
+              <p class="paraDate my-auto" style="color:#B6B6B6;">{{ article.published_at | date: '%d/%m/%Y' }}</p>
+              <p class="readMore d-flex align-items-center">
+                <a href="{{ block.settings.url }}" style="text-decoration:underline;">{{ block.settings.readmore }}</a>
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Vector_1_a23d059c-e7df-4c3c-9f29-6cc8c469dea5.png?v=1690885838"
+                  width=""
+                  height=""
+                  alt="image"
+                  title="image"
+                  loading="lazy"
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="content"></div>
+  <a
+    id="hairtestctablog"
+    href="{% if request.path contains '/blogs/hair-doctors' %}{{ section.settings.hair_test_url }}&page={{ request.path | replace: '/blogs/', 'blogs_' | replace: '/', '_' }}&utm_campaign=blogs_hd_stickycta
+      {% else %}{{ section.settings.btn_link }}&page={{ page__hndl }}{% endif %}"
+    class="sticky-btn btn btn-dark take-the-hair-test mt-5 mb-4">
+    {{- section.settings.hair_test }}
+    <sup>&trade;</sup>
+  </a>
+
+  <p class="mt-4" style="font-size:10px; text-align:left;">
+    <b>Disclaimer:</b> <br>
+    1.This information has been gathered from various sources and is provided on ‘as is’ basis. The information is being
+    provided for convenience and for informational purposes only; it does not constitute an endorsement or an approval
+    by Traya of any corporation or organization or individual. Traya bears no responsibility or liability for the
+    authenticity, accuracy, legality, completeness, reliability, appropriateness, or content of the information. Users
+    should exercise their discretion and do their due diligence before taking any action based on the information and/or
+    before approaching any doctor. Traya is not responsible for any damages that may arise out of the use/reliance of
+    the information provided herein.<br>
+    2. If any doctor wishes to get their information deleted/modified, please reach out to us at legal@traya.health and
+    we will take the necessary actions as soon as possible.
+  </p>
+</div>
+
+{% schema %}
+{
+  "name": "you may like hair doctors",
+  "settings": [
+    {
+      "type":"text",
+      "id":"title",
+      "label":"Enter Your Title"
+    },
+    {
+      "type":"text",
+      "id":"hair_test",
+      "label":"Hair test",
+      "default": "Take Traya’s Hair Test"
+    },
+    {
+      "type":"url",
+      "id":"hair_test_url",
+      "label":"Hair test url"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "you may also like",
+      "type": "text",
+      "settings": [
+        {
+          "type": "article",
+          "id": "article",
+          "label": "Select Article"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Add text"
+        },
+       {
+          "type": "url",
+          "id": "url",
+          "label": "Add Url"
+        },
+        {
+          "type": "text",
+          "id": "readmore",
+          "label": "Add button text"
+        }
+      ]
+    }
+  ],
+  "presets":[
+  {
+  "name":"you may like hair doctors"
+  }
+  ]
+}
+{% endschema %}
+{% style %}
+  #shopify-section-{{ section.id }}  .faq__cards {
+    border-radius: 0.25rem;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 3px 4px 15px 0px #0000001F;
+  }
+  #shopify-section-{{ section.id }} #hairtestcta{
+    padding:12px 32px;
+    font-size:24px;
+   text-transform: capitalize;
+  }
+  @media only screen and (max-width: 350px) {
+    #shopify-section-{{ section.id }} #hairtestcta{
+    padding:12px 25px;
+    font-size:20px;
+  }
+  }
+{% endstyle %}

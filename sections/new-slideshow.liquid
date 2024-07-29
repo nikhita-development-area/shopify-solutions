@@ -1,0 +1,178 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<!-- Sections new-slideshow -->
+<div class="container-fluid best_hair_treatmenta p-0 position-relative">
+  <div>
+    <a href="https://form.traya.health/questions?cohort=1&location=HomeSlideshow&page={{ page__hndl }}" class="d-flex flex-wrap w-100" style="{% if page.handle == 'home-app' or page.handle == "download-traya-app" %}pointer-events: none;{% endif %}">
+      <div class="d-flex flex-wrap w-100">
+        <div class="col-12 heroBanner p-0">
+          {% if section.settings.ref_desk_img != blank and section.settings.ref_mob_img != blank %}
+            <div class="d-none d-md-block desk_banner">
+              {%- assign desktop_image = section.settings.ref_desk_img -%}
+              <img class="d-none d-md-block desktop__banner" src="{{ desktop_image | img_url: '1500x' }}" loading="eager" alt="Image" title="Image" height="665" width="1440">
+            </div>
+            <div class="d-md-none">
+              {%- assign mobile_image = section.settings.ref_mob_img -%}
+              <img class="d-md-none mobile__banner" src="{{ mobile_image | img_url: '500x' }}" fetchpriority="high" loading="eager" alt="Image" title="Image" height="720" width="500">
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </a>
+    <div class="banner_text">
+      <div>
+        <p class="text_Fredoka banner_heading1 d-none d-md-block">{{ section.settings.ref_heading_text }}</p>
+        <p class="text_Fredoka banner_heading1 d-md-none">{{ section.settings.ref_heading_text_mobile }}</p>
+        <p class="banner_heading2 font-weight-bold pt-1">{{ section.settings.ref_heading_text2 }}</p>
+        <div class="position-relative {% unless page.handle contains 'treat-repair-hair-damage-and-split-ends-in-females' or page.handle contains 'best-hair-treatment-in-india' %}pt-4{% endunless %}"> {% comment %}<!-- Cuticle Page Changes Added ({% unless page.handle contains 'treat-repair-hair-damage-and-split-ends-in-females' %}{% endunless %}) -->{% endcomment %}
+          <p class="banner_ref_heading">{{ section.settings.ref_sub_heading_text }}</p>
+        </div>
+
+        {% if page.handle == 'home-app' or page.handle == "download-traya-app" %}
+        <div class="download-app">
+          <a href="https://trayahealth.app.link/GsBfukBlAHb" class="btn btn-dark mt-3 mt-md-4 shadow" id="app_download_cta" target="_blank">DOWNLOAD THE APP</a>
+        </div>
+        {% endif %}
+
+        {% if page.handle != "download-traya-app" %}
+        <div class="banner__buttons pt-3 d-flex {% if page.handle == "best-hair-treatment-in-india" %} pt-md-5 {% endif %} flex-wrap">
+
+          <a href="https://form.traya.health/questions?cohort=1&location=HomeSlideshow&page={{ page__hndl }}" class="btn btn-dark hair-form-actn-link" id="{% if page.handle contains 'best-hair-treatment-in-india' %}hairtestctatreatment1{% endif %}{% unless page.handle contains 'treat-repair-hair-damage-and-split-ends-in-females' or page.handle contains 'best-hair-treatment-in-india' %}hairtestcta{% endunless %}{% if page.handle contains 'treat-repair-hair-damage-and-split-ends-in-females' %}cuticle-female-hair-test-button1{% endif %}">Take The Hair Test <span>&trade;</span></a>
+          
+          <span class="myresult d-none">
+            <a id="myPlanHome" href="/pages/result4" class="btn btn-dark rcmd_plan_btn">{{ 'My Recommended Plan' }}</a>
+          </span>
+          <span class="reorder__btn">
+            <a homeReorder id="buyagaincta" class="hair-form-actn-link btn btn-dark ml-md-2 reorder" style="display: none;">Buy Again</a>
+          </span>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% unless page.handle == 'best-hair-treatment-in-india' or page.handle == 'home-app' or page.handle == "download-traya-app" %}
+    <p class="confidient__text">
+      *As per an internal study conducted by Traya in December 2022
+    </p>
+    {% endunless %}
+  </div>
+</div>
+
+{% style %}  
+  /* Cuticle Page Changes */
+  .cuticle-damage .banner_heading1 {font-size: 42px; line-height: 56px; color: #414042; font-family: Nunito Sans !important; font-weight: 800;}
+  .cuticle-damage .banner_ref_heading {font-size: 32px; line-height: 47px; margin: 0 0 30px;}
+  .cuticle-damage .banner_ref_heading:after, .best-hair-treatment-in-India .banner_ref_heading:after,.cuticle-damage .confidient__text, .cuticle-damage .customer-story-individual {display: none;}
+
+  /* best-hair-treatment page */
+  .best-hair-treatment-in-India .banner_heading1 {font-size: 38px; line-height: 50px;}
+  .best-hair-treatment-in-India .banner_ref_heading { margin-top: 0; font-size: 24px; width: 58%; line-height: 32px;}
+  .best-hair-treatment-in-India .best_hair_treatmenta {margin-top: 0px}
+  .best-hair-treatment-in-India img.mobile__banner  {width: 100%;}
+  .best-hair-treatment-in-India .header-wrapper {background: none;}
+  
+  @media only screen and (max-width: 767.98px) {
+    .cuticle-damage .mobile__banner {width: 100%;}
+    .cuticle-damage .banner_heading1 {font-size: 32px; line-height: 42px;}
+    .cuticle-damage .banner_ref_heading {font-size: 22px; line-height: 32px; margin: 0;}
+  }  
+  /* Cuticle Page Changes */
+
+  .banner_text {position: absolute;top: 22%; left: 4%;}
+  .banner_heading1 {font-size: 35px; line-height: 62px; letter-spacing: 0em; color: #303032;font-weight: 500;}
+  .banner_heading2 {font-size: 45px; color: #303032; margin: 0; line-height: 1.2;}
+  .banner_ref_heading:after {content: " ";width: 102px;height: 8px;border-radius: 5px;background: #414042;position: absolute;top: 15%;left: 0;transform: translate(0px, 0px);}
+  .banner_ref_heading {font-size: 32px; line-height: 56px; letter-spacing: 0em; margin-top: 30px; margin-bottom: 0;}
+  .home-btn a {width: 260px; height: 50px; font-size: 18px; text-decoration: none;}
+  .home-btn a:hover {background: #fff !important; color: #414042;}
+  .customer {opacity: 0.7; right: 0; bottom: 20px; writing-mode: vertical-rl; transform: rotate(180deg); font-size: 7.5px; font-weight: 600; line-height: 10px;}
+  #shopify-section-{{ section.id }} .heroBanner {background-color: #fff;background: url({{ section.settings.ref_desk_img | img_url: '1500x' }});background-size: 100% 100%;background-position: bottom;background-repeat: no-repeat;}
+  .desktop__banner {width: 100%;height: 100%;}
+  .confidient__text {position: absolute;bottom: 20px;right: 0;rotate: 270deg;transform: rotate(270deg);writing-mode: vertical-lr;text-align: center; font-size: 7.5px;}
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #shopify-section-{{ section.id }} .heroBanner {min-height: 350px;}
+    .banner_heading1 {font-size: 25px; line-height: 30px;}
+    .banner_heading2{font-size: 35px;line-height: 1.05;}
+    .banner_ref_heading {font-size: 22px; line-height: 26px; margin-top: 20px;}
+  }  
+  @media only screen and (max-width: 767.98px) {
+    .desk_banner {display: none;}
+    .banner_text {top: 9%; left: 6%;}
+    .banner_heading2 {font-size:21px;}
+    .banner_heading1 {font-size: 18px; line-height: 30px; margin-bottom:0;} 
+    .banner_ref_heading {font-size: 18px; line-height: 20px; margin-top: 0;}
+    .home-btn a {width: 200px; height: 40px; font-size: 14px;}
+    .customer {margin: 0; line-height: 15px;}
+    #shopify-section-{{ section.id }} .heroBanner {min-height: 536px;background-color: #fff;background: url(/cdn/shop/files/mobile_banner.webp?v=1693048139);background-size: 100% 100%;background-position: bottom;background-repeat: no-repeat;}
+    #shopify-section-{{ section.id }} .mobile__banner {height: 100%;width: 100%;}
+    .confidient__text {bottom: 10px;}
+    .reorder__btn {width: 100%;}
+
+   /* best-hair-treatment page */
+   .best-hair-treatment-in-India .banner_heading1 {font-size: 22px; line-height: 30px;}
+   .best-hair-treatment-in-India .banner_text {top: 8%; left: 4%;}
+   .best-hair-treatment-in-India .banner_ref_heading { padding-top: 10px; font-size: 14px; width: 100%; line-height: 24px;}
+   .best-hair-treatment-in-India .best_hair_treatmenta {margin-top: 0px;}
+  }
+{% endstyle %}      
+
+{% schema %}
+  {
+    "name": "Home Banner",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "ref_desk_img",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "ref_mob_img",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "html",
+        "id": "ref_heading_text",
+        "label": "Desktop Heading Text"
+      },
+      {
+        "type": "html",
+        "id": "ref_heading_text_mobile",
+        "label": "Mobile Heading Text"
+      },
+      {
+        "type": "html",
+        "id": "ref_heading_text2",
+        "label": "Heading Text2"
+      },
+      {
+        "type": "text",
+        "id": "ref_sub_heading_text",
+        "label": "Sub-Heading Text"
+      },
+      {
+        "type": "text",
+        "id": "ref_button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "ref_button_url",
+        "label": "Button URL"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home Page Banner"
+      }
+    ]
+  }
+{% endschema %}

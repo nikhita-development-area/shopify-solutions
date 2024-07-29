@@ -1,0 +1,216 @@
+{% comment %} section/men-har-fall2 {% endcomment %}
+<div id="textsection" class="hair-page-content-main-wraper">
+  <div class="container">
+    {% render 'breadcrumbs' %}
+  {%if section.settings.text-box != blank%}
+  <div class="hair-page-content-main-heading">
+    <h2 class="text-center text-md-left mt-5">{{ section.settings.text-box }}</h2>
+  </div>
+  {%endif%}
+  <div class="hair-page-content-description_container">
+    {% for block in section.blocks %}
+    {%capture top_content%}
+    <div class="hair-page-content-description_container-top col-md-8">
+      {%if block.settings.top_heading != blank%}
+       <h2>{{block.settings.top_heading}}</h2>
+      {%endif%}
+      {%if block.settings.top_text != blank%}
+      <div class="hair-page-content-description_container-top-content ">
+        {{block.settings.top_text}}
+      </div>
+      {%endif%}
+      {%if block.settings.top_content != blank%}
+      <div class="hair-page-content-description_container-top-content-list">
+        {{block.settings.top_content}}
+      </div>
+      {%endif%}
+    </div>
+    {%endcapture%}
+    {%capture right_content%}
+    <div class="hair-page-content-description_container-right col-md-4 text-left">
+      {%if block.settings.right_image != blank%}
+      <img src="{{ block.settings.right_image | img_url: 'master' }}" alt="{{ block.settings.right_image | escape }}" class="right_image">
+      {%endif%}
+      {%if block.settings.right_subheading != blank%}
+      <p class="right_sub-heading">{{block.settings.right_subheading}}</p>
+      {%endif%}
+      {%if block.settings.right_heading != blank%}
+      <div class="right_heading">
+      {{block.settings.right_heading}}
+      </div>
+      {%endif%}
+      {%if block.settings.right_ctatext != blank and block.settings.right_ctalink != blank%}
+      <a href="{{block.settings.right_ctalink}}" class="right-cta-btn" >{{block.settings.right_ctatext}}<span style="margin-left: 10px;"><img src="{{ 'arrow.svg' | asset_url }}"  alt="{{ shop.name }}" itemprop="logo"></span></a>
+      {%endif%}
+    </div>
+    {%endcapture%}
+     {%capture image_content%}
+          <div class="col-md-12">
+            {%if block.settings.bottom_heading != blank%}
+            <h2 class="right_sub-heading mt-5">{{block.settings.bottom_heading}}</h2>
+            {%endif%}
+            {%if block.settings.bottom_image1 != blank%}
+            <div class="bottom-image-wraper row">
+              <div class="col-4 col-md-2 text-center">
+                {%if block.settings.bottom_image1 != blank%}
+                <img src="{{ block.settings.bottom_image1 | img_url: 'master' }}" alt="{{ block.settings.bottom_image1 | escape }}" class="bottom_image">
+                {%endif%}
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                {%if block.settings.bottom_image2 != blank%}
+                <img src="{{ block.settings.bottom_image2 | img_url: 'master' }}" alt="{{ block.settings.bottom_image2 | escape }}" class="bottom_image">
+                {%endif%}
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                {%if block.settings.bottom_image3 != blank%}
+                <img src="{{ block.settings.bottom_image3 | img_url: 'master' }}" alt="{{ block.settings.bottom_image3 | escape }}" class="bottom_image">
+                {%endif%}
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                {%if block.settings.bottom_image4 != blank%}
+                <img src="{{ block.settings.bottom_image4 | img_url: 'master' }}" alt="{{ block.settings.bottom_image4 | escape }}" class="bottom_image">
+                {%endif%}
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                {%if block.settings.bottom_image5 != blank%}
+                <img src="{{ block.settings.bottom_image5 | img_url: 'master' }}" alt="{{ block.settings.bottom_image5 | escape }}" class="bottom_image">
+                {%endif%}
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                {%if block.settings.bottom_image6 != blank%}
+                <img src="{{ block.settings.bottom_image6 | img_url: 'master' }}" alt="{{ block.settings.bottom_image6 | escape }}" class="bottom_image">
+                {%endif%}
+              </div>
+            </div>
+            {%endif%}
+    </div>
+    
+    {%endcapture%}
+    {%capture bottom_content%}
+    <div class="hair-page-content-description_container-bottom col-md-8">
+      {%if block.settings.bottom_content != blank%}
+      <div class="bottom-description mt-3">
+        {{block.settings.bottom_content}}
+      </div>
+      {%endif%}
+      </div>
+    {%endcapture%}
+    <div class="left-right-wraper-holder">
+    <div class="hair-page-top-content row mb-0">
+      {{top_content}}
+      {{right_content}}
+    </div>
+    <div class="hair-page-bottom-content row">
+      {{image_content}}
+      {{bottom_content}}      
+    </div>
+    </div>
+    {% endfor %}
+  </div> 
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "hair-fall-men-two",
+    "settings": [
+      {
+        "id": "text-box",
+        "type": "text",
+        "label": "Heading"
+      }
+    ],
+"blocks": [
+  {
+  "type": "content",
+  "name": "Content",
+  "settings": [
+          {
+          "id": "top_heading",
+          "type": "text",
+          "label": "Top Heading"
+          },
+          {
+          "id": "top_text",
+          "type": "richtext",
+          "label": "Top Content"
+          },
+          {
+          "id": "top_content",
+          "type": "html",
+          "label": "Top Content"
+          },
+          {
+          "id": "right_image",
+          "type": "image_picker",
+          "label": "Right Top Image"
+          },
+          {
+          "id": "right_subheading",
+          "type": "text",
+          "label": "Right Subheading"
+          },
+          {
+          "id": "right_heading",
+          "type": "richtext",
+          "label": "Right heading"
+          },
+          {
+          "id": "right_ctatext",
+          "type": "text",
+          "label": "Right CTA Text"
+          },
+          {
+          "id": "right_ctalink",
+          "type": "url",
+          "label": "Right CTA Link"
+          },
+          {
+          "id": "bottom_heading",
+          "type": "text",
+          "label": "Bottom Heading"
+          },
+          {
+          "id": "bottom_image1",
+          "type": "image_picker",
+          "label": "Bottom Image1"
+          },
+          {
+          "id": "bottom_image2",
+          "type": "image_picker",
+          "label": "Bottom Image2"
+          },
+          {
+          "id": "bottom_image3",
+          "type": "image_picker",
+          "label": "Bottom Image3"
+          },
+          {
+          "id": "bottom_image4",
+          "type": "image_picker",
+          "label": "Bottom Image4"
+          },
+          {
+          "id": "bottom_image5",
+          "type": "image_picker",
+          "label": "Bottom Image5"
+          },
+          {
+          "id": "bottom_image6",
+          "type": "image_picker",
+          "label": "Bottom Image6"
+          },
+          {
+          "id": "bottom_content",
+          "type": "html",
+          "label": "Bottom Content"
+          }
+      ]
+    }
+  ],
+          "presets":[
+          {
+          "name":"hair-fall-men-two",
+          "category":"Custom"
+          }]
+  }
+{% endschema %}

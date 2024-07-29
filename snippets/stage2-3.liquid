@@ -1,0 +1,1217 @@
+{% style %}
+  .primary_root_text {
+    display: flex;
+    align-items: center;
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+    margin-right: 0;
+    margin-left: auto;
+    z-index: 2;
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    font-weight:normal !important;
+    color: #000 !important;
+    text-align: left !important;
+    border-radius: 6px !important;
+    padding: 5px 0;
+    z-index: 1 !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 20px 0px;
+    position: absolute;
+    top: -85px;
+    width: 225px;
+    left: -200px;
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+  .tooltip .tooltiptext::after {
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: white transparent transparent;
+    border-image: initial;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  .range-slider__range::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: none;
+  -webkit-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
+  background-position: 0% 0%;
+  background-size: auto 100%;
+  box-shadow: 0px 6.08511px 18.2553px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+  
+/*   PCOS */
+.PCOS.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/pcos_2.png?v=1679656796');
+}
+/* genetics */
+.genetics.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/genetics_2.png?v=1679656772');
+}
+.post-pregnancy.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/post_pregnancy_2.png?v=1679656792');
+}
+/* pregnancy */
+.pregnancy.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/pregnanc.png?v=1679656785');
+}
+.dandruff.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/dandruff_3b9bdafe-e0c1-4292-9464-46b854be9168.png?v=1695723486');
+}
+.autoimmune.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/autoimmune.png?v=1679656838');
+}
+.thyroid.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/thyroid_3.png?v=1679656776');
+}
+.stresshigh.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830');
+}
+.stresslow.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830');
+}
+
+.stressmoderate.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830');
+}
+  .stress.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830');
+}
+.sleep.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/sleep_2.png?v=1679656781');
+}
+.genetics.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/genetics_2.png?v=1679656772');
+}
+.menopause.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/menopause_2.png?v=1679656805');
+}
+.digestion.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/digestion_2.png?v=1679656821');
+}
+.lifestyle.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/lifestyle_2.png?v=1679656809');
+}
+.nutrition.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/nutririon.png?v=1679656842');
+}
+.hormonal-imbalance.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/hormonal-imbalance.png?v=1679656817');
+}
+.metabolism.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/metabolism1.png?v=1679656801');
+}
+.gut.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/constipation.png?v=1679656813');
+}
+.constipation.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/constipation.png?v=1679656813');
+}
+ .deficiency.range-slider__range::-moz-range-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/defeciency.png?v=1679656847');
+} 
+  
+.range-slider__range::-moz-range-thumb:hover {
+/* background: #1abc9c; */
+}
+.range-slider__range:active::-moz-range-thumb {
+/* background: #1abc9c; */
+}
+.range-slider__range:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1abc9c;
+}
+    #stageModalCenter .nav-tabs .nav-item.show .nav-link:after,   #stageModalCenter .nav-tabs .nav-link.active:after {
+    background: #B7D340;
+}
+    .tab-pane svg path {
+    fill: #B7D340;
+    stroke: #B7D340;
+}
+    .tab-pane .col-md-4.align-items-center.d-flex.justify-content-center {
+    width: 100%;
+}
+    #stageModalCenter .nav-tabs .nav-item.show .nav-link,   #stageModalCenter .nav-tabs .nav-link.active{
+      color: #B7D340 !important;
+  }
+    #stageModalCenter .nav-tabs .nav-item .nav-link,   #stageModalCenter .nav-tabs .nav-link {
+   color: #B7D340 !important;
+}
+  .root_cause_iconFRs.text-center .range-slider__range{
+      background: linear-gradient(to right, #99af38 44.5%, #65761A 45%, #65761A 75%, #fff 0) !important;
+  }
+  .range_bg_change{
+   background: linear-gradient(to right, #99af38 44.5%, #65761A 45%, #65761A 50%, #fff 0) !important;
+  }
+  .RootCauses {
+    margin-bottom: 40px;
+}
+  .dashline {
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+  .dashline:after {
+    content: '';
+    width: 0;
+    height: 90%;
+    position: absolute;
+    border: 1px dashed #414042;
+    opacity: 0.4;
+    left: 45%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+}
+  .root_cause_container .mainFactImages p svg {
+    margin-right: 0;
+    margin-left: auto;
+/*     display:none; */
+}
+  p.primary_root_text.fw-bold {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+  .primary_root_text svg {
+    margin-right: 0;
+    margin-left: auto;
+/*         display: none; */
+}
+    .root_cause_iconFRs.text-center .range-slider {
+    margin-top: 0;
+        width: 100%;
+}
+ .slidecontainer{
+     margin-top: 30px;
+}
+@media(max-width:767px){
+ .primary_root {
+   max-width: 70% !important;
+    font-weight: bold;
+}
+  .female_bg_top .col-12 {
+    padding: 0 !important;
+}
+    .root_cause_iconFRs.text-center .range-slider {
+    margin-bottom: 0 !important;
+}
+  .female_bg_top .col-md-12 {
+    padding: 0 !important;
+}
+
+  .range-slider {
+    margin: 10px 0 0 0%;
+}
+  .root_cause_container .mainFactImages p {
+    font-size: 14px;
+    line-height: 18px;
+    
+}
+  .range-slider__range {
+    width: 100% !important;
+    height: 12px !important;
+}
+  .new-female-mk{
+     margin: 30px 30px;
+  }
+}
+#shopify-section-template--16059796553906__main {
+  background: #F7F7F7;
+}
+.range-slider {
+  margin: 30px 0 0 0%;
+}
+
+.range-slider {
+  width: 100%;
+      text-align: left;
+}
+
+.range-slider__range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 18px;
+  border-radius: 25px;
+  background: #d7dcdf;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+  .green-border img{
+    width:auto;
+  }
+  .range-slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: none;
+  -webkit-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
+  background-position: 0% 0%;
+  background-size: auto 100%;
+  box-shadow: 0px 6.08511px 18.2553px rgba(0, 0, 0, 0.25);
+}
+/*   PCOS */
+.PCOS.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/pcos_2.png?v=1679656796');
+}
+/* genetics */
+.genetics.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/genetics_2.png?v=1679656772');
+}
+.post-pregnancy.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/post_pregnancy_2.png?v=1679656792');
+}
+/* pregnancy */
+.pregnancy.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/pregnanc.png?v=1679656785');
+}
+.dandruff.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/dandruff_3b9bdafe-e0c1-4292-9464-46b854be9168.png?v=1695723486');
+}
+.autoimmune.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/autoimmune.png?v=1679656838');
+}
+.thyroid.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/thyroid_3.png?v=1679656776');
+}
+.stresshigh.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830');
+}
+.stresslow.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830');
+}
+
+.stressmoderate.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830');
+}
+  .stress.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830');
+}
+.sleep.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/sleep_2.png?v=1679656781');
+}
+.genetics.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/genetics_2.png?v=1679656772');
+}
+.menopause.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/menopause_2.png?v=1679656805');
+}
+.digestion.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/digestion_2.png?v=1679656821');
+}
+.lifestyle.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/lifestyle_2.png?v=1679656809');
+}
+.nutrition.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/nutririon.png?v=1679656842');
+}
+.hormonal-imbalance.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/hormonal-imbalance.png?v=1679656817');
+}
+.metabolism.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/metabolism1.png?v=1679656801');
+}
+.gut.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/constipation.png?v=1679656813');
+}
+.constipation.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/constipation.png?v=1679656813');
+}
+ .deficiency.range-slider__range::-webkit-slider-thumb {
+  background-image: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/defeciency.png?v=1679656847');
+} 
+  
+.range-slider__range::-webkit-slider-thumb:hover {
+/* background: #1abc9c; */
+}
+.range-slider__range:active::-webkit-slider-thumb {
+/* background: #1abc9c; */
+}
+.range-slider__range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1abc9c;
+}
+
+.range-slider__value {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background: #2c3e50;
+  padding: 5px 10px;
+  margin-left: 8px;
+}
+.range-slider__value:after {
+  position: absolute;
+  top: 8px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #2c3e50;
+  border-bottom: 7px solid transparent;
+  content: "";
+}
+  .month {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 125.9%;
+    color: #B7D340;
+  }
+  img.factImage {
+    max-width: 70px;
+  }
+  .col3f {
+    color: #3f3f3f !important;
+  }
+  .female-test-report-section {
+    background: #F7F7F7;
+  }
+  .cstm_section_titleFR {
+  font-size: 40px;
+  line-height: 46.03px;
+  color: #3f3f3f;
+  }
+  .formulation-text {
+  font-size: 30px;
+  line-height: 128.4%;
+  color: #3F3F3F;
+  max-width: 800px;
+  margin: 0 auto;
+  }
+  .userText{
+  font-size: 24px;
+  line-height: initial;
+  font-family: 'fredoka_oneregular' !important;
+  }
+  .userText span{
+  font-size: 24px;
+  text-transform:capitalize;
+  }
+  .rootcause_description{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: initial;
+  color: #3F3F3F;
+  margin-bottom: 0 !important;
+  }
+  .rootcause_description a {
+  font-weight: bold;
+  color: #B7D340 !important;
+  text-decoration: underline !important;
+  font-size: 18px;
+  letter-spacing: 1px;
+  }
+  .primary_root{
+  font-size: 24px;
+  line-height: 126.9%;
+  color: #3f3f3f;
+  max-width: 50%;
+  margin-left: auto;
+  }
+  .primary_root_text span{
+  font-weight: 600;
+  text-align: left !important;
+  font-size: 20px;
+  line-height: 27px;
+  color: #414042;
+  }
+  /*  .primary_root_img{
+  background: #FFFFFF;
+  border: 1px solid #B7D340;
+  box-shadow: 0px 2px 6px rgb(0 0 0 / 25%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  } */
+  .cstm_section_titleFR:after{
+  content: " ";
+  width: 50%;
+  height: 2px;
+  bottom: 12%;
+  right: 0;
+  display: block;
+  position: absolute;
+  background:#9BB96F;
+  }
+  .root_cause_iconFR .mainFactImages{
+  /*      width:20%; */
+  }
+  .root_cause_iconFR img.factImage {
+  max-width: 40px;
+  }
+  /*   .root_cause_container{
+  width:80%;
+  border: 0.5px solid #B7D340;
+  box-shadow: 11.2948px 11.2948px 25.4132px rgb(0 0 0 / 15%);
+  border-radius: 9.4123px;
+  } */
+  .root_cause_container .root_cause_iconFR{
+  justify-content: center;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  display: block !important;
+  }
+  /*   .female-test-report-section{
+  background:linear-gradient(180.59deg, #B7D340 -3.68%, #FFFFFF 69.01%);
+  } */
+  .result_product_slides .slick-dots li button{
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-weight: bold;
+  }
+  .result_product_slides .slick-dots li.slick-active button:before, .result_product_slides .slick-dots li button:before{
+  content:unset;
+  }
+  .result_product_slides .slick-dots li.slick-active button{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background: #B7D340;
+    border-radius: 50%;
+  }
+  .root_cause_container .mainFactImages p{
+    font-weight: 600;
+    text-align: left !important;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: capitalize;
+    color: #414042;
+    display: flex;
+    align-items: center;
+  }
+  span.assement-report{
+     display:none;
+  }
+  .d-flex.bg-white.female_bg_top {
+    background: transparent !important;
+  }
+  @media only screen and (min-width: 767px) {
+    .female-result_usertext svg{
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 767.98px) {
+    .range-slider {
+      margin: 15px 0 0 0%;
+    }
+    .range-slider__range::-webkit-slider-thumb {
+      width: 30px;
+      height: 30px;
+    }
+    .female_factor_result p.primary_root.fw-bold {
+      margin-bottom: 0;
+    }
+    .range_bg_change::-webkit-slider-thumb {
+      margin-left:12px;
+    }
+    .desk_usertext{
+      display: none !important;
+    }
+    .mob_usertext{
+      display: block !important;
+    }
+    .female-result_usertext svg{
+      display: block;
+    }
+    .female-result_usertext {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 15px;
+    }
+    .mainFactImages img.factImage.p-3{
+      width: 80px;
+    }
+    .d-flex.bg-white.female_bg_top {
+      background: #fff !important;
+    }
+    .userText{
+      font-size: 24px;
+      line-height: initial;
+      padding:0;
+    }
+    .rootcause_description {
+      font-size: 14px;
+      line-height: initial;
+      text-shadow: 1px 0px 2px rgb(0 0 0 / 17%);
+      color: #000;
+      margin-bottom: 15px !important;
+    }
+    .rootcause_description a {
+      font-size: 14px !important;
+    }
+    .primary_root {
+      font-size: 15px;
+    }
+    .primary_root_text span{
+      font-weight: 600;
+      text-align: left !important;
+      font-size: 15px;
+      line-height: 27px;
+      color: #414042;
+    }
+    .root_cause_container{
+      width: 100%;
+      border: none;
+      box-shadow: none;
+      margin: 0 !important;
+      border-radius: 0 0 12.41px 12.41px !important;
+    }
+    .root_cause_container .root_cause_iconFR{
+      justify-content: space-around;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .cstm_section_titleFR{
+      font-size: 17px;
+      line-height: 21px;
+      margin: 0 !important;
+    }
+    .cstm_section_titleFR:after{
+      width: 45%;
+      height: 1px;
+      bottom: 12%;
+    }
+    .female-test-report-section{
+      background: #eaf4f1;
+    }
+    .result_product_slides .slick-dots li button{
+      font-size: 10px;
+    }
+    .result_product_slides .slick-dots li.slick-active button{
+      width: 20px;
+      height: 20px;
+    }
+    .root_cause_iconFR img.factImage {
+      max-width: 40px;
+    }
+    .root_cause_container .mainFactImages p{
+      font-size: 15px;
+      line-height: 14px;
+      margin-bottom: 0px;
+    }
+    .formulation-text {
+      font-size: 13px;
+      line-height: 128.4%;
+    }
+    span.assement-report {
+      display:block !important;
+    }
+    .female_bg_top{
+      border-top: 0.480769px solid #a5c1744d;
+      border-radius: 0 9.4123px 0 0;
+      padding-top: 15px;
+      padding-right: 0;
+      align-items: center;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .cstm_section_titleFR:after {
+      width: 35%;
+    }
+  }
+{% endstyle %}
+
+<div class="dashline px-md-5  px-3" style="display: none;">
+  <div class="female_factor_result aaa">
+     <p class="primary_root fw-bold text-center d-md-block">
+        Needs support
+     </p>
+     <div class="primary_root_text fw-bold">
+        <span class="text-capitalize" primary-root="">Root Cause</span>
+        <div class="tooltip">
+           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+           </svg>
+           <div class="RootCause">
+              <span class="tooltiptext rootcause_description" PCOS style="display:none;">This type of hair fall happens because of hormonal imbalance (estrogen & testosterone). It can be easily managed when treated at the right time.</span>
+              <span class="tooltiptext rootcause_description" post-pregnancy style="display:none;">This type of hair fall happens because of a drop in your hormone levels after the baby is delivered. It can be easily managed when treated at the right time.</span>
+              <span class="tooltiptext rootcause_description" pregnancy style="display:none;">This type of hair fall happens because of a shift in hormone levels to support the growing baby. It can be easily managed when treated at the right time.</span>
+              <span class="tooltiptext rootcause_description" stress style="display:none;">This type of hair loss happens due to a rise in cortisol levels of the body. It can be easily managed when treated at the right time.</span>
+              <span class="tooltiptext rootcause_description" sleep style="display:none;">Not getting regular 8-9 hours of sleep hampers hormonal health (melatonin & cortisol). This increases the chances of hair fall by 62%.</span>
+              <span class="tooltiptext rootcause_description" genetics style="display:none;">This type of hair fall happens because of a genetic sensitivity to the hormone DHT. It can be easily managed when treated at the right time.</span>
+              <span class="tooltiptext rootcause_description" digestion style="display:none;">A healthy gut defines hair health. If gut health is damaged, it results in poor hair quality and hair fall. This can be easily managed when treated at the right time.</span>
+              <span class="tooltiptext rootcause_description" post-covid style="display:none;">A severe illness like Covid stresses the body which disrupts the natural hair growth cycle. Hair falls out and may not be replaced by new growth resulting in hair thinning and scalp visibility.</span>
+              <span class="tooltiptext rootcause_description" menopause style="display:none;">This type of hair fall happens because of a drop in hormone levels. It can be easily managed when treated at the right time.</span>
+              <span class="tooltiptext rootcause_description" thyroid style="display:none;">When thyroid hormone production is hampered, it affects hair health too. When thyroid hormone production is hampered, it affects other bodily functions too.</span>
+              <span class="tooltiptext rootcause_description" lifestyle style="display:none;">Unhealthy lifestyle habits directly affects hair health and the natural hair growth cycle. This can be easily managed when treated at the right time.</span>
+              <span class="tooltiptext rootcause_description" nutrition style="display:none;"> Hair needs food too. When nutrients like biotin, iron, zinc fall short in the body, it causes hair thinning and hair loss. This can be easily managed when treated at the right time.</span>
+              <span class="tooltiptext rootcause_description" deficiency style="display:none;">Hair needs food too. When nutrients like biotin, iron, zinc fall short in the body, it causes hair thinning and hair loss. This can be easily managed when treated at the right time.</span>
+              <span class="tooltiptext rootcause_description" hormonal-imbalance style="display:none;">Health issues like PCOS, Thyroid, and more caused due to imbalanced hormone levels affect.</span>
+              <span class="tooltiptext rootcause_description" metabolism style="display:none;">Poor metabolsim/ Low energy is an indicator that your hair & skin lack the right amount of nutrition. This can be easily managed when treated at the right time.</span>
+              <span class="tooltiptext rootcause_description" gut style="display:none;">A healthy gut defines hair health. If gut health is damaged, it results in poor hair quality and hair fall. This can be easily managed when treated at the right time.</span>
+              <span class="tooltiptext rootcause_description" constipation style="display:none;">Constipation causes a lack of essential nutrients in the body and affects hair health. This can be easily managed when treated at the right time.</span>
+              <span class="tooltiptext rootcause_description" autoimmune style="display:none;">An auto-immune condition in the body causes cells to attack hair follicles. This causes hair loss in coin-size patches.</span>
+              <span class="tooltiptext rootcause_description" dandruff style="display:none;">Dandruff, a common scalp condition with excessive skin cell flaking, can lead to hair loss.</span>
+           </div>
+        </div>
+     </div>
+     <div class="primary_root_img m-auto">
+        <div class="text-center combo-icons d-flex justify-content-around align-items-center root_cause_iconFRs text-center">
+           <div class="range-slider rootcause_description mainFactImages" pregnancy style="display:none;">
+              <input class="range-slider__range pregnancy" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/pregnanc.png?v=1679656785"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" dandruff style="display:none;">
+              <input class="range-slider__range dandruff" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/pregnanc.png?v=1679656785"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" post-pregnancy style="display:none;">
+              <input class="range-slider__range post-pregnancy" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/post_pregnancy_2.png?v=1679656792"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" autoimmune style="display:none;">
+              <input class="range-slider__range autoimmune" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--            <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/autoimmune.png?v=1679656838"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" thyroid style="display:none;">
+              <input class="range-slider__range thyroid" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/thyroid_3.png?v=1679656776"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" stresshigh style="display:none;">
+              <input class="range-slider__range stresshigh" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" stress style="display:none;">
+              <input class="range-slider__range stress" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" stresslow style="display:none;">
+              <input class="range-slider__range stresslow" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" stressmoderate style="display:none;">
+              <input class="range-slider__range stressmoderate" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" sleep style="display:none;">
+              <input class="range-slider__range sleep" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--            <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/sleep_2.png?v=1679656781"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" genetics style="display:none;">
+              <input class="range-slider__range genetics" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/genetics_2.png?v=1679656772"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" FatherGenetic style="display:none;">
+              <input class="range-slider__range genetics" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/genetics_2.png?v=1679656772"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" MotherGenetic style="display:none;">
+              <input class="range-slider__range genetics" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/genetics_2.png?v=1679656772"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" PCOS style="display:none;">
+              <input class="range-slider__range PCOS" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/pcos_2.png?v=1679656796"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" menopause style="display:none;">
+              <input class="range-slider__range menopause" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/menopause_2.png?v=1679656805"> -->
+           </div>
+           <!--         <div class="mainFactImages" post-covid style="display:none;">
+              <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/covid.png?v=1669971880">
+              </div> -->
+           <div class="range-slider rootcause_description mainFactImages" digestion style="display:none;">
+              <input class="range-slider__range digestion" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/digestion_2.png?v=1679656821"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" lifestyle style="display:none;">
+              <input class="range-slider__range lifestyle" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/lifestyle_2.png?v=1679656809"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" nutrition style="display:none;">
+              <input class="range-slider__range nutrition" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--           <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/nutririon.png?v=1679656842"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" deficiency style="display:none;">
+              <input class="range-slider__range deficiency" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--             <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/defeciency.png?v=1679656847"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" hormonal-imbalance style="display:none;">
+              <input class="range-slider__range hormonal-imbalance" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--            <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/hormonal-imbalance.png?v=1679656817"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" metabolism style="display:none;">
+              <input class="range-slider__range metabolism" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--            <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/metabolism1.png?v=1679656801"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" gut style="display:none;">
+              <input class="range-slider__range gut" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--            <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/constipation.png?v=1679656813"> -->
+           </div>
+           <div class="range-slider rootcause_description mainFactImages" constipation style="display:none;">
+              <input class="range-slider__range constipation" type="range" value="75" min="0" max="100"  id="myRange2" disabled>
+              <span class="range-slider__value" style="display:none">100</span>
+              <!--             <img class="factImage p-3" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/constipation.png?v=1679656813"> -->
+           </div>
+        </div>
+     </div>
+  </div>
+  <div class="mx-auto mb-5 root_cause_container">
+     <!--       <h2 class="font-weight-bold l-0 text-left font-fredoka my-2 pl-1 pl-md-5 section-title cstm_section_titleFR position-relative">Other Root Causes</h2> -->
+     <div class="col-md-12 row text-center combo-icons d-flex align-items-center root_cause_iconFR text-center">
+        <div class="range-slider mainFactImages" pregnancy style="display:none;">
+           <p style="text-align: center;" data-id="nav-deficiency">
+              Pregnancy
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">This type of hair fall happens because of a shift in hormone levels to support the growing baby. It can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range pregnancy" type="range" value="50" min="0" max="100"  id="Range1" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/pregnanc.png?v=1679656785"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" post-pregnancy style="display:none;">
+           <p style="text-align: center;" data-id="nav-sleep">
+              Postpartum
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">This type of hair fall happens because of a drop in your hormone levels after the baby is delivered. It can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range post-pregnancy" type="range" value="50" min="0" max="100"  id="Range2" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/post_pregnancy_2.png?v=1679656792"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" autoimmune style="display:none;">
+           <p style="text-align: center;" data-id="nav-sleep">
+              Autoimmune
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">An auto-immune condition in the body causes cells to attack hair follicles. This causes hair loss in coin-size patches.</span>
+              </span>
+           </p>
+           <input class="range-slider__range autoimmune" type="range" value="50" min="0" max="100"  id="Range3" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/autoimmune.png?v=1679656838"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" thyroid style="display:none;">
+           <p style="text-align: center;" data-id="nav-lifestyle">
+              Thyroid
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">When thyroid hormone production is hampered, it affects hair health too. When thyroid hormone production is hampered, it affects other bodily functions too.</span>
+              </span>
+           </p>
+           <input class="range-slider__range thyroid" type="range" value="50" min="0" max="100"  id="Range4" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/thyroid_3.png?v=1679656776"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" stresshigh style="display:none;">
+           <p style="text-align: center;" data-id="nav-stress">
+              Stress
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">This type of hair loss happens due to a rise in cortisol levels of the body. It can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range stresshigh" type="range" value="50" min="0" max="100"  id="Range5" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" stress style="display:none;">
+           <p style="text-align: center;" data-id="nav-stress">
+              Stress
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">This type of hair loss happens due to a rise in cortisol levels of the body. It can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range stress" type="range" value="50" min="0" max="100"  id="Range6" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" stresslow style="display:none;">
+           <p style="text-align: center;" data-id="nav-stress">
+              Stress
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">This type of hair loss happens due to a rise in cortisol levels of the body. It can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range stresslow" type="range" value="25" min="0" max="100"  id="Range7" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" stressmoderate style="display:none;">
+           <p style="text-align: center;" data-id="nav-stress">
+              Stress
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">This type of hair loss happens due to a rise in cortisol levels of the body. It can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range stressmoderate" type="range" value="35" min="0" max="100"  id="Range8" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/stress_2_be029650-aafb-41eb-b91b-45c1dc94d504.png?v=1679656830"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" sleep style="display:none;">
+           <p style="text-align: center;" data-id="nav-stress">
+              Sleep
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">Not getting regular 8-9 hours of sleep hampers hormonal health (melatonin & cortisol). This increases the chances of hair fall by 62%.</span>
+              </span>
+           </p>
+           <input class="range-slider__range sleep" type="range" value="35" min="0" max="100"  id="Range9" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/sleep_2.png?v=1679656781"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" genetics style="display:none;">
+           <p style="text-align: center;" data-id="nav-genetics">
+              Genetics
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">This type of hair fall happens because of a genetic sensitivity to the hormone DHT. It can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range genetics" type="range" value="50" min="0" max="100"  id="Range10" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/genetics_2.png?v=1679656772"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" FatherGenetic style="display:none;">
+           <p style="text-align: center;" data-id="nav-genetics">
+              Genetics
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">This type of hair fall happens because of a genetic sensitivity to the hormone DHT. It can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range genetics" type="range" value="35" min="0" max="100"  id="Range11" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/genetics_2.png?v=1679656772"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" MotherGenetic style="display:none;">
+           <p style="text-align: center;" data-id="nav-genetics">
+              Genetics
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">This type of hair fall happens because of a genetic sensitivity to the hormone DHT. It can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range genetics" type="range" value="35" min="0" max="100"  id="Range12" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/genetics_2.png?v=1679656772"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" PCOS style="display:none;">
+           <p style="text-align: center;" data-id="nav-pcos">
+              PCOS
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">This type of hair fall happens because of hormonal imbalance (estrogen & testosterone). It can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range PCOS" type="range" value="50" min="0" max="100"  id="Range13" disabled>
+           <span class="range-slider__value" style="display:none">100</span>12
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/pcos_2.png?v=1679656796"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" menopause style="display:none;">
+           <p style="text-align: center;" data-id="nav-pcos">
+              Menopause
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">This type of hair fall happens because of a drop in hormone levels. It can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range menopause" type="range" value="50" min="0" max="100"  id="Range14" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/menopause_2.png?v=1679656805"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" covid style="display:none;">
+           <p style="text-align: center;" data-id="nav-pcos">
+              Covid
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">A severe illness like Covid stresses the body which disrupts the natural hair growth cycle. Hair falls out and may not be replaced by new growth resulting in hair thinning and scalp visibility.</span>
+              </span>
+           </p>
+           <input class="range-slider__range covid" type="range" value="50" min="0" max="100"  id="Range15" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/covid.png?v=1669971880"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" digestion style="display:none;">
+           <p style="text-align: center;" data-id="nav-digestion">
+              Digestion
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">A healthy gut defines hair health. If gut health is damaged, it results in poor hair quality and hair fall. This can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range digestion" type="range" value="0" min="0" max="100"  id="Range16" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/digestion_2.png?v=1679656821"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" lifestyle style="display:none;">
+           <p style="text-align: center;" data-id="nav-digestion">
+              Lifestyle
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">Unhealthy lifestyle habits directly affects hair health and the natural hair growth cycle. This can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range lifestyle" type="range" value="35" min="0" max="100"  id="Range17" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/lifestyle_2.png?v=1679656809"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" nutrition style="display:none;">
+           <p style="text-align: center;" data-id="nav-digestion">
+              Nutrition
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">Hair needs food too. When nutrients like biotin, iron, zinc fall short in the body, it causes hair thinning and hair loss. This can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range nutrition" type="range" value="35" min="0" max="100"  id="Range18" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/nutririon.png?v=1679656842"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" deficiency style="display:none;">
+           <p style="text-align: center;" data-id="nav-digestion">
+              Deficiency
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">Hair needs food too. When nutrients like biotin, iron, zinc fall short in the body, it causes hair thinning and hair loss. This can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range deficiency" type="range" value="50" min="0" max="100"  id="Range19" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/defeciency.png?v=1679656847"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" vitamindeficiency style="display:none;">
+           <p style="text-align: center;" data-id="nav-digestion">
+              Deficiency
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">Hair needs food too. When nutrients like biotin, iron, zinc fall short in the body, it causes hair thinning and hair loss. This can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range deficiency" type="range" value="35" min="0" max="100"  id="Range20" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/defeciency.png?v=1679656847"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" hormonal-imbalance style="display:none;">
+           <p style="text-align: center;" data-id="nav-digestion">
+              Hormones
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">Health issues like PCOS, Thyroid, and more caused due to imbalanced hormone levels affect.</span>
+              </span>
+           </p>
+           <input class="range-slider__range hormonal-imbalance"  type="range" value="50" min="0" max="100"  id="Range21" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/hormonal-imbalance.png?v=1679656817"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" metabolism style="display:none;">
+           <p style="text-align: center;" data-id="nav-digestion">
+              Metabolism
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">Poor metabolsim/ Low energy is an indicator that your hair & skin lack the right amount of nutrition. This can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range metabolism" type="range" value="50" min="0" max="100"  id="Range22" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/metabolism1.png?v=1679656801"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" energylevel style="display:none;">
+           <p style="text-align: center;" data-id="nav-digestion">
+              Metabolism
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">Poor metabolsim/ Low energy is an indicator that your hair & skin lack the right amount of nutrition. This can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range metabolism" type="range" value="35" min="0" max="100"  id="Range23" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/metabolism1.png?v=1679656801"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" gut style="display:none;">
+           <p style="text-align: center;" data-id="nav-digestion">
+              Gut
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">A healthy gut defines hair health. If gut health is damaged, it results in poor hair quality and hair fall. This can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <input class="range-slider__range gut" type="range" value="50" min="0" max="100"  id="Range23" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/constipation.png?v=1679656813"> -->
+           </div>
+        </div>
+        <div class="range-slider mainFactImages" constipation  style="display:none;">
+           <input class="range-slider__range constipation range_bg_change" type="range" value="50" min="0" max="100"  id="Range24" disabled>
+           <span class="range-slider__value" style="display:none">100</span>
+           <p style="text-align: center;" data-id="nav-digestion">
+              Constipation
+              <span class="tooltip">
+                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.4165 8.9165H6.58317V5.4165H5.4165V8.9165ZM5.99984 4.24984C6.16511 4.24984 6.30375 4.19384 6.41575 4.08184C6.52775 3.96984 6.58356 3.83139 6.58317 3.6665C6.58317 3.50123 6.52717 3.36259 6.41517 3.25059C6.30317 3.13859 6.16473 3.08278 5.99984 3.08317C5.83456 3.08317 5.69592 3.13917 5.58392 3.25117C5.47192 3.36317 5.41611 3.50161 5.4165 3.6665C5.4165 3.83178 5.4725 3.97042 5.5845 4.08242C5.6965 4.19442 5.83495 4.25023 5.99984 4.24984ZM5.99984 11.8332C5.19289 11.8332 4.43456 11.6799 3.72484 11.3735C3.01512 11.0671 2.39775 10.6515 1.87275 10.1269C1.34775 9.60192 0.932226 8.98456 0.626171 8.27484C0.320115 7.56511 0.166893 6.80678 0.166504 5.99984C0.166504 5.19289 0.319726 4.43456 0.626171 3.72484C0.932615 3.01512 1.34814 2.39775 1.87275 1.87275C2.39775 1.34775 3.01512 0.932226 3.72484 0.626171C4.43456 0.320115 5.19289 0.166893 5.99984 0.166504C6.80678 0.166504 7.56511 0.319726 8.27484 0.626171C8.98456 0.932615 9.60192 1.34814 10.1269 1.87275C10.6519 2.39775 11.0676 3.01512 11.3741 3.72484C11.6805 4.43456 11.8336 5.19289 11.8332 5.99984C11.8332 6.80678 11.6799 7.56511 11.3735 8.27484C11.0671 8.98456 10.6515 9.60192 10.1269 10.1269C9.60192 10.6519 8.98456 11.0676 8.27484 11.3741C7.56511 11.6805 6.80678 11.8336 5.99984 11.8332ZM5.99984 10.6665C7.30261 10.6665 8.40609 10.2144 9.31025 9.31025C10.2144 8.40609 10.6665 7.30261 10.6665 5.99984C10.6665 4.69706 10.2144 3.59359 9.31025 2.68942C8.40609 1.78525 7.30261 1.33317 5.99984 1.33317C4.69706 1.33317 3.59359 1.78525 2.68942 2.68942C1.78525 3.59359 1.33317 4.69706 1.33317 5.99984C1.33317 7.30261 1.78525 8.40609 2.68942 9.31025C3.59359 10.2144 4.69706 10.6665 5.99984 10.6665Z" fill="#414042"/>
+                 </svg>
+                 <span class="tooltiptext">Constipation causes a lack of essential nutrients in the body and affects hair health. This can be easily managed when treated at the right time.</span>
+              </span>
+           </p>
+           <div class="mainFacImgprnt">
+              <!--             <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/constipation.png?v=1679656813"> -->
+           </div>
+        </div>
+     </div>
+  </div>
+</div>

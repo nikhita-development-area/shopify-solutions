@@ -1,0 +1,50 @@
+<!-- section/hair-routine -->
+<div class="hair_main container d-none" page_type="cuticle">
+  <p class="result-cuticle-title">{{ section.settings.title }}</p>
+  <div class="hair_background">
+    {% for block in section.blocks %}
+      <div class="imageandtext">
+        <div class="image_div">
+          <img class="img-class" id="img{{ forloop.index }}" alt="image-{{ forloop.index }}" title="Image {{ forloop.index }}" loading="eager" src="{{ block.settings.image1 | img_url: "120x" }}" width="60" height="100%"/>  
+        </div>
+        <div class="text-div">
+          <p class= "text-class" id="text{{ forloop.index }}">{{ block.settings.text1 }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Hair Routine",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Safe & Effective Hair Routine just for You"
+      }
+    ],
+    "blocks":[{
+      "name":"Choose",
+      "type":"image",
+      "settings":[{
+        "type":"image_picker",
+        "id":"image1",
+        "label":"Image"
+      },
+      {
+        "type":"text",
+        "id":"text1",
+        "label":"Text"
+      }]
+    }],
+    "presets":[
+      {
+        "name":"Hair Routine"
+      }
+    ]
+  }
+{% endschema %}

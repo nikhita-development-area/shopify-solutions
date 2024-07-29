@@ -1,0 +1,159 @@
+<div class="container {{ section.id }} position-relative {{page.handle}} min__section">
+  <img class="d-none d-md-block d-none-page w-100" src="{{ section.settings.coach_image_desktop | img_url:"master"}}" loading="lazy" width="1100" height="665" alt="2x2-Desktop" title="2x2 Desktop">
+  <img class="d-md-none" src="{{ section.settings.coach_image_mobile | img_url:"master"}}" alt="2x2-Mobile" title="2x2-Mobile" width="100%" height="675" loading="lazy">
+  <div class="traya-regimen-content">
+    <div class="{{page.handle}} text-content text-center">
+      <p class="sub-heading">{{ section.settings.heading_regimen }}</p>
+      <h2>{{ section.settings.subheading_regimen }}</h2>
+      <h4 class="headening">{{ section.settings.subheading_regimen_two }}</h4>
+      <a class="btn btn-dark take-the-hair-test" data-resultForm href="{{ section.settings.link_two }}" class="btn btn-dark thrice-btn">{{ section.settings.linktext_two }}</a>
+    </div>
+  </div>
+</div>
+{% schema %}
+   {
+    "name": "2x2 Section",
+     "settings": [
+          {
+          "id": "heading_regimen",
+          "type": "text",
+          "label": "Regimen heading"
+          },
+          {
+          "id": "subheading_regimen",
+          "type": "html",
+          "label": "Regimen Subheading"
+          },
+          {
+          "id": "subheading_regimen_two",
+          "type": "text",
+          "label": "Regimen Lasthead"
+          },
+          {
+          "type": "url",
+          "label": "Button link",
+          "id": "link_two"
+        },
+        {          
+          "type": "text",
+          "label": "Button text",
+          "id": "linktext_two",
+          "default": "Click Here"
+        },
+          {
+          "id": "coach_image_desktop",
+          "type": "image_picker",
+          "label": "Image Desktop"
+          },
+          {
+          "id": "coach_image_mobile",
+          "type": "image_picker",
+          "label": "Image Mobile"
+          }
+  ],
+          "presets":[
+          {
+          "name":"2x2 Section",
+          "category":"text with img"
+          }
+      ]
+  }
+
+{% endschema %}
+
+{% style %}
+@media only screen and (min-width: 768.98px){
+.femalev1.min__section, .femalev2.min__section,  .female.min__section {padding-top: 30px;}
+.traya-regimen-content .femalev1.text-content.text-center strong, .traya-regimen-content .femalev2.text-content.text-center strong, .traya-regimen-content .female.text-content.text-center strong {font-size: 35px;font-weight: 900 !important;line-height: initial;}
+.traya-regimen-content .femalev1.text-content.text-center, .traya-regimen-content .femalev2.text-content.text-center, .traya-regimen-content .female.text-content.text-center {left:5%;transform: translate(0, -50%);top: 50%;}
+.traya-regimen-content .femalev1.text-content.text-center h4.headening, .traya-regimen-content .femalev2.text-content.text-center h4.headening, .traya-regimen-content .female.text-content.text-center h4.headening {padding: 0;padding-bottom: 35px;}
+}
+{% if page.handle == 'homev5' %}
+.traya-regimen-content .btn{font-size:16px!important;line-height:1.5!important;}
+.traya-regimen-content strong {font-weight:900!important;line-height: 1.47;}
+h4.headening{padding:0 0 20px 0!important;}
+p.sub-heading{font-size:16px!important;margin-bottom:30px!important;}
+{% endif %}
+.traya-regimen-content strong{font-size: 75px;font-weight: 900 !important;line-height: 1.47;letter-spacing: -0.75px;color:  rgba(65, 64, 66, 1);position: relative;}
+.text-content{position: absolute;z-index: 1;top: 15%;max-width: 700px;padding: 0 40px;left: 0;}
+.template-page.homev5  .text-content{max-width: 500px!important;}
+p.sub-heading {font-size: 20px;margin-top: 0;margin-bottom: 1rem;font-family: Nunito Sans,sans-serif!important;}
+.traya-regimen-content .text-content h2 {font-size: 51px;font-weight: 300;line-height: 0.74;letter-spacing: -0.26px;color: rgba(65, 64, 66, 1);}
+h4.headening {font-size: 24px;line-height: 1.47;letter-spacing: -0.26px;color: rgba(65, 64, 66, 1);margin-bottom: 0.5rem;font-weight: 500;padding: 25px 0px 30px 0px;font-family: Nunito Sans,sans-serif!important;}
+.traya-regimen-content .btn{text-transform: uppercase;}
+@media only screen and (max-width: 767.98px){
+.container.position-relative.femalev1.min__section, .container.position-relative.femalev2.min__section, .container.position-relative.female.min__section {margin-top: 20px;}
+{% if page.handle == 'homev5' %}
+.traya-regimen-content .text-content h2 {font-size: 30px;line-height: 40px;}
+h4.headening {font-size: 16px;padding-bottom: 20px;padding-top: 0;line-height: 23px;}
+{% else %}
+.traya-regimen-content .text-content h2{font-size: 45px;line-height: 40px;}
+h4.headening {font-size: 18px!important;margin-top: 0;padding: 0 0px 10px 1px;}
+{% endif %}
+.traya-regimen-content strong {font-size: 45px;}
+.femalev1 .traya-regimen-content strong, .femalev2 .traya-regimen-content strong, .female .traya-regimen-content strong {font-size: 28px;line-height: normal;}
+p.sub-heading {font-size: 18px;font-weight: 500;}
+.traya-regimen-content .btn{border-radius: 5px;font-size: 15px;line-height: 21.41px;}
+.text-content {top: 12%;max-width: 100%;left: 50%;transform: translate(-50%, -0%);width: 100%;}
+.container.min__section {padding: 0;}
+.container.position-relative.femalev1.min__section, .container.position-relative.femalev2.min__section, .container.position-relative.female.min__section {padding-right: 15px;padding-left: 15px;}
+.traya-regimen-content .femalev1.text-content.text-center h4.headening, .traya-regimen-content .femalev2.text-content.text-center h4.headening, .traya-regimen-content .female.text-content.text-center h4.headening {padding: 0;padding-bottom: 35px;}
+}
+.container.position-relative.min__section img {
+  height: auto;
+}
+#shopify-section-template--17323778572466__2x2_section_jDge7R .traya-regimen-content .btn.btn-dark.take-the-hair-test:hover, 
+#shopify-section-template--17323780079794__2x2_section_jDge7R .traya-regimen-content .btn.btn-dark.take-the-hair-test:hover {
+  background: #ffff !important;
+  border-color: #ffff !important;
+  color: #000 !important;
+}
+@media only screen and (max-width: 767.98px) {
+  .container.min__section {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #shopify-section-template--17323780079794__2x2_section_jDge7R .text-content {
+    top: 10%;
+    width: 100%;
+    max-width: 100%;
+    left: 50%;
+  }
+  #shopify-section-template--17323780079794__2x2_section_jDge7R .traya-regimen-content .sub-heading {
+    font-size: 16px;
+  }
+  #shopify-section-template--17323780079794__2x2_section_jDge7R .traya-regimen-content .text-content h2 {
+    font-size: 30px;
+    color: #C4695B;
+    margin-bottom: 18px;
+  }
+  #shopify-section-template--17323780079794__2x2_section_jDge7R .traya-regimen-content .headening {
+    font-size: 16px!important;;
+    width: 100%;
+    padding-bottom: 24px;
+  }
+  #shopify-section-template--17323778572466__2x2_section_jDge7R .text-content {
+    top: 14%;
+    width: 100%;
+    max-width: 100%;
+  }
+  #shopify-section-template--17323778572466__2x2_section_jDge7R .traya-regimen-content .sub-heading {
+    font-size: 16px;
+  }
+  #shopify-section-template--17323778572466__2x2_section_jDge7R .traya-regimen-content .text-content h2 {
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+  #shopify-section-template--17323778572466__2x2_section_jDge7R .traya-regimen-content .headening {
+    font-size: 16px!important;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  #shopify-section-template--17323778572466__2x2_section_jDge7R .traya-regimen-content .btn.btn-dark.take-the-hair-test, 
+  #shopify-section-template--17323780079794__2x2_section_jDge7R .traya-regimen-content .btn.btn-dark.take-the-hair-test {
+    width: 80%;
+  }
+}
+{% endstyle %}

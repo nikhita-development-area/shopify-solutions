@@ -1,0 +1,79 @@
+<div class="main_AwardWinning container pb-0">
+  <div class="press mx-2 my-md-4 my-3">
+      <h2 class="head font-weight-bold l-0">{{ section.settings.AwardWinning-head }}</h2>
+      <p class="content l-0">{{ section.settings.AwardWinning-para }}</p>
+  </div>
+  <div class="main-prizes d-flex flex-wrap mb-4">
+    {% for block in section.blocks %}
+      
+      <div class="prize col-6 col-md-4 p-2 p-md-3">
+        <a href="{{ block.settings.Prizes_url }}" class="text-decoration-none" target="_blank">
+        {% assign width = block.settings.Prizes_img.width | divided_by: 2 %}
+        {% assign height = block.settings.Prizes_img.height | divided_by: 2 %}
+        {% assign alt = 'Image-' | append: forloop.index %}
+        {{ block.settings.Prizes_img | image_url: width: width | image_tag : width: width , height: height , alt: alt , title: 'Image' , loading: 'lazy' , class: 'w-100 h-100' }}
+         </a>
+        </div>
+     
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "AwardWinning Section",
+  "tag": "section",
+  "class":"AwardWinning",
+  "settings": [
+    {
+      "type": "text",
+      "id": "AwardWinning-head",
+      "label": "Enter the heading"
+    },
+    {
+      "type": "text",
+      "id": "AwardWinning-para",
+      "label": "Enter the para"
+    }
+  ],
+  "blocks":[
+    {
+      "name":"Prize Blocks",
+      "type": "text",
+      "settings":[
+    {
+      "type": "image_picker",
+      "id": "Prizes_img",
+      "label": "drag the prize img"
+    },
+    {
+      "type": "url",
+      "id": "Prizes_url",
+      "label": "drag the prize url"
+    }
+      ]
+    }
+  ],
+   "presets":[
+    {
+        "name":"pAwardWinning Section",
+        "category": "custom"
+    }
+  ]
+}
+    {% endschema %}
+<style>
+  .main_AwardWinning .head{
+        font-size: 32px;
+      }
+  .main_AwardWinning .content{
+        font-size: 20px;
+      }
+  @media(max-width: 749px){
+      .main_AwardWinning .head{
+        font-size: 24px;
+      }
+      .main_AwardWinning .content{
+        font-size: 16px;
+      }
+  }
+</style>

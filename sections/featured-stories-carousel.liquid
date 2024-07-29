@@ -1,0 +1,162 @@
+{% comment %} Please do not change this file. It is automatically maintained by StorifyMe{% endcomment %}
+
+<div id="home-stories" class="index-section home-section storify-home-section">
+
+  {% if section.settings.title != blank %}
+    <h2 class="storify-home-section-title">{{ section.settings.title | escape }}</h2>
+  {% endif %}
+
+  {%- assign stories = shop.metafields.storify.stories -%}
+  {% if section.settings.story_tag != blank %}
+  {% assign publicStories = '' | split: '' %}
+    {% for story in stories %}
+      {% assign storyTags = story.tags | split: ',' %}
+      {% for tag in storyTags %}
+        {% if tag == section.settings.story_tag %}
+          {% assign storyArray = story | sort %}
+          {% assign publicStories = publicStories | concat: storyArray %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% else %}
+    {% assign publicStories = stories %}
+  {% endif %}
+  {%- assign stories = publicStories | slice: 0, section.settings.story_count -%}
+
+  <div class="stories-list">
+
+    {% if stories != blank %}
+
+      {% for story in stories %}
+        <div class="story-list-item">
+          <a class="story" href="/a/stories/{{story.handle}}">
+            <div class="story-body text-center">
+              <div class="story-image">
+                <img alt="{{story.name}}" src="{{story.original_poster}}" loading="lazy">
+              </div>    
+            </div>
+            <div class="story-title">
+              <span>
+                <div class="story-title-content">
+                  {{story.name}}
+                </div>
+              </span>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+
+    {% endif %}
+  </div>
+
+  {% if section.settings.link_enabled %}
+    <p class="story-list-link text-center">
+      <a class="btn" href="{{ section.settings.link_url }}">{{ section.settings.link_text | escape }}</a>
+    </p>
+  {% endif %}
+</div>
+{% schema %}
+{
+  "name":"Featured Stories Carousel",
+  "settings":[
+     {
+        "type":"text",
+        "id":"title",
+        "label":{
+           "de":"Titel",
+           "en":"Heading",
+           "es":"Título",
+           "fr":"Titre",
+           "it":"Heading",
+           "ja":"見出し",
+           "pt-BR":"Título"
+        },
+        "default":{
+           "de":"Stories",
+           "en":"Stories",
+           "es":"Stories",
+           "fr":"Stories",
+           "it":"Stories",
+           "ja":"Stories",
+           "pt-BR":"Stories"
+        }
+     },
+     {
+        "type":"header",
+        "content":"Stories"
+     },
+     {
+        "type":"range",
+        "id":"story_count",
+        "label":{
+           "en":"Number of stories that should be shown"
+        },
+        "min":1,
+        "max":15,
+        "step":1,
+        "default":5
+     },
+     {
+        "type":"text",
+        "id":"story_tag",
+        "label":{
+           "en":"Show only stories with specific tag"
+        },
+        "info":{
+           "en":"If empty, all public stories will be shown. If a story tag provided, only public stories with specific tag will be visible."
+        }
+     },
+     {
+        "type":"header",
+        "content":"See more link"
+     },
+     {
+        "type":"checkbox",
+        "id":"link_enabled",
+        "label":{
+           "de":"Aktiviert",
+           "en":"Enabled",
+           "es":"Habilitada",
+           "fr":"Activée",
+           "it":"Abilitata",
+           "ja":"有効化",
+           "pt-BR":"Ativada"
+        },
+        "default":false
+     },
+     {
+        "type":"text",
+        "id":"link_text",
+        "label":{
+           "de":"Link Text",
+           "en":"Link text",
+           "es":"Texto del enlace",
+           "fr":"Lien texte",
+           "it":"Link al testo",
+           "ja":"リンクテキスト",
+           "pt-BR":"Texto do link"
+        },
+        "default":{
+           "de":"Mehr sehen",
+           "en":"See more",
+           "es":"Ver más",
+           "fr":"Voir plus",
+           "it":"Vedi altro",
+           "ja":"続きを見る",
+           "pt-BR":"Ver mais"
+        }
+     },
+     {
+        "id":"link_url",
+        "type":"url",
+        "label":"Link url"
+     }
+  ],
+  "presets":[
+     {
+        "name":"Featured Stories Carousel",
+        "category":"StorifyMe Sections"
+     }
+  ]
+}
+{% endschema %}

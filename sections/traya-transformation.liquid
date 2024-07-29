@@ -1,0 +1,98 @@
+<div class="container transformation_wrapper">
+  <hr class=" mx-auto">
+  <h3 class="py-md-3 section-title pb-1 mt-4 l-0">{{ section.settings.section-title }}</h3>
+  <div class="row transf_slider">
+  {% for block in section.blocks %}
+    <div class="transformation_content col-4">
+      <div class="transf_image">
+        <image height="100%" width="100%" src="{{ block.settings.image | img_url: ''  }}"></image>
+      </div>
+      <div class="transf_content p-2">
+        <p class="mb-2 {% if forloop.index == 2 %} line__heght {% endif %}">{{ block.settings.details  }}</p>
+        <image  src="{{ block.settings.start | img_url: ''  }}"></image>
+        <p class="cust_names">{{ block.settings.name }}</p>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Traya's Transformation",
+    "settings": [
+      {
+        "type":"text",
+        "id":"section-title",
+        "label":"Section Title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "blocks",
+        "name": "blocks",
+        "settings": [
+          {
+            "type":"image_picker",
+            "id":"image",
+            "label":"select image"
+          },
+          {
+            "type": "text",
+            "id": "details",
+            "label": "Details"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "name"
+          },
+          {
+            "type":"image_picker",
+            "id":"start",
+            "label":"Select Image"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name":"traya-transformation"
+      }
+    ]
+    }
+{% endschema %}
+
+{% stylesheet %}
+  .transformation_wrapper hr{
+    width:80%;
+    height: 1px;
+    color:#B9B9B9;
+  }
+  .transformation_wrapper h3{
+    color: #BE6C5D;
+  }
+  .transformation_content {
+    box-shadow: 2px 4px 8px 0px #0000001F;
+    padding: 0px;
+    margin: 10px;
+  }
+  .transf_content img{
+    width:40%;
+  }
+  .line__heght{
+    line-height: 17px !important;
+  }
+  .transf_content p.mb-2{
+    font-size:14px;
+    height: 35px;
+    font-weight:600;
+    line-height:35px;
+  }
+  .cust_names{
+    font-size:12px;
+    font-weight:700;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

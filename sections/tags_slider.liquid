@@ -1,0 +1,114 @@
+<section class="main-blog_slider container">
+  {% if section.settings.heading != blank %}
+     <div class="section-title">{{ section.settings.heading}}</div>
+  {% endif %}
+  <div class="top_slider">
+  {%- for tag in blog.all_tags -%}
+  {% assign blog_tag = "Ingredients for Hair,Hair Loss Guide,Hair Care How-Tos,Hair Treatment Guides,Hair & Health Guides,Hair Growth Guides,Traya Success Stories,Hair Supplements,Ayurveda & Herbal Cure,Hair Disorders,Hair Care FAQs,Dandruff Care Guides,Hair Home Remedies,Foods for Hair,Dry Hair & Scalp Guides,Hair Essential Oils Guide" %}
+    {% if blog_tag contains tag and tag != 'health'%}
+  <div class="cust-blog-tag">
+     <p class="cstm-tag">
+      <a href="{{ blog.url }}/tagged/{{ tag | handle }}"><button class="category-blog_tag"> {{ tag }}</button></a></p>
+  </div>
+    {% endif %}
+  {%- endfor -%}
+  </div>
+</section>
+
+<style>
+  .category-blog_tag {
+    background: none;
+    border: 2px solid #414042;
+    padding: 4px 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    -webkit-text-fill-color: #414042!important;
+}
+  button.category-blog_tag:hover {
+    background: #000;
+    color: #fff;
+    -webkit-text-fill-color: #fff!important;
+}
+  button.category-blog_tag:hover a {
+    color: #fff;
+}
+  .category-blog_tag {
+    width: 95%;
+  }
+  .top_slider.slick-initialized.slick-slider {
+    display: block !important;
+}
+  .top_slider {
+    display: -webkit-box;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+  .cstm-tag {
+  text-align: center;
+}
+  </style>
+
+
+  
+{% schema %}
+  {
+    "name": "Tags slider",
+    "settings": [
+      {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Heading"
+    },
+      {
+     "type": "checkbox",
+     "id": "infinite",
+     "label": "active infinite",
+     "default": false
+   },
+    {
+     "type": "checkbox",
+     "id": "arrows",
+     "label": "active arrows",
+     "default": false
+   }
+    ],
+     "presets": [
+      {
+        "name": "Tags slider",
+        "category": "text"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+.category-blog_tag a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+  .cust-blog-tag.slick-slide {
+    width: -webkit-fill-available;
+    justify-content: space-evenly;
+    align-items: center;
+}
+  @media only screen and (min-width: 320px) and (max-width: 578px) {
+  .category-blog_tag {
+    width: 80%;
+  }
+    .main-blog_slider button.slick-prev.slick-arrow {
+    position: absolute;
+    top: 18px;
+    bottom: 0;
+    left: 4px;
+}
+    .main-blog_slider button.slick-next.slick-arrow {
+    position: absolute;
+    top: 18px;
+    bottom: 0;
+    right: 0px;
+}
+  }
+</style>

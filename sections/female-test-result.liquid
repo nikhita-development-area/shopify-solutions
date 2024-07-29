@@ -1,0 +1,615 @@
+<section class="page-banner mt-5 pt-4 pt-md-5" style="letter-spacing: normal;">
+    <div class="text-center mb-md-5">
+      <div class="mt-4 mb-5 pb-5 fStage_top">
+        <div class="visitor-info pb-4 pt-3">
+          <h1 class="font-fredoka fStage-show-Heading">Thank You <span data-user-name="" class="text-capitalize"></span>,</h1>
+          <h3 class="mb-2 col-md-7 px-5 mb-2 fStage-show-sbHEading mx-auto">Based on your hair goals, here is your recommended formula</h3>
+        </div>
+      </div>
+
+      <div class="align-items-center d-flex text-center justify-content-center justify-content-md-between femleBannerTTls">
+        <div class="d-flex flex-md-column top_sab_heading_RF align-items-center align-self-start align-self-md-center">
+          <h3 class="font-weight-bold">Hair Type</h3>
+          <h3 class="mb-2 pl-3 px-md-3" scalp-type="">Normal</h3>
+        </div>
+        <div class="d-flex flex-md-column top_sab_heading_RF align-items-center align-self-start align-self-md-center">
+          <h3 class="font-weight-bold">Hair Concern</h3>
+          <h3 class="mb-2 pl-3 px-md-3" hair-concern="">Goals</h3>
+        </div>
+        <div class="d-flex flex-md-column top_sab_heading_RF align-items-center border-0 align-self-start align-self-md-center">
+          <h3 class="font-weight-bold">Root Cause</h3>
+          <h3 class="mb-2 pl-3 px-md-3" root-cause="">Stage</h3>
+        </div>
+      </div>
+    </div>
+    <div class="m-3 root_cause_ContainerFS">
+
+      <h2 class="font-weight-bold l-0 text-center my-4 mb-md-4 cstm_section_titleFR">Other Factors impacting your hair health</h2>
+
+      <div class="d-flex text-center combo-icons d-flex justify-content-around align-items-center root_cause_iconFR text-center">
+        <div class="mainFactImages" pregnancy>
+          <div class="mainFacImgprnt">
+            <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/PREGNANCY_1_1.png?v=1655114511">
+          </div>
+          <p style="text-align: center;" data-id="nav-deficiency" data-toggle="modal" data-target="#stageModalCenter">Pregnancy ⓘ</p>
+        </div>
+        <div class="mainFactImages" post-pregnancy>
+          <div class="mainFacImgprnt">
+            <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/POSTPARTUM_1_1.png?v=1655114511">
+          </div>
+          <p style="text-align: center;" data-id="nav-sleep" data-toggle="modal" data-target="#stageModalCenter">Postpartum ⓘ</p>
+        </div>
+        <div class="mainFactImages" thyroid>
+          <div class="mainFacImgprnt">
+            <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/THYROID_1_1.png?v=1655114511">
+          </div>
+          <p style="text-align: center;" data-id="nav-lifestyle" data-toggle="modal" data-target="#stageModalCenter">Thyroid ⓘ</p>
+        </div>
+        <div class="mainFactImages" stress>
+          <div class="mainFacImgprnt">
+            <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Vector_37d617c7-20f9-4233-8d28-6fbba49faa9b.png?v=1655114512">
+          </div>
+          <p style="text-align: center;" data-id="nav-stress" data-toggle="modal" data-target="#stageModalCenter">Stress ⓘ</p>
+        </div>
+        <div class="mainFactImages" genetics>
+          <div class="mainFacImgprnt">
+            <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Vector_1.png?v=1655114512">
+          </div>
+          <p style="text-align: center;" data-id="nav-genetics" data-toggle="modal" data-target="#stageModalCenter">Genetics ⓘ</p>
+        </div>
+        <div class="mainFactImages" PCOS>
+          <div class="mainFacImgprnt">
+            <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/pcos_1_1.png?v=1655114511">
+          </div>
+          <p style="text-align: center;" data-id="nav-pcos" data-toggle="modal" data-target="#stageModalCenter">PCOS ⓘ</p>
+        </div>
+        <div class="mainFactImages" digestion>
+          <div class="mainFacImgprnt">
+            <img class="factImage" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group.png?v=1655114511">
+          </div>
+          <p style="text-align: center;" data-id="nav-digestion" data-toggle="modal" data-target="#stageModalCenter">Digestion ⓘ</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+{% assign product = all_products['gut-health-combo'] %}
+{% assign section_id = 'product-combo-new' %}
+{% if settings.enable_discount == true %}
+{% assign one_month_discount = settings.one_month_discount | plus: 0 |default: 0 %}
+{% assign three_month_discount = settings.three_month_discount | plus: 0 |default: 0 %}
+{% else %}
+{% assign one_month_discount = 0 %}
+{% assign three_month_discount = 20 %}
+{% endif %}
+<div class="container mt-1 mt-md-5 pt-0">
+{% comment %}<h2 class="font-weight-bold l-0 text-center my-md-3 py-2 py-md-3 size_heading_result result_page_pdt_hdg">Your Customized Hair Growth Combo</h2>{% endcomment %}
+<div class="ss-hero-product">
+    {% comment %}
+    Get first variant, or deep linked one
+    {% endcomment %}
+    {%- assign current_variant = product.selected_or_first_available_variant -%}
+    {%- assign product_image_zoom_size = '1024x1024' -%}
+    {%- assign product_image_scale = '2' -%}
+    {%- assign enable_image_zoom = section.settings.enable_image_zoom -%}
+    {%- assign compare_at_price = current_variant.compare_at_price -%}
+    {%- assign price = current_variant.price -%}
+
+
+    {%- assign product_media_width = 'medium-up--two-thirds' -%}
+    {%- assign product_description_width = 'medium-up--one-third' -%}
+    {%- assign height = 720 -%}
+
+
+    <div class="row product-single result-page {% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %}">
+      
+      <div class="col-md-5 col-12 mx-auto product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
+        {%- assign featured_media = product.media[2] | default: product.featured_media -%}
+		{% comment %}
+        {%- for media in product.media -%}
+        {% include 'media', media: media, featured_media: featured_media, height: height, enable_image_zoom: enable_image_zoom, image_zoom_size: product_image_zoom_size, image_scale: product_image_scale %}
+        {%- endfor -%}
+        {% endcomment %}
+		<div class="result-combo-pr-image">
+        <div id="ImageZoom--25101940654258" style="padding-top:100.0%;" class="product-single__media rounded-lg border product-single__media--has-thumbnails">
+          <img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" 
+               srcset="{% if page.handle == 'result' %}//cdn.shopify.com/s/files/1/0100/1622/7394/files/Artboard_1_df33267f-d3ac-4acd-9f0e-2c0d41f1a82c_540x.jpg{% else %}//cdn.shopify.com/s/files/1/0100/1622/7394/files/default_image_540x.jpg{% endif %}">
+        </div>
+        </div>
+        
+        <noscript>
+          {% capture product_image_size %}{{ height }}x{% endcapture %}
+          <img src="{{ featured_media | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_media.alt }}" id="FeaturedMedia-{{ section_id }}" class="product-featured-media" style="max-width: {{ height }}px;">
+        </noscript>
+
+
+        {% if product.media.size > 1 %}
+        {% if product.media.size > 4 %}
+        {%- assign enable_thumbnail_slides = false -%}
+        {% endif %}
+
+        <div data-thumbnail-slider>
+          <div class="thumbnails-wrapper{% if enable_thumbnail_slides == true %} slider-active{% endif %}" data-slider>
+            <ul class="product-single__thumbnails " data-slider-container>
+              <li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="{% if page.handle == 'result' %}//cdn.shopify.com/s/files/1/0100/1622/7394/files/Artboard_1_df33267f-d3ac-4acd-9f0e-2c0d41f1a82c_110x100@2x.jpg{% else %}//cdn.shopify.com/s/files/1/0100/1622/7394/files/default_image_110x110@2x.jpg{% endif %}" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="col-md-7 {{ product_description_width }}" style="letter-spacing: normal;">
+        <div class="product-single__meta product__pt rounded-lg border p-1 border-md-none">
+        
+
+          {% capture "form_classes" -%}
+          product-form product-form-{{ section_id }}
+          {%- if section.settings.enable_payment_button and product.has_only_default_variant %} product-form--payment-button-no-variants {%- endif -%}
+          {%- if current_variant.available == false %} product-form--variant-sold-out {%- endif -%}
+          {%- endcapture %}
+
+         <form method="post" action="/cart/add" id="product_form_6083879895218" accept-charset="UTF-8" class="product-form product-form-product-combo-new" enctype="multipart/form-data" novalidate="novalidate" data-product-form="">
+            <div class="mainfemaleProduct">
+              <div class="mainReviewUi d-flex pb-3 justify-content-between">
+               
+                <div class="mainReviewfemaleUi w-75">
+                  <div class="d-flex align-items-center justify-content-between mb-md-2">
+
+                    <div class="d-flex product__price align-items-center w-100">
+                      <span class="pr-2 pdp-price-txt">MRP:</span>
+
+                      <dl class="price price--on-sale mb-0" data-price=""><span class="money">₹ 1,990</span></dl>{% if three_month_discount > 0 %}<del class="del_tt_price ml-2" data-del-price="">₹ 1,789/-</del>{%endif%}
+                      <style>
+                        .prdt-price,.prdt-reg-price{
+                          font-size: 26.1px;
+                          font-weight: 900;
+                          font-stretch: normal;
+                          font-style: normal;
+                          line-height: 1.61;
+                          letter-spacing: normal;
+                          text-align: left;
+                          color: #424143;
+
+                        }
+                      </style>
+
+                    </div>
+                    <div class="product-form__controls-group">
+                      <div class="align-items-center d-flex product-form__item mb-0">
+                        <label class="mr-3 d-none d-md-block mb-0 fw-bold" for="Quantity-product-combo-new">Quantity</label>
+
+
+                        <div class="js-qty">
+                          <input type="text" class="js-qty__num" value="1" min="1" data-id="" aria-label="quantity" pattern="[0-9]*" name="quantity" id="Quantity-product-combo-new" readonly="">
+                        </div>
+
+
+                      </div>
+                    </div>
+                    <a class="result-gl-rvw w-50 d-none" href="#google-reviews" >
+                      
+                    </a>
+                  </div>
+
+                  <small class="d-block" style="line-height:8px">(Inclusive of all taxes)</small>
+                </div>
+                 <a class="result-gl-rvw w-25" href="#google-reviews" >
+                  <div class="google__reviews  text-md-left">
+                    <img class="ggl_rvws" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/google_reviews_eba1f3c9-0fa4-4b6c-9173-734ceaac3846.jpg">
+                  </div>
+                </a>
+              </div>
+              <div class="select-plan" onchange="ChangePrice();">
+                <div class="plans-selection card-body rounded-lg border">
+                  <label for="1_month" class="month-plan-1 active">
+                    <input type="radio" id="1_month" checked="" name="month" value="1">
+                    <onemonth> 
+                      <span class="total-price-1 discounted-price" style="display:none">
+                        <span class="money">₹ 2,640</span></span><span class="total__discount_price_1" style="display:none">
+                      <span class="money">₹ 2,640</span></span> <span class="cstm_plan-text">One Time Purchase</span><span class="main-persentage text-danger" data-discount="{{one_month_discount}}" style="display:none">(43% Off)</span>
+                      <br>
+                      <span class="sub-text text-black-50 cstm_sub-text">Delivered only once</span>
+                    </onemonth>
+
+                  </label>
+                  <label for="3_month" class="month-plan-3">
+                    <input type="radio" id="3_month"  name="month" value="3">
+                    <onemonth class="w-100"> <span class="total-price-3 discounted-price" style="display:none"><span class="money">₹ 7,920</span></span>
+                      <span class="d-inline-flex justify-content-between w-100"><span class="total__discount_price_3" style="display:none"><span class="money">₹ 6,336</span></span> <span class="cstm_plan-text">3 Month Plan </span><span class="text-danger">Save <span class="main-persentage text-danger" data-discount="{{ three_month_discount }}" {% unless three_month_discount > 0 %}style="display:none"{% endunless %}>({{three_month_discount}}% Off)</span></span></span>
+                      <br>
+                      <span class="sub-text text-black-50 cstm_sub-text">You will receive a Kit every Month for 3 months</span>
+                    </onemonth>
+
+                  </label>
+                </div>
+
+              </div>
+            </div>
+          </form>
+         {% if page.handle == 'result-f' or page.handle == 'result4' %}
+          <div class="d-none d-md-flex py-4">
+            <button id="add-to-cart-result-page" class="add-to-cart-result-page btn w-100 py-3 px-1 pl-2 mr-3">Buy Now</button>
+          </div>
+          {% else%}
+          <div class="d-none d-md-flex py-4">
+            <button id="add-to-cart-result-page" class="add-to-cart-result-page btn w-50 py-3 px-1 pl-2 mr-3">Add to Cart</button>
+            <button id="buyNowResult2" class="buyNowResult2 btn w-50  py-3 position-relative">Buy Now</button>
+          </div>
+          {% endif%}
+      </div>
+
+      {%- comment -%}
+      Live region for announcing updated price and availability to screen readers
+      {%- endcomment -%}
+      <p class="visually-hidden" data-product-status aria-live="polite" role="status" ></p>
+    </div>
+  </div>
+</div>
+
+<div class="mainPosiImgfemale">
+  <img class="mainabsulteimg" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/rectangle_71_2_1.png?v=1655277515">
+</div>
+
+{% schema %}
+  {
+    "name": "Female Test Result",
+    "settings": [],
+          "presets":[
+          {
+          "name":"Female Test Result"
+          }
+      ]
+  }
+{% endschema %}
+<style>
+  section.page-banner {
+    background: url(https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group-1-_1.png?v=1655118402) no-repeat;
+    background-size: 100%;
+  }
+  .product-single__thumbnail {
+    display: block;
+    margin: -2px 0 8px;
+    min-height: 44px;
+    position: relative;
+    border: 0.5px solid #8A8A8A;
+    border-radius: 16px;
+    padding: 5px;
+  }
+  .fStage-show-Heading {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: #383334;
+  }
+  .fStage-show-sbHEading {
+    font-size:28px;
+    max-width: 500px;
+    margin: auto;
+    letter-spacing: 0;
+  }
+  .d-flex.top_sab_heading_RF {
+    width: 33.33%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  h3.font-weight-bold, h3.mb-2.pl-3.px-md-3, .cstm_section_titleFR{
+    letter-spacing: 0;
+  }
+  .cstm_section_titleFR{
+    font-size:2rem; 
+  }
+  .template-page.result-f .root_cause_iconFR p {
+    font-weight: bold;
+  }
+  .mainFacImgprnt {
+    min-height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .d-flex.top_sab_heading_RF~.d-flex.top_sab_heading_RF {
+    border-left: 1px solid #9E9E9E;
+    border-right: 1px solid #9E9E9E;
+  }
+  .root_cause_ContainerFS {
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 25%);
+    border-radius: 14px;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+  .femleBannerTTls {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin: auto;
+  }
+  li.result_thumbnails-item {
+    flex: 0 0 17%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .result-combo-pr-image .product-single__media.slick-initialized{
+    padding-top: 0 !important;
+  }
+  .result-combo-pr-image .product-single__media{
+    padding-top: 0 !important;
+  }
+  .result-combo-pr-image .feature-row__image.product-featured-media.slick-slide{
+    position: initial;
+  }
+  .product-single__thumbnails.slick-initialized .slick-list.draggable {
+    padding-top: 5px;
+  }
+  .product-form__controls-group .js-qty{
+    height:40px;
+    border: 0.5px solid #444444;
+  }
+  .plans-selection.card-body {
+    padding: 0;
+  }
+  .plans-selection label{
+    display: flex;
+    padding:10px;
+    margin: 0;
+  }
+  .plans-selection label.active {
+    background: #373334;
+    border-radius: 10px;
+  }
+  .plans-selection label [name="month"]{
+    width: 20px;
+    margin-right: 8px;
+    position: initial;
+  }
+  .product-form__controls-group{
+    display: none;
+  }
+  .product-form__controls-group .js-qty__adjust,.product-form__controls-group .js-qty__num {
+    width: 55px;
+    font-weight: 700;
+    border-right: 0;
+    border-left: 0;
+    font-size: 20px;
+    min-height: inherit;
+  }
+  .product-form__controls-group .js-qty__adjust{
+    color:#444444;
+  }
+  .row.product-single.result-page{
+    align-items: center;
+  }
+  .pdp-price-txt,.product-form-product-combo-new .price {
+    font-weight: 600;
+    font-size: 24px;
+  }
+  .result-gl-rvw .ggl_rvws {
+    margin-left: -12px;
+  }
+  .result-f .del_tt_price[data-del-price] {
+    font-size: 20px;
+  }
+  .template-page.result-f .fmoney_buy, .template-page.result-f .fmoney_price span {
+    font-size: 32px;
+  }
+  @media only screen and (min-width: 768px){
+    .template-page.result-f .root_cause_ContainerFS {
+      margin-top: 5rem !important;
+    }
+    .mainfemaleProduct {
+      padding: 1.5rem;
+      border: 1px solid #dee2e6;
+      border-radius: 14px;
+    }
+  }
+  @media (max-width: 767.98px){
+    .fStage_top .visitor-info h3 {
+      font-size: 14px;
+    }
+  .template-page.result-f .add-to-cart-result-page small {
+    font-size: 8px;
+    letter-spacing: 0px;
+  }
+    .fStage_top {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .d-flex.top_sab_heading_RF h3 {
+      font-size: 13px;
+      margin-bottom: 0 !important;
+    }
+    .d-flex.top_sab_heading_RF {
+      width: unset;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .d-flex.top_sab_heading_RF~.d-flex.top_sab_heading_RF {
+      padding: 1px 5px;
+      margin: 0px 5px;
+    }
+    img.mainabsulteimg {
+      top: 12%;
+      position: absolute;
+      left: 0%;
+      transform: rotateY(180deg);
+      max-width: 80px;
+    }
+    img.factImage {
+      max-width: 35px;
+      height: 35px;
+    }
+    .mainFacImgprnt {
+      min-height: 60px;
+    }
+    .result-f .add-to-cart-result-page {
+      font-size: 16px;
+    }
+    .template-page.result-f .fmoney_buy, .template-page.result-f .fmoney_price span {
+      font-size: 18px;
+    }
+    .mainFactImages {
+      width: 24%;
+    }
+    .result-f .del_tt_price[data-del-price] {
+      font-size: 14px;
+    }
+    .root_cause_iconFR p {
+      font-size: 10px;
+    }
+    .top_sab_heading_RF h3 {
+      padding: 0 !important;
+    }
+    .fStage_top .visitor-info h1, .cstm_section_titleFR {
+      font-size: 22px !important;
+    }
+    .result-gl-rvw .ggl_rvws{
+      width: 100%;
+      margin-left: 0;
+    }
+    .product-form__controls-group .js-qty__adjust, .product-form__controls-group .js-qty__num{
+      width:32px;
+      min-width:32px !important;
+      font-size: 17px;
+      line-height: 0;
+    }  
+    .product-form__controls-group .js-qty{
+      height:25px;
+    }
+    .product-form-product-combo-new {
+      margin-top: 10px;
+    /*       border-top: 1px solid #9A9A9A; */
+      padding-top:  8px;
+    }
+    .product-single__thumbnails-product-combo-new .slick-list.draggable {
+      padding: 0 10% 0 0 !important;
+    }
+    .thumbnails-wrapper {
+      margin-bottom: 0;
+    }
+    .product-single__thumbnails.product-single__thumbnails-product-combo-new {
+      margin-bottom: 8px;
+    }
+    .pdp-price-txt {
+      font-size: 20px;
+    }
+    .product-form-product-combo-new .price{
+      font-size: 18px;
+    }
+    .ggl_rvws{
+      width: 50%;   
+    }
+    .del_tt_price{
+      font-size:14px;
+    }
+    result-gl-rvw .ggl_rvws {
+      width: 100%;
+      margin-left: 0;
+    }
+    .template-page.result-f .ss-hero-product .result-gl-rvw {
+      width: 50% !important;
+    }
+  }
+  .cstm_sub-text{
+    font-size: 13px;
+    color: #CAC9C9 !important;
+  }
+  .cstm_plan-text{
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .IngredientsList {
+    background: url(https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Rectangle_74_3x_2.png?v=1655116581) no-repeat center;
+    background-size: cover;
+    padding: 3rem 0;
+  }
+  @media (max-width: 600px){
+    .result_page_pdt_hdg{
+      font-size:20px;
+    }
+    .cstm_plan-text{
+      font-size: 15px;
+    }
+  }
+  .plans-selection label.active{
+    color:#fff;
+    accent-color: #000;
+  }
+  #shopify-section-resultco-test-result #1_month input{
+    background-color:red;
+  }
+  .del_tt_price{
+    display:none;
+  }
+  .template-page.result-f .sticky-btn {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  .template-page.result-f .add-to-cart-result-page {
+    background: #B7D340 !important;
+    position: relative;
+  }
+  .template-page.result-f .add-to-cart-result-page:hover {
+    background: #272728 !important;
+    color: #fff !important;
+  }
+  .template-page.result-f button#add-to-cart-result-page:before {
+    content: '';
+    background-image: url(//cdn.shopify.com/s/files/1/0100/1622/7394/files/buy-it-now-iconblack_70x.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 25px;
+    display: block;
+    background-position: center;
+    position: absolute;
+    right: 20%;
+    left: 39%;
+    top: 33% !important;
+    transform: translateX(-50%);
+  }
+  .ss-hero-product button.add-to-cart-result-page:hover:before {
+    filter: invert(1);
+  }
+  .template-page.result-f button.add-to-cart-result-page:hover svg .fsvg_fill {
+    fill: #fff !important;
+  }
+  .template-page.result-f .add-to-cart-result-page:hover .money {
+    color: #fff !important;
+  }
+  .product-single__thumbnail {
+    display: block;
+    margin: -2px 0 8px;
+    min-height: 44px;
+    position: relative;
+    border: 0.5px solid #8A8A8A;
+    border-radius: 16px;
+    padding: 5px;
+  }
+  section#the-results {
+    background: #E9ECE9;
+    padding-bottom: 50px;
+  }
+  .result-f .our-experts {
+    background: #cfeae6;
+    padding-bottm: 1.5rem;
+  }
+  .fs-32 {
+    font-size: 32px;
+  }
+  .mainabsulteimg {
+    top: 27.5%;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+  }
+  .mainPosiImgfemale {
+    z-index: 99;
+  }
+</style>

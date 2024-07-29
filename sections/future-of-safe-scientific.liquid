@@ -1,0 +1,188 @@
+  <div class="home-essential position-relative my-5">
+    {% if section.settings.banner_image !=blank %}
+      <div class="d-none d-md-block essential_banner_image"></div>
+    {% endif %}
+    {% if section.settings.mobile_banner_image !=blank %}
+      <div class="d-md-none d-block essential_banner_image_mobile"></div>
+    {% endif %}
+    <div class="position-absolute future_safe_icons_new">
+      <p class="home-heading text-center font-weight-bold mb-3">
+        {% if section.settings.section-heading !=blank %}
+          <span class="d-none d-md-block">
+            {{ section.settings.section-heading }}
+          </span>
+          
+        {% endif %}
+        {% if section.settings.mobile_section_heading !=blank %}
+          <span class="d-md-none">
+            {{ section.settings.mobile_section_heading }}
+          </span>
+        {% endif %}
+      </p>
+      <div class="essential-main row mx-0 mx-md-auto mt-5">
+        {% for block in section.blocks %}
+          <div class="future_safe-icons text-center col-4 my-2">
+            {% if block.settings.icon_logo %}
+              <img class="logo" src="{{ block.settings.icon_logo | img_url:'70x' }}"/>  
+            {% endif %}
+            {% if block.settings.future_icon_text %}
+              <p class="future_icon_text">
+                {{ block.settings.future_icon_text }}
+              </p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "Login safe and scientific",
+    "settings":[
+      {
+        "type": "text",
+        "id": "section-heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "mobile_section_heading",
+        "label": "mobile_section_heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "banner_image",
+        "label": "banner_image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_banner_image",
+        "label": "mobile_banner_image"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "text",
+        "name": "Icon text",
+        "settings":[
+        {
+          "type": "image_picker",
+          "id": "icon_logo",
+          "label": "logo_image"
+        },
+        {
+          "type": "text",
+          "id": "future_icon_text",
+          "label": "future_icon_text"
+        }
+      ]
+    }
+  ],  
+  "presets":[
+      {
+        "name":"Login safe and scientific",
+        "category":"custom"
+      }
+    ]
+}
+{% endschema %}
+<style>
+  .essential_banner_image{
+    background-image:url('{{ section.settings.banner_image | img_url: ' ' }}');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: calc(550px);
+    background-attachment:fixed;
+   }
+  .future_safe_icons_new{
+    top: calc(50%);
+    left: calc(2%);
+    transform: translate(0px, -50%);
+  }
+  .essential-main{
+    width: 65%;
+    row-gap: 25px;
+  } 
+  .home-heading{
+    font-size: 26px;
+    line-height: 35px;
+    color: #000;
+  }
+  .future_icon_text{
+    font-size:16px;
+    line-height:21px;
+    margin-top:15px;
+    font-weight:600;
+    color: #000;
+    font-family: Nunito Sans,sans-serif!important;
+  }
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    .future_safe_icons_new{
+      width: 50%;
+      left: calc(5%);
+    }
+    .essential-main {
+      width: 80%;
+      row-gap: 30px;
+    }
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    .essential_banner_image {
+      height: calc(435px);
+    }
+    .future_safe_icons_new{
+      width: 50%;
+      left: calc(5%);
+    }
+    .home-heading{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .essential-main{
+      width: 70%;
+      row-gap: 0px;
+    }
+    .logo{
+      width:100%;
+    }
+    .future_icon_text{
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
+  @media only screen and (max-width: 767.98px){
+    .essential_banner_image_mobile{
+      background-image:url('{{ section.settings.mobile_banner_image | img_url: ' ' }}');
+      background-repeat:no-repeat;
+      background-size: 100% 100%;
+      min-height: 860px;
+    } 
+    .future_safe_icons_new{
+      top: 6%;
+      left: 0;
+      transform: translate(0px, 0px);
+    }
+    .essential-main{
+      width: 100%;
+      row-gap: 30px;
+    }
+  .future_safe-icons{
+      width: 50%;
+    }
+  .future_icon_text{
+    font-size: 13px;
+    line-height: 18px;
+    }
+  }
+  @media only screen and (max-width: 575.98px) {
+    .essential_banner_image_mobile{
+      min-height: 700px;
+    }
+  }
+  @media only screen and (max-width: 400.98px) {
+    .essential_banner_image_mobile {
+      min-height: 650px;
+    }
+  }
+</style>

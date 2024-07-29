@@ -1,0 +1,456 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<div
+  class="{{page.handle}} cust_reviews{% unless template.name =='index' or page.handle == 'result4' or page.handle == 'result4c' or page.handle == 'result4-a' or page.handle == 'result4b' or page.handle == 'all' %}{% unless template.suffix == 'resultco' or page.handle == 'result' %} mb-5{% endunless %}{% endunless %}"
+  page_type="normal"
+>
+  <div class="container">
+    {%- if section.settings.title != '' -%}
+      <p class="{% if page.handle == 'femalev2' or page.handle == 'female' or page.handle == 'femalev1' %} femalev2 {% endif %} {% if page.handle == 'female-result' %}font-fredoka fw-bold {% endif %}section-title">
+        {{ section.settings.title }}
+      </p>
+    {%- endif -%}
+    {%- if page.handle == 'new-female' -%}
+      <h5 class="section-sub-title">Discover why so many women trust Traya for hair fall</h5>
+    {%- endif -%}
+    {%- if page.handle == 'native' -%}
+      <h5 class="native-subitle-review section-sub-title">With Traya’s 3x Formula<sup>TM</sup></h5>
+    {%- endif -%}
+
+    {%- if page.handle == 'femalev2'
+      or page.handle == 'female'
+      or page.handle == 'femalev1'
+      or page.handle == 'female-result'
+    -%}
+      <h5 class="femalev2 native-subitle-review section-sub-title">
+        Discover why so many women <br>
+        trust Traya for hair fall
+      </h5>
+    {%- endif -%}
+    {% if page.handle == 'all' %}
+      <div class="row justify-content-center mb-4">
+        <button id="showM" class="men_button font-fredoka border rounded-lg btn_active col-3 col-md-2 mx-2 py-md-2">
+          Men
+        </button>
+        <button id="showF" class="women_button font-fredoka border rounded-lg col-3 col-md-2 mx-2 py-md-2">
+          Women
+        </button>
+      </div>
+    {% endif %}
+
+    <div class="customer-review-slide customer_reviews_container {% if page.handle == 'native' %}native-dots{% endif %}">
+      {%- for block in section.blocks -%}
+        <div class="customers_review_content {% unless page.handle == 'result-hi' or page.handle == 'result4c' or page.handle == 'result4' or page.handle == 'result4-a' or page.handle == 'result4b' %} {% if page.handle == 'all' %}pb-md-4 {% elsif template.suffix == 'resultco' %} pb-md-2{% else %} pb-md-5{% endif %}{% if block.settings.gender == 'M' %} review-resultco-M{% else %} review-resultco-F{% endif %}{% endunless %}">
+          <div class="{% unless page.handle == 'all' %}shadow-1 {% endunless %}">
+            <div class="">
+              <div class="custr_images justify-content-center">
+                {% for i in (1..4) %}
+                  {% capture icon %}icon_{{ i }}{% endcapture %}
+                  {% capture month %}month_title_{{ i }}{% endcapture %}
+                  {% if block.settings[month] != '' %}
+                    <div class="">
+                      {% if block.settings[icon] != blank %}
+                        <img
+                          class="lazyload"
+                          data-src="{{ block.settings[icon] | img_url: '300x' | prepend: 'https:' }}"
+                          alt="{{ block.settings[icon] | escape }}"
+                        >
+                      {% endif %}
+                      <p class="font-weight-bold text-center mt-2 mt-md-3">{{ block.settings[month] }}</p>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <div class="customers-item">
+              {% assign content_size = block.settings.content | size %}
+              <div class="name_and_verified my-2 l-0 px-md-3 px-3">
+                <strong class="font-weight-bold l-0" style="font-size:20px;">{{ block.settings.name }}</strong>
+                <div class="d-flex">
+                  {% comment %}
+                    <span class="pr-2" style="fill: #B7D340!important;">{% render 'result-icons', icon: 'verified-review-icon' %}</span>
+                    <span class="l-0 pb-2" style="color: #B7D340; font-size: 1em;">Verified Review</span>
+                  {% endcomment %}
+                  <span style="color: #B7D340;">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.3733 7.16003L13.4667 6.10667C13.2933 5.90667 13.1533 5.53333 13.1533 5.26667V4.13333C13.1533 3.42667 12.5733 2.84667 11.8667 2.84667H10.7333C10.4733 2.84667 10.0933 2.70667 9.89334 2.53333L8.84 1.62667C8.38 1.23333 7.62667 1.23333 7.16 1.62667L6.11334 2.54C5.91334 2.70667 5.53334 2.84667 5.27334 2.84667H4.12C3.41334 2.84667 2.83334 3.42667 2.83334 4.13333V5.27333C2.83334 5.53333 2.69334 5.90667 2.52667 6.10667L1.62667 7.16669C1.24 7.62669 1.24 8.37336 1.62667 8.83336L2.52667 9.89336C2.69334 10.0934 2.83334 10.4667 2.83334 10.7267V11.8667C2.83334 12.5734 3.41334 13.1534 4.12 13.1534H5.27334C5.53334 13.1534 5.91334 13.2934 6.11334 13.4667L7.16667 14.3734C7.62667 14.7667 8.38 14.7667 8.84667 14.3734L9.9 13.4667C10.1 13.2934 10.4733 13.1534 10.74 13.1534H11.8733C12.58 13.1534 13.16 12.5734 13.16 11.8667V10.7334C13.16 10.4734 13.3 10.0934 13.4733 9.89336L14.38 8.84003C14.7667 8.38003 14.7667 7.62003 14.3733 7.16003ZM10.7733 6.74003L7.55334 9.96003C7.46 10.0534 7.33334 10.1067 7.2 10.1067C7.06667 10.1067 6.94 10.0534 6.84667 9.96003L5.23334 8.34669C5.04 8.15336 5.04 7.83336 5.23334 7.64003C5.42667 7.44669 5.74667 7.44669 5.94 7.64003L7.2 8.90003L10.0667 6.03333C10.26 5.84 10.58 5.84 10.7733 6.03333C10.9667 6.22667 10.9667 6.54667 10.7733 6.74003Z" fill="#B7D340"/>
+                    </svg>
+                    Verified review
+                  </span>
+                </div>
+              </div>
+              <div class="rattings_ mb-2 d-flex align-items-center px-3">
+                <img src="{{ block.settings.stars | img_url:'' }}" width="" height="">
+                <span class="pl-2">{{ block.settings.star_value }}</span>
+              </div>
+              <span class="review-date pl-3 text-grey">
+                {%- unless page.handle == 'all' %} Reviewed on {% endunless -%}
+                {{- block.settings.review_on -}}
+              </span>
+
+              <div class="customers-review review_details review_details_female l-0 fullReview webkit-box font-weight-normal w-100 px-md-3 px-3">
+                “{{ block.settings.content }}”
+                <span>
+                  <!-- <span class="traya__used_for" style="display: flex; gap: 5px;">
+                    <p class="m-0 font-weight-bold">Used for</p>
+                    <p class="text-grey">{{ block.settings.used_for }}</p>
+                  </span> -->
+                  <span class="com_reco_pln  my-2 l-0">On complete Traya recommended plan.</span>
+                </span>
+              </div>
+              <span class="show_less_more_female px-md-3 px-3" style="text-decoration: underline;"
+                ><b class="toggleText" style="cursor: pointer;">read more</b></span
+              >
+              <div
+                class="row traya__used_for_container px-md-3 px-3{% if page.handle == 'all' %}d-none{% endif %}"
+              ></div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% if page.handle != 'all' %}
+    {% if section.settings.sub_title != '' %}
+      <h5 class="text-center mb-3 mt-3 sub_titile_heading">{{ section.settings.sub_title }}</h5>
+    {% endif %}
+  {% endif %}
+  {% unless page.handle == 'result4'
+    or page.handle == 'result4c'
+    or page.handle != 'result4-a'
+    or page.handle != 'result4b'
+  %}
+    {% if section.settings.btn_text != blank and section.settings.btn_link != blank %}
+      <div class="text-center mb-3">
+        <a
+          id="{% if page.handle == 'female' or page.handle == 'new-female' %}female-hair-test-button5{% elsif page.handle == 'femalev1' %}femalev1-hair-test-button6{% else %}hairtestcta{% endif %}"
+          href="{{ section.settings.btn_link }}&page={{ page__hndl }}"
+          class="start-journey-btn btn btn-dark my-3 shadow hair-form-actn-link"
+        >
+          {{- section.settings.btn_text }}
+          <sup>&trade;</sup></a
+        >
+      </div>
+    {% endif %}
+  {% endunless %}
+</div>
+
+{% if page.handle == 'result4' or page.handle == 'result4-a' or page.handle == 'result4b' or page.handle == 'result5' %}
+  <style>
+    .slick-items-container-result:not(.slick-initialized) .review-resultco-M~.review-resultco-M, .review-resultco-F{
+      display:none;
+    }
+  </style>
+{% endif %}
+{% style %}
+    .customers-review {
+      font-size:1rem !important;
+      font-weight:400;
+    }
+     .customers-item svg path {
+        fill: #B7D340 !important;
+     }
+    .traya__used_for_container {
+      margin: 0;
+    }
+     p.femalev2.section-title {
+      margin-bottom: 30px!important;
+  }
+    h5.femalev2.native-subitle-review.section-sub-title {
+      margin-bottom: 15px;
+      font-weight: 100 !important;
+  }
+      .female.mb-5s, .femalev1.mb-5s{
+      text-align:center;
+        margin:0 0 48px 0;
+    }
+    .female .female.mb-5 .section-title, .femalev1 .femalev1.mb-5 .section-title, .female-result .female.mb-5 .section-title{
+      margin-bottom:10px !important;
+    }
+     .female .female mb-5s .section-title-main, .femalev1 .femalev1 mb-5s .section-title-main{
+       font-size: 18px;
+      font-weight: 400!important;
+     }
+    .female .female mb-5s h5.text-center, .femalev1 .femalev1 mb-5s h5.text-center{
+      font-size:20px;
+    }
+  /*   .customer-review-slider .review-resultco-F{display:none;} */
+      {% if page.handle == 'all' %}
+    .men_button, .women_button{
+      color:#CBCBCB;
+          background: transparent;
+  }
+    .btn_active{
+      color:#000;
+      border-width: 1px 1px 4px !important;
+      border-bottom-color: #B7D340 !important;
+    }
+    .container_hide{
+      display:none !important;
+    }
+      .container_show{
+      display:block !important;
+    }
+      {% endif %}
+    .our-customers-img img{
+      object-fit: cover;
+      width: auto;
+      height: 180px;
+      margin: 0 auto;
+    }
+    .main-customers p{
+      font-size: 16px;
+    }
+    .customers-item h2 {
+      font-size: 32px;
+    }
+    .review-date, .traya__recommended, .traya__used_for p {
+      font-size: 16px;
+      letter-spacing: normal;
+    }
+    .customers-review, .homev5 .heading{
+      font-size: 20px;
+    }
+    @media screen and (max-width: 767px) {
+       h5.femalev2.native-subitle-review.section-sub-title, .female-result .native-subitle-review {
+      font-size: 18px;
+  }
+        .our-customers-img img{
+      width: auto;
+      height: 110px;
+    }
+    .main-customers p{
+      font-size: 15px;
+    }
+    .customers-item h2 {
+      font-size: 24px;
+    }
+    .review-date, .traya__recommended. traya__used_for p {
+      font-size: 14px;
+    }
+    }
+    {% if page.handle == 'all' %}
+      .template-page.all .customer-review-slider .card {
+        background: #FFF;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+    {% endif %}
+    {% if page.handle == 'female' or page.handle == 'new-female'%}
+      .section-title-main {
+        letter-spacing: normal;
+      }
+    {% endif %}
+    .customer-review-slider:not(.slick-initialized) > .slider-div:first-of-type ~ * {
+      display: none;
+    }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Customer Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+	{
+      "type": "text",
+      "id": "sub_title",
+      "label": "Sub Title"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Review",
+      "settings": [
+		{
+          "type": "text",
+          "id": "name",
+          "label": "Customer Name"
+        },
+		 {
+        "type": "select",
+        "id": "gender",
+        "label": "Gender",
+        "options":[
+			{
+           "label": "Male",
+		   "value": "M"
+            },
+            {
+			 "label": "Female",
+		   "value": "F"
+            }
+		  ],
+		  "default": "M"
+        },
+		{
+          "type": "text",
+          "id": "used_for",
+          "label": "How Long Used Product"
+        },
+		{
+          "type": "text",
+          "id": "review_on",
+          "label": "Provided Review On"
+        },
+		{
+          "type": "text",
+          "id": "kit_purchased",
+          "label": "Kit Purchased"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "header",
+          "content": "Month 1"
+        },
+		{
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "Image"
+        },
+		{
+          "type": "text",
+          "id": "month_title_1",
+          "label": "Month"
+        },
+        {
+          "type": "header",
+          "content": "Month 2"
+        },
+		{
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Image"
+        },
+		{
+          "type": "text",
+          "id": "month_title_2",
+          "label": "Month"
+        },
+        {
+          "type": "header",
+          "content": "Month 3"
+        },
+		{
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "Image"
+        },
+		{
+          "type": "text",
+          "id": "month_title_3",
+          "label": "Month"
+        },
+        {
+          "type": "header",
+          "content": "Month 4"
+        },
+		{
+          "type": "image_picker",
+          "id": "icon_4",
+          "label": "Image"
+        },
+		{
+          "type": "text",
+          "id": "month_title_4",
+          "label": "Month"
+        },
+        {
+            "type":"image_picker",
+            "id":"stars",
+            "label":"Add Star"
+          },
+          {
+            "type":"text",
+            "id":"star_value",
+            "label":"Add Star Value"
+          }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Customer Reviews Female"
+    }
+  ]
+}
+{% endschema %}
+{% if page.handle != 'all' %}
+  <script>
+    $(document).ready(function(){
+    $(".customer-review-slider").slick({ infinite: !0, slidesToShow: 3, slidesToScroll: 1, dots: !1, arrows: !0, autoplay: true, responsive: [{ breakpoint: 767, settings: { slidesToShow: 1,  arrows: !1, slidesToScroll: 1 } }] });
+    $(".customer-review-slider .review-resultco-F").addClass("container_hide");
+    $("#showM").click(function(){
+      $(".customer-review-slider .review-resultco-F").removeClass("container_show");
+    $(".customer-review-slider .review-resultco-M").addClass("container_show");
+    $(".customer-review-slider .review-resultco-F").addClass("container_hide");
+    $(".men_button").addClass("btn_active");
+    $(".women_button").removeClass("btn_active");
+    $('.customer-review-slider').slick('unslick');
+    $('.customer-review-slider').slick({
+      slide: '.review-resultco-M',
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      autoplay: true,
+      arrows: true,
+      swipe : true,
+      adaptiveHeight: false
+    });
+    });
+    $("#showF").click(function(){
+    $(".customer-review-slider .review-resultco-M").removeClass("container_show");
+    $(".customer-review-slider .review-resultco-F").addClass("container_show");
+    $(".customer-review-slider .review-resultco-M").addClass("container_hide");
+    $(".women_button").addClass("btn_active");
+    $(".men_button").removeClass("btn_active");
+    $('.customer-review-slider').slick('unslick');
+    $('.customer-review-slider').slick({
+      slide: '.review-resultco-F',
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      autoplay: true,
+      arrows: true,
+      swipe : true,
+      adaptiveHeight: false
+    });
+    });
+    });
+  </script>
+{% else %}
+  <script>
+    $(document).ready(function(){
+      {% if page.handle == 'native'  %}
+    $(".customer-review-slider.native-dots").slick({ infinite: !0, slidesToShow: 1, slidesToScroll: 1, dots: !1, arrows: !0, autoplay: true, responsive: [{ breakpoint: 767, settings: { slidesToShow: 1,  arrows: !1, slidesToScroll: 1 } }] });
+      {% else %}
+         $(".customer-review-slider").slick({ infinite: !0, slidesToShow: 1, slidesToScroll: 1, dots: !1, arrows: !0, autoplay: true, responsive: [{ breakpoint: 767, settings: { slidesToShow: 1,  arrows: !1, slidesToScroll: 1 } }] });
+      {% endif %}
+    });
+  </script>
+{% endif %}

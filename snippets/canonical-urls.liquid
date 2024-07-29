@@ -1,0 +1,81 @@
+{% if page.handle == 'home-v3' or page.handle == 'homepage' or page.handle == 'dermat-1' or page.handle == 'homev2' %}
+  <link rel="canonical" href="https://traya.health/">
+{% elsif page.handle == 'telogeneffluviumfemalereport'
+  or page.handle == 'tellogen-report'
+  or page.handle == 'telogen-effluvium'
+  or page.handle == 'telogen-effluvium-report-male'
+  or page.handle == 'telogen-effluvium-report-female'
+%}
+  <link rel="canonical" href="https://traya.health/blogs/hair-care/telogen-effluvium">
+{% elsif page.handle == 'malecombo' %}
+  <link rel="canonical" href="https://traya.health/products/men-complete-customised-hair-loss-treatment-plan">
+{% elsif request.path contains '/collections/all/product'
+  or request.path contains '/collections/products/all'
+  or request.path contains '/collections/all'
+  or page.handle contains 'all-products'
+  or request.path contains '/collections/all/treatment-plans'
+  or request.path contains '/collections/all/treatment-plans'
+  or request.path contains '/collections/all/result-page-products'
+%}
+  <link rel="canonical" href="https://traya.health/collections/all-products">
+{% elsif page.handle contains 'alopecia-areata-report' %}
+  <link rel="canonical" href="https://traya.health/blogs/hair-care/alopecia-areata">
+{% elsif request.path contains '/collections/all/do-not-delete' %}
+  <link rel="canonical" href="https://traya.health/collections/">
+{% elsif request.path contains '/collections/products/do-not-delete' or page.handle contains 'all-products' %}
+  <link rel="canonical" href="https://traya.health/collections/products/">
+{% comment %}
+  {% elsif article.handle contains 'anti-dandruff-shampoo'
+  or request.path contains '/products/copy-of-traya-ketoconazole-2-shampoo-1'
+%}
+  <link rel="canonical" href="https://traya.health/products/anti-dandruff-shampoo">
+{% elsif article.handle contains 'gutt-shudhi' or request.path contains '/products/copy-of-traya-gut-shuddhi-1' %}
+  <link rel="canonical" href="https://traya.health/products/avipattikar-digestion-tablets">
+{% elsif article.handle contains 'hair-loss-shampoo-what-to-look-for-and-how-to-use'
+  or request.path contains '/products/copy-of-traya-hair-fall-shampoo-1'
+%}
+  <link rel="canonical" href="https://traya.health/products/shampoo">
+{% elsif article.handle contains 'hair-ras' %}
+  <link rel="canonical" href="https://traya.health/products/hair-fall-tablets">
+{% elsif article.handle contains 'hair-root-serum'
+  or request.path contains '/products/copy-traya-health-hair-root-serum-1'
+%}
+  <link rel="canonical" href="https://traya.health/products/hair-root-serum">
+{% elsif article.handle contains 'traya-minoxidil-5' %}
+  <link rel="canonical" href="https://traya.health/products/traya-minoxidil-5">
+{% elsif article.handle contains 'hair-vitamins' or request.path contains '/products/copy-of-multivitamin-tablets-1' %}
+  <link rel="canonical" href="https://traya.health/products/hair-vitamins">
+{% elsif article.handle contains 'shatavari-ghrita' or request.path contains '/products/traya-health-ghrit-1' %}
+  <link rel="canonical" href="https://traya.health/products/shatavari-ghrita">
+{% elsif article.handle contains 'antioxidant-supplements' %}
+  <link rel="canonical" href="https://traya.health/collections/antioxidant-supplements">
+{% elsif article.handle contains 'dandruff-solutions' %}
+  <link rel="canonical" href="https://traya.health/collections/dandruff-solutions">
+{% elsif article.handle contains 'detox-products' %}
+  <link rel="canonical" href="https://traya.health/collections/detox-products">
+{% elsif article.handle contains 'digestive-products' %}
+  <link rel="canonical" href="https://traya.health/collections/digestive-products">
+{% elsif article.handle contains 'hair-oils' %}
+  <link rel="canonical" href="https://traya.health/collections/hair-oils">
+{% elsif article.handle contains 'herbal-products' %}
+  <link rel="canonical" href="https://traya.health/collections/herbal-products">
+{% elsif article.handle contains 'immunity-boosters' %}
+  <link rel="canonical" href="https://traya.health/collections/immunity-boosters">
+{% elsif request.path contains '/products/copy-of-traya-health-minoxidil-1' %}
+  <link rel="canonical" href="https://traya.health/products/minoxidil-2">
+{%- elsif canonical_url != blank -%}
+  <link rel="canonical" href="{{ canonical_url }}">
+{% elsif product.handle contains 'scalp-oil-with-calm-therapy-booster-shots' %}
+  <link rel="canonical" href="https://traya.health/products/scalp-oil-with-growth-therapy-booster-shots">
+{% elsif product.handle contains 'scalp-oil-with-dandruff-therapy-booster-shots' %}
+  <link rel="canonical" href="https://traya.health/products/scalp-oil-with-dandruff-therapy-booster-shots">
+{% elsif product.handle contains 'scalp-oil-with-scalp-therapy-booster-shots' %}
+  <link rel="canonical" href="https://traya.health/products/scalp-oil-with-scalp-therapy-booster-shots">
+{% elsif blog.handle contains 'how-can-i-thicken-my-hair-help-it-grow-long/quick-guide-for-hair-health' %}
+  <link rel="canonical" href="https://traya.health/blogs/how-can-i-thicken-my-hair-help-it-grow-long/quick-guide-for-hair-health">
+{% elsif blog.handle contains 'how-can-i-thicken-my-hair-help-it-grow-long/quick-tips-to-help-you-make-your-hair-healthier-fuller-shinier' %}
+  <link rel="canonical" href="https://traya.health/blogs/how-can-i-thicken-my-hair-help-it-grow-long/quick-tips-to-help-you-make-your-hair-healthier-fuller-shinier">
+{% elsif blog.handle contains 'how-can-i-thicken-my-hair-help-it-grow-long' %}
+  <link rel="canonical" href="https://traya.health/blogs/how-can-i-thicken-my-hair-help-it-grow-long">
+  {% endcomment %}
+{%- endif -%}

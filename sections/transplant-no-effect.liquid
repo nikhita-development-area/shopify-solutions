@@ -1,0 +1,66 @@
+<div class="transplant-side-effect">
+  <p class="font-weight-bold text-center transplant-care-heading">{{ section.settings.side-effect-heading }}</p>
+  <div class="position-relative trarsplant-effects">
+    <div class="position-absolute effects">
+      {% for block in section.blocks %}
+        <p class="side-effects"><span class="mr-1"><svg width="29" height="25" viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M29 0.070598C28.8506 0.602257 28.4985 0.79106 28.1891 1.01674C20.0157 6.99086 13.6029 14.573 8.43002 23.2987C8.01601 23.9953 7.7898 25.1345 6.75053 24.987C5.94599 24.872 5.98227 23.8152 5.70698 23.1576C4.61435 20.5406 3.78633 17.8172 2.52298 15.2652C2.0727 14.3516 1.49651 13.6182 0.499916 13.3339C-0.0976148 13.1646 -0.104006 12.8999 0.190491 12.4007C0.392139 12.0392 0.662287 11.722 0.985337 11.4674C1.30839 11.2128 1.67792 11.0259 2.07249 10.9175C2.46707 10.8092 2.87886 10.7814 3.28404 10.836C3.68922 10.8906 4.07974 11.0263 4.43296 11.2354C5.81369 12.008 6.62889 13.2731 7.20721 14.6836C7.57 15.5516 7.84741 15.4865 8.41293 14.8703C11.5756 11.4546 14.6507 7.94133 18.3255 5.05952C20.9824 2.98063 23.8036 1.20553 27.0495 0.213828C27.6756 -0.00954973 28.3489 -0.0589989 29 0.070598Z" fill="#175E53"></path>
+        </svg></span>{{ block.settings.side-effect }}</p>
+      {% endfor %}
+    </div>
+    {% if section.settings.des-img != blank %}
+      <img src="{{ section.settings.des-img | img_url: ' ' }}" width="100%" class="d-none d-md-block">
+    {% endif %}
+    {% if section.settings.mob-img != blank %}
+      <img src="{{ section.settings.mob-img | img_url: '578x' }}" class="d-md-none">
+    {% endif %}
+  <p class="position-absolute bottom-text">{{ section.settings.side-effect-last }}</p>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "No Side Effect",
+    "settings": [
+      {
+        "type": "text",
+        "id": "side-effect-heading",
+        "label": "Enter Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "des-img",
+        "label": "Select Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mob-img",
+        "label": "Select Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "side-effect-last",
+        "label": "Enter Last Text"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Side Effects",
+        "type": "Side-Effect",
+        "settings": [
+          {
+            "type": "text",
+            "id": "side-effect",
+            "label": "Enter Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "No side effect",
+        "category": "custom"
+      }
+    ]
+  }
+{% endschema %}

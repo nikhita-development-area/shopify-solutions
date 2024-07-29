@@ -1,0 +1,36 @@
+{%- if section.settings.show_frequently -%}
+{% include 'frequently-bought-together'
+            show_quick_add: section.settings.enable_quick_add
+%}
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Frequently bought",
+    "settings": [
+	{
+      "type": "checkbox",
+      "id": "show_frequently",
+      "label": "Show Frequently bought together",
+	  "default": true
+	},
+	{
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+	  "default": "Frequently Brought Together"
+	},
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.enable_quick_buy.label"
+    }
+   ],
+    "presets": [
+      {
+        "name": "Frequently bought"
+      }
+    ]
+  }
+{% endschema %}

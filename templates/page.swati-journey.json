@@ -1,0 +1,178 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email-form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email-form"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "16639215362fc0abc0": {
+      "type": "thankyou-page-section",
+      "disabled": true,
+      "settings": {
+        "thank-text": "Thank you",
+        "thank-content": ""
+      }
+    },
+    "16641821004e9c82ea": {
+      "type": "treatment-journey",
+      "blocks": {
+        "be67d1ee-4a50-4182-b3a6-e8ff3c397e1d": {
+          "type": "Diagnosis",
+          "settings": {
+            "Diagnosis": "Hair and Scalp Diagnosis",
+            "DiagnosisContent": "A thinner ponytail, visible scalp and poor hair growth were Swati’s major hair concerns. She also mentioned her scalp was oily and she suffered from heavy dandruff.",
+            "icon1": "shopify:\/\/shop_images\/condition01_1_1.png",
+            "iconText1": "Digestion",
+            "icon2": "shopify:\/\/shop_images\/condition02_1.png",
+            "iconText2": "Stage 5",
+            "icon3": "shopify:\/\/shop_images\/condition03_1.png",
+            "iconText3": "Dandruff"
+          }
+        },
+        "26c7fd51-663b-4855-81b5-8373094d83ab": {
+          "type": "Doctors",
+          "settings": {
+            "PublicationsContent": "",
+            "doctorImg": "shopify:\/\/shop_images\/doctor02_5edac7cf-d121-45d7-8d07-57239252975c.png",
+            "doctorName": "Dr Shailendra Chaubey",
+            "doctorcontent": "“I believe that Tatva is not a treatment plan, but instead a healing plan. They identify the root cause of your condition and treat it by making a solution best suited for you!”, Dr. Shailendra Chaubey\nBenneta’s tip for you: \"Let's stay in touch at least twice a month!\""
+          }
+        }
+      },
+      "block_order": [
+        "be67d1ee-4a50-4182-b3a6-e8ff3c397e1d",
+        "26c7fd51-663b-4855-81b5-8373094d83ab"
+      ],
+      "settings": {
+        "heading_TJ": "Swati’s Hair Loss Treatment Journey",
+        "userScalp": "shopify:\/\/shop_images\/swati01_3d0e17d3-0a97-4fa2-97c8-8b208ded7383.jpg"
+      }
+    },
+    "16641821169e77dd3f": {
+      "type": "journey-recommended",
+      "blocks": {
+        "43d51f05-517e-4147-a494-041ef52e4b34": {
+          "type": "scalpimg",
+          "settings": {
+            "month1": "Month 1",
+            "scalp-img1": "shopify:\/\/shop_images\/Month-b1_3edc0935-a7fa-481f-b0ab-a2d6b24a9324.jpg",
+            "month2": "Month 5",
+            "scalp-img2": "shopify:\/\/shop_images\/Month-b5_8ecbb77d-a1f1-45ea-91e7-411b2e899984.jpg",
+            "month3": "Month 6",
+            "scalp-img3": "shopify:\/\/shop_images\/Month-b6_3b57e5f4-113f-4c72-ab81-f4a36b0d245e.jpg"
+          }
+        },
+        "b01b534b-b88f-4c1b-9b72-8be91583aacf": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "1. Minoxidil 2%"
+          }
+        },
+        "aaeb4a40-5f93-4790-9183-accc7cd303fd": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "2. Ghirt nasal drop"
+          }
+        },
+        "61c029ef-1c1d-4b03-b9f6-ba175720176a": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "3. Gut shuddhi"
+          }
+        },
+        "c754f764-8177-4694-beff-7235098a5d5c": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "4. Scalp oil"
+          }
+        },
+        "379cc8ba-7197-4887-b225-22209785073e": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "5. Anti-Dandruff Shampoo"
+          }
+        },
+        "eaa859e9-92c4-421d-acdc-c22a147689df": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "6. Hair ras"
+          }
+        },
+        "8a74c6b5-6a3d-4903-8cfb-07d3c4832baa": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "7. Free diet plan"
+          }
+        },
+        "3c400aca-3152-4e36-bf2a-f1e0e45a7b12": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "8. Assigned hair coach"
+          }
+        }
+      },
+      "block_order": [
+        "43d51f05-517e-4147-a494-041ef52e4b34",
+        "b01b534b-b88f-4c1b-9b72-8be91583aacf",
+        "aaeb4a40-5f93-4790-9183-accc7cd303fd",
+        "61c029ef-1c1d-4b03-b9f6-ba175720176a",
+        "c754f764-8177-4694-beff-7235098a5d5c",
+        "379cc8ba-7197-4887-b225-22209785073e",
+        "eaa859e9-92c4-421d-acdc-c22a147689df",
+        "8a74c6b5-6a3d-4903-8cfb-07d3c4832baa",
+        "3c400aca-3152-4e36-bf2a-f1e0e45a7b12"
+      ],
+      "settings": {
+        "plantitle": "Traya’s Recommended Plan",
+        "planimg": "shopify:\/\/shop_images\/plan-img_6ad2aa7c-aba5-49fa-b861-b808180378d9.jpg",
+        "plancontent": "For the first month, we aimed to fix his internal health. The advantage was his age, so we prescribed treatment to improve his energy levels and fix his digestion. Not only that, we made sure he followed the diet. He was an active guy and worked out regularly. Being busy it was tough for him to be regular, but with the guidance of his hair coach, he took efforts to be consistent. And that's what gave him amazing results in just 4 months. That's why we always tell people to start early.",
+        "customisedtitle": "What was Uddeshya’s Customised Treatment Plan?",
+        "allmonthtitle": "Result seen in 4 months"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "newsletter",
+    "16639215362fc0abc0",
+    "16641821004e9c82ea",
+    "16641821169e77dd3f"
+  ]
+}

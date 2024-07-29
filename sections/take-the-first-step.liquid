@@ -1,0 +1,279 @@
+<div class="container pt-5">
+  <div class="section-title text-center mt-5">
+      {% if section.settings.cholestrol_heading1 != blank %}
+        <p class="section-title-main mb-0 pt-0">{{ section.settings.cholestrol_heading1 }}</p>
+      {% endif %}
+      {% if section.settings.cholestrol_heading2 != blank %}
+        <p class="mb-5 mt-md-0  px-md-0 font_title__subheading">{{ section.settings.cholestrol_heading2 }}</p>
+      {% endif %}
+    </div>
+  <div class="row pt-5">
+      {% for block in section.blocks %}
+        <div class="col-md-4 pt-4">
+          <div class="cholestrol_card_section shadow p-3">
+            <div class="icon_heading text-center pt-4 px-4 border-bottom">
+              <img class="mx-auto d-block" src="{{ block.settings.cholestrol_logo | img_url:' ' }}"/>  
+              <p class="font_title_child_heading font-weight-bold mb-3 mt-2" style= "color:{{ block.settings.body_text }}";>
+                {{ block.settings.font_title_child_heading }}
+              </p>
+            </div>
+            <div class="px-4 pl-md-3 pr-md-3">
+              <div class="pt-md-4 text-md-left text-right">
+                <div class="mt-2 mt-md-0 pb-4 ml-3">
+                  <div class="chol-img-head d-flex">
+                    <div class="chol-icon-img">
+                      <img src="{{ block.settings.chol-icon-img1 | img_url:' ' }}"/>  
+                    </div>
+                    <div class="chol-icon-text">
+                      <p class="icon_text ml-3 mt-lg-3 mt-md-0 mb-md-0">{{ block.settings.font_description_icon1 }}</p>
+                    </div>
+                  </div>
+                  <div class="chol-img-head d-flex">
+                    <div class="chol-icon-img">
+                      <img src="{{ block.settings.chol-icon-img2 | img_url:' ' }}"/>  
+                    </div>
+                    <div class="chol-icon-text">
+                      <p class="icon_text ml-3 mt-lg-3 mt-md-0 mb-md-0">{{ block.settings.font_description_icon2 }}</p>
+                    </div>
+                  </div>
+                  <div class="chol-img-head d-flex">
+                    <div class="chol-icon-img">
+                      <img src="{{ block.settings.chol-icon-img3 | img_url:' ' }}"/>  
+                    </div>
+                    <div class="chol-icon-text">
+                      <p class="icon_text ml-3 mt-lg-3 mt-md-0 mb-md-0">{{ block.settings.font_description_icon3 }}</p>
+                    </div>
+                  </div>
+                  <div class="chol-img-head d-flex">
+                    <div class="chol-icon-img">
+                      <img src="{{ block.settings.chol-icon-img4 | img_url:' ' }}"/>  
+                    </div>
+                    <div class="chol-icon-text">
+                      <p class="icon_text ml-3 mt-lg-3 mt-md-0 mb-md-0">{{ block.settings.font_description_icon4 }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+  {% if section.settings.footer_text != blank %}
+    <div class="footer_text1 pt-5">
+        <p class="font_title__subheading text-center mb-3 mt-md-5">{{ section.settings.footer_text }}</p>
+      </div>
+  {% endif %}
+  {% if section.settings.button_link != blank and section.settings.button_text != blank %}
+    <div class="page_link text-center">
+        <a href="{{ section.settings.button_link }}" class="btn btn btn-dark mt-4 p-3 mb-5">{{ section.settings.button_text }}</a> 
+      </div>
+  {% endif %}
+</div>
+  
+{% schema %}
+  {
+    "name": "Take The Hair Step",
+    "settings":[
+      {
+        "type": "text",
+        "id": "cholestrol_heading1",
+        "label": "Heading1"
+      },
+      {
+        "type": "text",
+        "id": "cholestrol_heading2",
+        "label": "Heading2"
+      },
+      {
+        "type": "text",
+        "id": "footer_text",
+        "label": "Heading1"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Heading1"
+      }
+    ],  
+      "blocks":[
+        {
+          "type": "Head",
+          "name": "Take The Hair Step",
+          "limit":12,
+          "settings":[
+        {
+          "type": "image_picker",
+          "id": "cholestrol_logo",
+          "label": "gallery_image"
+        },
+        {
+          "type": "text",
+          "id": "font_title_child_heading",
+          "label": "Heading2"
+        },
+        {
+          "type": "image_picker",
+          "id": "chol-icon-img1",
+          "label": "gallery_image"
+        },
+        {
+          "type": "text",
+          "id": "font_description_icon1",
+          "label": "icon_text1"
+        },
+         {
+          "type": "image_picker",
+          "id": "chol-icon-img2",
+          "label": "gallery_image"
+        },
+        {
+          "type": "text",
+          "id": "font_description_icon2",
+          "label": "icon_text1"
+        },
+         {
+          "type": "image_picker",
+          "id": "chol-icon-img3",
+          "label": "gallery_image"
+        },
+        {
+          "type": "text",
+          "id": "font_description_icon3",
+          "label": "icon_text1"
+        },
+         {
+          "type": "image_picker",
+          "id": "chol-icon-img4",
+          "label": "gallery_image"
+        },
+        {
+          "type": "text",
+          "id": "font_description_icon4",
+          "label": "icon_text4"
+        },
+        {
+          "type": "color",
+          "id": "body_text",
+          "label": "Body text",
+          "default": "#000000"
+        }
+      ]
+    }
+  ],  
+  "presets":[
+              {
+                "name":"Take The Hair Step",
+                "category":"custom"
+              }
+            ]
+}
+{% endschema %}
+
+<style>
+  .cholestrol_card_section{
+    border-radius:10px;
+    background: #FBFBFB;
+  }
+  .section-title-main{
+    font-size: 44px;
+    font-weight:600;
+    line-height: 1.25;
+    letter-spacing: -.22px;
+    margin-bottom: 30px;
+    padding-top: 40px;
+  }
+  .font_title__subheading{
+    font-size:35px;
+  }
+  .icon_heading img{
+    height:70px;
+  }
+  p.font_title_child_heading{
+    font-size:30px;
+    color: #72614e;
+  }
+  p.icon_text{
+   font-size:18px;
+  }
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    p.font_title_child_heading {
+      font-size: 25px;
+    }
+    p.icon_text {
+      font-size: 16px;
+    }
+    .chol-img-head {
+      align-items: center;
+    }
+    .font_title__subheading {
+      font-size: 26px;
+    }
+  }
+  @media only screen and (max-width: 991px) and (min-width: 768px) {
+    p.font_title_child_heading {
+      font-size: 20px;
+    }
+    p.icon_text {
+      font-size: 15px;
+    }
+    .chol-img-head {
+      align-items: center;
+    }
+    .font_title__subheading {
+      font-size: 20px;
+    }
+    .section-title-main {
+      font-size: 35px;
+    }
+  }
+  @media only screen and (max-width: 767.98px) and (min-width: 576px){
+    .section-title-main{
+      font-size:440x;
+      font-weight:600;
+      line-height: 1.25;
+      letter-spacing: -.22px;
+      margin-bottom: 30px;
+      padding-top: 40px;
+    }
+    p.font_title_child_heading{
+       font-size:20px; 
+    }
+    .font_title__subheading{
+      font-size: 25px;
+    }
+     p.icon_text{
+     font-size:16px;
+    }
+  }
+  @media only screen and (max-width: 575.98px){
+    .section-title-main{
+      font-size: 25px;
+      font-weight:600;
+      line-height: 1.25;
+      letter-spacing: -.22px;
+    }
+    .font_title__subheading{
+      font-size:20px;
+    }
+  }
+  @media only screen and (max-width: 400px){
+    .section-title-main{
+      font-size: 25px;
+      font-weight:600;
+      line-height: 1.25;
+      letter-spacing: -.22px;
+    }
+    p.icon_text{
+     font-size:16px;
+    }
+    .font_title__subheading{
+      font-size: 20px;
+    }
+  }
+</style>

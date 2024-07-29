@@ -1,0 +1,233 @@
+<div class="position-relative mt-4">
+  {% if section.settings.des_img != blank and section.settings.mob_img != blank %}
+    <div class="d-none d-md-block">
+      <img data-src="{{ section.settings.des_img | img_url: ' ' }}" width="100%" class="lazyload three-foldway-main1 d-none d-md-block">
+    </div>
+    <div class="d-md-none">
+      <img data-src="{{ section.settings.mob_img | img_url: ' ' }}" width="100%" class="lazyload d-md-none three-foldway-main2">
+    </div>
+  {% endif %}
+  <div class="three-fold-text position-absolute">
+    {% if section.settings.text1 != blank %}
+      <p class="threefold-second d-none d-md-block">{{ section.settings.text1 }}</p>
+    {% endif %}
+    {% if section.settings.mobile_text1 != blank %}
+      <p class="threefold_mobile_text d-md-none">{{ section.settings.mobile_text1 }}</p>
+    {% endif %}
+    {% if section.settings.text2 != blank %}
+      <p class="threefold-first text_Fredoka font-weight-bold position-relative">{{ section.settings.text2 }}</p>
+    {% endif %}
+    {% if section.settings.text3 != blank %}
+      <p class="threefold-third text-black mb-4 pt-4 mt-md-4 my-md-4">{{ section.settings.text3 }}</p>
+    {% endif %}
+    {% if section.settings.text4 != blank %}
+      <p class="threefold-fourth mt-4">{{ section.settings.text4 }}</p>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Three Fold Way All",
+    "settings":[
+      {
+        "type": "image_picker",
+        "id": "des_img",
+        "label": "Select Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mob_img",
+        "label": "Select Mobile Image"
+      },
+      {
+        "type": "html",
+        "id": "text1",
+        "label": "text1"
+      },
+      {
+        "type": "html",
+        "id": "mobile_text1",
+        "label": "text2"
+      },
+      {
+        "type": "text",
+        "id": "text2",
+        "label": "text2"
+      },
+      {
+        "type": "text",
+        "id": "text3",
+        "label": "text3"
+      },
+      {
+        "type": "text",
+        "id": "text4",
+        "label": "text3"
+      }
+    ],
+    "presets":[
+        {
+          "name":"Three Fold Way All",
+          "category":"custom"
+        }
+      ]
+  }
+{% endschema %}
+
+<style>
+  .three-foldway-main1{
+    height: calc(500px);
+}
+  .three-fold-text{
+    width: calc(32%);
+    left: calc(10%);
+    top: calc(50%);
+    transform: translate(0px, -50%);
+  }
+  .threefold-first{
+    font-size: 36px;
+    line-height: 45px;
+    color: #414143;
+  }
+    span,.ab{
+      font-weight:700;
+    }
+  .threefold-second{
+    font-size: 20px;
+    line-height: 25px;
+    color: #414143;
+    text-transform: uppercase;
+  } 
+  .threefold-third{
+    font-size: 21px;
+    line-height: 30px;
+    color: #414143;
+    font-weight:600;
+  }
+  .threefold-fourth{
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #000;
+  }
+  .threefold-first:after{
+    content:"";
+    position:absolute;
+    background:#414042;;
+    display:block;
+    height: 3px;
+    width: 45px;
+    left: 1%;
+    transform: translateX(0%);
+  }
+  @media only screen and (max-width: 1430.98px) and (min-width: 1200px){
+    .threefold-second {
+      font-size: 18px;
+    }
+    .threefold-third {
+      font-size: 16px;
+      line-height: 25px; 
+    }
+    .threefold-fourth{
+      font-size:17px;
+      line-height:24px;
+    }
+    .three-foldway-main1{
+      height: 400px;
+    }
+  }
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    .three-foldway-main1 {
+      height: calc(350px);
+    }
+    .three-fold-text {
+      width: calc(42%);
+    }
+    .threefold-second {
+      font-size: 18px;
+      line-height: 20px;
+    }
+    .threefold-first {
+      font-size: 30px;
+      line-height: 35px;
+    }
+    .threefold-third, .threefold-fourth {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px){
+    .three-fold-text{
+      width: calc(45%);
+    }
+   .threefold-second{
+      font-size: 15px;
+      line-height: 20px;
+    }
+    .threefold-first{
+      font-size: 25px;
+      line-height: 35px;
+    }
+    .threefold-third{
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0 !important;
+    }
+    .threefold-fourth{
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: 10px !important;
+    }
+    .three-foldway-main1{
+      height: 300px;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .three-foldway-main2{;
+      height: 100%;
+    }
+    .threefold_mobile_text{
+      font-size: 18px;
+      line-height: 30px;
+      text-transform: uppercase;
+    }
+    .three-fold-text{
+      width: 80%;
+      text-align: center;
+      top: calc(10%);
+      left: calc(50%);
+      transform: translate(-50%, 0%);
+    }
+    .threefold-first{
+      font-size: 32px;
+      line-height: 39px;
+      margin: 0;
+    }
+    .threefold-third{
+      line-height: 18px;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+    .threefold-fourth{
+      font-size:15px;
+      line-height:22px;
+      }
+   .threefold-first:after{
+      content:"";
+      position:absolute;
+      background:#414042;;
+      display:block;
+      height:4px;
+      width:14px;
+      left:50%;
+      margin-top: 10px;
+      transform: translateX(-50%);
+    }
+  }
+  @media only screen and (max-width: 400px){
+    .three-fold-text {
+      top: calc(5%);
+    }
+  }
+</style>

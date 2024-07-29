@@ -1,0 +1,319 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<div class="min-section position-relative my-4">
+  {% if section.settings.des_img !=blank %}
+    <div class="min-section-main1">
+      <img src="{{ section.settings.des_img | img_url:' ' }}" width="100%" class="image_section_main1 d-none d-md-block">
+    </div>
+  {% endif %}
+  {% if section.settings.des_img !=blank %}
+    <div class="min-section-main2">
+      <img src="{{ section.settings.mob_img | img_url:' ' }}" width="100%" class="image_section_main2 d-md-none position-relative">
+    </div>
+  {% endif %}
+  <div class="min-section-text">
+    {% if section.settings.traya_white_image !=blank %}
+    <div class="min-section-first text-white mb-1 mb-md-auto">
+      <img src="{{ section.settings.traya_white_image | img_url:' ' }}"/>
+    </div>
+    {% endif %}
+    {% if section.settings.paragraph1 !=blank %}
+      <p class="min-section-second font-weight-bold pb-md-3">{{ section.settings.paragraph1 }}</p>
+    {% endif %}
+    {% if section.settings.paragraph2 !=blank %}
+      <p class="min-section-third font-weight-bold mb-3 mt-md-4 text_Fredoka">{{ section.settings.paragraph2 }}</p>
+    {% endif %}
+    {% if section.settings.paragraph3 !=blank %}
+      <p class="min-section-fourth">{{ section.settings.paragraph3 }}</p>
+    {% endif %}
+    <div class="d-none d-md-block">
+      <a id="hairtestcta" href="{{ section.settings.button_link }}&page={{ page__hndl }}" class="science_page_link btn btn-dark mt-0 p-3 shadow">{{ section.settings.button_text }} <sup>&trade;</sup></a>
+    </div>
+  </div>
+  <div class="d-md-none text-center mobile-science-button position-absolute">
+    <a id="hairtestcta" href="{{ section.settings.button_link }}&page={{ page__hndl }}" class="form_action_link btn btn-dark mt-0 shadow">{{ section.settings.button_text }} <sup>&trade;</sup></a>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Min-Section",
+    "settings":[
+    {
+      "type": "image_picker",
+      "id": "des_img",
+      "label": "Select Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mob_img",
+      "label": "Select Mobile Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "traya_white_image",
+      "label": "traya_white_image"
+    },
+    {
+      "type": "text",
+      "id": "paragraph1",
+      "label": "paragraph1"
+    },
+    {
+      "type": "text",
+      "id": "paragraph2",
+      "label": "paragraph2"
+    },
+    {
+      "type": "text",
+      "id": "paragraph3",
+      "label": "paragraph3"
+    },     
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "button_text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets":[
+              {
+                  "name":"min-section",
+                  "category":"custom"
+                }
+              ]
+}
+{% endschema %}
+
+<style>
+  .image_section_main1 {
+    height: 435px;
+  }
+  .min-section-text{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    top: calc(50%);
+    transform: translate(0px, -50%);
+  }
+  .min-section-first img{
+    max-width:125px;
+    width:135px;
+    height:42px;
+  }
+  .min-section-first{
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 56px;
+  }
+  .min-section-second{
+    font-size: 17px;
+    line-height: 23px;
+    letter-spacing: 0.315rem;
+    border-bottom: 1px solid #fff;
+    width: fit-content;
+    color: #414143;
+  }
+  .min-section-third{
+    font-size: 49px;
+    line-height: 44px;
+    color: #414143;
+  }
+  .min-section-fourth{
+    font-size:19px;
+    line-height: 26px;
+    color:#000;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+  .science_page_link{
+    width:45%;
+    font-size: 20px;
+    line-height: 27px;
+    border-radius:10px;
+  }
+  .btn.btn-dark.science_page_link:hover{
+    background: #B7D340;
+    border-color: #b7d340;
+  }
+  @media only screen and (max-width: 1430.98px) and (min-width: 1200px) {
+    .min-section-third {
+      font-size: 45px;
+      line-height: 30px;
+    }
+    .min-section-fourth {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+    .science_page_link {
+      font-size: 18px;
+      line-height: 18px;
+    }
+    .image_section_main1 {
+      height: 385px;
+    }
+  }
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    .min-section-third {
+      font-size: 40px;
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+    }
+    .min-section-fourth {
+      font-size: 17px;
+      line-height: 26px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .science_page_link {
+      width: 60%;
+      font-size: 18px;
+    }
+    .image_section_main1 {
+      height: 350px;
+    }
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px){
+    .min-section-third {
+      font-size: 35px;
+      line-height: 35px;
+      margin: 0 !important;
+    }
+    .min-section-fourth {
+      font-size: 18px;
+      line-height: 25px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .science_page_link {
+      width: 75%;
+      font-size: 18px;
+    }
+    .image_section_main1 {
+      height: 315px;
+    }
+  }
+  @media only screen and (max-width: 767.98px) {
+    .min-section-text {
+      right: unset;
+      left: 50%;
+      width: 90%;
+      top: calc(25%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .min-section-second {
+      margin: 15px auto;
+      padding-bottom: 15px;
+    }
+    .mobile-science-button {
+      bottom: 8%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 575.98px){
+    .min-section-first{
+      font-size: 54px;
+      font-weight: 900;
+      line-height:35px;
+    }
+    .min-section-second{
+        font-size:16px;
+        line-height:21px;
+        border: none;
+        width: unset;
+      }
+    .min-section-second:after{
+      content: "";
+      position: absolute;
+      background: #414042;
+      display: block;
+      height: 3px;
+      width: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 8px;
+    }
+   .min-section-third {
+      font-size: 40px;
+      line-height: 40px;
+      margin-top: 35px;
+    }
+    .min-section-fourth{
+      font-size:18px;
+      line-height:25px;
+      width:100%;
+      margin-left:0;
+      margin-right:0;
+      margin-top:0;
+    }
+    .mobile-science-button{
+      width: 70%;
+    }
+    .form_action_link{
+      width:100%;
+      font-size: 20px;
+      line-height: 27px;  
+      padding: 10px 30px;
+      border-radius:10px;
+    }
+  }
+  @media only screen and (max-width: 400px){
+    .min-section-first{
+      font-size: 54px;
+      font-weight: 900;
+      line-height:35px;
+    }
+    .min-section-second{
+      font-size:16px;
+      line-height:21px;
+      border: none;
+      width: unset;
+    }
+    .min-section-second:after{
+      content: "";
+      position: absolute;
+      background: #414042;
+      display: block;
+      height: 3px;
+      width: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 8px;
+    }
+    .min-section-third{
+      font-size:33px;
+      line-height:40px;
+      margin-top:18px;
+    }
+    .min-section-fourth{
+      font-size: 16px;
+      line-height: 23px;
+      width:100%;
+      margin-left:0;
+      margin-right:0;
+      margin-top:0;
+    }
+    .form_action_link{
+      width:100%;
+      font-size: 20px;
+      line-height: 27px;  
+      padding: 14px 30px;
+      border-radius:10px;
+    }
+    .mobile-science-button {
+      width: 80%;
+    }
+  }
+</style>

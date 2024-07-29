@@ -1,0 +1,90 @@
+<!-- section/average_cost-hair-doctors.liquid -->
+<div class="container">
+  <div class="average_cost_hair">
+    <h2 class="city-hd-heading text-left">{{ section.settings.main_heading }}</h2>
+    <p class="city-hd-content text-left mb-5">{{ section.settings.main_para }}</p>
+    <div class="d-flex justify-content-center">
+      <table>
+      <tbody>
+        <tr>
+          <td> <strong>{{ section.settings.left_heading }}</strong></td>
+          <td><strong>{{ section.settings.right_heading }}</strong></td>
+        </tr>
+        {% for block in section.blocks %}
+         <tr>
+          <td>{{ block.settings.variables }}</td>
+          <td>{{ block.settings.price_range }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Dermatologist Table",
+    "settings": [
+      {
+        "id":"left_heading",
+        "type":"text",
+        "label":"Left heading"
+      },
+         {
+        "id":"right_heading",
+        "type":"text",
+        "label":"Right heading"
+      },
+       {
+        "id":"main_heading",
+        "type":"text",
+        "label":"Main heading"
+      },
+       {
+        "id":"main_para",
+        "type":"text",
+        "label":"Main paragraph"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "average_cost",
+        "name": "average cost",
+        "settings": [
+          {
+            "type":"text",
+            "id":"variables",
+            "label":"Add Variables "
+          },
+          {
+            "type":"text",
+            "id":"price_range",
+            "label":"Add Price Range "
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Dermatologist Table"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+.average_cost_hair .city-hd-heading, .average_cost_hair .city-hd-content{
+  color: black;
+}
+   .dermatologist .average_cost_hair table td {width: 50%;  font-size: 1rem; }
+@media screen and (max-width: 767px) {
+  .average_cost_hair table tbody tr td {
+       font-size: 16px !important ;
+       padding: 10px;
+       letter-spacing: normal;
+  }
+} 
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

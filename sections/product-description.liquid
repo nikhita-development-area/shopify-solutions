@@ -1,0 +1,102 @@
+<!--  section/product-description  -->
+{% if product.handle != "anti-dandruff-treatment-kit" %}
+<div class="container product-description-combo">
+  <h3 class="combo-decs-title l-0">{{ section.settings.title }}</h3>
+  <h5 class="combo_p_about-content l-0">
+      {% if section.settings.about_content.size > 250 and section.settings.checkbox %}
+      <span id="less__desc" class="show_less-desc">{{ section.settings.about_content | truncate: 250 }}<button class="read_mr_less_btn" id="read_mr_btn">Read more</button></span>
+      <span id="more__desc" class="hide_more-desc" style="display: none">{{ section.settings.about_content }}<button class="read_mr_less_btn" id="read_ls_btn">Read less</button></span>
+      {% else %}
+      {{ section.settings.about_content }}
+      {% endif %}
+  </h5>
+</div>
+{% endif %}
+{% if product.handle == "anti-dandruff-treatment-kit" %}
+<div class="container product-description-combo">
+  <h3 class="combo-decs-title l-0">Winter is here and it’s brought with it the dreaded dandruff!</h3>
+  <h5 class="combo_p_about-content l-0">
+      {% if section.settings.about_content2.size > 250 and section.settings.checkbox2 %}
+      <span id="less__desc" class="show_less-desc">{{ section.settings.about_content2 | truncate: 250 }}<button class="read_mr_less_btn" id="read_mr_btn">Read more</button></span>
+      <span id="more__desc" class="hide_more-desc" style="display: none">{{ section.settings.about_content2 }}<button class="read_mr_less_btn" id="read_ls_btn">Read less</button></span>
+      {% else %}
+      {{ section.settings.about_content2 }}
+      {% endif %}
+  </h5>
+  <div class="combo-side combo-side-img mt-4 mx-auto">
+     <video playsinline="playsinline" controls="controls" preload="metadata" aria-label="how-work" poster="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102354303_1.png?v=1703769330"><source src="https://cdn.shopify.com/videos/c/o/v/b9d12200af1b43ceaafec7a48bc4b5c9.mp4" type="video/mp4"><img alt="how-work" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102354303_1.png?v=1703769330"></video>          
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Product description",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "About Traya Combo plan"
+      },
+      {
+        "type": "text",
+        "id": "about_content",
+        "label": "About Content"
+      },
+      {
+        "type": "text",
+        "id": "about_content2",
+        "label": "About Content2"
+      },
+      {
+        "type": "checkbox",
+        "id": "checkbox",
+        "label": "Enable Read More Button",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "checkbox2",
+        "label": "Enable Read More Button",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": -10,
+        "max": 90,
+        "step": 1,
+        "unit": "px",
+        "label": "Margin from above section",
+        "default": 48
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product description"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  @media (min-width: 768px){
+    .product-description-combo{
+      margin-top: {{ section.settings.margin_top }}px;
+    }
+   .anti-dandruff-treatment-kit .combo-side-img{
+    width:70%;
+  }
+  }
+</style>
+<script>
+  document.getElementById("read_mr_btn").onclick = function(){
+    document.getElementById("less__desc").style.display = "none";
+    document.getElementById("more__desc").style.display = "inline-block";
+  };
+  document.getElementById("read_ls_btn").onclick = function(){
+    document.getElementById("less__desc").style.display = "inline-block";
+    document.getElementById("more__desc").style.display = "none";
+  };
+</script>

@@ -1,0 +1,107 @@
+<!--- snippets/home-essential.liquid -->
+    <div class="home-essential mt-1 mb-5 position-relative d-md-none">
+      {% assign essential_image = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/02_Banner.jpg' %}
+          <div class="lazyload essential_image" data-bgset="{{ essential_image }}" data-sizes ="auto" data-parent-fit ="cover"> </div>
+          {% comment %}<img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/dsda.png?v=1659525520" alt="">{% endcomment %}
+          <div class="position-absolute icon_safe_new">
+          <div class="future__text">
+            <p class="essential-text text-center font-weight-bold m-0 text-black">Future Of Safe & Effective Hair Care</p>
+          </div>
+          <div class="d-flex essential-main row mx-2">
+          <div class="essential-icons text-center col-4">
+          <img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/Non_Toxic_aa98122c-74d2-4c4e-ae3f-b45feedf2430_70x.png" alt="non toxic">
+          <p class="icon-text text-black">Non Toxic</p>
+          </div>
+          <div class="essential-icons text-center col-4">
+          <img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/made_safe_7e845719-a3a0-4c42-8c7a-de01ca6babd7_70x.png" alt="made safe">
+          <p class="icon-text text-black">Made Safe</p>
+          </div>
+          <div class="essential-icons text-center col-4">
+          <img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/cruelty_f4fa0772-d94e-4c1f-98e0-4b22e2dc5a0d_70x.png" alt="Cruelty Free">
+          <p class="icon-text text-black">Cruetly Free</p>
+          </div>
+          <div class="essential-icons text-center col-4">
+          <img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/vegan_friendly_d135261d-f648-4b31-9f02-f71bd8fb6f12_70x.png" alt="Vegan Friendly">
+          <p class="icon-text text-black">Vegan Friendly</p>
+          </div>
+          <div class="essential-icons text-center col-4">
+          <img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/Allergy_70x.png" alt="Allergy Certified">
+          <p class="icon-text text-black">Allergen Free</p>
+          </div>
+          <div class="essential-icons text-center col-4">
+          <img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/Doctor_prescribed_b21e35b7-56db-4adf-af75-59e19d5e1e33_70x.png" alt="Doctor Prescribed">
+          <p class="icon-text text-black">Doctor Prescribed</p>
+          </div>
+          </div>
+          </div>
+</div>
+
+{% style %}
+  .essential-icons {
+    width: 16.667%;
+  }
+  .icon-text {
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+  @media only screen and (max-width: 767px) {
+    .essential-icons {
+      width: 50%;
+      margin-top: 30px;
+  }
+  .essential-main {
+    flex-wrap: wrap;
+  }
+  .essential-text {
+    font-size: 26px;
+    line-height: 35px;
+  }
+    .icon_safe_new{
+      top:4%;
+      right:0%;
+    }
+    .icon-text {
+     font-size: 13px;
+     line-height: 18px;
+    }
+    .essential_image {
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 650px;
+    }
+    .future__text {
+      width: 80%;
+      margin: auto;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .essential_image {
+      height: 600px;
+    }
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "Future All",
+    "settings": [
+      {
+          "type": "image_picker",
+          "id": "future_desktop_image",
+          "label": "Desktop Image"
+      },
+      {
+          "type": "image_picker",
+          "id": "future_mobile_image",
+          "label": "Mobile Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Future All"
+      }
+    ]
+  }
+{% endschema %}

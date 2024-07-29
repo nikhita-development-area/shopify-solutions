@@ -1,0 +1,205 @@
+<div class="best_hair">
+  <div class="row mx-4 justify-content-center">
+     <div class="best_expert_heading">
+        <h1>{{ section.settings.text-chart-heading }}</h1>
+  </div>
+    <div class="hair1 best_expert">
+        <p class="diet_plan">{{ section.settings.text-chart1 }}</p>
+  </div>
+     <div class="hair2 best_expert">
+        <p class="diet_plan">{{ section.settings.text-chart2 }}</p>
+  </div>
+     <div class="hair3 best_expert">
+        <p class="diet_plan">{{ section.settings.text-chart3 }}</p>
+  </div>
+    <div class="col-md-5 row p-0">
+      {% for block in section.blocks %}
+      <div class="col-md-6 col-4 image_card px-md-3 px-2 py-2">
+        
+      <div class="image_block">
+        <img class="m-auto d-block" src="{{ block.settings.image-text | img_url:'' }}"/>
+      </div>
+      <div class="doctor_text">
+        <p class="Nutritionist">{{ block.settings.text-image }}</p>
+        <p class=""Nutritionist">{{ block.settings.text-image2 }}</p>
+        
+      </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="col-md-6">
+      <div class="image_chart">
+        <img src="{{ section.settings.image-chart | img_url:'' }}"/>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "image-text",
+    "settings": [
+        {
+    "type": "text",
+  	"id": "text-chart-heading",
+  	"label": "Logo image"
+    },
+       {
+    "type": "image_picker",
+  	"id": "image-chart",
+  	"label": "Logo image"
+    },
+        {
+    "type": "html",
+  	"id": "text-chart1",
+  	"label": "Logo image"
+    },
+      {
+    "type": "html",
+  	"id": "text-chart2",
+  	"label": "Logo image"
+    },
+      {
+    "type": "html",
+  	"id": "text-chart3",
+  	"label": "Logo image"
+    }
+    ],
+  "blocks": [
+    {
+      "type": "Head",
+      "name": "image-text",
+      "settings": [
+    {
+    "type": "image_picker",
+  	"id": "image-text",
+  	"label": "Logo image"
+    },
+    {
+      "type": "text",
+      "id": "text-image",
+      "label": "Heading",
+      "default": "Content"
+    },
+         {
+      "type": "text",
+      "id": "text-image2",
+      "label": "Heading",
+      "default": "Content"
+    }
+        
+  ]
+  }
+  ],
+  "presets":[
+  {
+    "name":"best hair experts",
+    "category":"image-text"
+  }
+  ]
+}
+ {% endschema %}
+ <style>
+ .best_hair{
+     position:relative;
+}
+ .best_expert_heading h1{
+     font-size:40px;
+     text-align:center;
+     font-weight: 800;
+     font-stretch: normal;
+     font-style: normal;
+     line-height: 1.25;
+     letter-spacing: -.22px;
+     margin-bottom: 30px;
+     padding-top: 40px;
+}
+ .doctor_text{
+     text-align:center;
+     padding-left:19px;
+     font-size:14px;
+     margin:10px 0px;
+}
+ .Nutritionist{
+     margin:0px;
+}
+ .best_expert{
+     font-size:20px;
+     z-index:1;
+}
+ .image_card2{
+     display:flex;
+}
+ .diet_plan{
+     color: #95b266;
+}
+ .hair1{
+     position: absolute;
+     top: 59%;
+     width: max-content;
+}
+ .hair2{
+     position: absolute;
+     top: 75%;
+     width: max-content;
+     right: 42%;
+}
+ .hair3{
+     position: absolute;
+     top: 86%;
+     right: 41%;
+     width: max-content;
+}
+ .image_block img {
+     border-radius: 50%;
+}
+ @media screen and (max-width: 767.98px) {
+     .best_expert_heading h1{
+         font-size:20px;
+    }
+     .doctor_text{
+         font-size:10px;
+         padding:0px;
+    }
+     .best_expert{
+         font-size:12px;
+    }
+     .hair1{
+         top: 80%;
+         left:4%;
+    }
+     .hair2{
+         top: 88%;
+         left:10%;
+    }
+     .hair3{
+         top: 95%;
+         left:15%;
+    }
+}
+ @media screen and (max-width: 400.98px){
+     .best_expert{
+         font-size:12px;
+    }
+     .best_expert_heading h1{
+         font-size:20px;
+    }
+     .hair1{
+         top: 80%;
+        left: 1%;
+        transform: translate(0%, 0%);
+    }
+     .hair2{
+         top: 88%;
+         left:4%;
+         transform: translate(0%, 0%);
+    }
+     .hair3{
+         top: 94%;
+         left:10%;
+    }
+     .doctor_text{
+         font-size:10px;
+         padding:0px;
+    }
+}
+ </style>

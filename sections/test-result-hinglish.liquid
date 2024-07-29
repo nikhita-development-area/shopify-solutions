@@ -1,0 +1,465 @@
+<div class="traya-processing-animation bg-white w-100 vh-100" id="traya-processing-animation" style="display:flex; justify-content: center; align-items: center;">
+   <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Traya_Loading.gif?v=1695380679" alt="loader" class="traya-processing-animation-img" loading="eager">
+</div>
+
+{% if page.handle == 'result4' or page.handle == 'result4b' or page.handle == 'result4c' or page.handle == 'result-hi' or page.handle == 'result-hinglish' %}
+<div class="transplant-stage-six d-none">
+  {% render 'result-for-stage-six' %}
+</div>
+{% endif %}
+<div class="test-result">
+ <div class="test-result-bg">
+  <section class="mt-2 mt-md-5 pt-4 pt-md-5">
+  <span class="assement-report"><p>Aap ka Hair Report</p></span>
+  <div class="bg-colo">
+    <div class="container position-relative"> <!-- Stage 1 To Stage 4 Tag Changes Added Class (position-relative) -->
+      <!-- Stage 1 To Stage 4 Tag Changes -->
+        <p class="stage1-4-tag font-weight-bold" style="display: none;">Regrowth Possible</p>
+      <!-- Stage 1 To Stage 4 Tag Changes -->
+      <div class="page-result-hero">
+        <div class="mb-1 mb-md-4 main-section position-relative rounded-lg">
+          <div class="container pt-4 text-white">
+            <!-- Stage 2 and Stage 3 Changes User Details -->
+            <div class="text-center">
+              <div class="mb-4">
+                <div class="visitor-info">
+                  <p class="font-weight-bold text-white username mb-0"><span data-user-name class="text-capitalize">User Name</span>,</p>
+                  <p class="text-white col-md-7 px-0 mb-0 mx-auto diagnosed_text">Humare diagnosis ke hisaab se</p>
+                  <p class="font-weight-bold text-white mt-1 user_type_stage"><span id="typeOfLoss" class="user_type_result">aap male pattern hair loss </span> <span id="stage" class="user_type_result"></span></p>
+                  <p class="font-weight-bold text-white mt-1 user_type_stage stage1_Text" style="display:none;">
+                    <!-- <span class="font-weight-normal">You've been diagnosed with </span> -->
+                    <span id="typeOfLoss" class="user_type_result">You are at</span>
+                    <span id="stage1" class="user_type_result"></span> mein hain. <br class="d-none d-md-block"/><span id="typeOfLos" class="user_type_result">Ye aap ke hair problems ko solve karna ka sahi waqt hain.</span> </p>
+                  <div class="male_result_commas" style="display:none;">
+                    <p><span class="hair_golsmal"></span>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="main-stage-section pb-md-5 mb-2">
+             <p class="text-black text-center stages-name TE_stage-name" style="display:none;">Pure sar se hair fall ho raha hain.</p>
+              <div id="male-stages" class="row align-items-end flex-nowrap justify-content-center text-center">
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2 px-md-4 mb-5 mb-md-0 Stage-1">
+<!--                <p class="text-black text-center stages-name">Stage 1</p>  -->
+                   <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353160_7302690b-cc8e-4fb5-b379-1a97b1e1feae.png?v=1710917964" alt="Stage 1" class="stage-images">
+<!--                   <div class="stage-item bg-light position-relative rounded-circle">
+                    <div class="indicator">
+                      <span class="checkbox">{%- render 'result-icons', icon: 'indicator' -%}</span>
+                      <span class="location">{%- render 'result-icons', icon: 'location' -%}</span>
+                    </div>
+               <p class="text-black mt-0 mt-md-1 checkbox">Chaliye, aap ko yaha lekar aate hain</p>
+                    <p class="text-black mt-0 mt-md-1 location">Aap yaha hain</p>
+                  </div>  -->
+                </div>
+
+             <div class="col-4 col-sm-3 col-md-3 col-lg-2 px-md-4 mb-5 mb-md-0 Stage-2-1">
+<!--                     <p class="text-black text-center stages-name">Stage 1</p> -->
+                  <div class="stage-item bg-light position-relative rounded-circle">
+                    <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group.webp?v=1709022930" alt="Stage 1" class="stage-images">
+                    <div class="indicator">
+                      <span class="checkbox">{%- render 'result-icons', icon: 'indicator' -%}</span>
+                      <span class="location">{%- render 'result-icons', icon: 'location' -%}</span>
+                    </div>
+                    <p class="text-black mt-0 mt-md-1 checkbox">Chaliye, aap ko yaha lekar aate hain</p>
+                    <p class="text-black mt-0 mt-md-1 location">Aap yaha hain</p>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2 px-md-4 mb-5 mb-md-0 Stage-2">
+                 <p class="text-black text-center stages-name">Stage - 2</p>
+                  <div class="stage-item bg-light position-relative rounded-circle">
+                    <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Layer_2.png?v=1708945805" alt="Stage 2" class="stage-images">
+                    <div class="indicator">
+                      <span class="checkbox">{%- render 'result-icons', icon: 'indicator' -%}</span>
+                      <span class="location">{%- render 'result-icons', icon: 'location' -%}</span>
+                    </div>
+                    <p class="text-black mt-0 mt-md-1 checkbox">Chaliye, aap ko yaha lekar aate hain</p>
+                    <p class="text-black mt-0 mt-md-1 location">Aap yaha hain</p>
+                  </div>
+                </div>
+
+              <div class="col-4 col-sm-3 col-md-3 col-lg-2 px-md-4 mb-5 mb-md-0 Stage-3-1">
+              <!--<p class="text-black text-center stages-name">Stage 2</p> -->
+                  <div class="stage-item bg-light position-relative rounded-circle">
+                    <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352531.png?v=1708946207" alt="Stage 2" class="stage-images">
+                    <div class="indicator">
+                      <span class="checkbox">{%- render 'result-icons', icon: 'indicator' -%}</span>
+                      <span class="location">{%- render 'result-icons', icon: 'location' -%}</span>
+                    </div>
+                    <p class="text-black mt-0 mt-md-1 checkbox">Chaliye, aap ko yaha lekar aate hain</p>
+                    <p class="text-black mt-0 mt-md-1 location">Aap yaha hain</p>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2 px-md-4 mb-5 mb-md-0 Stage-3">
+                  <p class="text-black text-center stages-name">Stage - 3</p>
+                  <div class="stage-item bg-light position-relative rounded-circle">
+                    <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_a67d627c-16dd-4a37-83bb-76d86bea3d54.png?v=1708946207" alt="Stage 3" class="stage-images">
+                    <div class="indicator">
+                      <span class="checkbox">{%- render 'result-icons', icon: 'indicator' -%}</span>
+                      <span class="location">{%- render 'result-icons', icon: 'location' -%}</span>
+                    </div>
+                    <p class="text-black mt-0 mt-md-1 checkbox">Chaliye, aap ko yaha lekar aate hain</p>
+                    <p class="text-black mt-0 mt-md-1 location">Aap yaha hain</p>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2 px-md-4 mb-5 mb-md-0 Stage-4-1">
+<!--                     <p class="text-black text-center stages-name">Stage 4</p> -->
+                  <div class="stage-item bg-light position-relative rounded-circle">
+                    <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_1_2b17e1f0-c48c-4285-a9ee-32ec5505c232.png?v=1708946319" alt="Stage 4" class="stage-images">
+                    <div class="indicator">
+                      <span class="checkbox">{%- render 'result-icons', icon: 'indicator' -%}</span>
+                      <span class="location">{%- render 'result-icons', icon: 'location' -%}</span>
+                    </div>
+                    <p class="text-black mt-0 mt-md-1 checkbox">Chaliye, aap ko yaha lekar aate hain</p>
+                    <p class="text-black mt-0 mt-md-1 location">Aap yaha hain</p>
+                  </div>
+                </div>            
+
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2 px-md-4 mb-5 mb-md-0 Stage-4">
+                  <p class="text-black text-center stages-name">Stage - 4</p>
+                  <div class="stage-item bg-light position-relative rounded-circle">
+                    <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352533.png?v=1708946319" alt="Stage 4" class="stage-images">
+                    <div class="indicator">
+                      <span class="checkbox">{%- render 'result-icons', icon: 'indicator' -%}</span>
+                      <span class="location">{%- render 'result-icons', icon: 'location' -%}</span>
+                    </div>
+                    <p class="text-black mt-0 mt-md-1 checkbox">Chaliye, aap ko yaha lekar aate hain</p>
+                    <p class="text-black mt-0 mt-md-1 location">Aap yaha hain</p>
+                  </div>
+                </div>
+
+              <div class="col-4 col-sm-3 col-md-3 col-lg-2 px-md-4 mb-5 mb-md-0 Stage-5-1">
+<!--                    <p class="text-black text-center stages-name">Stage 5</p> -->
+                  <div class="stage-item bg-light position-relative rounded-circle">
+                    <!-- Stage 5 Changes (Changed src URL) -->
+                    <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352533_1.png?v=1708946427" alt="Stage 5" class="stage-images">
+                    <!-- Stage 5 Changes (Changed src URL) -->
+                    <div class="indicator">
+                      <span class="checkbox">{%- render 'result-icons', icon: 'indicator' -%}</span>
+                      <span class="location">{%- render 'result-icons', icon: 'location' -%}</span>
+                    </div>
+                    <p class="text-black mt-0 mt-md-1 checkbox">Chaliye, aap ko yaha lekar aate hain</p>
+                    <p class="text-black mt-0 mt-md-1 location">Aap yaha hain</p>
+                  </div>
+                </div>
+
+                            
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2 px-md-4 mb-5 mb-md-0 Stage-5">
+                 <p class="text-black text-center stages-name">Stage - 5</p>
+                  <div class="stage-item bg-light position-relative rounded-circle">
+                    <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_2.png?v=1708946427" alt="Stage 5" class="stage-images">
+                    <div class="indicator">
+                      <span class="checkbox">{%- render 'result-icons', icon: 'indicator' -%}</span>
+                      <span class="location">{%- render 'result-icons', icon: 'location' -%}</span>
+                    </div>
+                    <p class="text-black mt-0 mt-md-1 checkbox">Chaliye, aap ko yaha lekar aate hain</p>
+                    <p class="text-black mt-0 mt-md-1 location">Aap yaha hain</p>
+                  </div>
+                </div>
+
+            
+
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2 px-md-4 mb-5 mb-md-0 Stage-6">
+                 <p class="text-black text-center stages-name">Stage 6</p>
+                  <div class="stage-item bg-light position-relative rounded-circle">
+                    <img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/stage6_64x.png" alt="Stage 6" class="stage-images">
+                    <div class="indicator">
+                      <span class="checkbox">{%- render 'result-icons', icon: 'indicator' -%}</span>
+                      <span class="location">{%- render 'result-icons', icon: 'location' -%}</span>
+                    </div>
+                    <p class="text-black mt-0 mt-md-1 checkbox">Chaliye, aap ko yaha lekar aate hain</p>
+                    <p class="text-black mt-0 mt-md-1 location">Aap yaha hain</p>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2 px-md-4 mb-5 mb-md-0 Stage-7">
+                  <p class="text-black text-left stages-name">Coin sized patch</p>
+                  <div class="stage-item bg-light position-relative rounded-circle">
+                    <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_3.png?v=1708946828" alt="Coin Size Patch" class="stage-images">
+                    <div class="indicator">
+                      <span class="checkbox">{%- render 'result-icons', icon: 'indicator' -%}</span>
+                      <span class="location">{%- render 'result-icons', icon: 'location' -%}</span>
+                    </div>
+                    <p class="text-black mt-0 mt-md-1 checkbox">Chaliye, aap ko yaha lekar aate hain</p>
+                    <p class="text-black mt-0 mt-md-1 location">Aap yaha hain</p>
+                  </div>
+                </div>
+
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2 px-md-4 mb-5 mb-md-0 Stage-8-1">
+<!--                     <p class="text-black text-left stages-name">Heavy Hair Fall Across The head</p> -->
+                  <div class="stage-item bg-light position-relative rounded-circle">
+                    <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352520_1.png?v=1708670246" alt="Heavy Hair Fall Across The head" class="stage-images">
+                    <div class="indicator">
+                      <span class="checkbox">{%- render 'result-icons', icon: 'indicator' -%}</span>
+                      <span class="location">{%- render 'result-icons', icon: 'location' -%}</span>
+                    </div>
+                    <p class="text-black mt-0 mt-md-1 checkbox">Chaliye, aap ko yaha lekar aate hain</p>
+                    <p class="text-black mt-0 mt-md-1 location">Aap yaha hain</p>
+                  </div>
+                </div>
+                            
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2 px-md-4 mb-5 mb-md-0 Stage-8">
+<!--                     <p class="text-black text-left stages-name">Heavy Hair Fall Across The head</p> -->
+                  <div class="stage-item bg-light position-relative rounded-circle">
+                    <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352519_1.png?v=1708670247" alt="Heavy Hair Fall Across The head" class="stage-images">
+                    <div class="indicator">
+                      <span class="checkbox">{%- render 'result-icons', icon: 'indicator' -%}</span>
+                      <span class="location">{%- render 'result-icons', icon: 'location' -%}</span>
+                    </div>
+                    <p class="text-black mt-0 mt-md-1 checkbox">Chaliye, aap ko yaha lekar aate hain</p>
+                    <p class="text-black mt-0 mt-md-1 location">Aap yaha hain</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-black text-center stageDescription_text mb-0 mt-4" id="stageDescription">You have alopecia areata. It’s quite difficult to treat this type of hair loss.</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="our-diagnosis">
+    <div class="container pb-0">
+      <div class="root_cause_main" style="background: #fff;">
+        <div class="py-md-0 py-4 mb-md-3">
+          <p class="font-weight-bold text-center mb-3 text-black section-title px-3 px-md-2 root-cause-text root_impacting_stage1 root-cause-text-mob" style="display:none;">
+            <span>Root Causes</span>
+          </p>
+          <p class="font-weight-bold text-center mb-3 text-black section-title px-3 px-md-2 root-cause-text root_only_img root-cause-text-mob">
+            Root Causes
+          </p>
+          <p class="font-weight-bold text-center mb-3 text-black section-title px-3 px-md-2 root-cause-text root-cause-text-desk">
+            Root Causes
+          </p>
+          <div class="row otherstage_causes">
+            <div class="col-md-10 mx-0 mx-md-auto mt-3">
+              <ul class="row mb-md-5 px-3 px-md-auto" id="ourdia">
+                <li class="col-3 col-sm-3 f-b-main-li" id="illness" data-targets="illness">
+                <div class="d-h w-100">
+                  <a href="#" class="text-decoration-none text-black d-block text-center mx-auto" data-id="nav-genetics" data-toggle="modal" data-target="#stageModalCenter">
+                  {%- render 'result-icons', icon: 'illness' -%}
+                  <span class="sleep_30 d-block mt-3">Serious Bimaari</span>
+                  </a>
+                </div>
+              </li>
+
+              <li class="col-3 col-sm-3 f-b-main-li" id="weight-change" data-targets="weight-change">
+                <div class="d-h w-100">
+                  <a href="#" class="text-decoration-none text-black d-block text-center mx-auto" data-id="nav-genetics" data-toggle="modal" data-target="#stageModalCenter">
+                   {%- render 'result-icons', icon: 'weight-change' -%}
+                   <span class="sleep_30 d-block mt-3">Weight change</span>
+                  </a>
+                </div>
+              </li>
+
+              <li class="col-3 col-sm-3 f-b-main-li" id="surgery" data-targets="surgery">
+                <div class="d-h w-100">
+                  <a href="#" class="text-decoration-none text-black d-block text-center mx-auto" data-id="nav-genetics" data-toggle="modal" data-target="#stageModalCenter">
+                    {%- render 'result-icons', icon: 'surgery' -%}
+                    <span class="sleep_30 d-block mt-3">Surgery</span>
+                  </a>
+                </div>
+              </li>
+
+              <li class="col-3 col-sm-3 f-b-main-li" id="dandruff" data-targets="dandruff">
+                <div class="d-h w-100">
+                  <a href="#" class="text-decoration-none text-black d-block text-center mx-auto" data-id="nav-genetics" data-toggle="modal" data-target="#stageModalCenter">
+                    {%- render 'result-icons', icon: 'dandruff' -%}
+                    <span class="sleep_30 d-block mt-3">Dandruff</span>
+                  </a>
+                </div>
+              </li>
+                        
+              <li class="col-3 col-sm-3 f-b-main-li" id="sleepissues" data-targets="sleepissues">
+                <div class="d-h w-100">
+                  <a href="#" class="text-decoration-none text-black d-block text-center mx-auto" data-id="nav-sleep" data-toggle="modal" data-target="#stageModalCenter">
+                    {%- render 'result-icons', icon: 'sleepissues' -%}
+                    <span class="sleep_30 d-block mt-3">Sleep</span> 
+                  </a>
+                </div>
+              </li>
+
+              <li class="col-3 col-sm-3 f-b-main-li" id="genetics" data-targets="genetics">
+                <div class="d-h w-100">
+                  <a href="#" class="text-decoration-none text-black d-block text-center mx-auto" data-id="nav-genetics" data-toggle="modal" data-target="#stageModalCenter">
+                    {%- render 'result-icons', icon: 'genetics' -%}
+                    <span class="sleep_30 d-block mt-3">Genetics</span>
+                  </a>
+                </div>
+              </li>
+
+              <li class="col-3 col-sm-3 f-b-main-li" id="digestion" data-targets="digestion">
+                <div class="d-h w-100">
+                  <a href="#" class="text-decoration-none text-black d-block text-center mx-auto" data-id="nav-digestion" data-toggle="modal" data-target="#stageModalCenter">
+                    {%- render 'result-icons', icon: 'digestion' -%}
+                    <span class="sleep_30 d-block mt-3">Digestion</span>
+                  </a>
+                </div>
+              </li>
+
+              <li class="col-3 col-sm-3 f-b-main-li" id="lifestyle" data-targets="lifestyle">
+                <div class="d-h w-100">
+                  <a href="#" class="text-decoration-none text-black d-block text-center mx-auto" data-id="nav-lifestyle" data-toggle="modal" data-target="#stageModalCenter">
+                    {%- render 'result-icons', icon: 'lifestyle' -%}
+                    <span class="sleep_30 d-block mt-3">Lifestyle</span>
+                  </a>
+                </div>
+              </li>
+
+              <li class="col-3 col-sm-3 f-b-main-li" id="stress" data-targets="stress">
+                <div class="d-h w-100">
+                  <a href="#" class="text-decoration-none text-black d-block text-center mx-auto" data-id="nav-stress" data-toggle="modal" data-target="#stageModalCenter">
+                    {%- render 'result-icons', icon: 'stress' -%}
+                    <span class="sleep_30 d-block mt-3">Stress</span>
+                  </a>
+                </div>
+              </li>
+
+                <li class="col-3 col-sm-3 f-b-main-li" id="weightloss" data-targets="weightloss">
+                  <div class="d-h w-100">
+                    <a href="#" class="text-decoration-none text-black d-block text-center mx-auto" data-id="nav-weight" data-toggle="modal" data-target="#stageModalCenter">
+                      {%- render 'result-icons', icon: 'weightloss' -%}
+                      <span class="sleep_30 d-block mt-3">Weight Loss</span>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="col-3 col-sm-3 f-b-main-li" id="deficiency" data-targets="deficiency">
+                  <div class="d-h w-100">
+                    <a href="#" class="text-decoration-none text-black d-block text-center mx-auto" data-id="nav-deficiency" data-toggle="modal" data-target="#stageModalCenter">
+                      {%- render 'result-icons', icon: 'deficiency' -%}
+                      <span class="sleep_30 d-block mt-3">Deficiency</span>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="col-3 col-sm-3 f-b-main-li" id="nutrition" data-targets="nutrition">
+                  <div class="d-h w-100">
+                    <a href="#" class="text-decoration-none text-black d-block text-center mx-auto" data-id="nav-nutrition" data-toggle="modal" data-target="#stageModalCenter">
+                      {%- render 'result-icons', icon: 'nutrition' -%}
+                      <span class="sleep_30 d-block mt-3">Nutrition</span>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="col-3 col-sm-3 f-b-main-li" id="malfunction" data-targets="malfunction">
+                  <div class="d-h w-100">
+                    <a href="#" class="text-decoration-none text-black d-block text-center mx-auto" data-id="nav-malfunction" data-toggle="modal" data-target="#stageModalCenter">
+                      {%- render 'result-icons', icon: 'malfunction' -%}
+                      <span class="sleep_30 d-block mt-3">Auto-Immune</span>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-center otherstage_causes">
+            <a id="learn_more" href="#" class="text-center mb-4 text-black text-decoration-none" data-toggle="modal" data-target="#stageModalCenter">Root causes ke baare mein jaanein</a>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </section>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Test Result Hinglish",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Test Result Hinglish"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .root-cause-text-desk:after {content: ''; border-top: 1px solid #a5c174; display: block; width: 35%; position: absolute; top: 50%; left: 20px; transform: translate(0, 0);}
+  .root-cause-text-mob:after {content: ''; border-top: 1px solid #a5c174; display: block; width: 20%; position: absolute; top: 50%; left: 20px; transform: translate(0, 0);}
+  .root-cause-text-desk:before {content: ''; border-bottom: 1px solid #a5c174; display: block; width: 35%; top: 50%; position: absolute; right: 20px; transform: translate(0, 0);}
+  .root-cause-text-mob:before {content: ''; border-bottom: 1px solid #a5c174; display: block; width: 20%; top: 50%; position: absolute; right: 20px; transform: translate(0, 0);}
+  .result-hinglish .cstm_result_hi {line-height: 18px !important;}
+  #malfunction svg {height: 100px !important; width: 100px !important;}  
+  p.font-weight-bold.text-center.mb-3.text-black.section-title.px-3.px-md-2.root-cause-text.root_impacting_stage1 {display: none !important;}  
+  p.font-weight-bold.text-center.mb-3.text-black.section-title.px-3.px-md-2.root-cause-text.root_impacting_stage1.new_root img {height: auto !important;}
+  p.font-weight-bold.text-center.mb-3.text-black.section-title.px-3.px-md-2.root-cause-text.root_impacting_stage1.new_root span img {width: 60%; margin: 0 auto;}
+  p.font-weight-bold.text-center.mb-3.text-black.section-title.px-3.px-md-2.root-cause-text.root_only_img.new_root.mob_root_only_img {display: none !important;}
+  .result-hinglish .test-result  .satge1_stageDescription_text, .result4 .test-result .stageDescriptionTE {font-weight:normal !important;}
+  .product-section-list.pt-4.pt-md-1 .section-title {padding: 0 15px;}
+   p.font-weight-bold.text-center.mb-3.text-black.section-title.px-3.px-md-2.root-cause-text.new_root {white-space: initial; font-weight: 800 !important; font-family: Nunito Sans,sans-serif!important; text-transform: capitalize !important; line-height: initial !important;}
+  .stage_1_testimonial.stage_1_testimonial_show .our-customers-img img {object-fit: cover; width: fit-content; height: fit-content; margin: 0 auto;}
+  .stage_1_testimonial.stage_1_testimonial_show {display: block;}
+  .stage_1_testimonial {display: none;}
+  .result-hinglish.cust_reviews.cust_reviews_hide {display: none;}
+  div#issue_hair_goal {font-size: 25px; color: #414042;}
+  span#typeOfLos {font-weight: 400 !important;}
+  .user_type_stage.user_type_stage1, .diagnosed_text.user_type_stage1 {display: none;}
+  p.font-weight-bold.text-white.mt-1.user_type_stage.stage1_Text.stage-1_hair_issues.user_type_stage1 {display: block !important;}
+  .product-section.pt-4 h2.font-weight-bold.l-0.text-center.mb-md-5.section-title {padding: 0 15px;}
+  .main-stage-section.pb-md-5.mb-2.all-stages-pd {padding-bottom: 15px !important;}
+  .result-hinglish .test-result .all-stages img.stage-images {width: 90% !important; position: relative !important; top: 0 !important; left: 0 !important; transform: translate(0,0%) !important;}
+  .col-4.col-sm-3.col-md-3.col-lg-2.px-md-4.mb-5.mb-md-0.Stage-1.selectedStage.all-stages {width: 100% !important; flex: 0 0 100%; max-width: 100%;}
+  .result-hinglish .test-result-bg #ourdia li a svg {width: 50px; height: 50px;}
+  .result-hinglish .main-stage-section #male-stages {flex-direction: row-reverse;}
+  .result-hinglish .main-stage-section .col-4 {display: none;}
+  .result-hinglish .main-stage-section .selectedStage {display: block;}
+  .result-hinglish .main-stage-section .selectedStage .location {display: flex!important;}
+  .result-hinglish .main-stage-section .checkStage .checkbox {display: flex!important;}
+  .result-hinglish .main-stage-section .checkStage {display: block;}
+  .template-page.result-hinglish .our-experts .cstm_doctor_div {height: 315px;}
+  .book-appnt-btn {background-color: #b7d340; color: #000; border: #b7d340; padding: 15px 80px; border-radius: 4px; font-size: 24px; line-height: 33px; letter-spacing: normal;}
+  .traya-processing-animation {position: fixed; top: 0%; right: 0%; left: 0%; background: #fff; z-index: 999; height: 100vh; justify-content: center; align-items: center; display: flex;}
+  .stage1-4-tag {background: #B7D340; font-size: 16px !important; padding: 5px; position: absolute; right: 30px; border-radius: 5px; top: 5px; box-shadow: 2px 5px 5px #d7d7d7;}
+  .result-hinglish .our-experts {padding-bottom: 6rem !important;}
+  
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    .result-hinglish .username {font-size: 65px;}
+    .result-hinglish .diagnosed_text, .user_type_stage {font-size: 40px;}
+    .result-hinglish .stageDescription_text {margin-top: 25px;}
+  }
+  
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    .result-hinglish .username {font-size: 65px;}
+    .result-hinglish .diagnosed_text, .user_type_stage {font-size: 30px;}
+    .result-hinglish .stageDescription_text {font-size: 20px; margin-top: 25px;}
+  }
+  
+  @media only screen and (max-width: 767.98px) {
+    .result-hinglish .test-result #male-stages.justify-content-center.male-stagesTE {justify-content: center !important;}
+    p.font-weight-bold.text-center.mb-3.text-black.section-title.px-3.px-md-2.root-cause-text.root_impacting_stage1.root_impacting_stage1_show {display: block !important;}
+    p.font-weight-bold.text-center.mb-3.text-black.section-title.px-3.px-md-2.root-cause-text.new_root {white-space: initial; line-height: inherit; font-size: 18px !important;}
+    .col-4.col-sm-3.col-md-3.col-lg-2.px-md-4.mb-5.mb-md-0.Stage-1.selectedStage.all-stages {margin-bottom: 0 !important;}
+    body.gradient.template-page.result-hinglish .test-result .all-stages img.stage-images {width: 100% !important;}
+    .result-hinglish .test-result .page-result-hero .text-center.stages-name {text-align: center !important;}
+    .result-hinglish .test-result .stage-item {margin: 0 auto;}
+    .result-hinglish .product-section-list .card-body svg+span {font-size: 16px;}
+    .result-hinglish .product-section-list .card-body p {font-size: 13px;}
+    .result-hinglish .test-result .root-cause-text span {align-items: center; padding: 5px;}
+    #ourdia li a span {font-size: 10px;}
+    #ourdia li a svg {width: 30px; hieght: 35px;}
+    #ourdia li {padding: 0;}
+    .result_product_slides:not(.slick-initialized) > .col-md-6.mb-5:first-of-type ~ * {display: none;}
+    .template-page.result-hinglish .card-footer .buy_now_card_svg svg {width: 19px; height: 18px;}
+    .template-page.result-hinglish .root_cause_main {border-radius: 10px 10px 0px 0px;}
+    .template-page.result-hinglish .our-experts .cstm_doctor_div {height: 315px;}
+    .book-appnt-btn {font-size: 22px; line-height: 30px; padding: 12px; width: 100%;}
+    .stage1-4-tag {font-size: 12px !important; right: 5px; top: 5px;
+  }
+  
+  @media only screen and (max-width: 575.98px) {
+    .product-section-list.pt-4.pt-md-1.STtage1 p.section-title {font-size: 24px;}
+    .stage_1_testimonial.stage_1_testimonial_show p.section-title {font-size: 24px;}
+    span.m-stage-1-Pro_title1 {font-size: 24px;}
+    .result-hinglish .product-section-list .card-body svg+span {font-size: 14px; width: calc(100% - 34px);}
+    .result-hinglish .section-title {font-size: 28px;}
+    .result-hinglish .product-section-list svg {width: 34px; height: 34px;}
+    .result-hinglish .main-stage-section .col-4 {padding: 0;}
+    .result-hinglish .test-result-bg .checkStage:after {font-size: 41px; transform: translate(-50%,-50%); right: 10px;}
+  }   
+{% endstyle %}

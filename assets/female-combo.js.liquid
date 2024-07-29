@@ -1,0 +1,634 @@
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+      sURLVariables = sPageURL.split('&'),
+      sParameterName,
+      i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+      sParameterName = sURLVariables[i].split('=');
+
+      if (sParameterName[0] === sParam) {
+        return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+      }
+    }
+  };
+
+  var id = getUrlParameter('id');
+
+  var cohort = getUrlParameter('cohort');
+
+  if (id) {
+    localStorage.setItem('resultco', id);
+  }
+  id = localStorage.getItem('resultco');
+  var baseUrls = {
+    DEV: 'https://api.dev.hav-g.in/',
+    PROD: 'https://api.hav-g.in/'
+  }
+  var tokens = {
+    DEV: {
+      "Authorization": "Bearer e2623576-930b-48b6-81e2-a3cb5e37f47d"
+    },
+    PROD: {
+      "Authorization": "Bearer d7ef603e-71ea-44a1-93f2-2bacd08c4a90"
+    }
+  }
+  var token = tokens.PROD;
+  // console.log("tokens",token)
+  var baseUrl = baseUrls.PROD;
+  var liveendpoint = 'https://api.hav-g.in/dgReport?id=';
+
+  if (cohort == 2) {
+    liveendpoint = baseUrl + 'dgReport/v2?id=';
+  } else {
+    liveendpoint = baseUrl + 'dgReport/v1?id=';
+  }
+  // liveendpoint = baseUrl + 'dgReport/v3?id=';
+  var newapi = baseUrl + 'dgReport/v5?id=';
+  liveendpoint = newapi;
+
+
+  $(document).ready(function ($) {
+    // var position=0;
+    // var scrollTo='';
+    // var container = $('.main-content');
+    // $('#ourdia>li a').click(function(e){
+    //   e.preventDefault();
+    //   var attr =$(this).attr('href').split('#')[1];
+    //   scrollTo = $('#'+attr);
+    //   scrollTo.trigger('click');
+    //   position = scrollTo.offset().top
+    //   - container.offset().top
+    //   + container.scrollTop()-200;
+    //   $("html").animate({ scrollTop: position }, 600);
+    // });
+    let hairType = $('.combo_product_tab .nav-link.active').attr('data-value');
+    displayComboProduct(hairType);
+    listedProductSlide('2e3');
+  });
+  jQuery('body').on('click', '.add-to-cart-result-page', function () {
+    $(this).attr('disabled', 'disabled');
+    jQuery.ajax({
+      type: "POST",
+      url: '/cart/clear.js',
+      success: function () {
+        setTimeout(function () {
+          checkout();
+        }, 1000);
+      },
+      dataType: 'json'
+    });
+  });
+
+  jQuery('body').on('click', '.buyNowResult2', function () {
+    jQuery.ajax({
+      type: "POST",
+      url: '/cart/clear.js',
+      success: function () {
+        buyItNow();
+      },
+      dataType: 'json'
+    });
+  });
+
+  var variantsID = 0;
+  var prices = 0;
+  var variantsIDs = [];
+
+  jQuery('body').on('click', '.combo_product_tab .nav-link:not(.active)', function () {
+    var hairType = $(this).attr('data-value');
+    displayComboProduct(hairType);
+    listedProductSlide('1e3');
+  });
+
+  $('#heading-banefit2').click(function () {
+    let sltElmnt = $(this).next();
+    if (!$(sltElmnt).hasClass('show')) {
+      listedProductSlide('300');
+    } else {
+      $('.female_product_slider').slick('unslick');
+    }
+  });
+  function displayProduct(data) {
+    var $ = jQuery;
+    var r = Object.assign(data.User_Analysis, data.Recommendations);
+    $('.productt').hide();
+    if (r.Health_tatva === 'Yes') {
+      $('#healthTatva').show();
+      getProductByHandle('herbal-tablets');
+      var Desc = 'Ayurvedic herbs to boost absorption of nutrients for improved energy and hair health';
+    }
+    if (r.Hair_ras === 'Yes') {
+      $('#hairRasa').show();
+      getProductByHandle('hair-fall-tablets');
+      var Desc = 'Better hair quality & delayed greying with herbs like shatavari and bhringraj';
+    }
+    if (r.Gut_shuddi === 'Yes') {
+      $('#gutShuddhi').show();
+      getProductByHandle('avipattikar-digestion-tablets');
+      var Desc = 'Ayurvedic herbs for improved digestion, gut health and hair';
+    }
+    if (r.Minoxidil === 'Yes' && r.gender === 'M') {
+      getProductByHandle('traya-minoxidil-5');
+      $('#hairSerum').show();
+      var Desc = 'Minoxidil 5% for male androgenic alopecia hair loss and hair growth';
+    }
+    if (r.Minoxidil === 'Yes' && r.gender === 'F') {
+      getProductByHandle('minoxidil-2');
+      $('#hairSerum').show();
+      var Desc = 'Minoxidil 2% treatment for female androgenic alopecia hair loss and hair growth';
+    }
+    if (r.Shampoo === 'Normal') {
+      $('#shampooDarmotology').show();
+      getProductByHandle('shampoo');
+      var Desc = 'Chemical-free hair and scalp cleanser shampoo';
+    }
+    if (r.Shampoo === 'Anti dandruff') {
+      $('#hairAntidandruff').show();
+      getProductByHandle('anti-dandruff-shampoo');
+      var Desc = 'Made with antifungal ingredients for getting rid of dandruff of all types';
+    }
+    if (r.Hair_vitamin === 'Yes') {
+      $('#hairVitamins').show();
+      getProductByHandle('hair-vitamins');
+      var Desc = '100% Vegetarian supplements for hair to combat vitamin deficiency related hair loss';
+    }
+
+    if (r.Serum === 'Yes') {
+      $('#hairRootserum').show();
+      getProductByHandle('recap-serum-for-hair-fall-control');
+      var Desc = 'Patented hair growth serum with redensyl, biotin and caffeine';
+    }
+
+    if (r.Hair_ras === 'Yes') {
+      getProductByHandle('hair-growth-herbs');
+      var Desc = 'Better hair quality & delayed greying with herbs like shatavari and bhringraj';
+    }
+
+    if (r.Scalp_oil === 'Yes' || r.Scalp_oil === 'bergamot and ylang ylang') {
+      $('#scalpOil').show();
+      getProductByHandle('herbal-hair-oil');
+      var Desc = 'Herbal hair oil with essential oils, customised based on scalp and hair type';
+    }
+
+    if (r.Kevon === 'Yes') {
+      getProductByHandle('kevon-lotion-1');
+    }
+
+    if (r.Nasal === 'Yes') {
+      getProductByHandle('shatavari-ghrita');
+      var Desc = 'Ayurvedic nasal drops for nourishing hair follicles and reducing sleep-related hair loss';
+    }
+  }
+  
+  function displayComboProduct(data) {
+    prices = 0;
+    variantsIDs = [];
+    var $ = jQuery;
+    var products = [];
+    $('.result-combo-pr-image .product-single__media.slick-initialized').slick('unslick');
+    $('.product-single__thumbnails.slick-initialized').slick('unslick');
+    $('.female_product_slider.slick-initialized').slick('unslick');
+    $('.result-page .product-single__thumbnails').empty();
+    $('.result-combo-pr-image .product-single__media').empty();
+    $('.result_product_slides').empty();
+
+    var mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/combo-01_1_640x.jpg';
+    var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+                      sizes="445px" srcset="${mainImageUrl}">`;
+    let thumbImage = `<li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="${mainImageUrl}" alt="Combo Image">
+                 </li>`;
+    $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+
+    mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/hair_ras-08.jpg';
+    mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+             sizes="445px" srcset="${mainImageUrl}">`;
+    thumbImage = `<li class="result_thumbnails-item product-single__thumbnail">
+              <img class="product-single__thumbnail-image" src="${mainImageUrl}" alt="Hair Ras">
+            </li>`;
+    $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+
+
+    mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/hair_vitamin.jpg';
+    mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+             sizes="445px" srcset="${mainImageUrl}">`;
+    thumbImage = `<li class="result_thumbnails-item product-single__thumbnail">
+              <img class="product-single__thumbnail-image" src="${mainImageUrl}" alt="Hair Vitamin">
+            </li>`;
+    $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+
+    mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/products/3_af7aeb49-a029-4b56-9998-63f32d5a2323_640x.jpg';
+    mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+             sizes="445px" srcset="${mainImageUrl}">`;
+    thumbImage = `<li class="result_thumbnails-item product-single__thumbnail">
+              <img class="product-single__thumbnail-image" src="${mainImageUrl}" alt="Hair Vitamin">
+            </li>`;
+    $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+
+    getProductByHandle('hair-vitamins');
+    getProductByHandle('hair-growth-herbs');
+    getProductByHandle('recap-serum-for-hair-fall-control');
+    if (data == "Heavy-Dandruff") {
+      getProductByHandle('scalp-oil-with-dandruff-therapy-booster-shots');
+      mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/products/d3_640x.jpg';
+      mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+             sizes="445px" srcset="${mainImageUrl}">`;
+      thumbImage = `<li class="result_thumbnails-item product-single__thumbnail">
+              <img class="product-single__thumbnail-image" src="${mainImageUrl}" alt="Hair Oil">
+            </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+      $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+    }
+    if (data == "Heavy-Hairfall") {
+      getProductByHandle('scalp-oil-with-growth-therapy-booster-shots');
+      mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/products/g3_640x.png';
+      mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+             sizes="445px" srcset="${mainImageUrl}">`;
+      thumbImage = `<li class="result_thumbnails-item product-single__thumbnail">
+              <img class="product-single__thumbnail-image" src="${mainImageUrl}" alt="Hair Oil">
+            </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+      $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+    }
+    if (data == "Mild-Dandruff") {
+      getProductByHandle('scalp-oil-with-scalp-therapy-booster-shots');
+      mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/products/s3_640x.png';
+      mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+             sizes="445px" srcset="${mainImageUrl}">`;
+      thumbImage = `<li class="result_thumbnails-item product-single__thumbnail">
+              <img class="product-single__thumbnail-image" src="${mainImageUrl}" alt="Hair Oil">
+            </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+      $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+    }
+    if (data == "High-Stress-Hairfall") {
+      getProductByHandle('scalp-oil-with-calm-therapy-booster-shots');
+      mainImageUrl = 'https://cdn.shopify.com/s/files/1/0100/1622/7394/products/c3_640x.png';
+      mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+             sizes="445px" srcset="${mainImageUrl}">`;
+      thumbImage = `<li class="result_thumbnails-item product-single__thumbnail">
+              <img class="product-single__thumbnail-image" src="${mainImageUrl}" alt="Hair Oil">
+            </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+      $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+    }
+
+    $('.result-combo-pr-image .product-single__media').slick({
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      asNavFor: '.product-single__thumbnails'
+    });
+    $('.product-single__thumbnails').slick({
+      arrows: false,
+      slidesToShow: 5,
+      infinite: true,
+      asNavFor: '.product-single__media',
+      focusOnSelect: true
+    });
+  }
+
+  function getProductByHandle(handle) {
+    var $ = jQuery;
+    var productImage = '';
+    jQuery.getJSON('/products/' + handle + '.js', function (product) {
+    
+      if (handle === 'customised-diet-plan' || handle === 'prescription-from-ayurveda-doctor-and-dermatologist-included') {
+
+      } else {
+        if (product.title == 'Hair Vitamin with DHT Blockers | Biotin and Bhringraj') {
+          var title = 'Hair Vitamins';
+          productImage = product.images[5];
+          var Desc = '100% Vegetarian supplements for hair to combat vitamin deficiency related hair loss';
+          var productSub = 'Improve your hair health with the right nutrition';
+          var productDesc = '<div class="scs-story_desc1"><p class="read_m_lstory_content1">Targets root causes of hair loss such as vitamin deficiency, poor nutrition and DHT. Made with clinically tested safe and natural ingredients to promote thicker, healthier hair and reduce hair fall. Fortified with biotin and natural DHT blockers like pumpkin seed extract, pygeum, green tea extract and bhringraj.</p> <a class="show-description-lessandmore1 {{content_size}}" style="color:#737373;"href="javascript:void(0)">{{"Read more"}}</a></div>';
+
+          var prodContent2 = `<p class="doses"><b>Dosage:</b> One tablet daily or as prescribed by doctors.</p>`;
+        }
+        if (product.title == 'Hair Ras Ayurvedic Hair Herbs | 100% Natural Hair Supplement with Bhringraj') {
+          var title = 'Hair Ras';
+          productImage = product.images[5];
+          var Desc = 'Better hair quality & delayed greying with herbs like shatavari and bhringraj';
+          var productSub = 'An ayurvedic herb mix that improves hair quality and delays greying';
+          var productDesc = '<div class="scs-story_desc1"><p class="read_m_lstory_content1">Balances pitta dosha and maintains scalp and hair health. It increases blood flow to hair follicles to nourish them from within. Ayurvedic formula with natural ingredients for healthier, stronger and thicker hair.</p><a class="show-description-lessandmore1 {{content_size}}" style="color:#737373;"href="javascript:void(0)">{{"Read more"}}</a></div>';
+
+          var prodContent2 = `<p class="doses"><b>Dosage:</b> Two tablets, twice a day or as prescribed by doctors.</p>`;
+        }
+        if (product.title == 'ReCaP Serum for Hair Fall Control and Hair Growth | Contains Redensyl, Procapil and Capixyl (30 ml)') {
+          var title = 'ReCaP Hair Serum';
+          productImage = product.images[5];
+          var Desc = 'A serum to strengthen hair roots, improve scalp circulation and boost hair growth in early stages of hair loss.';
+          var productSub = 'Promotes hair regrowth naturally by improving follicle health';
+          var productDesc = '<div class="scs-story_desc1"><p class="read_m_lstory_content1">Complete hair fall control by reversing premature ageing of hair follicles, hair thinning and weakening of hair roots. Contains natural extracts like red clover, larch wood and castor oil are effective in stopping hair loss and maintaining the health of your hair.</p><a class="show-description-lessandmore1 {{content_size}}" style="color:#737373;"href="javascript:void(0)">{{"Read more"}}</a></div>';
+        }
+
+        if (product.handle == 'scalp-oil-with-scalp-therapy-booster-shots') {
+          var title = product.title.split('|')[0];
+          productImage = product.images[4];
+          var Desc = 'Herbal hair oil with essential oils, customised based on scalp and hair type';
+          var productSub = 'Control dandruff and reduce stress to stop your hair fall';
+          var productDesc = '<div class="scs-story_desc1"><p class="read_m_lstory_content1">Luxurious mix of herbal essential oils that work on promoting hair growth by improving follicle health. Fortified with essential oils that stimulate dormant hair follicles and clear any signs of mild dandruff from your scalp to support healthy hair growth.</p><a class="show-description-lessandmore1 {{content_size}}" style="color:#737373;"href="javascript:void(0)">{{"Read more"}}</a></div>';
+
+          var prodContent2 = `<p><b>Herbs:</b> Aloe vera, Brahmi, Bhringraj, Amla, Gudduchi, Kari patta, Yashtimadhu, Goat milk, Coconut oil.</p>`;
+        }
+        if (product.handle == 'scalp-oil-with-growth-therapy-booster-shots') {
+          var title = product.title.split('|')[0];
+          productImage = product.images[4];
+          var Desc = 'Herbal hair oil with essential oils, customised based on scalp and hair type';
+          var productSub = 'Control dandruff and reduce stress to stop your hair fall';
+          var productDesc = '<div class="scs-story_desc1"><p class="read_m_lstory_content1">Luxurious mix of herbal essential oils that work on promoting hair growth by improving follicle health. Fortified with essential oils that stimulate dormant hair follicles and clear any signs of mild dandruff from your scalp to support healthy hair growth.</p><a class="show-description-lessandmore1 {{content_size}}" style="color:#737373;"href="javascript:void(0)">{{"Read more"}}</a></div>';
+
+          var prodContent2 = `<p><b>Herbs:</b> Aloe vera, Brahmi, Bhringraj, Amla, Gudduchi, Kari patta, Yashtimadhu, Goat milk, Coconut oil.</p>`;
+        }
+        if (product.handle == 'scalp-oil-with-dandruff-therapy-booster-shots') {
+          var title = product.title.split('|')[0];
+          productImage = product.images[4];
+          var Desc = 'Herbal hair oil with essential oils, customised based on scalp and hair type';
+          var productSub = 'Control dandruff and reduce stress to stop your hair fall';
+          var productDesc = '<div class="scs-story_desc1"><p class="read_m_lstory_content1">Luxurious mix of herbal essential oils that work on promoting hair growth by improving follicle health. Fortified with essential oils that stimulate dormant hair follicles and clear any signs of mild dandruff from your scalp to support healthy hair growth.</p><a class="show-description-lessandmore1 {{content_size}}" style="color:#737373;"href="javascript:void(0)">{{"Read more"}}</a></div>';
+
+          var prodContent2 = `<p><b>Herbs:</b> Aloe vera, Brahmi, Bhringraj, Amla, Gudduchi, Kari patta, Yashtimadhu, Goat milk, Coconut oil.</p>`;
+        }
+        if (product.handle == 'scalp-oil-with-calm-therapy-booster-shots') {
+          var title = product.title.split('|')[0];
+          productImage = product.images[4];
+          var Desc = 'Herbal hair oil with essential oils, customised based on scalp and hair type';
+          var productSub = 'Control dandruff and reduce stress to stop your hair fall';
+          var productDesc = '<div class="scs-story_desc1"><p class="read_m_lstory_content1">Luxurious mix of herbal essential oils that work on promoting hair growth by improving follicle health. Fortified with essential oils that stimulate dormant hair follicles and clear any signs of mild dandruff from your scalp to support healthy hair growth.</p><a class="show-description-lessandmore1 {{content_size}}" style="color:#737373;"href="javascript:void(0)">{{"Read more"}}</a></div>';
+
+          var prodContent2 = `<p><b>Herbs:</b> Aloe vera, Brahmi, Bhringraj, Amla, Gudduchi, Kari patta, Yashtimadhu, Goat milk, Coconut oil.</p>`;
+        }
+
+        // var price = theme.Currency.formatMoney(product.price, theme.moneyFormat)
+        var html = `<div class="col-md-4 pt-2 pt-md-0 result-product mb-4">
+  <div class="product-item card border-0 rounded-lg shadow p-3 p-md-4 mb-0">
+      <div class="col-12">
+                    <img id="${product.handle}" src="${productImage}" class="mx-auto">
+              <h6 class="font-weight-bold text-center text-uppercase mt-md-4 d-md-none p-3 border-bottom" data-product-name=""><a href="${product.url}" class="text-decoration-none" tabindex="-1">${title}</a></h6>
+              <h5 class="font-weight-bold mb-3 text-center text-uppercase d-none d-md-block p-3 border-bottom" data-product-name=""><a href="${product.url}" class="text-decoration-none" tabindex="-1">${title}</a></h5>
+            </div>
+    ${productDesc}
+  </div>
+</div>`;
+
+        var title = $('[data-product-title]').append(product.title);
+        $('.product-section .container > .row').append(html);
+
+        $(".product-featured-image").append("<div class='img_wrap'><img id='" + product.handle + "' src='" + product.featured_image + "' /></div>");
+        $('#productImg').hide();
+        $('#productDescList').append("<li>" + product.title + "</li>");
+
+      }
+      var p = product.price;
+      prices = prices + p;
+
+      $('#price').html('₹' + JSON.stringify(prices).slice(0, -2) + '');
+      var discountPrice, discountedPrice, discount;
+      var selectedMonth = $('.select-plan [name="month"]:checked').closest('label');
+      // discount = selectedMonth.find('.main-persentage').data('discount');
+      discount = 0;
+      discountPrice = (prices * discount) / 100;
+      discountedPrice = prices - discountPrice;
+      //  1 month discount price
+      var month_1_des = $('.month-plan-1').find('.main-persentage').data('discount');
+      var month_3_des = $('.month-plan-3').find('.main-persentage').data('discount');
+      var discount_month_1 = prices - ((prices * month_1_des) / 100);
+      $('.del_tt_price[data-del-price]').html(theme.Currency.formatMoney(prices, theme.moneyFormat));
+      $('.price[data-price]').html(theme.Currency.formatMoney(discountedPrice, theme.moneyFormat));
+      //     $('.total-price').html(theme.Currency.formatMoney(discountedPrice*3, theme.moneyFormat));
+      $('.total-price').html(theme.Currency.formatMoney(discountedPrice * 3, theme.moneyFormat));
+      $('.total__discout_price_cstm').html(theme.Currency.formatMoney(discountedPrice * 3, theme.moneyFormat));
+      $('.total-price-1').html(theme.Currency.formatMoney(prices, theme.moneyFormat));
+      $('.total-price-3').html(theme.Currency.formatMoney(prices * 3, theme.moneyFormat));
+      $('[data-1month]').attr('data-1month', prices).attr('data-3month', discountedPrice * 3);
+      $('.total__discount_price_1').html(theme.Currency.formatMoney(discount_month_1, theme.moneyFormat));
+      $('.total__discount_price_3').html(theme.Currency.formatMoney(discountedPrice * 3, theme.moneyFormat));
+      /* added by neeraj   */
+      var fee = parseInt($('[data-docotr-fee]').attr('data-docotr-fee'));
+      $('[data-docotr-fee]').html(theme.Currency.formatMoney(fee * $('.select-plan [name="month"]:checked').val(), theme.moneyFormat));
+
+      var dietPlan = parseInt($('[data-diet-plan]').attr('data-diet-plan'));
+      $('[data-diet-plan]').html(theme.Currency.formatMoney(dietPlan * $('.select-plan [name="month"]:checked').val(), theme.moneyFormat));
+
+      var hairCoach = parseInt($('[data-hair-coach]').attr('data-hair-coach'));
+      $('[data-hair-coach]').html(theme.Currency.formatMoney(hairCoach * $('.select-plan [name="month"]:checked').val(), theme.moneyFormat));
+
+      var total__fess = (discountedPrice * $('.select-plan [name="month"]:checked').val()) + (fee * $('.select-plan [name="month"]:checked').val()) + (dietPlan * $('.select-plan [name="month"]:checked').val()) + (hairCoach * $('.select-plan [name="month"]:checked').val());
+      //$('.all-total-price').html(theme.Currency.formatMoney(total__fess, theme.moneyFormat));
+
+      var fees_charge = (fee * $('.select-plan [name="month"]:checked').val()) + (dietPlan * $('.select-plan [name="month"]:checked').val()) + (hairCoach * $('.select-plan [name="month"]:checked').val());
+
+      var percent_discount = 100 - Math.round((((total__fess - fees_charge) / total__fess) * 100));
+      $('.persentage').text('(' + percent_discount + '% Off)');
+
+      var total_fees_charge_month_1 = (discount_month_1 * $('.month-plan-1 [name="month"]').val()) + (fee * $('.month-plan-1 [name="month"]').val()) + (dietPlan * $('.month-plan-1 [name="month"]').val()) + (hairCoach * $('.month-plan-1 [name="month"]').val());
+      var fees_charge_month_1 = (fee * $('.month-plan-1 [name="month"]').val()) + (dietPlan * $('.month-plan-1 [name="month"]').val()) + (hairCoach * $('.month-plan-1 [name="month"]').val());
+      var percent_discount_month_1 = 100 - Math.round((((total_fees_charge_month_1 - fees_charge_month_1) / total_fees_charge_month_1) * 100));
+      $('.month-plan-1 .main-persentage').text('(' + percent_discount_month_1 + '% Off)');
+
+      var total_fees_charge_month_3 = (discountedPrice * $('.month-plan-3 [name="month"]').val()) + (fee * $('.month-plan-3 [name="month"]').val()) + (dietPlan * $('.month-plan-3 [name="month"]').val()) + (hairCoach * $('.month-plan-3 [name="month"]').val());
+      var fees_charge_month_3 = (fee * $('.month-plan-3 [name="month"]').val()) + (dietPlan * $('.month-plan-3 [name="month"]').val()) + (hairCoach * $('.month-plan-3 [name="month"]').val());
+      var percent_discount_month_3 = 100 - Math.round((((total_fees_charge_month_3 - fees_charge_month_3) / total_fees_charge_month_3) * 100));
+      $('.month-plan-3 .main-persentage').text('(' + month_3_des + '% Off)');
+      // $('#add-to-cart-result-page').html('Buy Now <span>( '+$('.select-plan [name="month"]:checked').val()+' Month Plan )</span>');
+
+      /* added by neeraj end  */
+
+      var qty = parseInt($('[name="month"]:checked').val());
+      if (qty == 1) {
+        var discount = '22%';
+      } else if (qty == 3) {
+        var discount = '33%';
+      }
+
+      if (getCookie("GuestForm_id")) {
+        variantsIDs.push({
+          'id': product.variants[0].id,
+          'quantity': qty,
+          properties: {
+            '_result_id': id
+          }
+        });
+      } else {
+        variantsIDs.push({
+          'id': product.variants[0].id,
+          'quantity': qty
+        });
+      }
+    });
+  }
+
+  function listedProductSlide(timer) {
+    setTimeout(function () {
+      $('.female_product_slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        dots: true,
+        slidesToScroll: 1,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              dots: true,
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              dots: true,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+
+      let $sltElmt = $('.read_m_lstory_content1');
+      let cntntHeight = 100;
+      setTimeout(function () {
+        if ($sltElmt) {
+          ($(window).width() < 768) ? cntntHeight = 70 : cntntHeight = 100;
+          $sltElmt.each(function () {
+            ($(this).innerHeight() > cntntHeight + (cntntHeight / 4)) ? ($(this).css('height', cntntHeight), $(this).parent().find('.show-description-lessandmore1').show()) : $(this).css('height', cntntHeight);
+          });
+          $('body').on('click', '.show-description-lessandmore1', function (e) {
+            e.preventDefault();
+            if ($(this).text() == 'Read less') {
+              var div_height = $(this).parents('.scs-story_desc1').find($sltElmt).css('height', cntntHeight);
+              $(this).text('Read more');
+            }
+            else {
+              var div_height = $(this).parents('.scs-story_desc1').find($sltElmt).css('height', 'auto');
+              $(this).text('Read less');
+            }
+          });
+        }
+      }, 200);
+    }, timer);
+  }
+  function checkout() {
+    var $ = jQuery;
+    var qty = $('[name="month"]:checked').val();
+    variantsIDs.forEach(e => {
+      e.quantity = qty;
+    });
+    if (qty == 3) {
+      var formData = {
+        'items': variantsIDs,
+        sections: 'cart-drawer'
+      }
+    } else {
+      var formData = {
+        'items': variantsIDs,
+        sections: 'cart-drawer'
+      }
+    }
+
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    }).then(response => {
+      $('.add-to-cart-result-page').removeAttr('disabled');
+      return response.json();
+    }).then(result => { 
+      var t = document.querySelector('cart-drawer');
+      let cart_drawer = result.sections['cart-drawer'];
+      CartDrawerUpdate(t, cart_drawer);
+    }).catch((error) => {
+      $('.add-to-cart-result-page').removeAttr('disabled');
+      return ('Error:', error);
+    });
+  }
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+  function buyItNow() {
+    var $ = jQuery;
+    var qty = $('[name="month"]:checked').val();
+    variantsIDs.forEach(e => {
+      e.quantity = qty;
+    });
+    let formData = {
+      'items': variantsIDs,
+      sections: 'cart-drawer',
+    };
+    if (qty == 3) {
+      var acturl = '/cart/checkout'
+    } else {
+      var acturl = '/cart/checkout'
+    }
+
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(response => {
+        //$('.site-header__cart.js-drawer-open-right').trigger('click');
+        document.location.href = acturl;
+        return response.json();
+      }).then(result => { 
+        var t = document.querySelector('cart-drawer');
+        let cart_drawer = result.sections['cart-drawer'];
+        CartDrawerUpdate(t, cart_drawer);
+      }).catch((error) => {
+        console.error('Error:', error);
+      });
+  }
+
+
+  // var position = 0;
+  // var scrollTo = '';
+  // var container = $('.main-content');
+  // jQuery('.result-gl-rvw').click(function (e, $) {
+  //   e.preventDefault();
+  //   var attr = $(this).attr('href').split('#')[1];
+  //   scrollTo = $('#' + attr);
+  //   scrollTo.trigger('click');
+  //   position = scrollTo.offset().top - container.offset().top + container.scrollTop() - 60;
+  //   $("html").animate({ scrollTop: position }, 600);
+  // });
+
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() >= $('.female-combo .site-footer').offset().top - window.innerHeight) {
+      $('.sticky-btn').css('position', 'static');
+    } else {
+      $('.sticky-btn').css('position', 'fixed');
+    }
+  });
+
+  $(document).ready(function(){
+    $(".doctor_sliderFcombo").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+          {
+            breakpoint: 767,
+            settings: {
+              dots: true,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+    });
+  });

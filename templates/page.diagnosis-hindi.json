@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "16644346150a62d798": {
+      "type": "image-with-text",
+      "blocks": {
+        "1664434615d1fa4a4a-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "आपके बाल क्यों झड़ रहे हैं?",
+            "heading_size": "h1"
+          }
+        },
+        "1664434615d1fa4a4a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>बालों का झड़ना रोकने के लिए पहला कदम मूल कारण का पता लगाना है। विविध प्रकार के झड़ते हुए बालो को विविध प्रकार की चिकित्सा की ज़रूरत होती है।<\/p><p><strong>आपका मूल कारन जानिये।<\/strong><\/p>",
+            "text_style": "body"
+          }
+        },
+        "1664434615d1fa4a4a-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "हेयर टेस्ट लीजिए",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1664434615d1fa4a4a-0",
+        "1664434615d1fa4a4a-1",
+        "1664434615d1fa4a4a-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hindi.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16644346150a62d798"
+  ]
+}

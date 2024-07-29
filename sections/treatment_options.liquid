@@ -1,0 +1,90 @@
+                        <!-- >>>>>>>treatment.liquid<<<<<<<<<<<<<< -->
+<div class="container text-center mb-3">
+  <h4 class="font-weight-bold section-title mb-3">{{ section.settings.title }}</h4>
+  <div class="d-flex may_you_like">
+    {% for block in section.blocks %}
+    <div class="may_you_like_blocks p-0">
+      <div class="mx-2 my-1 faq__cards">
+        <div class="card border-0 rounded-0">
+            <div> <img src="{{ block.settings.image | img_url:'700x' }}" width="100%" height="100%" alt="image" title="image"></div>
+            <div class="treatment_content p-2">
+              <div class="left l-0" style="font-size: 14px; font-weight:600; height: 42px;">{{ block.settings.image_text }}</div>
+              <p class="paraDate left p-1" style="font-size: 14px; color:#7B7B7B">{{ block.settings.para }}</p>
+            </div>  
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="text-center mt-4 d-md-none">
+    <a id="hairtestctatreatment4" href="https://form.traya.health/female?cohort=1&location=reviews&page={{ page__hndl }}" class="btn btn-dark my-md-3 shadow hair-form-actn-link">Take The Hair Test <sup>TM</sup></a>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Treatment Options",
+    "settings": [
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Enter Your Title"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "you may also like",
+        "type": "text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id": "image_text",
+            "label": "Add text"
+          },
+         {
+            "type": "text",
+            "id": "para",
+            "label": "Add Url"
+          }
+        ]
+      }
+    ],
+    "presets":[
+    {
+    "name":"Treatment Options"
+    }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+#shopify-section-{{ section.id }}  .faq__cards {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.125);
+}
+#shopify-section-{{ section.id }} #hairtestcta{
+  padding:12px 32px;
+  font-size:24px;
+  text-transform: capitalize;
+}
+.may_you_like_blocks {
+  width: 20%;
+}
+.paraDate {
+  height: 155px;
+}
+.treatment_content{background: #F5F5F5;}
+  
+@media only screen and (max-width: 350px) {
+  #shopify-section-{{ section.id }} #hairtestcta{
+  padding:12px 25px;
+  font-size:20px;
+ }
+}
+{% endstyle %}

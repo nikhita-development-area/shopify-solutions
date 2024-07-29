@@ -1,0 +1,187 @@
+<div class="main-successStories">
+  <div class="my-0 my-md-2 container py-0">
+      <h2 class="head font-weight-bold l-0">{{ section.settings.successStories-head }}</h2>
+      <p class="content l-0">{{ section.settings.successStories-para }}</p>
+      <h2 class="center-head text-center mx-auto font-fredoka l-0">{{ section.settings.center-head }}</h2>
+  </div>
+<div class="scroller" {% if section.settings.rgtToLft %} data-direction="right" {% else %} data-direction="left" {% endif %} data-animated="true" data-speed="fast">
+    <div class="scroller__inner tag-list">
+      {% for block in section.blocks %}
+        <div class="cstm-successStoryImg {{ forloop.index }} position-relative">
+        <a href="{{ block.settings.customer-url }}" target="_blank">
+          <img class="" src="{{ block.settings.stories-img | img_url : '300x' }}">
+          <div class="text position-absolute">
+              <p class="info text-white text-wrap l-0">{{ block.settings.info }}</p>
+              <p class="customer text-white l-0">{{ block.settings.customer }}</p>
+          </div>
+        </a>
+        </div>
+      {% endfor %}
+    </div>
+</div>
+</div>
+{% schema %}
+  {
+    "name": "successStories name",
+    "tag" : "section",
+    "class": "successStories-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "successStories-head",
+        "label": "Enter the heading"
+      },
+      {
+        "type": "text",
+        "id": "successStories-para",
+        "label": "Enter the para"
+      },
+      {
+        "type": "checkbox",
+        "id": "rgtToLft",
+        "label": "Check if want direction from left to right"
+      },
+      {
+        "type": "textarea",
+        "id": "center-head",
+        "label": "Enter the heading(center heading)"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Blocks",
+        "type": "text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "stories-img",
+            "label": "Drag the images"
+          },
+          {
+            "type": "text",
+            "id": "info",
+            "label" : "Enter the text"
+          },
+          {
+            "type": "text",
+            "id": "customer",
+            "label" : "Enter the customer name"
+          },
+          {
+            "type": "url",
+            "id": "customer-url",
+            "label" : "Enter the url"
+          }
+        ]
+      }
+    ],
+    "presets":[
+    {
+        "name":"successStories Section",
+        "category": "custom"
+    }
+  ]
+}
+{% endschema %}
+<style>
+.tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+}
+.scroller { 
+    max-width: 100%;
+}
+
+.scroller__inner {
+    display: flex;
+    padding-block: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+    animation-delay: 1s;
+}
+
+.scroller[data-direction='left'] {
+    --_animation-direction: forwards;
+}
+.scroller[data-direction='right'] {
+    --_animation-direction: reverse;
+}
+
+.scroller[data-direction='slow'] {
+    --_animation-duration: 20s;
+}
+.scroller[data-speed='fast'] {
+    --_animation-duration: 15s;
+}
+
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+.cstm-successStoryImg {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 300ms;
+    filter: grayscale(.2);
+    cursor: pointer;
+}
+
+.scroller[data-animated="true"] .scroller__inner:has(img:hover, img:active, img:focus) {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.cstm-successStoryImg:hover, .cstm-successStoryImg:focus, .cstm-successStoryImg:active {
+    transform: scale(1.1);
+    filter: saturate(1.2);
+}
+
+  .scroller .text.position-absolute{
+    bottom: 10%;
+    left: 5%;
+ }
+  .scroller .text .info{
+    font-size: 14px;
+    line-height: 16px;
+  }
+   .scroller .text .customer{
+    font-size: 12px;
+    line-height: 16px;
+  }
+  @media(width <= 749px){
+    .main-successStories .center-head{
+    font-size: 24px;
+    line-height: 28px;
+    }
+    .scroller .text.position-absolute {
+        bottom: 3%;
+  }
+    .scroller .text .info{
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+  .scroller .text .customer{
+    font-size: 10px;
+  }
+    .main-successStories .head{
+      font-size: 24px;
+      line-height: 28px;
+    } 
+  }
+</style>

@@ -1,0 +1,93 @@
+{%- assign fre_size = product.metafields.metafield.size -%}
+{%- if fre_size > 0  -%}
+<div class="container">
+<div class="frequently-bought-together__inner">
+  {%- if section.settings.heading != blank or section_id == 'product-template' -%}
+  <div class="section-title text-center">
+    <h2 class="title-with-line">{{ section.settings.heading | default: 'Frequently Brought Together' }}</h2>
+  </div>
+  {%- endif -%}
+  <div class="row {% if fre_size > 1 %}frequently-bought-together_products{% endif %} justify-content-evenly">
+    {% for data in product.metafields.metafield %}
+    {% assign select_product = data | last %}
+    {%- assign productv = all_products[select_product] -%}
+    <div class="box-item p-2 p-md-3 {% if fre_size > 1 %}col-12{% else %}col-12{% endif %} col-md-5 shadow">
+      {% include 'card-product', max_height: 250, card_product: productv, hide_form: false %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</div>
+<style>
+  .frequently-bought-together__inner .btn{
+      border-radius: 7px;
+  }
+  .frequently-bought-together__inner .product-form {  padding-top: 0px;}
+  .frequently-bought-together__inner .price-item.price-item--sale,.frequently-bought-together__inner .price-item--regular .money{
+      font-size: 17px;
+  }
+  .justify-content-evenly{
+      justify-content: space-evenly !important;
+  }
+  .frequently-bought-together_products{
+  flex-wrap: nowrap;
+  }
+  .frequently-bought-together_products .box-item{
+  margin: 0 5px;
+  }
+  .frequently-bought-together__inner .card__media .media>*:not(.zoom):not(.deferred-media__poster-button){
+    max-height: 325px;
+  }
+  .frequently-bought-together__inner .card--card{
+    border: 0;
+  }
+  .frequently-bought-together__inner .box-item{
+    border-radius: .7rem;
+  }
+  .frequently-bought-together__inner .title-with-line{
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -.22px;
+    margin-bottom: 30px;
+  }
+  .frequently-bought-together__inner .card__heading, .frequently-bought-together__inner .card-information, .frequently-bought-together__inner .product-metafields{
+    text-align: center;
+  }
+  .frequently-bought-together__inner .quick-add{
+    grid-row-start: 4;
+    z-index: 1;
+  }
+  .frequently-bought-together__inner .button{
+    background: #EE9A3C;
+    border-color: #EE9A3C;
+    color: #000;
+    font-size: 17px;
+  }
+  @media (max-width: 767.98px){
+    .frequently-bought-together__inner .h4.grid-view-item__title.product-card__title {
+      font-size: 12px;
+    }
+    .frequently-bought-together__inner .grid-view-item.product-card p {
+      font-size: 10px;
+      margin-bottom: 7px;
+          max-height: 30px;
+    overflow: hidden;
+    }
+    .frequently-bought-together__inner .slick-list.draggable {
+/*         padding: 0 6% 5% 0 !important; */
+}
+      .frequently-bought-together__inner .price-item.price-item--sale,.frequently-bought-together__inner .price-item--regular .money{
+      font-size: 12px;
+  }
+
+    .frequently-bought-together__inner .section-title .title-with-line {
+      font-size: 20px;
+    }
+    .frequently-bought-together__inner .section-title .title-with-line:before {
+  	  height: 7px;
+      top: -14px;
+    }
+  }
+  
+</style>
+{%- endif -%}

@@ -1,0 +1,89 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+<div class="ht_section">
+<div class="hair_transplant_padding">
+  <div class="heading_transplan_main">
+    {% if section.settings.heading != blank %}
+      <div class="hair_transplant_doctor">{{ section.settings.heading }}</div>
+    {% endif %}
+  </div>
+</div>
+</div>
+
+{%- style -%}
+  .hair_transplant_padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .hair_transplant_doctor {
+   font-family: Fredoka;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38.72px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color:#414042;
+    margin-left:20px;
+    margin-right:20px;
+  }
+
+  
+  @media screen and (min-width: 750px) {
+    .hair_transplant_padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+     .hair_transplant_doctor {
+      font-family: Fredoka;
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 38.72px;
+      letter-spacing: 0.01em;
+      text-align: left;
+      color:#414042;
+       margin-left:0;
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Heading Hair Transplant",
+  "settings": [
+    {
+      "type":"text",
+      "id":"heading",
+      "label":"Haeding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "presets":[
+    {
+     "name": "Heading Hair Transplant"
+    }
+  ]
+}
+{% endschema %}

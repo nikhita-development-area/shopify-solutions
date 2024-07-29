@@ -1,0 +1,164 @@
+<!--- sections/doctor-details -->
+  <section id="doctordetails" class="doctordetails">
+  <div class="pt-5 mt-md-5 mt-4">
+    <div class="medium-up--five-sixths medium-up--push-one-twelfth">
+  <div class=" row justify-content-lg-around{% comment %} py-5{% endcomment %}">
+    <div class="col-6 text-center d-md-none mx-auto doctor_img">
+      <img src="{{ section.settings.doctor_image | image_url }}" class="big_img" alt="{{ section.settings.doctor_name }}">
+    </div>
+    <div class="col-8 col-lg-3 col-sm-4 text-center d-none d-md-block doctor_img m-auto">
+      <img src="{{ section.settings.doctor_image | image_url }}" class="big_img shadow" alt="{{ section.settings.doctor_name }}">
+    </div>
+    <div class="col-12 col-lg-8 col-sm-8 mt-3">
+      <div class="col-12">
+        <h2 class="text_Fredoka m-0 ml-3">{{ section.settings.doctor_name }} <img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/verified_icon_b1d7d24e-335c-4094-ab92-65dfd27d265f.png" alt="verified"></h2>
+        <h3 class="hair text-uppercase ml-3 py-2 description-font">{{ section.settings.specialization }}</h3> 
+      </div>
+      <div class="col-12 row my-5 m-auto"> 
+        <div class="col-12 col-md-6 Education">
+          <h3 class="mb-4 details-font-size"><b>Education</b><br><span class="">{{ section.settings.education }}</span></h3>
+        </div>
+        <div class="col-12 col-md-6 Registration">
+          <h3 class="mb-4 details-font-size"><b>Registration</b> <br><span class=""> {{ section.settings.registration_no }}</span></h3>            
+        </div>
+        <div class="col-12 col-md-6 Rating mb-3">
+          <h3 class="mb-4 details-font-size"><b>Rating</b><br><img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/4_large_6f52943d-5dfc-40d1-960a-f22b7c0bdbb5.png" alt="rating" class="mb-md-4 Rating_img"><span class=""> {{ section.settings.ratings }}</span>&nbsp;<span class="d-md-none">{{ section.settings.Plan_patients }}</span><br><span class="d-none d-md-block">{{ section.settings.Plan_patients }}</span></h3> 
+        </div>
+        <div class="col-12 col-md-6 ">
+          <h3 class="details-font-size mb"><b>Language</b><br><span class="">{{ section.settings.known_languages }}</span></h3>            
+        </div>
+        <div class="col-12 col-md-6 Language contact-details">
+          <h3 class="details-font-size mb-4"><b>Contact details:</b><br><span class=""><a href="mailto: doctors@traya.health">{{ section.settings.contact_details }}</a></span></h3>            
+        </div>
+      </div>
+  </div>
+  </div>
+    </div>
+  </div>
+  </section>
+   <section id="doctor_about_content">
+  <div class="page-width mb-3">
+  <h2 class="text_Fredoka about my-3 my-md-5 ml-3 ml-md-auto">About the doctor</h2>
+  <div class="row">
+  <div class="col-12 mb-0 mb-md-4">
+    <p class=" p-3 p-md-5 doctor_about_content border rounded-lg shadow">
+      {{ section.settings.about_doctors }}
+    </p>
+  </div>
+  </div>
+  </div>
+  </section>
+  <div class="s-sep m-auto">  </div>
+  
+  <section id="doctor_testimonials">
+  <div class="page-width">
+  <h2 class="text_Fredoka about mt-3 mt-md-5 ml-3 ml-md-auto text-center">Patient Stories</h2>
+  <div class="doctor_testimonials_slides">
+  {% for block in section.blocks %}
+  <div class="row doctor_testimonials_content border rounded-lg py-2 m-1 m-md-5">
+    <div class="col-12 mt-4 d-flex justify-content-between align-items-center">
+      <p class="font-weight-bold name_testimonial m-0"><span class="py-md-2 px-md-3 py-1 px-2 mx-md-3 mx-1 name_latter font-weight-bold">{{ block.settings.UserFirstLater }}</span>{{ block.settings.user_name }}</p>
+      <div class="thumb_up">
+        <img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/thumbs_up_6.png">
+      </div>
+    </div>
+    <p class="p-3 testi_slide_content">
+      {{ block.settings.user_content }}
+    </p>
+  </div>
+    {% endfor %}
+  </div>
+  </div>
+  </section>
+  <div class="s-sep m-auto">  </div>
+
+  {% render 'doctor-schema' %}
+{% schema %}
+  {
+    "name": "Doctor Details",
+    "class": "doctor-details",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "doctor_image",
+        "label": "Select Doctor Image"
+      },
+      {
+        "type": "text",
+        "id": "doctor_name",
+        "label": "Enter Doctor Name"
+      },
+      {
+        "type": "text",
+        "id": "specialization",
+        "label": "Enter Specialization"
+      },
+      {
+        "type": "text",
+        "id": "education",
+        "label": "Enter Education"
+      },
+      {
+        "type": "text",
+        "id": "registration_no",
+        "label": "Enter Registration Number"
+      },
+      {
+        "type": "text",
+        "id": "ratings",
+        "label": "Enter Rating"
+      },
+      {
+        "type": "text",
+        "id": "Plan_patients",
+        "label": "Enter Plan Patients Number"
+      },
+      {
+        "type": "text",
+        "id": "known_languages",
+        "label": "Enter Known Languages"
+      },      
+      {
+        "type": "text",
+        "id": "contact_details",
+        "label": "Enter Contact Details",
+        "default": "doctors@traya.health"
+      },   
+      {
+        "type": "text",
+        "id": "about_doctors",
+        "label": "About Doctors"
+      }
+    ],
+ "blocks": [
+     {
+       "name": "Patient Stories",
+       "type": "text",
+       "settings": [
+         {
+           "type": "text",
+           "id": "UserFirstLater",
+           "label": "User First Later"
+         },
+         {
+           "type": "text",
+           "id": "user_name",
+           "label": "User Name"
+         },
+         {
+           "type": "text",
+           "id": "user_content",
+           "label": "Content"
+         }
+       ]
+                                
+
+}
+],
+  "presets": [
+    {
+      "name": "Doctor Details"
+    }
+  ]
+  }
+{% endschema %}

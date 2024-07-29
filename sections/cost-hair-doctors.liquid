@@ -1,0 +1,63 @@
+<!----- cost-hair-doctors.liquid ------->
+{% comment %}<div class="container">
+  <div class="city-hair-doctors rounded-lg">
+    {% assign doctor_cost = article.metafields.custom.doctor_cost %}
+    <h2 class="city-hd-heading">{{ doctor_cost.value.heading }}</h2>
+    <div class="city-hd-content">{{ doctor_cost.value.content }}</div>
+  </div>
+</div> {% endcomment %}
+
+{% assign length = 0 %}
+{% assign total_fees = 0 %}
+{% for doctors_list in article.metafields.custom.doctors_list.value %}
+  {% assign length = length | plus: 1 %}
+  {% assign doc_fees = doctors_list.doctor_fee | split: '₹' | last | plus: 0 %}
+  {% assign total_fees = doc_fees | plus: total_fees %}
+{% endfor %}
+{% assign average_fees = total_fees | divided_by:length %}
+{% assign last2digit_fees =  average_fees | modulo: 100  %}
+
+ {% if last2digit_fees == 00 or last2digit_fees == 50 %}
+   {% assign lastaverage = average_fees %}
+{% elsif last2digit_fees < 50 %}
+  {% assign minus_fifty = 50 | minus:last2digit_fees %}
+  {% assign lastaverage = average_fees | plus:minus_fifty  %} 
+{% elsif last2digit_fees > 50 %}
+{% assign minus_hundred = 100 | minus:last2digit_fees %}
+{% assign lastaverage = average_fees | plus:minus_hundred  %} 
+{% endif %}
+
+
+<div class="container">
+  <div class="city-hair-doctors rounded-lg">
+    <h2 class="city-hd-heading">{{ section.settings.heading }}</h2>
+    <p class="city-hd-content">{{ section.settings.content |replace:'average_cost',lastaverage }}</p>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Cost hair doctors",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Cost hair doctors"
+      }
+    ]
+  }
+{% endschema %}
+<style>
+  .city-hair-doctors ul{
+    padding-left:16px;
+  }
+</style>

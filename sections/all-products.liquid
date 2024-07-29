@@ -1,0 +1,311 @@
+<div class="container">
+  <div class="traya-kit">
+  {% for block in section.blocks %}
+    {% if block.type == 'Main' %}
+      <p class="text-uppercase text-center traya-kit-main-heading">{{ section.settings.Heading }}</p>
+    {% endif %}
+  {% endfor %}
+  </div>
+
+  <div class="products-reccomndation">
+    {% for block in section.blocks %}
+      {% if block.type == 'Sub-header' %}
+        <p class="section-title all-product pt-5">{{ block.settings.main_heading }}</p>
+        <div class="row">
+          <div class="col-sm-9">
+            <p class="ayurveda-main-content position-relative pb-4 main-content">{{ block.settings.main_content }}</p>
+          </div>
+          <div class="col-sm-3"> </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+      
+    {% for block in section.blocks %}
+      {% if block.type == 'Product-content' %}
+      <div class="row" id="scalpOil">
+        <div class="col-9 main-content position-relative">
+          <p class="product--name">{{ block.settings.head_Text_1}}</p>
+          <div class="scalp">
+            <p>{{ block.settings.head_Text_2}}<br>
+              {% if block.settings.herbs_content != blank %}
+                <span class="font-weight-bold">Herbs :</span> {{ block.settings.herbs_content}}
+              {% endif %}
+            </p>
+            {% if block.settings.Essential != blank %}
+              <p><span class="font-weight-bold">Essential oils :</span> {{ block.settings.Essential}}</p>
+            {% endif %}
+            {% if block.settings.Ingredients != blank %}
+              <p><span class="font-weight-bold">Ingredients :</span>{{ block.settings.Ingredients}}</p>
+            {% endif %}
+            <div class="row">
+              <div class="col-md-6 har-ol">
+                <ul>
+                  {% if block.settings.li_1 != blank %}
+                  <li>{{ block.settings.li_1}}</li>
+                  {% endif %}
+                  {% if block.settings.li_2 != blank %}
+                  <li> {{ block.settings.li_2}}</li>
+                  {% endif %}
+                  {% if block.settings.li_3 != blank %}
+                  <li>{{ block.settings.li_3}}</li>
+                  {% endif %}
+                  {% if block.settings.li_4 != blank %}
+                  <li>{{ block.settings.li_4}} </li>
+                  {% endif %}
+                  {% if block.settings.li_5 != blank %}
+                  <li>{{ block.settings.li_5}} </li>
+                  {% endif %}
+                </ul>
+              </div>
+              {% if block.settings.Dosage != blank %}
+                <div class="col-md-6"><span class="font-weight-bold">Dosage</span> &nbsp;{{ block.settings.Dosage}}</div>
+              {% endif %}
+              <div class="col-md-12 mt-4">
+                {% if block.settings.button_link_url != blank and block.settings.btn_text != blank %}
+                  <a href="{{ block.settings.button_link_url }}" class="btn btn-dark">{{ block.settings.btn_text }}</a>
+                {% endif %}
+              </div>
+            </div>
+            <div class="line-text"></div>
+          </div>
+        </div>
+        <div class="col-3">
+          {% if block.settings.pattern_img != blank %}
+            <img class="product-image" src="{{ block.settings.pattern_img | img_url: ' '}}" alt="Bottles_Scalp_Oil">
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  
+    {% for block in section.blocks %}
+      {% if block.type == 'Sub-Footer' %}
+        {% if block.settings.footer_heading != blank %}
+          <p class="section-title all-product pt-5">{{ block.settings.footer_heading }}</p>
+        {% endif %}
+        <div class="row">
+          {% if block.settings.footer_content != blank %}
+            <div class="col-sm-9">
+              <p class="ayurveda-main-content pb-4">{{ block.settings.footer_content }}</p>
+            </div>
+          {% endif %}
+            <div class="col-sm-3"> </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "All Products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "Heading",
+        "label": "Hair Fall"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Main",
+        "name": "Main Header 1",
+        "settings": [
+          {
+            "type": "text",
+            "id": "main-head",
+            "label": "Headding"
+            }
+        ]
+      },
+      {
+        "type": "Sub-header",
+        "name": "Sub Header",
+        "settings": [
+          {
+            "type": "text",
+            "id": "main_heading",
+            "label": "Main Heading"
+          },
+          {
+            "type": "text",
+            "id": "main_content",
+            "label": "Content"
+          }
+        ]
+      },
+      {
+        "type": "Product-content",
+        "name": "Product Content",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "pattern_img",
+            "label": "Pattern Image"
+          },
+          {
+            "type": "text",
+            "id": "head_Text_1",
+            "label": "First Heading"
+          },
+          {
+            "type": "text",
+            "id": "head_Text_2",
+            "label": "Second Content"
+          },
+          {
+            "type": "text",
+            "id": "li_1",
+            "label": "LI 1 Content"
+          },
+          {
+            "type": "text",
+            "id": "li_2",
+            "label": "LI 2 Content"
+          },
+          {
+            "type": "text",
+            "id": "li_3",
+            "label": "LI 3 Content"
+          },
+          {
+            "type": "text",
+            "id": "li_4",
+            "label": "LI 4 Content"
+          },
+          {
+            "type": "text",
+            "id": "li_5",
+            "label": "LI 5 Content"
+          },
+          {
+            "type": "text",
+            "id": "herbs_content",
+            "label": "Herbs"
+          },
+          {
+            "type": "text",
+            "id": "Essential",
+            "label": "Essential"
+          },
+          {
+            "type": "text",
+            "id": "Ingredients",
+            "label": "Ingredients"
+          },
+          {
+            "type": "text",
+            "id": "Dosage",
+            "label": "Dosage"
+          },
+          {
+            "type": "url",
+            "id": "button_link_url",
+            "label": "Button"
+          },
+          {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button Text"
+          }
+        ]
+      },
+      {
+        "type": "Sub-Footer",
+        "name": "Add Footer head",
+        "settings": [
+          {
+            "type": "text",
+            "id": "footer_heading",
+            "label": "Footer Heading"
+          },
+          {
+            "type": "text",
+            "id": "footer_content",
+            "label": "Footer Content"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "All Products",
+        "category": "custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .traya-kit-main-heading {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.61;
+    letter-spacing: normal;
+  }
+  .section-title.all-product:before {
+    content: '';
+    width: 102.7px;
+    height: 8px;
+    border-radius: 4px;
+    top: -15px;
+    left: 0;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    background: #414042;
+  }
+  .products-reccomndation .row {
+    margin-bottom: 25px;
+  }
+  .product--name {
+    font-size: 25px;
+    font-weight: 800;
+  }
+  .scalp, .ayurveda-main-content {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.36;
+    letter-spacing: -.22px;
+  }
+  .products-reccomndation .product-image {
+    margin-top: 30px;
+  }
+  .products-reccomndation li {
+    list-style: inherit;
+    margin-left: 20px;
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    .scalp, .ayurveda-main-content {
+      font-size: 18px;
+    }
+    .product--name {
+      font-size: 22px;
+    }
+    .products-reccomndation .product-image {
+      margin-top: 75px;
+    }
+  }
+  @media only screen and (max-width: 767.98px) and (min-width: 576px) {
+    .scalp, .ayurveda-main-content {
+      font-size: 16px;
+    }
+    .products-reccomndation .product-image {
+      margin-top: 70px;
+    }
+    .product--name {
+      font-size: 22px;
+    }
+  }
+  @media only screen and (max-width: 575.98px) {
+    .scalp, .ayurveda-main-content {
+      font-size: 14px;
+    }
+    .products-reccomndation .product-image {
+      margin-top: 75px;
+    }
+    .product--name {
+      font-size: 20px;
+    }
+  }
+{% endstyle %}

@@ -1,0 +1,150 @@
+<div class="container section-{{ section.id }}-padding">
+  <div class="adrich_happens d-flex flex-wrap mb-0">
+    {%- for block in section.blocks -%}
+      <div class="adrich_happens-popup" id="popup{{ forloop.index }}" style="display: none;"> <!-- Science Page Changes Added Full Line (<div>)-->
+        <div class="col-12 happens__main m-2"> 
+          <div class="aldrich_happens_main d-flex flex-wrap justify-content-center align-items-center">
+            <div class="col-lg-10 col-md-11 col-12 text-center">
+              {% if block.settings.heading_1 != blank %}<p class="m-0 pb-md-3 pb-2 happens_heading font-weight-bold">{{ block.settings.heading_1 }}</p>{% endif %}
+              {% if block.settings.description_1 != blank %}<p class="m-0 pb-md-3 pb-2 happens_description">{{ block.settings.description_1 }}</p>{% endif %}
+            </div>
+            <div class="col-lg-10 col-md-11 col-12 text-center">
+              {% if block.settings.heading_2 != blank %}<p class="m-0 pb-md-3 pb-2 happens_heading font-weight-bold">{{ block.settings.heading_2 }}</p>{% endif %}
+              {% if block.settings.description_2 != blank %}<p class="m-0 pb-md-3 pb-2 happens_description">{{ block.settings.description_2 }}</p>{% endif %}
+            </div>
+          </div>
+          <!-- Science Page Changes -->
+          <button class="close-btn position-absolute font-weight-bold" style="top: 5px; right: 5px; border-radius: 50px; border: none; height: 30px; width: 30px;">X</button>
+          <!-- Science Page Changes -->
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Aldrich What Happens",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Aldrich Happens",
+        "type": "Aldrich_Happens",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading_1",
+            "label": "Enter First Heading",
+            "info": "First Heading",
+            "default": "What Happens"
+          },
+          {
+            "type": "text",
+            "id": "description_1",
+            "label": "Enter First Description",
+            "info": "First Description"
+          },
+          {
+            "type": "text",
+            "id": "heading_2",
+            "label": "Enter Second Heading",
+            "info": "Second Heading",
+            "default": "How it affects hair"
+          },
+          {
+            "type": "text",
+            "id": "description_2",
+            "label": "Enter Second Description",
+            "info": "Second Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Aldrich What Happens"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  #shopify-section-{{ section.id }} .happens__main {padding: 3rem 0;background: #F9F9F9;box-shadow: 4px 3px 6px 0px #00000040;}
+  #shopify-section-{{ section.id }} .aldrich_happens_main {min-height: 365px;}
+  #shopify-section-{{ section.id }} .happens_heading {font-size: 30px;line-height: 45px;color: #BE6C5D;}
+  #shopify-section-{{ section.id }} .happens_description {font-size: 20px;line-height: 30px;font-weight: 300;color: #303032;}
+  /* .adrich_happens:not(.slick-initialized) > .happens__main:first-of-type ~* {display: none;} */ /* Science Page Changes */
+  .adrich_happens .slick-dots li.slick-active button:before {color: #C4695B;}
+  .adrich_happens .slick-dots li button:before {color: #D9D9D9;opacity: 1;}
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    #shopify-section-{{ section.id }} .happens__main {padding: 2rem 0;}
+    #shopify-section-{{ section.id }} .aldrich_happens_main {min-height: 335px;}
+    #shopify-section-{{ section.id }} .happens_heading {font-size: 23px;line-height: 40px;}
+    #shopify-section-{{ section.id }} .happens_description {font-size: 17px;line-height: 27px;}
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .happens__main {padding: 1.5rem 0;}
+    #shopify-section-{{ section.id }} .aldrich_happens_main {min-height: 310px;}
+    #shopify-section-{{ section.id }} .happens_heading {font-size: 25px;line-height: 40px;}
+    #shopify-section-{{ section.id }} .happens_description {font-size: 13px;line-height: 23px;}
+  }
+  @media only screen and (max-width: 767.98px) {
+    #shopify-section-{{ section.id }} .happens__main {padding: 1rem 0;background: #FBFAFA;border-radius: 10px;}
+    #shopify-section-{{ section.id }} .aldrich_happens_main {min-height: 325px;}
+    #shopify-section-{{ section.id }} .happens_heading {font-size: 14px;line-height: 21px;}
+    #shopify-section-{{ section.id }} .happens_description {font-size: 12px;line-height: 18px;}
+  }
+{% endstyle %}
+
+<!-- Science Page Changes -->
+<script>
+  // $(document).ready(function() {
+  //   $('.adrich_happens').slick({
+  //     slidesToShow: 1,
+  //     slidesToScroll: 1,
+  //     autoplay: true,
+  //     autoplaySpeed: 5000,
+  //     arrows: false,
+  //     dots: true,
+  //     infinite: true,
+  //   })
+  // })
+</script>
+<!-- Science Page Changes -->

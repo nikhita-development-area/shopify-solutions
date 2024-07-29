@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "bc80f826-dfa6-4a60-9922-2d0a0e25f74b": {
+      "type": "repeat-customer",
+      "settings": {
+      }
+    },
+    "83889dce-3127-426a-97cc-7900b8e33061": {
+      "type": "buy-now-atc",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "bc80f826-dfa6-4a60-9922-2d0a0e25f74b",
+    "83889dce-3127-426a-97cc-7900b8e33061"
+  ]
+}

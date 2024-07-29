@@ -1,0 +1,71 @@
+<!-- Sections -> cuticle-damage-occur.liquid -->
+
+<div class="page-width cuticle-damage-occur">
+  {% if section.settings.damage_success != blank %} 
+    <h2 class="damage_occurs_haeding">{{ section.settings.damage_success }}</h2>
+  {% endif %}
+  {% if section.settings.inside_success != blank %}
+    <p class="damage_occurs_inside px-2">{{ section.settings.inside_success }}</p>
+  {% endif %}
+  
+  <div class="damage-desk-img">
+    <img src="{{ section.settings.damage_occurs_desk_img | img_url: 'master' }}" width="100%" />  
+  </div>
+  <div class="damage-mob-img">
+    <img src="{{ section.settings.damage_occurs_mob_img | img_url: 'master' }}" width="100%" />  
+  </div>
+</div>
+
+<style>
+  .damage_occurs_haeding {font-family: Nunito Sans; font-size: 48px; font-weight: 700; line-height: 60px; letter-spacing: 0em; text-align: center;}
+  .damage_occurs_inside {font-family: Nunito Sans; font-size: 36px; font-weight: 400; line-height: 49px; letter-spacing: 0em; text-align: center;}
+  .damage-mob-img {display: none;}
+  
+  @media only screen and (max-width: 991.98px) and (min-width: 576px) {
+    .damage_occurs_haeding {font-size: 35px; line-height: 38px;}
+    .damage_occurs_inside {font-size: 24px; line-height: 25.92px;}
+  }
+
+  @media only screen and (max-width: 767.98px) {.cuticle-damage-occur {padding: 0;}}
+  
+  @media only screen and (max-width: 575.98px) {
+   .damage-mob-img {display: block;} 
+   .damage-desk-img {display: none;}
+   .damage_occurs_haeding {font-size: 30px; line-height: 40px; width: 90%; margin: auto;}
+   .damage_occurs_inside {font-size: 19px; line-height: 20px;}
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Cuticle Damage Occurs",
+    "settings": [
+      {
+        "type": "text",
+        "id": "damage_success",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "inside_success",
+        "label": "Sub-Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "damage_occurs_desk_img",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "damage_occurs_mob_img",
+        "label": "Mobile Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Cuticle Damage Occurs",
+        "category": "Cuticle Damage Occurs"
+      }
+    ]
+  }
+{% endschema %}

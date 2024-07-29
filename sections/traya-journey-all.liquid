@@ -1,0 +1,316 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<div class="container home-journey mt-4">
+  {% if section.settings.section-title != blank %}<p class="text-center font-weight-bold traya-journey-head">{{ section.settings.section-title }}</p>{% endif %}
+  <div class="row">
+  {% for block in section.blocks %}
+    <a href="{{ block.settings.page_link }}&page={{ page__hndl }}" class="col-md-4 traya-journey-card">               
+      <div class="journey">
+        <div class="journey-card">
+          {% if block.settings.step1_image != blank %}
+            <div class="text-center d-none d-md-block">
+              <img src="{{ block.settings.step1_image | img_url:' ' }}"/>
+            </div>
+          {% endif %}
+          {% if block.settings.step1_mobile_image != blank %}
+            <div class="text-left d-md-none mobile-card-image mx-2">
+              <img src="{{ block.settings.step1_mobile_image | img_url:'60x' }}"/>
+            </div>
+          {% endif %}
+          <div class="journey-card-text mx-1 mx-md-0">
+            {% if block.settings.steps_heading != blank %}
+              <p class="font-weight-bold steps-heading">{{ block.settings.steps_heading }}</p>
+            {% endif %}
+            {% if block.settings.steps-text != blank %}
+              <p class="steps-text">{{ block.settings.steps-text }}</p>
+            {% endif %}
+          </div> 
+        </div>
+        <hr class="journey-card-divider my-3 my-md-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="steps text-uppercase pl-2 pl-md-auto text_Fredoka col-6">STEP {{ forloop.index }}</p>
+          {% if block.settings.time != blank %}
+            <p class="time col-6 text-right">{{ block.settings.time }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </a>
+  {% endfor %}
+  </div>
+  <div class="text-center">
+    {% if section.settings.regrow_text != blank %}<p class="text-capitalize mt-md-5 mt-4 mb-3 px-4 px-md-0 mb-md-0 journey-regrow">{{ section.settings.regrow_text }}</p>{% endif %}
+    {% if section.settings.button_link != blank and section.settings.button_text != blank %}
+      <a id="hairtestcta" href="{{ section.settings.button_link }}&page={{ page__hndl }}" class="start-journey-btn btn btn-dark mt-3 shadow">{{ section.settings.button_text }} <sup>&trade;</sup></a>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Traya Journey all",
+    "settings":[
+      {
+        "type": "text",
+        "id": "section-title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "regrow_text",
+        "label": "regrow_text"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "button_text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }
+    ],  
+    "blocks":[
+      {
+        "type":"text",
+        "name":"Traya Journey all",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "step1_image",
+            "label": "Logo image"
+          },
+          {
+            "type": "url",
+            "id": "page_link",
+            "label": "Page link"
+          },
+          {
+            "type": "image_picker",
+            "id": "step1_mobile_image",
+            "label": "Logo image"
+          },
+          {
+            "type": "text",
+            "id": "steps_heading",
+            "label": "steps_heading"
+          },
+          {
+            "type": "text",
+            "id": "steps-text",
+            "label": "steps-text"
+          },
+          {
+            "type": "text",
+            "id": "time",
+            "label": "time-text"
+          }
+          ]
+        }
+    ],
+    "presets":[
+      {
+        "name":"Traya Journey all",
+        "category":"custom"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .traya-journey-head {
+    font-size:26px;
+    line-height:35px;
+    color:#000;
+  }
+  .journey{
+    width:100%;
+    border: 1px solid #E8E8E8;
+    box-shadow: 0px 3.79529px 3.79529px rgb(0 0 0 / 25%);
+    border-radius:10px;
+    padding:30px 30px 20px;
+  }
+  .steps-heading{
+    margin-bottom:0px;
+    margin-top:25px;
+    font-size:21px;
+    line-height:29px;
+    color: #000;
+  }
+  .journey-card-text{
+    text-align:center;
+  }
+  .steps-text{
+    margin-top:0.5rem!important;
+    font-size:13px;
+    line-height:18px;
+    color:#000;
+    width:90%;
+    margin: auto;
+  }
+  .traya-journey-card:hover{
+    text-decoration:none;
+  }
+  .steps{
+    font-size:18px;
+    line-height:22px;
+    color: #414143;
+    font-weight:700;
+    margin:0;
+    opacity:0.5;
+  }
+  .time{
+    font-size: 13px;
+    line-height: 18px;
+    color: #000;
+    opacity:0.5;
+  }
+  .journey-regrow{
+    font-size:24px;
+    line-height:33px;
+    color:#414143;
+  }
+  .start-journey-btn{
+    border-radius: 10px;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 10px 45px;
+  }
+  .start-journey-btn:hover{
+    background: #B7D340;
+    border-color: #b7d340;
+  }
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    .journey {
+      min-height: 305px;
+    }
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px){
+    .journey {
+      min-height:320px;
+    }
+    .steps-heading{
+      font-size: 16px;
+      line-height: 25px;
+    }
+    .steps-text {
+      width: 100%;
+    }
+    .steps {
+      font-size: 15px;
+    }
+    .time {
+      font-size: 9px;
+    }
+    .journey-regrow {
+      font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 767px){
+  .journey{
+    margin-top:15px;
+    width:100%;
+  }
+  .journey-regrow{
+    font-size: 21px;
+    line-height: 29px;
+  }
+  .journey-card{
+    display:flex;
+    align-items: center;
+  }
+  .journey-card-text{
+    width:70%;
+    text-align:left;
+    min-height:70px;
+  }
+  .mobile-card-image{
+    width:25%;
+  }
+  .steps-heading{
+    margin-top:0px;
+    font-size:17px;
+    line-height:23px;
+  }
+  .steps-text{
+    font-size:13px;
+    line-height:18px;
+    width:100%;
+    margin-top:0rem!important;
+  }
+  .time{
+    font-size:14px;
+    line-height:19px;
+  }
+  .steps{
+    font-size:19px;
+  }
+  .start-journey-btn{
+    border-radius: 10px;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 10px 45px;
+  }
+  .start-journey-btn:hover{
+    background: #B7D340;
+    border-color: #b7d340;
+  }
+}
+  @media only screen and (max-width: 400px){
+  .journey{
+    margin-top:15px;
+    padding:15px 10px 10px;
+    width:100%;
+  }
+  p.journey-regrow{
+    font-size: 21px;
+    line-height: 29px;
+  }
+  .journey-card{
+    display:flex;
+    align-items: center;
+  }
+  .journey-card-text{
+    width:70%;
+    text-align:left;
+    min-height:70px;
+  }
+  .mobile-card-image{
+    width:25%;
+  }
+  .steps-heading{
+    margin-top:0px;
+    font-size:17px;
+    line-height:23px;
+  }
+  .steps-text{
+    font-size:13px;
+    line-height:18px;
+    width:100%;
+    margin-top:0rem!important;
+  }
+  .time{
+    font-size:14px;
+    line-height:19px;
+  }
+  .steps{
+    font-size:19px;
+  }
+  .start-journey-btn{
+    border-radius: 10px;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 10px 25px;
+  }
+  .start-journey-btn:hover{
+    background: #B7D340;
+    border-color: #b7d340;
+  }
+}
+</style>

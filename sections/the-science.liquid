@@ -1,0 +1,60 @@
+<div class="the-science container">
+  <div class="p-4 p-md-0">
+  <ul class="nav nav-pills" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link text-center font-weight-normal active" id="pills-understand-hairloss-tab" data-toggle="pill" href="#pills-understand-hairloss" role="tab" aria-controls="pills-understand-hairloss" aria-selected="true">UNDERSTANDING HAIRLOSS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-center font-weight-normal" id="pills-why-ayurveda-tab" data-toggle="pill" href="#pills-why-ayurveda" role="tab" aria-controls="pills-why-ayurveda" aria-selected="false">WHY AYURVEDA?</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-center font-weight-normal" id="pills-why-dermatology-tab" data-toggle="pill" href="#pills-why-dermatology" role="tab" aria-controls="pills-why-dermatology" aria-selected="false">WHY DERMATOLOGY?</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-center font-weight-normal" id="pills-the-science-tab" data-toggle="pill" href="#pills-the-science" role="tab" aria-controls="pills-the-science" aria-selected="false">THE SCIENCES</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-center font-weight-normal" id="pills-maintenance-kit-tab" href="/pages/hair-loss-treatment-for-women">HAIR TREATMENT FOR WOMEN</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-center font-weight-normal" id="pills-maintenance-kit-tab" href="/pages/hair-fall-solution-for-men">HAIR TREATMENT FOR MEN</a>
+    </li>
+  </ul>
+</div>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade p-0 show active" id="pills-understand-hairloss" role="tabpanel" aria-labelledby="pills-understand-hairloss-tab">
+      {% include 'understanding-hairloss' %}
+    </div>
+    <div class="tab-pane fade p-0" id="pills-why-ayurveda" role="tabpanel" aria-labelledby="pills-why-ayurveda-tab">
+      {% include 'why-ayurveda' %}
+    </div>
+    <div class="tab-pane fade p-0" id="pills-why-dermatology" role="tabpanel" aria-labelledby="pills-why-dermatology-tab">
+      {% include 'why-dermatology' %}
+    </div>
+    <div class="tab-pane fade p-0" id="pills-the-science" role="tabpanel" aria-labelledby="pills-the-science-tab">
+      {% include 'the-science-tab' %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "The-Science",
+    "settings": [],
+    "presets": [
+      {
+        "name": "The-Science",
+        "category": "custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .the-science .nav-item .nav-link {
+    font-size: 13px;
+    margin-right: 8px;
+    letter-spacing: normal;
+    padding: 0.5rem 0.8rem;
+  }
+{% endstyle %}

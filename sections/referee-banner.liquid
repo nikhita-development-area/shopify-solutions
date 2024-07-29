@@ -1,0 +1,98 @@
+<!-- Sections -> referee-banner -->
+
+<div class="container-fluid p-0">
+  <div class="row m-0">
+    <div class="col-12 p-0">
+      <div class="position-relative">
+        {% if section.settings.ref_desk_img != blank %}
+          <img src="{{ section.settings.ref_desk_img | img_url: 'master' }}" class="w-100 d-none d-md-block">
+        {% endif %}
+        {% if section.settings.ref_mob_img != blank %}
+          <img src="{{ section.settings.ref_mob_img | img_url: 'master' }}" class="w-100 d-md-none">
+        {% endif %}
+
+        <div class="position-absolute content">
+          <h2>{{ section.settings.ref_heading_text }}</h2>
+
+          <h3>{{ section.settings.ref_sub_heading_text }}</h3>
+          <div class="d-flex flex-column flex-lg-row ref-btn">                      
+            {% if section.settings.ref_button_text != blank %}
+              <a id="Referee-hairtest1" href="{{ section.settings.ref_button_url }}" class="btn-dark d-flex justify-content-center align-items-center rounded font-weight-bold text-uppercase">{{ section.settings.ref_button_text }}<sup>TM</sup></a>
+            {% endif %}
+  
+            <span class="myresult m-0 mt-2 mt-lg-0 ml-lg-2">
+              <a id="myPlanHome" href="/pages/result4" class="btn-dark d-flex justify-content-center align-items-center rounded font-weight-bold text-uppercase rcmd_plan_btn">My Recommended Plan</a>  
+            </span>
+          </div>
+        </div>
+        
+        <p class="position-absolute customer">*As Per Internal Study Conducted On 304 People</p>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<style>      
+  .content {top: 10%; left: 10%;}
+  .content h2 {font-family: fredoka_oneregular!important; font-size: 55px; line-height: 62px; letter-spacing: 0em;}
+  .content h2:after {content: " "; width: 84px; height: 7px; border-radius: 5px; display: block; background: #414042; margin: 15px 0;}
+  .content h3 {font-size: 49px; line-height: 56px; letter-spacing: 0em; margin-top: 60px;}
+  .ref-btn a {width: 260px; height: 50px; font-size: 18px; text-decoration: none;}
+  .ref-btn a:hover {background: #fff; color: #414042;}
+  /* .customer {bottom: 10px; left: 10%; font-size: 16px; font-weight: 600; line-height: 19px;} */
+  .customer {opacity: 0.8; right: 0; bottom: 40px; writing-mode: vertical-rl; transform: rotate(180deg); font-size: 10px; font-weight: 600; line-height: 19px;}
+
+  @media (min-width: 768px) and (max-width: 1024px) { 
+    .content h2 {font-size: 35px; line-height: 40px;}
+    .content h3 {font-size: 35px; line-height: 30px; margin-top: 20px;}
+    /* .customer {bottom: 5px; font-size: 12px; line-height: 10px;} */
+  }
+  
+  @media (max-width: 767px) {
+    .content {top: 3%; left: unset; width: 100%;}
+    .content h2 {font-size: 28px; line-height: 30px; text-align: center;} 
+    .content h2:after {position: relative; left: 40%;}
+    .content h3 {font-size: 28px; line-height: 20px; text-align: center; margin-top: 0;}
+    .ref-btn a {margin: auto; width: 200px; height: 40px; font-size: 14px;}
+    /* .customer {left: unset; right: 0; bottom: 40px; writing-mode: vertical-rl; transform: rotate(180deg); margin: 0; font-size: 12px; line-height: 15px;} */
+    .customer {margin: 0; line-height: 15px;}
+  } 
+</style>
+
+{% schema %}
+  {
+    "name": "Referee Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "ref_desk_img",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "ref_mob_img",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "html",
+        "id": "ref_heading_text",
+        "label": "Heading Text"
+      },
+      {
+        "type": "text",
+        "id": "ref_sub_heading_text",
+        "label": "Sub-Heading Text"
+      },
+      {
+        "type": "text",
+        "id": "ref_button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "ref_button_url",
+        "label": "Button URL"
+      }
+    ]
+  }
+{% endschema %}

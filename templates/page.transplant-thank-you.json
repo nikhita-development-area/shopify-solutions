@@ -1,0 +1,228 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "16638582934bcd797a": {
+      "type": "image-banner",
+      "blocks": {
+        "16638582933d4bfc68-1": {
+          "type": "text",
+          "settings": {
+            "heading1": "",
+            "text": "Thank you for sharing your details,",
+            "text_style": "body"
+          }
+        },
+        "16638582933d4bfc68-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "our team of experts will <br> contact you shortly",
+            "heading_size": "h1"
+          }
+        },
+        "16638582933d4bfc68-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "16638582933d4bfc68-1",
+        "16638582933d4bfc68-0",
+        "16638582933d4bfc68-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/transplant-desktop.webp",
+        "mblimage": "shopify:\/\/shop_images\/transplant-mobile_600x_db2e6d8c-2ccf-478f-a9d7-faf8dba2afa4.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "top-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "16637362040ded0ef8": {
+      "type": "transplant-regrowth-journey",
+      "blocks": {
+        "b890cbfa-2244-407d-89bf-ed2f1b0223bb": {
+          "type": "image",
+          "settings": {
+            "transplant_identify1": "Hair Expert",
+            "transplant_identify2": "Walk you through the transplant procedure and build your medical profile"
+          }
+        },
+        "ba300393-312a-497b-b030-9c91391312d8": {
+          "type": "image",
+          "settings": {
+            "transplant_identify1": "Scalp Analysis",
+            "transplant_identify2": "Image processing technique to analyze your scalp and identify your stage"
+          }
+        },
+        "869ef2bc-fbfd-4c98-b76a-f1a329eadc4e": {
+          "type": "image",
+          "settings": {
+            "transplant_identify1": "Case Assesment",
+            "transplant_identify2": "An experienced doctor will review your case and analyze scalp images"
+          }
+        },
+        "9d96ebce-93bc-40d5-8671-91562e93c1c9": {
+          "type": "image",
+          "settings": {
+            "transplant_identify1": "Appointment Scheduling",
+            "transplant_identify2": "Schedule and facilitate your trichogram with the Doctor"
+          }
+        },
+        "ded3fc41-9202-4552-826c-83fe89b15b3b": {
+          "type": "image",
+          "settings": {
+            "transplant_identify1": "Hair transplant Procedure",
+            "transplant_identify2": "A trained surgeon will conduct the hair transplant and guide through post-surgery care"
+          }
+        },
+        "da74426f-7816-43f6-acd3-4df54a733321": {
+          "type": "image",
+          "settings": {
+            "transplant_identify1": "Post Surgery Care",
+            "transplant_identify2": "Receive Traya’s 12-month post operative care kit"
+          }
+        },
+        "77caa539-3c57-4349-a28b-74e857b8c17d": {
+          "type": "image",
+          "settings": {
+            "transplant_identify1": "Hair Coach",
+            "transplant_identify2": "A Hair coach will help you follow the regime and assist you throughout the journey"
+          }
+        }
+      },
+      "block_order": [
+        "b890cbfa-2244-407d-89bf-ed2f1b0223bb",
+        "ba300393-312a-497b-b030-9c91391312d8",
+        "869ef2bc-fbfd-4c98-b76a-f1a329eadc4e",
+        "9d96ebce-93bc-40d5-8671-91562e93c1c9",
+        "ded3fc41-9202-4552-826c-83fe89b15b3b",
+        "da74426f-7816-43f6-acd3-4df54a733321",
+        "77caa539-3c57-4349-a28b-74e857b8c17d"
+      ],
+      "settings": {
+        "regrowth_heading": "Traya’s Hair Re-growth Journey",
+        "transplant_bg1": "shopify:\/\/shop_images\/eeee1.png",
+        "transplant_bg2": "shopify:\/\/shop_images\/eeee2.png"
+      }
+    },
+    "16639207930f005854": {
+      "type": "image-banner",
+      "blocks": {
+        "166392079235151b9a-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "166392079235151b9a-1": {
+          "type": "text",
+          "settings": {
+            "heading1": "",
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "166392079235151b9a-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "166392079235151b9a-0",
+        "166392079235151b9a-1",
+        "166392079235151b9a-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/img3_0080483e-4c37-4a46-a6a5-946b1f5681c0.webp",
+        "mblimage": "shopify:\/\/shop_images\/image_3_fbb2e3af-487a-4d18-b8ff-e0ea6a6e4c71.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "1663931316706f3051": {
+      "type": "slideshow",
+      "blocks": {
+        "16639313166a287dba-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img3_0080483e-4c37-4a46-a6a5-946b1f5681c0.webp",
+            "mbl_image": "shopify:\/\/shop_images\/image_3_0c50d5cd-e947-4456-8e58-ee125e5d8fef.webp",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "1,00,000+ Indians trust \n<br>\nTraya\n<br>\nwith their HAIR",
+            "subheading-2": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "16639313166a287dba-0"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16638582934bcd797a",
+    "16637362040ded0ef8",
+    "16639207930f005854",
+    "1663931316706f3051"
+  ]
+}

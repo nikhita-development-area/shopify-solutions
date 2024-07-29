@@ -1,0 +1,713 @@
+<div class="section-header position-relative">
+  {% if blog.handle == 'cholesterolvvv' %}
+    <div class="container">
+      <div class="article-header">
+        <ul>
+          <li><a href="/blogs/hair-care/tagged/popular">Home</a></li>
+          <li><a href="/blogs/hair-care/tagged/featured">Featured</a></li>
+          <li><a href="/blogs/hair-care/tagged/popular">Popular</a></li>
+          <li><a href="/blogs/hair-care/tagged/hair-treatment">Hair + Root cause</a></li>
+        </ul>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="d-none d-md-block share-article">
+    {% if section.settings.show_share_buttons %}
+      {% include 'social-sharing',
+        share_title: article.title,
+        share_permalink: article.url,
+        share_image: article.image
+      %}
+    {% endif %}
+  </div>
+
+  {% for tag in article.tags %}
+    {% if tag contains 'author_' %}
+      {% assign authorTag = tag | remove: 'author_' | replace: '-', ' ' %}
+    {% endif %}
+  {% endfor %}
+
+  <div class="container">
+    <div class="row">
+      <!-- Article Left section -->
+
+      <div class="col-md-8">
+        <div class="content-wrapper h-100">
+          <div class="article-breadcrumbs">
+            {% include 'breadcrumbs' %}
+          </div>
+
+          <h1 class="article__title font-weight-bold">{{ article.title }}</h1>
+
+          {% if section.settings.blog_show_author %}
+            {% if article.handle contains 'natural-home-remedies-for-hair-growth-and-thickness'
+              or article.handle contains '12-ayurvedic-herbs-to-treat-hair-loss/yogurt-for-hair'
+              or article.handle contains '12-ayurvedic-herbs-to-treat-hair-loss/folic-acid-and-its-role-in-hair-growth'
+              or article.handle contains 'natural-supplements-for-hair-growth'
+            %}
+              <span class="article__author test1" data-author="{{article.handle}}">by Dr. Moyna Vakil, B.H.M.S</span>
+            {% elsif authorTag and authorTag != '' %}
+              <span class="article__author test2"> Reviewed by {{ authorTag }}</span>
+            {% else %}
+              <span class="article__author test3" data-author="{{article.handle}}">
+                {{- 'blogs.article.by_author' | t: author: article.author -}}
+              </span>
+            {% endif %}
+          {% endif %}
+        <br>
+          <span class= "pub" style="display:none;">Published:</span>
+          {% if section.settings.blog_show_date %}
+            <span class="article__date publish_date">
+             {{ article.published_at | time_tag: format: 'date' }}
+              </span>
+          {% endif %}
+          <span class= "up">Updated:</span>
+          {% if section.settings.blog_show_date %}
+            <span class="article__date">
+              {{ article.updated_at | time_tag: format: 'date' }}
+               </span>
+          {% endif %}
+
+          {% if article.image %}
+            <div class="featured-article-img mt-5 mb-4">
+              
+            {% if article.title == 'Minoxidil vs Redensyl : What should I use?' %}
+            {% include 'blog_table' %}
+              {% else %}
+           {% comment %}   {{ article | img_url: 'master', scale: 2 | img_tag: article.title }} {% endcomment %}
+              {{ article | image_url: width: 750 | image_tag:
+              loading: 'eager',
+              title:'image' ,   
+              width: '100%',
+              height:'100%',
+              class: image_class,
+              sizes: sizes,
+              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+              alt: 'image'
+             }}            
+            {% endif %}
+            </div>
+          {% endif %}
+
+          <div class="rte article-content">
+            {{ article.content }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Article Right section -->
+
+      <div class="col-md-4 mt-4 mt-md-0">
+        <div class="content-wrapper h-100">
+          {%- assign authorTag = '' -%}
+
+          {% for tag in article.tags %}
+            {% if tag contains 'author_' %}
+              {% assign authorTag = tag | remove: 'author_' | remove: 'Dr.' | replace: '-', ' ' %}
+            {% endif %}
+          {% endfor %}
+          {% assign authorTags = authorTag | split: ' ' %}
+          {% assign authorName1 = authorTags[0] %}
+          {% assign authorName2 = authorTags[1] %}
+          {% assign author = '' %}
+
+          {% if authorTag and authorTag != '' %}
+            {% assign author = authorTag %}
+          {% endif %}
+
+          {% if article.handle contains 'natural-home-remedies-for-hair-growth-and-thickness'
+            or article.handle contains '12-ayurvedic-herbs-to-treat-hair-loss/yogurt-for-hair'
+            or article.handle contains '12-ayurvedic-herbs-to-treat-hair-loss/folic-acid-and-its-role-in-hair-growth'
+            or article.handle contains 'natural-supplements-for-hair-growth'
+          %}
+            <!-- or article.handle contains 'hair-care' -->
+            {% assign author = 'Dr. Moyna Vakil, B.H.M.S' %}
+          {% elsif authorTag and authorTag != '' %}
+            {% assign author = authorTag %}
+          {% else %}
+            {% assign author = 'blogs.article.by_author' | t: author: article.author | remove: 'by' %}
+          {% endif %}
+
+          {% for block in section.blocks %}
+            {% if block.type == 'author' %}
+              {% assign name = block.settings.author_name | split: ' ' %}
+
+              {% for nm in name %}
+                {% if forloop.index == 1 or forloop.index == 2 %}
+                  {% if author contains nm %}
+                    {% assign authorFlag = true %}
+                    {% if forloop.index == 1 %}
+                      {% assign authorName1 = nm %}
+                    {% endif %}
+                    {% if forloop.index == 2 %}
+                      {% assign authorName2 = nm %}
+                    {% endif %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+              {% if article.handle contains 'natural-home-remedies-for-hair-growth-and-thickness'
+                or article.handle contains '12-ayurvedic-herbs-to-treat-hair-loss/yogurt-for-hair'
+                or article.handle
+                  contains '12-ayurvedic-herbs-to-treat-hair-loss/folic-acid-and-its-role-in-hair-growth'
+                or article.handle contains 'natural-supplements-for-hair-growth'
+              %}
+                <!-- or article.handle contains 'hair-care' -->
+                {% assign author = 'Dr. Moyna Vakil, B.H.M.S' %}
+                {% if author contains block.settings.author_name %}
+                  {% if block.settings.author_image != '' %}
+                    <img
+                      src="{{ block.settings.author_image | img_url: '300x' }}"
+                      alt="{{ block.settings.author_image | escape }}"
+                      class="mb-3"
+                      loading="lazy"
+                    >
+                  {% endif %}
+                  <h3 class="font-weight-bold mb-0">{{ author }}</h3>
+                  {% if block.settings.author_position != '' %}
+                    <p class="text-black-50 position">{{ block.settings.author_position }}</p>
+                  {% endif %}
+
+                  {% if block.settings.author_bio != '' %}
+                    <p class="font-size-18">{{ block.settings.author_bio }}</p>
+                  {% endif %}
+                {% endif %}
+              {% elsif author != ''
+                and authorFlag == true
+                and author contains authorName2
+                or author contains authorName1
+              %}
+                {% if block.settings.author_image != '' %}
+                  <img 
+                    src="{{ block.settings.author_image | img_url: '300x' }}"
+                    alt="{{ block.settings.author_image | escape }}"
+                    class="mb-3"
+                    loading="lazy"
+                  >
+                {% endif %}
+
+                {% if block.settings.author_name != '' %}
+                  <h3 class="font-weight-bold mb-0">{{ block.settings.author_name }}</h3>
+                {% endif %}
+
+                {% if block.settings.author_position != '' %}
+                  <p class="text-black-50 position">{{ block.settings.author_position }}</p>
+                {% endif %}
+
+                {% if block.settings.author_bio != '' %}
+                  <p class="font-size-18">{{ block.settings.author_bio }}</p>
+                {% endif %}
+                {% break %}
+              {% elsif author != '' and author contains block.settings.author_name %}
+                {% if block.settings.author_image != '' %}
+                  <img
+                    src="{{ block.settings.author_image | img_url: '300x' }}"
+                    alt="{{ block.settings.author_image | escape }}"
+                    class="mb-3"
+                    loading="lazy"
+                  >
+                {% endif %}
+                <h3 class="font-weight-bold mb-0">{{ author }}</h3>
+                {% if block.settings.author_position != '' %}
+                  <p class="text-black-50 position">{{ block.settings.author_position }}</p>
+                {% endif %}
+
+                {% if block.settings.author_bio != '' %}
+                  <p class="font-size-18">{{ block.settings.author_bio }}</p>
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+          {% if blog.handle == 'cholesterolvvv' %}
+            <div class="mt-3 mt-md-5 article-ad-banner">
+              {% if section.settings.ad_banner != '' %}
+                <a href="{{ section.settings.ad_link }}"
+                  ><img 
+                    src="{{ section.settings.ad_banner | img_url: 'large' }}"
+                    alt="{{ section.settings.ad_banner | escape }}"
+                    title="{{ 'Ad Banner' }}"
+                    width=""
+                    height=""
+                    loading="lazy"
+                ></a>
+              {% endif %}
+            </div>
+          {% endif %}
+
+          <!-- Featured Blogs -->
+          <div class="mobilerelated-posts mt-5 pt-5">
+            <div class="section-title-line"></div>
+            {% unless blog.handle == "hair-care" %}
+            <h2 class="text font-weight-bold mb-4">Featured Blogs</h2>
+            {% endunless %}
+            <div class="row featured__slider">
+              {% for block in section.blocks %}
+                {% assign articles = block.settings.articles %}
+                {%- if articles.title != '' and articles.image != blank -%}
+                  <div class="col-sm-6 col-md-12">
+                    <div class="mb-5 test">
+                      {% if articles.image %}
+                        <a href="{{ articles.url }}" class=" featured-article-img">
+                         {% comment %} {{ articles | img_url: '455x300', scale: 2 | img_tag: articles.title }} {% endcomment %}
+                             {{ articles | image_url: width: 400 | image_tag:
+                              loading: 'lazy',
+                              title:'image' ,   
+                              width: '100%',
+                              height:'100%',
+                              sizes: sizes,
+                              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                              alt: 'image'
+                              
+                            }}
+                        </a>
+                      {% endif %}
+
+                      <h5 class="mt-3 mb-1 font-weight-bold">
+                        <a href="{{ articles.url }}" aria-label="{{ articles.title }}">
+                          {{ articles.title }}
+                        </a>
+                      </h5>
+
+                      {% if section.settings.blog_show_date %}
+                        <span class="text-black-50"
+                          >by {{ 'blogs.article.by_author' | t: author: articles.author | remove: 'by' }}
+                          {{ articles.published_at | time_tag: format: 'date' -}}
+                        </span>
+                      {% endif %}
+                    </div>
+                  </div>
+                {%- endif -%}
+              {% endfor %}
+            </div>
+          </div>
+          <!-- End Featured Blog -->
+        </div>
+      </div>
+    </div>
+
+    <div class="d-md-none mt-4">
+      {% if section.settings.show_share_buttons %}
+        {% include 'social-sharing',
+          share_title: article.title,
+          share_permalink: article.url,
+          share_image: article.image
+        %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% unless blog.handle == 'cholesterol' %}
+  {% if blog.articles.size > 1 %}
+    <div class="page-width d-none">
+      <div class="section-titles-article">
+        <h2 class="section-title title-with-line">Popular Posts</h2>
+      </div>
+
+      <div class="row blogs-slider py-3 FeaturedBlogs">
+        {% for article in blog.articles %}
+          {% if article.tags contains 'FEATURED'
+            or article.tags contains 'Featured'
+            or article.tags contains 'featured'
+          %}
+            <div class="mb-4 mb-md-0 shadow border rounded-lg p-3 m-3">
+              {% assign featured_article = article %}
+              <div class="mb-1">
+                {% if article.image %}
+                  <a href="{{ article.url }}" class="bb featured-article-img">
+                    {{ article | img_url: '455x300', scale: 2 | img_tag: article.title }}
+                  </a>
+                {% endif %}
+
+                <h5 class="mt-3 mb-1 font-weight-bold featured_articleTitle l-0">
+                  <a href="{{ featured_article.url }}" aria-label="{{ featured_article.title }}">
+                    {{ featured_article.title }}
+                  </a>
+                </h5>
+
+                {% if section.settings.blog_show_date %}
+                  <span class="text-black-50 l-0">by {{ 'blogs.article.by_author' | t: author: article.author | remove: 'by' }}
+                    <br>
+                    {{ article.published_at | time_tag: format: 'date' -}}
+                  </span>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% comment %}
+    <div class="container">
+      {% include 'relatedblogs' %}
+    </div>
+    {% endcomment %}
+  {% endif %}
+{% endunless %}
+{% for block in section.blocks %}
+  {% if block.type == 'author' %}
+    {% assign name = block.settings.author_name | split: ' ' %}
+    {% assign author = 'blogs.article.by_author' | t: author: article.author | remove: 'by' %}
+    {% assign authorFlag = false %}
+    {% for nm in name %}
+      {% if author contains nm %}
+        {% assign authorFlag = true %}
+      {% endif %}
+    {% endfor %}
+    {% if authorFlag == true %}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "Person",
+          "name": "{{ block.settings.author_name }}",
+          "url": "",
+          "image": "{{ block.settings.author_image }}",
+          "jobTitle": "{{ block.settings.author_position }}",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Traya Health"
+          }
+        }
+      </script>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+
+    {% comment %}
+    <div class="page-width">
+        <h2 class="section-title">Latest Blogs</h2>
+      <div class="row latest justify-content-center blogs-slider">
+        {% for article in blog.articles %}
+          {% assign article__tags = article.tags | json %}
+          {% if article__tags contains 'Latest' %}
+            <div class="m-1 p-2 mb-4 mb-md-0 shadow border rounded-lg py-3">
+              {% assign featured_article = article %}
+              <div class="mb-1">
+                {% if article.image %}
+                  <a href="{{ article.url }}" class="cc featured-article-img">
+                  {% comment %}  {{ article | img_url: '455x300', scale: 2 | img_tag: article.title }} {% endcomment %}
+                    {{ article | image_url: width: 400 | image_tag:
+                    loading: 'lazy',
+                    title:'image' ,   
+                    width: '100%',
+                    height:'100%',
+                    sizes: sizes,
+                    widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                    alt: 'image'
+                    }}
+                  </a>
+                {% endif %}
+
+                <h5 class="mt-3 mb-1 font-weight-bold featured_articleTitle l-0">
+                  <a href="{{ featured_article.url }}" aria-label="{{ featured_article.title }}">
+                    {{ featured_article.title }}
+                  </a>
+                </h5>
+                {% if section.settings.blog_show_date %}
+                  <span class="text-black-50 l-0"
+                    >by {{ article.author | remove: 'by' }}
+                    <br>
+                    {{ article.published_at | time_tag: format: 'date' -}}
+                  </span>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endcomment %}
+
+    
+<script>
+  var position = $('.position').text();
+  if($('.article__author').text().indexOf(position) < 1 ){
+    $('.article__author').append(', <span>'+position+'</span>');
+  }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ article.url }}"
+  },
+  "headline": "{{ article.title }}",
+   {% if article.excerpt != blank %}
+  "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  "image": "{{ article.image.src }}",  
+  "author": {
+    "@type": "Person",
+    "name": "{{ authorTag}}"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ shop.name }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": " https://cdn.shopify.com/s/files/1/0100/1622/7394/files/TrayaLogoWhite_250x_73a5d7e5-bd9b-4089-8e81-80249caeac61.webp?v=1662534292&width=200"
+    }
+  },
+  "datePublished": "{{ article.published_at | date: '%Y-%m-%d' }}",
+  "dateModified": "{{ article.updated_at | date: '%Y-%m-%d' }}"
+}
+</script>
+
+{% schema %}
+{
+  "name": "Posts",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "blog_show_author",
+      "label": "Show author",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_show_date",
+      "label": "Show date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_share_buttons",
+      "label": "Show social sharing buttons",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "AD Banner"
+    },
+	{
+      "type": "image_picker",
+      "id": "ad_banner",
+      "label": "Select Ad Image"
+    },
+    {
+      "type": "url",
+      "id": "ad_link",
+      "label": "Link"
+    }
+  ],
+  "blocks": [
+	{
+      "type": "author",
+      "name": "Author",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "author_image",
+          "label": "Author Image"
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author Name"
+        },
+        {
+          "type": "text",
+          "id": "author_position",
+          "label": "Author Position"
+        },
+        {
+          "type": "textarea",
+          "id": "author_bio",
+          "label": "Author Bio"
+        }
+      ]
+    },
+        {
+      "type": "featured-blog",
+      "name": "Featured Blog Section",
+      "settings": [
+        {
+          "type": "article",
+          "id": "articles",
+          "label": "Select Featured Blog"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+<style>
+  /* .article-content strong {
+    font-size: 35px;
+} */
+  /* .breadcrumb {
+    display:none;
+} */
+  .pub {
+    display:none;
+}
+  .article__date.published-date {
+    display:none;
+}
+@media screen and (max-width:769px){
+   .article__title {
+     font-size:20px;
+    } 
+     /* .article-content strong {
+        font-size: 30px;
+} */
+   }
+   @media only screen and (min-width: 320px) and (max-width: 480px) {
+      /* insert styles here */
+     th.cust-table-th span {
+          font-size: 9px !important;
+          font-weight: bolder !important;
+          letter-spacing: unset !important; 
+  }
+  
+          .table_div th {
+          font-size: 9px !important;
+          font-weight: bolder !important; 
+            letter-spacing: unset !important;
+  }
+  
+          .table_div td {
+         font-size: 9px !important;
+         font-weight: bolder !important;  
+         letter-spacing: unset !important;
+  }
+     .cust-table-th {
+        border-right: 2px solid #000 !important;
+      }
+
+     th.cust-table-th span {
+    position: relative;
+    left: -11px;
+       padding-left: 0px;
+ }
+
+     
+  }
+  
+  @media only screen and (max-width: 767px) {
+  /*     .featured_articleTitle{
+        height:72px;
+      } */
+       .template-article #relatedblogs .slick-prev {
+        left: 7px;
+        z-index: 1;
+    }
+       .template-article #relatedblogs .slick-next {
+        right: 2px;
+    }
+           .template-article .FeaturedBlogs .slick-prev {
+        left: -12px;
+    }
+       .template-article .FeaturedBlogs .slick-next {
+        right: -12px;
+    }
+    
+  
+      }
+  
+  .table_div table {
+    background-color: #ffdf5b;
+}
+    table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        vertical-align: baseline;
+      }
+      @media (max-width: 767px) {
+        / hide the first column on smaller screens /
+        th:first-child, td:first-child {
+          display: none;
+        }
+
+        .table_div td {
+    font-size: 16px;
+    font-weight: bolder;      
+}
+
+th.cust-table-th span {
+    font-size: 16px;
+  font-weight: bolder;
+}
+      }
+
+  th.cust-table-th {
+    color: #A2A891;
+}
+
+
+/*   th.cust-table-th {
+   font-size: 15px;
+    font-weight: bolder !important;
+    /*font-family: fredoka_oneregular !important;*/
+    letter-spacing: 2px;
+} */
+
+.table_div td {
+       font-size: 15px;
+    font-weight: bolder !important;
+    /*font-family: fredoka_oneregular !important;*/
+    letter-spacing: 2px;
+}
+
+
+.table_div th {
+    font-size: 15px;
+    font-weight: bolder !important;
+    /*font-family: fredoka_oneregular !important;*/
+    letter-spacing: 2px;
+}
+  
+
+  .table_div li {
+    position: relative;
+    left: 15px;
+    text-align: left !important;
+}
+
+  th.cust-table-th span {
+    position: relative;
+    left: -3px;
+    padding-left: 7px;
+}
+
+      .cust-table-th {
+        border-right: 4px solid #000;
+      }
+
+      th, td {
+        /* border: none !important; */
+        padding: 4px 6px;
+      }
+
+  .table_div ul {
+    margin: 0 !important;
+}
+
+      .table_div th {
+        border-right: 3px solid #000 !important;
+      }
+
+      .table_div td {
+        border-right: 3px solid #000 !important;
+      }
+
+      .table_div thead {
+        border-bottom: 3px solid #000 !important;
+      }
+
+      .table_div tr {
+        border-left: 1px solid #000;
+      }
+.table_div td {
+    font-size: 16px;
+     font-weight: bolder !important;
+}
+</style>

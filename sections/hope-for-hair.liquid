@@ -1,0 +1,164 @@
+<div class="container hope_hair_wrapper">
+  <h3 class="hope_hair_title mb-2 l-0 ml-2">#HopeForHair</h3>
+  <p class="hope_hair_para l-0 mb-4 ml-2" style="color: #7C7C7C;">Initiating hope for hair one strand at a time</p>
+  <div class="hopehair_sldr">
+    {% for block in section.blocks %}
+    <div class="hopehair_content position-relative">
+<a href="{{ block.settings.url }}" class="text-decoration-none" target="_blank">
+      <image src="{{ block.settings.images| img_url:'master'}}"></image>
+      {% if forloop.index == 3 or forloop.index == 4 %}
+      <div class="hopehair-uppertext position-absolute text-center">
+        <div><a href="/"><image width="52" class="mx-auto" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_2_bf6e03c9-128a-4ab2-b78e-d60b57b3d394.png?v=1701146942"></image></a></div>
+          <div class="befrhopehair position-relative mt-4"><p class="color_white befrhopehairbtn d-flex justify-content-center align-items-center l-0"><span class="success_percentage">93%</span><span class="success_Rate">SUCCESS <br>RATE</span></p></div>
+        <h3 class="color_white l-0 hopeForHair mt-md-0 mt-2">#HopeForHair</h3>
+      </div>
+      {% endif %}
+      <div class="hopehair_text position-absolute">
+        <p class="color_white text-left l-0 pl-2 mb-0">{{ block.settings.para }}</p>
+        <div class="d-flex justify-content-between align-items-center p-2 mt-2">
+        <div class="w-45">{% assign width = block.settings.logo_img.width | divided_by: 2 %}
+        {% assign height = block.settings.logo_img.height | divided_by: 2 %}
+        {% assign alt = 'Image-' | append: forloop.index %}
+        {{ block.settings.logo_img | image_url: width: block.settings.logo_img.width | image_tag: width: width, height: height, alt: alt, title: alt, loading: 'lazy', class: '' }}</div>
+         <p class=" d-flex  align-items-center readMorebtn justify-content-end"><a href="{{ block.settings.url }}" style="text-decoration:underline; color:white;">Read more</a> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8" fill="none">
+          <path d="M1.24953 3.83658H8.54351L6.53371 1.56121C6.40673 1.41745 6.40673 1.18375 6.53371 1.03999C6.65916 0.897961 6.86213 0.900071 6.98133 1.03857L9.55443 3.94129C9.68132 4.08506 9.68129 4.31869 9.55434 4.46242L6.98717 7.36882C6.86244 7.51004 6.66304 7.51004 6.53831 7.36882C6.41133 7.22506 6.41133 6.99136 6.53831 6.8476L8.5481 4.57223H1.24953C1.07726 4.57223 0.928711 4.41067 0.928711 4.2044C0.928711 3.99814 1.07726 3.83658 1.24953 3.83658Z" fill="white"/>
+          </svg>
+        </p>
+        </div> 
+      </div>
+          </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Hope for hair",
+    "settings": [],
+    "blocks":[
+            {
+        "name": "Hope for hair",
+        "type": "text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "images",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id": "para",
+            "label": "Add text"
+          },
+          {
+            "type":"image_picker",
+            "id":"logo_img",
+            "label":"Select Logo"
+          },
+          {
+          "type":"url",
+          "id":"url",
+          "label":"Select Url"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name":"hope-for-hair"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  .hopehair-uppertext{
+    top: 5%;
+    left: 5%;
+  }
+  .hopehair_sldr .slick-list{
+    padding-right: 9%;
+  }
+  .color_white{
+    color:white;
+  }
+  .hopehair_content:after {
+    box-shadow: 0px 2.1802167892456055px 8.720867156982422px 0px #00000014;
+    height: 100%;
+    width: 100%;
+  }
+  .hope_hair_title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px
+  }
+.hope_hair_para{
+  color: #7C7C7C;
+    font-size: 20px;
+    line-height: 24px;
+}
+  .hopehair_text {
+    bottom: 0;
+  }
+  .hopehair_text p {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 14px;
+  }
+
+   .success_Rate {
+    font-size: 10px;
+    font-weight: 700;
+    text-align: start;
+  }
+  .readMorebtn svg {
+    width: 18px;
+    height: 10px;
+    margin: 0 2px;
+  }
+  .befrhopehairbtn {
+    gap: 3px;
+  }
+  .befrhopehairbtn:before{
+    content: " ";
+    width: 30px;
+    height: 2px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    position: absolute;
+    top: -24%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .success_percentage {
+    font-size: 24px;
+    font-weight:900;
+  }
+  .hopeForHair {
+    font-size: 15px;
+    font-weight: 700;
+    color: #B7D340;
+  }
+  .hopehair_content{
+    margin: 10px;
+  }
+
+@media(width <= 749px){
+  .hopehair-uppertext {
+    top: 14%;
+    left: 12%;
+  }
+  .hope_hair_title{
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .hope_hair_para{
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

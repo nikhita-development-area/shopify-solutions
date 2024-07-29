@@ -1,0 +1,572 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "new_slideshow_nyqAGj": {
+      "type": "new-slideshow",
+      "settings": {
+        "ref_desk_img": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_e367b48f-f094-4f8b-9f01-0cfde34d556f.jpg",
+        "ref_mob_img": "shopify:\/\/shop_images\/Group_102353376.png",
+        "ref_heading_text": "A holistic treatment plan that <br> works on your hair from the root",
+        "ref_heading_text_mobile": "A holistic treatment plan that works on your hair from the root",
+        "ref_heading_text2": "",
+        "ref_sub_heading_text": "Traya’s Hair test Helps you find the root cause of your hair loss and personalises the treatment plan for you!",
+        "ref_button_text": "",
+        "ref_button_url": ""
+      }
+    },
+    "hair_require_treatment_yxkYtp": {
+      "type": "hair-require-treatment",
+      "blocks": {
+        "stages_wey9La": {
+          "type": "stages",
+          "settings": {
+            "img-logo1": "shopify:\/\/shop_images\/Group_102352713.jpg",
+            "img-text1": "Stage1"
+          }
+        },
+        "stages_KzCgwP": {
+          "type": "stages",
+          "settings": {
+            "img-logo1": "shopify:\/\/shop_images\/Group_102352721.png",
+            "img-text1": "Stage2"
+          }
+        },
+        "stages_GDfCB6": {
+          "type": "stages",
+          "settings": {
+            "img-logo1": "shopify:\/\/shop_images\/Group_102352722.png",
+            "img-text1": "Stage3"
+          }
+        },
+        "stages_7bqi8T": {
+          "type": "stages",
+          "settings": {
+            "img-logo1": "shopify:\/\/shop_images\/Group_102352722_c5f35173-1a8d-4636-a99f-41a59699ad8c.png",
+            "img-text1": "Stage4"
+          }
+        },
+        "stages_e6CeVT": {
+          "type": "stages",
+          "settings": {
+            "img-logo1": "shopify:\/\/shop_images\/Group_102352724_0bd921f6-3356-4085-a7eb-567f20286d8c.png",
+            "img-text1": "Stage5"
+          }
+        },
+        "stages_8njB4b": {
+          "type": "stages",
+          "settings": {
+            "img-logo1": "shopify:\/\/shop_images\/Group_102352725_5d12d607-0bba-4dbb-8640-1992da4463bd.png",
+            "img-text1": "Stage6"
+          }
+        },
+        "stages_DAjXqP": {
+          "type": "stages",
+          "settings": {
+            "img-logo1": "shopify:\/\/shop_images\/Group_102352717.png",
+            "img-text1": "Coin Size Patch"
+          }
+        },
+        "stages_CbVVcp": {
+          "type": "stages",
+          "settings": {
+            "img-logo1": "shopify:\/\/shop_images\/Group_102352726_1b0b0675-dd44-4f41-9bb1-f1dbe5da3de4.png",
+            "img-text1": "Heavy Hair Fall"
+          }
+        },
+        "widening_PzYbMX": {
+          "type": "widening",
+          "settings": {
+            "img-logo2": "shopify:\/\/shop_images\/Group_102353376_a8619562-6f6a-4a32-9359-37d9a0e2299b.png",
+            "img-text2": "Texture loss"
+          }
+        },
+        "widening_LtQxkj": {
+          "type": "widening",
+          "settings": {
+            "img-logo2": "shopify:\/\/shop_images\/Group_102353377.png",
+            "img-text2": "No widening"
+          }
+        },
+        "widening_K3Edre": {
+          "type": "widening",
+          "settings": {
+            "img-logo2": "shopify:\/\/shop_images\/Group_102353379.png",
+            "img-text2": "Starting to see widening"
+          }
+        },
+        "widening_HjA3VT": {
+          "type": "widening",
+          "settings": {
+            "img-logo2": "shopify:\/\/shop_images\/Group_102353380.png",
+            "img-text2": "Medium widening"
+          }
+        },
+        "widening_NiMRfn": {
+          "type": "widening",
+          "settings": {
+            "img-logo2": "shopify:\/\/shop_images\/Group_102353381.png",
+            "img-text2": "Advanced widening"
+          }
+        }
+      },
+      "block_order": [
+        "stages_wey9La",
+        "stages_KzCgwP",
+        "stages_GDfCB6",
+        "stages_7bqi8T",
+        "stages_e6CeVT",
+        "stages_8njB4b",
+        "stages_DAjXqP",
+        "stages_CbVVcp",
+        "widening_PzYbMX",
+        "widening_LtQxkj",
+        "widening_K3Edre",
+        "widening_HjA3VT",
+        "widening_NiMRfn"
+      ],
+      "settings": {
+        "requires-head": "Does your Hair Require Treatment?",
+        "requires-desc": "If your hair looks like any of the following images, you need a hair treatment.",
+        "requires-long-desc": "Apart from this, if you have problems like thinning, poor hair quality, excessive shedding (more than 150 hair per day) or if you can see early signs of receding hair, you should start with a treatment at the earliest as prevention is better than cure."
+      }
+    },
+    "hair_loss_slider_k7wxz8": {
+      "type": "hair-loss-slider",
+      "blocks": {
+        "text_7hKKRe": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_102353656.png"
+          }
+        },
+        "text_jzGjcn": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_102353657.png"
+          }
+        },
+        "text_k6xqry": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_102353658.png"
+          }
+        },
+        "text_KJyQzL": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_102353659.png"
+          }
+        },
+        "text_T476eU": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_102353660_0d49971d-0e31-4cd6-94c5-eca7291c8c0a.png"
+          }
+        },
+        "text_McAj6w": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_102353661.png"
+          }
+        },
+        "text_9WWWar": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_102353662_b1322f95-b7e1-4de4-b004-b6abb37348ee.png"
+          }
+        },
+        "text_rjeEJW": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_102353692.png"
+          }
+        },
+        "text_MTKgbC": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_102353664_a2cb380c-de9b-48ee-85c3-5fec120a55e3.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_7hKKRe",
+        "text_jzGjcn",
+        "text_k6xqry",
+        "text_KJyQzL",
+        "text_T476eU",
+        "text_McAj6w",
+        "text_9WWWar",
+        "text_rjeEJW",
+        "text_MTKgbC"
+      ],
+      "settings": {
+        "Heading": "What are the Causes of Hair Loss?",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "treatment_options_WUzAC8": {
+      "type": "treatment_options",
+      "blocks": {
+        "text_CXMcqF": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/treatment5.png",
+            "image_text": "Platelet-Rich Plasma <br> (PRP):",
+            "para": "Involves injecting your platelets into the scalp to stimulate hair growth."
+          }
+        },
+        "text_3a4EXT": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/treatment7.png",
+            "image_text": "Stem Cell Therapy:",
+            "para": "A newer technique injecting stem cells into the scalp to encourage hair follicles to grow."
+          }
+        },
+        "text_bM3mPF": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/treatment6.png",
+            "image_text": "Hair Transplant: ",
+            "para": "Surgical procedures like Follicular Unit Transplantation (FUT) or Follicular Unit Extraction (FUE) involve transplanting hair from one part of the scalp to the balding areas."
+          }
+        },
+        "text_j3cN6d": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/treatment2.png",
+            "image_text": "Medication:",
+            "para": "Oral medications like Finasteride (for men) and topical treatments like Minoxidil can slow hair loss and promote growth."
+          }
+        },
+        "text_bLUqbi": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/treatment3.png",
+            "image_text": "Topical Treatments: ",
+            "para": "These include solutions and foams applied directly to the scalp. Minoxidil is the most commonly effective in both men and women."
+          }
+        }
+      },
+      "block_order": [
+        "text_CXMcqF",
+        "text_3a4EXT",
+        "text_bM3mPF",
+        "text_j3cN6d",
+        "text_bLUqbi"
+      ],
+      "settings": {
+        "title": "Treatment Options for Hair Fall"
+      }
+    },
+    "best_hair_treatment_xLPBLA": {
+      "type": "best-hair-treatment",
+      "blocks": {
+        "left_pxkXUx": {
+          "type": "left",
+          "settings": {
+            "steps-head1": "Hair Coach Support",
+            "steps-desc1": "Traya offers expert guidance from hair coaches to provide personalized advice and support throughout your hair care journey."
+          }
+        },
+        "left_RbJE4N": {
+          "type": "left",
+          "settings": {
+            "steps-head1": "Integrated 3-Science Approach",
+            "steps-desc1": "Combining Ayurveda, Dermatology, and Nutrition, Traya ensures a holistic and comprehensive treatment for hair loss."
+          }
+        },
+        "left_QtE9Fh": {
+          "type": "left",
+          "settings": {
+            "steps-head1": "Personalized Treatment",
+            "steps-desc1": "Tailored treatments are designed to meet individual needs and hair profiles, ensuring more effective and targeted results."
+          }
+        },
+        "right_yUViCt": {
+          "type": "right",
+          "settings": {
+            "steps-head2": "Safe Ingredients",
+            "steps-desc2": "The use of safe, clinically tested, and natural ingredients minimizes the risk of side effects while promoting hair health."
+          }
+        },
+        "right_kjx6rF": {
+          "type": "right",
+          "settings": {
+            "steps-head2": "Solves Internal Problems Causing Hair Loss",
+            "steps-desc2": "Traya focuses on addressing the root causes of hair loss, such as hormonal imbalances, nutritional deficiencies, or stress, for long-term solutions."
+          }
+        },
+        "right_cyhWb3": {
+          "type": "right",
+          "settings": {
+            "steps-head2": "Visible Results",
+            "steps-desc2": "Traya emphasizes not just treatment but also visible improvement, aiming for noticeable changes in hair growth and quality."
+          }
+        }
+      },
+      "block_order": [
+        "left_pxkXUx",
+        "left_RbJE4N",
+        "left_QtE9Fh",
+        "right_yUViCt",
+        "right_kjx6rF",
+        "right_cyhWb3"
+      ],
+      "settings": {
+        "Dr-img": "shopify:\/\/shop_images\/Group_102353383.webp",
+        "main-head": "What makes Traya the Best Hair Treatment in India"
+      }
+    },
+    "choose_traya_w8pCEN": {
+      "type": "choose-traya",
+      "settings": {
+      }
+    },
+    "female_collection_slide_fPcB3B": {
+      "type": "female-collection-slide",
+      "blocks": {
+        "text_nbjriy": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_1023223_95722013-7f00-47c5-8d05-680bbd97d974.png"
+          }
+        },
+        "text_HxUmnQ": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_1023224_a904b178-6267-4760-b9c7-09e26d02a189.png"
+          }
+        },
+        "text_VGUbgF": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_1023225.png"
+          }
+        },
+        "text_8mExNG": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_1023226.png"
+          }
+        },
+        "text_WAVGzU": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_1023227.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_nbjriy",
+        "text_HxUmnQ",
+        "text_VGUbgF",
+        "text_8mExNG",
+        "text_WAVGzU"
+      ],
+      "settings": {
+        "hide_text": "",
+        "slide_class": "female-reviews py-md-4",
+        "Heading": "Traya’s Life Changing Results",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "stage1_doctors_rzKEGe": {
+      "type": "stage1-doctors",
+      "blocks": {
+        "gallery_8JDWXK": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_1_8932d6a6-9ebf-458b-887b-6aed5dcee1da.png",
+            "doctors_name": "Dr. Harish Balaji",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "gallery_cLf8BY": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_2_35c4af69-06e8-44e8-a862-7b621d8ef9cd.png",
+            "doctors_name": "Dr. Siddhi Sonawane",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "gallery_9njmiN": {
+          "type": "Gallery",
+          "disabled": true,
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_3_1331786f-b7f1-4602-b4ee-4e27e790aa46.png",
+            "doctors_name": "Dr. Aarushi Mittal",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353025.png"
+          }
+        },
+        "gallery_yzQTCm": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_4_5cd5d8ab-55d8-4207-ab86-93d46b7d2afa.png",
+            "doctors_name": "Dr. Dhwani Saxena",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353025.png"
+          }
+        },
+        "gallery_WN3X7j": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_5_45fbc0ca-d182-496b-acbc-c781f8309327.png",
+            "doctors_name": "Dr. Kalyani Deshmukh",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353025.png"
+          }
+        },
+        "gallery_8UKDya": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_6_b5866a73-947a-479a-bd41-06620497c2bd.png",
+            "doctors_name": "Dr. Shreya Deoghare",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "gallery_GnBkNq": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_7_dfb5f648-ed21-4111-9993-930921e7d773.png",
+            "doctors_name": "Dr. Shweta Tripati",
+            "doctors_expert": "M.B.B.S, PG (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "gallery_8aiUJe": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_03f96e17-673c-4ece-989e-2b3d398bc210.png",
+            "doctors_name": "Dr. Shailendra Chaubey",
+            "doctors_expert": "B.A.M.S (Ayurvedic Practitioner)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_8JDWXK",
+        "gallery_cLf8BY",
+        "gallery_9njmiN",
+        "gallery_yzQTCm",
+        "gallery_WN3X7j",
+        "gallery_8UKDya",
+        "gallery_GnBkNq",
+        "gallery_8aiUJe"
+      ],
+      "settings": {
+        "doctors_title": "Meet The Team Of Doctors"
+      }
+    },
+    "swirl_video_7CEQwq": {
+      "type": "swirl-video",
+      "settings": {
+        "heading": "Hear it from our Customers",
+        "html_area": "<div id=\"swirl-short-videos\" data-code=\"hnl8qkiv\" data-sw=\"1\"><\/div>\n<div class=\"swirl-short-videos-M\" data-playlist=\"ealhzF\"><\/div>"
+      }
+    },
+    "faq_vox_view_NPHMFq": {
+      "type": "faq-vox-view",
+      "blocks": {
+        "faq_h3Fgtf": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353092.png",
+            "question": "How to buy a Traya kit?",
+            "answer": "<p>It is incredibly simple! You have been recommended a kit based on your stage of hair fall, the scalp image you uploaded and your response on our hair test.   You can now  buy your doctor recommended treatment plan by pressing the buy now button. <br\/>Once the order is confirmed, Traya’s doctors will approve your treatment and create a digital prescription for you. <br\/>You will be able to access this prescription by scanning the QR code on your kit when the kit  is delivered and start the treatment!<\/p>"
+          }
+        },
+        "faq_cdcmt6": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353093.png",
+            "question": "How long will the treatment take?",
+            "answer": "<p>Hair growth doesn’t happen overnight, it takes a minimum of five months for you to grow healthy hair.<br\/>Customers see results within 5-6 months of regularly using the complete treatment plan.<br\/>However, the exact time to see these results may vary depending on factors like your age, stage, type of hair fall and the internal causes behind your hair loss like stress, hormonal imbalances, poor diet, etc. <br\/>Staying consistent with our treatment also ensures faster, more effective results, as over 2.5 lakh other Indians have already seen.<\/p>"
+          }
+        },
+        "faq_cMaYUc": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Frame_508_2.png",
+            "question": "When will I get my prescription?",
+            "answer": "<p>When your kit is delivered, you can access your digital prescription by scanning the QR code which is  on  the inner cover of the opening flap of the box. You can scan the code using Google Lens or any online payment app that has a scanner (Phonepe, Gpay, etc). You can also view your prescription by logging into the Traya app or website.<\/p>"
+          }
+        },
+        "faq_7Untz3": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353095.png",
+            "question": "Can I use Traya with other medical treatments?",
+            "answer": "<p>In most cases, hair loss is a result of internal root causes like stress, bad gut health, genetics etc . <br\/>That is why Traya doctors go through each and every case before prescribing the treatment plan and then customise the dosage accordingly. However, please make sure you specify your condition to your hair coach before starting the treatment.<\/p>"
+          }
+        },
+        "faq_8kM73a": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Mask_group_4_25a67c91-a92a-431b-9a19-67376297608e.png",
+            "question": "Who is my hair coach? When will I get my hair coach?",
+            "answer": "<p>A Traya hair coach is going to be your point of contact throughout the treatment.<br\/>They will be assigned to you once your order is placed, to help you stay on track, and  guide you throughout the treatment journey, take updates from doctors to monitor your progress and follow up with you to ensure better results.<br\/>They will also be available for you to reach out too whenever you have doubts about your treatment.<\/p>"
+          }
+        },
+        "faq_PXPy8U": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Mask_group_6_71ff8548-869d-42da-93a5-3240300dcb1d.png",
+            "question": "Do I need to follow the diet?",
+            "answer": "<p>Diet is important because everything we eat affects our body and our hair. Certain foods we normally eat in our daily life like sugary sweets and dairy harm our internal health which leads to poor health for our hair and hair loss. <br\/>That's why Traya's nutritionists create a customised diet plan for you considering the root cause of your hair fall. <br\/>The diet plan will be given to you after you buy your kit and will also be available on the Traya app.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_h3Fgtf",
+        "faq_cdcmt6",
+        "faq_cMaYUc",
+        "faq_7Untz3",
+        "faq_8kM73a",
+        "faq_PXPy8U"
+      ],
+      "settings": {
+        "title": "FAQ’s"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "new_slideshow_nyqAGj",
+    "hair_require_treatment_yxkYtp",
+    "hair_loss_slider_k7wxz8",
+    "treatment_options_WUzAC8",
+    "best_hair_treatment_xLPBLA",
+    "choose_traya_w8pCEN",
+    "female_collection_slide_fPcB3B",
+    "stage1_doctors_rzKEGe",
+    "swirl_video_7CEQwq",
+    "faq_vox_view_NPHMFq"
+  ]
+}

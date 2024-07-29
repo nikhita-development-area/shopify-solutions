@@ -1,0 +1,125 @@
+<!--   section/hair-require-treatment   -->
+<div class="main-hair-requires mb-2 container">
+    <div class="head-desc text-center my-md-5 my-3">
+        <h2 class="head">{{ section.settings.requires-head }}</h2>
+        <p class="desc">{{ section.settings.requires-desc }}</p>
+    </div>
+  <div class="main-widening-stages-requires d-flex">
+    <div class="main-stages-requires d-flex flex-wrap">
+        {% for block in section.blocks %}
+          {% if block.type == 'stages' %}
+            <div class="stages-requires d-flex flex-column align-items-center justify-content-start">
+                {% assign width = block.settings.img-logo1.width | divided_by: 4 %}
+                {% assign height = block.settings.img-logo1.height | divided_by: 4 %}
+                {% assign alt = 'Image-' | append: forloop.index %}
+                {{ block.settings.img-logo1 | image_url: width: width | image_tag: width: width, height: height, alt: alt, title: alt, loading: 'lazy', class: 'rounded' }}
+                <p class="text">{{ block.settings.img-text1 }}</p>
+            </div>
+          {% endif %}
+          {% endfor %}
+     </div>
+  <div class="main-widening-requires d-flex flex-wrap">
+  {% for block in section.blocks %}
+          {% if block.type == 'widening' %}
+            <div class="widening-requires  d-flex flex-column align-items-center justify-content-start">
+               {% assign width = block.settings.img-logo2.width | divided_by: 4 %}
+                {% assign height = block.settings.img-logo2.height | divided_by: 4 %}
+                {% assign alt = 'Image-' | append: forloop.index %}
+                {{ block.settings.img-logo2 | image_url: width: width | image_tag: width: width, height: height, alt: alt, title: alt, loading: 'lazy', class: 'rounded' }}
+                <p class="text text-center">{{ block.settings.img-text2 }}</p>
+            </div>
+        {% endif %}
+        {% endfor %}
+   </div>
+  </div>
+  <div class="long-desc">
+      <p class="desc text-center p-md-5 p-2 my-md-1 my-4">{{ section.settings.requires-long-desc }}</p>
+    </div>
+   <div class="text-center mt-4 d-block d-md-none">
+    <a id="hairtestctatreatment2" href="https://form.traya.health/female?cohort=1&location=reviews&page={{ page__hndl }}" class="btn btn-dark my-md-3 shadow hair-form-actn-link">Take The Hair Test <sup>TM</sup></a>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "hair-require-treatment",
+    "tag": "section",
+    "class": "hair-requires",
+    "settings": [
+      {
+        "type":"text",
+        "id": "requires-head",
+        "label": "Enter your heading"
+      },
+      {
+        "type":"text",
+        "id": "requires-desc",
+        "label": "Enter your description"
+      },
+      {
+        "type":"text",
+        "id": "requires-long-desc",
+        "label": "Enter your long description"
+      }
+    ],
+    "blocks":[
+      {
+        "name": "stages-img-text",
+        "type":"stages",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "img-logo1",
+            "label": "drag your image"
+          },
+          {
+            "type": "text",
+            "id": "img-text1",
+            "label": "Enter your text"
+          }
+        ]
+      },
+      {
+        "name": "widening-img-text",
+        "type":"widening",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "img-logo2",
+            "label": "drag your image"
+          },
+          {
+            "type": "text",
+            "id": "img-text2",
+            "label": "Enter your text"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "hair-require-treatment",
+        "category":"custom"
+      }
+    ]
+  }
+{% endschema %}
+<style>
+  .main-hair-requires .head-desc .head{letter-spacing:normal; font-size: 32px; font-weight: 800;}
+  .main-widening-stages-requires .stages-requires img, .main-widening-stages-requires .widening-requires img{width: auto; height:auto;}
+  .main-widening-stages-requires .main-stages-requires{width: 60%; gap:10px;}
+  .main-widening-stages-requires .main-widening-requires{width: 40%; gap:10px;}
+  .main-widening-stages-requires .stages-requires{width:calc(25% - 10px); gap: 5px;}
+  .main-widening-stages-requires .widening-requires{width:calc(33.33% - 10px); gap: 5px;}
+  .main-widening-stages-requires{gap:20px;}
+  .main-hair-requires .long-desc .desc{font-size: 24px;}
+  .main-widening-stages-requires .stages-requires .text{font-size:15px;}
+  @media(max-width:749px){
+    .main-widening-stages-requires{flex-direction:column;}
+    .main-widening-stages-requires .main-stages-requires{width: 100%;}
+    .main-widening-stages-requires .main-widening-requires{width: 100%; justify-content: center;}
+    .main-hair-requires .head-desc .head{font-size:23px;} 
+    .main-hair-requires .head-desc .desc{font-size:14px;} 
+    .main-widening-stages-requires .stages-requires .text{font-size:12px;}
+    .main-hair-requires .long-desc .desc{font-size: 16px;}
+  }
+</style>

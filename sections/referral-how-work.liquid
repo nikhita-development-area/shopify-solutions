@@ -1,0 +1,75 @@
+<div class="container">
+  {% if section.settings.sec_head != blank%}
+    <div>
+      <p class="fw-bold text-center  referral_how_work_heading pb-2">{{ section.settings.sec_head }}</p>
+    </div>
+  {% endif %}
+  <div class="row hsush">
+    {% for block in section.blocks %}
+      {% if block.settings.how_work_img != blank %}
+        <div class="col-md-4">
+          <img loading="lazy" class="desktop_image" alt="image" title="image" height="100%" src="{{ block.settings.how_work_img | img_url:' ' }}" width="100%">
+          <img loading="lazy" class="mobile_image" alt="image" title="image" height="100%" src="{{ block.settings.how_work_img_mob | img_url:' ' }}" width="100%">
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Referral How Work",
+    "settings": [
+      {
+        "type": "text",
+        "id": "sec_head",
+        "label": "Enter Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "How Referral Work",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "how_work_img",
+            "label": "Select Desktop Image"
+          },
+          {
+          "type": "image_picker",
+          "id": "how_work_img_mob",
+          "label": "Select Mobile Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Referral How Work",
+        "category": "text with image"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .referral_how_work_heading {
+    font-size: 30px;
+    font-weight:800;
+    color:#585A5B;
+    width:85%;
+    margin:0 auto;
+    position: relative;
+  }
+  .container .hsush{width:85%; margin:0 auto;}
+  .container .row .col-md-4{padding:10px 15px;}
+  .mobile_image{display:none;}
+
+  @media only screen and (max-width: 575.98px) {
+   .mobile_image{display:block;} 
+    .desktop_image{display:none;} 
+    .container .hsush{width:100%;}
+    .referral_how_work_heading{font-size:24px;}
+  }
+{% endstyle %}

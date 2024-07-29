@@ -1,0 +1,42 @@
+<div class="shop-all-toggleBar-container my-md-0">
+  <div class="shop-all-toggleBar">
+   {% comment %} <div id="shop-all-toggleAll" class="shop-all-toggleBar_tab active">All</div>{% endcomment %}
+    <a  href="javascript:void(0)" class="shop-all-toggleBar_tab {% if current_tags contains 'product' %}active{% endif %}" product_type="kit">Single</a>
+<!--     <a  href="/collections/single-products" class="shop-all-toggleBar_tab {% if collection.handle == 'single-products' %}active{% endif %}">Single</a> -->
+    <a  href="javascript:void(0)" class="shop-all-toggleBar_tab {% if collection.handle == 'all-products' %}active{% endif %}" product_type="single">Kit</a>
+    
+  </div>
+</div>
+<style>
+  .shop-all-toggleBar-container {
+    display: flex;
+    justify-content: center;
+}
+  .shop-all-toggleBar {
+    display: flex;
+    border-radius: 50px;
+    background: #EEF1EF;
+}
+  .shop-all-toggleBar_tab.active {
+    color: #FFFFFF;
+    background: #414042;
+}
+  .shop-all-toggleBar_tab.active:hover {
+    color: #fff; 
+    text-decoration: none;
+}
+.shop-all-toggleBar_tab {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    border-radius: 50px;
+    text-transform: capitalize;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #030303;
+    padding: 4px 31px;
+    border: solid 4px #EEF1EF;
+}
+</style>

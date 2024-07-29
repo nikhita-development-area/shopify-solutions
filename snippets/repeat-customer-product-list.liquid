@@ -1,0 +1,144 @@
+<!-- code by Shubham -->
+
+{% assign pageurlv = content_for_header | split: 'pageurl":"' | last | split: '",'| first %}
+   {% assign value1 = 1 %}
+{% if pageurlv contains 'items=' %}
+  {% assign allvariants = pageurlv | split: 'items=' | last | split: ',' %}
+  {% assign allProducts = collections.all.products %}
+  <div class="row repeat-customer-products">
+  <div class="container">
+   <div class="card shadow p-0 overflow-hidden w-md-adjust m-auto">
+      <div class="card-header bg-dark shadow text-center">
+  {% if value1 == variantcount %}
+         <p class="mb-0 l-0 font-weight-bold text-white">Your order contains</p>
+    {% else %}
+         <p class="mb-0 l-0 font-weight-bold text-white">Your order contains</p>
+    {% endif %}
+      </div>
+      <div class="card-body mt-4 p-0 pb-md-4 new_svg_color">
+        <div class="mb-3 mb-md-4">
+    {% for variant in allvariants %}
+      {% assign crntVariant = variant | split: ':' | first  %}
+     {% assign crntVariantcount = variant | split: ':' | last | split: '\' | first | split: '?' | first %}
+      {% for product in allProducts %}
+        
+        {% if crntVariant contains product.selected_or_first_available_variant.id %} 
+
+
+  {% assign variantcount = allvariants | size %}
+
+     {% assign productPrice1 =  product.price | divided_by: 100 %}
+    {% assign productPrice =  productPrice1 | times: crntVariantcount %}
+   
+   
+       
+
+<!-- discount -->
+          
+  {% assign productdiscount_value = pageurlv | split: 'discount_value=' | last | split: '&' | first | split: '\' | first  | split: '%' | first%}
+  {% assign productdiscount_type = pageurlv | split: 'discount_type=' | last | split: '&' | first | split: '\' | first  | split: '%' | first %}
+
+       
+  {% if pageurlv contains 'discount=' %}
+  {% if productdiscount_type contains 'percent' %}
+    {% assign discountedPercent = productPrice | times:productdiscount_value | divided_by: 100 %}
+    {% assign discountedPrice = productPrice | minus: discountedPercent %}
+  {% elsif productdiscount_type contains 'value' %}
+    {% assign variantcountnumber =  variantcount | plus: 0  %}
+    {% assign discountedPrice = productPrice | minus: productdiscount_value %}
+    {% assign valuedes_price = productdiscount_value | divided_by: variantcountnumber %}
+    {% assign off_price = valuedes_price | times : crntVariantcount %}
+
+  {% endif %}
+  {% endif %}  
+<!--end discount -->
+          
+{% if value1 == variantcount %}
+{% assign product-total = productPrice | times:crntVariantcount %}
+<div class="col-12 mb-4 single-product">
+    <div class="product-item border-0 m-1">
+        <div class="price-on-top p-2 d-none" bis_skin_checked="1">
+            <h5 class="font-weight-bold mb-0 text-tradewind d-none d-md-block">{% include 'product-price-listing', product: product %}</h5>
+            <h6 class="font-weight-bold mb-0 text-tradewind d-md-none w-100">{% include 'product-price-listing', product: product %}</h6>
+        </div>
+        <div class="row shadow-none pb-0 align-items-center">
+            <div class="col-3 product_img_div m-auto position-relative p-0" bis_skin_checked="1">
+                <div class="text-decoration-none product_list_result" tabindex="-1">
+                    <img src="{{product.featured_media.preview_image |  img_url: '400x' }}" class="mx-auto mob-pd-img" />
+                </div>
+            </div>
+            <div class="col-9 p-0 p-md-auto">
+                <h6 class="font-weight-bold text-uppercase mt-md-4 d-md-none product_title mb-0 p-2" data-product-name="">
+                    <p class="text-decoration-none text-black" tabindex="-1">{{product.metafields.custom.product_title }}</p>
+                </h6>
+                    <h4 class="font-weight-bold mb-3 text-uppercase d-none d-md-block product_title p-2" data-product-name="">
+                        <p class="text-decoration-none text-black" tabindex="-1">{{product.metafields.custom.product_title }}</p>
+                    </h4>
+                    <div class="price-on-top p-2 d-flex justify-content-between align-items-center single-product-price">
+                        <h5 class="font-weight-bold mb-0 text-tradewind text-black">{{ product.price | money }}</h5>
+                        <!--                            <h6 class="font-weight-bold mb-0 text-tradewind d-md-none w-100"><span class="">₹{{ discountedPrice }}/-&nbsp;</span><span><del class="del-price">{{ product.price | money }}</del></span><span class="offer_text"> &nbsp;{% if productdiscount_type contains 'percent' %}{{ productdiscount_value }}% OFF {% elsif productdiscount_type contains 'value' %}₹{{ off_price }} OFF{% endif %}</span></h6>       -->
+                        <div class="px-md-5 px-4 py-md-2 py-1 border rounded-lg product_quantity">
+                            <p class="font-weight-bold text-black">{{ crntVariantcount }}</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+   {% endif %}
+
+ {% unless value1 == variantcount %}
+     <div class="col-12 mb-4 kit_product">
+               <div class="product-item border-0 m-1">
+                  <div class="price-on-top p-2 d-none" bis_skin_checked="1">
+                     <h5 class="font-weight-bold mb-0 text-tradewind d-none d-md-block">{% include 'product-price-listing', product: product %}</h5>
+                     <h6 class="font-weight-bold mb-0 text-tradewind d-md-none w-100">{% include 'product-price-listing', product: product %}</h6>
+                  </div>
+                  <div class="row shadow-none pb-0 align-items-center">
+                     <div class="col-3 product_img_div m-auto position-relative p-0" bis_skin_checked="1">
+                        <div class="text-decoration-none product_list_result" tabindex="-1">
+                        <img src="{{product.featured_media.preview_image |  img_url: '400x' }}" loading="lazy" class="mx-auto mob-pd-img" />
+                        </div>
+                     </div>
+                     <div class="col-9 p-0 p-md-auto">
+                        <h6 class="font-weight-bold text-uppercase mt-md-4 d-md-none product_title mb-0 p-2" data-product-name="">
+                          <p class="text-decoration-none text-black" tabindex="-1">{{product.metafields.custom.product_title }}</p></h6>
+                        <h4 class="font-weight-bold mb-3 text-uppercase d-none d-md-block product_title p-2" data-product-name="">
+                           <p class="text-decoration-none text-black" tabindex="-1">{{product.metafields.custom.product_title }}</p>
+                        </h4>
+                        <div class="price-on-top p-2 d-flex justify-content-between align-items-center kit-product-price">
+                           <h6 class="font-weight-bold mb-0 text-tradewind w-100 text-black"><span class="">{% if productdiscount_type contains 'percent' %}₹{{ discountedPrice }}/- {% elsif productdiscount_type contains 'value' %}₹{{ productPrice }}/-{% else %}₹{{ productPrice }}/-{% endif %}&nbsp;</span>{% if pageurlv contains 'discount_value=' %}{% unless productdiscount_type contains 'value' %}<span><del class="del-price">₹{{ productPrice }}/-</del></span>{% comment %}<span class="offer_text"> &nbsp;{% if productdiscount_type contains 'percent' %}{{ productdiscount_value }}% OFF {% elsif productdiscount_type contains 'value' %}₹{{ off_price }} OFF{% endif %}</span>{% endcomment %}{% endunless %}{% endif %}</h6>      
+                          <div class="px-md-5 px-4 py-md-2 py-1 border rounded-lg product_quantity">
+                              <p class="font-weight-bold text-black">{{ crntVariantcount }}</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                 </div>
+         </div>
+      {% endunless %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+             </div>
+         </div>
+        <div class="row justify-content-center align-items-center w-100 mb-2 mb-md-3 cart-subtotal mx-auto">
+           <h2 class="justify-content-center col-12 l-0 d-inline-flex text-black mb-0 price_model_text my-2 my-md-0 align-items-center">Your{% if value1 == variantcount %} plan{% else %} Kit{% endif %} @&nbsp;₹&nbsp;<span class="total-price">{% if value1 == variantcount %} {{ kit_price }} {% else %}{{ dis_kit_price  }}{% endif %}</span>/- &nbsp;{% if pageurlv contains 'discount_value=' %} <span class=""><del class="font-weight-normal ml-md-2 del-font">₹<span class="all-total-price"> {{  kit_price }}</span>/-</del></span>{% endif %}
+           {% if productdiscount_type contains 'value' and value1 != variantcount  %}
+          <span class="text-center offer-text">&nbsp;&nbsp;₹{{ productdiscount_value }} OFF</span>
+            {% elsif productdiscount_type contains 'percent' and value1 != variantcount %}
+          <span class="text-center offer-text">&nbsp;&nbsp;{{ productdiscount_value }}% OFF</span>
+          {% endif %}
+           </h2>
+         </div>
+         <div class="card-footer border-0 bg-transparent p-0">
+          <button id="add-to-cart-result-page" class="btn d-flex justify-content-center align-items-center py-2 py-md-3 px-1 buy_btn_color mb-3">
+            <span class="mr-0 mr-md-0 buy_now_card_svg">BUY NOW</span>
+          </button>
+        </div>
+         </div>
+      </div>
+  </div>
+{% endif %}
+
+ <!-- end code by Shubham -->

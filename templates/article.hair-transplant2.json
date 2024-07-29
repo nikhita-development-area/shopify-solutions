@@ -1,0 +1,587 @@
+{
+  "sections": {
+    "heading_hair_transplant2_MbQVMN": {
+      "type": "heading-hair-transplant2",
+      "settings": {
+        "heading": "Best Hair transplant clinic in {{ article.title }} 2024",
+        "padding_top": 40,
+        "padding_bottom": 24
+      }
+    },
+    "custom_liquid_CMPcf6": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"hair_trasplant_1\" class=\"ht_section\"><\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hair_calculator_f3iDD4": {
+      "type": "hair-calculator",
+      "settings": {
+        "title": "hair Transplant Cost Calculator",
+        "product_cost": 20000,
+        "approx_cost": "*Approx cost of hair transplant in {{ article.title }}",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "custom_liquid_xkQgjD": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"hair_trasplant_2\" class=\"ht_section\"><\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "blog_banner_first_q7iXen": {
+      "type": "blog-banner-first",
+      "settings": {
+        "heading": "Transplant can't solve your Problem",
+        "paragraph": "67,000+ people avoided Hair Transplant by finding the Root Cause of Hair Loss",
+        "button_text": "FIND THE ROOT CAUSE",
+        "button_url": "https:\/\/form.traya.health\/questions?cohort=1&location=card1",
+        "desktop_image": "shopify:\/\/shop_images\/desktop_image_700x_93e8ffe1-4990-4c67-87e2-7970ece79932.png",
+        "mobile_image": "shopify:\/\/shop_images\/desktop_image_700x_17732c54-2ad7-4f73-af16-3749d05bcdb2.png",
+        "padding_top": 48,
+        "padding_bottom": 16
+      }
+    },
+    "customer_success_stories_ddeeM9": {
+      "type": "customer-success-stories",
+      "settings": {
+        "heading": "Customer Success Stories",
+        "heading_url": "#",
+        "background": "#f1f1f1",
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    },
+    "custom_liquid_GUCwDF": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"hair_trasplant_3\" class=\"ht_section\"><\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "plan_for_hair_regrowth_YTKB6m": {
+      "type": "Plan-for-hair-regrowth",
+      "settings": {
+        "heading": "Traya's Holistic Plan for Hair Regrowth",
+        "sub_heading": "Traya's approach combines the power of 3 Sciences to holistically regrow hair.\u202893% Saw Results in 5 months",
+        "background": "#e7f1ec",
+        "padding_top": 48,
+        "padding_bottom": 16
+      }
+    },
+    "customer_success_stories_6nkjnq": {
+      "type": "customer-success-stories",
+      "settings": {
+        "heading": "Customer Success Stories",
+        "heading_url": "shopify:\/\/collections",
+        "background": "#f1f1f1",
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    },
+    "custom_liquid_Jq67hr": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"hair_trasplant_4\" class=\"ht_section\"><\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "faq_quick_link_k8EbWt": {
+      "type": "faq-quick-link",
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "heading_url": "shopify:\/\/collections\/all",
+        "background": "#f1f1f1",
+        "padding_top": 16,
+        "padding_bottom": 28
+      }
+    },
+    "section_infinte_scroll_hair_transplant_dMKWzq": {
+      "type": "section-infinte-scroll-hair-transplant",
+      "settings": {
+      }
+    },
+    "plan_for_hair_regrowth_hBLVBF": {
+      "type": "Plan-for-hair-regrowth",
+      "disabled": true,
+      "settings": {
+        "heading": "Traya's Holistic Plan for Hair Regrowth",
+        "sub_heading": "Traya's approach combines the power of 3 Sciences to holistically regrow hair.\u202893% Saw Results in 5 months",
+        "background": "#e7f1ec",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "customer_review_ht_XxcHjP": {
+      "type": "customer-review-ht",
+      "blocks": {
+        "heading_BhwVNn": {
+          "type": "heading",
+          "settings": {
+            "stage": "STAGE 5",
+            "image_1": "shopify:\/\/shop_images\/March_13_2023.png",
+            "month_1": "Month 1",
+            "image_2": "shopify:\/\/shop_images\/Nov_23_2022.png",
+            "month_3": "Month 3",
+            "image_3": "shopify:\/\/shop_images\/July_30_2022.png",
+            "month_5": "Month 5",
+            "customer_name": "Ved, 26",
+            "location_name": "",
+            "rating": "5.0",
+            "paragraph": "Jabse maine Traya Treatment regularly follow karne ka effort dala, tab se dheere dheere acche results aane lage. Ab log compliments dete hain, kehte hain mere baal kitne ghane ho gaye. Khush hoon!",
+            "reviewed_date": "Reviewed on 8th May 2023"
+          }
+        },
+        "heading_kFLGBx": {
+          "type": "heading",
+          "settings": {
+            "stage": "STAGE 5",
+            "image_1": "shopify:\/\/shop_images\/Uddeshya01_300x_4c51e29f-1d12-44df-94c7-e71e8b2de6bd_2.jpg",
+            "month_1": "Month 1",
+            "image_2": "shopify:\/\/shop_images\/Uddeshya02_300x_921c4a78-34b8-4f77-9551-775547339218_1.jpg",
+            "month_3": "Month 5",
+            "image_3": "shopify:\/\/shop_images\/Uddeshya03_300x_e746d8f1-e039-43ee-8ba1-4b2c0e35bd9c_1.jpg",
+            "month_5": "Month 6",
+            "customer_name": "Uddeshya",
+            "location_name": "",
+            "rating": "5.0",
+            "paragraph": "My hair loss started in 2016 after I was diagnosed with tuberculosis. I had consulted a dermatologist and tried many treatments before nearly giving up hope. I liked Traya’s approach of combining three sciences.",
+            "reviewed_date": "15th Nov 2021"
+          }
+        },
+        "heading_dmV6FA": {
+          "type": "heading",
+          "settings": {
+            "stage": "STAGE 5",
+            "image_1": "shopify:\/\/shop_images\/Month-d1_300x_300x_15a1acb9-61df-4ba3-9178-0d9043de5e50.jpg",
+            "month_1": "Month 1",
+            "image_2": "shopify:\/\/shop_images\/Month-d2_300x_7c32371d-74f4-4dab-8dac-089aae12f738.jpg",
+            "month_3": "Month 2",
+            "image_3": "shopify:\/\/shop_images\/Month-d5_300x_ad1727f3-d429-4e64-b9bd-335ffefc7fe5.jpg",
+            "month_5": "Month 5",
+            "customer_name": "Shweta Divecha",
+            "location_name": "",
+            "rating": "5.0",
+            "paragraph": "By giving myself a complete lifestyle change inspired and instructed by Traya. I have never been more happier and confident. Still hoping more progress.",
+            "reviewed_date": "20th August 2021"
+          }
+        },
+        "heading_4gxyqp": {
+          "type": "heading",
+          "settings": {
+            "stage": "STAGE 5",
+            "image_1": "shopify:\/\/shop_images\/Month_1_3_300x_4fc44adb-84ac-40d4-8d05-1f88d0d072f1.jpg",
+            "month_1": "Month 1",
+            "image_2": "shopify:\/\/shop_images\/Month_5_300x_b2b020d4-8050-445b-b045-4f2292fffa51.png",
+            "month_3": "Month 5",
+            "image_3": "shopify:\/\/shop_images\/Month_7_1_300x_a7cebe31-735c-4dbf-8859-a974ea17732e.jpg",
+            "month_5": "Month 7",
+            "customer_name": "Sunil Bhadouriya",
+            "location_name": "",
+            "rating": "5.0",
+            "paragraph": "I read about Traya on Quora. I had read reviews on it and they seemed positive so I thought that I would give it a go.  It's helped me so much and I can tell the difference in how much my hair has grown back.",
+            "reviewed_date": "9th Apr 2022"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BhwVNn",
+        "heading_kFLGBx",
+        "heading_dmV6FA",
+        "heading_4gxyqp"
+      ],
+      "settings": {
+        "section_heading": "Traya Customer Testimonials"
+      }
+    },
+    "faq_hair_doctors_zE9CRt": {
+      "type": "faq-hair-doctors",
+      "blocks": {
+        "faq_VipdFf": {
+          "type": "faq",
+          "settings": {
+            "ques": "What is Hair Transplant? ",
+            "ans": "<p>A hair transplant is a surgery for individuals at an advanced hair loss stage. The procedure involves relocating hair from areas of the body with healthy hair growth to balding or thinning regions on the scalp. This procedure is typically considered by individuals with balding and advanced hair loss (5th+ Stage of Norwood Hair Loss Scale). <\/p>"
+          }
+        },
+        "faq_8M3pgY": {
+          "type": "faq",
+          "settings": {
+            "ques": "How much does a Hair Transplant Cost in India? ",
+            "ans": "<p>The cost of a hair transplant in India can vary widely based on several factors, including the clinic's location, the surgeon's expertise, the number of grafts needed, and the technique used. For a small procedure involving 1000-1500 grafts, the cost can be between INR 30,000 to INR 1,50,000. For a more extensive procedure involving 2000-4000 grafts, the cost can range from INR 50,000 to INR 4,00,000. Some clinics charge an initial consultation fee, which can range from INR 500 to INR 2,000<\/p>"
+          }
+        },
+        "faq_Wc4CbK": {
+          "type": "faq",
+          "settings": {
+            "ques": "Should I get a Hair Transplant?",
+            "ans": "<p>If you satisfy any of the following conditions, you need to get a hair transplant: <\/p><ul><li>Large Balding Area <\/li><li>You have had hair loss for many years <\/li><li>Hair loss beyond 5th Stage of the Norwood Scale of Hair Los<\/li><\/ul><p>However, for hair loss that hasn't progressed to this stage, exploring natural and holistic treatment options and making lifestyle adjustments can greatly improve your chances of hair regrowth and enhancement, enabling you to avoid invasive procedures.<\/p>"
+          }
+        },
+        "faq_FRLfjQ": {
+          "type": "faq",
+          "settings": {
+            "ques": "What are the methods of Hair Transplant?",
+            "ans": "<p>A hair transplant surgery starts with choosing the extraction process and then implantation followed by the healing and hair growth. The process works the following way: <\/p><ul><li><strong>Extraction Process<\/strong>: FUT and FUE are two major extraction procedures where either a small strip of skin with hair or individual hair follicles are extracted directly from the scalp with a special tool.<\/li><li><strong>Implantation:<\/strong> Tiny incisions are made in the balding or thinning areas of your scalp and the prepared hair follicles are then inserted into these incisions.<\/li><li><strong>Healing and Hair Growth:<\/strong> Post-surgery, the scalp undergoes a healing period. Maintaining the transplanted hair is crucial, as the procedure isn't permanent.<\/li><\/ul>"
+          }
+        },
+        "faq_MmrVMB": {
+          "type": "faq",
+          "settings": {
+            "ques": "What are the Factors Influencing Hair Transplant Costs in {{ article.title }}?",
+            "ans": "<ul><li>Choice of Hair Transplant Technique (FUE, FUT, DHT) <\/li><li>Expertise and Experience of Hair Transplant Doctor <\/li><li>Condition Severity (More the balding, the higher the price) <\/li><li>Graft Quantity required for the procedure <\/li><li>Total number of sessions required for the procedure<\/li><li>Area and infrastructure of location in {{ article.title }}<\/li><\/ul>"
+          }
+        },
+        "faq_bx8gk7": {
+          "type": "faq",
+          "settings": {
+            "ques": "FUT vs FUE Which hair transplant procedure costs more?",
+            "ans": "<p>Typically, in &lt;city&gt;, the cost of Follicular Unit Transplantation (FUT) is lower than that of Follicular Unit Extraction (FUE). This difference in cost is due to the different technologies used in each procedure. <\/p><ul><li>The FUE technique involves the extraction of individual hair follicles, which requires specialized tools and a higher level of expertise from medical professionals. <\/li><li>In the FUT method, doctors remove a strip of skin from the patient, which, while simpler and less time-consuming, results in more significant scarring.<\/li><\/ul>"
+          }
+        },
+        "faq_DBexbn": {
+          "type": "faq",
+          "settings": {
+            "ques": "What are the potential side effects and complications of getting a hair transplant?",
+            "ans": "<p>Hair transplant surgery, like any medical procedure, carries potential side effects and complications. Some of the common ones include:<\/p><ul><li>Bleeding and Infection: As with any surgery, there's a risk of bleeding and infection, although these are usually minor and manageable.<\/li><li>Scarring: Both FUT and FUE methods can leave scars. <\/li><li>Pain and Swelling: Some degree of pain and swelling around the surgery area is common, but it typically subsides within a few days.<\/li><li>Numbness or Itching: Temporary numbness or itching may occur in the treated areas.<\/li><li>Folliculitis: The inflammation of the hair follicles, which can occur when new hairs start to grow is called folliculitis <\/li><li>Shock Loss: Sometimes, the transplanted or even surrounding hair can fall out after the procedure, known as \"shock loss”. This is usually temporary.<\/li><li>Unnatural-Looking Hair: If the procedure isn't done skillfully, the transplanted hair might look unnatural.<\/li><li>Failure to Grow: In some cases, transplanted hair might not take root and grow as expected.<\/li><\/ul>"
+          }
+        },
+        "faq_zrKRax": {
+          "type": "faq",
+          "settings": {
+            "ques": "What is the price range for hair transplants in {{ article.title }}?",
+            "ans": "<p>The price range for hair transplant in {{ article.title }} ranges anywhere from Rs. 80,000 to 3,50,000 depending on the extent of hair loss, transplant procedure, expertise of the doctor and cost of living in the area in {{ article.title }}. The average cost of a hair transplant in {{ article.title }}is &lt;avg.cost.city&gt;<\/p>"
+          }
+        },
+        "faq_mgHh8B": {
+          "type": "faq",
+          "settings": {
+            "ques": "What is the usual duration of a hair transplant surgery procedure?",
+            "ans": "<p>The usual session duration can last from 4 to 8 hours. However, for extensive hair loss requiring a large number of grafts, the procedure might be planned over two consecutive days. In cases where multiple sessions are needed, the entire process could span several months, with each session lasting several hours and spaced out to allow for healing between sessions.<\/p>"
+          }
+        },
+        "faq_i7Jfr8": {
+          "type": "faq",
+          "settings": {
+            "ques": "How many sessions are required for a complete hair transplant? ",
+            "ans": "<p>The usual duration of a hair transplant surgery procedure can range from a single session to multiple sessions spaced several months apart. The number of sessions required for a complete hair transplant also depends on the individual's hair loss extent and the desired density. <\/p>"
+          }
+        },
+        "faq_B8rXyx": {
+          "type": "faq",
+          "settings": {
+            "ques": "What age is it most advisable to get a hair transplant?",
+            "ans": "<p>It's generally advisable to wait until at least the early 30s for a hair transplant. This is because getting a transplant too early might result in an unnatural-looking hairline as hair loss progresses. Moreover, if you are at an early stage, a transplant may not be required and a non-invasive, natural treatment can also help.<\/p>"
+          }
+        },
+        "faq_DGQTbH": {
+          "type": "faq",
+          "settings": {
+            "ques": "Which treatments are considered best for male pattern baldness?",
+            "ans": "<p>At an early stage, natural and holistic treatments such as Traya’s hair treatment can help with Male Pattern Baldness. However, in advanced stages (Stage 5+ of Norwood scale of Hair loss), invasive procedures like a Hair Transplant may help for Male Pattern Baldness. You can give <a href=\"https:\/\/form.traya.health\/questions?\"><span style=\"text-decoration:underline\">Traya’s Free Hair test<\/span><\/a> to find out your stage, hair loss type, reason behind your hair loss and the best treatment option for your hair loss. <\/p>"
+          }
+        },
+        "faq_ThwiPF": {
+          "type": "faq",
+          "settings": {
+            "ques": "What potential adverse effects can occur following a Hair Transplant procedure?",
+            "ans": "<p>The potential adverse effects of a transplant can include infection, bleeding, scarring, unnatural-looking tufts of hair, and a condition called shock loss, where the hair in the treated area falls out and then typically grows back. These are general potential side effects of any surgery and transplant is no exception.  <\/p>"
+          }
+        },
+        "faq_Gg9jVk": {
+          "type": "faq",
+          "settings": {
+            "ques": "Are there any known complications or risks involved in undergoing a hair transplant?",
+            "ans": "<p>Along with potential risks such as infection, bleeding and scarring, complications due to a hair transplant can also include graft failure, where the transplanted hair does not take root and grow, and continued hair loss in non-treated areas, which can affect the overall appearance.<\/p>"
+          }
+        },
+        "faq_F98gkR": {
+          "type": "faq",
+          "settings": {
+            "ques": "What is the typical recovery timeline and process after receiving a hair transplant?",
+            "ans": "<p>The typical recovery timeline after a hair transplant involves several stages:<\/p><ul><li>Immediate post-surgery: Swelling, redness, and some discomfort can be expected.<\/li><li>First few weeks: Scabs form around the graft areas and shed along with the transplanted hair, leading to what is known as shock loss.<\/li><li>1 to 3 months: The hair begins to grow from the transplanted follicles.<\/li><li>6 to 12 months: Significant hair growth should be visible, with the final results often seen around 12 to 18 months post-surgery.<\/li><\/ul><p>It's essential to follow post-operative care instructions closely to ensure the best outcome and minimize risks. Moreover, it is important to understand that hair transplantation is not a permanent solution and you still need to maintain your hair post the transplant procedure. <\/p>"
+          }
+        },
+        "faq_mrPETW": {
+          "type": "faq",
+          "settings": {
+            "ques": "What are the most effective treatments for alopecia areata?",
+            "ans": "<p>Topical Corticosteroids, Immunotherapy, Minoxidil, Anthralin, Oral Corticosteroids, JAK Inhibitors, Platelet-Rich Plasma (PRP) Therapy and Laser Therapy are a few effective treatments for alopecia areata. While hair transplantation can be an option for some individuals with alopecia areata, it is usually considered only for those with stable and localized hair loss. Alopecia is an auto-immune disorder with unpredictable patterns, hence, it is important to have realistic expectations and a thorough discussion with your transplant expert to determine the best course of action.<\/p>"
+          }
+        },
+        "faq_9E8gj6": {
+          "type": "faq",
+          "settings": {
+            "ques": "How Long Does a Hair Transplant Last?",
+            "ans": "<p>A hair transplant may last permanently or just for a few months depending on how well you take care of your hair. Maintaining a healthy scalp and following post-transplant care instructions are essential for ensuring the best long-term outcomes. Regular check-ups with a dermatologist or hair transplant specialist can help monitor the health of the transplanted hair and address any concerns promptly.<\/p>"
+          }
+        },
+        "faq_X9yj3M": {
+          "type": "faq",
+          "settings": {
+            "ques": "How many days should I rest after a hair transplant?",
+            "ans": "<p>Patients should rest for 2-3 days post-surgery, avoiding strenuous activities. Light activities can typically be resumed after 3-5 days, but avoid heavy lifting or intense exercise for at least 2 weeks.<\/p>"
+          }
+        },
+        "faq_qmLzkh": {
+          "type": "faq",
+          "settings": {
+            "ques": "How to Sleep After Hair Transplant?",
+            "ans": "<p>Sleep with your head elevated at a 45-degree angle to reduce swelling after a hair transplant. It is advisable to use multiple pillows or a recliner and use soft and clean pillowcase to avoid irritation. Also, ensure you sleep on your back to avoid pressure on the transplanted area.<\/p>"
+          }
+        },
+        "faq_dNVQEX": {
+          "type": "faq",
+          "settings": {
+            "ques": "What are the Side Effects of Hair Transplant?",
+            "ans": "<p>Swelling, Itching, Scabbing, Infection and Shock loss can be some side effects of a hair transplant. <\/p>"
+          }
+        },
+        "faq_gABpba": {
+          "type": "faq",
+          "settings": {
+            "ques": "Which is the best Country for Hair Transplant?",
+            "ans": "<p>Turkey is considered the best country for Hair transplants due to their affordable hair transplant procedures.  Turkish clinics often use the latest technologies and techniques, such as FUE (Follicular Unit Extraction) and DHI (Direct Hair Implantation). Many clinics in Turkey offer all-inclusive packages for a Hair Transplant that cover the procedure, accommodation, transportation, and post-operative care, making it convenient for international patients. However, India, and other countries like the United States, the United Kingdom, and Thailand also offer excellent options depending on your specific needs and preferences.<\/p>"
+          }
+        },
+        "faq_6YerBU": {
+          "type": "faq",
+          "settings": {
+            "ques": "How Many PRP Sessions are Needed After Hair Transplant?",
+            "ans": "<p>Usually, 3-4 sessions PRP Sessions are recommended, spaced about a month apart after a transplant. Some patients may benefit from maintenance sessions every 3-6 months to enhance results<\/p>"
+          }
+        },
+        "faq_dbPrEH": {
+          "type": "faq",
+          "settings": {
+            "ques": "How to Remove Scabs After Hair Transplant?",
+            "ans": "<p>Gentle Washing, about 48 hours after surgery, using a mild shampoo is one way to remove the scabs after a hair transplant. Ensure you don't pick at the scabs and let them fall off naturally. Also, adhere to your surgeon’s specific instructions for post-operative care. <\/p>"
+          }
+        },
+        "faq_mGJK7m": {
+          "type": "faq",
+          "settings": {
+            "ques": "How Long to Take Medicine After Hair Transplant?",
+            "ans": "<p>Your hair transplant expert will provide you with the list of medicines to take post the transplant. Typically antibiotics are prescribed for 5-7 days post-surgery to prevent infection, painkillers are taken for a few days and Anti-Inflammatory medicines for 3-5 days to reduce swelling. Your surgeon may prescribe minoxidil or finasteride for ongoing hair maintenance.<\/p>"
+          }
+        },
+        "faq_bwKaDD": {
+          "type": "faq",
+          "settings": {
+            "ques": "How Safe is Hair Transplant?",
+            "ans": "<p>Hair transplants are generally safe when performed by experienced and qualified surgeons. As with any surgical procedure, there are risks such as infection, scarring, and temporary numbness. Ensure that you go through consultation and choose a reputable clinic to minimize risks.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_VipdFf",
+        "faq_8M3pgY",
+        "faq_Wc4CbK",
+        "faq_FRLfjQ",
+        "faq_MmrVMB",
+        "faq_bx8gk7",
+        "faq_DBexbn",
+        "faq_zrKRax",
+        "faq_mgHh8B",
+        "faq_i7Jfr8",
+        "faq_B8rXyx",
+        "faq_DGQTbH",
+        "faq_ThwiPF",
+        "faq_Gg9jVk",
+        "faq_F98gkR",
+        "faq_mrPETW",
+        "faq_9E8gj6",
+        "faq_X9yj3M",
+        "faq_qmLzkh",
+        "faq_dNVQEX",
+        "faq_gABpba",
+        "faq_6YerBU",
+        "faq_dbPrEH",
+        "faq_mGJK7m",
+        "faq_bwKaDD"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "heading": "Frequently asked questions",
+        "show_faq": 3,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "nearby_city_hair_doctors_HQmnDm": {
+      "type": "nearby-city-hair-doctors",
+      "blocks": {
+        "city_eCDzFt": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Bangalore",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/bangalore"
+          }
+        },
+        "city_hfFb3j": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Delhi",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/delhi"
+          }
+        },
+        "city_EGXAKc": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Pune",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/pune"
+          }
+        },
+        "city_Thej7c": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Gurgaon",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/gurgaon"
+          }
+        },
+        "city_t9mfRe": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Indore",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/indore"
+          }
+        },
+        "city_FLixEM": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Kolkata",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/kolkata"
+          }
+        },
+        "city_wPdGmK": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Nagpur",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/nagpur"
+          }
+        },
+        "city_pYRB3U": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Nashik",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/nashik"
+          }
+        },
+        "city_XyYrcf": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Faridabad",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/faridabad"
+          }
+        },
+        "city_aJFBd6": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Vadodara",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/vadodara"
+          }
+        },
+        "city_AyDzBB": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Patna",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/patna"
+          }
+        },
+        "city_zFdtyX": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Bhopal",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/bhopal"
+          }
+        },
+        "city_6GiYyk": {
+          "type": "city",
+          "disabled": true,
+          "settings": {
+            "city": "Hair Transplant in Noida",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/noida"
+          }
+        },
+        "city_zBX6LR": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Raipur",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/raipur"
+          }
+        }
+      },
+      "block_order": [
+        "city_eCDzFt",
+        "city_hfFb3j",
+        "city_EGXAKc",
+        "city_Thej7c",
+        "city_t9mfRe",
+        "city_FLixEM",
+        "city_wPdGmK",
+        "city_pYRB3U",
+        "city_XyYrcf",
+        "city_aJFBd6",
+        "city_AyDzBB",
+        "city_zFdtyX",
+        "city_6GiYyk",
+        "city_zBX6LR"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "heading": "Best Hair Transplant Clinics in India"
+      }
+    },
+    "ht_blog_banner_i9b7hR": {
+      "type": "HT-Blog-Banner",
+      "settings": {
+        "heading_1": "Transplant Cost Calculator",
+        "background": "#f1f1f1",
+        "image": "shopify:\/\/shop_images\/Group_102353015_1500x00_7c9133e2-933f-4f51-ad13-b510714de670.jpg",
+        "heading": "Know The Root Cause Of Your Hair Loss",
+        "button_text": "TAKE THE HAIR TEST",
+        "button_url": "shopify:\/\/pages\/blogs"
+      }
+    },
+    "ht_blog_cta_9xGy8p": {
+      "type": "ht-blog-cta",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "heading_hair_transplant2_MbQVMN",
+    "custom_liquid_CMPcf6",
+    "hair_calculator_f3iDD4",
+    "custom_liquid_xkQgjD",
+    "blog_banner_first_q7iXen",
+    "customer_success_stories_ddeeM9",
+    "custom_liquid_GUCwDF",
+    "plan_for_hair_regrowth_YTKB6m",
+    "customer_success_stories_6nkjnq",
+    "custom_liquid_Jq67hr",
+    "faq_quick_link_k8EbWt",
+    "section_infinte_scroll_hair_transplant_dMKWzq",
+    "plan_for_hair_regrowth_hBLVBF",
+    "customer_review_ht_XxcHjP",
+    "faq_hair_doctors_zE9CRt",
+    "nearby_city_hair_doctors_HQmnDm",
+    "ht_blog_banner_i9b7hR",
+    "ht_blog_cta_9xGy8p"
+  ]
+}

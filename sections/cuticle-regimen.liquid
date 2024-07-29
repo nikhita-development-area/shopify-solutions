@@ -1,0 +1,127 @@
+<!-- Sections -> cuticle-regimen.liquid -->
+
+<div class="container cuticle-regimen">
+  <h2 class="text-center font-weight-bold mb-4">{{ section.settings.cuticle_regimen_title }}</h2>
+
+  <div class="cuticle-collection">
+    {% for product in section.settings.cuticle_collection.products %}
+      <div class="cuticle-products p-2">
+        <img src="{{ product.metafields.custom.cuticle_collection_image | img_url: 'master' }}" alt="{{ product.metafields.custom.cuticle_page_pd_name | escape }}" title="Image {{ forloop.index }}" width="" height="" loading="lazy">
+        <a href="{{ product.url }}" class="text-center d-block w-100 pb-md-4">{{ product.metafields.custom.cuticle_page_pd_name | escape }}</a>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="cuticle-buy-now text-center font-weight-bold mt-4" id="cuticle-buy-now" style="cursor: pointer;">
+    <span class="justify-content-center align-items-center cuticle_buy__btn">BUY NOW</span>
+  </div>
+</div>
+
+{% style %}
+  .cuticle-regimen h2 {font-size: 48px; line-height: 65px; letter-spacing: 0em;}
+  .cuticle-collection {display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;}
+  .cuticle-products {box-shadow: 0px 0px 24px 4px #00000014; border-radius: 20px;}
+  .cuticle-products a {font-size: 32px; line-height: 40px; letter-spacing: 0em; text-decoration: none; margin-top: -40px;}
+  .cuticle-buy-now span {display: inline-flex; width: 450px; height: 60px; background: #414042; border-radius: 12px; color: #fff; font-size: 35px;}
+  
+  @media screen and (max-width: 768px) {
+    .cuticle-regimen h2 {font-size: 30px; line-height: 40px;}
+    .cuticle-products {box-shadow: 0px 4px 12px 2px #0000001F; border-radius: 10px;}
+    .cuticle-products a {font-size: 16px; line-height: 20px; margin-top: -10px;}
+    .cuticle-buy-now span {width: 180px; height: 46px; border-radius: 6px; font-size: 22px;}
+  }
+{% endstyle %}
+
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    clearCartDrawer();
+    var cuticle_buy__btn = document.querySelectorAll('.cuticle_buy__btn');
+    var formData = {
+      'items': [
+        {
+          'id': 43086456062130,
+          'quantity': 1
+        },
+        {
+          'id': 43086343700658,
+          'quantity': 1
+        }
+      ],
+      sections: "cart-drawer"
+    };
+    if(cuticle_buy__btn.length != 0) {
+      cuticle_buy__btn.forEach((btn) => {
+        btn.addEventListener('click', function() {
+          fetch('/cart/clear.js', {
+            method: "POST",
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          }).then((response) => {
+            return response.json();
+          }).catch((error) => {
+            console.error('Error: ', error);
+          }).finally(() => {
+            cuticleLandingAddtocart(formData);
+          })
+        });
+      });
+    }
+  });
+  function cuticleLandingAddtocart(formData) {
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': "application/json",
+        Accept: 'application/json'
+      },
+      body: JSON.stringify(formData)
+    }).then((response) => {
+      return response.json();
+    }).then((result) => {
+      var t = document.querySelector('cart-drawer');
+      let cart_drawer = result.sections['cart-drawer'];
+      CartDrawerUpdate(t, cart_drawer);
+    }).catch((error) => {
+      console.error('Error: ', error);
+    });
+  }
+  function clearCartDrawer() {
+    var formdata = {
+      sections: 'cart-drawer'
+    };
+    fetch('/cart/clear.js', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formdata)
+    }).then((response) => {
+      return response.json();
+    }).then((result) => {
+      var t = document.querySelector('cart-drawer');
+      let cart_drawer = result.sections['cart-drawer'];
+      CartDrawerUpdate(t, cart_drawer, drawer=false,0);
+    }).catch((error) => {
+      console.error('Error: ', error);
+    })
+  }
+</script>
+
+{% schema %}
+  {
+    "name": "Cuticle Regimen",
+    "settings": [
+      {
+        "type": "html",
+        "id": "cuticle_regimen_title",
+        "label": "Heading"
+      },
+      {
+        "type": "collection",
+        "id": "cuticle_collection",
+        "label": "Select Collection"
+      }
+    ],
+    "presets": [{"name": "Cuticle Regimen"}]
+  }
+{% endschema %}

@@ -1,0 +1,211 @@
+<div class="Success_Stories mt-5">
+{% if section.settings.journey_success != blank %}<p class="section-title">{{ section.settings.journey_success }}</p>{% endif %}
+  <div class="stories_slider">
+  {% for block in section.blocks %}
+    <div class="success-div" style="background: {{ section.settings.bk_color }};">
+      <div class="d-none d-md-flex row p-7">
+        <div class="col-md-6 col-lg-5 text-left">
+          <div class="stories_imageflex">
+            {% if block.settings.stories_image != blank %}<img class="our-result-img" src="{{ block.settings.stories_image | img_url:'173x'}}">{% endif %}
+            {% if block.settings.success_text_name != blank %}
+              <p class="customer--name font-weight-bold pt-3 pr-3">{{ block.settings.success_text_name }}</p>
+            {% endif %}
+            {% if block.settings.success_text_title != blank %}
+              <p class="customer--age mb-5 pt-3">{{ block.settings.success_text_title }}</p>
+            {% endif %}
+            {% if block.settings.success_text_title1 != blank %}
+              <div class="stories_text">
+                <p class="mb-0 story-content addReadMore showlesscontent">{{ block.settings.success_text_title1 }}</p>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-7">
+          <div class="row pl-4">
+            {% if block.settings.stories_image1 != blank %}
+              <div class="mx-auto">
+                <img class="d-block mx-auto" src="{{ block.settings.stories_image1 | img_url:''}}">
+              </div>  
+            {% endif %}
+            {% if block.settings.stories_image2 != blank %}
+              <div class="p-2 success-story-graph">
+                <img class="d-block mx-auto" src="{{ block.settings.stories_image2 | img_url:'560x'}}">
+              </div>  
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="d-md-none">
+        <div class="row p-3">
+          <div class="col-8">
+            {% if block.settings.success_text_name != blank %}
+              <p class="customer--name font-weight-bold text-left">{{ block.settings.success_text_name }}</p>
+            {% endif %}
+            {% if block.settings.success_text_title != blank %}
+              <p class="customer--age text-left">{{ block.settings.success_text_title }}</p>
+            {% endif %}
+          </div>
+          <div class="col-4">
+            {% if block.settings.stories_image != blank %}<img class="our-result-img" src="{{ block.settings.stories_image | img_url:'111x'}}">{% endif %}
+          </div>
+        </div>
+        <div class="row p-3 m-auto">
+          {% if block.settings.stories_image1 != blank %}
+            <img class="d-block mx-auto" src="{{ block.settings.stories_image1 | img_url:''}}">
+          {% endif %}
+        </div>
+        <div class="p-2">
+          {% if block.settings.stories_image2 != blank %}
+            <img class="d-block mx-auto" src="{{ block.settings.stories_image2 | img_url:'560x'}}">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+  {% if section.settings.linkb != blank and section.settings.sidelinktext != blank %}
+    <div class="page_link text-center py-5">
+      <a class="btn btn-dark take-the-hair-test" href="{{ section.settings.linkb }}">{{ section.settings.sidelinktext }}</a>
+    </div>  
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+      "type": "text",
+      "id": "journey_success",
+      "label": "Heading"
+      },
+      {
+        "type": "color",
+        "id": "bk_color",
+        "label": "Select Background Color",
+        "default": "transparent"
+      },
+      {
+          "type": "url",
+          "label": "Button link",
+          "id": "linkb"
+        },
+        {
+          "type": "text",
+          "label": "Button text",
+          "id": "sidelinktext"
+        }
+    ],
+     "blocks": [
+     {
+       "type": "Head",
+       "name": "success stories",
+       "settings": [
+          {
+            "type": "image_picker",
+            "id": "stories_image",
+            "label": "Logo image"
+          },
+          {
+            "type": "text",
+            "id": "success_text_name",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "success_text_title",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "success_text_title1",
+            "label": "Heading"
+          },
+          {
+           "type": "image_picker",
+           "id": "stories_image1",
+           "label": "Logo image"
+         }, 
+         {
+           "type": "image_picker",
+           "id": "stories_image2",
+           "label": "Logo image"
+         }
+        ]
+     }
+     ],
+     "presets":[
+        {
+          "name":"success stories",
+          "category":"custom"
+        }
+      ]
+  }
+{% endschema %}
+
+{% style %}
+  .our-result-img {
+    border-radius: 50%;
+  }
+  .customer--name {
+    font-size: 28px;
+    color: #000;
+  }
+  .customer--age {
+    font-size: 20px;
+    color: #959595;
+  }
+  .story-content {
+/*     height: 150px; */
+    overflow: hidden;
+    font-size: 24px;
+    color: #000;
+  }
+  .p-7 {
+    padding: 5rem !important;
+  }
+  .stories_slider .slick-prev {
+    left: 10px;
+    z-index: 2;
+  }
+  .stories_slider .slick-next {
+    right: 10px;
+    z-index: 2;
+  }
+  {% if template.suffix == 'cholestrol' %}
+    .addReadMore .readMore span, .addReadMore .readLess span, .readLess {
+      color: #EE9A3C;
+      font-size: 20px;
+    }
+  {% endif %}
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    .customer--name {
+      font-size: 25px;
+    }
+    .customer--age {
+      font-size: 18px;
+    }
+    .story-content {
+      font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    .customer--name {
+      font-size: 20px;
+    }
+    .customer--age {
+      font-size: 16px;
+    }
+    .story-content {
+      font-size: 18px;
+    }
+  }
+  @media only screen and (max-width: 767.98px) {
+    .customer--name {
+      font-size: 19px;
+    }
+    .customer--age {
+      font-size: 10px;
+    }
+  }
+{% endstyle %}

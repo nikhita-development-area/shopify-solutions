@@ -1,0 +1,178 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email-form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email-form"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "16639215362fc0abc0": {
+      "type": "thankyou-page-section",
+      "disabled": true,
+      "settings": {
+        "thank-text": "Thank you",
+        "thank-content": ""
+      }
+    },
+    "16641821004e9c82ea": {
+      "type": "treatment-journey",
+      "blocks": {
+        "be67d1ee-4a50-4182-b3a6-e8ff3c397e1d": {
+          "type": "Diagnosis",
+          "settings": {
+            "Diagnosis": "Hair and Scalp Diagnosis",
+            "DiagnosisContent": "C. Mayil’s hairline had started to recede and the crown area was evidently visible. He also had sticky dandruff for quite some time now.",
+            "icon1": "shopify:\/\/shop_images\/condition01_1_1.png",
+            "iconText1": "Digestion",
+            "icon2": "shopify:\/\/shop_images\/condition02_1.png",
+            "iconText2": "Stage 4",
+            "icon3": "shopify:\/\/shop_images\/condition03_1.png",
+            "iconText3": "Dandruff"
+          }
+        },
+        "26c7fd51-663b-4855-81b5-8373094d83ab": {
+          "type": "Doctors",
+          "settings": {
+            "PublicationsContent": "",
+            "doctorImg": "shopify:\/\/shop_images\/doctor02_5edac7cf-d121-45d7-8d07-57239252975c.png",
+            "doctorName": "Dr Shailendra Chaubey",
+            "doctorcontent": "“Why I am proud to be associated with Tatva, is that they are not misleading anybody. And they are not offering an instant solution. Their approach is holistic and it helps improve your hair by improving your health.”, Dr. Shailendra Chaubey\nAfreen’s tip for you: \"Maintain a healthy diet for your hair!\""
+          }
+        }
+      },
+      "block_order": [
+        "be67d1ee-4a50-4182-b3a6-e8ff3c397e1d",
+        "26c7fd51-663b-4855-81b5-8373094d83ab"
+      ],
+      "settings": {
+        "heading_TJ": "C. Mayil’s Hair Loss Treatment Journey",
+        "userScalp": "shopify:\/\/shop_images\/mayil02_160e33d3-c12e-4e2a-8a14-a4c7491eaac4.jpg"
+      }
+    },
+    "16641821169e77dd3f": {
+      "type": "journey-recommended",
+      "blocks": {
+        "53bacae7-608b-45d5-88fc-80b304175f4a": {
+          "type": "scalpimg",
+          "settings": {
+            "month1": "Month 1",
+            "scalp-img1": "shopify:\/\/shop_images\/g1_e193b2b4-61fd-4b35-adf9-35c2e06f1325.jpg",
+            "month2": "Month 3",
+            "scalp-img2": "shopify:\/\/shop_images\/g2_9c3653e9-7acd-4d11-a7fc-9ed9f3d09683.jpg",
+            "month3": "Month 8",
+            "scalp-img3": "shopify:\/\/shop_images\/g3_0c46e91c-bb6b-4304-b4d9-b78ed0e13c51.jpg"
+          }
+        },
+        "fe66e455-b88b-4929-b9b8-1095173bbfd3": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "1. Minoxidil 2%"
+          }
+        },
+        "c6232e9a-1f85-4af2-89bb-909d65319d94": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "2. Ghirt nasal drop"
+          }
+        },
+        "d5247440-2acd-4ca0-9625-8d0c7af267b6": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "3. Gut shuddhi"
+          }
+        },
+        "9626a3ba-7e29-4296-8fa5-25855bdd9c5a": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "4. Scalp oil"
+          }
+        },
+        "8f470b61-d472-43fb-81f8-fc948dc32725": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "5. Anti-Dandruff Shampoo"
+          }
+        },
+        "12a1f5e6-a894-4b6a-9f2c-9c170cacfbe0": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "6. Hair ras"
+          }
+        },
+        "6914304a-abaa-4d1a-b25d-34fb97857308": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "7. Free diet plan"
+          }
+        },
+        "9e6d8305-8017-4c14-bcf7-b1d5ffd793b6": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "8. Assigned hair coach"
+          }
+        }
+      },
+      "block_order": [
+        "53bacae7-608b-45d5-88fc-80b304175f4a",
+        "fe66e455-b88b-4929-b9b8-1095173bbfd3",
+        "c6232e9a-1f85-4af2-89bb-909d65319d94",
+        "d5247440-2acd-4ca0-9625-8d0c7af267b6",
+        "9626a3ba-7e29-4296-8fa5-25855bdd9c5a",
+        "8f470b61-d472-43fb-81f8-fc948dc32725",
+        "12a1f5e6-a894-4b6a-9f2c-9c170cacfbe0",
+        "6914304a-abaa-4d1a-b25d-34fb97857308",
+        "9e6d8305-8017-4c14-bcf7-b1d5ffd793b6"
+      ],
+      "settings": {
+        "plantitle": "Traya’s Recommended Plan",
+        "planimg": "shopify:\/\/shop_images\/plan-img_6ad2aa7c-aba5-49fa-b861-b808180378d9.jpg",
+        "plancontent": "On Traya’s plan C. Mayil was recommended Minoxidil 5% to help him with regrowth and reduce further hair loss. Traya doctors also suggested HealthTatva to help him improve his energy levels. As a part of treatment a diet plan and Nasal Ghrit were advised to him to help him improve his overall health.",
+        "customisedtitle": "What was C. Mayil’s Customised Treatment Plan?",
+        "allmonthtitle": "Result seen in 9 months"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "newsletter",
+    "16639215362fc0abc0",
+    "16641821004e9c82ea",
+    "16641821169e77dd3f"
+  ]
+}

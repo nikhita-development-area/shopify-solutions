@@ -1,0 +1,152 @@
+<div class="mycontainer">
+  <p class="text-center pt-md-4 female-product-heading">{{ section.settings.heading }}</p>
+  <p class="text-center femalev1-sub-heading">{{ section.settings.subheading }}</p>
+  <div class="products row female-product-slider">
+    {% for block in section.blocks %}
+    {% assign product = all_products[block.settings.products] %}
+      {% if product.available == true %}
+        <div class="p-md-3 py-2 px-4 mx-md-0 mx-3">
+        <a href="{{ product.url }}">
+          <div class="position-relative mb-5 pb-5 my-md-5 mx-md-4 px-md-0 px-1">
+          <div>
+          {% for media in product.media %}
+          {% if media.alt == 'forfemalev1' %}
+            <img class="product-single__thumbnail-image femalev1_image" src="{{ media.preview_image | img_url: '' }}" alt="{{ media.alt }}" height="395" width="100%" loading="lazy"/>
+            {% endif %}
+          {% endfor %}
+          </div>
+          <div class=" text-center p-md-4 p-3 product-details">
+            <p class="font-fredoka product_name text-black">{{ product.metafields.custom.femalepage_title | escape }}</p>
+            <p class="product_desc text-black">{{ product.metafields.custom.sub_heading | escape }}</p>
+          </div>
+        </div>
+           </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% comment %}
+{% include 'femalev1-safe-scientific' %}
+{% endcomment %}
+{% schema %}
+  {
+    "name": "FemaleV1 Products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Enter Heading"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Enter Sub Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Products",
+        "type": "product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "products",
+            "label": "Select Product"
+          }
+        ]
+      }
+    ],
+    "presets" :[
+      {
+        "name": "Femalev1 Products"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .product-details {
+    border: 1px solid #AACBBD;
+    box-shadow: 1px -1px 9px rgb(0 0 0 / 16%);
+    border-radius: 10px;
+    position: absolute;
+    bottom: -5%;
+    width: 100%;
+    transform: translate(0px, 0%);
+    background: #fff;
+    min-height: 135px;
+  }
+  .femalev1-sub-heading {
+    font-size: 23px;
+    line-height: 33px;
+    color: #000000cc;
+  }
+  .product_name {
+    font-size: 26px;
+    line-height: 34.56px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+  }
+  .product_desc {
+    font-size: 15px;
+    line-height: 16.2px;
+    letter-spacing: -0.2px;
+    font-weight: 300;
+  }
+  .female-product-heading {
+    font-size: 44px;
+    font-weight: 900;
+    letter-spacing: -0.2px;
+    line-height: 62.48px;
+    color: #000;
+  }
+  .female-product-slider:not(.slick-initialized) > .p-md-3.py-2.px-4.mx-md-0.mx-3:first-of-type ~ * {
+    display: none;
+  }
+  .female-product-slider .slick-list .slick-slide.slick-current.slick-active.slick-center {
+    transform: scale(1.16);
+    filter: blur(0px);
+  }
+  .female-product-slider .slick-slide {
+    filter: blur(.6px);
+  }
+  @media (min-width: 768px) {
+    .mycontainer {  
+      max-width: 1300px;
+      margin: auto;
+    }
+  }
+  @media only screen and (max-width: 767.98px) {
+    .product-details {
+      left: 50%;
+      bottom: -11%;
+      transform: translate(-50%, 0%);
+      min-height: 120px;
+      width: 98%;
+    }
+    .female-product-heading {
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 26.98px;
+    }
+    .female-product-slider .slick-slide {
+      filter: blur(0px);
+    }
+    .female-product-slider .slick-prev {
+      left: 25px;
+      z-index: 5;
+    }
+    .female-product-slider .slick-next {
+      right: 20px;
+      z-index: 5;
+    }
+    .femalev1_image {
+      height: 399px;
+    }
+    .femalev1-sub-heading {
+      font-size: 18.0325px;
+      line-height: 25px;
+    }
+  }
+{% endstyle %}

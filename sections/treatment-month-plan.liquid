@@ -1,0 +1,175 @@
+  <div class="product-section-list pt-md-1">
+    {% if page.handle == 'result-hi' %}
+    <p class="section-title"><span data-user-name class="text-capitalize"></span> <span class="m-stage-1-title">का ट्रीटमेंट प्लान</span></p>  
+    {% elsif page.handle == 'result-hinglish' %}
+    <p class="section-title"><span data-user-name class="text-capitalize"></span> <span class="m-stage-1-title">ka treatment plan</span></p>  
+    {% else %}
+    <p class="section-title"><span data-user-name class="text-capitalize"></span><span class="m-stage-1-title cstm-plan-title-stage-2-3" id="coin-main-title">’s Hair Regrowth Treatment Plan</span></p> <!-- Stage 2 and Stage 3 Changes Added Class (cstm-plan-title-stage-2-3) -->
+    {% endif %}
+    <div class="container">
+      <div class="card border-0 shadow p-0 overflow-hidden{% if page.handle == 'result4' or page.handle == 'result4-a' or page.handle == 'result4c' or page.handle == 'result-hi' or page.handle == 'result-hinglish' %} w-md-adjust{% endif %}" style="border-radius: 5px;">
+        <div class="card-header bg-dark shadow text-center">
+          <p class="mb-0 font-weight-bold text-white month-plan">{% if page.handle == 'result-hinglish' %}1 mahine ka plan{% else %}1 Month Plan{% endif %}</p>
+        </div>
+        <div class="card-body pb-0 pb-md-4 new_svg_color">
+          <div class="d-flex justify-content-between align-items-center mb-3 mb-md-4 price__list">
+            <span class="align-items-center d-flex font-size-18">
+              {%- render 'result-icons', icon: 'growth-kit' -%}
+              <span class="stage1_hairgrowth cstm-kit-stage-2-3" id="coin-plan-title">{% if page.handle == 'result-hi' %}हेयर ट्रांसफॉर्मेशन किट{% elsif page.handle == 'result-hinglish' %}Hair Transformation kit{% else %}Your Hair growth kit{% endif %}</span>
+            </span>
+            <p class="font-size-18 total-price top_total-price kit_price_dis">₹ 2150/-</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-3 mb-md-4 price__list">
+            <span class="align-items-center d-flex font-size-18">
+              {%- render 'result-icons', icon: 'doctor-prescription' -%}
+              <span class="satge1_doctor">{% if page.handle == 'result-hi' %}डॉक्टर प्रेस्क्रिप्शन{% elsif page.handle == 'result-hinglish' %}Doctor's prescription{% else %}Customized doctor prescription{% endif %}</span>
+            </span>
+            <p class="font-size-18 kit_price_dis"><span>Free</span><del>₹ 1,000</del></p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-3 mb-md-4 price__list">
+            <span class="align-items-center d-flex font-size-18">
+              {%- render 'result-icons', icon: 'Ayurvedic-diet-plan' -%}
+              <span>{% if page.handle == 'result-hi' %}आयुर्वेदिक डाइट प्लान{% elsif page.handle == 'result-hinglish' %}Ayurvedic Diet Plan{% else %}Ayurvedic diet plan{% endif %}</span>
+            </span>
+            <p class="font-size-18 kit_price_dis"><span>Free</span><del>₹ 500</del></p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-3 mb-md-4 price__list">
+            <span class="align-items-center d-flex font-size-18">
+              {%- render 'result-icons', icon: 'Personal-hair-coach' -%}
+              <span class="stage1_coach">{% if page.handle == 'result-hi' %}हेयर कोच{% elsif page.handle == 'result-hinglish' %}Hair Coach{% else %}Personal hair coach{% endif %}</span>
+            </span>
+            <p class="font-size-18 kit_price_dis"><span>Free</span><del>₹ 500</del></p>
+          </div>
+
+          
+          <div class="mob_align_dlfex d-inline-flex border-top justify-content-center align-items-center w-100 pt-2 pt-md-3">
+            <p class="font-weight-bold text-black mb-0 d-flex price_model_text my-2 my-md-0">{% if page.handle == 'result-hi' %}आपका प्लान{% elsif page.handle == 'result-hinglish' %}Aap ka plan{% else %}Your Plan{% endif %} @<p class="font-weight-bold text-black mb-0 d-flex price_model_text my-2 my-md-0"><span class="all-total-price_cut"><del class="all-total-price font-weight-normal ml-2"></del></span><span class="total-price"></span><span class="per__off">20% OFF</span></p></p>
+          </div>
+          <p class="font-weight-bold text-black mb-0 d-flex disocunt_result_kit price_model_discount my-2 my-md-0">🎉{% if page.handle == 'result-hi' %}बधाई हो!{% else %}Cheers!{% endif %}<span class="model_discount_price"></span></p>
+        </div>
+        {% if settings.show_snapmint %}
+          <div id="sm-widget-btn" class="snap_emi_txt_result  snap_emi_txt_wrapper">
+            <div class="snap-emi-inst"  onclick="showSnapModal()">
+                <span class="snap_emi_white_month_text first_line_snmpt">or <b>3 </b>Monthly Payments of</span>
+                <span class="snap_dp_value"><span class="snap_rupee">₹</span><span id="dp" class="dp-class" data-snap-price="2000">2000</span></span>
+                at <span class="snap_bold"> 0% EMI </span> on<img
+                    src="https://assets.snapmint.com/assets/merchant/UPI_Logo_img.svg" class="snap_upi_widget_img"> <img
+                    src="https://assets.snapmint.com/assets/merchant/buyonemi_traya.svg" class="snap_buy_now_btn">
+            </div>
+          </div>
+         {% endif %}
+        <div class="card-footer border-0 p-0">
+          <button id="add-to-cart-result-page" class="btn w-100 d-flex justify-content-center align-items-center py-3 py-md-2 px-1 month-plan-buy-now">
+            <span class="mr-0 mr-md-0 text-white buy_now_card_svg">{%- render 'result-icons', icon: 'buy-now-btn' -%}BUY NOW</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% include 'stage-modal' %}
+<style>
+  .money-title h3 {font-size: 30px; line-height: 35px; letter-spacing: 0em;}
+  @media (max-width: 768px) {.money-title h3 {font-size: 14px; line-height: 16px;} .money-title img {width: 65px;}}
+</style>
+<!-- Money Back Gaurentee -->
+                  
+{% schema %}
+  {
+    "name": "Treatment Month Plan",
+    "settings": [],
+     "presets":[
+          {
+          "name":"Treatment Month Plan"
+          }
+      ]
+  }
+{% endschema %}
+
+{% style %}
+  .result4 .month-plan, .result4-a .month-plan, .result-hi .month-plan {
+    font-size: 32px;
+  }
+  .result4 .product-section-list .card-body p, .result4-a .product-section-list .card-body p, .result-hi .product-section-list .card-body p {
+    font-weight: 700;
+  }
+  .template-page.result4 .month-plan-buy-now, .template-page.result4-a .month-plan-buy-now, .template-page.result-hi .month-plan-buy-now{
+    border-radius: 5px;
+    font-weight: 800;
+    padding: 9px 27px;
+    font-size: 19px;
+    min-width: 150px;
+    letter-spacing: normal;
+  }
+  .template-page.result4 .card-footer .month-plan-buy-now,  .template-page.result4-a .card-footer .month-plan-buy-now, .template-page.result-f .add-to-cart-result-page {
+    background: #B7D340;
+  }
+  .template-page.result4 .card-footer .buy_now_card_svg, .template-page.result4-a .card-footer .buy_now_card_svg, .template-page.result-hi .card-footer .buy_now_card_svg {
+    font-size: 40px;
+  }
+  .template-page.result4 .card-footer .month-plan-buy-now:hover, .template-page.result4-a .card-footer .month-plan-buy-now:hover, .template-page.result-hi .card-footer .month-plan-buy-now:hover {
+    background: #414042;
+  }
+  .template-page.result4 .sticky-btn .result4_buynow, .template-page.result4-a .sticky-btn .result4_buynow {
+    background: #B7D340;
+    border-color: #B7D340;
+  }
+  .result4 .product-section-list .price_model_text, .result-hi .product-section-list .price_model_text {
+    font-size: 29px;
+  }
+  .price__list {
+    letter-spacing: normal;
+  }
+  @media only screen and (max-width: 767.98px){
+    .result-hi .product-section-list .card-body svg+span {
+      font-size: 16px;
+    }
+    .result-hi .product-section-list .card-body p {
+      font-size: 15px;
+    }
+    #ourdia li a span{
+      font-size:10px;
+    }
+    #ourdia li a svg{
+      width:30px;
+      hieght:35px;
+    }
+    #ourdia li{
+      padding:0;
+    }
+    .result_product_slides:not(.slick-initialized) > .col-md-6.mb-5:first-of-type ~ * {
+      display: none;
+    }
+    .template-page.result-hi .card-footer .buy_now_card_svg svg {
+      width: 19px;
+      height: 18px;
+    }
+    .template-page.result-hi .root_cause_main {
+      border-radius: 10px 10px 0px 0px;
+    }
+    .result-hi .product-section-list p {
+      font-size: 24px;
+      white-space: nowrap;
+    }
+    .template-page.result-hi .our-experts .cstm_doctor_div {
+      height: 315px;
+    }
+    .template-page.result-hi .card-footer .buy_now_card_svg {
+      font-size: 16px !important;
+    }
+  }
+  @media only screen and (max-width: 575.98px) {
+    .result-hi .product-section-list .card-body svg+span {
+      font-size: 16px;
+      width: calc(100% - 34px);
+    }
+    .result-hi .section-title {
+      font-size: 28px;
+      letter-spacing: .04em;
+    }
+    .result-hi .product-section-list svg, .result-hi .product-section-list svg {
+      width: 34px;
+      height: 34px;
+    }
+    .result4 .section-title {font-size: 24px;}
+  } 
+{% endstyle %}

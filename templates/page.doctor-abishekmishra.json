@@ -1,0 +1,307 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email-form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email-form"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "166298845954299e21": {
+      "type": "doctor-details",
+      "blocks": {
+        "ade1a750-f17c-40bc-b2f2-5bafa155c3ab": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Suyog",
+            "user_content": "Very grateful to Dr. Abhishek for being so informative and giving me a clear understanding about my condition."
+          }
+        },
+        "20ab9fc2-8fd7-4cd4-87ae-58ee8afb069c": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "H",
+            "user_name": "Himanshu W",
+            "user_content": "Hyperacidity, disturbed sleep along with severe hair fall. I tried a lot of gummies and other products but nothing worked. Few months after          I started Traya, Dr. Abhishek put me on Nasal grit and treated me for my acidity. Now I sleep without getting up in between and my acidity is          also under control."
+          }
+        },
+        "741313ac-2a89-44e0-a302-daeb616d7f0a": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Sheetal",
+            "user_content": "I’m really impressed with Traya’s entire approach. I never expected doctors to give this much attention. I am really impressed with Dr.          Abhishek, the way he understands the concerns and addresses them."
+          }
+        },
+        "7009600e-f78a-4a2a-a816-3e84c11d5932": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "O",
+            "user_name": "Oshil R",
+            "user_content": "Very delighted and motivated after speaking to Dr. Mishra and I believe with consistency and determination, I too will see good results."
+          }
+        },
+        "caefb29a-9a2d-4b21-99f9-0be3e734ae45": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Samreen",
+            "user_content": "I am very happy with the treatment offered by Traya. I booked a call with Dr. Abhishek and he carefully looked into my medical history. Recommended          me with do’s and dont’s about diet too."
+          }
+        },
+        "5e97bd22-b95a-4790-8716-ef4c155663c8": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "V",
+            "user_name": "Vishal",
+            "user_content": "My hairs used to be very thick and strong before but after I started doing night shifts my health and hair conditioned worsened. Dr. Mishra          explained to me how sleep plays an important role in hair health and got me started on Nasal drops. It works like magic. I literally sleep          7-8 hours daily and my stress is also less."
+          }
+        },
+        "eef908ac-c8e2-44d9-81fd-d261adfba581": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "K",
+            "user_name": "Keyur",
+            "user_content": "I have been facing genetic hair fall since the past few years. This affected my confidence. My friend recommended Traya and since then I have         been consistent with the prescription provided by Dr. Abhishek. Hoping to see results."
+          }
+        }
+      },
+      "block_order": [
+        "ade1a750-f17c-40bc-b2f2-5bafa155c3ab",
+        "20ab9fc2-8fd7-4cd4-87ae-58ee8afb069c",
+        "741313ac-2a89-44e0-a302-daeb616d7f0a",
+        "7009600e-f78a-4a2a-a816-3e84c11d5932",
+        "caefb29a-9a2d-4b21-99f9-0be3e734ae45",
+        "5e97bd22-b95a-4790-8716-ef4c155663c8",
+        "eef908ac-c8e2-44d9-81fd-d261adfba581"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Dr.abhishek0_compact_ad533383-2482-4cfc-a041-6aa19b69affd.png",
+        "doctor_name": "Dr. Abhishek B Mishra",
+        "specialization": "AYURVEDIC PRACTITIONER | B.A.M.S, 2 YEARS",
+        "education": "B.A.M.S",
+        "registration_no": "MCIM Reg No. I-97377-A",
+        "ratings": "4.7\/5",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "Dr. Mishra is an Ayurveda Practitioner with a keen interest in treating chronic diseases. His contributions have been significant during the COVID-19 times and his articles have been published in the International Journal of Research in Indian Medicine, the National Journal of Research in Ayurvedic Research and other cited Journals. He has previously worked in various Biotech Companies and has treated patients suffering from co-morbidities, ovarian disorders, and gut-related disorders. He loves exploring places and being one with nature."
+      }
+    },
+    "1662988481808be971": {
+      "type": "QA-accordion",
+      "blocks": {
+        "b52b1991-2692-407f-8266-7125249f662f": {
+          "type": "faq",
+          "settings": {
+            "Question": "What are Ayurvedic Treatments?",
+            "Answer": "Ayurvedic Treatments include Lifestyle & diet changes, medication through essential oils, etc."
+          }
+        },
+        "8e01ad58-5aa6-46df-b7e0-2b1b8c3e9e91": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do patients visit Dr. Abhishek Mishra?",
+            "Answer": "Patients frequently visit Dr. Mishra for hyper-acidity, menstrual disorders, anxiety, and clinical depression."
+          }
+        },
+        "0e06eae0-dac2-45da-8a11-d400cf1da7e7": {
+          "type": "faq",
+          "settings": {
+            "Question": "What is Dr. Abhishek Mishra’s education qualification?",
+            "Answer": "Dr. Mishra has a qualified degree in B.A.M.S and has a specialization in Basic Life Support from American Heart Association."
+          }
+        },
+        "c97c82e9-f881-4ee5-9f30-dbaad2c054ea": {
+          "type": "faq",
+          "settings": {
+            "Question": "How can I take Dr. Abhishek Mishra's appointment?",
+            "Answer": "You can take Dr. Mishra’s appointment online (Click Here) for a video consultation with the doctor"
+          }
+        },
+        "72c9777c-8222-4fbe-be5f-671f05493edc": {
+          "type": "Publications",
+          "settings": {
+            "PublicationsContent": "A literary review on saptadasha tachilya Brijesh.R.Mishra*, Munira.S.Siamwalla, Abhishek B Mishra Ayurlog: National Journal of Research in Ayurved Science-2016; 4(2): 22-25."
+          }
+        },
+        "515b7c9a-ac56-450c-836c-9c831cb2083d": {
+          "type": "Publications",
+          "settings": {
+            "PublicationsContent": "A study of arishta suchak lakshana and its importance in progress of diseases as per susruta samhita sootra sthan Brijesh.R.Mishra, Munira.Siamwalla, Abhishek B Mishra, Pramod F Garje Ayurlog: National Journal of Research in Ayurved Science-2016; 4(2): 26-30 ."
+          }
+        },
+        "5c9de01b-085e-4186-b608-6b94402a66c7": {
+          "type": "Publications",
+          "settings": {
+            "PublicationsContent": "A critical literary review on dravyas (herbal drugs) acting on mutravah strotas in ayurveda Brijesh R. Mishra, Meenakshi R. Rathi, Surekha.T. Landge, Abhishek B Mishra AYURLINE: INTERNATIONAL JOURNAL OF RESEARCH IN INDIAN MEDICINE 2017; 1(1): 76 - 82"
+          }
+        },
+        "a2daf5d7-adb5-41da-a96e-8363137e4937": {
+          "type": "Publications",
+          "settings": {
+            "PublicationsContent": "Medohara And Lekhaniya dravyas (Anti - Obesity drugs) in Ayurvedic Classics: - A Critical Literary Review Brijesh R Mishra, Meenakshi R Rathi, Abhishek B Mishra AYURLINE: INTERNATIONAL JOURNAL OF RESEARCH IN INDIAN MEDICINE 2017; 1(1): 47 -54."
+          }
+        },
+        "90e3154e-8140-4189-a542-4ce79731836c": {
+          "type": "Publications",
+          "settings": {
+            "PublicationsContent": "Nidan sthan in Brihatrayee with special reference to Nidanpanchak in Ashtomahagadah Brijesh R.Mishra, Vishakha M.Khandait, Abhishek B Mishra Ayurline: International Journal of Research In Indian Medicine 2017; 1(3): 53 - 57"
+          }
+        }
+      },
+      "block_order": [
+        "b52b1991-2692-407f-8266-7125249f662f",
+        "8e01ad58-5aa6-46df-b7e0-2b1b8c3e9e91",
+        "0e06eae0-dac2-45da-8a11-d400cf1da7e7",
+        "c97c82e9-f881-4ee5-9f30-dbaad2c054ea",
+        "72c9777c-8222-4fbe-be5f-671f05493edc",
+        "515b7c9a-ac56-450c-836c-9c831cb2083d",
+        "5c9de01b-085e-4186-b608-6b94402a66c7",
+        "a2daf5d7-adb5-41da-a96e-8363137e4937",
+        "90e3154e-8140-4189-a542-4ce79731836c"
+      ],
+      "settings": {
+        "Accordiontitle1": "Publications",
+        "Accordiontitle2": "Awards & Recognitions"
+      }
+    },
+    "1662988473276b82f5": {
+      "type": "doctor-slide",
+      "blocks": {
+        "991c9742-97d0-4e9b-b999-133c131ec10f": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Dr. Jaspreet Sarna",
+            "doctorImage": "shopify:\/\/shop_images\/doct1_270x270_76dbdb54-9db4-4ab1-b703-af1f6f88172e.png",
+            "specialist": "DERMATOLOGIST | HAIR SPECIALIST,",
+            "experience": "11 YEARS Overall  Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-jaspreet"
+          }
+        },
+        "6bcbd2f1-63b2-4ec7-8d37-cd5b407da22c": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr.Shailendra Chaubey",
+            "doctorImage": "shopify:\/\/shop_images\/Chaubey_compact_0936c6a4-d63f-450e-a76b-52e95315ba60.png",
+            "specialist": "HEALTH EDUCATOR | AYURVEDIC PRACTITIONER,",
+            "experience": "15 YEARS Overall  Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/shailendra-chaubey"
+          }
+        },
+        "d0364a2a-8657-4a87-bacf-936fefe2bc0b": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Harish Balaji. R",
+            "doctorImage": "shopify:\/\/shop_images\/dr.harish_compact_618a6300-f9a1-4fe6-b780-748f8d8a0c62.png",
+            "specialist": "DERMATOLOGIST | MD | AESTHETIC SURGEON,",
+            "experience": "4 YEARS  Overall  Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-harish"
+          }
+        },
+        "006ce233-4ca0-46b9-b62e-19c2c2457b19": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Sangeeta Menon",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Sangeeta_Menon-1_compact_f6f857e8-df9e-4d0c-9a4f-3a5e4d59cd22.png",
+            "specialist": "DIETICIAN | NUTRITIONIST,",
+            "experience": "4 YEARS Overall  Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/sangeeta-menon"
+          }
+        },
+        "2c0ccb97-c690-4c2b-a5aa-6df84b9297b5": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Kalyani Deshmukh",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Kalyani-1_compact_ef50a4f5-47ea-415e-ba4f-0df0def67e7a.png",
+            "specialist": "DERMATOLOGIST | HAIR SPECIALIST,",
+            "experience": "4 YEARS  Overall  Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/kalyani-deshmukh"
+          }
+        },
+        "c1002784-82a8-415e-8f7a-aa5597c9db83": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Siddhi Sonawane",
+            "doctorImage": "shopify:\/\/shop_images\/9814da57-362f-484e-8e96-552a54fae9c2_532bbea6-399b-4ceb-9224-93b07e69ddde.jpg",
+            "specialist": "DERMATOLOGIST | COSMETOLOGIST,",
+            "experience": "6 YEARS",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/siddhi-sonawane"
+          }
+        }
+      },
+      "block_order": [
+        "991c9742-97d0-4e9b-b999-133c131ec10f",
+        "6bcbd2f1-63b2-4ec7-8d37-cd5b407da22c",
+        "d0364a2a-8657-4a87-bacf-936fefe2bc0b",
+        "006ce233-4ca0-46b9-b62e-19c2c2457b19",
+        "2c0ccb97-c690-4c2b-a5aa-6df84b9297b5",
+        "c1002784-82a8-415e-8f7a-aa5597c9db83"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "newsletter",
+    "166298845954299e21",
+    "1662988481808be971",
+    "1662988473276b82f5"
+  ]
+}

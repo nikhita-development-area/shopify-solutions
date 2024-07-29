@@ -1,0 +1,146 @@
+<div class="{% if page.handle !=  'about-us' %} container {% endif %}">
+  <div class="rounded-lg{% if page.handle == 'female-combo' %} page-width{% elsif template.suffix == 'resultco' or page.handle == 'result' or page.handle == 'result-male' %} px-3 px-md-5{% else %}  px-md-5 {% unless page.handle contains 'reviews' %}py-5{% endunless %}{% endif %}" style="background: {{ section.settings.faq_bk_color }};">
+    <p class="FAQ_heading  font-weight-bold text-center{% if page.handle != 'female-combo' %} pb-1{% endif %} size_heading_result">{{ section.settings.faq_head }}</p>
+      <div class="accordion" id="{{ section.settings.accordion_id }}">
+      {% for block in section.blocks %}
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="term-{{forloop.index}}">
+            <button class="accordion-button {% if forloop.first == false %} collapsed{% endif %} question" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}" aria-expanded="{% if forloop.first == false %}false{% else %}true{% endif %}" aria-controls="collapse-{{ forloop.index }}">
+              {{ block.settings.question }}</button>
+          </h2>
+          <div id="collapse-{{ forloop.index }}" class="accordion-collapse collapse{% if forloop.first == true %} show{% endif %}" aria-labelledby="term-{{forloop.index}}" data-bs-parent="#{{ section.settings.accordion_id }}">
+            <div class="accordion-body answer">
+              {% if block.settings.question == 'How many grafts will I need?' %}
+                <img class="w-100" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/dia-01_1_large.png?v=1654235311">
+                {{ block.settings.answer }}
+              {% else %}
+                {{ block.settings.answer }}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "FAQ",
+    "settings": [
+      {
+        "type": "text",
+        "id": "faq_head",
+        "label": "Enter Text"
+      },
+      {
+        "type": "color",
+        "id": "faq_bk_color",
+        "label": "Select Color"
+      },
+      {
+        "type": "text",
+        "id": "accordion_id",
+        "label": "Enter Id for Accordion"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "FAQ",
+        "type": "text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          },
+          {
+            "type": "text",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ",
+        "category": "text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .FAQ_heading {
+    font-size: 30px;
+    position: relative;
+    color: #585A5B;
+  }
+  #ReferralPageAccordion{width:85%; margin:auto}
+  #ReferralPageAccordion .accordion-button:not(.collapsed)::after {
+    content: unset;
+  }
+  #ReferralPageAccordion .accordion-button::after {
+    content: unset;
+  }
+  #ReferralPageAccordion .accordion-button::before {
+    flex-shrink: 0;
+    margin-right: 20px;
+    content: '\002B';
+    font-weight: bold;
+  }
+  #ReferralPageAccordion .accordion-button:not(.collapsed)::before {
+    content: '\2212';
+  }
+  .accordion-button:focus {
+    box-shadow: none;
+    z-index: 1;
+  }
+  .accordion-button:not(.collapsed) {
+    color: inherit;
+    background-color: inherit;
+  }
+  .accordion-item:last-of-type .accordion-button.collapsed, .accordion-item:first-of-type .accordion-button, .accordion-item:first-of-type {
+    border-radius: 0;
+  }
+  #ReferralPageAccordion .accordion-button, #ReferralPageAccordion .accordion-item {
+    background-color: #FFF;
+  }
+  .accordion-button {
+    padding: 30px 10px;
+  }
+  .accordion-item {
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+  .accordion {
+    --bs-accordion-border-color: none;
+    --bs-accordion-border-radius: none;
+    --bs-accordion-inner-border-radius: none;
+  }
+  .template-page.referral .FAQ_heading:after {
+    content: '';
+    position: absolute;
+    background: #585A5B;
+    width: 84px;
+    height: 2px;
+    border-radius: 6px;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 11px;
+  }
+  {% if template.suffix == 'resultco' or page.handle == 'result' %}
+    @media (max-width: 767.98px) {
+      .FAQ_heading.size_heading_result {
+        font-size: 22px;
+        padding-bottom: 0 !important;
+        margin-bottom: 0;
+      }
+      #ReferralPageAccordion{width:100%;}
+      .accordion-item .accordion-button {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+      }
+    }
+  {% endif %}
+{% endstyle %}

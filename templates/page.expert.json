@@ -1,0 +1,448 @@
+{
+  "sections": {
+    "1663583240dce51848": {
+      "type": "image-banner",
+      "blocks": {
+        "16635832409792a911-1": {
+          "type": "text",
+          "settings": {
+            "heading1": "",
+            "text": "Resolve Your<br>Hair Problems<br> With Traya's <br>Doctors",
+            "text_style": "body"
+          }
+        },
+        "16635832409792a911-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "BOOK DOCTOR CONSULT @ ₹499\/-",
+            "button_link_1": "shopify:\/\/pages\/nishita-suratkal",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "16635832409792a911-1",
+        "16635832409792a911-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/1168x600.jpg",
+        "mblimage": "shopify:\/\/shop_images\/mobile-expert-banner_900x_385ddacf-55d7-4a7d-ae43-a93030912862.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "16635833541dfe0c10": {
+      "type": "doctors-section",
+      "blocks": {
+        "ed50f453-2416-4c0a-b90a-488b98c2afd0": {
+          "type": "Doctor",
+          "disabled": true,
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/dr-Jaspreet_large_843b7b67-ec5a-4142-8aae-87f9d769c6e0.png",
+            "doctor_heading": "Dr. Jaspreet Sarna",
+            "doctor_subheading": "Dermatologist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "https:\/\/traya.health\/pages\/doctor-jaspreet"
+          }
+        },
+        "daf1d817-e813-4513-b251-ce1d152852f2": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/Chaubey_large_9e03ff51-f414-42e8-b702-f5a4646e6b22.png",
+            "doctor_heading": "Dr.Shailendra Chaubey",
+            "doctor_subheading": "Ayurveda Practitioner",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "https:\/\/traya.health\/pages\/shailendra-chaubey"
+          }
+        },
+        "aa2e9170-19be-4849-961a-002fe869eb30": {
+          "type": "Doctor",
+          "disabled": true,
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/Group_102352436_5e061c31-5568-4289-a423-545f2150d9b0.png",
+            "doctor_heading": "Nishita Suratkal",
+            "doctor_subheading": "Dietician | Nutritionist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "https:\/\/traya.health\/pages\/nishita-suratkal"
+          }
+        },
+        "82557b69-ad4d-4798-a55b-44588c15bde4": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/dr-harish_8053c8cf-2696-4dae-80ae-3b2bf101f91a.png",
+            "doctor_heading": "Dr. Harish Balaji. R",
+            "doctor_subheading": "Dermatologist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "https:\/\/traya.health\/pages\/doctor-harish"
+          }
+        },
+        "edd18b0f-af0f-405a-84f0-28bfa6e9812c": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/Dr.Sangeeta_Menon-1_large_81fe16e1-ec30-4406-b0e7-0fba2ce79550.png",
+            "doctor_heading": "Dr. Sangeeta Menon",
+            "doctor_subheading": "Nutritionist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "https:\/\/traya.health\/pages\/sangeeta-menon"
+          }
+        },
+        "f8df300a-c021-483c-831c-2b1a232ee114": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/9814da57-362f-484e-8e96-552a54fae9c2_532bbea6-399b-4ceb-9224-93b07e69ddde.jpg",
+            "doctor_heading": "Dr. Siddhi Sonawane",
+            "doctor_subheading": "Dermatologist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "https:\/\/traya.health\/pages\/siddhi-sonawane"
+          }
+        },
+        "ab770ae0-b46a-4126-8ebf-8218bdf64dfd": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/doctor05_70ca8815-dfe3-4d23-9823-6480fea2bdda.png",
+            "doctor_heading": "Dr. Kalyani Deshmukh",
+            "doctor_subheading": "Dermatologist and Trichologist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "https:\/\/traya.health\/pages\/kalyani-deshmukh"
+          }
+        },
+        "1c40f5fb-748d-46e4-ae89-c2c63bc39c18": {
+          "type": "Doctor",
+          "disabled": true,
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/dr.Moyna-1_large_7f324788-81f4-4aa8-bedf-0d7b2039fabe.png",
+            "doctor_heading": "Dr. Moyna Vakil",
+            "doctor_subheading": "Dietician | Nutritionist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "https:\/\/traya.health\/pages\/moyna-vakil"
+          }
+        },
+        "ba99c569-7b97-4185-8252-a8bea95cab27": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/dr_Shefali_6d8c17e2-4bb6-42b9-95a2-4e900cb9b9d4.png",
+            "doctor_heading": "Dr. Shefali Saini",
+            "doctor_subheading": "Dermatologist l Hair Specialist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "shopify:\/\/pages\/shefali-saini"
+          }
+        },
+        "9d8de5db-6496-4202-bdc7-ca4d03f0315d": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/Dr._dhwani.png",
+            "doctor_heading": "Dr. Dhwani Saxena",
+            "doctor_subheading": "Dermatologist l Hair Specialist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "shopify:\/\/pages\/doctor-dhwani"
+          }
+        },
+        "doctor_LDxhKQ": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/Dr_Aakansha_a5d80bf1-0f31-485a-9565-da1bdf9f3821.webp",
+            "doctor_heading": "Dr. Aakanksha Gupta",
+            "doctor_subheading": "Dermatologist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "shopify:\/\/pages\/aakanksha-gupta"
+          }
+        },
+        "doctor_tARfif": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/Dr_Shriya_4bf7a8ab-a647-4601-aee2-661f1bb95409.webp",
+            "doctor_heading": "Dr. Shreya Deoghare",
+            "doctor_subheading": "Dermatologist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "shopify:\/\/pages\/shreya-deoghare"
+          }
+        },
+        "doctor_b6Gr3e": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/Dr_Vandana.webp",
+            "doctor_heading": "Dr.Vandana Verma",
+            "doctor_subheading": "Dermatologist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "shopify:\/\/pages\/vandana-verma"
+          }
+        },
+        "doctor_mtiMt8": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/Dr_Divya_8de02ff6-b004-47a0-ab4e-4a79d46cf6cb.webp",
+            "doctor_heading": "Dr. Divya Poulose",
+            "doctor_subheading": "Dermatologist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "shopify:\/\/pages\/divya-poulose"
+          }
+        },
+        "doctor_dbPgEG": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/Dr_Sonal_Makhija_aae82735-0c29-42cd-be25-bd83f7cc6da0.webp",
+            "doctor_heading": "Dr. Sonal Makhija",
+            "doctor_subheading": "Dermatologist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "shopify:\/\/pages\/sonal-makhija"
+          }
+        },
+        "doctor_ciKANa": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/Dr_Sonia_c27b5b1c-6eea-47c3-8a74-5d762d786920.webp",
+            "doctor_heading": "Dr. Sonia Tekchandani",
+            "doctor_subheading": "Dermatologist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "shopify:\/\/pages\/sonia-tekchandani"
+          }
+        },
+        "doctor_eMgEWV": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/Dr_Komal_047c4cb6-e1b8-432e-ae08-8d33b2cc11d1.webp",
+            "doctor_heading": "Dr. Komal Rathi",
+            "doctor_subheading": "Dermatologist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "shopify:\/\/pages\/komal-rathi"
+          }
+        },
+        "doctor_6BdapF": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/Dr_Pawan_4f739223-4316-4851-a8b9-c8a17891a2c1.webp",
+            "doctor_heading": "Dr. Pawan Singh",
+            "doctor_subheading": "Dermatologist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "shopify:\/\/pages\/pawan-singh"
+          }
+        },
+        "doctor_EnVqEG": {
+          "type": "Doctor",
+          "settings": {
+            "doctor_image": "shopify:\/\/shop_images\/Dr_Glory_c867df73-5657-45c6-92c9-636e4a321708.webp",
+            "doctor_heading": "Dr. Glory Parmar",
+            "doctor_subheading": "Dermatologist",
+            "Doctor_ctatext": "View More",
+            "Doctor_ctalink": "shopify:\/\/pages\/glory-parmar"
+          }
+        }
+      },
+      "block_order": [
+        "ed50f453-2416-4c0a-b90a-488b98c2afd0",
+        "daf1d817-e813-4513-b251-ce1d152852f2",
+        "aa2e9170-19be-4849-961a-002fe869eb30",
+        "82557b69-ad4d-4798-a55b-44588c15bde4",
+        "edd18b0f-af0f-405a-84f0-28bfa6e9812c",
+        "f8df300a-c021-483c-831c-2b1a232ee114",
+        "ab770ae0-b46a-4126-8ebf-8218bdf64dfd",
+        "1c40f5fb-748d-46e4-ae89-c2c63bc39c18",
+        "ba99c569-7b97-4185-8252-a8bea95cab27",
+        "9d8de5db-6496-4202-bdc7-ca4d03f0315d",
+        "doctor_LDxhKQ",
+        "doctor_tARfif",
+        "doctor_b6Gr3e",
+        "doctor_mtiMt8",
+        "doctor_dbPgEG",
+        "doctor_ciKANa",
+        "doctor_eMgEWV",
+        "doctor_6BdapF",
+        "doctor_EnVqEG"
+      ],
+      "settings": {
+        "expert-box-head-desktop": "Ayurveda, Dermatology and Nutrition doctors",
+        "expert-box-head-two": "Always busy curating the perfect plan for you"
+      }
+    },
+    "1663583400fa29a7ed": {
+      "type": "custom-img-banner",
+      "blocks": {
+        "df2c4820-2bad-46fe-8b8a-4025992bafaa": {
+          "type": "content",
+          "settings": {
+            "heading_coach": "The Traya Hair Coach",
+            "subheading_coach": "Your companion to great health & hair",
+            "coach_image_desktop": "shopify:\/\/shop_images\/image_1.png",
+            "coach_image_mobile": "shopify:\/\/shop_images\/ezgif.com-gif-maker_17.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "df2c4820-2bad-46fe-8b8a-4025992bafaa"
+      ],
+      "settings": {
+        "full_width": false
+      }
+    },
+    "16635832826bebd168": {
+      "type": "2x2-section",
+      "settings": {
+        "heading_regimen": "TRAYA 2X2 REGIMEN",
+        "subheading_regimen": "<strong>2min<\/strong><br>\ntwice a day",
+        "subheading_regimen_two": "Follow a simple daily routine. Best results when used for 5 months.",
+        "link_two": "shopify:\/\/pages\/the-science",
+        "linktext_two": "The Science",
+        "coach_image_desktop": "shopify:\/\/shop_images\/ezgif.com-gif-maker_18.jpg",
+        "coach_image_mobile": "shopify:\/\/shop_images\/ezgif.com-gif-maker_19.jpg"
+      }
+    },
+    "166358338352e10def": {
+      "type": "result-reviews",
+      "blocks": {
+        "8f108698-74a2-46d4-90ea-aa941d16f3b2": {
+          "type": "columns",
+          "settings": {
+            "name": "Arjun, Thrissur, Kerala",
+            "main_img": "shopify:\/\/shop_images\/Arjun02_92904d00-2619-4465-8f14-c4c3932c92c5.png",
+            "date": "14 Sep 2020",
+            "rating": 5,
+            "desc": "<p>I never paid attention on my hair and lost quite a lot of them. I think taking traya’s hair loss treatment is the best thing i have done to my hair. Not only did I see the new growth but the thickness and quality has also improved.<\/p>",
+            "used_for": "4 months"
+          }
+        },
+        "21b40d91-3940-4042-8ccd-bd49639041c8": {
+          "type": "columns",
+          "settings": {
+            "name": "Vivek, Mumbai",
+            "main_img": "shopify:\/\/shop_images\/Vivek02_0d946838-732c-416f-8850-957fe0e01db9.png",
+            "date": "10 MAY 2020",
+            "rating": 5,
+            "desc": "<p>The results have been amazing! In just 2 months I’ve seen great improvements. My barber was also impressed.<\/p>",
+            "used_for": "2 Months"
+          }
+        },
+        "52c44513-d45b-4934-9b3a-b306bb102c5a": {
+          "type": "columns",
+          "settings": {
+            "name": "Darpan, Gujarat",
+            "main_img": "shopify:\/\/shop_images\/Darpan02_7bc62d47-15a4-48ea-aea4-c84bf6ea7717.png",
+            "date": "14 Sep 2020",
+            "rating": 5,
+            "desc": "<p>I started to see regrowth from third month and even the patch on my scalp has started to cover. Best service and the best treatment!<\/p>",
+            "used_for": "5 Months"
+          }
+        },
+        "8283a2a7-4a6c-499b-8121-1a14fd91d882": {
+          "type": "columns",
+          "settings": {
+            "name": "Hemant Shah",
+            "main_img": "shopify:\/\/shop_images\/hemant02_22aa36a8-9546-48a2-ba34-0a23cb2a2f49.jpg",
+            "date": "2 Aug 2021",
+            "rating": 5,
+            "desc": "<p>Great service. I loved the fact that you can talk to your hair coach in case of queries. They are truly supportive and help you stay commited on the journey. I never thought I could see new hair growth.<\/p>",
+            "used_for": "4 Months"
+          }
+        },
+        "28fae24f-d153-4e75-bec6-71a5a3bb602f": {
+          "type": "columns",
+          "settings": {
+            "name": "Anupam Thakuria",
+            "main_img": "shopify:\/\/shop_images\/anupam02_1af2b047-8bab-4a70-9d54-55716a82e158.jpg",
+            "date": "24 july 2020",
+            "rating": 5,
+            "desc": "<p>I took the hair assessment and realized that my hair loss was more than just genetic.<br\/><br\/>I went ahead with the recommended treatment plan and could see visible results within just 3 months.<\/p>",
+            "used_for": "5 Months"
+          }
+        },
+        "6689495a-07bf-4e1f-a5a9-baa3c2fa6ad5": {
+          "type": "columns",
+          "settings": {
+            "name": "Pavan",
+            "main_img": "shopify:\/\/shop_images\/pavan02_421470ae-a011-4435-9999-bf534fdce390.jpg",
+            "date": "14 Feb 2021",
+            "rating": 5,
+            "desc": "<p>I am super impressed with Traya's hair loss treatment. Let me start off by saying that all their products are formulated by doctors. Knowing that I have hair experts and doctors monitoring my treatment is really the best part of the experience. Really recommend this.<\/p>",
+            "used_for": "4 Months"
+          }
+        },
+        "a6bbeaa9-72d4-4994-9225-5e1ec892b541": {
+          "type": "columns",
+          "settings": {
+            "name": "Siddharth",
+            "main_img": "shopify:\/\/shop_images\/siddharth02_97633e7f-34d1-4af3-92d7-1ad19c9d6f07.jpg",
+            "date": "4 March 2020",
+            "rating": 5,
+            "desc": "<p>I was losing a lot of hair due to the lockdown and desperate for a solution, that is when a friend recommended Traya.  I gave it a shot and after 4 months of use, I can definitely say that their holistic approach to treating hair loss with both ayurveda and allopathy just works.<\/p>",
+            "used_for": "4 Months"
+          }
+        },
+        "fa80108d-e7d0-46a4-9651-8d8fd84d3304": {
+          "type": "columns",
+          "settings": {
+            "name": "Anonymous",
+            "main_img": "shopify:\/\/shop_images\/anonymous02_78c33f96-f15e-4a4f-aba0-ef6af35f34fb.jpg",
+            "date": "15 Aug 2021",
+            "rating": 5,
+            "desc": "<p>Results in just 5 months, couldn't believe my eyes when I saw hair growth on my head. Anyone with hair problems should get on their plan. It works like magic.<\/p>",
+            "used_for": "5 Months"
+          }
+        },
+        "02d096c5-f95f-46b7-865d-b7293159a464": {
+          "type": "columns",
+          "settings": {
+            "name": "Akash Agarwal",
+            "main_img": "shopify:\/\/shop_images\/akash02_7b1f646a-72ed-4ea2-9738-965ef1dab3d5.jpg",
+            "date": "2 Feb 2021",
+            "rating": 5,
+            "desc": "<p>I came to Traya with a bald patch and I did not expect any drastic results. My motive was to stop further hair loss, after dedicatedly following the plan and one can tell how it has changed my hair. I have baby hair all over my scalp and thicker growth. This is a dream, thank you guys you are the best!<\/p>",
+            "used_for": "8 Months"
+          }
+        },
+        "2bc600f8-e2a4-479b-8879-3edf6e958c57": {
+          "type": "columns",
+          "settings": {
+            "name": "Shivyogi Hiremath",
+            "main_img": "shopify:\/\/shop_images\/shivyogi02_263647ba-d2d0-45a1-a8c0-1d9204d4b2ea.jpg",
+            "date": "20 Aug 2021",
+            "rating": 5,
+            "desc": "<p>The treatment considered of proper diet, hair care products and supplements supporting your hair growth. I followed for 3-4 months and the results were amazing.<\/p>",
+            "used_for": "4 Months"
+          }
+        }
+      },
+      "block_order": [
+        "8f108698-74a2-46d4-90ea-aa941d16f3b2",
+        "21b40d91-3940-4042-8ccd-bd49639041c8",
+        "52c44513-d45b-4934-9b3a-b306bb102c5a",
+        "8283a2a7-4a6c-499b-8121-1a14fd91d882",
+        "28fae24f-d153-4e75-bec6-71a5a3bb602f",
+        "6689495a-07bf-4e1f-a5a9-baa3c2fa6ad5",
+        "a6bbeaa9-72d4-4994-9225-5e1ec892b541",
+        "fa80108d-e7d0-46a4-9651-8d8fd84d3304",
+        "02d096c5-f95f-46b7-865d-b7293159a464",
+        "2bc600f8-e2a4-479b-8879-3edf6e958c57"
+      ],
+      "settings": {
+        "Heading": "The Result",
+        "color_star": "#eeaf2e"
+      }
+    }
+  },
+  "order": [
+    "1663583240dce51848",
+    "main",
+    "16635833541dfe0c10",
+    "1663583400fa29a7ed",
+    "16635832826bebd168",
+    "166358338352e10def"
+  ]
+}

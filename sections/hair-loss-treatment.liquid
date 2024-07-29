@@ -1,0 +1,94 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<div class="container text-center mt-5 mb-0 pb-5 ">
+    <p class="section-title">{{ section.settings.sectiontitle }}</p>
+  <div class="row mb-4">
+     {% for block in section.blocks %}
+    <div class="col-12 py-3 hair-loss-and-how-wrapper">
+      <a href="#" class="choles-lp-box text-decoration-none card border-0 shadow rounded-lg p-4 h-100 text-left" aria-describedby="a11y-external-message">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h4 class="font-weight-bold mb-3">{{ block.settings.treatment_name }}</h4>
+            <p class="mb-lg-5">{{ block.settings.treatment_content }}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  <a id="hairtestcta" href="{{ section.settings.btnurl }}&page={{ page__hndl }}" class="start-journey-btn btn-dark btn mt-3 shadow" aria-describedby="a11y-external-message">{{ section.settings.button_text }} <sup>&trade;</sup></a>
+</div>
+{% schema %}
+  {
+    "name": "Hair Loss Treatment",
+    "settings": [
+             {
+            "type": "text",
+            "id": "sectiontitle",
+            "label": "Section Title"
+          },
+          {
+          "type":"url",
+          "label" :"Button URL",
+          "id" :"btnurl"
+              },
+             {
+          "type":"text",
+          "label" :"Button Text",
+          "id" :"button_text"
+              }
+
+    ],
+    "blocks": [
+      {
+        "name": "Treatment",
+        "type": "text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "treatment_name",
+            "label": "Treatment Name"
+          },
+          {
+            "type": "text",
+            "id": "treatment_content",
+            "label": "Treatment Content"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hair Loss Treatment",
+        "category": "text"
+      }
+    ]
+
+  }
+{% endschema %}
+<style>
+.choles-lp-box{
+  background-color:#F3F3F3 !important;
+  }
+.hair-loss-and-how-wrapper h4 {
+    font-size: 30px;
+}
+.hair-loss-and-how-wrapper p {
+    font-size: 24px;
+    color: #414042;
+}
+    @media only screen and (max-width: 767.98px) {
+      .hair-loss-and-how-wrapper h4 {
+    font-size: 18px;
+}
+.hair-loss-and-how-wrapper p {
+    font-size: 16px;
+}
+    }
+</style>

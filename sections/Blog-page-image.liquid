@@ -1,0 +1,90 @@
+
+<section class="section-blog-intro">
+  
+  <div class="page-banner">
+    <img  title="image" width="100%" height="100%" loading="lazy" src="{{ section.settings.bg_image | img_url: 'master' }}" alt="{{ section.settings.bg_image | escape }}" class="d-none d-md-block">
+    
+    {% if section.settings.bg_image_mobile != blank %}
+    <img  title="image" width="100%" height="100%" loading="lazy" src="{{ section.settings.bg_image_mobile | img_url: 'master' }}" alt="{{ section.settings.bg_image_mobile | escape }}" class="d-md-none">
+    {% else %}
+    <img  title="image" width="100%" height="100%" loading="lazy" src="{{ section.settings.bg_image | img_url: 'master' }}" alt="{{ section.settings.bg_image_mobile | escape }}" class="d-none d-md-block">
+    {% endif %}
+    <div class="content w-100">
+      <div class="container">
+        {% if section.settings.title != '' %}
+        <h1 class="text-center">{{section.settings.title }}</h1>
+        {% endif %}
+        {% if section.settings.content != '' %}
+        <p class="text-center">{{section.settings.content }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+{% schema %}
+{
+"name": "Blog pages",
+  "settings": [
+	{
+      "type": "header",
+      "content": "Page Banner"
+    },
+	{
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+	{
+      "type": "textarea",
+      "id": "content",
+      "label": "Content"
+    },
+	{
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Select Background Image"
+    },
+	{
+      "type": "image_picker",
+      "id": "bg_image_mobile",
+      "label": "Select Mobile Background Image"
+    }
+  ],
+          "presets":[
+          {
+          "name":"Blog page image"
+          }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  .template-blog .section-blog-intro .page-banner .content {
+    background: rgba(0,0,0,.5);
+    padding: 30px 0 37px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+  .template-blog .section-blog-intro .page-banner {
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+   .page-banner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+  .page-banner .content p,    .page-banner .content h1{
+    color: #fff;
+}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

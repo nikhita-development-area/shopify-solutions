@@ -1,0 +1,181 @@
+<div class="main_visionaries container pb-0">
+  <div class="mx-2 my-3">
+      <h2 class="head font-weight-bold l-0">{{ section.settings.visionaries-head }}</h2>
+      <p class="content l-0">{{ section.settings.visionaries-para }}</p>
+  </div>
+  <div class="visionaries-data">
+   {% for block in section.blocks %}
+    <div class="visionaries m-2 my-md-3">
+      <a href="{{ block.settings.visionors-url }}" class="text-decoration-none" target="_blank">
+      <div class="logo">
+        {% assign width = block.settings.visionors-logo.width | divided_by: 2 %}
+        {% assign height = block.settings.visionors-logo.height | divided_by: 2 %}
+        {% assign alt = 'Image-' | append: forloop.index %}
+        {{ block.settings.visionors-logo | image_url: width: width | image_tag: width: width, height: height, alt: alt , title: 'Image', loading: 'lazy', class: 'w-100 h-100' }}
+     </div>
+      <div class="about px-3">       
+        <h3 class="Head my-4 webkit-box l-0">{{ block.settings.visionors-about-head }}</h3>
+        <p class="Content mb-3 webkit-box l-0">{{ block.settings.visionors-about-content }}</p>
+      </div>
+      <div class="img px-3 pt-1 pb-3">
+        <span class="date float-right my-3 l-0">{{ block.settings.visionors-date }}</span>
+        {% assign width = block.settings.visionors-img.width | divided_by: 2 %}
+        {% assign height = block.settings.visionors-img.height | divided_by: 2 %}
+        {% assign alt = 'Image-' | append: forloop.index %}
+        {{ block.settings.visionors-img | image_url: width: width | image_tag: width: width, height: height, alt: alt, title: alt, loading: 'lazy', class: 'w-100 h-100' }}
+     </div>
+      </a>
+    </div>  
+    {% endfor %}
+    </div>
+  </div>
+
+{% schema %}
+{
+  "name": "visionaries Section",
+  "tag": "section",
+  "class":"visionaries-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "visionaries-head",
+      "label": "Enter the heading"
+    },
+    {
+      "type": "text",
+      "id": "visionaries-para",
+      "label": "Enter the para"
+    }
+  ],
+  "blocks":[
+    {
+      "name":"Blocks",
+      "type": "text",
+      "settings":[
+    {
+      "type": "image_picker",
+      "id": "visionors-logo",
+      "label": "drag the logo img"
+    },
+    {
+      "type": "text",
+      "id": "visionors-about-head",
+      "label": "Enter the visioners about heading"
+    },
+    {
+      "type": "text",
+      "id": "visionors-about-content",
+      "label": "Enter the visioners about content"
+    },
+    {
+      "type": "text",
+      "id": "visionors-date",
+      "label": "Enter the visioners Date"
+    },
+    {
+      "type": "image_picker",
+      "id": "visionors-img",
+      "label": "drag the visoners about img"
+    },
+  {
+      "type": "url",
+      "id": "visionors-url",
+      "label": "drag the visoneries url"
+    }
+      ]
+    }
+  ],
+   "presets":[
+    {
+        "name":"visionaries Section",
+        "category": "custom"
+    }
+  ]
+}
+    {% endschema %}
+<style>
+  .visionaries{
+    box-shadow: 0px 3.314634323120117px 13.258537292480469px 0px #00000014;
+    border-radius: 7px;
+  }
+  .main_visionaries .head{
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: 700;
+  }
+   .main_visionaries .content{
+     font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+   }
+  .visionaries .about .Head{
+     font-size: 18px;
+     line-height: 24px;
+     font-weight: 800;
+     -webkit-line-clamp: 2;
+     height: 52px;
+  }  
+  .visionaries .about .Content{
+     -webkit-line-clamp: 4;
+      height: 94px;
+  }
+  .visionaries .webkit-box{  
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .visionaries-data .slick-dots button:before{
+    font-size: 45px;
+  }
+.visionaries .img .date{
+    font-size: 12px;
+  }
+  .visionaries-data .slick-list.draggable{
+        padding-right: 100px;
+  }
+@media(max-width: 749px){
+    .visionaries-data .slick-dots button:before {
+        font-size: 35px;      
+    }
+  .visionaries-data .slick-list.draggable{
+        padding-right: 55px;
+  }
+  .main_visionaries .head{
+      font-size: 24px;
+    line-height: 28px;
+  }
+  .main_visionaries .content{
+     font-size: 16px;
+    line-height: 20px;
+  }
+}
+</style>
+<script>
+$(document).ready(function(){
+  $('.visionaries-data').slick({
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+   responsive: [
+    {
+      breakpoint: 789,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+     {
+      breakpoint: 749,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+  });
+});
+</script>

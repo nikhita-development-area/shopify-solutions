@@ -1,0 +1,310 @@
+{
+  "sections": {
+    "6d6b2f0c-e565-4983-8326-54636fb230b0": {
+      "type": "order-status",
+      "settings": {
+      }
+    },
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/newhome-banner_9653a033-b173-41de-a6ee-85e040631606.jpg",
+            "mbl_image": "shopify:\/\/shop_images\/tags_98fdec58-631f-4f43-bf5f-5ae82aec60a4.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "subheading-2": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 10,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide-0"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "36f45754-2039-4c14-872e-7afa90cbd10c": {
+      "type": "login-guide",
+      "blocks": {
+        "95eed00c-b905-4c00-9eaf-0ce30df78f8d": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "95eed00c-b905-4c00-9eaf-0ce30df78f8d"
+      ],
+      "settings": {
+      }
+    },
+    "c164d883-f111-4a90-b21a-062f0afb5b8a": {
+      "type": "after-login-traya-journey",
+      "blocks": {
+        "d70b4951-ca03-400f-ba4a-7d57299a73a9": {
+          "type": "text",
+          "settings": {
+            "des-img": "shopify:\/\/shop_images\/Group_7957_1.png",
+            "monthdesc": "Fix dandruff,<br>digestion issues."
+          }
+        },
+        "e07814aa-9360-4162-bb7c-0977b7dc3bbc": {
+          "type": "text",
+          "settings": {
+            "des-img": "shopify:\/\/shop_images\/Group_7958_00cf7ca5-1008-4e02-9dd3-e3211f56db3d.png",
+            "monthdesc": "Traya works on sleep, stress and other internal factors."
+          }
+        },
+        "d2bca64c-7dc8-45eb-8c42-078012018d74": {
+          "type": "text",
+          "settings": {
+            "des-img": "shopify:\/\/shop_images\/mon3_28add6fc-b9fd-48b2-8f9b-534b88d5904b.png",
+            "monthdesc": "You will notice significant reduction in hairfall"
+          }
+        },
+        "e142688b-9c86-4a4b-b12f-d1e835315f80": {
+          "type": "text",
+          "settings": {
+            "des-img": "shopify:\/\/shop_images\/mon4_187f249e-1c4c-4dc2-9ba9-0eb47ad3da46.png",
+            "monthdesc": "Your first hair cycle will end, you will see new thick hair soon"
+          }
+        },
+        "70aedea2-0dd6-4212-ae00-76d84c6441e6": {
+          "type": "text",
+          "settings": {
+            "des-img": "shopify:\/\/shop_images\/mon5_a9326f11-92e5-41c7-9ffc-966c7a7ce43d.png",
+            "monthdesc": "Based on stage and age, you should see hair growth results."
+          }
+        }
+      },
+      "block_order": [
+        "d70b4951-ca03-400f-ba4a-7d57299a73a9",
+        "e07814aa-9360-4162-bb7c-0977b7dc3bbc",
+        "d2bca64c-7dc8-45eb-8c42-078012018d74",
+        "e142688b-9c86-4a4b-b12f-d1e835315f80",
+        "70aedea2-0dd6-4212-ae00-76d84c6441e6"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Your Journey",
+        "mob-heading": ""
+      }
+    },
+    "e7ea81ff-baa8-4a34-804b-b9f12d696bdb": {
+      "type": "after-login-journey",
+      "settings": {
+        "heading": "",
+        "mob-heading": ""
+      }
+    },
+    "be666c9c-d195-43ae-a37b-4a157b2e4a97": {
+      "type": "after-login_video",
+      "settings": {
+        "heading_regimen": "",
+        "subheading_regimen": "",
+        "subheading_regimen_two": "",
+        "link_two": "",
+        "linktext_two": "Click Here"
+      }
+    },
+    "1663323783cfd4f66b": {
+      "type": "swirl-video",
+      "settings": {
+        "heading": "",
+        "html_area": "<div id=\"swirl-short-videos\" data-code=\"hnl8qkiv\" data-sw=\"1\"><\/div>\n<div class=\"swirl-short-videos-M\" data-playlist=\"ealhzF\"><\/div>"
+      }
+    },
+    "b7590f17-c1bf-4610-b913-b251e0f0dc43": {
+      "type": "we-are-here-to-help-you",
+      "settings": {
+      }
+    },
+    "16636706668563a592": {
+      "type": "safe-and-scientific",
+      "blocks": {
+        "3fe50d26-295f-469c-b7d1-f0cd34f9df3b": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/5_160x160_2x_0655b24d-b117-4414-9805-bb4479ad0497.png",
+            "traya-section1": "NON TOXIC"
+          }
+        },
+        "580659f4-2d98-48f5-bde8-bc798959f633": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/4_160x160_2x_1ef020f3-91cc-4294-9772-5c26bdfab185.png",
+            "traya-section1": "MADE SAFE"
+          }
+        },
+        "0a8b019c-ea4d-40c7-8cfa-1e4e0cbe7c8a": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/1_160x160_2x_67a92c25-0d11-4926-8714-a92ffc12d895.png",
+            "traya-section1": "ALLERGEN FREE"
+          }
+        },
+        "17b04d70-0dbd-4344-8ac4-a94a229735a9": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/6_160x160_2x_23426d74-cc6c-4a07-8ab8-8ec67b220739.png",
+            "traya-section1": "VEGAN FRIENDLY"
+          }
+        },
+        "d56c012b-1538-4542-b03a-1d2a8c7f3067": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/2_160x160_2x_346bc741-839a-480a-9586-57997113b166.png",
+            "traya-section1": "CRUELTY FREE"
+          }
+        },
+        "733e1436-b787-474f-aa93-347049694c94": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/3_160x160_2x_9ffefbca-b670-4f20-accd-6ecc04dc9718.png",
+            "traya-section1": "DOCTOR RECOMMENDED"
+          }
+        }
+      },
+      "block_order": [
+        "3fe50d26-295f-469c-b7d1-f0cd34f9df3b",
+        "580659f4-2d98-48f5-bde8-bc798959f633",
+        "0a8b019c-ea4d-40c7-8cfa-1e4e0cbe7c8a",
+        "17b04d70-0dbd-4344-8ac4-a94a229735a9",
+        "d56c012b-1538-4542-b03a-1d2a8c7f3067",
+        "733e1436-b787-474f-aa93-347049694c94"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "title": "Safe And Scientific",
+        "slider_transplant": "shopify:\/\/shop_images\/Banner_ccef4480-bd57-4e2c-b58a-876854ac2b8c.png",
+        "mobile_view": "shopify:\/\/shop_images\/Male-Safe_Scientific-mobile_1.webp"
+      }
+    },
+    "4ee10f08-0416-4159-b93f-85d9bf5d1662": {
+      "type": "faq-vox-view",
+      "blocks": {
+        "3875f94b-3aee-471d-9f05-b51f7962f474": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353085.png",
+            "question": "Will Traya treatment work for me?",
+            "answer": "<p>Yes! Traya will absolutely work for you if your hair loss is between Stages 1-4. (To find out your stage. Take the FREE hair test). Traya’s holistic 3 science formula uses the goodness of Dermatology Ayurveda and Nutrition to help with your hair loss. Our Women Santulan Technology works on specific women needs depending on her existing condition like Pregnancy, Menopause, problems like PCOS along with hair loss. This technology compliments Traya’s holistic 3 science formula, along with our FDA-approved Growth Actives and your own personalised diet to ensure you have the healthy hair you deserve.<\/p>"
+          }
+        },
+        "b58b68ad-6022-41ab-892f-37b2d3d595aa": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353087.png",
+            "question": "Is Traya treatment safe for women?",
+            "answer": "<p>Absolutely! Traya’s hair growth treatment is not only safe and toxin free but also doctor-prescribed.  Traya's treatment plans also have NO SIDE EFFECTS. Traya’s treatment uses Ayurvedic herbs and FDA approved hair growth actives which are very safe and incredibly effective for your hair.<\/p>"
+          }
+        },
+        "8fd640e8-d78c-4f40-8a85-dbd5fac7c82f": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353084.png",
+            "question": "What will my Traya treatment contain?",
+            "answer": "<p>Traya's holistic & personalised treatment plan combines 3 Sciences of Dermatology, Ayurveda and Nutrition which includes FDA-approved dermatology products, and natural Ayurvedic supplements. You also get a digital prescription signed by doctors, a personal hair coach who guides you throughout the treatment and a healing diet plan which will support your internal health to  ensure you have the healthy hair you deserve.<\/p>"
+          }
+        },
+        "5feec5a1-8fb5-44e9-ba98-54a7d291dbf6": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353082.png",
+            "question": "How to start Traya Treatment?",
+            "answer": "<p>It is incredibly easy! Take Traya’s free hair test from the button on the banner (scroll up to the topmost section) .Once you've taken the hair test and have uploaded your scalp picture, a customised kit will be recommended to you based on the root cause of your hair fall, type and stage of hair loss. You can then proceed to buy the doctor-recommended treatment plan. Once you place the order, Traya's doctors will prescribe your treatment and create a digital prescription for you.  <br\/>You will be able to access this prescription by scanning the QR code on your kit when it is delivered and start the treatment!<\/p>"
+          }
+        },
+        "f3a18621-722c-4784-9b45-72b7a219cca7": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353083.png",
+            "question": "When will I see results? \/ How long will the treatment take?",
+            "answer": "<p>Hair growth is a gradual process. Traya’s treatment takes care of your overall health therefore, you will start seeing small changes in your body within a  month. For your hair to grow back, it will take an average of about 5 months on  regularly using the complete treatment plan. However, the exact time to see these results may vary depending on factors like your age, type, stage, and the causes behind your hair loss like stress, hormonal imbalances, poor diet, etc.<br\/>Staying consistent with our treatment also ensures faster, more effective results, as over 2.5 lakh other Indians have already seen.<\/p>"
+          }
+        },
+        "5e14984c-9925-4c3d-a2e2-9ffdcf1ab1ac": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353086.png",
+            "question": "Will Traya’s treatment make my hair thicker?",
+            "answer": "<p>Yes, Traya’s treatment helps promote hair growth and thickness by using our holistic 3 science formula which combines the goodness of ayurveda, dermatological  products and the right nutrition which helps improve the overall health of your hair, making it thicker and stronger.<br\/><\/p>"
+          }
+        },
+        "eac4c8fc-2fbd-471c-8cb7-2d4162e87e02": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353088.png",
+            "question": "Can Traya treatment reduce dandruff?",
+            "answer": "<p>Yes, Traya's antifungal treatment gets rid of both mild & heavy dandruff by preventing the growth of dandruff-causing fungus which helps improve your scalp health and soothes it. It also makes sure that the flakiness and itchiness you might be having is also reduced.<\/p>"
+          }
+        },
+        "904d59ad-6295-4d4d-ace3-6e339822fe52": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353089.png",
+            "question": "Can women of all ages see results with  Traya’s treatment?",
+            "answer": "<p>Yes, Traya's treatment helps women of all age groups (16+). We work hard to ensure that your treatment plan is customised and personalised to your age, hair fall type, your stage and internal root causes of your hair fall.  Traya’s treatment is effective for everyone from teenagers and new moms, to even menopausal women suffering from hair loss.  However, since age is a big factor when it comes to seeing results the time for positive visible results might vary. <br\/>You will also have a  hair coach assigned to you to ensure that we are able to give you the support you personally require on your journey.<\/p>"
+          }
+        },
+        "c63bcc2b-fa5d-4884-862c-82cdc6af3ce0": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Mask_group_4_25a67c91-a92a-431b-9a19-67376297608e.png",
+            "question": "Who is Traya hair coach?",
+            "answer": "<p>The Traya hair coach will be your point of contact throughout the treatment. They will be assigned to you once your order is placed, to help you stay on track, and guide you throughout the treatment journey, take updates from doctors to monitor your progress and follow up with you to ensure better results. They will also be available for you to reach out too whenever you have doubts about your treatment.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "3875f94b-3aee-471d-9f05-b51f7962f474",
+        "b58b68ad-6022-41ab-892f-37b2d3d595aa",
+        "8fd640e8-d78c-4f40-8a85-dbd5fac7c82f",
+        "5feec5a1-8fb5-44e9-ba98-54a7d291dbf6",
+        "f3a18621-722c-4784-9b45-72b7a219cca7",
+        "5e14984c-9925-4c3d-a2e2-9ffdcf1ab1ac",
+        "eac4c8fc-2fbd-471c-8cb7-2d4162e87e02",
+        "904d59ad-6295-4d4d-ace3-6e339822fe52",
+        "c63bcc2b-fa5d-4884-862c-82cdc6af3ce0"
+      ],
+      "settings": {
+        "title": "FAQ's"
+      }
+    }
+  },
+  "order": [
+    "6d6b2f0c-e565-4983-8326-54636fb230b0",
+    "slideshow",
+    "36f45754-2039-4c14-872e-7afa90cbd10c",
+    "c164d883-f111-4a90-b21a-062f0afb5b8a",
+    "e7ea81ff-baa8-4a34-804b-b9f12d696bdb",
+    "be666c9c-d195-43ae-a37b-4a157b2e4a97",
+    "1663323783cfd4f66b",
+    "b7590f17-c1bf-4610-b913-b251e0f0dc43",
+    "16636706668563a592",
+    "4ee10f08-0416-4159-b93f-85d9bf5d1662"
+  ]
+}

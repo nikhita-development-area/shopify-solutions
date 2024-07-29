@@ -1,0 +1,66 @@
+<div page_type="normal">
+  {%- if section.settings.heading != blank -%}
+    <p class="{% if page.handle == 'female-result' %}font-weight-bold l-0 text-center mb-3 mb-md-4 real_women_heading font-fredoka pt-md-0 pt-2{% else %}section-title{% endif %}">{{ section.settings.heading }}</p>
+  {% endif %}
+  {% if page.handle == 'female-result' %}
+    <p class="text-center real_women_subheading fw-bold pb-4">1,00,000+ Indian women just like you have achieved<br>their hair goals with us.</p>
+  {% endif %} 
+  {% if template == 'index.login' %}
+    <div class="login_heading_sub">
+      <p class="login-heading">Customers Like you</p>
+      <h6 class="text-center">#TRAYAHEROOFTHEWEEK</h6>
+    </div>
+  {% endif %} 
+   {% if template == 'index.login-lead' %}
+     <div class="login_heading_sub">
+       <h6 class="revamp_heading text-center">People just like you, have gotten<br> hope back with Traya</h6>
+       <p class="login-heading">#getbackyourhair</p>
+     </div>
+  {% endif %} 
+  {% if section.settings.html_area != blank %}
+    <div class="html_area page-width mt-3{% if page.handle == 'reviews' %} mt-md-5 mb-md-2{% else %} my-md-5{% endif %} pb-2 pb-md-auto {% if template == 'index.login' %}login_swirl{% endif %}">
+    {{ section.settings.html_area}}
+    </div>
+  {% endif %}
+  {% if page.handle == 'reviews' %}
+    <div class="container pt-md-4 pt-3 text-center">
+      <a href="https://form.traya.health/questions?cohort=1&location=videoreviews&page=reviews" class="btn btn-dark" id="hairtestcta">Take The Hair Test <sup>&trade;</sup></a>
+    </div>
+  {% endif %}
+
+  {% if page.handle == 'home-app' or page.handle == "download-traya-app" %}
+  <div class="download-app text-center">
+    <a href="https://trayahealth.app.link/GsBfukBlAHb" class="btn btn-dark mt-3 mt-md-0 shadow" id="app_download_cta" target="_blank">DOWNLOAD THE APP</a>
+  </div>
+  {% endif %}
+</div>
+{% schema %}
+  {
+    "name": "Swirl Video",
+    "settings": [
+      {
+       "type": "text",
+       "id": "heading",
+       "label": "Heading"
+    },
+      {
+        "type": "html",
+        "id": "html_area",
+        "label": "HTML Area"
+      }
+    ],
+    "presets": [
+    {
+      "name": "Swirl Video"
+    }
+  ]
+  }
+{% endschema %}
+{% style %}
+h6.revamp_heading.text-center {font-size: 47px;font-weight: bold;}
+.html_area .swiper .swiper-wrapper .swiper-slide{border:1px solid #b1b1bf;}
+#shopify-section-{{ section.id }} .html_area {min-height: 350px;}
+@media only screen and (max-width: 767.98px) {
+#shopify-section-{{ section.id }} .html_area {min-height: 320px;}
+}
+{% endstyle %}

@@ -1,0 +1,100 @@
+<div class="container text-center text-md-left">
+  <div class="row">
+    {% for block in section.blocks %}
+      <div class="col-md-4 block-{{forloop.index}}">
+      {% if block.settings.our_values_img != blank %}
+        <img src="{{ block.settings.our_values_img | img_url: '' }}" alt="{{ block.settings.heading }}" class="our_values_img">
+        <h3 class="our_values_heading">{{ block.settings.heading }}</h3>
+        <p class="our_values_desc">{{ block.settings.our_value_text }}</p>
+      {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Our Values",
+    "settings": [
+        ],
+      "max_blocks": 3,
+      "blocks": [
+       {
+        "name": "Our values",
+        "type": "image",
+        "settings": [
+           {
+            "type":"image_picker",
+            "label":"Select Image",
+            "id" : "our_values_img"
+            },
+            {
+              "type": "text",
+              "label": "Heading Text",
+              "id": "heading"
+            },
+            {
+              "type": "text",
+              "label": "Description",
+              "id": "our_value_text"
+            }
+         ]
+       }
+      ],
+      "presets":[
+        {
+          "name":"Our Values",
+          "category":"Custom"
+        }
+      ]
+ }
+{% endschema %}
+<style>
+  .our_values_img {
+    margin: 30px auto;
+  }
+  .our_values_heading {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: .65px;
+    color: #f9af5f;
+    margin-bottom: 15px;
+  }
+  .our_values_desc {
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.35;
+    letter-spacing: -1.05px;
+    color: #6d6e71;
+    margin-bottom: 40px;
+  }
+  @media only screen and (max-width: 767px) and (min-width: 576px) {
+    .our_values_desc {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 32px;
+      letter-spacing: -.16px;
+      color: #939598;
+    }
+    .our_values_heading {
+      font-size: 30px;
+      line-height: 40px;
+      letter-spacing: .55px;
+      margin-bottom: 7px;
+    }
+  }
+  @media only screen and (max-width: 575.98px) {
+    .our_values_img {
+      margin: 15px auto;
+    }
+    .our_values_heading {
+      font-size: 22px;
+      line-height: 27px;
+    }
+    .our_values_desc {
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+</style>

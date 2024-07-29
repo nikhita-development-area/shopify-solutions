@@ -1,0 +1,207 @@
+<div class="container">
+  {% render 'breadcrumbs' %}
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-product-tab" data-toggle="pill" href="#pills-product" role="tab" aria-controls="pills-product" aria-selected="true">PRODUCT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-company-tab" data-toggle="pill" href="#pills-company" role="tab" aria-controls="pills-company" aria-selected="false">COMPANY</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-order-tab" data-toggle="pill" href="#pills-order" role="tab" aria-controls="pills-order" aria-selected="false">ORDER</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-shipping-tab" data-toggle="pill" href="#pills-shipping" role="tab" aria-controls="pills-shipping" aria-selected="false">SHIPPING</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-product" role="tabpanel" aria-labelledby="pills-product-tab">
+      <div class="accordion" id="product">
+      {% for block in section.blocks %}
+        {% if block.type == 'product' %}
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="product-{{forloop.index}}">
+            <button class="accordion-button{% if forloop.first == false %} collapsed{% endif %} question" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}-product" aria-expanded="{% if forloop.first == false %}false{% else %}true{% endif %}" aria-controls="collapse-{{ forloop.index }}-product">
+              {{ block.settings.product-question }}</button>
+          </h2>
+          <div id="collapse-{{ forloop.index }}-product" class="accordion-collapse collapse{% if forloop.first == true %} show{% endif %}" aria-labelledby="product-{{forloop.index}}" data-bs-parent="#product">
+            <div class="accordion-body answer">
+              {{ block.settings.product-answer }}
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    </div>
+    <div class="tab-pane fade" id="pills-company" role="tabpanel" aria-labelledby="pills-company-tab">
+      <div class="accordion" id="company">
+      {% for block in section.blocks %}
+        {% if block.type == 'company' %}
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="company-{{forloop.index}}">
+            <button class="accordion-button{% if forloop.first == false %} collapsed{% endif %} question" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}-company" aria-expanded="{% if forloop.first == false %}false{% else %}true{% endif %}" aria-controls="collapse-{{ forloop.index }}-company">
+              {{ block.settings.company-question }}</button>
+          </h2>
+          <div id="collapse-{{ forloop.index }}-company" class="accordion-collapse collapse{% if forloop.first == true %} show{% endif %}" aria-labelledby="company-{{forloop.index}}" data-bs-parent="#company">
+            <div class="accordion-body answer">
+              {{ block.settings.company-answer }}
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    </div>
+    <div class="tab-pane fade" id="pills-order" role="tabpanel" aria-labelledby="pills-order-tab">
+      <div class="accordion" id="order">
+      {% for block in section.blocks %}
+        {% if block.type == 'order' %}
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="order-{{forloop.index}}">
+            <button class="accordion-button collapsed question" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}-order" aria-expanded="false" aria-controls="collapse-{{ forloop.index }}-order">
+              {{ block.settings.order-question }}</button>
+          </h2>
+          <div id="collapse-{{ forloop.index }}-order" class="accordion-collapse collapse" aria-labelledby="order-{{forloop.index}}" data-bs-parent="#order">
+            <div class="accordion-body answer">
+              {{ block.settings.order-answer }}
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    </div>
+    <div class="tab-pane fade" id="pills-shipping" role="tabpanel" aria-labelledby="pills-shipping-tab">
+      <div class="accordion" id="shipping">
+      {% for block in section.blocks %}
+        {% if block.type == 'shipping' %}
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="shipping-{{forloop.index}}">
+            <button class="accordion-button collapsed question" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}-shipping" aria-expanded="false" aria-controls="collapse-{{ forloop.index }}-shipping">
+              {{ block.settings.shipping-question }}</button>
+          </h2>
+          <div id="collapse-{{ forloop.index }}-shipping" class="accordion-collapse collapse" aria-labelledby="shipping-{{forloop.index}}" data-bs-parent="#shipping">
+            <div class="accordion-body answer">
+              {{ block.settings.shipping-answer }}
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "FAQ Page",
+    "settings": [],
+    "blocks": [
+      {
+        "name": "product",
+        "type": "product",
+        "settings": [
+          {
+            "type": "text",
+            "id": "product-question",
+            "label": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "product-answer",
+            "label": "Answer"
+          }
+        ]
+      },
+      {
+        "name": "company",
+        "type": "company",
+        "settings": [
+          {
+            "type": "text",
+            "id": "company-question",
+            "label": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "company-answer",
+            "label": "Answer"
+          }
+        ]
+      },
+      {
+        "name": "order",
+        "type": "order",
+        "settings": [
+          {
+            "type": "text",
+            "id": "order-question",
+            "label": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "order-answer",
+            "label": "Answer"
+          }
+        ]
+      },
+      {
+        "name": "shipping",
+        "type": "shipping",
+        "settings": [
+          {
+            "type": "text",
+            "id": "shipping-question",
+            "label": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "shipping-answer",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ page",
+        "category": "text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .template-page.faq .accordion-button:not(.collapsed)::after, .template-page.faq .accordion-button::after {
+    content: unset;
+  }
+  .template-page.faq .accordion-button::before {
+    flex-shrink: 0;
+    margin-right: 20px;
+    content: '\002B';
+    font-weight: bold;
+  }
+  .template-page.faq .accordion-button:not(.collapsed)::before {
+    content: '\2212';
+  }
+  .template-page.faq .accordion-button:focus {
+    box-shadow: none;
+  }
+  .template-page.faq .accordion-button:not(.collapsed) {
+    color: inherit;
+    background-color: inherit;
+  }
+  .template-page.faq .accordion-item {
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+  .template-page.faq .accordion-item:last-of-type .accordion-button.collapsed, .template-page.faq .accordion-item:first-of-type .accordion-button, .template-page.faq .accordion-item:first-of-type {
+    border-radius: 0;
+  }
+  .template-page.faq .accordion-button {
+    padding: 30px 10px;
+  }
+{% endstyle %}

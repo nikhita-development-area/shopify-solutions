@@ -1,0 +1,83 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{% if current_variant.compare_at_price > current_variant.price %}
+{%- assign discount = current_variant.compare_at_price | minus:  current_variant.price | times: 100.0 | divided_by:  current_variant.compare_at_price -%}
+{% else %}
+  {%- assign discount = 0 %}
+{% endif %}
+{% assign aa = 0 %}     
+ {%- for field in product.metafields.custom.combo_products.value -%}
+{% assign aa = aa | plus: 1 %}
+   {% endfor %}
+{%- capture variantsID -%}
+  {%- for field in product.metafields.custom.combo_products.value -%}
+  {"id": {{ field.selected_or_first_available_variant.id }}, "quantity": 1, "properties": { "combo_discount": {{ discount | round: 2 }}, "pack_of": {{aa}}, "sku": "{{ current_variant.sku }}" }}{%- unless forloop.last -%},{%- endunless -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+<div class="product-form" data-items='[{{ variantsID }}]' data-discount="{{ discount }}">
+  {% if template.name == 'collection' %}
+  <div class="text-center mt-2">
+    <button id="AddToCart" {%if collection.handle == 'all-productsvv' %}type="button" onClick="ByCombo('{{product.handle}}');"{%else%}data-add-to-cart type="submit"{% endif %} name="add" name="add" data-collection-AddToCart
+      {% unless current_variant.available %} aria-disabled="true"{% endunless %} data-price="{{ product.price | divided_by: 100 }}" product-title="{{ product.title }}"
+      aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
+      class="btn btn-dark quick-add__submit button button--full-width button--secondary addto-cart_btn" aria-haspopup="dialog">
+      <span data-add-to-cart-text>
+      {% unless current_variant.available %}
+      {{ 'products.product.sold_out' | t }}
+      {% else %}
+      {% if cstm == 'essential'%}
+      {{'Buy Now'}}
+      {% else %}
+      {{ 'products.product.add_to_cart' | t }}
+      {% endif %}
+      {% endunless %}
+      </span>
+      <div class="loading-overlay__spinner hidden">
+        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+        </svg>
+      </div>
+    </button>
+  </div>
+  {% else %}
+    <div class="row">
+      <div class="col-md-6 buy-now_recomm-add">
+      <button id="AddToCart" {%if collection.handle == 'all-productsvv' %}type="button" onClick="ByCombo('{{product.handle}}');"{%else%}data-add-to-cart type="submit"{% endif %} name="add" name="add" data-collection-AddToCart
+      {% unless current_variant.available %} aria-disabled="true"{% endunless %} data-price="{{ product.price | divided_by: 100 }}" product-title="{{ product.title }}"
+      aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
+      class="btn product-form__submit button button--full-width addto-cart_btn" aria-haspopup="dialog">
+      <img class="cart_icon_img" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/result-page-02.png?v=1625237722" alt="result-page-02">
+      <span data-add-to-cart-text>
+      {% unless current_variant.available %}
+      {{ 'products.product.sold_out' | t }}
+      {% else %}
+      {% if cstm == 'essential'%}
+      {{'Buy Now'}}
+      {% else %}
+      {{ 'products.product.add_to_cart' | t }}
+      {% endif %}
+      {% endunless %}
+      </span></button>
+      </div>
+      <div class="col-md-6 buy-now_recomm">
+        <button id="AddToCart" {%if collection.handle == 'all-productsvv' %}type="button" onClick="ByCombo('{{product.handle}}');"{%else%}data-add-to-cart type="submit"{% endif %} name="add" name="add" data-collection-AddToCart
+      {% unless current_variant.available %} aria-disabled="true"{% endunless %} data-price="{{ product.price | divided_by: 100 }}" product-title="{{ product.title }}"
+      aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
+      class="btn product-form__checkout button button--full-width checkout__btns" aria-haspopup="dialog">
+          <img class="buy_icon_img" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/buy-it-now-iconblack.png" alt="result-page-02">
+      <span data-add-to-cart-text>
+      {% unless current_variant.available %}
+      {{ 'products.product.sold_out' | t }}
+      {% else %}
+      {% if cstm == 'essential'%}
+      {{'Buy Now'}}
+      {% else %}
+      {{ 'Buy Now' }}
+      {% endif %}
+      {% endunless %}
+      </span></button>
+      </div>
+    </div>
+  {% endif %}
+</div>
+{% render 'combo-form-script' %}

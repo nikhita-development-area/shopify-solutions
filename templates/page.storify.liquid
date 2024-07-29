@@ -1,0 +1,27 @@
+
+
+<div class="storify-page-break"></div>
+
+{%- assign stories = shop.metafields.storify.stories | slice: 0, 5 -%}
+<div class="stories-list-page">
+    <div class="stories-list">
+        {% for story in shop.metafields.storify.stories %}
+        <div class="story-list-item">
+            <a class="story" href="/a/stories/{{story.handle}}">
+                <div class="story-body text-center">
+                    <div class="story-image">
+                        <img alt="{{story.name}}" src="{{story.original_poster}}" loading="lazy">
+                    </div>    
+                </div>
+                <div class="story-title">
+                    <span>
+                    <div class="story-title-content">
+                        {{story.name}}
+                    </div>
+                    </span>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

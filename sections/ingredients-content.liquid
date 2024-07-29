@@ -1,0 +1,149 @@
+{% if page.handle == 'traya-ingredients' %}
+<div class="s-hero-section ingredient-hero-section">
+  <div class="container-fluid ml-5">
+    <div class="s-hero-text d-md-block d-none">
+      <h4><strong>'Pure & authentic' </strong></h4>
+      <h2><strong>Traya Ingredients</strong></h2>
+      <p>We choose the most authentic and selective ingredients for you. We monitor our sources continuously and make sure you get the best because we know we are as good as the ingredients that go in our medicines.</p>
+    </div>
+  </div>
+</div>
+<div class="container ">
+    {% include 'breadcrumbs' %}
+</div>
+<div class="s-hero-text d-md-none text-center">
+  <h4><strong>'Pure & authentic'</strong></h4>
+      <h2><strong>Traya Ingredients</strong></h2>
+      <p>We choose the most authentic and selective ingredients for you. We monitor our sources continuously and make sure you get the best because we know we are as good as the ingredients that go in our medicines.</p>
+      <div class="m-auto s-sep"> </div>
+</div>
+{% else %}
+<div class="s-hero-section ingredient-hero-section">
+  <div class="container-fluid ml-3">
+    <div class="s-hero-text d-md-block">
+      <h4><strong>Research Library</strong></h4>
+      <h2><strong>{{ page.title }}</strong></h2>
+      <p>We choose the most authentic and selective ingredients for you. We monitor our sources continuously and make sure you get the best because we know we are as good as the ingredients that go in our medicines.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container ingredients pt-5">
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="border shadow p-4 d-none d-md-block">
+        {% for link in linklists.ingredients-menu.links %}
+        <li class="mb-3">{{ link.title | link_to: link.url }}</li>
+        {% endfor %}
+      </ul>
+      
+      <div class="dropdown d-md-none mb-4">
+        <a class="btn btn-secondary text-uppercase dropdown-toggle w-100 text-left btn-lg d-flex align-items-center justify-content-between bg-transparent text-body rounded-0 border-left-0 border-right-0" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ page.handle }}
+        </a>
+        <div class="border-top-0 dropdown-menu mt-n1 rounded-0 w-100" aria-labelledby="dropdownMenuButton">
+          <ul class="px-4">
+            {% for link in linklists.ingredients-menu.links %}
+            <li class="mb-3">{{ link.title | link_to: link.url }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="col-md-9 content">{{ page.content }}</div>
+
+  </div>
+
+</div>
+{% endif %}
+<style>
+
+ .s-hero-section.ingredient-hero-section {
+    height: 602px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    text-align: left;
+    background-image: url({{ section.settings.heroImage | img_url: 'master' }});
+}
+  @media (max-width: 767.98px) {
+    .s-hero-section.ingredient-hero-section {
+      height: 522px;
+    }
+  }
+  
+  .content li {
+    list-style: disc;
+  }
+  .content ul, .content ol{
+    padding-left: 38px;
+  }
+  .content a{
+    color: #f9af5f;
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+
+</style>
+
+{% schema %}
+  {
+    "name": "Ingredients Content",
+   "max_blocks": 100,
+  "settings": [
+	{
+       "type": "image_picker",
+       "id": "heroImage",
+       "label": "Banner Image"
+    },
+	{
+       "type": "text",
+       "id": "heading",
+       "label": "Heading"
+    },
+    {
+       "type": "text",
+       "id": "subheading",
+       "label": "Sub Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredients",
+      "name": "Ingredients",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo",
+          "info": "340 x 80px .jpg recommended"
+        },
+        {
+          "type": "text",
+          "id": "headingtext",
+          "label": "Description Head"
+        },
+		{
+          "type": "richtext",
+          "id": "text",
+          "label": "Description"
+        },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Description Products with:"
+        }
+      ]
+    }
+  ],
+     "presets":[
+          {
+          "name":"Ingredients Content"
+          }]
+  }
+{% endschema %}
+

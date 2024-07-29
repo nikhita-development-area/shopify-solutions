@@ -1,0 +1,162 @@
+  <section id="FrequentlyQA">
+  <div class="page-width">
+  <h2 class="text_Fredoka about my-3 ml-3 text-center">Frequently Asked Questions</h2>
+    <div class="second_accordion">
+      <div class="accordion mb-4" id="banefitAccordions">
+        <div class="card">
+            {% for block in section.blocks %}
+              {% if block.type == 'faq' %}
+          <div class="card-header py-3" id="heading-banefit{{forloop.index}}">
+            <h2 class="mb-0">
+              <button class="d-flex justify-content-between align-items-center bg-transparent border-0 btn-block font-weight-bold p-0 text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse-banefit{{forloop.index}}" aria-expanded="false" aria-controls="collapse-banefit{{forloop.index}}">
+                {{ block.settings.Question }}
+                      <span class="minus">{% include 'icon-library', id: 'minus-arrow' %}</span>
+                      <span class="plus">{% include 'icon-library', id: 'plus-arrow' %}</span>
+              </button>
+            </h2>
+          </div>
+          <div id="collapse-banefit{{forloop.index}}" class="collapse" aria-labelledby="heading-banefit{{forloop.index}}" data-parent="#banefitAccordions">
+            <div class="card-body line-height: 25px;">
+                  {{ block.settings.Answer }}
+            </div>
+          </div>
+                {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+    <div class="page-width arrow__accordion_section">
+      <div class="accordion mb-4" id="banefitAccordion0"> 
+     {% if section.settings.Accordiontitle1 != blank %}
+      <div class="card w-md-75">
+        <div class="card-header py-3" id="heading-Publications">
+          <h2 class="mb-0">
+            <button class="d-flex justify-content-between align-items-center bg-transparent border-0 btn-block font-weight-normal p-0 text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse-Publications" aria-expanded="false" aria-controls="collapse-Publications">
+              <div class="text_Fredoka">{{ section.settings.Accordiontitle1 }}</div>
+              <div><span class="minus">{% include 'icon-library', id: 'up-arrow' %}</span>
+                <span class="plus">{% include 'icon-library', id: 'down-arrow' %}</span></div>
+            </button>
+          </h2>
+        </div>
+        <div id="collapse-Publications" class="collapse" aria-labelledby="heading-Publications" data-parent="#banefitAccordion0">
+          <div class="card-body font-size-18 line-height: 25px;">
+                   
+            <ul class="Publications_content">
+                {% for block in section.blocks %}
+                {% if block.type == 'Publications' %}
+              <li class="my-2"> {{ block.settings.PublicationsContent }}</li>
+              {% endif %}
+            {% endfor %}
+            </ul>
+      
+          </div>
+        </div>
+      </div>
+{% endif %}
+      <h2 class="text_Fredoka about my-3 my-md-5 d-none">Awards & Recognitions</h2>
+             {% if section.settings.Accordiontitle2 != blank %}
+      <div class="card w-md-75">
+        <div class="card-header py-3" id="heading-Awards">
+          <h2 class="mb-0">
+            <button class="d-flex justify-content-between align-items-center bg-transparent border-0 btn-block font-weight-normal p-0 text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse-Awards" aria-expanded="false" aria-controls="collapse-Awards">
+              <div class="text_Fredoka"> {{ section.settings.Accordiontitle2 }}</div>
+              <div><span class="minus">{% include 'icon-library', id: 'up-arrow' %}</span>
+                <span class="plus">{% include 'icon-library', id: 'down-arrow' %}</span></div>
+            </button>
+          </h2>
+        </div>
+        <div id="collapse-Awards" class="collapse" aria-labelledby="heading-Awards" data-parent="#banefitAccordion0">
+          <div class="card-body font-size-18 line-height: 25px;">
+            <ul class="ar_content">
+                             {% for block in section.blocks %}
+                            {% if block.type == 'Awards' %}
+              <li class="my-2">{{ block.settings.AwardsContent }}</li><br>
+                            {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+               {% endif %}
+  </div>
+    </div>
+{% schema %}
+  {
+    "name": "QA Accordion",
+    "settings": [
+                {
+            "type": "text",
+            "id": "Accordiontitle1",
+            "label": "First Accordion Title",
+            "default": "Publications"
+          },
+                      {
+            "type": "text",
+            "id": "Accordiontitle2",
+            "label": "Second Accordion Title",
+            "default": "Awards & Recognitions"
+          }
+    ],
+    "blocks": [
+     {
+       "name": "Frequently Asked QA",
+       "type": "faq",
+       "settings": [
+          {
+            "type": "text",
+            "id": "Question",
+            "label": "Title"
+          },
+           {
+            "type": "text",
+            "id": "Answer",
+            "label": "Title"
+          }
+        
+       ]
+},     
+      {
+       "name": "Publications",
+       "type": "Publications",
+       "settings": [
+          {
+            "type": "text",
+            "id": "PublicationsContent",
+            "label": "Title"
+          }
+        
+       ]
+},     
+      {
+       "name": "Awards & Recognitions",
+       "type": "Awards",
+       "settings": [
+          {
+            "type": "text",
+            "id": "AwardsContent",
+            "label": "Title"
+          }
+        
+       ]
+}
+      
+ ],
+      "presets": [
+    {
+      "name": "QA Accordion"
+    }
+  ]
+  }
+{% endschema %}
+<style>
+  @media only screen and (min-width:768px){
+    .w-md-75{
+      width:75% !important;
+      margin:0 auto;
+    }
+  }
+</style>

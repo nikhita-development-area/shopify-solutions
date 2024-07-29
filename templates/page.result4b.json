@@ -1,0 +1,135 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "16642732012e5f65b5": {
+      "type": "test-result",
+      "settings": {
+      }
+    },
+    "1664273324b1385128": {
+      "type": "treatment-month-plan",
+      "settings": {
+      }
+    },
+    "88681d4b-2fce-412f-a708-f55e0f69822e": {
+      "type": "result-products",
+      "settings": {
+      }
+    },
+    "16642750938b921f1d": {
+      "type": "customer-reviews",
+      "blocks": {
+        "026833cc-e184-488a-abb2-8718b967f5d6": {
+          "type": "content",
+          "settings": {
+            "name": "Uddeshya",
+            "gender": "M",
+            "used_for": "4 Months",
+            "review_on": "15th Nov 2021",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "My hair loss started in 2016 after I was diagnosed with tuberculosis. I had consulted a dermatologist and tried many treatments before nearly giving up hope. I liked Traya’s approach of combining three sciences. After I used the recommended product kits, I have seen a lot of benefits like thicker hair and negligible Hair fall.",
+            "icon_1": "shopify:\/\/shop_images\/Uddeshya01_300x_4c51e29f-1d12-44df-94c7-e71e8b2de6bd.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Uddeshya02_300x_921c4a78-34b8-4f77-9551-775547339218.jpg",
+            "month_title_2": "Month 2",
+            "icon_3": "shopify:\/\/shop_images\/Uddeshya03_300x_e746d8f1-e039-43ee-8ba1-4b2c0e35bd9c.jpg",
+            "month_title_3": "Month 3",
+            "month_title_4": ""
+          }
+        },
+        "c20b4ef4-6816-47f8-a5b2-bdc3a21857f5": {
+          "type": "content",
+          "settings": {
+            "name": "Rajat Sadh",
+            "gender": "M",
+            "used_for": "8 months",
+            "review_on": "21st Feb 2022",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I didn't want to resort to surgery or any other invasive treatment for my hair loss and I found Traya. They have helped me grow back a full head of hair in just eight months. I'm so happy with the results, thank you so much!",
+            "icon_1": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_300x_93ca08ad-9a26-431e-9be5-e83d334cd5ad.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/month_4_300x_3fb66938-dd6c-4fb4-b3c4-9cbf5d46ffcd.jpg",
+            "month_title_2": "Month 4",
+            "icon_3": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_1_300x_afb0b676-652a-4589-b14e-646c94c0efcb.jpg",
+            "month_title_3": "Month 8",
+            "month_title_4": ""
+          }
+        },
+        "3c7966bc-998b-4bf7-9574-70d4dea3ecc5": {
+          "type": "content",
+          "settings": {
+            "name": "Anonymous",
+            "gender": "M",
+            "used_for": "5 months",
+            "review_on": "15th August 2021",
+            "kit_purchased": "",
+            "content": "Results in just 5 months, couldn't believe my eyes when I saw hair growth on my head. Anyone with hair problems should get on their plan. It works like magic.",
+            "icon_1": "shopify:\/\/shop_images\/Month-a1_300x_1.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Month-a3_300x_1.jpg",
+            "month_title_2": "Month 3",
+            "icon_3": "shopify:\/\/shop_images\/Month-a5_300x_1.jpg",
+            "month_title_3": "Month 5",
+            "month_title_4": ""
+          }
+        },
+        "298a4e3e-7af6-4bba-9c27-77bd38e7d05c": {
+          "type": "content",
+          "settings": {
+            "name": "Sunil Bhadouriya",
+            "gender": "M",
+            "used_for": "7 Months",
+            "review_on": "9th Apr 2022",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I read about Traya on Quora. I had read reviews on it and they seemed positive so I thought that I would give it a go.  It's helped me so much and I can tell the difference in how much my hair has grown back.",
+            "icon_1": "shopify:\/\/shop_images\/Month_1_3_300x_669c0791-76d3-4cbe-9f8c-7eb09a5cee8e.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Month_5_300x_cd0d7c8c-ddc9-41c2-b84f-78309f3933b9.png",
+            "month_title_2": "Month 5",
+            "icon_3": "shopify:\/\/shop_images\/Month_7_1_300x_18514b4a-141e-43ae-889c-3596cd96ed89.jpg",
+            "month_title_3": "Month 7",
+            "month_title_4": ""
+          }
+        }
+      },
+      "block_order": [
+        "026833cc-e184-488a-abb2-8718b967f5d6",
+        "c20b4ef4-6816-47f8-a5b2-bdc3a21857f5",
+        "3c7966bc-998b-4bf7-9574-70d4dea3ecc5",
+        "298a4e3e-7af6-4bba-9c27-77bd38e7d05c"
+      ],
+      "settings": {
+        "title": "Our Customers",
+        "sub_title": "",
+        "btn_text": "",
+        "btn_link": ""
+      }
+    },
+    "16644404393094bcd4": {
+      "type": "result-doctors-card",
+      "settings": {
+      }
+    },
+    "0461588f-ec61-4969-9c34-ed86945c2d7e": {
+      "type": "buy-now-atc",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16642732012e5f65b5",
+    "1664273324b1385128",
+    "88681d4b-2fce-412f-a708-f55e0f69822e",
+    "16642750938b921f1d",
+    "16644404393094bcd4",
+    "0461588f-ec61-4969-9c34-ed86945c2d7e"
+  ]
+}

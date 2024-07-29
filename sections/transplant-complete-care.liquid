@@ -1,0 +1,55 @@
+<div class="transplant-complete-care p-4" style="background: {{ section.settings.care_bk_color }};">
+  {% if section.settings.Care_heading != blank %}<p class="font-weight-bold text-center transplant-care-heading">{{ section.settings.Care_heading }}</p>{% endif %}
+  <div class="row">
+    {% for block in section.blocks %}
+      {% if block.settings.icon != blank and block.settings.icon-text != blank %}
+        <div class="col-xl-2 col-md-4 col-6">
+          <img src="{{ block.settings.icon | img_url: '160x' }}" class="m-auto d-block">
+          <p class="care-sicon-text font-weight-bold mt-2 text-center">{{ block.settings.icon-text }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Transplant Complete Care",
+    "settings": [
+      {
+        "type": "text",
+        "id": "Care_heading",
+        "label": "Enter Care Heading"
+      },
+      {
+        "type": "color",
+        "id": "care_bk_color",
+        "label": "Select Background Color"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Care Steps",
+        "type": "Steps",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Select Icon"
+          },
+          {
+            "type": "text",
+            "id": "icon-text",
+            "label": "Enter Icon Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Complete Care",
+        "category": "custom"
+      }
+    ]
+  }
+{% endschema %}

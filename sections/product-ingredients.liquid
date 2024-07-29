@@ -1,0 +1,139 @@
+<!-- section/product-ingredients -->
+<div class="container combo-ingredients">
+{% for media in product.media %}
+  {% if media.alt == 'ingredient' %}
+    {% assign image_2 = media %}
+  {% endif %}
+{% endfor %}
+{% render 'image-with-accordion'
+  section: section, 
+  image: section.settings.combo_side_image,
+  product_image: image_2,
+  title: section.settings.ingredients,
+  product_title: product.title,
+  content: section.settings.content,
+  fields: product.metafields.custom.ingredient_fields.value
+  float: section.settings.float,
+  width: section.settings.width,
+  seperate: section.settings.seperate,
+  margin_head: section.settings.margin_head,
+  remove_product_title: section.settings.remove_product_title,
+  content_image_disable: section.settings.content_image_disable,
+  content_image_mob: section.settings.mob_img,
+  desktop: section.settings.desktop,
+  mobile: section.settings.mobile
+%}
+</div>
+{% schema %}
+  {
+    "name": "Product Ingredients",
+    "settings": [
+      {
+        "type": "text",
+        "id": "ingredients",
+        "label": "Ingredients title",
+        "default": "What ingredients does"
+      },
+      {
+        "type": "checkbox",
+        "id": "remove_product_title",
+        "label": "Remove Product Title",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": -10,
+        "max": 90,
+        "step": 1,
+        "unit": "px",
+        "label": "Margin from above section",
+        "default": 0
+      },
+      {
+        "type": "select",
+        "id": "float",
+        "label": "Float",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "text",
+        "id": "combo_side_image",
+        "label": "Side Image"
+      },
+      {
+        "type": "text",
+        "id": "content",
+        "label": "Content"
+      },
+      {
+        "type": "checkbox",
+        "id": "image_first",
+        "label": "Image in Top",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "seperate",
+        "label": "Seperate Head",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "margin_head",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Heading Bottom Margin",
+        "default": 0
+      },
+      {
+        "type": "checkbox",
+        "id": "content_image_disable",
+        "label": "Remove Content Image",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "mob_img",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "desktop",
+        "label": "Desktop",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "mobile",
+        "label": "Mobile",
+        "default": false
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Ingredients"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  @media (min-width: 768px){
+    .combo-ingredients{
+      margin-top: {{ section.settings.margin_top }}px;
+    }
+  }
+</style>

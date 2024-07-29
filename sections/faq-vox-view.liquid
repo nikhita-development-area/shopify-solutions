@@ -1,0 +1,290 @@
+<div class="{% if template == 'index.login' %}login_space{% endif %} main-faqbox" page_type="normal">
+<div class="our-experts stage-faq"> <!-- Stage 2 and Stage 3 Changes Added Class (stage-faq) -->
+  <div class="container doctors-section">
+     {% if template == 'index.login' %}
+    <p class="login-heading">FAQ</p>
+    {% else %}
+    <div class="maintitle">
+      <h2 class="text-center mb-4">{{ section.settings.title }}</h2>
+      </div>
+    {% endif %}
+      <div class="row faq-boxview  mb-3">
+        {%- for block in section.blocks -%}
+          {% if block.settings.bgimage != blank %}
+          <div class="faqbox" data-toggle="modal" data-target="#button-pop{{ forloop.index }}">
+            <img src="{{ block.settings.bgimage | img_url:'' }}" class="w-100">
+            <div class="faqbox-details">
+              <div class="flex-fill tooltip">
+                {% if block.settings.question != blank %}
+                  <h6 class="font-weight-bold" data-toggle="modal">{{ block.settings.question }}</h6>
+                {% endif %}
+              </div>
+            </div>
+            <p class="readmore" >
+              Read more
+              <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.67607 2.16444C6.76689 2.07362 6.76689 1.92638 6.67607 1.83556L5.19608 0.355566C5.10526 0.264746 4.95801 0.264746 4.86719 0.355566C4.77637 0.446385 4.77637 0.593633 4.86719 0.684453L6.18274 2L4.86719 3.31555C4.77637 3.40637 4.77637 3.55361 4.86719 3.64443C4.95801 3.73525 5.10526 3.73525 5.19608 3.64443L6.67607 2.16444ZM0 2.23256H6.51163V1.76744H0V2.23256Z" fill="#414042"/>
+              </svg>
+            </p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{%- for block in section.blocks -%}
+ <div class="modal fade" id="button-pop{{ forloop.index }}" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+           <h5 class="font-weight-bold">{{ block.settings.question }}</h5>
+          <button type="button" class="close" data-dismiss="modal">X</button>
+        </div>
+        <div class="modal-body">
+         <p>{{ block.settings.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+<script>
+  jQuery(document).ready(function($) {
+      $('.faq-boxview').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        // autoplay: true, // Stage 2 and Stage 3 Changes
+        // autoplaySpeed: 3000, // Stage 2 and Stage 3 Changes
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
+        responsive: [
+            {
+           breakpoint: 1080,
+           settings: {
+              centerMode: true,
+              arrows: false,
+              slidesToShow: 3,
+              slidesToScroll: 1
+           }
+        },
+          {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+            dots: false,
+            slidesToScroll: 1
+          }
+        },
+        {
+           breakpoint: 543,
+           settings: {
+              centerMode: true,
+              arrows: false,
+              dots: false,
+              slidesToShow: 1,
+              slidesToScroll: 1
+           }
+        }
+      ]
+    });
+});
+
+</script>
+{% schema %}
+  {
+    "name": "Faq box view",
+    "settings": [
+       {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+    ],
+    "blocks": [
+    {
+      "type": "faq",
+      "name": "faq",
+      "settings": [
+      
+        {
+          "type": "image_picker",
+          "id": "bgimage",
+          "label": "Back ground Image"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "answer"
+        }
+      ]
+    }
+  ],"presets":[
+        {
+          "name":"Faq box view"
+        }
+      ]
+  }
+{% endschema %}
+{% style %}
+ .main-faqbox .maintitle h2{
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 50px;
+    text-align: center;
+    color: #3f3f3f;
+  }
+  .template-page.female-result .main-faqbox .maintitle h2 { font-size: 45px; font-weight: bold;
+      color: #3e3e3e;}
+   .template-page.result-fe .main-faqbox .maintitle h2{
+      font-family: fredoka_oneregular!important;
+      font-size: 45px;
+      color: #3e3e3e;
+    }
+#shopify-section-template--16070465093810__febe1a76-6dac-449e-b736-3ebb0685f8ee{
+    position: relative;
+}
+.main-faqbox .modal.show .modal-dialog {
+    -webkit-transform: none;
+    top: 20%;
+}
+ .main-faqbox .modal-header h5{
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+.main-faqbox .popup-overlay {
+  visibility: hidden;
+  position: absolute;
+  background: #ffffff;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+}
+
+
+
+
+.main-faqbox .modal-content{
+  border:none;
+}
+ .main-faqbox .readmore{
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-weight: 900;
+    font-size: 14px;
+    text-align: center;
+    color: #414042;
+  }
+ .main-faqbox .tooltip {
+  position: relative;
+  display: inline-block;
+  opacity: 1;
+  margin-right: 0;
+  margin-left: auto;
+  z-index: 2;
+}
+
+ .main-faqbox .faqbox h6{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px !important;
+    color: #414042;
+    padding: 15px;
+    color: #414042;
+  }
+
+ .main-faqbox .faqbox{
+    background-repeat: no-repeat !important;
+    object-fit: cover;
+    margin: 0px 6px;
+    position: relative;
+    cursor:pointer;
+  }
+  .main-faqbox .faqbox-details{
+    position:absolute;
+    top:50%;
+    left:50%; 
+    text-align:center;
+    transform: translateX(-50%) translateY(-50%);
+    background: #F5F5F5;
+    box-shadow: 6.22517px 6.22517px 9.33775px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 215px;
+    border-radius: 9px 9px 9px 0;
+  }
+ .main-faqbox  .our-experts .doctors-section .doctor-img img {
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  .main-faqbox .our-experts .flex-fill h5 {
+    font-size: 20px;
+    letter-spacing: normal;
+  }
+  .main-faqbox .faqbox-details:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #f5f5f5;
+    border-radius: 9px 9px 9px 0;
+    box-sizing: border-box;
+    clip-path: polygon(0% 105%, 0% 0%, 105% 0%, 105% 105%, 43px 105%, 43px 80%, 21px 80%, 21px 105%);
+  }
+  .main-faqbox .faqbox .slick-slide img {
+    display: block;
+    margin: 0 auto;
+}
+.main-faqbox .faqbox-details:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 20px;
+  background: #f5f5f5;
+  top: calc(100% - 1px);
+  left: 0;
+  box-sizing: border-box;
+  clip-path: polygon(0 0, 0% 100%, 100% 0%, calc(100% - 25px) 0, 1px calc(100% - 2px), 1px 0);
+}
+.main-faqbox   .slick-slide img {
+    display: block;
+    margin: 0 auto;
+}
+  @media only screen and (max-width: 767.98px) {
+  .result_doctor_slides:not(.slick-initialized) > .cstm_doctor_div:first-of-type ~ * {
+    display: none;
+  }
+    main-faqbox .readmore {
+      right: 18px;
+    }
+    .main-faqbox .maintitle h2{
+      font-size: 30px;
+      line-height: 35px;
+      color:#000;
+    }
+    .template-page.female-result .main-faqbox .maintitle h2 {      font-size: 24px;
+      line-height: 30.53px;
+      margin-bottom: 20px!important;}
+    .template-page.result-fe .main-faqbox .maintitle h2{
+      font-size: 24px;
+      line-height: 30.53px;
+      margin-bottom: 20px!important;
+      font-family: fredoka_oneregular!important;
+    }
+  }
+{% endstyle %}

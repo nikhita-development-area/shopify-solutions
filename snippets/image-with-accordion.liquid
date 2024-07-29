@@ -1,0 +1,64 @@
+<!-- snippets/image-with-accordion -->
+<div class="image-with-accordion {% unless float == 'left' %}iwa-float{% endunless %}">
+  <div class="seperate-head {% unless seperate %}hidden{% endunless %}" style="margin-bottom:{{ margin_head }}px">
+    <h3 class="combo-title l-0">{{ title }} {% unless remove_product_title %}{{ product_title }}{% endunless %}</h3>
+   {% if content != blank %}
+    <span class="combo-desc-b l-0">{{ content }}</span><br>
+    {% endif %}
+  </div>
+  <div class="combo-side combo-side-img{% if product_image.alt == 'benefit' or product_image.alt == 'faq' %} text-right{% endif %}">
+    {% if image != blank %}
+    <img src="{{ image | escape }}" alt="{{ image | escape }}" class="">
+    {% elsif product_image != blank %}
+    <img src="{{ product_image | img_url: '400x', scale: 2 }}" alt="{{ product_image.alt }}" class="">
+    {% endif %}
+  </div>
+  <div class="combo-side combo-side-text">
+    <div class="iwt-container">
+    <h3 class="combo-title l-0 {% if seperate %}hidden{% endif %}">{{ title }} {% unless remove_product_title %}{{ product_title }}{% endunless %}</h3>
+    <h5 class="combo_p_about-content l-0">
+      <span class="{% if seperate %}hidden{% endif %} l-0">{{ content }}</span><br>
+      <div class="addition-image1-{{ section.id }} {{ product.template_suffix }}">
+        {% if content_image_mob != blank %}
+          <img src="{{ content_image_mob | escape }}" alt="{{ content_image | escape }}" class="single-image" width="{{ width }}%">
+        {% endif %}
+      </div>
+      {% for field in fields %}
+        <div class="iwt-box iwt-box-{{ forloop.index }}">
+          {% assign words = field | split: '->' | first %}
+          <div class="iwt-head">
+            {% for word in words %}
+            <span class="iwt-btn l-0">{{ word }}</span>
+            {% endfor %}
+            <span class="minus combo-btn hidden">-</span>
+            <span class="plus combo-btn">+</span>
+          </div>
+          <div class="iwt-body l-0">
+            {% assign words = field | split: '->' | last %}
+            {% for word in words %}
+              {{ word }}
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  @media (min-width: 768px){
+    .addition-image1-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      {% unless desktop %}
+        display: none;
+      {% endunless %}
+    }
+  }
+  @media (max-width: 768px){
+    .addition-image1-{{ section.id }}{
+      {% unless mobile %}
+        display: none;
+      {% endunless %}
+    }
+  }
+</style>

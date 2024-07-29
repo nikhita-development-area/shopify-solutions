@@ -1,0 +1,191 @@
+<!-- section/banner-hair-doctors.liquid -->
+<div class="hair-doctors-banner-wrapper">
+  <div class="content p-md-3  text-center">
+    {% if blog.title == "hair-doctors" or blog.title == "dermatologist" %}
+    <h1 class="font-weight-bold faq-hd-heading l-0">{{ section.settings.heading | escape }}</h1>
+    {% endif %}
+    <p class="banner_text l-0">{{ section.settings.para }}</p>
+  {% comment %}  <a href="{{ section.settings.btn_url }}" id="hairtestcta" class="assessment-btn btn-dark d-lg-inline-block font-weight-bold px-3 py-2 rounded-lg hair-form-actn-link">{{ section.settings.button }}</a>{% endcomment %}
+  </div>
+  <div class="position-relative banner-hd">
+    {% if section.settings.traya_logo != blank %}
+      <img class="position-absolute rotation_logo d-none d-md-block" src="{{ section.settings.traya_logo | image_url }}" height="" width="" loading="lazy" alt="image" title="image">
+    {% endif %}
+    {% comment %}
+    <p class="position-absolute rotation_text {% if blog.handle == "hair-doctors" %}d-none d-md-block{% endif %}" style="font-size:6px; color: #414042;
+"> *as per internal study conducted on 304 people</p>
+  {% endcomment %}
+      <div class="inner_content  position-absolute">
+        <h2 class="l-0" style="font-weight:800;">{{ section.settings.heading_sec }}</h2>
+        <p class="banner_text l-0" id="hair_doctors_banner">{{ section.settings.para_sec |replace:'%s',length }}</p>
+        {% if section.settings.button and section.settings.btn_url != blank %}
+        <a href="{{ section.settings.btn_url }}" id="hairtestctablogd1" class="assessment-btn btn-dark d-lg-inline-block font-weight-bold px-3 py-2 px-md-5 py-md-3 rounded-lg hair-form-actn-link">{{ section.settings.button }}</a>
+        {% endif %}
+      </div> 
+    {% if  section.settings.image != blank %}
+     <img class="image d-none w-100 d-md-block" src="{{ section.settings.image | image_url }}" height="" width="" loading="lazy" alt="image" title="image">
+    {% endif %}
+    {% if section.settings.image_mob != blank %}
+     <img class="image_mob w-100 d-block d-md-none" src="{{ section.settings.image_mob | image_url }}" height="" width="" loading="lazy" alt="image" title="image">
+    {% endif %}
+  </div>
+
+  <p class="container mt-md-4">{{ section.settings.content }}</p>
+</div>
+{% schema %}
+  {
+    "name": "Banner hair doctors",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "para",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "heading_sec",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "para_sec",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "content",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "button",
+        "label": "Button",
+        "default": "Take Traya’s Hair Test"
+      },
+      {
+        "type":"url",
+        "id":"btn_url",
+        "label":"Button URL"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "traya_logo",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mob",
+        "label": "Mobile image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner hair doctors"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+
+.hair-doctors-banner-wrapper {
+  padding-top:5rem;
+} 
+.hair-doctors-banner-wrapper .content h1 {
+  font-size: 40px;
+} 
+  .content p.banner_text {
+    font-size: 24px;
+}
+.banner-hd .inner_content {
+    top: 56px;
+    left: 50px;
+}
+.banner-hd .inner_content h2 {
+  font-size:32px;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+.banner-hd .inner_content .banner_text{
+  margin-bottom: 10px;
+  padding-left: 6px;
+  font-size:16px;
+}
+.rotation_text
+{
+  bottom: 0;
+  right: 0;
+  rotate: 270deg;
+  transform: rotate(270deg);
+  writing-mode: vertical-lr;
+  text-align: center;
+}
+.rotation_logo {
+  top:10px;
+  right:10px;
+} 
+.hair-doctors-banner-wrapper p.container{
+  font-size: 24px;
+}
+ .hair-transplant .hair-doctors-banner-wrapper {
+    padding-top: 1rem;
+  }
+  
+@media only screen and (max-width: 767px){
+  .hair-transplant .hair-doctors-banner-wrapper {
+    padding-top: 0;
+  }
+}
+@media only screen  and (max-width:576px) {
+  .banner-hd .inner_content {
+    top: 50px;
+    left: 30px;
+    width: 68%;
+  }
+  .banner-hd .inner_content {top: 45px; left: 20px;}
+  .rotation_text {bottom: 18%}
+  .banner-hd .inner_content .banner_text{
+    font-size:14px;
+  }
+  .content p.banner_text {
+    font-size:15px;
+  }
+  .hair-doctors-banner-wrapper p.container{
+  font-size: 12px;
+}  
+  .hair-doctors-banner-wrapper .content h1 {
+  font-size: 28px;
+  } 
+  .banner-hd .inner_content h2 {
+  font-size:24px;
+  margin-bottom: 15px;
+ }
+  .hair-doctors-banner-wrapper {
+    padding-top:3rem;
+  } 
+}
+@media only screen  and (max-width:374px) {
+  .banner-hd .inner_content{
+    top: 50px;
+    left: 30px;
+  }
+  .banner-hd .inner_content h2 {
+    font-size:20px;
+    margin-bottom: 0;
+  }
+  .banner-hd .inner_content {
+        left: 10px;
+  }
+}
+
+</style>

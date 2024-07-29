@@ -1,0 +1,12 @@
+{% assign yhIj = "document.addEventListener('DOMContentLoaded" %}
+{% assign uhJi = "document.addEventListener('asyncLazyLoad" %}
+{% assign kGxh = "if(window.attachEvent)" %}
+{% assign snOi = "document.addEventListener('asyncLazyLoad',function(event){asyncLoad();});if(window.attachEvent)" %}
+{% assign rapp = ", asyncLoad" %}
+{% assign napp = ", function(){}" %}
+{% if template == 'cart' or request.design_mode or template == 'index' %}
+{{ content_for_header | remove : '"https:\/\/dttrk.com\/shopify\/track.js?shop=shumee.myshopify.com",' | remove : '"https:\/\/cdn.judge.me\/assets\/installed.js?shop=shumee.myshopify.com",'| remove : '"\/\/satcb.azureedge.net\/Scripts\/satcb.min.js?shop=shumee.myshopify.com",'| remove : '"https:\/\/instafeed.nfcube.com\/cdn\/ff04638d4bb364b8ff51b8f042108ba5.js?shop=shumee.myshopify.com","\/\/cdn.codeblackbelt.com\/js\/modules\/frequently-bought-together\/main.min.js?shop=shumee.myshopify.com",'}}
+{% else %}
+{{ content_for_header | remove : '"https:\/\/dttrk.com\/shopify\/track.js?shop=shumee.myshopify.com",'| remove : '"\/\/satcb.azureedge.net\/Scripts\/satcb.min.js?shop=shumee.myshopify.com",'| remove : '"https:\/\/instafeed.nfcube.com\/cdn\/ff04638d4bb364b8ff51b8f042108ba5.js?shop=shumee.myshopify.com",' | replace: ' defer="defer" ', ' type="text/lazyload" ' | replace_first: 'data-src', 'src' | replace: yhIj, uhJi | replace: rapp, napp | replace: kGxh, snOi }}
+{% endif %}
+

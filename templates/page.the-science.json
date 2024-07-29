@@ -1,0 +1,96 @@
+{
+  "sections": {
+    "1664541027dfa4dd6b": {
+      "type": "image-banner",
+      "blocks": {
+        "16645410273f1e8fc5-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Threefold Way",
+            "heading_size": "h1"
+          }
+        },
+        "16645410273f1e8fc5-1": {
+          "type": "text",
+          "settings": {
+            "heading1": "Traya's Science-Backed Solutions",
+            "text": "At Traya, we specialise in identifying the root cause of hair loss. Our process is tried and tested, and the results speak for themselves - a hallmark of our scientific approach. Unfortunately, many people assume that hair loss is a temporary phase that will resolve on its own. However, understanding the cause of your hair loss and seeking the right treatment is important. Let us help you get to the bottom of your hair loss and provide you with effective solutions based on sound scientific principles.",
+            "text_style": "subtitle"
+          }
+        },
+        "16645410273f1e8fc5-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "16645410273f1e8fc5-0",
+        "16645410273f1e8fc5-1",
+        "16645410273f1e8fc5-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_74_2x_92513e48-287d-44b0-a05b-f37aa6655177.webp",
+        "mblimage": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_5.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1664092732d9f5793c": {
+      "type": "the-science",
+      "settings": {
+      }
+    },
+    "1664540716590b00c5": {
+      "type": "two-side-images-and-text",
+      "settings": {
+        "regimen_heading1": "TRAYA 2X2 REGIMEN",
+        "image_section1": "shopify:\/\/shop_images\/regimen_578x_0aadc91c-612c-4702-8e03-2599be3276be.webp",
+        "text_content1": "2 min",
+        "text_content2": "twice a day",
+        "paragraphs1": "Follow a simple daily routine. Best results when used for 5 months.",
+        "button_texts1": "GET A HAIR DIAGNOSIS",
+        "button_links1": "https:\/\/form.traya.health\/questions?cohort=1&location=the-science",
+        "regimen_heading2": "TRAYA’S HOLISTIC CURE FOR HAIRLOSS",
+        "image_mobile_view": "shopify:\/\/shop_images\/desktop-01.webp",
+        "sub_heading": "TRAYA’S HOLISTIC PLAN FOR HAIR FALL",
+        "sub_heading_title2": "The Threefold Way",
+        "plus_icon_text": "AYURVEDA<span class=\"text-green mx-2\">+<\/span>DERMATOLOGY<span class=\"text-green mx-2\">+<\/span>NUTRITION",
+        "text_discripion": "Our approach combines the goodness of three sciences. With ingredients from the most authentic sources, we personalize your treatment delivering assured results.",
+        "button_text1": "OUR INGREDIENTS",
+        "mobile_button_link": "",
+        "button_link1": "shopify:\/\/pages\/traya-ingredients",
+        "mobile_button_text": "Quick links"
+      }
+    }
+  },
+  "order": [
+    "1664541027dfa4dd6b",
+    "main",
+    "1664092732d9f5793c",
+    "1664540716590b00c5"
+  ]
+}

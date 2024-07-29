@@ -1,0 +1,142 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "16639215362fc0abc0": {
+      "type": "thankyou-page-section",
+      "disabled": true,
+      "settings": {
+        "thank-text": "Thank you",
+        "thank-content": ""
+      }
+    },
+    "16641821004e9c82ea": {
+      "type": "treatment-journey",
+      "blocks": {
+        "be67d1ee-4a50-4182-b3a6-e8ff3c397e1d": {
+          "type": "Diagnosis",
+          "settings": {
+            "Diagnosis": "Hair and Scalp Condition",
+            "DiagnosisContent": "Hemant was suffering from excessive hair loss and even noticed thinning on the crown. He also had heavy dandruff and an oily scalp.",
+            "icon1": "shopify:\/\/shop_images\/condition01_1_1.png",
+            "iconText1": "Digestion",
+            "icon2": "shopify:\/\/shop_images\/condition02_1.png",
+            "iconText2": "Stage 3",
+            "icon3": "shopify:\/\/shop_images\/condition03_1.png",
+            "iconText3": "Dandruff"
+          }
+        },
+        "26c7fd51-663b-4855-81b5-8373094d83ab": {
+          "type": "Doctors",
+          "settings": {
+            "PublicationsContent": "",
+            "doctorImg": "shopify:\/\/shop_images\/doctor01_4fa02dbc-428d-4707-b947-95aa0ff5b19d.png",
+            "doctorName": "Dr. Jaspreet Sarna",
+            "doctorcontent": "\"The biggest misconception is that dandruff is caused by dryness. Whereas it's actually due to oily scalp and people should actually avoid oiling in case of dandreff.\nThis goes to show dangerous a lack of awareness can be.\""
+          }
+        }
+      },
+      "block_order": [
+        "be67d1ee-4a50-4182-b3a6-e8ff3c397e1d",
+        "26c7fd51-663b-4855-81b5-8373094d83ab"
+      ],
+      "settings": {
+        "heading_TJ": "Hemant’s Hair Loss Treatment Journey",
+        "userScalp": "shopify:\/\/shop_images\/hemant01_db7f5da8-75f0-408a-ac98-802f7902d421.jpg"
+      }
+    },
+    "16641821169e77dd3f": {
+      "type": "journey-recommended",
+      "blocks": {
+        "53bacae7-608b-45d5-88fc-80b304175f4a": {
+          "type": "scalpimg",
+          "settings": {
+            "month1": "Month 1",
+            "scalp-img1": "shopify:\/\/shop_images\/Month-c1_ef760c2c-ddd2-4287-b9c3-520fa597653e.jpg",
+            "month2": "Month 4",
+            "scalp-img2": "shopify:\/\/shop_images\/Month-c3_cf3d20f4-c008-4a02-8a65-fd06719653d0.jpg",
+            "month3": "Month 8",
+            "scalp-img3": "shopify:\/\/shop_images\/Month-c4_cb535136-1594-4b55-a581-584a74012f4f.jpg"
+          }
+        },
+        "fe66e455-b88b-4929-b9b8-1095173bbfd3": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "1. Minoxidil 2%"
+          }
+        },
+        "c6232e9a-1f85-4af2-89bb-909d65319d94": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "2. Ghirt nasal drop"
+          }
+        },
+        "d5247440-2acd-4ca0-9625-8d0c7af267b6": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "3. Gut shuddhi"
+          }
+        },
+        "9626a3ba-7e29-4296-8fa5-25855bdd9c5a": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "4. Scalp oil"
+          }
+        },
+        "8f470b61-d472-43fb-81f8-fc948dc32725": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "5. Anti-Dandruff Shampoo"
+          }
+        },
+        "12a1f5e6-a894-4b6a-9f2c-9c170cacfbe0": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "6. Hair ras"
+          }
+        },
+        "6914304a-abaa-4d1a-b25d-34fb97857308": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "7. Free diet plan"
+          }
+        },
+        "9544ede6-fc64-4688-bb33-22c2d95cb453": {
+          "type": "text",
+          "settings": {
+            "treatmenttext": "8. Assigned hair coach"
+          }
+        }
+      },
+      "block_order": [
+        "53bacae7-608b-45d5-88fc-80b304175f4a",
+        "fe66e455-b88b-4929-b9b8-1095173bbfd3",
+        "c6232e9a-1f85-4af2-89bb-909d65319d94",
+        "d5247440-2acd-4ca0-9625-8d0c7af267b6",
+        "9626a3ba-7e29-4296-8fa5-25855bdd9c5a",
+        "8f470b61-d472-43fb-81f8-fc948dc32725",
+        "12a1f5e6-a894-4b6a-9f2c-9c170cacfbe0",
+        "6914304a-abaa-4d1a-b25d-34fb97857308",
+        "9544ede6-fc64-4688-bb33-22c2d95cb453"
+      ],
+      "settings": {
+        "plantitle": "Traya’s Recommended Plan",
+        "planimg": "shopify:\/\/shop_images\/plan-img_6ad2aa7c-aba5-49fa-b861-b808180378d9.jpg",
+        "plancontent": "In just one month, I found that my energy levels had improved. What I also noticed that after consistently following the recommended diet, my overall health is better.",
+        "customisedtitle": "What was Hemant’s Customised Treatment Plan?",
+        "allmonthtitle": "Result seen in 8 months"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16639215362fc0abc0",
+    "16641821004e9c82ea",
+    "16641821169e77dd3f"
+  ]
+}

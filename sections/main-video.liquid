@@ -1,0 +1,260 @@
+<div class=" native-bg-image position-relative min__section main-videosection">
+    <div id="videoid" class="page-width">
+      <div class="videopadding text-center">
+      {% if section.settings.videourl != blank %}
+        <div class="native-video">
+          <video width="100%" height="auto" class="vid rounded-lg text-center main-native-videoimg" poster="{{ section.settings.coach_image_desktop | img_url:'' }}" >
+          <source src="{{ section.settings.videourl }}" type="video/mp4">
+          </video>
+          <i id="btn" class="fa fa-play fa-5x"></i>
+        </div>
+      {% endif %}
+      </div>
+  </div>
+</div>
+
+
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<script>var playPause = document.getElementById('videoid');
+  var playPause1 = document.getElementById('btn');
+var vid = document.querySelector('.vid');
+
+playPause.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (!vid.paused) {
+        vid.pause();
+      } else {
+        vid.play();
+      }
+      playPause1.classList.toggle('fa-play');
+      playPause1.classList.toggle('fa-pause');
+      return false;
+    }, false);</script>
+    
+    <script>
+      
+      var playPauses = document.getElementById('btns');
+var vids = document.querySelector('.vids');
+
+playPauses.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (!vids.paused) {
+        vids.pause();
+      } else {
+        vids.play();
+      }
+      playPauses.classList.toggle('fa-play');
+      playPauses.classList.toggle('fa-pause');
+      return false;
+    }, false);</script>
+<style>
+  
+   @media only screen and (max-width: 768px) and (min-width: 992px) {
+     .native-heading h3 {
+    font-size: 30px !important;
+}
+     .native-heading h4 {
+    font-size: 20px !important;
+}
+   }
+  
+  .native-bg-image img {
+    max-width: 100%;
+    width: 100%;
+}
+  .native-video {
+    position: relative;
+}
+  .native .fa-play:before {
+    font-size: 25px;
+    color: #b7d641;
+    background: #638064;
+    padding: 12px 12px 12px 16px;
+    border-radius: 50px;
+}
+   .native .fa-pause:before {
+    font-size: 25px;
+    color: #b7d641;
+    background: #638064;
+    padding: 12px 12px 12px 16px;
+    border-radius: 50px;
+}
+
+  .native #btn {
+    pointer-events: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+  .native #btns {
+    pointer-events: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+  .native-bg-image.position-relative.min__section {
+    position: relative;
+}
+  .native-heading {
+    width: 50%;
+    position: relative;
+}
+  .native-main-banner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -43%);
+    display: flex;
+    justify-content: space-around;
+        align-items: center;
+}
+   .bg-section-mob{
+      display:block;
+    }
+   .bg-section-desk{
+      display:none;
+    }
+  @media screen and (min-width: 768px) {
+    .bg-section-desk{
+      display:block;
+    }
+    .main-native-videoimg{width:85%;}
+    #videoid{padding:20px;}
+     .bg-section-mob{
+      display:none;
+    }
+    .native-heading h3 {
+    font-size: 55px;
+    color: #3F3F3F;
+    margin: 0;
+    line-height: 1.2;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+    .native-video {
+    width: 100%;
+}
+.native-heading {
+    width: 100%;
+    position: relative;
+}
+    .videopadding{
+      padding:0 30px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    h3.text_Fredoka {
+      font-size: 22px !important;
+    }
+    .native-heading h4:before {
+      margin-bottom: 15px !important;
+    }
+    .native-heading h4:before {
+        font-size: 18px !important;
+        margin-bottom: 10px !important;
+        width: 60.7px;
+        height: 6px;
+    }
+    .native-heading h4 {
+      font-size: 18px !important;
+      margin-bottom: 10px !important;
+    }
+  .native-main-banner {
+    display: block !important;
+    padding-top: 50px;
+  }
+   .native-video {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+  .native-heading {
+    width: 100% !important;
+    position: relative;
+    margin-top: 0;
+  }
+  .main-videosection .native-video #btn {
+    position: absolute;
+    left: 15px !important;
+    font-size: 25px !important;
+    top: 10px !important;
+  }
+}
+  .native-heading h4 {
+    font-size: 27px;
+    margin-top: 0;
+    padding-top: 0;
+    color: #3F3F3F;
+    font-weight: 600;
+}
+  .native-heading h4:before{
+      content: " ";
+    width: 102.7px;
+    height: 8px;
+    border-radius: 4px;
+    left: 0;
+    display: block;
+    position: relative;
+    background: #414042;
+    margin-bottom: 30px;
+  }
+  .main-videosection .native-video .fa-play:before {
+    content: "\f04b";
+    color: #ff0000;
+}
+  .main-videosection .native-video .fa-pause:before {
+    color: #ff0000;
+}
+.main-videosection .native-video #btn{
+    position: absolute;
+        left: 30px;
+    font-size: 37px !important;
+    top:25px;
+  }
+  .main-videosection .native-video .fa-play:before{
+    display:none;
+  }
+  .main-videosection .native-video .fa-pause:before{
+    display:none;
+  }
+</style>
+
+{% schema %}
+   {
+    "name": "Main Video",
+     "settings": [
+          {
+          "id": "heading_regimen",
+          "type": "text",
+          "label": "Regimen heading"
+          },
+          {
+          "id": "subheading_regimen",
+          "type": "html",
+          "label": "Regimen Subheading"
+          },
+       
+     
+          {
+          "id": "coach_image_desktop",
+          "type": "image_picker",
+          "label": "Image Desktop"
+          },
+          {
+          "id": "videourl",
+          "type": "text",
+          "label": "video url"
+          }
+       
+  ],
+          "presets":[
+          {
+          "name":"Main Video",
+          "category":"video"
+          }
+      ]
+  }
+
+{% endschema %}

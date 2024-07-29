@@ -1,0 +1,176 @@
+{
+  "sections": {
+    "login_banner_revamp": {
+      "type": "login_banner_revamp",
+      "settings": {
+      }
+    },
+    "c164d883-f111-4a90-b21a-062f0afb5b8a": {
+      "type": "after-login-traya-journey",
+      "blocks": {
+        "d70b4951-ca03-400f-ba4a-7d57299a73a9": {
+          "type": "text",
+          "settings": {
+            "des-img": "shopify:\/\/shop_images\/Group_7957_1.png",
+            "monthdesc": "Fix dandruff,<br>digestion issues."
+          }
+        },
+        "e07814aa-9360-4162-bb7c-0977b7dc3bbc": {
+          "type": "text",
+          "settings": {
+            "des-img": "shopify:\/\/shop_images\/Group_7958_00cf7ca5-1008-4e02-9dd3-e3211f56db3d.png",
+            "monthdesc": "Traya works on sleep, stress and other internal factors."
+          }
+        },
+        "d2bca64c-7dc8-45eb-8c42-078012018d74": {
+          "type": "text",
+          "settings": {
+            "des-img": "shopify:\/\/shop_images\/mon3_28add6fc-b9fd-48b2-8f9b-534b88d5904b.png",
+            "monthdesc": "You will notice significant reduction in hairfall"
+          }
+        },
+        "e142688b-9c86-4a4b-b12f-d1e835315f80": {
+          "type": "text",
+          "settings": {
+            "des-img": "shopify:\/\/shop_images\/mon4_187f249e-1c4c-4dc2-9ba9-0eb47ad3da46.png",
+            "monthdesc": "Your first hair cycle will end, you will see new thick hair soon"
+          }
+        },
+        "70aedea2-0dd6-4212-ae00-76d84c6441e6": {
+          "type": "text",
+          "settings": {
+            "des-img": "shopify:\/\/shop_images\/mon5_a9326f11-92e5-41c7-9ffc-966c7a7ce43d.png",
+            "monthdesc": "Based on stage and age, you should see hair growth results."
+          }
+        }
+      },
+      "block_order": [
+        "d70b4951-ca03-400f-ba4a-7d57299a73a9",
+        "e07814aa-9360-4162-bb7c-0977b7dc3bbc",
+        "d2bca64c-7dc8-45eb-8c42-078012018d74",
+        "e142688b-9c86-4a4b-b12f-d1e835315f80",
+        "70aedea2-0dd6-4212-ae00-76d84c6441e6"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Your Journey",
+        "mob-heading": ""
+      }
+    },
+    "e7ea81ff-baa8-4a34-804b-b9f12d696bdb": {
+      "type": "after-login-journey",
+      "settings": {
+        "heading": "",
+        "mob-heading": ""
+      }
+    },
+    "1664514446420a4dc0": {
+      "type": "ThreeFold-Way",
+      "settings": {
+        "three_fold_bk_image": "shopify:\/\/shop_images\/Frame_102353347.jpg",
+        "three_fold_heading": "How does traya work?",
+        "subheading": "TRAYA’S HOLISTIC PLAN FOR HAIR FALL",
+        "content__ways": "93% saw results*",
+        "description": "Our approach combines the goodness of three sciences- <span>Ayurveda + Dermatology + Nutrition.<\/span> With ingredients from the most authentic sarces, we personalize your treatment delivering assured results.",
+        "linkb": "",
+        "sidelinktext": ""
+      }
+    },
+    "88681d4b-2fce-412f-a708-f55e0f69822e": {
+      "type": "login-result-product",
+      "settings": {
+      }
+    },
+    "be666c9c-d195-43ae-a37b-4a157b2e4a97": {
+      "type": "lead-login-steps",
+      "settings": {
+      }
+    },
+    "1663323783cfd4f66b": {
+      "type": "swirl-video",
+      "settings": {
+        "heading": "",
+        "html_area": "<div id=\"swirl-short-videos\" data-code=\"hnl8qkiv\" data-sw=\"1\"><\/div>\n<div class=\"swirl-short-videos-M\" data-playlist=\"ealhzF\"><\/div>"
+      }
+    },
+    "16636706668563a592": {
+      "type": "safe-and-scientific",
+      "blocks": {
+        "3fe50d26-295f-469c-b7d1-f0cd34f9df3b": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/5_160x160_2x_0655b24d-b117-4414-9805-bb4479ad0497.png",
+            "traya-section1": "NON TOXIC"
+          }
+        },
+        "580659f4-2d98-48f5-bde8-bc798959f633": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/4_160x160_2x_1ef020f3-91cc-4294-9772-5c26bdfab185.png",
+            "traya-section1": "MADE SAFE"
+          }
+        },
+        "0a8b019c-ea4d-40c7-8cfa-1e4e0cbe7c8a": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/1_160x160_2x_67a92c25-0d11-4926-8714-a92ffc12d895.png",
+            "traya-section1": "ALLERGEN FREE"
+          }
+        },
+        "17b04d70-0dbd-4344-8ac4-a94a229735a9": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/6_160x160_2x_23426d74-cc6c-4a07-8ab8-8ec67b220739.png",
+            "traya-section1": "VEGAN FRIENDLY"
+          }
+        },
+        "d56c012b-1538-4542-b03a-1d2a8c7f3067": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/2_160x160_2x_346bc741-839a-480a-9586-57997113b166.png",
+            "traya-section1": "CRUELTY FREE"
+          }
+        },
+        "733e1436-b787-474f-aa93-347049694c94": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/3_160x160_2x_9ffefbca-b670-4f20-accd-6ecc04dc9718.png",
+            "traya-section1": "DOCTOR RECOMMENDED"
+          }
+        }
+      },
+      "block_order": [
+        "3fe50d26-295f-469c-b7d1-f0cd34f9df3b",
+        "580659f4-2d98-48f5-bde8-bc798959f633",
+        "0a8b019c-ea4d-40c7-8cfa-1e4e0cbe7c8a",
+        "17b04d70-0dbd-4344-8ac4-a94a229735a9",
+        "d56c012b-1538-4542-b03a-1d2a8c7f3067",
+        "733e1436-b787-474f-aa93-347049694c94"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "title": "Safe And Scientific",
+        "slider_transplant": "shopify:\/\/shop_images\/Banner_ccef4480-bd57-4e2c-b58a-876854ac2b8c.png",
+        "mobile_view": "shopify:\/\/shop_images\/Male-Safe_Scientific-mobile_1.webp"
+      }
+    },
+    "b7590f17-c1bf-4610-b913-b251e0f0dc43": {
+      "type": "we-are-here-to-help-you",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "login_banner_revamp",
+    "c164d883-f111-4a90-b21a-062f0afb5b8a",
+    "e7ea81ff-baa8-4a34-804b-b9f12d696bdb",
+    "1664514446420a4dc0",
+    "88681d4b-2fce-412f-a708-f55e0f69822e",
+    "be666c9c-d195-43ae-a37b-4a157b2e4a97",
+    "1663323783cfd4f66b",
+    "16636706668563a592",
+    "b7590f17-c1bf-4610-b913-b251e0f0dc43"
+  ]
+}

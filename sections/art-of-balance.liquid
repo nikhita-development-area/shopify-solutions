@@ -1,0 +1,120 @@
+<div class="container section-{{ section.id }}-padding">
+  {% if section.settings.desktop_heading != blank and section.settings.mobile_heading != blank %}
+    <div>
+      <p class="text-center art_balance_heading pb-3 d-none d-md-block m-0">{{ section.settings.desktop_heading }}</p>
+      <p class="text-center art_balance_heading pb-3 d-md-none m-0">{{ section.settings.mobile_heading }}</p>
+    </div>
+  {% endif %}
+  <div class="d-flex flex-wrap justify-content-center">
+    <div class="col-lg-9 pb-md-4 pb-3 px-md-2 px-0">
+      {% if section.settings.text_1 != blank %}<p class="text-center art_balance_description m-0">{{ section.settings.text_1 }}</p>{% endif %}
+    </div>
+    <div class="col-lg-11 pb-md-5 pb-4 px-md-2 px-0">
+      {% if section.settings.text_2 != blank %}<p class="text-center art_balance_description m-0">{{ section.settings.text_2 }}</p>{% endif %}
+    </div>
+    {% if section.settings.image != blank %}
+      <div class="col-12">
+        {{ section.settings.image | image_url: width: 1100 | image_tag: width: '1100', height: '460', alt: section.settings.image.alt, title: section.settings.image.alt, loading: 'lazy', class: 'art_balance_image' }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Art Of Balance",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "desktop_heading",
+        "label": "Enter Heading",
+        "info": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "mobile_heading",
+        "label": "Enter Heading",
+        "info": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "text_1",
+        "label": "Enter First Text",
+        "info": "First Text"
+      },
+      {
+        "type": "text",
+        "id": "text_2",
+        "label": "Enter Second Text",
+        "info": "Second Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Select Image",
+        "info": "Image"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 0
+      }
+    ],
+    "presets": [
+      {
+        "name": "Art Of Balance"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  #shopify-section-{{ section.id }} .art_balance_heading {font-size: 48px;line-height: 65.47px;font-weight: 800;}
+  #shopify-section-{{ section.id }} .art_balance_description {font-size: 20px;line-height: 30px;font-weight: 300;}
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    #shopify-section-{{ section.id }} .art_balance_heading {font-size: 42px;line-height: 55.47px;}
+    #shopify-section-{{ section.id }} .art_balance_description {font-size: 18px;line-height: 28px;}
+    #shopify-section-{{ section.id }} .art_balance_image {width: 100%;height: 100%;}
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .art_balance_heading {font-size: 39px;line-height: 45.47px;}
+    #shopify-section-{{ section.id }} .art_balance_description {font-size: 16px;line-height: 26px;}
+    #shopify-section-{{ section.id }} .art_balance_image {width: 100%;height: 100%;}
+  }
+  @media only screen and (max-width: 767.98px) {
+    #shopify-section-{{ section.id }} .art_balance_heading {font-size: 20px;line-height: 27.28px;font-weight: 900;}
+    #shopify-section-{{ section.id }} .art_balance_description {font-size: 12px;line-height: 15.18px;}
+    #shopify-section-{{ section.id }} .art_balance_image {width: 100%;height: 100%;}
+  }
+{% endstyle %}

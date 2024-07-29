@@ -1,0 +1,521 @@
+{% comment %}theme-check-disable UndefinedObject{% endcomment %}
+
+{% comment %}
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-payment.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-social.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'disclosure.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-list-social.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
+{% endcomment %}
+{% style %}
+.footer_top_copy p {color: #fff !important; font-size: 12px;}
+li.whatsapp-list-icon {list-style: none;}
+.d-block.d-md-none.col-md-6.footer_contact_info {width: 99% !important;}
+ul.footer_security_badge {width: 100% !important;}
+.main-footer__hr {border-bottom: 1px solid {{ section.settings.color_footer_bg | color_darken: 10 }};} 
+.main-footer p,.main-footer__linklist-item a,.main-footer__rte a,.main-footer h4,.main-footer small,.main-footer__copyright-content a,.main-footer__newsletter-error,.main-footer__social-icons .social-icons__link {color: {{ section.settings.color_footer_text }};}
+.main-footer {color: {{ section.settings.color_footer_text }};background-color: {{ section.settings.color_footer_bg }};}
+.main-footer__rte a {border-bottom: 1px solid {{ section.settings.color_footer_text }};}
+.main-footer__rte a:hover,.main-footer__linklist-item a:hover,.main-footer__copyright-content a:hover {color: {{ footer_text_color_hover }};border-bottom: 1px solid {{ footer_text_color_hover }};}
+.main-footer__social-icons .social-icons__link:hover {color: {{ footer_text_color_hover }};}
+.googleappple-icon{margin:0 0 0;display: flex;}
+.googleappple-icon a {padding: 0 5px;}
+@media(min-width:767.98px){
+.col-md-6.footer_bottom_copy {flex: 0 0 100%;max-width: 100%;}
+.col-5.col-md-6.footer_social_whatsapp p {font-size: 16px;}
+ul.footer_security_badge li p span {font-size: 16px;}
+.col-md-6.footer-logo.order-md-first {order: initial !important;margin-bottom: 30px;}
+.col-md-6.google_footer_icons h4 {color: #fff;font-size: 18px;text-transform: uppercase;}
+.footer_top_details {display: flex;position: relative;width: 100% !important;color: #fff;align-items: center;}
+.col-md-12.googleappple-icon {display:block;}
+.f-s-icon-list {height: unset; width: unset; margin: 0 7px;}
+}
+@media(max-width:767.98px){
+body.gradient.template-product .footer_bottom_part {padding-bottom: 60px;}
+li.whatsapp-list-icon {list-style: none;justify-content: flex-end;align-items: flex-end !important;display: flex;}
+.main-footer li.f-s-icon-list svg {width: 20px;height: 20px;}
+.main-footer li.f-s-icon-list svg path{fill:#414042;}  
+.main-footer li.f-s-icon-list svg path.fill-you{fill:#fff;} 
+ul.footer_security_badge {margin-bottom: 30px;}
+.col-md-6.footer_social_bottom {text-align: left !important;}
+.main-footer .fsocial-icon {justify-content: left !important;align-items: baseline !important;margin: 0 !important;margin-top: 17px !important;}
+.col-md-12.footer_bottom_part {padding-left: 5px;padding-right: 5px;padding-top: 20px !important;}
+.col-md-6.footer_social_bottom p {font-size: 13px !important;}
+ul.footer_security_badge li svg {margin-right: 5px !important;width: 40px;height: 40px;}
+ul.footer_security_badge li p span {font-size: 12px;}
+.col-md-6.footer_social_whatsapp, .col-md-6.footer_social_bottom {text-align: center;padding: 0;}
+.col-md-6.google_footer_icons h4 {color: #fff; font-size: 16px; text-transform: uppercase; letter-spacing: 0em; font-weight: 700;}
+.footer-lower p, .footer-lower h4, .col-md-6.footer_top_copy h4, .col-md-6.footer_top_copy p  {color: #fff; font-size: 12px;}
+.col-md-6.footer-logo.order-md-first {order: initial !important;margin-bottom: 30px;}
+.col-4.col-md-4.footer-links.footer_links_legal {padding-left: 30px;}
+.col-4.col-md-4.footer-links {flex: 0 0 48% !important;max-width: 100% !important;}
+.googleappple-icon img {max-width: 100% !important;}
+#footer .footer-top {padding: 20px 0 0;}
+}
+.footer-lower {background: #656565;padding: 30px 0;}
+ul.footer_security_badge li svg {margin-right: 15px;}
+.col-md-12.footer_bottom_part {background: #fff;padding-top: 30px;padding-bottom: 10px;}
+ul.footer_security_badge {list-style: none;display: flex;width: 100%;justify-content: space-between;}
+ul.footer_security_badge li {list-style: none;display: flex;justify-content: space-between;align-items: center;}
+li.whatsapp-list-icon svg {margin-bottom: 10px;}
+.col-md-6.footer_social_whatsapp {text-align: center;}
+.col-md-6.footer_social_bottom p {font-size: 16px;line-height: 14px;}
+.main-footer .fsocial-icon {justify-content: center !important;align-items: center;}
+.col-md-6.footer_social_bottom {text-align: center;}
+.f-menu-D {font-size: 14px; font-weight: 800; margin-bottom: 20px !important;}
+#footer .footer-top {padding: 20px 0 20px !important; border-bottom: 1px solid #fff;}
+.footer-top .row {justify-content: center;}
+.googleappple-icon img {max-width: 152px;}
+li.f-menu a, li.f-menu-c a {font-size: 14px; font-weight: 300;}
+li.f-menu, li.f-menu-c {margin-bottom: 10px;letter-spacing: normal;}
+.pSearch-link>a {font-size: 14px !important;}
+ul.footer_security_badge li p span {width: 100%;display: block;color: #656465;font-weight: 600;}
+{% endstyle %}
+
+<footer class="main-footer site-footer" id="footer"  role="contentinfo" data-section-id="{{ section.id }}" data-section-type="footer-section">
+  {% unless page.handle contains 'result' %}
+  {% unless page.handle == 'result4-he' or page.handle == 'home-v3' or page.handle contains 'cholesterol' %}
+    <div class ="footer-top d-md-none">
+      <div class="container">
+        <div class="row">
+          <div class="footer_top_details">
+            <div class="col-md-6 google_footer_icons">
+              <h4 class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="23" viewBox="0 0 14 23" fill="none">
+                  <path d="M11.0295 0.000167411H2.43948C1.09359 0.000167411 0 1.09072 0 2.43287V19.7926C0 21.1347 1.09359 22.2253 2.43948 22.2253H11.0274C12.3733 22.2253 13.4669 21.1347 13.4669 19.7926V2.43287C13.4694 1.09055 12.3733 0 11.0299 0L11.0295 0.000167411ZM9.2359 0.69602L8.9439 1.48312H4.52504L4.23304 0.69602H9.2359ZM12.7714 19.7927C12.7714 20.75 11.9895 21.5297 11.0295 21.5297H2.43948C1.47953 21.5297 0.697623 20.75 0.697623 19.7927V2.43304C0.697623 1.47575 1.47953 0.69602 2.43948 0.69602H3.49093L3.95607 1.95186C4.00558 2.08757 4.13674 2.1788 4.28266 2.1788H9.18881C9.33473 2.1788 9.4659 2.08757 9.51541 1.95186L9.98055 0.69602H11.0295C11.9895 0.69602 12.7714 1.47575 12.7714 2.43304L12.7714 19.7927ZM9.2482 20.2196C9.2482 20.4121 9.09228 20.5675 8.8993 20.5675H4.56733C4.37435 20.5675 4.21843 20.4121 4.21843 20.2196C4.21843 20.0272 4.37681 19.8717 4.56733 19.8717H8.89972C9.09253 19.8717 9.24845 20.0272 9.24845 20.2196H9.2482Z" fill="white"/>
+                </svg>
+                Experience the Traya Mobile App
+              </h4>
+                  
+              <div class="googleappple-icon">
+                <a href="https://trayahealth.app.link/xT3UrtZDvyb"><img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Mask_group_2593bbc5-946a-4823-a239-0496ee7b2114.png?v=1695709843"  alt="image" title="image" width="100%" height="100%" loading="lazy"></a>
+                <a href="https://trayahealth.app.link/xT3UrtZDvyb"><img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Mask_group_1_feb7f83c-9cd6-4548-8db5-6b697f4f599a.png?v=1695709843" alt="image" title="image" width="100%" height="100%" loading="lazy"></a>              
+              </div>
+            </div>
+                  
+            <div class="col-md-6 d-none d-md-block footer_top_copy">
+              <p style="line-height: 1.26; opacity: 0.7;">{{ section.settings.titles }}</p>
+              <p class="mb-2" style="line-height: 1.26; opacity: 0.7;">{{ section.settings.title-1 }}</p> 
+              <p style="line-height: 1.26; opacity: 0.7;"><strong>Registered Office:</strong> C67 P1, Fortune Hotel Galaxy,Koparli R, GIDC, Vapi, Gujarat - 396195</p>
+            </div>
+          </div>
+
+          {% comment %}
+          <div class="col-md-12 d-none d-md-none">   
+            <div class="pSearch-Title">POPULAR SEARCH</div>
+            <div class="pSearch-link">
+              <a href="/blogs/hair-care/top-10-reasons-for-losing-hair">Reasons For Hair Fall</a>
+              <a href="/blogs/hair-care/how-the-best-customised-hair-regrowth-oil-is-made">Hair Growth Oil</a>
+              <a href="/blogs/hair-care/stop-hair-loss-and-reduce-pitta-dosha">How To Stop Hair Fall</a>
+              <a href="/blogs/hair-care/dandruff-vs-dry-scalp">Dandruff Vs Dry Scalp</a>
+              <a href="/blogs/hair-care/foods-for-hair-growth">Food For Hair Growth</a>
+              <a href="/blogs/hair-care/a-hair-loss-treatment-that-also-fixes-your-health">Hair Loss Treatment</a>
+              <a href="/blogs/hair-care/minoxidil-for-hair">What Is Minoxidil</a>
+              <a href="/blogs/hair-care/nasya-treatment-for-better-health">Nasya Treatment</a>
+              <a href="/blogs/hair-care/how-to-prevent-grey-hair-and-hair-loss-due-to-scalp-ageing">How To Stop White Hair</a>
+              <a href="/blogs/hair-care/the-benefits-of-yashtimadhu-for-hair-growth">Yashtimadhu Uses</a>
+              <a href="/blogs/hair-care/bhringraj-hair-oil">Bhringraj Hair Oil</a>
+              <a href="/blogs/hair-care/how-can-i-thicken-my-hair-help-it-grow-long">How Can I Thicken My Hair</a>
+              <a href="/blogs/hair-care/rice-water-for-hair">Rice Water For Hair</a>
+              <a href="/blogs/hair-care/how-to-strengthen-your-hair">How To Strengthen Hair</a>             
+              <a href="/blogs/hair-care/shatavari-for-hair">Shatavari For Hair</a>              
+              <a href="/blogs/hair-care/clove-benefits">Clove Benefits</a>              
+              <a href="/blogs/hair-care/12-ayurvedic-herbs-and-how-to-use-them-for-hair-loss">Ayurvedic Herbs For Hair Growth</a>              
+              <a href="/blogs/hair-care/how-to-reduce-hair-loss-with-ayurvedic-treatment-and-natural-homemade-remedies">Ayurvedic Treatment For Hair Fall</a>              
+              <a href="/products/scalp-oil-with-growth-therapy-booster-shots">Herbal Hair Oil</a>              
+              <a href="/products/anti-dandruff-shampoo">Anti-dandruff Shampoo</a>
+              <a href="/blogs/hair-care/redensyl-vs-minoxidil-which-one-is-better"> Redensyl vs Minoxidil </a>
+            </div>
+          </div>
+          {% endcomment %}
+        </div>
+      </div>
+    </div>
+  {% endunless %}
+  
+  <div class="footer-lower">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          {% if section.settings.logoimage-1 != blank  %}
+          <div class="cstm_footer_logo d-md-none mb-4">
+            <a href="{% if page.handle == 'cholesterol' %}/pages/cholesterol{% else %}/{% endif %}"><img class=" ls-is-cached lazyloaded" data-src="{{ section.settings.logoimage-1 | img_url: 'master' }}" width="102" height="32" alt="cstm_footer_logo" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_87_59a28562-b3b3-4331-9d3c-4a27366eba04.png?v=1604573345"></a>
+          </div>
+          {% endif %}
+          <div class="row">
+            <div class="col-4 col-md-4 footer-links" style="padding-right: 0;">
+              <ul class="f-menu-b">
+                <li class="f-menu f-menu-D">Traya Journey</li>
+                <li class="f-menu"><a href="https://trayahealth.clickpost.ai/">Track Order</a></li>
+                <li class="f-menu"><a href="https://myrecords.traya.health">My Plan</a></li>
+                <li class="f-menu"><a href="https://form.traya.health/questions?cohort=1&location=FooterMenu" data-resultForm>Online Diagnosis</a></li>
+                <li class="f-menu"><a href="/pages/referral">Referral</a></li>   
+                <li class="f-menu-c"><a href="/pages/customer-stories">Customer Stories</a></li>   
+                <li class="f-menu-c"><a href="/pages/reviews">Reviews</a></li>    
+              </ul>
+              
+              <div class="trust-badge-image d-none d-md-none mt-2">
+                <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/HEA_Stamp_e37982ea-f9e5-4b6d-b7f8-114dcf1cc05c_160x.png" loading="lazy">
+              </div>
+            </div>
+            
+            <div class="col-4 col-md-4 footer-links" style="padding-right: 0;">
+              <div class="row">
+                <div class="footer-social">
+                  <ul class="f-menu-third mb-3">             
+                    <li class="f-menu-c f-menu-D">Company</li>
+                    <li class="f-menu-c"><a href="/pages/faq">FAQ</a></li>
+                    <li class="f-menu-c"><a href="/pages/the-science">Science</a></li>
+                    <li class="f-menu-c"><a href="/pages/about-us">Our Story</a></li>
+                    <li class="f-menu-c"><a href="/blogs/hair-care">Blog</a></li>
+                    <li class="f-menu-c"><a href="/collections/all-products">All Products</a></li>
+                    <li class="f-menu-c"><a href="/pages/hair-loss-treatment-for-women">Hair Treatment for Women</a></li>
+                    <li class="f-menu-c"><a href="/pages/hair-fall-solution-for-men">Hair Treatment for Men</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-4 col-md-4 footer-links footer_links_legal" style="padding-right: 0;">
+              <div class="row">
+                <ul class="f-menu-third mb-3">
+                  <li class="f-menu-c f-menu-D">Legal</li>
+                  <li class="f-menu-c"><a href="/pages/money-back-policy">Money Back Guarantee</a></li>
+                  <li class="f-menu-c"><a href="/pages/privacy-policy">Privacy Policy</a></li>
+                  <li class="f-menu-c"><a href="/pages/terms-of-service">Terms of Service</a></li>
+                  <li class="f-menu-c"><a href="/pages/return-policy">Return Policy</a></li>
+                  <div class="d-none d-md-block ">
+                    <ul class="fsocial-icon justify-content-start">
+                      <li class="f-s-icon-list ml-0"><a href="https://www.instagram.com/traya.health/" target="_blank" aria-describedby="a11y-new-window-external-message" rel="null noopener">{% render 'instagram-icon' %}</a></li>
+                      <li class="f-s-icon-list"><a href="https://www.facebook.com/traya.health/" target="_blank" aria-describedby="a11y-new-window-external-message" rel="null noopener">{% render 'facebook-icon' %}</a></li>
+                      <li class="f-s-icon-list"><a href="https://www.linkedin.com/company/trayahealth" target="_blank" aria-describedby="a11y-new-window-external-message" rel="null noopener">{% render 'linkedin-icon' %}</a></li>
+                      <li class="f-s-icon-list"><a href="https://www.youtube.com/@TrayaHealth" target="_blank" aria-describedby="a11y-new-window-external-message" rel="null noopener">{% render 'youtube-icon' %}</a></li>                      
+                      <li class="f-s-icon-list"><a href="https://twitter.com/TrayaHealth?t=I0O9cO7MJi-iIHiVSqI9qg&s=09" target="_blank" aria-describedby="a11y-new-window-external-message" rel="null noopener">{% render 'twitter-icon' %}</a></li>
+                    </ul>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 footer-logo order-md-first align--bottom-left d-none d-md-block">
+          {% if section.settings.logoimage !=blank  %}
+          <div class="trust-badge-image d-none d-md-none">
+            <img src="{{ section.settings.logoimage | img_url: 'master' }}" loading="lazy" width="" height="" alt="" title="">
+          </div>
+          {% endif %}
+
+          <div class="d-flex justify-content-between google_footer_icons">
+            <div style="flex: 1 1;">
+              <h4 class="font-weight-bold" style="color: #fff; letter-spacing: 0em; font-size: 18px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="23" viewBox="0 0 14 23" fill="none">
+                  <path d="M11.0295 0.000167411H2.43948C1.09359 0.000167411 0 1.09072 0 2.43287V19.7926C0 21.1347 1.09359 22.2253 2.43948 22.2253H11.0274C12.3733 22.2253 13.4669 21.1347 13.4669 19.7926V2.43287C13.4694 1.09055 12.3733 0 11.0299 0L11.0295 0.000167411ZM9.2359 0.69602L8.9439 1.48312H4.52504L4.23304 0.69602H9.2359ZM12.7714 19.7927C12.7714 20.75 11.9895 21.5297 11.0295 21.5297H2.43948C1.47953 21.5297 0.697623 20.75 0.697623 19.7927V2.43304C0.697623 1.47575 1.47953 0.69602 2.43948 0.69602H3.49093L3.95607 1.95186C4.00558 2.08757 4.13674 2.1788 4.28266 2.1788H9.18881C9.33473 2.1788 9.4659 2.08757 9.51541 1.95186L9.98055 0.69602H11.0295C11.9895 0.69602 12.7714 1.47575 12.7714 2.43304L12.7714 19.7927ZM9.2482 20.2196C9.2482 20.4121 9.09228 20.5675 8.8993 20.5675H4.56733C4.37435 20.5675 4.21843 20.4121 4.21843 20.2196C4.21843 20.0272 4.37681 19.8717 4.56733 19.8717H8.89972C9.09253 19.8717 9.24845 20.0272 9.24845 20.2196H9.2482Z" fill="white"/>
+                </svg>
+                Experience the Traya Mobile App
+              </h4>
+                  
+              <div class="googleappple-icon">
+                <a href="https://trayahealth.app.link/xT3UrtZDvyb"><img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Mask_group_2593bbc5-946a-4823-a239-0496ee7b2114.png?v=1695709843"  alt="image" title="image" width="100%" height="100%" loading="lazy"></a>
+                <a href="https://trayahealth.app.link/xT3UrtZDvyb"><img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Mask_group_1_feb7f83c-9cd6-4548-8db5-6b697f4f599a.png?v=1695709843" alt="image" title="image" width="100%" height="100%" loading="lazy"></a>              
+              </div>
+
+              <div class="footer_top_copy mt-5">
+                <p>{{ section.settings.titles }}</p>
+                <p class="m-0">{{ section.settings.title-1 }}</p> 
+                <p>Registered Office: C67 P1, Fortune Hotel Galaxy,Koparli R, GIDC, Vapi, Gujarat - 396195</p>
+                <p class="m-0">CIN: U85300GJ2019PTC107353</p>
+              </div>
+            </div>
+          
+            <div class="footer-info">
+              {% if section.settings.logoimage-1 != blank  %}
+              <div class="cstm_footer_logo">
+                <a href="{% if page.handle == 'cholesterol' %}/pages/cholesterol{% else %}/{% endif %}"><img class=" ls-is-cached lazyloaded" data-src="{{ section.settings.logoimage-1 | img_url: 'master' }}" width="102" height="32" alt="cstm_footer_logo" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_87_59a28562-b3b3-4331-9d3c-4a27366eba04.png?v=1604573345"></a>
+              </div>
+              {% endif %}
+              
+              {% if page.handle == 'result4-he' or page.handle == 'home-v3' or page.handle contains 'cholesterol' %}
+              <div class="footer-social">
+                <ul class="fsocial-icon justify-content-start">
+                  <li class="f-s-icon-list ml-0"><a href="https://www.instagram.com/traya.health/" target="_blank"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0100/1622/7394/t/158/assets/Group_176.png?v=21982239904562839331646643775" alt="instagram"></a></li>
+                  <li class="f-s-icon-list"><a href="https://www.facebook.com/traya.health/" target="_blank"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0100/1622/7394/t/158/assets/Group_175.png?v=111763060353274653091646643775" alt="facebook"></a></li>
+                  <li class="f-s-icon-list"><a href="https://wa.me/918828006272?text=Hey%21+I+would+like+to+know+more+about+Traya" target="_blank"> <img class="lazyload" data-src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/whatsapp-logo.png" alt="whatsapp"></a></li>
+                </ul>
+              </div>
+              {% endif %}
+  
+              {% comment %}
+              <div class="pSearch-Title">POPULAR SEARCH</div>
+              <div class="pSearch-link">
+                <a href="/blogs/hair-care/top-10-reasons-for-losing-hair">Reasons For Hair Fall</a>
+                <a href="/blogs/hair-care/how-the-best-customised-hair-regrowth-oil-is-made">Hair Growth Oil</a>
+                <a href="/blogs/hair-care/stop-hair-loss-and-reduce-pitta-dosha">How To Stop Hair Fall</a>
+                <a href="/blogs/hair-care/dandruff-vs-dry-scalp">Dandruff Vs Dry Scalp</a>
+                <a href="/blogs/hair-care/foods-for-hair-growth">Food For Hair Growth</a>
+                <a href="/blogs/hair-care/a-hair-loss-treatment-that-also-fixes-your-health">Hair Loss Treatment</a>
+                <a href="/blogs/hair-care/minoxidil-for-hair">What Is Minoxidil</a>
+                <a href="/blogs/hair-care/nasya-treatment-for-better-health">Nasya Treatment</a>
+                <a href="/blogs/hair-care/how-to-prevent-grey-hair-and-hair-loss-due-to-scalp-ageing">How To Stop White Hair</a>
+                <a href="/blogs/hair-care/the-benefits-of-yashtimadhu-for-hair-growth">Yashtimadhu Uses</a>
+                <a href="/blogs/hair-care/bhringraj-hair-oil">Bhringraj Hair Oil</a>
+                <a href="/blogs/hair-care/how-can-i-thicken-my-hair-help-it-grow-long">How Can I Thicken My Hair</a>              
+                <a href="/blogs/hair-care/rice-water-for-hair">Rice Water For Hair</a>              
+                <a href="/blogs/hair-care/how-to-strengthen-your-hair">How To Strengthen Hair</a>              
+                <a href="/blogs/hair-care/shatavari-for-hair">Shatavari For Hair</a>              
+                <a href="/blogs/hair-care/clove-benefits">Clove Benefits</a>              
+                <a href="/blogs/hair-care/12-ayurvedic-herbs-and-how-to-use-them-for-hair-loss">Ayurvedic Herbs For Hair Growth</a>              
+                <a href="/blogs/hair-care/how-to-reduce-hair-loss-with-ayurvedic-treatment-and-natural-homemade-remedies">Ayurvedic Treatment For Hair Fall</a>              
+                <a href="/products/scalp-oil-with-growth-therapy-booster-shots">Herbal Hair Oil</a>
+                <a href="/products/anti-dandruff-shampoo">Anti-dandruff Shampoo</a>
+                <a href="/blogs/hair-care/redensyl-vs-minoxidil-which-one-is-better"> Redensyl vs Minoxidil </a>
+              </div>
+              {% endcomment %}
+            </div>
+          </div>
+        </div>
+        
+        {% unless page.handle == 'result4-he' or page.handle == 'home-v3' or page.handle contains 'cholesterol' %}  
+        <div class="col-md-12 d-md-none d-block">
+          <p>{{ section.settings.titles }}</p>
+          <p class="mb-2">{{ section.settings.title-1 }} </p>
+          <p>Registered Office: C67 P1, Fortune Hotel Galaxy, Koparli R, GIDC, Vapi, Gujarat - 396195</p>
+          <p class="m-0">CIN: U85300GJ2019PTC107353</p>
+        </div>
+        {% endunless %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom Part -->     
+  <div class="col-md-12 footer_bottom_part">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 footer_bottom_copy">
+          <div class="row">
+            <ul class="footer_security_badge">
+              <li>
+                <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="22.0613" cy="22" rx="22.0613" ry="22" fill="#B7D340"/>
+                  <path d="M19.1981 18.9434C20.4559 18.9434 21.4751 17.8963 21.4751 16.6051C21.475 15.313 20.4561 14.2662 19.1985 14.2662C17.9404 14.2662 16.9219 15.3133 16.9219 16.6051C16.9215 17.8966 17.9407 18.9434 19.1982 18.9434H19.1981ZM19.1981 15.4359C19.8268 15.4359 20.3367 15.9594 20.3367 16.6051C20.3367 17.2507 19.8268 17.7743 19.1981 17.7743C18.5695 17.7743 18.0595 17.2507 18.0595 16.6051C18.0595 15.9594 18.5699 15.4359 19.1981 15.4359Z" fill="white"/>
+                  <path d="M26.2651 14.508L17.048 23.6994C16.5127 24.2333 17.3222 25.0408 17.8578 24.5066L27.0749 15.3151C27.6101 14.7814 26.8005 13.9743 26.2651 14.508Z" fill="white"/>
+                  <path d="M24.9237 20.0717C23.666 20.0717 22.6467 21.1188 22.6467 22.41C22.6469 23.7021 23.6658 24.7489 24.9234 24.7489C26.1815 24.7489 27.2 23.7018 27.2 22.41C27.2004 21.1186 26.1811 20.0717 24.9237 20.0717H24.9237ZM24.9237 23.5792C24.2951 23.5792 23.7851 23.0557 23.7851 22.41C23.7851 21.7644 24.2951 21.2409 24.9237 21.2409C25.5524 21.2409 26.0623 21.7644 26.0623 22.41C26.0623 23.0557 25.552 23.5792 24.9237 23.5792Z" fill="white"/>
+                  <path d="M31.9951 29.6743L29.5304 25.4169C30.8231 23.7944 31.5954 21.741 31.5954 19.5078C31.5952 14.2572 27.3261 10 22.061 10C16.7959 10 12.5267 14.2572 12.5267 19.5078C12.5267 21.7408 13.2992 23.7942 14.5917 25.4169L12.1268 29.6743C11.8661 30.0611 12.1843 30.5884 12.6592 30.5212L16.0116 30.0419L17.267 33.1655C17.4279 33.5899 18.0205 33.6495 18.2545 33.2465L20.7554 28.9269C21.1822 28.9853 21.6178 29.0155 22.0607 29.0155C22.5036 29.0155 22.939 28.9855 23.366 28.9269L25.8669 33.2465C26.1007 33.6489 26.6939 33.5908 26.8544 33.1655L28.1098 30.0419L31.4624 30.5212C31.9376 30.5884 32.256 30.0611 31.9954 29.6743H31.9951ZM17.8689 31.7251L16.8685 29.2361C16.7725 28.9975 16.5268 28.8635 16.2825 28.8985L13.6192 29.2787L15.3603 26.2714C16.5259 27.42 17.987 28.2707 19.6198 28.7009L17.8689 31.7251ZM22.0606 27.8644C19.7465 27.8644 17.6512 26.9289 16.1351 25.4169C14.6186 23.9047 13.6807 21.8152 13.6807 19.5078C13.6807 14.8925 17.4325 11.1507 22.0607 11.1507C26.6888 11.1507 30.4406 14.8921 30.4406 19.5074C30.4406 21.8151 29.5025 23.9045 27.9863 25.4165C26.47 26.9287 24.3747 27.8641 22.0607 27.8641L22.0606 27.8644ZM27.8383 28.8983C27.5937 28.8635 27.3482 28.9977 27.2523 29.2359L26.2521 31.7248L24.5011 28.7005C26.1336 28.2707 27.5952 27.4195 28.7607 26.2711L30.5017 29.2784L27.8383 28.8983Z" fill="white"/>
+                </svg>
+                <p>
+                  <span>93%</span>
+                  <span>Saw Results*</span>
+                </p>
+              </li>
+              <a href="https://traya.health/pages/money-back-policy" class="moneybackpolicy-hyperlink">
+                <li>
+                  <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="22.6599" cy="22" rx="22.0613" ry="22" fill="#B7D340"/>
+                    <path d="M33.9353 15.1053C33.7848 14.8536 33.458 14.7711 33.2055 14.9213C32.9531 15.0714 32.8704 15.3973 33.0209 15.649C34.3042 17.7953 34.8483 20.3523 34.553 22.8493C34.2486 25.4228 33.1143 27.754 31.2725 29.5904C29.1058 31.7511 26.2252 32.9409 23.1611 32.9409C20.097 32.9409 17.2164 31.7511 15.0497 29.5902C15.0407 29.5813 15.032 29.572 15.0231 29.5629H15.1951C15.489 29.5629 15.7274 29.3252 15.7274 29.0321C15.7274 28.739 15.489 28.5013 15.1951 28.5013L13.7374 28.5014C13.4435 28.5014 13.205 28.7392 13.205 29.0323V30.486C13.205 30.7791 13.4434 31.0168 13.7374 31.0168C14.0313 31.0168 14.2697 30.7791 14.2697 30.486V30.3131C14.2788 30.3224 14.2878 30.3318 14.2971 30.3409C16.6647 32.7021 19.8126 34.0025 23.1614 34.0025C26.5102 34.0025 29.658 32.7021 32.0257 30.3409C34.0383 28.3339 35.278 25.7861 35.6107 22.9733C35.9331 20.2456 35.3383 17.4512 33.9357 15.1052L33.9353 15.1053Z" fill="white"/>
+                    <path d="M11.8041 19.8824C12.1556 17.4162 13.2778 15.1789 15.0492 13.412C17.2159 11.2514 20.0966 10.0616 23.1607 10.0616C26.0372 10.0616 28.7521 11.1104 30.8662 13.0263H30.7126C30.4187 13.0263 30.1803 13.264 30.1803 13.5571C30.1803 13.8502 30.4187 14.088 30.7126 14.088H32.1703C32.4642 14.088 32.7026 13.8502 32.7026 13.5571V12.1034C32.7026 11.8103 32.4643 11.5726 32.1703 11.5726C31.8764 11.5726 31.638 11.8103 31.638 12.1034V12.2924C29.3194 10.1656 26.3303 9 23.1606 9C19.812 9 16.664 10.3003 14.2963 12.6615C12.3605 14.592 11.134 17.0372 10.7498 19.7327C10.3784 22.3392 10.8521 25.0489 12.084 27.362C12.1796 27.5415 12.364 27.6439 12.5545 27.6439C12.6388 27.6439 12.7241 27.624 12.8038 27.5817C13.0635 27.4442 13.1621 27.1229 13.0243 26.8639C11.8973 24.7475 11.4639 22.2678 11.804 19.8821L11.8041 19.8824Z" fill="white"/>
+                    <path d="M16.3287 16.7346C15.6382 16.7346 15.0764 17.2948 15.0764 17.9833V25.0195C15.0764 25.7081 15.6382 26.2682 16.3287 26.2682H29.9926C30.683 26.2682 31.2448 25.708 31.2448 25.0195V17.9833C31.2448 17.2947 30.683 16.7346 29.9926 16.7346H16.3287ZM30.1799 20.6353V22.3679C28.7191 22.5965 27.5621 23.7501 27.3331 25.2068H18.9876C18.7583 23.7501 17.6015 22.5965 16.1407 22.3679V20.6353C17.6015 20.4067 18.7585 19.2531 18.9876 17.7964H27.3326C27.562 19.2529 28.7188 20.4067 30.1796 20.6353H30.1799ZM16.3287 17.7962H17.9037C17.7014 18.6662 17.0136 19.3521 16.1412 19.5538V17.9831C16.141 17.8802 16.2252 17.7962 16.3287 17.7962ZM16.141 25.0198V23.4491C17.0134 23.6508 17.7013 24.3367 17.9035 25.2067H16.3285C16.2253 25.2069 16.141 25.1229 16.141 25.0198ZM29.9923 25.2069H28.4173C28.6195 24.3369 29.3073 23.651 30.1798 23.4493V25.0199C30.1799 25.1229 30.0957 25.2069 29.9923 25.2069ZM30.1799 17.9833V19.554C29.3075 19.3523 28.6197 18.6664 28.4174 17.7964H29.9925C30.0957 17.7962 30.1799 17.8802 30.1799 17.9833Z" fill="white"/>
+                    <path d="M21.4805 23.4888C21.9184 24.0717 22.5151 24.3928 23.1606 24.3928C23.8061 24.3928 24.4028 24.0717 24.8408 23.4886C25.2444 22.9514 25.4666 22.2455 25.4666 21.5007C25.4666 20.7561 25.2444 20.05 24.8408 19.5128C24.4028 18.93 23.8061 18.6089 23.1606 18.6089C22.5151 18.6089 21.9184 18.93 21.4805 19.5131C21.0769 20.0503 20.8547 20.7563 20.8547 21.5011C20.8547 22.2455 21.0769 22.9516 21.4805 23.4888ZM23.1606 19.6705C23.8335 19.6705 24.4021 20.5087 24.4021 21.5009C24.4021 22.4931 23.8335 23.3313 23.1606 23.3313C22.4877 23.3313 21.9192 22.4931 21.9192 21.5009C21.9192 20.5087 22.4877 19.6705 23.1606 19.6705Z" fill="white"/>
+                  </svg>
+                  <p>
+                    <span>100%</span>
+                    <span>Money-Back Guarantee</span>
+                  </p>
+                </li>
+              </a>
+              <li>
+                <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="22.0613" cy="22" rx="22.0613" ry="22" fill="#B7D340"/>
+                  <path d="M32.9825 18.75C32.9325 18.6017 32.8034 18.4939 32.6482 18.4708L30.8475 18.1959L30.0411 16.4792H30.0409C29.9732 16.3305 29.8245 16.2353 29.6607 16.2353C29.497 16.2353 29.3483 16.3305 29.2806 16.4792L28.4532 18.2083L26.6524 18.4832C26.4966 18.5059 26.3668 18.6138 26.3166 18.7624C26.2663 18.9112 26.304 19.0755 26.4142 19.1875L27.7303 20.5292L27.4211 22.4334H27.4212C27.3916 22.5937 27.4586 22.7565 27.5925 22.85C27.7231 22.9423 27.8952 22.952 28.0353 22.8749L29.6399 21.9791L31.2444 22.8666C31.3071 22.9005 31.3776 22.9178 31.449 22.9166C31.5343 22.9165 31.6173 22.8902 31.6872 22.8417C31.8212 22.7481 31.8881 22.5854 31.8585 22.425L31.5492 20.5208L32.8653 19.1791H32.8655C32.9841 19.0705 33.0297 18.9036 32.9825 18.75ZM30.8223 20.0874C30.7298 20.1823 30.688 20.3153 30.7094 20.4459L30.9184 21.6959L29.8613 21.1125C29.732 21.0381 29.5727 21.0381 29.4434 21.1125L28.3864 21.7208L28.5953 20.4708C28.6169 20.3402 28.575 20.2074 28.4824 20.1125L27.58 19.1667L28.8042 19C28.9419 18.9778 29.0594 18.8888 29.1176 18.7624L29.6399 17.6458L30.1663 18.75C30.2245 18.8763 30.342 18.9654 30.4796 18.9876L31.6997 19.171L30.8223 20.0874Z" fill="white"/>
+                  <path d="M26.609 16.526C26.5478 16.3448 26.39 16.2129 26.2002 16.1847L23.9979 15.8487L23.0118 13.7504H23.0115C22.9287 13.5688 22.7469 13.4524 22.5466 13.4524C22.3463 13.4524 22.1645 13.5688 22.0817 13.7504L21.0698 15.8639L18.8675 16.1999C18.6771 16.2277 18.5183 16.3595 18.4569 16.5412C18.3953 16.7231 18.4414 16.9238 18.5762 17.0607L20.1858 18.7006L19.8076 21.028H19.8078C19.7716 21.224 19.8534 21.4229 20.0172 21.5373C20.1769 21.6501 20.3875 21.6619 20.5588 21.5678L22.5211 20.4729L24.4834 21.5576C24.56 21.599 24.6462 21.6201 24.7336 21.6187C24.8379 21.6185 24.9394 21.5865 25.0249 21.5271C25.1887 21.4128 25.2706 21.2138 25.2343 21.0178L24.8561 18.6904L26.4657 17.0505H26.4659C26.611 16.9177 26.6667 16.7138 26.609 16.526ZM23.9671 18.1607C23.854 18.2766 23.8029 18.4392 23.8291 18.5988L24.0846 20.1266L22.7919 19.4136C22.6338 19.3227 22.439 19.3227 22.2809 19.4136L20.9881 20.1571L21.2436 18.6292C21.2701 18.4696 21.2188 18.3073 21.1056 18.1913L20.002 17.0353L21.4991 16.8316C21.6675 16.8045 21.8112 16.6956 21.8824 16.5412L22.5211 15.1764L23.1649 16.526C23.236 16.6804 23.3798 16.7893 23.5481 16.8164L25.0402 17.0405L23.9671 18.1607Z" fill="white"/>
+                  <path d="M15.8141 16.4914C15.7463 16.343 15.5977 16.2476 15.4339 16.2476C15.2701 16.2476 15.1215 16.343 15.0538 16.4914L14.2472 18.2081L12.4464 18.4831C12.2907 18.5057 12.1609 18.6136 12.1107 18.7623C12.0603 18.9111 12.098 19.0753 12.2082 19.1873L13.5244 20.529L13.2151 22.4332H13.2153C13.1856 22.5935 13.2526 22.7563 13.3865 22.8499C13.5171 22.9421 13.6893 22.9518 13.8293 22.8748L15.4339 21.979L17.0384 22.8665C17.1011 22.9003 17.1716 22.9176 17.2431 22.9165C17.3283 22.9163 17.4113 22.8901 17.4813 22.8415C17.6152 22.748 17.6822 22.5852 17.6525 22.4249L17.3432 20.5207L18.6594 19.179H18.6595C18.7698 19.067 18.8075 18.9027 18.7571 18.7539C18.7069 18.6053 18.5771 18.4974 18.4213 18.4749L16.6206 18.2L15.8141 16.4914ZM16.5954 20.0996V20.0998C16.5029 20.1945 16.4611 20.3275 16.4826 20.4581L16.6915 21.7081L15.6344 21.1248C15.5051 21.0504 15.3458 21.0504 15.2166 21.1248L14.1804 21.7206L14.3893 20.4706C14.411 20.34 14.369 20.2072 14.2765 20.1123L13.3741 19.1665L14.5983 18.9998C14.7359 18.9777 14.8534 18.8886 14.9116 18.7623L15.4339 17.6456L15.9603 18.7498C16.0185 18.8761 16.136 18.9652 16.2737 18.9874L17.4938 19.1708L16.5954 20.0996Z" fill="white"/>
+                  <path d="M22.537 10C19.6153 9.99907 16.7853 11.016 14.5357 12.875L15.0705 13.5168C17.2889 11.6903 20.104 10.743 22.9786 10.8557C25.853 10.9682 28.5851 12.133 30.6528 14.1274C32.7205 16.1218 33.9788 18.8062 34.1874 21.6674C34.3959 24.5284 33.5403 27.366 31.7835 29.6379C31.3799 28.7922 30.6733 28.1278 29.8031 27.7753C30.2191 27.3949 30.4629 26.8628 30.4791 26.3001C30.4953 25.7374 30.2825 25.192 29.8891 24.7884C29.4958 24.3847 28.9554 24.1569 28.3908 24.1569C27.8263 24.1569 27.2859 24.3847 26.8925 24.7884C26.4992 25.192 26.2863 25.7374 26.3026 26.3001C26.3188 26.8628 26.5626 27.395 26.9785 27.7753C26.0383 28.152 25.2918 28.8934 24.9103 29.8297C24.6557 29.677 24.3871 29.5486 24.1081 29.4463C24.6522 29.012 24.9904 28.3713 25.0415 27.6783C25.0926 26.9852 24.8523 26.3022 24.3779 25.793C23.9036 25.2839 23.2381 24.9946 22.5412 24.9946C21.8443 24.9946 21.179 25.2839 20.7046 25.793C20.2303 26.3021 19.9898 26.9852 20.0411 27.6783C20.0922 28.3713 20.4304 29.012 20.9743 29.4463C20.5695 29.5947 20.1872 29.798 19.838 30.0505C19.4851 29.0166 18.6979 28.1874 17.6819 27.7796C18.1001 27.4002 18.3463 26.8678 18.364 26.3042C18.3817 25.7406 18.1697 25.1939 17.7762 24.789C17.3827 24.384 16.8414 24.1554 16.276 24.1554C15.7104 24.1554 15.1691 24.384 14.7757 24.789C14.3821 25.1939 14.17 25.7406 14.1878 26.3042C14.2055 26.8678 14.4517 27.4002 14.8699 27.7796C14.1136 28.0853 13.4762 28.6258 13.0524 29.3213C11.4764 27.1485 10.699 24.5008 10.8512 21.8232C11.0034 19.1459 12.0759 16.6028 13.8881 14.6213L13.2863 14.0629C11.3451 16.179 10.1925 18.8962 10.0221 21.7591C9.85157 24.622 10.6734 27.4562 12.3499 29.7867C14.0265 32.1171 16.4556 33.8015 19.2295 34.5576C22.0038 35.3138 24.9545 35.0958 27.5865 33.9399C30.2186 32.7838 32.3722 30.7605 33.6858 28.2094C34.9994 25.6581 35.3931 22.7337 34.8013 19.927C34.2092 17.1203 32.6673 14.6023 30.4344 12.7947C28.2015 10.9874 25.4129 10.0006 22.5373 10L22.537 10ZM27.1331 26.25C27.1331 25.9185 27.2651 25.6004 27.5002 25.3661C27.7352 25.1317 28.0542 25 28.3865 25C28.7189 25 29.0379 25.1317 29.2729 25.3661C29.5079 25.6004 29.64 25.9185 29.64 26.25C29.64 26.5814 29.5079 26.8995 29.2729 27.1339C29.0379 27.3682 28.7189 27.4999 28.3865 27.4999C28.0542 27.4999 27.7351 27.3682 27.5002 27.1339C27.2652 26.8995 27.1331 26.5814 27.1331 26.25ZM20.8657 27.5C20.8657 27.058 21.0418 26.6341 21.3551 26.3214C21.6687 26.0089 22.0938 25.8333 22.537 25.8333C22.9802 25.8333 23.4053 26.0089 23.7188 26.3214C24.0322 26.6341 24.2083 27.058 24.2083 27.5C24.2083 27.9419 24.0322 28.3659 23.7188 28.6785C23.4053 28.991 22.9802 29.1666 22.537 29.1666C22.0938 29.1666 21.6687 28.991 21.3551 28.6785C21.0418 28.3658 20.8657 27.9419 20.8657 27.5ZM15.0161 26.25C15.0161 25.9185 15.1482 25.6004 15.3832 25.3661C15.6182 25.1317 15.9372 25 16.2696 25C16.6019 25 16.9209 25.1317 17.1559 25.3661C17.3909 25.6004 17.523 25.9185 17.523 26.25C17.523 26.5814 17.391 26.8995 17.1559 27.1339C16.9209 27.3682 16.6019 27.4999 16.2696 27.4999C15.9372 27.4999 15.6182 27.3682 15.3832 27.1339C15.1482 26.8995 15.0161 26.5814 15.0161 26.25ZM13.6164 30.0375C13.9637 29.2896 14.6123 28.7231 15.4015 28.4782C16.1907 28.2334 17.0469 28.3329 17.7585 28.7522C18.4699 29.1716 18.9704 29.8716 19.1358 30.6791C18.4875 31.3902 18.0797 32.2868 17.9702 33.2416C16.2886 32.526 14.7979 31.4289 13.6164 30.0375ZM18.7764 33.55C18.7764 32.2101 19.4931 30.9722 20.6567 30.3024C21.8202 29.6324 23.2535 29.6324 24.4171 30.3024C25.5807 30.9722 26.2973 32.2101 26.2973 33.55C23.8586 34.3755 21.2151 34.3755 18.7764 33.55ZM27.0953 33.2416C26.9682 32.1298 26.4377 31.1028 25.6038 30.3541C25.8631 29.5731 26.4413 28.9376 27.1956 28.6045C27.95 28.2712 28.8104 28.2712 29.5647 28.6045C30.3191 28.9376 30.8971 29.5731 31.1566 30.3541C30.0286 31.5948 28.6465 32.5795 27.1037 33.2416H27.0953Z" fill="white"/>
+                </svg> 
+                <p>
+                  <span>8 Lakh+</span> 
+                  <span>Customers</span>
+                </p>
+              </li>
+              <li class="d-none d-md-block whatsapp-list-icon">
+                <a href="https://wa.me/918828006272?text=Hey%21+I+would+like+to+know+more+about+Traya" target="_blank" aria-describedby="a11y-new-window-external-message" rel="null noopener">
+                  <img alt="image" title="image" loading="lazy" width="55" height="55" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352734.png?v=1684483290">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+          
+        <div class="d-block d-md-none col-md-6 footer_contact_info">
+          <div class="row">
+            <div class="col-7 col-md-6 footer_social_bottom">
+              <ul class="fsocial-icon justify-content-start">
+                <li class="f-s-icon-list ml-0"><a href="https://www.instagram.com/traya.health/" target="_blank" aria-describedby="a11y-new-window-external-message" rel="null noopener">{% render 'instagram-icon' %}</a></li>
+                <li class="f-s-icon-list"><a href="https://www.facebook.com/traya.health/" target="_blank" aria-describedby="a11y-new-window-external-message" rel="null noopener">{% render 'facebook-icon' %}</a></li>
+                <li class="f-s-icon-list"><a href="https://www.linkedin.com/company/trayahealth" target="_blank" aria-describedby="a11y-new-window-external-message" rel="null noopener">{% render 'linkedin-icon' %}</a></li>
+                <li class="f-s-icon-list"><a href="https://www.youtube.com/@TrayaHealth" target="_blank" aria-describedby="a11y-new-window-external-message" rel="null noopener">{% render 'youtube-icon' %}</a></li>
+                <li class="f-s-icon-list"><a href="https://twitter.com/TrayaHealth?t=I0O9cO7MJi-iIHiVSqI9qg&s=09" target="_blank" aria-describedby="a11y-new-window-external-message" rel="null noopener">{% render 'twitter-icon' %}</a></li>               
+              </ul>
+            </div>
+          
+            <div class="col-5 col-md-6 footer_social_whatsapp">
+              <li class="whatsapp-list-icon">
+                <a href="https://wa.me/918828006272?text=Hey%21+I+would+like+to+know+more+about+Traya" target="_blank" aria-describedby="a11y-new-window-external-message" rel="null noopener">
+                  <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352734.png?v=1684483290" alt="Whatsapp" title="Whatsapp" width="55" height="55" loading="lazy">
+                </a>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer Bottom Part -->   
+  {% endunless %}
+</footer>
+
+{% schema %}
+{
+"name": "Footer",
+"max_blocks": 4,
+"settings": [
+{
+"type": "header",
+"content": "Payment methods"
+},
+{
+"type": "checkbox",
+"id": "show_payment_icons",
+"label": "Show payment icons",
+"default": false
+},
+{
+"type": "header",
+"content": "Color"
+},
+  {
+"type": "image_picker",
+"id": "logoimage",
+"label": "Please select Brand image"
+},
+{
+"type": "image_picker",
+"id": "logoimage-1",
+"label": "Please select logo image"
+},
+{
+"type": "text",
+"id": "titles",
+"label": "Heading",
+"default": "Quick links"
+},
+{
+"type": "html",
+"id": "title-1",
+"label": "Address"
+},
+{
+"type": "color",
+"id": "color_footer_bg",
+"label": "Background",
+"default": "#f6f6f6"
+},
+{
+"type": "color",
+"id": "color_footer_text",
+"label": "Text",
+"default": "#414042"
+},
+{
+"type": "header",
+"content": "Language Selector",
+"info": "To add a language, go to your [language settings.](/admin/settings/languages)"
+},
+{
+"type": "checkbox",
+"id": "show_locale_selector",
+"label": "Show language selector",
+"default": true
+},
+{
+"type": "header",
+"content": "Currency Selector",
+"info": "To add a currency, go to your [payment settings.](/admin/settings/payments)"
+},
+{
+"type": "checkbox",
+"id": "show_currency_selector",
+"label": "Show currency selector",
+"default": true
+},
+{
+"type": "header",
+"content": "Side Wide Menu"
+},
+{
+"type": "link_list",
+"id": "side_wide_menu",
+"label": "Select Menu"
+}
+],
+"blocks": [
+{
+"type": "link_list",
+"name": "Menu",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "Quick links"
+},
+{
+"type": "link_list",
+"id": "menu",
+"label": "Menu",
+"default": "footer"
+}
+]
+},
+{
+"type": "text",
+"name": "Text",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "Talk about your business"
+},
+{
+"type": "richtext",
+"id": "text",
+"label": "Text",
+"default": "<p>Share store details, promotions, or brand content with your customers.</p>"
+}
+]
+},
+{
+"type": "newsletter",
+"limit": 1,
+"name": "Newsletter signup",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"info": "Subscribers will be added to your “accepts marketing” [customer list.](/admin/customers?query=&accepts_marketing=1)",
+"default": "Newsletter"
+}
+]
+}
+]
+}
+{% endschema %}

@@ -1,0 +1,154 @@
+<section class="bg-white">
+  <div class="container pt-5">
+    <h2 class="section-title-main text-center">{{ section.settings.heading3 }}</h2>
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <div class="row align-items-center">
+          <div class="col-md-6  text-center text-md-left">
+            <h3 class="paragraph1 col-md-7 mb-4 px-0 d-none d-md-block">
+              {{ section.settings.paragraph1 }}
+            </h3>
+            <h6 class="paragraph1_mobile_view col-md-7 mb-4 px-0 d-md-none">
+              {{ section.settings.paragraph1 }}
+            </h6>
+              <a href="{{ section.settings.button-url }}" class="btn btn-info" id="profile" style="background: #68AA9E; border-color: #68AA9E;" aria-describedby="a11y-external-message"> {{ section.settings.button }}</a>
+          </div>
+          <div class="col-md-6 d-none d-md-block">
+            <img class="image w-100" src="{{ section.settings.mobile_image | img_url:' ' }}"/>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-dark py-3 d-none d-md-block">
+    <h3 class="footer_text font-weight-bold l-0 mb-0 text-center text-white">{{ section.settings.footer_text }}</h3>
+  </div>
+  <div class="d-md-none">
+    <div class="container">
+      <h6 class="footer_text_mobile_view mb-0 text-center">This will enable the doctor to better assess your case</h6>
+    </div>
+  </div>
+  <div class="d-md-none mt-5">
+     <img src="{{ section.settings.mobile_view_image | img_url:' ' }}" alt="This will enable the doctor to better assess your case" class="col-10 mx-auto d-block">
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "custom text image",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading3",
+        "label": "Heading2",
+        "default": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "paragraph1",
+        "label": "paragraph1",
+        "default": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "button",
+        "label": "Button",
+        "default": "BUILD YOUR PROFILE"
+      },
+      {
+        "type": "url",
+        "id": "button-url",
+        "label": "Button url"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Logo image"
+      },
+      {
+        "type": "text",
+        "id": "footer_text",
+        "label": "footer_text",
+        "default": "Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_view_image",
+        "label": "mobile_view_image"
+      }
+    ],
+  "presets":[
+                {
+                  "name":"custom text image"
+                }
+            ]
+  }
+{% endschema %}
+
+<style>
+  .main_section{
+    background: #A5C174;
+  }
+  h2.section-title-main1{
+    font-size: 40px;
+    font-weight:500;
+  }
+  h4.section-title-main2{
+    font-size:22px;
+    font-weight:500;
+    line-height: 2.2;
+  }
+  h2.section-title-main {
+    font-size: 38px;
+    font-weight:600;
+    line-height: 1.25;
+    letter-spacing:1px;
+    margin-bottom: 30px;
+  }
+  .footer_text{
+    font-size:26px;
+    font-weight:600;
+  }
+   .paragraph1{
+      font-size:26px;
+      font-weight: 500;
+/*       margin-left: -15px; */
+      line-height:1.4;
+    }
+  
+  @media (max-width: 767px){
+    h2.section-title-main {
+    font-size: 22px!important;
+    margin-bottom: 15px;
+    padding-top: 20px;
+}
+  .paragraph1_mobile_view{
+    font-size:16px;
+  }
+  .footer_text_mobile_view{
+    font-size:16px;
+/*     line-height: 2.2; */
+  }
+ h2.section-title-main1{
+    font-size: 44px;
+    font-weight:800;
+  }
+  h4.section-title-main2{
+   font-size: 44px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: -.22;
+  }
+    h4.section-title-main2 {
+    font-size:28px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .paragraph1 {
+    font-size:28px;
+    font-weight: 500;
+    margin-left:-15px;
+    } 
+}
+</style>

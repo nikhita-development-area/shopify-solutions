@@ -1,0 +1,608 @@
+<div class="container order-status d-none" order__status>
+ <div class="order_status_login">
+  <div class="order-init align-items-center py-3" style="">
+      <!-- <img class="lazyload d-md-none" data-src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/order-alert_20x.png"> -->
+    <div class="order_satus_design"> 
+    <p class="order-status-text">Order Id</p>
+      <p class="order__id font-weight-bold" orderid>#1234</p>
+    </div>
+  <div class="order__stages d-flex"><span class="ml-3 stages"><a href="/" track_url style="text-decoration: underline;">Track here</a></span></div>
+  </div>
+  <div class="status">
+    <div class="order__information">
+     
+    <div class="order-tracking complete_track order__stages active_status" order_placed>
+    <div class="is-complete status__border active_order" order-status-bdr><span class="dots order_login_achieve">{% render 'tracking-svg' %}</span></div>
+    <span class="ml-3 stages">Order<br> Placed</span>
+</div>
+<div class="order-tracking order_dots order__stages" shipping__pending>
+    <div class="is-complete status__border" order-status-bdr><span class="dots order_dots"></span></div>
+    <span class="log_order_text ml-3 stages">Verified by<br>Doctors</span>
+</div>
+<div class="order-tracking order_dots order__stages" track_here>
+    <div class="is-complete status__border" order-status-bdr><span class="dots order_dots"></span></div>
+    <span class="log_order_text ml-3 stages">Order<br> Shipped</span>
+</div>
+<div class=" order-tracking order_dots order__stages" order__delivered>
+    <div class="is-complete status__border" order-status-bdr><span class="dots order_dots"></span></div>
+    <span class="log_order_text ml-3 stages">Delivered</span>
+</div>
+    </div>
+  </div>
+ </div>
+</div>
+
+<script>
+  $('.buttons').click(function(){
+    var btn = $(this);
+    var hidden_btn = btn.parent('.angle__icons').find('.buttons');
+    if(hidden_btn.hasClass('d-none')) {
+      hidden_btn.removeClass('d-none');
+      btn.addClass('d-none');
+    }
+    else {
+      hidden_btn.removeClass('d-none');
+    }
+    var status = btn.parents('.order-status').find('.status');
+    status.fadeToggle();
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Order Status",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Ordr Status",
+        "category": "custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .order-tracking.completed:before {
+    border: 2px solid rgb(39 170 128);
+    border-style: dashed;
+}
+  .is-complete.status__border.active_order {
+    background: #27aa80;
+}
+  /* .reorder_btn {
+    max-width: fit-content;
+} */
+  .btns.home_login.mt-md-5 a:hover {
+    background: rgba(65, 64, 66, 1) !important;
+    color: #fff !important;
+}
+  .journey-icons img {
+    margin-bottom: 20px;
+}
+  span.login_first_name, span.login_dyn_month {
+    color: rgba(65, 65, 67, 1) !important;
+}
+ .order-init .order__stages.d-flex {
+    width: 30%;
+    text-align: center;
+    justify-content: center;
+}
+  span.ml-3.stages {
+    color: rgba(65, 64, 66, 1);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 !important;
+}
+  span.order_dots {
+    position: absolute;
+    top: 50%;
+    padding: 3px;
+    background: #fff;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+  .order-tracking{
+	text-align: center;
+	width: 25%;
+	position: relative;
+	display: block;
+}
+  .order-tracking.complete_track .is-complete {
+    width:50px;
+    height:50px;
+  }
+.order-tracking .is-complete{
+	display: block;
+	position: relative;
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	border: 0px solid rgba(200, 208, 206, 1);
+	background-color: rgba(200, 208, 206, 1);
+	margin: 10px auto 0;
+	transition: background 0.25s linear;
+	-webkit-transition: background 0.25s linear;
+	z-index: 2;
+    margin-bottom: 20px;
+}
+/* .order-tracking .is-complete:after {
+	display: block;
+	position: absolute;
+	 content:url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/archive-check.svg?v=1691412862');
+	height: 14px;
+	width: 7px;
+	top: -2px;
+	bottom: 0;
+	left: 5px;
+	margin: auto 0;
+	opacity: 0;
+} */
+.order-tracking.complete_track .is-complete{
+	border-color: #27aa80;
+	border-width: 0px;
+	background-color: #27aa80;
+    margin-top: 0 !important;
+      margin-bottom: 12px;
+}
+.order-tracking.complete_track .is-complete:after {
+	border-color: #fff;
+	border-width: 0px 3px 3px 0;
+	width: 7px;
+	left: 11px;
+	opacity: 1;
+}
+.order-tracking p {
+	color: #A4A4A4;
+	font-size: 16px;
+	margin-top: 8px;
+	margin-bottom: 0;
+	line-height: 20px;
+}
+.order-tracking p span{font-size: 14px;}
+.order-tracking.complete_track p{color: #000;}
+.order-tracking::before {
+	content: '';
+    display: block;
+    height: 2px;
+    width: calc(100% - 15px);
+    top: 25px;
+    position: absolute;
+    left: calc(-50% + 15px);
+    z-index: 0;
+    border: 2px solid rgba(200, 208, 206, 1);
+    border-style: dashed;
+}
+.order-tracking:first-child:before{display: none;}
+.order-tracking.complete_track:before{background-color: #27aa80;}
+  
+  .order-status-text, .order__id, .order__status {
+    font-size: 18px;
+    line-height: 23px;
+    color: #414143;
+    margin: 0;
+    text-align: center;
+  }
+  p.order-status-text {
+    padding-right: 5px;
+}
+  .order_satus_design {
+    display: flex;
+        width: 32%;
+    justify-content: center;
+    text-align: center;
+}
+  /* .order-status-text {
+    width: 8%;
+  } 
+  
+  .order__id {
+    width: 8%;
+  } 
+  .order__status {
+    width: 13%;
+  }*/
+  .angle__icons {
+    width: 3%;
+    text-align: center;
+    cursor: pointer;
+  }
+  .bordered {
+    width: 46%;
+    border-bottom: 1px dashed #414143;
+    height: 20px;
+  }
+  .order__information {
+    padding: 10px 0px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between!important;
+  }
+ .order__stages {
+    text-align: center;
+    width: 25%;
+    position: relative;
+}
+ 
+  /* .order-status {
+    position: fixed;
+    top: 55px;
+    width: 100%;
+    z-index: 9;
+  } */
+  .padding {
+    padding: 6.3rem;
+  }
+  .order-init {
+      justify-content: space-between;
+    display: flex;
+  }
+  @media only screen and (max-width: 992px) and (min-width: 768px) {
+    .slideshow__slide .banner__heading {
+    font-size: 30px !important;
+    line-height: normal !important;
+    color: rgba(65, 65, 67, 1) !important;
+    font-weight: normal !important;
+    margin-bottom: 15px !important;
+}
+    .slideshow__slide .btns.home_login.mt-md-5 {
+    margin-top: 0 !important;
+}
+    .slideshow__slide .banner__text .second__text, .slideshow__slide span.login_first_name, .slideshow__slide span.login_dyn_month {
+    font-size: 35px !important;
+}
+    body.gradient.template-index .home_login .slideshow__text-wrapper.banner__content.banner__content--middle-left.page-width {
+    left: 0 !important;
+      top: 50% !important;
+}
+    .login_coach_questions {
+    position: absolute !important;
+    top: 57% !important;
+      
+}
+    .login_coach_questions a {
+    max-width: fit-content !important;
+    font-size: 25px !important;
+    padding: 9px 22px 6px !important;
+}
+    .login_coach_questions h5 {
+    margin-bottom: 30px !important;
+}
+    .traya_month_journey .month-desc {
+    font-size: 16px !important;
+}
+    p.traya-journey-months {
+    font-size: 25px !important;
+}
+    .traya-journeys_bdr {
+    padding: 30px 20px !important;
+    margin: 0 0 !important;
+}
+  .rootcause_data span {
+    font-size: 20px !important;
+}
+    .rootcause_data img {
+    max-width: 15px !important;
+}
+    .login_root_causes ul li {
+    padding: 20px 5px !important;
+}
+    p.login-heading {
+    color: rgba(62, 62, 62, 1) !important;
+    font-size: 26px;
+    font-family: 'fredoka_oneregular' !important;
+    text-align: center;
+    width: 100%;
+    line-height: normal !important;
+  margin-bottom: 20px !important;
+}
+    span.ml-3.stages {
+    font-size: 14px;
+          line-height: initial;
+}
+   span.log_order_text.ml-3.stages {
+    top: 10px !important;
+    position: relative;
+}
+    .order-status-text {
+      width: unset;
+      padding-left: 0.25rem;
+    }
+    .order-status-text, .order__id, .order__status {
+      font-size: 13px;
+      line-height: 18px;
+    }
+    .order__id {
+       width: unset;
+      padding-left: 0.25rem;
+    }
+    .order__status {
+       width: unset;
+    }
+    .angle__icons {
+      width: unset;
+    }
+    .bordered {
+      width: unset;
+      height: 6px;
+      padding-right: 18vw;
+    }
+    .order-status {
+      top: 45px;
+    }
+    .padding {
+      padding: 15px;
+    }
+  .order-init {
+    justify-content: space-between;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+  .bordered.width {
+    padding-right: 9vw;
+  }
+  }
+  @media only screen and (max-width: 767px) {
+    .order_status_login {
+    border: 1px solid rgba(228, 228, 228, 1);
+    border-radius: 10px;
+    margin-top: 25px;
+}
+    .traya_journey_mob.d-md-none {
+    margin-top: 25px !important;
+}
+    .container.after-login-journey h6.journey_lead_content {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+      span.log_order_text.ml-3.stages {
+    top: 10px !important;
+    position: relative;
+}
+    .login_guide_images p {
+    font-size: 12px !important;
+}
+    .rootcause_data span {
+    font-size: 11px !important;
+}
+    .rootcause_data img {
+    max-width: 15px !important;
+}
+    .rootcause_data svg {
+    height: 35px;
+}
+    .login_root_causes ul li {
+    padding: 6px 0 !important;
+    margin: 0 5px !important;
+}
+    p.login-heading {
+    color: rgba(62, 62, 62, 1) !important;
+    font-size: 26px;
+    font-family: 'fredoka_oneregular' !important;
+    text-align: center;
+    width: 100%;
+    line-height: normal !important;
+  margin-bottom: 20px !important;
+}
+    span.ml-3.stages {
+    font-size: 14px;
+          line-height: initial;
+}
+    .order-status-text {
+      width: unset;
+      padding-left: 0.25rem;
+    }
+    .order-status-text, .order__id, .order__status {
+      font-size: 13px;
+      line-height: 18px;
+    }
+    .order__id {
+       width: unset;
+      padding-left: 0.25rem;
+    }
+    .order__status {
+       width: unset;
+    }
+    .angle__icons {
+      width: unset;
+    }
+    .bordered {
+      width: unset;
+      height: 6px;
+      padding-right: 18vw;
+    }
+    .order-status {
+      top: 45px;
+    }
+    .padding {
+      padding: 15px;
+    }
+  .order-init {
+    justify-content: space-between;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+  .bordered.width {
+    padding-right: 9vw;
+  }
+  }
+  .container.order-status {
+       padding-top: 80px;
+    margin: 0 AUTO;
+    max-width: 1400px;
+}
+  .order-init span.ml-3.stages a{
+    font-size: 22px;
+    line-height: 62px;
+    color: rgba(183, 211, 64, 1);
+    letter-spacing: normal;
+    font-weight: 700;
+}
+  
+  /* Login Page Css */
+.home_login.slideshow__media img {
+    margin: 0 auto;
+    width: 100%;
+}
+.login_header.header-wrapper{
+    background: #414042!important;
+}
+
+  .login_heading_sub .login-heading {
+    margin-bottom: 15px !important;
+}
+  .login_heading_sub h6.text-center {
+    color: rgba(0, 0, 0, 1);
+    font-size: 30px;
+    font-weight: 400;
+}
+  h6.sub-heaidng.text-center {
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+    @media screen and (min-width: 768px) {
+     .btns.home_login.mt-md-5 a#homepage {
+    display: inline-block !important;
+    width: 100%;
+}
+      span.talk_to_coach_btn a#myPlanHome{
+            width: 100%;
+        min-width: 100%;
+      }
+      p.login-heading {
+    color: rgba(62, 62, 62, 1) !important;
+    font-size: 48px;
+    font-family: 'fredoka_oneregular' !important;
+    text-align: center;
+    width: 100%;
+    line-height: normal !important;
+  margin-bottom: 30px !important;
+}
+    .container.after_login_video, .container.login_root_causes, .container.after-login-journey, .container.traya-coach-help, .container.login-guide {
+          padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+     .login_seperator, .native-video, .container.login_root_causes, .container.after-login-journey, .container.traya-coach-help, .container.login-guide{
+      margin-bottom: 50px;
+    }
+     .container.after_login_video {
+    max-width: 900px;
+    margin: 0 auto;
+}
+      .login_space {
+    margin-bottom: 50px;
+}
+}
+   @media screen and (min-width: 992px) {
+     .status_first .is-complete.status__border.active_order {
+        margin: 0;
+        text-align: center;
+        margin-bottom: 12px !important;
+}
+      .order-tracking::before {
+        content: '';
+        display: block;
+        height: 2px;
+        width: calc(100% - 40px);
+        top: 25px;
+        position: absolute;
+        left: calc(-50% + 20px);
+        z-index: 0;
+        border: 2px solid rgba(200, 208, 206, 1);
+        border-style: dashed;
+}
+      .status_last .is-complete.status__border {
+    margin: 10px 0 20px auto;
+}
+      .order-tracking.complete_track.order__stages.status_first {
+    text-align: left;
+}
+    .order-tracking.order_dots.order__stages.status_last {
+    text-align: right;
+}
+   }
+  @media screen and (max-width: 767px) {
+  .order__information {
+    padding: 0 0px 10px;
+}
+    .order-tracking::before {
+    left: calc(-50% + 5px)!important ;
+}
+    .order-tracking.complete_track .is-complete {
+    width: 35px;
+    height: 35px;
+   
+       margin-top: 9px !important;
+}
+    span.order_login_achieve svg {
+    width: 26px;
+    height: 34px;
+}
+    .order-tracking .is-complete {
+    height: 20px;
+    width: 20px;
+    margin: 16px auto 0 !important;
+    }
+    .order-init.align-items-center.py-3 {
+    padding-bottom: 0 !important;
+      padding-top: 5px !important;
+}
+    .order-init span.ml-3.stages {
+    font-size: 14px;
+}
+    .container.order-status {
+    padding-top: 40px;
+}
+    .login_coach_questions a {
+    font-size: 18px !important;
+    padding: 9px 22px 7px !important;
+      max-width:180px !important;
+      text-align:center !important;
+}
+    .login_coach_questions h5 {
+    font-size: 17px !important;
+          margin-bottom: 15px !important;
+      font-weight: bold !important;
+}
+    .html_area.page-width.mt-3.my-md-5.pb-2.pb-md-auto.login_swirl {
+    margin-bottom: 40px;
+}
+    h6.sub-heaidng.text-center {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+    .login_heading_sub h6.text-center {
+    font-size: 16px !important;
+}
+      .login_space {
+    margin-bottom: 30px;
+}
+    .container.after_login_video, .container.login_root_causes, .container.after-login-journey, .container.traya-coach-help, .container.login-guide {
+    margin-bottom: 40px;
+        padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+    .login_seperator, .native-video, .container.login_root_causes, .container.after-login-journey, .container.traya-coach-help, .container.login-guide{
+      margin-bottom: 40px;
+    }
+  }
+ @media only screen and (max-width: 400px) {
+   .order-init .order__stages.d-flex {
+    width: auto !important;;
+}
+   .order_satus_design {
+    width: auto !important;
+}
+   .order-init span.ml-3.stages a {
+    font-size: 15px ;
+}
+ }
+{% endstyle %}

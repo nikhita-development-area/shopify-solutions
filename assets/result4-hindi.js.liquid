@@ -1,0 +1,1011 @@
+let trayaProcessingAnimation = document.getElementById('traya-processing-animation');
+var getUrlParameter = function getUrlParameter(sParam) {
+  var sPageURL = window.location.search.substring(1), sURLVariables = sPageURL.split('&'), sParameterName, i;
+  for (i = 0; i < sURLVariables.length; i++) {
+    sParameterName = sURLVariables[i].split('=');
+    if (sParameterName[0] === sParam) {
+      return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+    }
+  }
+};
+
+var id = getUrlParameter('id'), f_name = "", C_number = "", C_email = "", user__gender = "", user_gender = "", rid = "", caseId = "", selectedStage = 'Stage-1';
+var cohort = getUrlParameter('cohort'), variantsID = 0, recommended_products = [], variantsIDs = [];
+var prices = 0, doc__fee = 100000, diet__plan = 50000, hair__coach_fee = 50000, month1_total, month1DiscountPrice, month3DiscountPrice, month6DiscountPrice, discount_pricetext = 0;
+let successfulFetchCount = 0, totalProducts = 0;
+if (id) {
+  localStorage.setItem('user-gender', 'male');
+  localStorage.setItem('rid', id);
+}
+id = localStorage.getItem('rid');
+if(id === undefined) {
+  id = getCookie('syntheticId');
+}
+(function () {
+  if(!id) {
+    if(window.location.pathname == '/pages/result-hi'){
+      alert('Your recommendation is not found. Please fill the diagnosis to help us share the recommended plan.');
+      document.location.href= 'https://form.traya.health/questions?cohort=1&source=ResultPage'
+    }
+    var data_formPage = document.querySelectorAll('[data-formPage]'),
+      data_resultPage = document.querySelectorAll('[data-resultPage]'),
+      data_resultbtn = document.querySelectorAll('[data-resultbtn]'),
+      data_notResult = document.querySelectorAll('[data-notResult]');
+    if(data_formPage.length != 0) {
+      data_formPage.forEach((formpage) => { formpage.style.display = "block"; });
+    }
+    if(data_resultPage.length != 0) {
+      data_resultPage.forEach((resultpage) => { resultpage.style.display = "none"; });
+    }
+    if(data_resultbtn.length != 0) {
+      data_resultbtn.forEach((resultbtn) => { resultbtn.style.display = "none"; });
+    }
+    if(data_notResult.length != 0) {
+      data_notResult.forEach((notresult) => { notresult.style.display = "block"; });
+    }
+  }else {
+    setotherCookie('syntheticId', id, 30, '.traya.health');
+    var data_result = document.querySelectorAll('[data-result]');
+    if(data_result.length != 0) {
+      data_result.forEach((result) => { result.style.display = "block"; })
+    }
+  }
+  var baseUrls = {
+    DEV: 'https://api.v2dev.hav-g.in/',
+    //DEV: 'https://api.dev.hav-g.in/',
+    PROD: 'https://api.hav-g.in/'
+  };
+  var tokens = {
+    DEV: { 
+      "Authorization": "Bearer e2623576-930b-48b6-81e2-a3cb5e37f47d"
+    },
+    PROD: { 
+      "Authorization": "Bearer d7ef603e-71ea-44a1-93f2-2bacd08c4a90"
+    }
+  };
+  var token = tokens.PROD;
+  var baseUrl = baseUrls.PROD;
+  var liveendpoint = 'https://api.hav-g.in/dgReport?id=';
+  if (cohort == 2) {
+    liveendpoint = baseUrl + 'dgReport/v2?id=';
+  } else {
+    liveendpoint = baseUrl + 'dgReport/v1?id=';
+  }
+  liveendpoint = 'https://api.hav-g.in/dgReport/v4?id=';
+  window.addEventListener('DOMContentLoaded', function() {
+    var hindi_button = document.querySelectorAll(".header__icons_language_hi"), english_button = document.querySelectorAll(".header__icons_language_en");
+    var query = window.location.search;
+    if(hindi_button.length != 0) {
+      hindi_button.forEach((btn) => {
+        btn.setAttribute("href", `/pages/result-hi${query}`);
+      })
+    }
+    if(english_button.length != 0) {
+      english_button.forEach((btn) => {
+        btn.setAttribute("href", `/pages/result4${query}`);
+      })
+    }
+    clearCart();
+    var atcButton = document.querySelectorAll('#add-to-cart-result-page');
+    if(atcButton.length != 0) {
+      atcButton.forEach((button) => {
+        button.addEventListener('click', function() {
+          fetch('/cart/clear.js', {
+            method: "POST",
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          }).then((response) => {
+            return response.json();
+          }).catch((error) => {
+            console.error('Error: ', error);
+          }).finally(() => {
+            checkout();
+          })
+        })
+      });
+    }
+    getMaleResult(liveendpoint, id, token);
+  })
+})();
+
+var clearCart = function() {
+  var formdata = {
+    sections: 'cart-drawer'
+  };
+  fetch('/cart/clear.js', {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formdata)
+  }).then((response) => {
+    return response.json();
+  }).then((result) => {
+    var t = document.querySelector('cart-drawer');
+    let cart_drawer = result.sections['cart-drawer'];
+    CartDrawerUpdate(t, cart_drawer, drawer=false,0);
+  }).catch((error) => {
+    console.error('Error: ', error);
+  })
+}
+
+function getMaleResult(livepoint, id, token) {
+  document.body.style.overflow = 'hidden';
+  fetch(`${livepoint}${id}`, {
+    headers: token
+  }).then((response) => {
+    return response.json();
+  }).then((response) => {
+    ShowContent(response);
+    displayProduct(response);
+  }).catch((error) => {
+    console.error('Error: ', error);
+     document.body.style.overflow = 'unset';
+  });
+}
+
+function displayProduct(response) {
+  var r = Object.assign(response.User_Analysis, response.Recommendations);
+  f_name = r.first_name;
+  C_number = r.phone;
+  C_email = r.email;
+  user__gender = r.gender;
+  setCookie('user_phone', C_number, 30);
+  caseId= r.case_id;
+  localStorage.setItem('caseId', caseId);
+  if(user__gender == 'M') {
+    user_gender = 'Male';
+  }
+  var coin_size = false;
+  if(r.stage == 'Coin Size Patch') {
+    coin_size = true;
+  }
+  var productTemplate = 'result-product-list', slides = 1, mobileSlides = 1 ,arrows = false, dots = true;
+  if(r.stage == "Stage-1") {
+    productTemplate = 'result4c-card', slides = 3, mobileSlides = 1.3;
+  }else {
+    productTemplate = 'result4c-card', slides = 3, mobileSlides = 1.3;
+    // productTemplate = 'result-product-list', slides = 1, mobileSlides = 1;
+  }
+  var test_result = document.querySelectorAll('.test-result'), product_section_list = document.querySelectorAll('.product-section-list'),
+  product_section = document.querySelectorAll('.product-section'), cust_reviews = document.querySelectorAll('.cust_reviews'),
+  our_experts = document.querySelectorAll('.our-experts'), sticky_btn = document.querySelectorAll('.sticky-btn'), 
+  transplant_stage_six = document.querySelectorAll('.transplant-stage-six'), normal_page_is = true, data__gender = document.querySelectorAll('[data-gender]');
+  var genderStage1Main = document.querySelector('.gender-m-stage-1'), otherStages1Main = document.querySelector('.other-m-stage-1'),
+  stage_pro__title = document.querySelectorAll('.stage1_pro_title_hide'), stage1_pro__title = document.querySelectorAll('.m-stage-1-Pro_title'),
+  root_impacting_stage1 = document.querySelectorAll('.root_impacting_stage1'), product__section__list = document.querySelectorAll('.product-section-list'),
+  stage1_hairgrowth = document.querySelector('.stage1_hairgrowth'), satge1_doctor = document.querySelector('.satge1_doctor'),
+  stage1_coach = document.querySelector('.stage1_coach'), stageDescription_text = document.querySelectorAll('.stageDescription_text'),
+  result4_cust_reviews = document.querySelectorAll('.result4.cust_reviews'), stage_1_testimonial = document.querySelectorAll('.stage_1_testimonial'),
+  issue_hair_goal = document.querySelectorAll('.issue_hair_goal'), stage1_Text = document.querySelectorAll('.stage1_Text'),
+  user_type_stage = document.querySelectorAll('.user_type_stage'), diagnosed_text = document.querySelectorAll('.diagnosed_text'),
+  stage_1__title = document.querySelectorAll('.m-stage-1-title'), root_cause__text = document.querySelectorAll('.root-cause-text'),
+  rootCauseImage = document.querySelectorAll('.root-cause-text.root-cause-text-desk.new_root img'), root_only_img = document.querySelectorAll('.root_only_img'),
+  product_section__cards = document.querySelectorAll('.product-section-list>.container>.card');
+  if(r.gender == 'M' && r.stage == "Stage-1"){
+    if(otherStages1Main) { otherStages1Main.remove(); }
+    if(genderStage1Main) { genderStage1Main.style.display = 'block'; }
+    if(stage_pro__title.length != 0) { stage_pro__title.forEach((title) => { title.style.display = 'none'; }) }
+    if(stage1_pro__title.length != 0) { stage1_pro__title.forEach((title) => { title.style.display = 'block'; }) }
+    if(root_impacting_stage1.length != 0) { root_impacting_stage1.forEach((stage) => { stage.classList.add('root_impacting_stage1_show'); }) }
+    if(stage1_hairgrowth) { stage1_hairgrowth.innerHTML = `कस्टमाइज्ड हेयर प्लान`; }
+    if(satge1_doctor) { satge1_doctor.innerHTML = `डॉक्टर प्रेस्क्रिप्शन`; }
+    if(stage1_coach) { stage1_coach.innerHTML = `हेयर कोच`; }
+    if(stageDescription_text.length != 0) { stageDescription_text.forEach((stage) => { stage.classList.add('satge1_stageDescription_text'); }) }
+    if(result4_cust_reviews.length != 0) { result4_cust_reviews.forEach((stage) => { stage.classList.add('cust_reviews_hide'); }) }
+    if(stage_1_testimonial.length != 0) { stage_1_testimonial.forEach((stage) => { stage.classList.add('stage_1_testimonial_show'); }) }
+    if(issue_hair_goal.length != 0) { issue_hair_goal.forEach((stage) => { stage.classList.add('stage-diagnosed_hairgaol_stage1'); }) }
+    if(stage1_Text.length != 0) { stage1_Text.forEach((stage) => { stage.classList.add('stage-1_hair_issues'); }) }
+    if(user_type_stage.length != 0) { user_type_stage.forEach((stage) => { stage.classList.add('user_type_stage1'); }) }
+    if(diagnosed_text.length != 0) { diagnosed_text.forEach((stage) => { stage.classList.add('user_type_stage1'); }) }
+    if(stage_1__title.length != 0) { stage_1__title.forEach((stage) => { stage.innerHTML = `का कस्टमाइज्ड प्लान`; }) }
+    if(root_cause__text.length != 0) { root_cause__text.forEach((stage) => { stage.classList.add('new_root'); }) }
+    if(rootCauseImage.length != 0) { rootCauseImage.forEach((stage) => { stage.setAttribute('src', 'https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353161_1.webp?v=1688646677'); }) }
+    if(root_only_img.length != 0) { root_only_img.forEach((stage) => { stage.classList.add('mob_root_only_img') }) }
+    if(product_section__cards.length != 0) { product_section__cards.forEach((stage) => { stage.classList.add('w-md-adjust') }) }
+  }else {
+    if(genderStage1Main) {
+      genderStage1Main.remove();
+    }
+  }
+  if(r.gender == 'M' && r.stage == "Stage-6"){
+    normal_page_is = false;
+  }else{
+    normal_page_is = true;
+  }
+  if(test_result.length != 0) {
+    test_result.forEach((result) => {
+      if(normal_page_is == false) {
+        result.classList.add('d-none');
+      }else {
+        result.classList.remove('d-none');
+      }
+    })
+  }
+  if(product_section_list.length != 0) {
+    product_section_list.forEach((list) => {
+      if(normal_page_is == false) {
+        list.classList.add('d-none');
+      }else {
+        list.classList.remove('d-none');
+      }
+    });
+  }
+  if(product_section.length != 0) {
+    product_section.forEach((section) => {
+      if(normal_page_is == false) {
+        section.classList.add('d-none');
+      }else {
+        section.classList.remove('d-none');
+      }
+    });
+  }
+  if(cust_reviews.length != 0) {
+    cust_reviews.forEach((section) => {
+      if(normal_page_is == false) {
+        section.classList.add('d-none');
+      }else {
+        section.classList.remove('d-none');
+      }
+    });
+  }
+  if(our_experts.length != 0) {
+    our_experts.forEach((section) => {
+      if(normal_page_is == false) {
+        section.classList.add('d-none');
+      }else {
+        section.classList.remove('d-none');
+      }
+    });
+  }
+  if(sticky_btn.length != 0) {
+    sticky_btn.forEach((section) => {
+      if(normal_page_is == false) {
+        section.classList.add('d-none');
+      }else {
+        section.classList.remove('d-none');
+      }
+    });
+  }
+  if(transplant_stage_six.length != 0) {
+    transplant_stage_six.forEach((section) => {
+      if(normal_page_is == false) {
+        section.classList.remove('d-none');
+      }else {
+        section.remove();
+      }
+    });
+  }
+  // Product Recommendation
+  if(r.Health_tatva === 'Yes') {
+    recommended_products.push({
+      'handle': 'herbal-tablets',
+      'co_handle': '',
+      'coin_size': coin_size
+    });
+  }
+  if(r.Gut_shuddi === 'Yes') {
+    recommended_products.push({
+      'handle': 'avipattikar-digestion-tablets',
+      'co_handle': '',
+      'coin_size': coin_size
+    });
+  }
+  if(r.Minoxidil === 'Yes' && r.gender === 'M') {
+    recommended_products.push({
+      'handle': 'traya-minoxidil-5',
+      'co_handle': '',
+      'coin_size': coin_size
+    });
+  }
+  if(r.Minoxidil === 'Yes' && r.gender === 'F') {
+    recommended_products.push({
+      'handle': 'minoxidil-2',
+      'co_handle': '',
+      'coin_size': coin_size
+    });
+  }
+  if(r.Shampoo === 'Normal') {
+    recommended_products.push({
+      'handle': 'shampoo',
+      'co_handle': '',
+      'coin_size': coin_size
+    });
+  }
+  if(r.Shampoo === 'Anti dandruff') {
+    recommended_products.push({
+      'handle': 'anti-dandruff-shampoo',
+      'co_handle': '',
+      'coin_size': coin_size
+    });
+  }
+  if(r.Hair_vitamin === 'Yes') {
+    recommended_products.push({
+      'handle': 'hair-vitamins',
+      'co_handle': '',
+      'coin_size': coin_size
+    });
+  }
+  if((r.Serum === 'Yes') && (r.RCP === 'No')) {
+    recommended_products.push({
+      'handle': 'recap-serum-for-hair-fall-control',
+      'co_handle': '',
+      'coin_size': coin_size
+    });
+  }
+  if(r.RCP === 'Yes') {
+    recommended_products.push({
+      'handle': 'recap-serum-for-hair-fall-control',
+      'co_handle': '',
+      'coin_size': coin_size
+    });
+  }
+  if(r.Hair_ras === 'Yes') {
+    recommended_products.push({
+      'handle': 'hair-growth-herbs',
+      'co_handle': '',
+      'coin_size': coin_size
+    });
+  }
+  if (r.Scalp_oil === 'Yes' || r.Scalp_oil === 'bergamot and ylang ylang') {
+    var boosterOil = "", handle = "";
+    if (r.Calm_Therapy_Booster_Oil === 'Yes'){
+      handle = "scalp-oil-with-calm-therapy-booster-shots";
+      boosterOil = " + Calm Therapy Booster Oil";
+    }else if(r.Dandruff_Therapy_Booster_Oil === 'Yes') {
+      handle = "scalp-oil-with-dandruff-therapy-booster-shots";
+      boosterOil = " + Dandruff Therapy Booster Oil";
+    }else if(r.Growth_Therapy_Booster_Oil === 'Yes') {
+      handle = "scalp-oil-with-growth-therapy-booster-shots";
+      boosterOil = " + Growth Therapy Booster Oil";
+    }else if(r.Scalp_Therapy_Booster_Oil === 'Yes') {
+      handle = "scalp-oil-with-scalp-therapy-booster-shots";
+      boosterOil = " + Scalp Therapy Booster Oil";
+    }else {
+      handle = "scalp-oil-with-growth-therapy-booster-shots";
+    }
+    recommended_products.push({
+      'handle': handle,
+      'co_handle': boosterOil,
+      'coin_size': coin_size
+    });
+  }
+  if(r.Kevon === 'Yes') {
+    recommended_products.push({
+      'handle': 'ketoconazole-2-night-lotion',
+      'co_handle': '',
+      'coin_size': coin_size
+    });
+  }
+  if(r.Nasya === 'Yes') {
+    recommended_products.push({
+      'handle': 'shatavari-ghrita',
+      'co_handle': '',
+      'coin_size': coin_size
+    });
+  }
+  if(r.Digest_Boost === 'Yes') {
+    recommended_products.push({
+      'handle': 'digest-boost-for-improved-digestive-ability-traya-health',
+      'co_handle': '',
+      'coin_size': coin_size
+    });
+  }
+  if(r.gender === 'M'){
+    if(data__gender.length != 0) {
+      data__gender.forEach((gender) => { gender.append('Male'); });
+    }
+  } else {
+    document.location.href= `/pages/female-result?id=${id}`;
+    if(data__gender.length != 0) {
+      data__gender.forEach((gender) => { gender.append('Female'); });
+    }
+  }
+  if(recommended_products.length != 0) {
+    var product_counts = document.querySelectorAll('[product_count]');
+    if(product_counts.length != 0) {
+      product_counts.forEach((count) => {
+        count.innerHTML = `- (${recommended_products.length} प्रोडक्ट्स)`
+      })
+    }
+    const fetchPromises = [];
+    totalProducts = recommended_products.length;
+    recommended_products.forEach((product) => {
+      const fetchPromise = getProductByHandle(product.handle, product.co_handle, product.coin_size, productTemplate, successfulFetchCount);
+      fetchPromises.push(fetchPromise);
+    });
+    Promise.all(fetchPromises).then(() => {
+      if (successfulFetchCount === totalProducts) {
+        setTimeout(() => {
+          InitProductSlider(slides, mobileSlides);
+        }, 1000)
+      }
+    }).catch((error) => {
+      console.error('One or more fetch requests failed: ', error);
+    });
+  }
+  // Recommended Products End
+  if (r.stage == "Stage-1") {
+    document.querySelector('#stage').style.display = "none";
+  }else if (r.stage == "Stage-2") {
+    document.querySelector('#stage').innerHTML = 'के स्टेज - 2 में हैं।';
+  }else if(r.stage == "Stage-3"){
+    document.querySelector('#stage').innerHTML = 'के स्टेज - 3 में हैं।';
+  }else if(r.stage == "Stage-4"){
+    document.querySelector('#stage').innerHTML = 'के स्टेज - 4 में हैं।';
+  }else if(r.stage == "Stage-5"){
+    document.querySelector('#stage').innerHTML = 'के स्टेज - 5 में हैं।';
+  }
+  if (trayaProcessingAnimation) {
+    trayaProcessingAnimation.style.display = 'none';
+  }
+  document.body.style.overflow = 'unset';
+}
+
+function InitProductSlider(slides, mobileSlides) {
+  $('.result_product_slides').slick({
+    slidesToShow: slides,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    arrows: true,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: mobileSlides,
+          slidesToScroll: 1,
+          infinite: false,
+          arrows: false
+        }
+      }
+    ]
+  });
+}
+
+function getProductByHandle(handle, co_handle, coin_size, productTemplate) {
+  return new Promise((resolve, reject) => {
+    try {
+      fetch(`/products/${handle}.js`, {
+        method: 'GET'
+      }).then((response) => {
+        return response.json();
+      }).then((product) => {
+        var { price, variants } = product, final_price = 0;
+        prices = prices + price;
+        final_price = (prices/100);
+        discount_price = (final_price+2000);
+        discount_pricetext = (discount_price-final_price);
+        var discount_per = parseInt((discount_pricetext / discount_price)*100);
+        var off_percent = document.querySelector('.per__off'), all_total_price = document.querySelectorAll('.all-total-price'),
+        total_price = document.querySelectorAll('.total-price'), model_discount_price = document.querySelectorAll('.model_discount_price'),
+        aTCButton4 = document.querySelectorAll('#add-to-cart-result-page'), stickyAtcButton4 =  document.querySelectorAll('.sticky-btn #add-to-cart-result-page');
+        if(off_percent) {
+          off_percent.innerHTML = `(${discount_per} % OFF)`;
+        }
+        if(all_total_price.length != 0) {
+          all_total_price.forEach((div_total_price) => { div_total_price.innerHTML = `₹ ${discount_price}`; })
+        }
+        if(total_price.length != 0) {
+          total_price.forEach((t_price) => { t_price.innerHTML = `₹ ${final_price}`; })
+        }
+        if(model_discount_price) {
+          model_discount_price.forEach((discount_price) => { discount_price.innerHTML = `You Saved ₹ ${discount_pricetext}`; })
+        }
+        if(aTCButton4.length != 0) {
+          aTCButton4.forEach((btn4) => { btn4.setAttribute('data-price', final_price); });
+        }
+        if(stickyAtcButton4.length != 0) {
+          stickyAtcButton4.forEach((btn4) => { btn4.setAttribute('data-price', final_price); });
+        }
+        variantsIDs.push({
+          'id': variants[0].id,
+          'quantity': 1
+        })
+        resolve();
+        successfulFetchCount++;
+      }).catch((error) => {
+        console.error('Product Error: ', error);
+        reject(error);
+      });
+      fetch(`/products/${handle}?view=${productTemplate}`).then((response) => {
+        return response.text();
+      }).then((response) => {
+        var html = new DOMParser().parseFromString(response, 'text/html')?.querySelector('.col-md-12');
+        var result4c = new DOMParser().parseFromString(response, 'text/html')?.querySelector('.col-12.col-md-4');
+        var result_div = document.querySelector('.product-section .container > .row');
+        if(result_div && html) {
+          result_div.append(html);
+          if(coin_size == true) {
+            var coin_sizes = document.querySelectorAll('.product-section .container > .row .toChange');
+            if(coin_sizes.length != 0) {
+              coin_sizes.forEach((coin) => {
+                coin.innerHTML = 'Hair Health';
+              })
+            }
+          }
+        }
+        if(result_div && result4c) {
+          result_div.append(result4c);
+          if(coin_size == true) {
+            var coin_sizes = document.querySelectorAll('.product-section .container > .row .toChange');
+            if(coin_sizes.length != 0) {
+              coin_sizes.forEach((coin) => {
+                coin.innerHTML = 'Hair Health';
+              })
+            }
+          }
+        }
+      }).catch((error) => {
+        console.error('Error: ', error);
+        reject(error);
+      });
+    } catch (error) {
+      console.error('Error: ', error);
+      reject(error);
+    }
+  });
+}
+
+function checkout() {
+  localStorage.setItem('user__gender',user_gender);
+  localStorage.setItem('caseId',caseId);
+  variantsIDs.forEach((e) => {
+    if(e.id === 37681124081842){
+      e.properties = {'Plan': 'Dandruff'};
+    }else if(e.id === 42648509186226){
+      e.properties = {'Plan': 'Dandruff'};
+    }else if(e.id === 41899898011826){
+      e.properties = {'Plan': 'Dandruff'};
+    }else {
+      e.properties = {'Plan': 'Auto'};
+    }
+  });
+  let formData = {
+    'items': variantsIDs,
+    sections: 'cart-drawer',
+    attributes: {
+      first_name: f_name,
+      phone: C_number,
+      email: C_email
+    }
+  };
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => {  
+    localStorage.setItem('User_location', "cart");
+    return response.json();
+  }).then(result => { 
+    var t = document.querySelector('cart-drawer');
+    let cart_drawer = result.sections['cart-drawer'];
+    CartDrawerUpdate(t, cart_drawer);
+  }).catch((error) => {
+    console.error('Error:', error);
+  });
+}
+
+function ShowContent(response) {
+  var data = Object.assign(response.User_Analysis, response.Recommendations);
+  var stageDescription = {
+    "Stage-1": `हम कोशिश करेंगे की आपके बाल दोबारा घने हो जाएं और आपका हेयर लाइन बना रहे।`,
+    "Stage-2": `आप हेयर लॉस के शुरुवाती स्टेजेस में हैं और आप सही वक़्त पे Traya के पास आयें है। आपको ${data.Max_months} महीने में अच्छे रिजल्ट्स नज़र आएंग।`,
+    "Stage-3": `आपका हेयर लॉस काफी ज़्यादा है लेकिन हम आपके बालो को वापस लाने में मदद कर सकते है। आपको ${data.Max_months} महीनो में अपने बालो में बदलाव दिखेंगे ।  `,
+    "Stage-4": `हेयर लॉस इस स्टेज पर मैनेज हो सकता हैं।  तुरंत शुरू करें और ${data.Max_months} महीनो में बेस्ट रिजल्ट्स देखे।`,
+    "Stage-5": `इस समय, हमारा फोकस आपके हेयर फॉल को बढ़ने से रोकना है। आपके जैसे हज़ारो लोगो ने Traya के रेकमेंडेड प्लान को फॉलो करके अच्छे रिजल्ट्स देखे है।</p>`,
+    "Stage-6": `आपके अधिकतर हेयर फॉलिकल्स मर चुके हैं और अब बालो का रिग्रोथ नहीं हो सकता। `,
+    "Heavy Hair Fall Across The Head": `आपका हेयर फॉल कण्ट्रोल हो सकता है।  हमे बस आपके रुट कॉस को ठीक करना हैं। ${data.Max_months} महीने में बेस्ट रिजल्ट्स पाए।`,
+    "Heavy Hair Fall": `आपका हेयर फॉल कण्ट्रोल हो सकता है।  हमे बस आपके रुट कॉस को ठीक करना हैं। ${data.Max_months} महीने में बेस्ट रिजल्ट्स पाए।`,
+    "Coin Size Patches": `इस हेयर लॉस टाइप को ठीक करना काफी मुश्किल है।`,
+    "Coin Size Patch": `इस हेयर लॉस टाइप को ठीक करना काफी मुश्किल है।`
+  };
+  var illness = data.experienced_in_one_year, genetics = data.Genetic, userStage = data.stage;
+  var userName = document.querySelectorAll('[data-user-name]'), name1 = document.querySelectorAll('#name1'),
+  name3 = document.querySelectorAll('#name3'), stage1 = document.querySelectorAll('#stage1'),
+  typeOfLoss3 = document.querySelectorAll('#typeOfLoss3'), stage3 = document.querySelectorAll('#stage3'),
+  stageDescriptionMain = document.querySelectorAll('#stageDescription'), stage3 = document.querySelectorAll('#stage3'),
+  typeOfLoss = document.querySelectorAll('#typeOfLoss'), mainstage = document.querySelectorAll('#stage');
+  var ourdia = document.querySelector('#ourdia');
+  if(userName.length != 0) { userName.forEach((name) => { name.innerHTML = `${data.first_name}` }) }
+  if(name1.length != 0) { name1.forEach((name) => { name.innerHTML = `${data.first_name}` }) }
+  if(name3.length != 0) { name3.forEach((name) => { name.innerHTML = `${data.first_name}` }) }
+  if(stage1.length != 0) { stage1.forEach((stage) => { stage.innerHTML = `के ${data.stage}` }) }
+  if(typeOfLoss3.length != 0) { typeOfLoss3.forEach((loss) => { loss.innerHTML = `आप मेल पैटर्न हेयर लॉस ` }) }
+  if(stage3.length != 0) { stage3.forEach((stage) => { stage.innerHTML = `के ${data.stage}` }) }
+  if(stageDescriptionMain.length != 0) { stageDescriptionMain.forEach((stage) => { stage.innerHTML = `${stageDescription[data.stage]}` }) }
+  if(illness.length != 0) {
+    var TECondition = illness.filter((ill) => {
+      if(ill == 'Severe Illness (Dengue, Malaria, Typhoid or Covid)') {
+        return ill;
+      }
+    })
+    if(TECondition.length == 1 && (genetics == 'Yes' || genetics == 'No') && (userStage == 'Heavy Hair Fall Across The Head' || userStage == 'Heavy Hair Fall')) {
+      if(typeOfLoss.length != 0) { typeOfLoss.forEach((stage) => { stage.innerHTML = `आप टेलोजेन एफ्लुवियम - `; }) }
+      if(mainstage.length != 0) { mainstage.forEach((stage) => { stage.innerHTML = `हैवी हेयर फॉल स्टेज में हैं।` }) }
+    }else if(TECondition.length == 0 && genetics == 'Yes' && (userStage == 'Heavy Hair Fall Across The Head' || userStage == 'Heavy Hair Fall')) {
+      if(typeOfLoss.length != 0) { typeOfLoss.forEach((stage) => { stage.innerHTML = `आपको मेल पैटर्न हेयर लॉस हैं।`; }) }
+    }else if(TECondition.length == 0 && genetics == 'No' && (userStage == 'Heavy Hair Fall Across The Head' || userStage == 'Heavy Hair Fall')) {
+      if(typeOfLoss.length != 0) { typeOfLoss.forEach((stage) => { stage.innerHTML = `आप टेलोजेन एफ्लुवियम - `; }) }
+      if(mainstage.length != 0) { mainstage.forEach((stage) => { stage.innerHTML = ` के हैवी हेयर फॉल स्टेज में हैं।` }) }
+    }else {
+      if(typeOfLoss.length != 0) { typeOfLoss.forEach((stage) => { stage.innerHTML = `आप मेल पैटर्न हेयर लॉस `; }) }
+    }
+  }
+  /* Coin Size Changes */
+  if(userStage == 'Coin Size Patch') {
+    var coin_main_title = document.querySelectorAll('#coin-main-title'), coin_plan_title = document.querySelectorAll('#coin-plan-title'),
+    cust_reviews = document.querySelectorAll('.cust_reviews');
+    if(coin_main_title.length != 0) { coin_main_title.forEach((title) => { title.innerHTML = `'s Treatment Plan`; }) }
+    if(coin_plan_title.length != 0) { coin_plan_title.forEach((title) => { title.innerHTML = `हेयर ट्रांसफॉर्मेशन किट`; }) } 
+    if(cust_reviews.length != 0) { cust_reviews.forEach((review) => { review.style.display = "none"; }) }
+    document.querySelector('.user_type_stage').textContent = 'आपको एलोपीशिया एरिएटा हो रहा हैं।';
+  }
+  /* Coin Size Changes */
+
+  /* Male Result Page Customer Reviews */
+  if(userStage === 'Stage-2') {    
+    document.querySelector('.cstm-stage_hi_2').style.display = 'block';  
+  }
+  if(userStage === 'Stage-3') {    
+    document.querySelector('.cstm-stage_hi_3').style.display = 'block';  
+  }
+  if(userStage === 'Stage-4') {    
+    document.querySelector('.cstm-stage_hi_4').style.display = 'block';  
+  }
+   if(userStage === 'Stage-5') {    
+    document.querySelector('.cstm-stage_hi_5').style.display = 'block';   
+  }
+   if(userStage === 'Heavy Hair Fall Across The Head' || userStage === 'Heavy Hair Fall') {    
+    document.querySelector('.cstm-stage_hi_TE').style.display = 'block';   
+  }
+  /* Male Result Page Customer Reviews */
+
+   if(userStage === 'Stage-6') {    
+    document.querySelector('.community-banner-result-page').style.display = 'none';  
+    document.querySelector('.male_pattern').textContent = 'आपको मेल पैटर्न हेयर लॉस हो रहा है।';
+  }
+  
+  /* Stage1 You Should + Card Section Changes */
+  var userAge = response.User_Analysis.age;
+  
+  if(userStage === 'Stage-1') {    
+    document.querySelector('.why-you-should').style.display = 'block';
+    document.querySelector('.stage_1_testimonial').style.display = 'none';
+    document.querySelector('.stage1-new-testimonial').style.display = 'block';
+    document.querySelector('.user-age-1').textContent = userAge;
+    document.querySelector('.user-age-2').textContent = userAge + 5;
+    document.querySelector('.user-age-3').textContent = userAge + 10;
+  }
+  /* Stage1 You Should + Card Section Changes */
+
+  /* 3 Sections on All Stages Except Stage6 & Coin Size Patch Changes */
+  var stage1Journey = document.querySelectorAll('.stage1-journey');
+  var stage1Holistic = document.querySelectorAll('.holistic-safe');
+
+  if(userStage == 'Stage-6') {
+    document.querySelector('.male-treatment-plan-hi').style.display = 'none';
+    document.querySelector('.aldrich-faq').style.display = 'none';
+  }
+  
+  if(userStage != 'Stage-6') {
+    document.querySelector('.stage1-doctors').style.display = 'block';
+  }
+
+  if(userStage == 'Stage-1' || userStage == 'Stage-6' || userStage == 'Coin Size Patch') {
+    if(stage1Journey.length != 0) {
+      stage1Journey.forEach((journey) => {
+        journey.style.display = 'none';
+      });
+    }
+  }else {
+    if(stage1Journey.length != 0) {
+      stage1Journey.forEach((journey) => {
+        journey.style.display = 'block';
+      });
+    }
+  }
+
+  if(userStage == 'Stage-1' || userStage == 'Stage-6') {
+    if(stage1Holistic.length != 0) {
+      stage1Holistic.forEach((holistic) => {
+        holistic.style.display = 'none';
+      });
+    }
+  }else {
+    if(stage1Holistic.length != 0) {
+      stage1Holistic.forEach((holistic) => {
+        holistic.style.display = 'block';
+      });
+    }
+  }
+  /* 3 Sections on All Stages Except Stage6 & Coin Size Patch Changes */
+
+  selectedStage = data.stage;
+  document.querySelector(`.${selectedStage}`)?.classList.add('selectedStage');
+  if (selectedStage === 'Stage-1') {
+    document.querySelector('.Stage-1')?.classList.add('all-stages');
+    document.querySelector('.main-stage-section')?.classList.add('all-stages-pd');
+  } else if (selectedStage === 'Stage-2') {
+    document.querySelector('.Stage-2-1')?.classList.add('checkStage');
+  } else if (selectedStage === 'Stage-3') {
+    document.querySelector('.Stage-3-1')?.classList.add('checkStage');
+  } else if (selectedStage === 'Stage-4') {
+    document.querySelector('.Stage-4-1')?.classList.add('checkStage');
+  } else if (selectedStage === 'Stage-5') {
+    document.querySelector('.Stage-5-1')?.classList.add('checkStage');
+  } else if (selectedStage === 'Stage-6') {
+    document.querySelector('.Stage-5')?.classList.add('checkStage');
+  } else if (selectedStage === 'Coin Size Patch') {
+    document.querySelector('.Stage-7')?.classList.add('selectedStage');
+  } else if (selectedStage === 'Heavy Hair Fall Across The Head' || selectedStage === "Heavy Hair Fall") {
+    document.querySelector('#male-stages')?.classList.add('male-stagesTE');
+    document.querySelector('.TE_stage-name').style.display = "block";
+    document.querySelector('#stageDescription')?.classList.add('stageDescriptionTE');
+    document.querySelector('.Stage-8')?.classList.add('selectedStage');
+    document.querySelector('.Stage-8-1')?.classList.add('checkStage', 'hide-text');
+  }
+  var diagnoses__image =  document.querySelector('.diagnoses-result > img');
+  if(diagnoses__image) { diagnoses__image.style.display = 'none'; }
+  if(ourdia) {
+    var ourdia__li = ourdia.querySelectorAll('li');
+    ourdia__li.forEach((li) => {
+      li.style.display = 'none';
+    });
+    var ourdia__btns = ourdia.querySelectorAll('a');
+    if(ourdia__btns.length != 0) {
+      ourdia__btns.forEach((btns) => {
+        btns.addEventListener('click', function(e) {
+          e.preventDefault();
+          var id = this.getAttribute('data-id'), tab_panes = document.querySelectorAll('.tab-pane'),
+          nav__links = document.querySelectorAll('.nav-item.nav-link');
+          tab_panes.forEach((pane) => {
+            pane.classList.remove('active');
+            pane.classList.remove('show');
+          });
+          document.querySelector(`#nav-tabContent #${id}`).classList.add('active');
+          document.querySelector(`#nav-tabContent #${id}`).classList.add('show');
+          nav__links.forEach((links) => {
+            links.classList.remove('active');
+          });
+          document.querySelector(`#nav-tab #${id}-tab`).classList.add('active');
+        });
+      });
+    }
+  }
+  var type = response.Recommendations.Type, Genetic = response.Recommendations.Genetic, User_Analysis = response.User_Analysis,
+  Recommendations = response.Recommendations, hair_goals = response.hair_goals, stageTE = response.User_Analysis.stage,
+  experienced_one_year = response.User_Analysis.experienced_in_one_year;
+  if (stageTE == "Stage-1"){
+    var texts = response.hair_goals, newText = "";
+    hair_goals[hair_goals.indexOf('Regrow hair')] = 'regrowth of hair wherever possible';
+    hair_goals[hair_goals.indexOf('Control hair fall')] = 'reduction of hair fall';
+    hair_goals[hair_goals.indexOf('I have a good set of hair, I want to maintain it.')] = 'maintenance of hair line';
+    hair_goals[hair_goals.indexOf('Work on hair quality')] = 'better hair quality';
+    hair_goals[hair_goals.indexOf('Delay greying')] = 'delay hair greying';
+    for (var i = 0; i < texts.length; i++) {
+      newText += hair_goals[i];
+      if (i < texts.length - 2) {
+         newText += ", ";
+      } else if (i === texts.length - 2) {
+        newText += " and ";
+      }
+    }
+    document.querySelector(".male_result_commas").style.display = 'block';
+    newText = 'हम आपके बालो की बेहतर क्वालिटी और हेयर लाइन को मेन्टेन करने पे काम करेंगे।';
+    document.querySelector(".hair_golsmal").innerHTML = newText;
+  }
+  if (stageTE == "Heavy Hair Fall Across The Head" || stageTE == "Heavy Hair Fall"){
+    for(var i=0; i < experienced_one_year.length; i++){
+      let experienced_one = experienced_one_year[i];
+      if(experienced_one == "Severe Illness (Dengue, Malaria, Typhoid or Covid)"){
+        document.querySelector('#illness').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+        document.querySelector('#nav-illness-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+      }
+      if (experienced_one == "Heavy weight loss / heavy weight gain"){
+        document.querySelector('#weight-change').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+        document.querySelector('#nav-weight-change-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+      }
+      if (experienced_one == "Surgery / heavy medication"){
+        document.querySelector('#surgery').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+        document.querySelector('#nav-Surgery-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+      }    
+    } 
+  }
+  let count=0;
+  if (stageTE == "Heavy Hair Fall Across The Head" || stageTE == "Heavy Hair Fall"){
+    for(var i=0; i < experienced_one_year.length; i++){
+    let experienced_one = experienced_one_year[i];
+      if(experienced_one == "Severe Illness (Dengue, Malaria, Typhoid or Covid)" && count<4){
+        document.querySelector('#illness').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+        document.querySelector('#nav-illness-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+         count++;
+      }
+      if(experienced_one == "Heavy weight loss / heavy weight gain" && count<4){
+        document.querySelector('#weight-change').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+        document.querySelector('#nav-weight-change-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+        count++;
+      }
+      if(experienced_one == "Surgery / heavy medication" && count<4){
+        document.querySelector('#surgery').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+        document.querySelector('#nav-Surgery-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+        count++;
+      }      
+    }
+  }
+  if (User_Analysis.dandruff_response == "No"){
+    document.querySelector('#dandruff').style.display ='none'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+    document.querySelector('#nav-dandruff-tab').style.display ='none'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js  
+  } else{
+    document.querySelector('#dandruff').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+    document.querySelector('#nav-dandruff-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js  
+    count++;
+  }
+  if ((type == 1 || type==2 ) && Genetic == "Yes"){
+    document.querySelector('#genetics').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+    document.querySelector('#nav-genetics-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js  
+    count++;
+  }
+  if (JSON.parse(User_Analysis.stress) <1  && count<4){
+    document.querySelector('#stress').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+    document.querySelector('#nav-stress-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js  
+    count++;
+  }
+  if (JSON.parse(User_Analysis.sleep) <1  && count<4){
+    document.querySelector('#sleepissues').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+    document.querySelector('#nav-sleep-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js  
+    count++;
+  }
+  if (JSON.parse(User_Analysis.gut_health) <1  && count<4){
+    document.querySelector('#digestion').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+    document.querySelector('#nav-digestion-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js  
+    count++;
+  }
+  if (Recommendations.Deficiency == "Yes"  && count<4){
+    document.querySelector('#deficiency').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+    document.querySelector('#nav-deficiency-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js  
+    count++;
+  }
+  if (Recommendations.Dieting == "Yes" && count<4){
+    document.querySelector('#weightloss').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+    document.querySelector('#nav-weight-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js  
+    count++;
+  }
+  if (count<4){
+    document.querySelector('#nutrition').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+    document.querySelector('#nav-nutrition-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js  
+    count++;
+  }
+  if (count<4){
+    document.querySelector('#lifestyle').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+    document.querySelector('#nav-lifestyle-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js  
+    count++;
+  }
+  if(User_Analysis.stage == "Coin Size Patch"){
+    if (type === 5) {
+      if(ourdia__li.length != 0) {
+        var ourdia__li = ourdia.querySelectorAll('li');
+        ourdia__li.forEach((li) => {
+          li.style.display = 'none';
+        });
+      }
+      var nav_items = document.querySelectorAll('.nav-item');
+      if(nav_items.length != 0) {
+        nav_items.forEach((item) => { item.style.display = 'none'; })
+      }
+      document.querySelector('#malfunction').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js
+      document.querySelector('#nav-malfunction-tab').style.display ='flex'; // Display Those Root Cause on Stage Modal Who Are Present In Result4 Page & Added id with Comma on result4.js  
+    }
+  }
+  var regroMonth1 = document.querySelector('#regroMonth1'), regroMonth2 = document.querySelector('#regroMonth2'),
+  regroMonth3 = document.querySelector('#regroMonth3');
+  if (data.Max_months < 6) {
+    if(regroMonth1) { regroMonth1.innerHTML = '1 MONTH'; }
+    if(regroMonth2) { regroMonth2.innerHTML = '2-3 MONTHS'; }
+    if(regroMonth3) { regroMonth3.innerHTML = '4-5 MONTHS'; }
+  }
+  if (data.Max_months === 6) {
+    if(regroMonth1) { regroMonth1.innerHTML = '1 MONTH'; }
+    if(regroMonth2) { regroMonth2.innerHTML = '2-4 MONTHS'; }
+    if(regroMonth3) { regroMonth3.innerHTML = '5-6 MONTHS'; }
+  }
+  if (data.Max_months > 6) {
+    if(regroMonth1) { regroMonth1.innerHTML = '1-2 MONTHS'; }
+    if(regroMonth2) { regroMonth2.innerHTML = '3-5 MONTHS'; }
+    if(regroMonth3) { regroMonth3.innerHTML = '5-8 MONTHS'; }
+  }
+  var atcButtonRP4 = document.querySelectorAll('#add-to-cart-result-page'),
+  stickyAtcButtonRP4 =  document.querySelectorAll('.sticky-btn #add-to-cart-result-page');
+  if(atcButtonRP4.length != 0) {
+    atcButtonRP4.forEach((btn) => {
+      btn.setAttribute('user-mobile', data.phone);
+      btn.setAttribute('user-email', data.email);
+    });
+  }
+  if(stickyAtcButtonRP4.length != 0) {
+    stickyAtcButtonRP4.forEach((btn) => {
+      btn.setAttribute('user-mobile', data.phone);
+      btn.setAttribute('user-email', data.email);
+    });
+  }
+  if(window.location.pathname == '/pages/result-hi') {
+    window.addEventListener('scroll', function() {
+      var productSectionList = document.querySelector('.product-section-list');
+      var stickyBtn = document.querySelector('.sticky-btn');
+      var result4StickyTotal = document.querySelector('.sticky-btn .result4_sticky_total');
+      var windowHeight = window.innerHeight;
+      var scrollTop = window.scrollY;
+      if (scrollTop >= productSectionList.offsetTop + productSectionList.offsetHeight - windowHeight) {
+        stickyBtn.style.display = 'block';
+        result4StickyTotal.style.display = 'flex';
+      } else {
+        stickyBtn.style.display = 'none';
+        result4StickyTotal.style.display = 'none';
+      }
+      var siteFooter = document.querySelector('.result4 .site-footer');
+      if(siteFooter) {
+        if (scrollTop >= siteFooter.offsetTop - windowHeight) {
+          stickyBtn.style.position = 'fixed';
+        } else {
+          stickyBtn.style.position = 'fixed';
+        }
+      }
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const listItems = document.querySelectorAll(".f-b-main-li");
+  const anchorLinks = document.querySelectorAll(".nav-link");
+  const tabLinks = document.querySelectorAll(".tab-pane");
+
+  /* By Default, Click First Root Cause on Stage Modal */
+  const clickButton = document.getElementById("learn_more");
+
+  clickButton.addEventListener("click", function() {
+    const firstFlexDiv = document.querySelector(".nav-item[style*='display: flex;']");
+    if(firstFlexDiv) {
+      firstFlexDiv.click();
+    }
+  });
+  /* By Default, Click First Root Cause on Stage Modal */
+
+  listItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      const target = this.getAttribute("data-targets");
+      triggerAction(target);
+    });
+  });
+
+  function triggerAction(target) {
+    anchorLinks.forEach(function (link) {
+      if (link.getAttribute("data-targets") === target) {
+        anchorLinks.forEach(function (link) {
+          link.classList.remove("active");
+        });
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+
+    tabLinks.forEach(function (tab) {
+      if (tab.getAttribute("data-targets") === target) {
+        tabLinks.forEach(function (tab) {
+          tab.classList.remove("active");
+          tab.classList.remove("show");
+        });
+        tab.classList.add("active");
+        tab.classList.add("show");
+      } else {
+        tab.classList.remove("active");
+        tab.classList.remove("show");
+      }
+    });
+  }
+});

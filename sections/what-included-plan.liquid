@@ -1,0 +1,190 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<!--section/what-included-plan-->
+
+<div class="shopify-section">
+  <div class="container text-center pb-5">
+    <div class="section-title">
+      <h2 class="heading">What Is Included In The Plan?</h2>
+    </div>
+    <img class="left_image d-md-block d-none" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Rectangle_57_3x_1.png?v=1645106424">
+    <div class="row mt-5 mb-3" style="position:relative;">
+      <img class="d-md-none d-block" style="position:absolute; left:0;" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Rectangle_57_3x_2_1.png?v=1645106778">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <a href="#" class="card_box text-decoration-none card border-0 shadow rounded-lg p-4 h-100 text-left">
+          <div class="row ">
+            <div class="col-md-12">
+              <h4 class="card_heading font-weight-bolder mb-3">Hair Growth Kit</h4>
+              <h5 class="card_paragraph">We recommend a mix of ayurvedic 
+                and allopathic products that address 
+                the root cause of your hair loss. 
+              </h5>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 mb-4 mb-md-0">
+        <a href="#" class="card_box text-decoration-none card border-0 shadow rounded-lg p-4 h-100 text-left">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="card_heading font-weight-bolder mb-3">Customized Doctor plan</h4>
+              <h5 class="card_paragraph">Get customised doctor plan
+                from Traya's  Dermatologists, Nutrionists 
+                and Ayurvedic doctors.
+              </h5>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 mb-4 mb-md-0 mt-3">
+        <a href="#" class="card_box text-decoration-none card border-0 shadow rounded-lg p-4 h-100 text-left">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="card_heading font-weight-bolder mb-3">Ayurvedic Diet Plan</h4>
+              <h5 class="card_paragraph">
+                We send a customized diet plan 
+                curated by our Nutritionist to help 
+                you regrow hair faster.
+              </h5>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 mb-4 mb-md-0 mt-3">
+        <a href="#" class="card_box text-decoration-none card border-0 shadow rounded-lg p-4 h-100 text-left">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="card_heading font-weight-bolder mb-3">Personal Hair Coach</h4>
+              <h5 class="card_paragraph">
+                You will receive a personal hair 
+                coach who will monitor your 
+                progress through the journey.
+              </h5>
+            </div>
+          </div>
+        </a>
+      </div>
+      <img class="right_image d-md-block d-none" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_161_3x_1.png?v=1645106344">
+      <img class="right_image_mob d-block d-md-none" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_161_3x_2.png?v=1645106530">
+    </div>
+    <a id="hairtestcta" href="https://form.traya.health/questions&page={{ page__hndl }}" class="hair_test_btn btn mt-3 shadow landing-page-btn">HAIR TEST <sup>&trade;</sup> </a>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "what included plan",
+    "settings": [],
+    "presets": [
+      {
+        "name":"What-included",
+        "category":"custom"
+      }
+    ]
+  }
+{% endschema %}
+<style>
+  .card_box{
+    background-color: #FBFBFB !important;
+  }
+  .card_paragraph{
+    font-size:26px;
+    color: #414042;
+    letter-spacing: normal;
+  }
+  .heading{
+    font-weight: 800;
+    letter-spacing: normal;
+  }
+  .card_heading{
+    font-size: 28px;
+  }
+  .right_image{
+    position:absolute; 
+    right: 3px; 
+    bottom: -30%;
+    width: max-content;
+  }
+  .left_image{
+    position:absolute;
+    left:0;
+  }
+  .right_image_mob {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    width: fit-content;
+  }
+  .hair_test_btn{
+    background: #FEB306; 
+    letter-spacing: normal;
+    position: relative;
+  }
+  
+ @media only screen and (max-width: 1199.98px) and (min-width: 992px){
+    .card_heading{
+      font-size: 40px;
+    }
+    .card_heading{
+      font-size: 28px;
+    }
+    .card_paragraph{
+      font-size:26px;
+    }
+  }
+   @media only screen and (max-width: 991px) and (min-width: 768px){
+    .heading{
+      font-size: 25px;
+    }  
+    .card_heading{
+      font-size: 23px;
+    }
+    .card_paragraph{
+      font-size:18px;
+    }
+    .right_image{
+      position: absolute;
+      right: 3px;
+      bottom: -15%;
+      width: 200px;
+    }
+  }
+  @media only screen and (max-width: 767.98px) and (min-width: 576px){   
+   .heading{
+      font-size: 20px;
+    }  
+    .card_heading{
+      font-size: 24px;
+    }
+    .card_paragraph{
+      font-size:18px;
+    }
+  }
+   @media only screen and (max-width: 575.98px){
+     .heading{
+      font-size: 20px;
+    }  
+    .card_heading{
+      font-size: 24px;
+    }
+    .card_paragraph{
+      font-size:18px;
+    }
+  }
+  @media only screen and (max-width: 400px){
+    .heading{
+      font-size: 18px;
+    }  
+    .card_heading{
+      font-size: 24px;
+    }
+    .card_paragraph{
+      font-size:18px;
+    }
+  }
+</style>

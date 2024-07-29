@@ -1,0 +1,18 @@
+<img src="{{ section.settings.image | img_url: '' }}">
+{% schema %}
+  {
+    "name": "ResultCo Doc Image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Select Image"
+      }
+    ],
+    "presets" : [
+      {
+        "name": "ResultCo Image"
+      }
+    ]
+  }
+{% endschema %}

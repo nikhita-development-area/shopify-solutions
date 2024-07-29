@@ -1,0 +1,199 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+  {% elsif template == 'index.login-lead' %}
+  {% assign page__hndl = 'home_login_lead' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<div class="login_banner">
+<img class="banner_desk d-none d-md-block" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352717.jpg?v=1692276684" alt="banner_img">
+  <img class="banner_mob d-md-none d-block" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102352716.png?v=1692289211" alt="banner_img">
+  <div class="login_banner_content">
+    <h4>Get visible results <br><span class="banner_bold_month">in <span class="login_dyn_month">6</span> months,</span></br>or get your money back*.</h4>
+    <!-- <p><a class="banner_policy" href="https://traya.health/policies/refund-policy">Refund Policy</a></p> -->
+    <p class="login_lead_recommended myresults d-none">
+    <a id="myPlanHome" href="/pages/result4" class="btn btn-dark">My Recommended Plan</a>
+    </p>
+    <p><a class="banner-hair_test" href="https://form.traya.health/questions?cohort=1&location=Login_banner&page=login-lead">Take the hair test again</a></p>
+  </div>
+</div>
+
+<style>
+  .home_login_lead.three_fold {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+  .container.traya-coach-help.help_login-lead {
+    margin-top: 70px;
+}
+   .container.login-lead-steps, .container.after_login_video, .container.login_root_causes, .container.after-login-journey, .container.traya-coach-help, .container.login-guide {
+          padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+     .container.login-lead-steps, .login_seperator, .native-video, .container.login_root_causes, .container.after-login-journey, .container.traya-coach-help, .container.login-guide{
+      margin-bottom: 50px;
+    }
+  .login_space {
+    margin-bottom: 50px;
+}
+  .login_lead_recommended a#myPlanHome:hover {
+    color: #fff;
+    background: #414042;
+    padding: 9px 27px;
+}
+  a.banner-hair_test {
+    font-size: 24px;
+    text-decoration: underline;
+    color: rgba(65, 65, 67, 1);
+}
+  p.login_lead_recommended.myresults {
+    margin-top: 80px;
+}
+  span.banner_bold_month {
+    font-weight: 700;
+}
+  a.banner_policy {
+    font-size: 23px;
+    font-weight: 300;
+    text-decoration: underline;
+}
+  .login_banner_content h4 {
+    margin-bottom: 30px;
+    font-size: 42px;
+    color: rgba(65, 65, 67, 1);
+    font-weight: 100;
+}
+  .login_banner_content {
+    transform: translate(0, -50%);
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+  .login_banner {
+    position: relative;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.home_login_lead.header-wrapper.index.color-accent-1.gradient {
+    background: var(--gradient-background);
+}
+    p.login-heading {
+    color: rgba(62, 62, 62, 1) !important;
+    font-size: 48px;
+    font-family: 'fredoka_oneregular' !important;
+    text-align: center;
+    width: 100%;
+    line-height: normal !important;
+    margin-bottom: 30px !important;
+}
+ 
+  @media only screen and (max-width: 767px){
+    p.login_lead_recommended.myresults a {
+    width: 70%;
+}
+    p.male_pro_dosage {
+    font-size: 16px !important;
+    padding: 0 5px;
+}
+    h6.revamp_heading.text-center {
+    font-size: 22px !important;
+    margin-bottom: 10px !important;
+}
+    h6.journey_lead_content {
+    font-size: 16px !important;
+}
+    .traya_journey_mob.d-md-none {
+    margin-top: 25px !important;
+}
+     .rootcause_data span {
+    font-size: 11px !important;
+}
+    .rootcause_data img {
+    max-width: 15px !important;
+}
+    .rootcause_data svg {
+    height: 35px;
+}
+    .login_root_causes ul li {
+    padding: 6px 0 !important;
+    margin: 0 5px !important;
+}
+    .login_banner_content {
+    transform: translate(0, -25%);
+    position: absolute;
+    top: 15%;
+    left: 10%;
+}
+    a.banner-hair_test {
+    font-size: 16px;
+}
+    a.banner_policy {
+    font-size: 16px;
+}
+    p.login_lead_recommended.myresults {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+    .login_banner_content h4 {
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+    a.banner_policy {
+    font-size: 16px;
+}
+    .login_banner {
+    position: relative;
+    margin-bottom: 40px;
+          margin-top: 45px;
+}
+
+    .home_login_lead.three_fold {
+    margin-top: 40px;
+    margin-bottom: 45px;
+}
+    .container.traya-coach-help.help_login-lead {
+    margin-top: 40px;
+}
+     .login_space {
+    margin-bottom: 40px;
+}
+    .container.login-lead-steps, .container.after_login_video, .container.login_root_causes, .container.after-login-journey, .container.traya-coach-help, .container.login-guide {
+    margin-bottom: 40px;
+        padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+    .container.login-lead-steps, .login_seperator, .native-video, .container.login_root_causes, .container.after-login-journey, .container.traya-coach-help, .container.login-guide{
+      margin-bottom: 40px;
+    }
+p.login-heading {
+    color: rgba(62, 62, 62, 1) !important;
+    font-size: 22px;
+    font-family: 'fredoka_oneregular' !important;
+    text-align: center;
+    width: 100%;
+    line-height: normal !important;
+    margin-bottom: 20px !important;
+}
+    .MLogin-product-results .slick-dotted.slick-slider {
+    margin-bottom: 0;
+    justify-content: center;
+}
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Login revamp banner",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

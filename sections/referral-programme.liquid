@@ -1,0 +1,131 @@
+<div class="container">
+  <div class="ref-program-main rounded-lg px-3 px-md-0 py-4" style="background: {{ section.settings.bk_color }};">
+    {% if section.settings.ref_prg_head != blank %}
+      <p class="ref_prgm_heading text-center pb-3 ">{{ section.settings.ref_prg_head }}</p>
+    {% endif %}
+    <div class="d-flex flex-wrap mb-2 mb-md-5 programme mx-auto">
+      {% for block in section.blocks %}
+        {%- assign color = block.settings.prgm_bk_color -%}
+        <div class="columns mx-md-auto mb-md-0 mb-3 d-flex align-items-center py-3">
+          <div class="d-flex align-items-center p-2 px-1 mx-auto rounded programme-card">
+            <img src="{{ block.settings.prgm_image | img_url:' ' }}" style="max-height: 50px;">
+            <h4 class="m-0 fw-bold   pl-2 l-0">{{ block.settings.prgm_text }}</h4>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <p class="ref_prgm_last_heading text-center pt-5">{{ section.settings.ref_prg_last_head }}</p>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Referral Programme",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bk_color",
+        "label": "Select Background Color"
+      },
+      {
+        "type": "text",
+        "id": "ref_prg_head",
+        "label": "Enter Heading"
+      },
+      {
+        "type": "text",
+        "id": "ref_prg_last_head",
+        "label": "Enter Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Referral Programme",
+        "type": "text",
+        "settings": [
+          {
+            "type": "color",
+            "id": "prgm_bk_color",
+            "label": "Select Color"
+          },
+          {
+            "type": "image_picker",
+            "id": "prgm_image",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id": "prgm_text",
+            "label": "Enter Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Referral Programme",
+        "category": "image with text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .font-size-18 {
+    font-size: 18px !important;
+  }
+  .ref-program-main .columns {
+    background: #fafafb; 
+    border-radius: 20px;
+    flex: 1;
+  }
+  .programme {
+    gap: 15px;
+    width:85%;
+    
+  }
+  .programme-card {
+    min-height: 7rem;
+  }
+  .programme-card h4{
+    font-size: 16.5px;
+  }
+  .ref_prgm_heading {
+    font-size: 30px;
+    font-weight:800;
+    color: #585A5B;
+    position: relative;
+  }
+  .ref_prgm_heading:after {
+    content: '';
+    display:none;
+    position: absolute;
+    background: #000;
+    height: 8px;
+    width: 110px;
+    border-radius: 6px;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .ref_prgm_last_heading {
+    font-size: 18px;
+    position: relative;
+  }
+  p.ref_prgm_last_heading:before {
+    content: '';
+    position: absolute;
+    background: #000;
+    width: 30px;
+    height: 4px;
+    border-radius: 6px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 10px;
+  }
+  @media only screen and (max-width: 767.98px) {
+  .programme {width:100%; flex-direction: column; gap:2px;}
+  .ref_prgm_last_heading{font-size:14px;}
+  .programme-card .pl-2{font-size:16px;}  
+  .ref_prgm_heading{font-size:24px;}
+  }
+{% endstyle %}

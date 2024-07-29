@@ -1,0 +1,67 @@
+<!-- Sections -> cuticle-hair-type.liquid -->
+
+<div class="container cuticle-hair-type">
+  <h2 class="text-center font-weight-bold">{{ section.settings.cuticle_type_title }}</h2>
+  <p class="text-center">{{ section.settings.cuticle_type_sub_title }}</p>
+
+  <div class="hair-type">
+    {% for block in section.blocks %}
+      <div class="hair-img-txt position-relative">
+        {% if block.settings.hair_type_img != blank %}
+          <img src="{{ block.settings.hair_type_img | img_url: 'master' }}" alt="Hair Type Images" title="Image {{ forloop.index }}" width="" height="" loading="lazy" />
+          <p class="position-absolute">{{ block.settings.hair_type_txt }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .cuticle-hair-type h2 {font-size: 48px; line-height: 65px; letter-spacing: 0em;}
+  .cuticle-hair-type p {font-size: 36px; line-height: 45px;}
+  .hair-type {display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center;}
+  .hair-img-txt p {bottom: 10%; left: 50%; transform: translate(-50%); font-size: 33px; color: #fff;}
+
+  @media screen and (max-width: 768px) {
+    .cuticle-hair-type h2 {font-size: 30px; line-height: 40px;}
+    .cuticle-hair-type p {font-size: 19px; line-height: 23px;}
+    .hair-img-txt p {font-size: 13px;}
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Cuticle Hair Type",
+    "settings": [
+      {
+        "type": "html",
+        "id": "cuticle_type_title",
+        "label": "Heading"
+      },
+      {
+        "type": "html",
+        "id": "cuticle_type_sub_title",
+        "label": "Sub-Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Cuticle Gallery",
+        "type": "Gallery",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "hair_type_img",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id": "hair_type_txt",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [{"name": "Cuticle Hair Type"}]
+  }
+{% endschema %}

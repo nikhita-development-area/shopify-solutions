@@ -1,0 +1,129 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+
+<div class="gradient py-3">
+  <div class="contact page-width section-{{ section.id }}-padding">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="title title-wrapper--no-top-margin h2 mb-2 l-0 text-center">{{ section.settings.heading | escape }}</h2>
+    {%- else -%}
+      <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
+    {%- endif -%}
+    
+    {% form 'new_comment', article %}
+      {%- assign formId = 'CommentForm' -%}
+        {%- assign post_message = 'blogs.article.success' -%}
+        {%- if blog.moderated? and comment.status == 'pending' -%}
+        {%- assign post_message = 'blogs.article.success_moderated' -%}
+        {%- elsif comment.status == 'unapproved' or comment.status == 'spam' -%}
+        {%- assign post_message = 'blogs.article.unapproved' -%}
+        {%- endif -%}
+      
+        {% include 'form-status', form: form, form_id: formId, success_message: post_message %}
+    <div class="contact__fields">
+
+            <div>
+              <div class="field">
+                <label class="field__label form__label" for="{{ formId }}-author">{{ 'blogs.article.name' | t }}</label>
+                <input type="text" name="comment[author]" id="{{ formId }}-author" class="input-full field__input{% if form.errors contains 'author' %} input--error{% endif %}" value="{{ form.author }}"{% if form.errors contains 'author' %} aria-invalid="true" aria-describedby="{{ formId}}-author-error"{% endif %}>
+                {% if form.errors contains 'author' %}
+                <span id="{{ formId}}-author-error" class="input-error-message">
+                  <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                  {% include 'icon-error' %}
+                  <span>{{ 'Name' | capitalize }} {{ form.errors.messages['author'] }}.</span>
+                </span>
+                {% endif %}
+              </div>
+              
+              <div class="field field--with-error">
+                <label class="field__label form__label" for="{{ formId }}-email">{{ 'blogs.article.email' | t }}</label>
+                <input type="email" name="comment[email]" id="{{ formId }}-email" class="input-full field__input{% if form.errors contains 'email' %} input--error{% endif %}" value="{{ form.email }}" autocorrect="off" autocapitalize="off" {% if form.errors contains 'email' %} aria-invalid="true" aria-describedby="{{ formId}}-email-error"{% endif %}>
+                {% if form.errors contains 'email' %}
+                <span id="{{ formId}}-email-error" class="input-error-message">
+                  <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                  {% include 'icon-error' %}
+                  <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+                </span>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label form__label" for="{{ formId }}-body">{{ 'blogs.article.message' | t }}</label>
+              <textarea name="comment[body]" id="{{ formId }}-body" class="input-full field__input{% if form.errors contains 'body' %} input--error{% endif %}"{% if form.errors contains 'body' %} aria-invalid="true" aria-describedby="{{ formId}}-body-error"{% endif %} style="height: 140px;">{{ form.body }}</textarea>
+              {% if form.errors contains 'body' %}
+              <span id="{{ formId}}-body-error" class="input-error-message">
+                <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                {% include 'icon-error' %}
+                <span>{{ 'Message' | capitalize }} {{ form.errors.messages['body'] }}.</span>
+              </span>
+              {% endif %}
+            </div>
+
+          </div>
+
+          {% if blog.moderated? %}
+          <p class="fine_note">{{ 'blogs.article.moderated' | t }}</p>
+          {% endif %}
+
+          <div class="text-center">
+            <input type="submit" class="btn btn-dark" value="{{ 'blogs.article.comment_form_title' | t }}">
+          </div>
+    {%- endform -%}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Comment Form",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Enter Heading"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Comment Form"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .template-article .field {
+    display: block;
+  }
+  .template-article .field:after {
+    content: unset;
+  }
+  .template-article .contact__fields .field__input {
+    height: 44px;
+    margin-bottom: 1rem;
+  }
+  .template-article .contact .field {
+    margin-bottom: 0;
+  }
+  .template-article .field__label {
+    position: initial;
+    letter-spacing: normal;
+    font-size: 16px;
+    color: #414042;
+  }
+  .template-article #ContactForm-body {
+    resize: vertical;
+    min-height: unset;
+  }
+  .template-article .contact__button {
+    margin-top: 0;
+  }
+  .template-article .fine_note { 
+    font-size: 11.2px;
+    font-style: italic;
+  }
+  .template-article .field__input {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 15px;
+  }
+{% endstyle %}

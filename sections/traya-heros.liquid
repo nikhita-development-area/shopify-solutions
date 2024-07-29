@@ -1,0 +1,199 @@
+<section id="the-results" class="section-the-results text-center">
+  <div class="container">
+
+    <div class="section-title">
+      {% if page.handle == 'result4' %}
+      <h2 class="font-weight-bold l-0 text-center section-title">Fix Hair Health from within</h2>
+      {% elsif page.handle == 'homev5'%}
+      <h2 class="font-weight-bold l-0 text-center title-with-line py-0">Traya हीरोज़</h2>
+      {% elsif page.handle == 'result-f'%}
+      <h2 class="font-weight-bold l-0 text-center section-title cstm_section_titleFR pb-3">Fix Hair Health from within</h2>
+      {% else %}
+      <h2 class="{% if template == 'index' or page.handle == 'homev1b' or page.handle == 'homev1' or page.handle == 'homev2b' %}section-title-main text-capitalize pt-0 mt-md-2{% elsif page.handle == 'new-female' or page.handle == 'female' or page.handle == 'femalev1' %} section-title text-capitalize pt-0 mt-md-2 mb-0{% else %}title-with-line{% endif %}"> {%- if page.handle == 'female' or page.handle == 'femalev1' -%}Healthy Inside. Happy Outside.{% else %}{{section.settings.heading}}{% endif %}</h2>
+      {% endif %}
+    </div>
+    {%- if page.handle == 'female' or page.handle == 'femalev1' or page.handle == 'new-female' -%}
+    <h5 class="section-title-main pt-0 mb-4 Ftitle_sub_text">We are on a Mission to fix hair fall the right way.</h5>
+    {%- endif -%}
+    {% if page.handle == 'result-f' or page.handle == 'female' or page.handle == 'femalev1' or page.handle == 'new-female' %}
+    {% assign female = true %}
+    {% else %}
+     {% assign female = false %}
+    {% endif %}
+    <div class="row {% if page.handle == 'result-f' %} female-hero-slider {% else %} slick-items-container-3 {% endif %}">
+      {%- for block in section.blocks -%}
+      {% unless female and block.settings.gender == 'M' %}
+      <div class="slick-item-box femaleFixHairSlid col-md-4 text-left">
+        {% if page.handle == 'result-f'%}
+        <span class="traya_hero_top_text">{{block.settings.top_text}}</span>
+        {% endif %}
+        <img class="w-100 mb-3 col-12 mx-auto mt-2 col-md-12 p-0" src="{{ block.settings.image | img_url: '350x' }}" alt="{{ block.settings.image.alt | escape }}" loading="lazy">
+        <div class="mainreviewHead d-flex{% if page.handle == 'result-f' %} justify-content-between{% endif %}">
+          <h5 class="mb-0">{{ block.settings.name }}</h5>
+          <p class="{%- if page.handle == 'female' or page.handle == 'femalev1' or page.handle == 'new-female' -%}star-ratings justify-content-end {% else%} star-ratings d-flex justify-content-end {% endif%}"><img class="" src="{{ '5star-1.png' | asset_url }}" alt="5star" width="100"  loading="lazy"></p>
+        </div>
+        <div class="mb-3 resl-desc addReadMore showlesscontent">{{ block.settings.desc }}</div>
+        <div class="d-flex justify-content-between resl-btm">
+          <p class="pr-3 mb-0">
+            <strong class="d-block">Kit Purchased</strong>
+            {{ block.settings.kit }}
+          </p>
+          <p class="w-50 text-right">
+            <strong class="d-block">Used for</strong>
+            {{ block.settings.usedFor }}
+          </p> 
+        </div>
+      </div>
+      {% endunless %}
+      {%- endfor -%}
+    </div>
+    
+    {% unless page.handle contains 'home-new' %}
+    {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+    <a id="trayahero_testimonial" href="{{section.settings.button_link}}" class="btn btn-dark take-the-hair-test other-m-stage-1">{% if page.handle == 'homev5' %} और जानिए {% else %}{{section.settings.button_label}}{% endif %}</a>
+    {%- endif -%}
+    {% endunless %}
+    
+  </div>
+</section>
+<style>
+    {% if page.handle contains 'homev5' %}
+ .section-the-results h2{
+   font-size:44px!important;
+ }
+      {% endif %}
+      #the-results .slick-items-container-3{
+        padding-bottom:25px;
+      }
+  .section-the-results h5
+  {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.29;
+  }
+  .section-the-results .dat-p 
+  {
+    font-size: 18px;
+    letter-spacing: 0.09px;
+  }
+  .resl-desc p
+  {
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.35;
+    letter-spacing: -1.05px;
+    color: #6d6e71;
+
+  }
+  .resl-btm p {
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: 0.08px;
+  }
+  .resl-btm p  strong { font-weight: 700;}
+
+  .section-the-results .d-block{
+    font-size: 15px; 
+    letter-spacing: 0.08px;
+  }
+  @media only screen and (max-width: 767px){
+    .section-the-results .section-title .title-bold{
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 40px;}
+  }
+  #the-results{
+        padding-left: 30px;
+    padding-right: 30px;
+  }
+</style>
+{% schema %}
+{
+  "name": "Traya Heros",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+	{
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Url"
+	},
+	{
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "columns",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "640 x 340px .jpg recommended"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+		{
+        "type": "select",
+        "id": "gender",
+        "label": "Gender",
+        "options":[
+			{
+           "label": "Male",
+		   "value": "M"
+            },
+            {
+			 "label": "Female",
+		   "value": "F"
+            }
+		  ],
+		  "default": "M"
+        },
+		{
+          "type": "text",
+          "id": "date",
+          "label": "Date"
+        },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Description"
+        },
+		{
+          "type": "text",
+          "id": "kit",
+          "label": "Kit Purchased"
+        },
+		{
+          "type": "text",
+          "id": "usedFor",
+          "label": "Used for"
+        },
+        {
+          "type": "text",
+          "id": "top_text",
+          "label": "Top Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Traya Heros"
+    }
+  ]
+}
+{% endschema %}

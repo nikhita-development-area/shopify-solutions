@@ -1,0 +1,586 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "166376912549176592": {
+      "type": "traya-in-news",
+      "blocks": {
+        "e0a7593f-89b1-463b-8278-4ae9712f27c5": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Traya-Co-founders_52b6840f-b13e-4d33-90c4-23cb4a91f6ef.jpg",
+            "news_image": "shopify:\/\/shop_images\/logo_7f9cf0b0-612c-499c-93aa-2d610921d1a5.jpg",
+            "name": "30 Startups To Watch: The Startups That Caught Our Eye In May 2022",
+            "link": "https:\/\/inc42.com\/startups\/30-startups-to-watch-the-startups-that-caught-our-eye-in-may-2022\/"
+          }
+        },
+        "4b7dc92e-0d18-4326-93c7-e52033f1ab34": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hair-fall-770x433.jpg",
+            "news_image": "shopify:\/\/shop_images\/healthlogo_a3f6040d-6fe1-403d-bbbb-4dcc393d93b7.png",
+            "name": "केमिकल वाले शैंपू और हेयर कलर भी हो सकते हैं हेयर फॉल का कारण, एक्सपर्ट बता रही हैं कैसे",
+            "link": "https:\/\/www.healthshots.com\/hindi\/beauty\/know-how-chemicle-based-shampoo-affects-your-hair\/"
+          }
+        },
+        "954b46de-1c30-4c52-bd1a-c0921fc648ab": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hair-fall-770x433.jpg",
+            "news_image": "shopify:\/\/shop_images\/healthlogo_a3f6040d-6fe1-403d-bbbb-4dcc393d93b7.png",
+            "name": "झड़ते बालों का कारण कहीं पीसीओएस तो नहीं? जानिए क्या होता है बालों पर इसका असर",
+            "link": "https:\/\/www.healthshots.com\/hindi\/beauty\/know-how-pcos-and-pcod-affects-your-hair\/"
+          }
+        },
+        "a6ec065b-524a-474d-949a-45d04be37a28": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Traya-Co-founders_52b6840f-b13e-4d33-90c4-23cb4a91f6ef.jpg",
+            "news_image": "shopify:\/\/shop_images\/StartupValley-LOGO-neu_eaa3f7e9-3bdf-4cac-9368-dda4a04d03ee.png",
+            "name": "Traya main goal is to treat hair fall from the root cause",
+            "link": "https:\/\/www.startupvalley.news\/uk\/traya-hair-fall\/"
+          }
+        },
+        "d8c03ef5-c4a4-4310-ad75-d372c2e425bc": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1642076368-Myproject19_f0adab22-2089-47f2-8b9c-1d2195933595.jpg",
+            "news_image": "shopify:\/\/shop_images\/BW-logo_0019b8c4-cbc4-4378-a085-acfcfa97afae.png",
+            "name": "The Business Of Reversing Hair Loss; How Traya Is Fitting Into The Wellness Landscape",
+            "link": "https:\/\/www.businessworld.in\/article\/The-Business-Of-Reversing-Hair-Loss-How-Traya-Is-Fitting-Into-The-Wellness-Landscape\/26-05-2022-430314\/"
+          }
+        },
+        "00befe16-d0ac-4f66-8ecf-cb406839c266": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMAGE_1653470588.jpg",
+            "news_image": "shopify:\/\/shop_images\/logo_outlook_447056ad-f605-4f83-8783-2e336830ff5d.png",
+            "name": "A Holistic Approach To Treat Hair Loss- A Sneak Peek Into Traya Reviews",
+            "link": "https:\/\/www.outlookindia.com\/outlook-spotlight\/a-holistic-approach-to-treat-hair-loss-a-sneak-peek-into-traya-reviews--news-198462"
+          }
+        },
+        "8a012dbe-6631-4e4f-b077-693d2e2590f4": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG-20220524-WA0038-1_43fa9b6b-a4f6-4463-95aa-428ed4b63f55.jpg",
+            "news_image": "shopify:\/\/shop_images\/font_previewd_5b6c5e1b-2571-4752-9eb1-6d551ad52467.png",
+            "name": "Battling hair loss due to menopause? Here’s how Traya Health can help",
+            "link": "https:\/\/www.socialnews.xyz\/2022\/05\/24\/battling-hair-loss-due-to-menopause-heres-how-traya-health-can-help\/amp\/"
+          }
+        },
+        "942e7939-184a-4894-aa87-8cd8cd9b411e": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Traya_d_b4b47140-e5e5-499f-8e8c-5a934fc797a9.jpg",
+            "news_image": "shopify:\/\/shop_images\/logo_2_1f9acbdf-a3d8-4d34-bfb1-68d6bf45b307.png",
+            "name": "Traya - A one stop solution to all your hair fall problems with results seen through Traya reviews",
+            "link": "https:\/\/www.mid-day.com\/brand-media\/article\/traya-a-one-stop-solution-to-all-your-hair-fall-problems-with-results-seen-through-traya-reviews-23227006"
+          }
+        },
+        "6ea40fb7-6e20-45d4-8b78-5c47fa7a31b0": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/big_hypertensionandhair_c56a2f6d-04d5-4cba-848e-ec49bbdd449e.jpg",
+            "news_image": "shopify:\/\/shop_images\/OMH_931691a4-5fee-4476-9a77-449873fd33e2.jpg",
+            "name": "World Hypertension Day 2022: How Hypertension Causes Hair Loss",
+            "link": "https:\/\/www.onlymyhealth.com\/how-hypertension-causes-hair-loss-1652765440"
+          }
+        },
+        "ea7e84da-1aa6-4a02-a6b3-86dd56970d5a": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_2022_04_29T09_21_09_079Z_c44564ab-7a20-4896-94c7-b5b334cf7415.png",
+            "news_image": "shopify:\/\/shop_images\/image_2022_04_14T13_46_58_568Z_375c8a3a-ea4f-4bd7-870c-582e4fb68c2d.png",
+            "name": "Traya Health confers Brands Impact Healthcare Excellence Award 2022",
+            "link": "https:\/\/www.hindustantimes.com\/brand-stories\/traya-health-confers-brands-impact-healthcare-excellence-award-2022-101650971133575.html"
+          }
+        },
+        "06297a26-95b7-4b08-bd31-1299410ee6a1": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot-2022-04-14-at-3.27.41-PM_f3c15d5b-a6c8-4f17-aba5-1300da66f1ae.png",
+            "news_image": "shopify:\/\/shop_images\/the-statesman-logo-new_1a3a71f0-da6f-4e2f-b220-8720898f0d69.png",
+            "name": "Troubleshooting’ hair loss problems through a holistic three-fold approach",
+            "link": "https:\/\/www.tribuneindia.com\/news\/brand-connect\/power-duo-namics-how-this-power-couple-juggles-work-with-relationship-goals-382736"
+          }
+        },
+        "46c9be6d-90df-4baa-8f43-ce9aa726ded3": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1642076368-Myproject19_94f05a6a-aed5-479e-b216-5922a55d4371.jpg",
+            "news_image": "shopify:\/\/shop_images\/Logo_eng_0250dfab-70a9-4655-9a67-099ed1d173a1.png",
+            "name": "Power Duo-namics: How this Power Couple Juggles Work with Relationship Goals",
+            "link": "https:\/\/www.tribuneindia.com\/news\/brand-connect\/power-duo-namics-how-this-power-couple-juggles-work-with-relationship-goals-382736"
+          }
+        },
+        "c6db1023-8654-4fe4-9d5f-660e47a6f4bc": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/d95e8c47-c75f-4622-993a-9993663e7189.jpg",
+            "news_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_e8d260e5-7147-4dfa-8917-232372a8d579.png",
+            "name": "Pro Tips to Manage Damaging Effects of Holi Colours by a Dermatologist at Traya Health",
+            "link": "https:\/\/lbb.in\/mumbai\/pro-tips-to-manage-damaging-223615?_branch_match_id=1032653146190469575&amp;utm_source=whatsapp&amp;utm_campaign=shareFromApp&amp;utm_medium=share&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT8%2FXy0lK0svM04%2FyMg0yMPE0Ks1PAgCKeozUHQAAAA%3D%3D"
+          }
+        },
+        "3c72978b-6c55-4998-9857-2cb6ca9722fa": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Relief_from_Contripation_Triphala_1647280079630_1647280100944.jpg",
+            "news_image": "shopify:\/\/shop_images\/image_2022_04_14T13_46_58_568Z_375c8a3a-ea4f-4bd7-870c-582e4fb68c2d.png",
+            "name": "Gut health is very important, take to these tablets to relieve constipation",
+            "link": "https:\/\/www.hindustantimes.com\/shop-now\/health-and-beauty\/gut-health-is-very-important-take-to-these-tablets-to-relieve-constipation-101647265175469.html"
+          }
+        },
+        "64e1a5a0-c19f-4b70-9ed9-d53e7eace473": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/saloni-anand_3602f920-296f-41cc-b057-19900884914a.jpg",
+            "news_image": "shopify:\/\/shop_images\/main_logo_b3b7702c-1797-40e9-8c59-de888f47775d.png",
+            "name": "Women have more of a fighter attitude while dealing with situations: Saloni Anand",
+            "link": "https:\/\/www.adgully.com\/women-have-more-of-a-fighter-attitude-while-dealing-with-situations-saloni-anand-115053.html"
+          }
+        },
+        "187ad097-e1f7-4744-814a-4da5ef82e30a": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Saloni-Anand_d_b202172c-39e4-4c3d-8a23-210737cc63c3.jpg",
+            "news_image": "shopify:\/\/shop_images\/logo_outlook_447056ad-f605-4f83-8783-2e336830ff5d.png",
+            "name": "Meet Saloni Anand, An Entrepreneur Who Is Transforming Health-Tech, One ‘Hair’ At A Time",
+            "link": "https:\/\/www.outlookindia.com\/outlook-spotlight\/meet-saloni-anand-an-entrepreneur-who-is-transforming-health-tech-one-hair-at-a-time-news-185836"
+          }
+        },
+        "1a1216f2-aefb-4fac-9803-4747c61ac73b": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Saloni-Anand_d_b202172c-39e4-4c3d-8a23-210737cc63c3.jpg",
+            "news_image": "shopify:\/\/shop_images\/logo_2_1f9acbdf-a3d8-4d34-bfb1-68d6bf45b307.png",
+            "name": "Treating Hair Loss Through Holistic Care",
+            "link": "https:\/\/www.mid-day.com\/brand-media\/article\/treating-hair-loss-through-holistic-care-23217371"
+          }
+        },
+        "a194dc21-a388-46b3-8930-f44d2bdf5c4b": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hair-growth.jpg",
+            "news_image": "shopify:\/\/shop_images\/image_2022_04_14T16_55_33_948Z_60f13567-264e-4ac9-ad2b-bae4122dd65b.png",
+            "name": "Treating Hair Loss Through Holistic Care",
+            "link": "https:\/\/webnewsobserver.com\/2022\/03\/05\/exclusive-expert-tells-you-how-hair-growth-is-related-to-your-gut-health\/"
+          }
+        },
+        "dcdc2415-6c91-4f6c-a874-5b2ad53ff5bc": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/herbs-770x433.jpg",
+            "news_image": "shopify:\/\/shop_images\/9_cb369bef-dcc0-4b3c-b23b-66f8d4c9f374.jpg",
+            "name": "Does Ayurveda treat hair fall better than Allopathic medicine?",
+            "link": "https:\/\/www.healthshots.com\/beauty\/hair-care\/can-allopathy-treat-hair-fall-better-than-ayurvedic-remedies\/"
+          }
+        },
+        "e1705eb0-abc0-4448-b46a-d46f69db2f13": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Big_hairoilingmyths_ea0b7d3f-888e-4310-9d0e-69c74ab3bc30.jpg",
+            "news_image": "shopify:\/\/shop_images\/image_2022_04_14T14_44_17_341Z_0e0495cf-d16e-4e78-876a-b7e5d3913482.png",
+            "name": "Busting Myths About Oiling Hair And Its Role In Hair Growth",
+            "link": "https:\/\/www.onlymyhealth.com\/myths-about-oiling-hair-1645524600"
+          }
+        },
+        "a135bc7c-036e-4862-b4ac-c3cc6e46f4d4": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Funding-img_jpg.jpg",
+            "news_image": "shopify:\/\/shop_images\/new-logo_4eb7065f-5ea2-4a4c-959a-773bcd67d7f3.png",
+            "name": "Funding and acquisitions in Indian startups this week [10 Jan – 15 Jan]",
+            "link": "https:\/\/entrackr.com\/2022\/01\/funding-and-acquisitions-in-indian-startups-this-week-10-jan-15-jan\/"
+          }
+        },
+        "321b3d0a-648f-446a-8756-983cebabe5bb": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-7_3dd7eb3f-6b32-414f-a308-5cbd3cfa0cf2.png",
+            "news_image": "shopify:\/\/shop_images\/img4_92cb3a79-33d8-4dca-bfa8-2db950426ade.jpg",
+            "name": "Healthtech startup Traya raises $2.2 million in pre-Series A funding round, led by Fireside Ventures",
+            "link": "https:\/\/businessfortnight.com\/healthtech-startup-traya-raises-2-2-million-in-pre-series-a-funding-round-led-by-fireside-ventures\/"
+          }
+        },
+        "1005fe89-279a-4989-983b-529e530e3956": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/funding-11-1_jpg.jpg",
+            "news_image": "shopify:\/\/shop_images\/logo-nav-7_91dda0f9-77bc-46e5-bbb0-5a1f681452b2.png",
+            "name": "Weekly funding roundup: venture investments cross $0.6B in second week of January",
+            "link": "https:\/\/mybigplunge.com\/startups\/funding-news\/weekly-funding-roundup-venture-investments-cross-0-6b-in-second-week-of-january\/"
+          }
+        },
+        "c8edc837-e009-40ea-a355-954453e19f1d": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1642076368-Myproject19_94f05a6a-aed5-479e-b216-5922a55d4371.jpg",
+            "news_image": "shopify:\/\/shop_images\/image_2022_04_14T14_23_23_998Z_ee09875f-660e-4ee0-b0d3-22f0ed3f50b6.png",
+            "name": "Healthcare startup Traya raises $2.2M in a pre-Series A round led by Fireside Ventures",
+            "link": "https:\/\/futuretech.media\/healthcare-startup-traya-raises-2-2m-in-a-pre-series-a-round-led-by-fireside-ventures\/amp\/"
+          }
+        },
+        "719f6c58-af2d-4b32-a691-127652860a60": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/remote.jpg",
+            "news_image": "shopify:\/\/shop_images\/devdiscourse_logo_e368c73f-7252-4c0e-85ae-d05d4be4259d.png",
+            "name": "Business briefs",
+            "link": "https:\/\/www.devdiscourse.com\/article\/business\/1883617-business-briefs"
+          }
+        },
+        "eb269d37-67a3-4211-bdcd-80baaaff8aeb": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1642076368-Myproject19_94f05a6a-aed5-479e-b216-5922a55d4371.jpg",
+            "news_image": "shopify:\/\/shop_images\/Trade-Brains-Logo_80852280-affb-4362-9ee4-1c1e8c475829.jpg",
+            "name": "Business briefs",
+            "link": "https:\/\/tradebrains.in\/features\/biz-briefs-2-19\/"
+          }
+        },
+        "2081ee5a-1669-48c7-ba73-191382355ba5": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Haircarerfl_2945f190-1cca-4d37-946e-b89fc374e413.jpg",
+            "news_image": "shopify:\/\/shop_images\/inventiva-300x102-2_71143b4a-0298-4b98-bdac-5f8e4756a239.png",
+            "name": "Exciting news alert- A health tech startup announced a funding of USD 2.2 million",
+            "link": "https:\/\/www.inventiva.co.in\/startups\/exciting-news-alert-a-health-tech\/"
+          }
+        },
+        "c90a223b-c793-4bef-9d1e-44be8cfffd5d": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-7_3dd7eb3f-6b32-414f-a308-5cbd3cfa0cf2.png",
+            "news_image": "shopify:\/\/shop_images\/image_2022_04_14T16_33_55_149Z_763eb42b-2e38-47e4-9ef6-439185a5b2ae.png",
+            "name": "Traya raises $2.2M in fresh funding",
+            "link": "http:\/\/www.startuplanes.com\/traya-raises-2-2m-in-fresh-funding\/amp\/"
+          }
+        },
+        "de73e903-a2d1-4122-9f15-6c1d65470d0b": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1642076368-Myproject19_94f05a6a-aed5-479e-b216-5922a55d4371.jpg",
+            "news_image": "shopify:\/\/shop_images\/logo_5_1f0ac62b-bba9-4891-a56d-57d0fb0a50c0.png",
+            "name": "Healthtech startup Traya raises $2.2 million",
+            "link": "https:\/\/medicircle.in\/healthtech-startup-traya-raises-22-million"
+          }
+        },
+        "98ab295c-62ce-416f-8a76-23043e7c7133": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-7_3dd7eb3f-6b32-414f-a308-5cbd3cfa0cf2.png",
+            "news_image": "shopify:\/\/shop_images\/img6_f29e8b7a-0c48-442c-9ff1-fe1719e48cf2.jpg",
+            "name": "Traya raises $2.2M in fresh funding",
+            "link": "http:\/\/www.startuplanes.com\/traya-raises-2-2m-in-fresh-funding\/amp\/"
+          }
+        },
+        "b985ba8a-5b03-43d2-8f3e-6e91573a902b": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1642076368-Myproject19_94f05a6a-aed5-479e-b216-5922a55d4371.jpg",
+            "news_image": "shopify:\/\/shop_images\/RETINALOGOMEDIABRIEFAPRIL2-18_a887f993-a9c6-4b52-8a73-7a3cf04ed17d.jpg",
+            "name": "Traya raises USD 2.2mn in pre-Series A funding round led by Fireside Ventures",
+            "link": "https:\/\/mediabrief.com\/traya-raises-usd-2-2mn-in-pre-series-a\/"
+          }
+        },
+        "c9036c5a-e1a9-4cf9-825b-b5935e1dd0e9": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1642076368-Myproject19_94f05a6a-aed5-479e-b216-5922a55d4371.jpg",
+            "news_image": "shopify:\/\/shop_images\/img5_08576b4b-d202-4976-a9c3-dc5fa175c444.jpg",
+            "name": "Healthtech startup Traya raises $2.2 million in pre-Series A funding round, led by Fireside Ventures",
+            "link": "https:\/\/newspatrolling.com\/healthtech-startup-traya-raises-2-2-million-in-pre-series-a-funding-round-led-by-fireside-ventures\/"
+          }
+        },
+        "681e3a16-e393-4c69-8228-43b0cfe9fa35": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/investmoney_776ded97-ac24-4c19-becd-390128aa9981.png",
+            "news_image": "shopify:\/\/shop_images\/m_logo-e1648037935959_089cdd1c-5193-4bd2-a00e-7b5e026e8970.png",
+            "name": "Healthtech startup Traya raises $2.2 mn from Fireside Ventures & amp; others",
+            "link": "https:\/\/techgraph.co\/startup\/traya-raises-2-2-mn-from-fireside-ventures-others\/"
+          }
+        },
+        "7b774895-e6ba-4218-b698-8de721a15655": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1642076368-Myproject19_94f05a6a-aed5-479e-b216-5922a55d4371.jpg",
+            "news_image": "shopify:\/\/shop_images\/image_2022_04_14T16_45_44_770Z_b595a37b-0745-4085-a8fe-7f2cfce8c1a0.png",
+            "name": "Healthcare startup Traya raises $2.2M in a pre-Series A round led by Fireside Ventures",
+            "link": "https:\/\/indianstartupnews.com\/news\/healthtech-startup-traya-raises-2-2m-in-a-pre-series-a-round-led-by-fireside-ventures\/"
+          }
+        },
+        "b69dbe8d-255a-4637-851c-dc1b99204686": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/funding.jpg",
+            "news_image": "shopify:\/\/shop_images\/download_d7e63b08-59e3-4fc0-8ee9-ef26d21ccced.png",
+            "name": "Healthtech startup Traya mops up $2.2 million in fresh funding",
+            "link": "https:\/\/economictimes.indiatimes.com\/tech\/funding\/healthtech-startup-traya-mops-up-2-2-million-in-fresh-funding\/articleshow\/88879420.cms"
+          }
+        },
+        "f5e9b385-06c0-4523-8484-e2c8cb48aa7e": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1642076368-Myproject19_94f05a6a-aed5-479e-b216-5922a55d4371.jpg",
+            "news_image": "shopify:\/\/shop_images\/20190308065725-ENT-India-Logo-Black_447d05a8-9981-45f8-9c14-cff4329035cc.png",
+            "name": "Traya Raises $2.2 Million In Pre-Series A Funding",
+            "link": "https:\/\/www.entrepreneur.com\/article\/412958"
+          }
+        },
+        "edcd8d61-bc30-49b0-b8c7-cb15079bac86": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1642076368-Myproject19_94f05a6a-aed5-479e-b216-5922a55d4371.jpg",
+            "news_image": "shopify:\/\/shop_images\/full-Disrupt-logo_fa0cfbef-638c-480f-b3d1-033dd7daa285.png",
+            "name": "Healthtech Startup Traya Raises $2.2M In Pre-Series A Funding Round",
+            "link": "http:\/\/bwdisrupt.businessworld.in\/article\/Healthtech-Startup-Traya-Raises-2-2M-In-Pre-Series-A-Funding-Round\/13-01-2022-417572\/"
+          }
+        },
+        "eb96fa46-94a6-418f-961a-61f331899b24": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image3e9f-1606833617001_26d31074-d809-42d2-b724-f8d3bac75eaf.png",
+            "news_image": "shopify:\/\/shop_images\/img3_69465dc0-c874-4398-9888-85c5859382e0.jpg",
+            "name": "[Funding roundup] Lendingkart, Freadom, Traya, Praan, others raise early-stage funds",
+            "link": "https:\/\/startuparound.com\/read\/1641994682.2153144\/%5bFunding-roundup%5d-Lendingkart,-Freadom,-Traya,-Praan,-others-raise-early-stage-funds"
+          }
+        },
+        "ba560caa-b622-4e78-906b-6d1504541327": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-7_3dd7eb3f-6b32-414f-a308-5cbd3cfa0cf2.png",
+            "news_image": "shopify:\/\/shop_images\/img2_fd346c4a-3327-43c8-a987-1879a57c612f.jpg",
+            "name": "[Funding roundup] Lendingkart, Freadom, Traya, Praan, others raise early-stage funds",
+            "link": "https:\/\/startuparound.com\/read\/1641994682.2153144\/%5bFunding-roundup%5d-Lendingkart,-Freadom,-Traya,-Praan,-others-raise-early-stage-funds"
+          }
+        },
+        "c3710974-814b-4d09-9c55-4b1555d8083b": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2020-11-04-1024x576_a715ce58-5b27-4db2-a8d9-ab7900c66371.png",
+            "news_image": "shopify:\/\/shop_images\/image_2022_04_14T15_06_27_484Z_e750c421-ffa8-4d70-9003-c7981fa5d54f.png",
+            "name": "Hair Health Platform Traya secures $2.2 Mn pre-Series A funding led by Fireside Ventures",
+            "link": "https:\/\/asiatechjournal.com\/hair-health-platform-traya-secures-2-2-mn-pre-series-a-funding-led-by-fireside-ventures\/"
+          }
+        },
+        "f4a52e4c-5214-4817-b4da-91fc07e50d85": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1642076368-Myproject19_94f05a6a-aed5-479e-b216-5922a55d4371.jpg",
+            "news_image": "shopify:\/\/shop_images\/img1_ce600896-32fc-4226-b419-5244fd15048e.jpg",
+            "name": "Healthtech Startup Traya Raises USD 2.2 Mn In Pre-Series A Funding Round",
+            "link": "https:\/\/vc-world.in\/2022\/01\/13\/healthtech-startup-traya-raises-usd-2-2-mn-in-pre-series-a-funding-round\/"
+          }
+        },
+        "2815269a-be8c-4040-8d90-4ef77a07c6b3": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image3e9f-1606833617001_26d31074-d809-42d2-b724-f8d3bac75eaf.png",
+            "news_image": "shopify:\/\/shop_images\/yourstory-min_160x160_2x_a44495f3-b0bd-40f2-aa5b-07341883a3ce.jpg",
+            "name": "[Funding roundup] Lendingkart, Freadom, Traya, Praan, others raise early-stage funds",
+            "link": "https:\/\/yourstory.com\/2022\/01\/funding-roundup-deals-early-stage-startups-lendingkart-muvin-freadom-praan-traya\/amp?utm_pageloadtype=scroll"
+          }
+        },
+        "ce3cc015-74f4-4b80-a6b7-0107ada7c290": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Saloni-Anand_31b9c664-d190-44ac-9c8b-fc414dc521a0.jpg",
+            "news_image": "shopify:\/\/shop_images\/CXO-Outlook_Trade-marked_5faea472-ea84-43d8-a914-1f6712b559cf.png",
+            "name": "Creating Awareness is the Only Way to Change the Status Quo of Hair Loss Treatment in India",
+            "link": "https:\/\/www.cxooutlook.com\/creating-awareness-is-the-only-way-to-change-the-status-quo-of-hair-loss-treatment-in-india\/"
+          }
+        },
+        "d4435f88-48ba-4cf2-aaf4-cdff6c09799c": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/defend-img02_9f9a583f-5ef2-423c-b8ce-06e66c9cd623.jpg",
+            "news_image": "shopify:\/\/shop_images\/logo-business_b807624d-571a-4dc5-a519-f57620e75a8b.png",
+            "name": "Disrupting the Hair Loss Industry in India, the Threefold Way",
+            "link": "https:\/\/www.businesswireindia.com\/traya-disrupting-the-hair-loss-industry-in-india-the-threefold-way-73458.html"
+          }
+        },
+        "df9a7558-7c35-42bf-8542-26af7bbfc293": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/new_section_post-02_68dd269e-2f44-47f7-b1a5-17b316d591c6.png",
+            "news_image": "shopify:\/\/shop_images\/GQ-logo_ff64c288-a90f-4a61-9fe7-e765247a1525.png",
+            "name": "Facing hair fall, frizziness &amp; other hair problems this monsoon? Indian experts recommend 5 ways to tackle them",
+            "link": "https:\/\/www.gqindia.com\/look-good\/content\/facing-hair-fall-frizziness-and-other-hair-problems-this-monsoon-indian-experts-recommend-5-ways-to-tackle-them"
+          }
+        },
+        "c4a8d771-8ec4-456e-afd6-312667854f76": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/new_section-03_4ef9f42d-3fbb-434e-8a6e-8ec9539a5eb5.png",
+            "news_image": "shopify:\/\/shop_images\/techcircle_790a05c2-57be-4930-83b5-4a90dd7fe804.jpg",
+            "name": "Tatva rebrands to Traya after Rs 4.5 cr seed round led by Kae, Whiteboard",
+            "link": "https:\/\/www.techcircle.in\/2020\/11\/05\/exclusive-tatva-rebrands-to-traya-after-rs-4-5-cr-seed-round-led-by-kae-capital"
+          }
+        },
+        "5496439d-8eed-4432-80e8-de2cec05cd1a": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/new_section-02_93599e0b-06b4-4c1b-ae7a-2296da004619.png",
+            "news_image": "shopify:\/\/shop_images\/your-story_47ab62e3-b10a-4e10-9b70-c42c0cfd9f18.png",
+            "name": "Mumbai startup Tatva Health takes the best of three sciences for customised haircare solutions",
+            "link": "https:\/\/yourstory.com\/2019\/11\/startup-mumbai-tatva-health-customised-haircare-solutions"
+          }
+        },
+        "ede9aaea-3a85-44ae-9ea0-ee7a14bdd896": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/new_section_post-02_68dd269e-2f44-47f7-b1a5-17b316d591c6.png",
+            "news_image": "shopify:\/\/shop_images\/DailyHunt_f007a2ab-8a09-44f0-af0b-8e6468a8e945.png",
+            "name": "Healthtech startup Traya raises seed investment led by Kae Capital, Whiteboard Capital",
+            "link": "https:\/\/m.dailyhunt.in\/news\/india\/english\/yourstory-epaper-yourstory\/funding+alert+healthtech+startup+traya+raises+seed+investment+led+by+kae+capital+whiteboard+capital-newsid-n227183756"
+          }
+        },
+        "7be4685b-38d1-455f-9697-796b31d96869": {
+          "type": "columns",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/new_section_post-03_943ec9c8-8bf2-47c9-bcb2-757f598f45e3.png",
+            "news_image": "shopify:\/\/shop_images\/your-story_47ab62e3-b10a-4e10-9b70-c42c0cfd9f18.png",
+            "name": "Healthtech startup Traya raises seed investment led by Kae Capital, Whiteboard Capital",
+            "link": "https:\/\/yourstory.com\/2020\/11\/funding-healthtech-startup-traya-kae-capital-whiteboard-capital"
+          }
+        },
+        "da327576-0f18-4da5-85ed-f788195a9680": {
+          "type": "columns",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hair-loss_ccf48b19-7027-49b9-af31-2fce82573ae8.jpg",
+            "news_image": "shopify:\/\/shop_images\/9_d31530fd-1aae-44ac-b480-c415799c1bff.jpg",
+            "name": "Want to manage hair loss? An expert points out things you may be doing wrong",
+            "link": "https:\/\/www.healthshots.com\/beauty\/hair-care\/want-to-manage-hair-loss-an-expert-points-out-things-you-may-be-doing-wrong\/"
+          }
+        }
+      },
+      "block_order": [
+        "e0a7593f-89b1-463b-8278-4ae9712f27c5",
+        "4b7dc92e-0d18-4326-93c7-e52033f1ab34",
+        "954b46de-1c30-4c52-bd1a-c0921fc648ab",
+        "a6ec065b-524a-474d-949a-45d04be37a28",
+        "d8c03ef5-c4a4-4310-ad75-d372c2e425bc",
+        "00befe16-d0ac-4f66-8ecf-cb406839c266",
+        "8a012dbe-6631-4e4f-b077-693d2e2590f4",
+        "942e7939-184a-4894-aa87-8cd8cd9b411e",
+        "6ea40fb7-6e20-45d4-8b78-5c47fa7a31b0",
+        "ea7e84da-1aa6-4a02-a6b3-86dd56970d5a",
+        "06297a26-95b7-4b08-bd31-1299410ee6a1",
+        "46c9be6d-90df-4baa-8f43-ce9aa726ded3",
+        "c6db1023-8654-4fe4-9d5f-660e47a6f4bc",
+        "3c72978b-6c55-4998-9857-2cb6ca9722fa",
+        "64e1a5a0-c19f-4b70-9ed9-d53e7eace473",
+        "187ad097-e1f7-4744-814a-4da5ef82e30a",
+        "1a1216f2-aefb-4fac-9803-4747c61ac73b",
+        "a194dc21-a388-46b3-8930-f44d2bdf5c4b",
+        "dcdc2415-6c91-4f6c-a874-5b2ad53ff5bc",
+        "e1705eb0-abc0-4448-b46a-d46f69db2f13",
+        "a135bc7c-036e-4862-b4ac-c3cc6e46f4d4",
+        "321b3d0a-648f-446a-8756-983cebabe5bb",
+        "1005fe89-279a-4989-983b-529e530e3956",
+        "c8edc837-e009-40ea-a355-954453e19f1d",
+        "719f6c58-af2d-4b32-a691-127652860a60",
+        "eb269d37-67a3-4211-bdcd-80baaaff8aeb",
+        "2081ee5a-1669-48c7-ba73-191382355ba5",
+        "c90a223b-c793-4bef-9d1e-44be8cfffd5d",
+        "de73e903-a2d1-4122-9f15-6c1d65470d0b",
+        "98ab295c-62ce-416f-8a76-23043e7c7133",
+        "b985ba8a-5b03-43d2-8f3e-6e91573a902b",
+        "c9036c5a-e1a9-4cf9-825b-b5935e1dd0e9",
+        "681e3a16-e393-4c69-8228-43b0cfe9fa35",
+        "7b774895-e6ba-4218-b698-8de721a15655",
+        "b69dbe8d-255a-4637-851c-dc1b99204686",
+        "f5e9b385-06c0-4523-8484-e2c8cb48aa7e",
+        "edcd8d61-bc30-49b0-b8c7-cb15079bac86",
+        "eb96fa46-94a6-418f-961a-61f331899b24",
+        "ba560caa-b622-4e78-906b-6d1504541327",
+        "c3710974-814b-4d09-9c55-4b1555d8083b",
+        "f4a52e4c-5214-4817-b4da-91fc07e50d85",
+        "2815269a-be8c-4040-8d90-4ef77a07c6b3",
+        "ce3cc015-74f4-4b80-a6b7-0107ada7c290",
+        "d4435f88-48ba-4cf2-aaf4-cdff6c09799c",
+        "df9a7558-7c35-42bf-8542-26af7bbfc293",
+        "c4a8d771-8ec4-456e-afd6-312667854f76",
+        "5496439d-8eed-4432-80e8-de2cec05cd1a",
+        "ede9aaea-3a85-44ae-9ea0-ee7a14bdd896",
+        "7be4685b-38d1-455f-9697-796b31d96869",
+        "da327576-0f18-4da5-85ed-f788195a9680"
+      ],
+      "settings": {
+        "heading": "Traya In The News"
+      }
+    },
+    "166385278730fd8739": {
+      "type": "traya-in-news",
+      "blocks": {
+        "2d15c6c4-21b3-476c-be9a-827fd623afd6": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/new_section03_ff714e39-3fda-4cc5-823e-1a0a9e315e46.png",
+            "news_image": "shopify:\/\/shop_images\/startup-hydrabad_1c843e4e-798c-47ab-8fc8-adce8271147a.png",
+            "name": "Hair Loss Treatment made Wholesome – Tatva Health fixes more than just your hair.",
+            "link": "http:\/\/startuphyderabad.com\/hair-loss-treatment-made-wholesome-tatva-health-fixes-more-than-just-your-hair\/"
+          }
+        },
+        "160b076d-572d-45f7-a13c-41338f1750ca": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/new_section_post-03_943ec9c8-8bf2-47c9-bcb2-757f598f45e3.png",
+            "news_image": "shopify:\/\/shop_images\/your-story_47ab62e3-b10a-4e10-9b70-c42c0cfd9f18.png",
+            "name": "Healthtech startup Traya raises seed investment led by Kae Capital, Whiteboard Capital",
+            "link": "https:\/\/yourstory.com\/2020\/11\/funding-healthtech-startup-traya-kae-capital-whiteboard-capital\" class=\"logo-bar__link"
+          }
+        },
+        "5ab4c7eb-c494-400c-a6e6-e8ffaf1fc5fb": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hair-loss_ccf48b19-7027-49b9-af31-2fce82573ae8.jpg",
+            "news_image": "shopify:\/\/shop_images\/9_d31530fd-1aae-44ac-b480-c415799c1bff.jpg",
+            "name": "Want to manage hair loss? An expert points out things you may be doing wrong",
+            "link": "https:\/\/www.healthshots.com\/beauty\/hair-care\/want-to-manage-hair-loss-an-expert-points-out-things-you-may-be-doing-wrong\/"
+          }
+        },
+        "fb40dbaa-c981-4a8b-b6ea-7d0460c9606c": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1642076368-Myproject19_94f05a6a-aed5-479e-b216-5922a55d4371.jpg",
+            "name": "Sunproof your Hair",
+            "link": "https:\/\/drive.google.com\/file\/d\/1dEQ4LyRgKbAn5eJqhZ1-NipbbcgyYlxR\/view?usp=sharing"
+          }
+        },
+        "f8f0ec94-3335-4659-8d67-7441f7f314b8": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Traya-Co-founders_dee9636f-666f-424b-94c6-a54ba56405db.jpg",
+            "name": "Sun Protect your Hair",
+            "link": "http:\/\/www.bindugopalrao.com\/sun-protect-your-hair\/"
+          }
+        }
+      },
+      "block_order": [
+        "2d15c6c4-21b3-476c-be9a-827fd623afd6",
+        "160b076d-572d-45f7-a13c-41338f1750ca",
+        "5ab4c7eb-c494-400c-a6e6-e8ffaf1fc5fb",
+        "fb40dbaa-c981-4a8b-b6ea-7d0460c9606c",
+        "f8f0ec94-3335-4659-8d67-7441f7f314b8"
+      ],
+      "settings": {
+        "heading": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "166376912549176592",
+    "166385278730fd8739"
+  ]
+}

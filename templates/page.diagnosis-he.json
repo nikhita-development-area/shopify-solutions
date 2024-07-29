@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1664430564d865b9f0": {
+      "type": "image-with-text",
+      "blocks": {
+        "1664430564d2f5fcf2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why is your hair falling?",
+            "heading_size": "h1"
+          }
+        },
+        "1664430564d2f5fcf2-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The first step to stopping hair loss<br\/>is to find the root cause.<br\/>Each type of hair loss needs a<br\/>different treatment<br\/><strong>Let's find yours now.<\/strong><\/p>",
+            "text_style": "body"
+          }
+        },
+        "1664430564d2f5fcf2-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "START DIAGNOSIS",
+            "button_link": "https:\/\/form.traya.health\/lg-hien"
+          }
+        }
+      },
+      "block_order": [
+        "1664430564d2f5fcf2-0",
+        "1664430564d2f5fcf2-1",
+        "1664430564d2f5fcf2-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_3.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1664430564d865b9f0"
+  ]
+}

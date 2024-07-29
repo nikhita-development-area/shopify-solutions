@@ -1,0 +1,36 @@
+<div class="dietplan" style="background-attachment: scroll;">
+  <div class="container">
+    {% include 'breadcrumbs' %}
+    <div class="row" style="letter-spacing: normal;">
+      <div class="col-10">
+        <div class="rte">
+          {{ page.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Diet Plan Content",
+    "settings": [],
+      "presets": [
+    {
+      "name": "Diet Plan Content"
+    }
+  ]
+  }
+{% endschema %}
+
+{% style %}
+  .dietplan a {
+    border-bottom: 1px solid;
+  }
+  .template-page.north-indian-diet-plan .rte {
+    letter-spacing: normal;
+  }
+  .template-page.north-indian-diet-plan #footer {
+    margin-top: 30px;
+  }
+{% endstyle %}

@@ -1,0 +1,133 @@
+.testimonial-container {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+.testimonial-card {
+  margin: 6px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.testimonial-card .images {
+  justify-content: space-between;
+  height: 120px;
+}
+
+.stage {
+  background-color: #414042;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: white;
+  width: 37%;
+  text-align: center;
+}
+.customer_content_ht {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+.doc_detail_right_ht {
+  margin: auto;
+}
+
+.images img {
+  width: 30%;
+  border-radius: 10px;
+  margin: 0 3px;
+}
+.name_verified_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  text-align: left;
+}
+
+.rating {
+  color: gold;
+  margin: 0;
+}
+
+.date {
+  color: gray;
+  font-size: 0.9em;
+}
+
+.slider-controls {
+  margin-top: 20px;
+}
+.loaction_name {
+  margin: 0;
+}
+
+.slider-controls button {
+  background-color: #f1f1f1;
+  color: #000000;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.slider-controls button:hover {
+  background-color: #555;
+}
+.name_verified_wrapper h3 {
+  font-family: "FREDOKA" !important;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+}
+.name_verified_wrapper {
+  align-items: center;
+}
+.month_text {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 12px;
+  margin-top: 4px;
+}
+.month_text div {
+  font-family: Nunito Sans;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+.ht_testimonial_heading {
+  color: #000000;
+  font-family: "Nunito Sans" !important;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 43.65px;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+.rating {
+  color: #414042;
+}
+.star {
+  color: #ffc107;
+}
+
+.verified_text {
+  font-family: "Nunito Sans" !important;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: left;
+}
+@media screen and (min-width: 500px) and (max-width: 1238px) {
+  .stage {
+    font-size: 12px;
+  }
+}

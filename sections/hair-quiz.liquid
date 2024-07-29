@@ -1,0 +1,147 @@
+<div class="hair-quiz-section">
+<div class="hair_quiz_banner_img">
+  <img class="d-none d-md-block" src="{{ section.settings.image | img_url : 'master' }}" alt="hair-quiz">
+   <img class="d-md-none" src="{{ section.settings.mob_image | img_url : 'master' }}" alt="hair-quiz">
+  <div class="container quiz-hair-breadcrumb breadcrumbs-container">   
+    {% render 'breadcrumbs' %}
+  </div>
+</div>
+<div class="quiz-container container">
+  <div class="quiz-hair-buton">
+<a id="hairtestcta" href="https://form.traya.health/questions?cohort=1&location&page=hair-quiz" class="hair-form-actn-link btn btn-dark" style="pointer-events: auto;">TAKE THE HAIR TEST <sup>™</sup></a>
+ </div>
+  <div class="quiz-content">
+  {{ section.settings.content }}
+  </div>
+  <div class="quiz-hair-buton">
+<a id="hairtestcta" href="https://form.traya.health/questions?cohort=1&location&page=hair-quiz" class="hair-form-actn-link btn btn-dark" style="pointer-events: auto;">TAKE THE HAIR TEST <sup>™</sup></a>
+</div>
+    {{ section.settings.content2 }}
+</div>
+  
+</div>
+   
+   
+<style>
+  .quiz-hair-buton {
+    text-align: center;
+    padding-bottom: 10px;
+}
+  .faq-content {
+    padding-bottom: 40px;
+}
+  .quiz-content {
+    padding-bottom: 50px;
+}
+  .faq-content h2 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding-top:50px;
+    font-family: 'nunito-sans-extrabold', sans-serif !important;
+}
+  .quiz-hair-buton {
+    text-align: center;
+}
+  .quiz-container.container {
+    background: #fff;
+    padding: 50px;
+}
+  .quiz-page-button {
+    text-align: center;
+}
+  .container.quiz-hair-breadcrumb.breadcrumbs-container {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+}
+  .hair-quiz-section {
+    padding-top: 50px;
+    background: #1e1e1e0f;
+}
+  .hair-quiz-section h3 {
+    font-size: 33px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+   @media only screen and (max-width: 1199px) and (min-width: 768px) {
+    
+}
+  
+ @media screen and (max-width: 767.98px){
+   .container.quiz-hair-breadcrumb.breadcrumbs-container {
+    position: absolute;
+    top: 50px;
+    left: 19px;
+}
+   .hair-quiz-section {
+    padding-top: 46px;
+}
+   .faq-content h3 {
+    font-size: 23px;
+}
+   .quiz-content {
+    padding-bottom: 20px;
+}
+   .quiz-hair-buton {
+    padding-top: 20px;
+}
+   .quiz-container.container {
+    background: #fff;
+    padding: 25px;
+    max-width: 90%;
+}
+   .faq-content h3 {
+    font-size: 23px;
+}
+     .faq-content h2 {
+    font-size: 22px;
+       padding-top: 40px;
+     }
+  .hair-quiz-section h3 {
+    font-size: 23px;
+}
+ }
+  .hair_quiz_banner_img img {
+    width: 100%;
+}
+</style>
+{% schema %}
+  {
+    "name": "Hair Quiz",
+    "settings": [
+        {
+    "type": "image_picker",
+  	"id": "image",
+  	"label": "Image"
+    },
+       {
+    "type": "image_picker",
+  	"id": "mob_image",
+  	"label": "Mobile Image"
+    },
+       {
+    "type": "html",
+  	"id": "content",
+  	"label": "Content"
+    },
+        {
+    "type": "html",
+  	"id": "content2",
+  	"label": "Content"
+    }
+    ],
+     "presets": [
+      {
+        "name": "Hair Quiz"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

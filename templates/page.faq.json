@@ -1,0 +1,544 @@
+{
+  "sections": {
+    "16641659571489de99": {
+      "type": "image-banner",
+      "blocks": {
+        "16641659570f414577-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "16641659570f414577-1": {
+          "type": "text",
+          "settings": {
+            "heading1": "FAQs Traya.",
+            "text": "All your Traya doubts get put to rest. We promise to be honest with you.",
+            "text_style": "body"
+          }
+        },
+        "16641659570f414577-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "16641659570f414577-0",
+        "16641659570f414577-1",
+        "16641659570f414577-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_203.webp",
+        "mblimage": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_2.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1663689848dbd4a98e": {
+      "type": "FaqPage",
+      "blocks": {
+        "ba99c455-dd29-4cbe-a0c6-ca9969ed5303": {
+          "type": "product",
+          "settings": {
+            "product-question": "What is our Product?",
+            "product-answer": "<p>A treatment plan for your hair loss - <strong>One that is recommended by doctors and perfected for you<\/strong>! It contains everything you’ll ever need to treat your hair loss condition. <a href=\"https:\/\/www.tatva.health\/collections\/frontpage\" title=\"https:\/\/www.tatva.health\/collections\/frontpage\">Read about our kits here.<\/a><\/p>"
+          }
+        },
+        "8df965b4-5cc8-49de-b4fd-dd63d85c8102": {
+          "type": "product",
+          "settings": {
+            "product-question": "Who can use Traya’s products?",
+            "product-answer": "<p>If you can vote you can use Traya’s products. If you are 18 years old and you’re experiencing hair loss. We are here for you. <\/p>"
+          }
+        },
+        "cab33204-edbe-4cfa-9da8-1a9c66954898": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product-question": "Who cannot use these products?",
+            "product-answer": "<p>If you are pregnant or allergic to any of the ingredients we use. Otherwise, it is A-OK!<\/p>"
+          }
+        },
+        "6e811a8a-4609-43cd-babb-56eb90af374e": {
+          "type": "product",
+          "settings": {
+            "product-question": "Is it for men or women?",
+            "product-answer": "<p>Both. If you have hair loss we’ll treat you! <\/p>"
+          }
+        },
+        "702717f5-e5c1-4702-a599-066e834340f2": {
+          "type": "product",
+          "settings": {
+            "product-question": "Does it really work?",
+            "product-answer": "<p>We will let our results speak for us. Take a look at our <a href=\"\/pages\/reviews\" title=\"Reviews\">testimonials and success page<\/a> and be the judge! But we’ll promise this - Once you choose Traya we’ll go all the way with you. Like Jai and Veeru(If you’ve not watched Sholay, then that’s on you!)<\/p>"
+          }
+        },
+        "c2a8a7c9-b604-4269-aff9-3e58ad0c69d9": {
+          "type": "product",
+          "settings": {
+            "product-question": "What Are The Usage Instructions For Traya Hair Care Products?",
+            "product-answer": "<p>When you receive your Traya products it will contain a Plan which has the dosage instruction for your products. If you are on the Traya Hair Loss Treatment you hair coach will call you after you receive the products to explain how to use it. In case of any queries or to schedule a call with your hair coach, reach us here - <a href=\"https:\/\/api.whatsapp.com\/send\/?phone=918828006272&text=Hey%21+I+would+like+to+know+more+about+Traya&app_absent=0\" target=\"_blank\"><span style=\"text-decoration:underline\">https:\/\/api.whatsapp.com\/send?phone=+918828006272<\/span><\/a><\/p>"
+          }
+        },
+        "2420acfa-aa17-44e3-96d7-fc2bb45058b7": {
+          "type": "product",
+          "settings": {
+            "product-question": "What is the regimen to use the products?",
+            "product-answer": "<p>You will receive a plan along with your Traya products, please use it accordingly. In case of any questions reach out to us here - <a href=\"https:\/\/api.whatsapp.com\/send\/?phone=918828006272&text=Hey%21+I+would+like+to+know+more+about+Traya&app_absent=0\" target=\"_blank\"><span style=\"text-decoration:underline\">https:\/\/api.whatsapp.com\/send?phone=+918828006272<\/span><\/a><\/p>"
+          }
+        },
+        "9e1c20af-5782-44a5-90f5-8b55165f11c1": {
+          "type": "product",
+          "settings": {
+            "product-question": "Can Traya products be used on Chemically Treated Hair\/ Coloured Hair?",
+            "product-answer": "<p>Yes. The Traya hair loss treatment is suitable for chemically treated and colored hair<\/p>"
+          }
+        },
+        "919fc62d-14b5-491d-bb67-35700fbd18bf": {
+          "type": "product",
+          "settings": {
+            "product-question": "Do Traya Products Have Side Effects?",
+            "product-answer": "<p>Traya Hair Loss Treatment is doctor-recommended and has no side-effects barring any undetected health issues or allergies. Please make sure to mention your complete medical history to your Traya Hair Coach<\/p>"
+          }
+        },
+        "624f48c2-7d09-4b08-97a9-c8647b694ec4": {
+          "type": "product",
+          "settings": {
+            "product-question": "Can Traya Products Be Purchased Individually?",
+            "product-answer": "<p>Yes. You can purchase Traya products individually. The best approach however is to take the Traya online hair diagnosis and get your very own doctor recommended customised treatment. <\/p>"
+          }
+        },
+        "80097ea1-a501-41d0-a77c-2c877f5f2a21": {
+          "type": "product",
+          "settings": {
+            "product-question": "Are Traya products medically approved?",
+            "product-answer": "<p>Yes. Traya products are doctor Recommended and you will receive a Plan along with the product with the name, signature and medical license numbers of the Traya doctors who recommended it. <\/p>"
+          }
+        },
+        "fdf6fa57-5c26-4375-8384-523a844264b8": {
+          "type": "company",
+          "settings": {
+            "company-question": "What is Traya?",
+            "company-answer": "<p><strong>Health First. Hair Next. Happy Always. <\/strong><\/p><p><strong>Traya is about Holistic Hair Treatment. <\/strong>We want people to understand that everything in your body is tied internal health, including hair loss.<\/p>"
+          }
+        },
+        "5ad4da08-2e11-4eef-907b-ff9624732a1f": {
+          "type": "company",
+          "settings": {
+            "company-question": "How was Traya developed?",
+            "company-answer": "<p>When Altaf and Saloni struggled with Altaf’s hair loss and realized that hair loss is not just about exposure issues like water quality, pollution, and chemical treatments but also a result of underlying health conditions. They set out to create Traya. It was created with a vision to create awareness around hair loss, de-stigmatise it while empathizing with the customers that it has an emotional and psychological impact. Most importantly, to combine different clinically proven treatments and create a perfect solution. (like mixing ice-cream and chocolate sauce, sure they work well individually but when you combine them, YUM!) And adapting that treatment plan to individuals because every case is different. <\/p><p><\/p><p><\/p><p><strong>The Process<\/strong><\/p><p><strong>Click and Relax (just kidding, that is kind of true)<\/strong><\/p><p><strong>But here’s what happens. <\/strong><\/p><p><strong>Step 1: <\/strong>We get your order<\/p><p><strong>Step 2: <\/strong>The medical team calls you in 24 business hours (if you are “busy” we leave you a message)<\/p><p><strong>Step 3:<\/strong> The doctors analyze your case by studying your responses to the form and on-call consult (if they have any additional questions, they’ll find you and call you!)<\/p><p><strong>Step 4:<\/strong> They prepare your plan based on their analysis. They also prepare your diet plan based on what is best for you and your weight goal<\/p><p><strong>Step 5: <\/strong>We start filling the kit components with the plan  given for you (This is done personally by the medical team to ensure the quality -Basically we set up a Chemistry Lab during packaging time)<\/p><p><strong>Step 6:<\/strong> Your order is dispatched (This process takes 4-5 business days, come on we are not AMAZON PRIME)<\/p><p><strong>Step 7:<\/strong> Our delivery partners get the kit to your doorstep<\/p><p><strong>Step 8: <\/strong>Your Hair Loss Buddy calls you to explain how to use the kit to get the most out of your treatment (Told you, we are totally best friends forever material)<\/p>"
+          }
+        },
+        "8122a393-7ed8-4440-9226-5d1125d7e080": {
+          "type": "company",
+          "settings": {
+            "company-question": "How does Traya work?",
+            "company-answer": "<p>By treating the root cause of your hair loss. You see pollution, hard water, and even stress are triggers for hair fall. But they are not the cause. (like eating ice cream when you’re already down with the flu makes it worse but it didn’t cause the flu!). And we do it by tailoring the treatment to your hair loss needs. <\/p>"
+          }
+        },
+        "386256ee-0527-4d13-a33a-54655fd87a67": {
+          "type": "company",
+          "settings": {
+            "company-question": "What makes us different?",
+            "company-answer": "<p>Unlike any other hair loss treatment, which targets treatment only from one angle. Tatva offers you a 360-degree plan. Combining three sciences - Ayurveda, Allopathy, and Nutrition; that focus on the cause of your hair loss. (it’s like watching a movie like Avengers in 2D vs 3D, you know which is better, don’t you?)<\/p><p><\/p><p>Bonus points - We walk the walk with you. Our medical team checks up on your progress periodically to make sure you get the complete personalized experience. It’s like your friend was treating your hair loss (who doesn’t want helpful friends)<\/p>"
+          }
+        },
+        "96920d40-e7ce-4e05-9096-7f73f3c11088": {
+          "type": "company",
+          "settings": {
+            "company-question": "What is your refund policy?",
+            "company-answer": "<p>If the conditions for return are met, or you’ve canceled your order (sad face). Then we will refund the amount in your mode of payment. The same is initiated in 1-2 days. After the verification process in case of return or after receiving a cancellation request.<\/p>"
+          }
+        },
+        "2cf4f33f-de86-4f8c-b480-f53279cf76ae": {
+          "type": "company",
+          "settings": {
+            "company-question": "Is traya hair treatment good?",
+            "company-answer": "<p>Yes, Traya works best when between stage 1-4. 93% saw positive results when used for more than 5 months as per an internal study conducted by Traya in Dec 2022. More than 2.5 lakh Indians have used Traya for hair loss.<\/p>"
+          }
+        },
+        "7925861b-4dd4-4d7e-83c9-ad5321c2b531": {
+          "type": "company",
+          "settings": {
+            "company-question": "Can Traya Reduce Hair Fall?",
+            "company-answer": "<p>Yes. Traya uses a combination of three sciences to treat the internal triggers of your hair fall and help regrow your lost volume . Those who use our treatment consistently for 2-3 months see a visible reduction in their hair fall<\/p>"
+          }
+        },
+        "8f78f1af-b859-4f20-89da-7ef5bd62701d": {
+          "type": "company",
+          "settings": {
+            "company-question": "Can Traya Increase hair volume?",
+            "company-answer": "<p>Yes. Traya treatment increases blood flow to your follicles, increases the length of your anagen (growth) phase, stops your fiollicles from shrinking to increase your hair volume and boost growth of thick and healthy hair<\/p>"
+          }
+        },
+        "e154671e-88ed-49ce-80e3-e73b38f81c4e": {
+          "type": "company",
+          "settings": {
+            "company-question": "Does Traya Work for Grey hair?",
+            "company-answer": "<p>Hair greying is a sign of poor follicle health which effects the hair pigment cells. Traya treatment has components that make your follicles healthy and prevent them from premature ageing to reduce the rate of greying.<\/p>"
+          }
+        },
+        "23618777-02df-4b85-9f21-2459d3362c54": {
+          "type": "company",
+          "settings": {
+            "company-question": "What are the customer's reviews on Traya?",
+            "company-answer": "<p>You can check out our reviews here - <a href=\"https:\/\/traya.health\/pages\/reviews\" target=\"_blank\"><span style=\"text-decoration:underline\">https:\/\/traya.health\/pages\/reviews<\/span><\/a><\/p>"
+          }
+        },
+        "431d1584-d3bc-45ad-a567-80fc761ad3e2": {
+          "type": "order",
+          "settings": {
+            "order-question": "How do I place an order?",
+            "order-answer": "<p>Just go to - <a href=\"https:\/\/www.tatva.health\/\">https:\/\/www.traya.health\/<\/a> &gt; click on the tab (icon) &gt; click on Shop Our Products &gt; Buy the recommended kit. If you’ve not filled the form you can just buy the customized kit.  <\/p>"
+          }
+        },
+        "fadd1b94-3125-4c70-8300-8193ef56fb11": {
+          "type": "order",
+          "settings": {
+            "order-question": "You can check out our reviews here - https:\/\/traya.health\/pages\/reviews",
+            "order-answer": "<p>We’ve got you. Once again it’s only a click away. We give you a tracking link in the <strong>Order Dispatched <\/strong>email. If you have any troubles just email us at - customercare@traya.health<\/p>"
+          }
+        },
+        "bed4ab38-3dc9-443d-964a-815c1f0367e3": {
+          "type": "order",
+          "settings": {
+            "order-question": "Can I cancel my order?",
+            "order-answer": "<p>Absolutely! You can change your relationship status with Tatva to <strong>It’s Complicated<\/strong> from <strong>Committed <\/strong>whenever you want. All you need to do is let us know on <a href=\"tel:+91%207400345864\">7400345864<\/a><\/p>"
+          }
+        },
+        "d3056d58-7533-4c53-8a90-189ddcd03693": {
+          "type": "order",
+          "settings": {
+            "order-question": "Can I return my order?",
+            "order-answer": "<p>Yes. In case of any damage, please reach out to your hair coach or write to <a href=\"mailto:customercare@traya.health\" target=\"_blank\">customercare@traya.health<\/a> and we shall replace the product(s) for you!<\/p><p>Also, we commit to you as much as you commit to us. If you use our treatment plan (customized kit for hair loss) for five months consecutively and see NO improvement at all, we will refund the entire amount you spent on it!<\/p>"
+          }
+        },
+        "6b99a548-5d74-4994-a024-772d6b85b047": {
+          "type": "order",
+          "settings": {
+            "order-question": "My order was lost, damaged, or items were missing?",
+            "order-answer": "<p>We apologize for the inconvenience. Please contact us at customercare@traya.health or leave us a WhatsApp message at - +918828006272. <\/p>"
+          }
+        },
+        "2d49ed34-a30e-48b4-9707-d603e488bb6f": {
+          "type": "order",
+          "settings": {
+            "order-question": "I am unable to upload my picture?",
+            "order-answer": "<p>It’s okay, technology is not perfect! You can send us your picture on the Tatva Instagram Page here - <a href=\"https:\/\/www.instagram.com\/traya.health\/\">https:\/\/www.instagram.com\/traya.health\/<\/a> or send it to us here on Whatsapp - 8828006272. <\/p>"
+          }
+        },
+        "03de7231-49f7-4e37-be3c-56cfe2c11f5b": {
+          "type": "order",
+          "settings": {
+            "order-question": "The discount code is not working, what do I do?",
+            "order-answer": "<p>Please contact us at customercare@traya.health or leave us a WhatsApp message at - +91 8828006272.<\/p>"
+          }
+        },
+        "c2b3362e-8a9f-4b6b-8e06-2b31173059fa": {
+          "type": "order",
+          "settings": {
+            "order-question": "What payment methods do you accept?",
+            "order-answer": "<p>Love and Trust - Just Kidding! We accept Master Card, Visa, Rupay, Amex, Maestro, Netbanking (All Indian Banks), Freecharge, PayZapp, UPI, Cash On Delivery. And what’s best? Shipping is free on all of our products.<\/p>"
+          }
+        },
+        "b2142b43-8130-474e-97f1-5854558ed987": {
+          "type": "order",
+          "settings": {
+            "order-question": "Is Traya Available In My City?",
+            "order-answer": "<p>Traya Health, provides doctor recommended online solutions for hair loss for both men and women. Traya treatments are tailored to suit your individual concerns. Traya treatment is shipped all over the country. Just click away for the best hair loss treatment and we will deliver it to your door step<\/p>"
+          }
+        },
+        "ceaeeb71-d7fa-4b3f-8b7d-e94b68fb0eda": {
+          "type": "order",
+          "settings": {
+            "order-question": "Is Traya Available On Amazon?",
+            "order-answer": "<p>Yes. Some Traya products are available on Amazon<\/p>"
+          }
+        },
+        "9ab1fdb5-b06c-40d0-ad70-12bbd38bcd88": {
+          "type": "order",
+          "settings": {
+            "order-question": "Can I Cancel My Order Anytime?",
+            "order-answer": "<p>Yes. You can cancel your order anytime. But we hope you don't, if you are facing any issues related to your order please reach out to us here - <a href=\"https:\/\/api.whatsapp.com\/send\/?phone=918828006272&text=Hey%21+I+would+like+to+know+more+about+Traya&app_absent=0\" target=\"_blank\"><span style=\"text-decoration:underline\">https:\/\/api.whatsapp.com\/send\/?phone=918828006272&text=Hey%21+I+would+like+to+know+more+about+Traya&app_absent=0<\/span><\/a><\/p>"
+          }
+        },
+        "4e8c18c9-fce0-4f8b-a3cd-274e88e2c3e9": {
+          "type": "order",
+          "settings": {
+            "order-question": "How can I get in touch with a customer care",
+            "order-answer": "<p>You can reach us at customercare@traya.health or drop up a message at - <a href=\"https:\/\/api.whatsapp.com\/send\/?phone=918828006272&text=Hey%21+I+would+like+to+know+more+about+Traya&app_absent=0\" target=\"_blank\"><span style=\"text-decoration:underline\">https:\/\/api.whatsapp.com\/send\/?phone=918828006272&text=Hey%21+I+would+like+to+know+more+about+Traya&app_absent=0<\/span><\/a><\/p>"
+          }
+        },
+        "c7cb373e-0a15-4afc-8b19-c2fa7de61293": {
+          "type": "order",
+          "settings": {
+            "order-question": "Is it necessary to have an account to shop on Traya?",
+            "order-answer": "<p>No. You can shop at Traya as a guest, However, it will be convenient for you to track your order and check your order history if you have an account<\/p>"
+          }
+        },
+        "5e38fab3-df3b-45b4-a1d8-a11ba81b76ec": {
+          "type": "shipping",
+          "settings": {
+            "shipping-question": "Is shipping free?",
+            "shipping-answer": "<p>Yes. Shipping is free on all the customized treatment kits. Exceptions may include single product delivery. <\/p>"
+          }
+        },
+        "22640d58-2477-414d-b659-0944cf7febe8": {
+          "type": "shipping",
+          "settings": {
+            "shipping-question": "Do you ship everywhere?",
+            "shipping-answer": "<p>If your pincode is serviceable according to our shipping partners then your customized box is definitely deliverable. <\/p>"
+          }
+        },
+        "0b9ec452-2a32-4d86-a7c9-67210eb9a863": {
+          "type": "shipping",
+          "settings": {
+            "shipping-question": "What shipping method do you use?",
+            "shipping-answer": "<p>We did think about Pigeons. But they had too much attitude. Now we work with our efficient and swift delivery partners - Delhivery and FedX<\/p>"
+          }
+        },
+        "1921211d-c84f-45b7-bd1e-e470a69cff3d": {
+          "type": "shipping",
+          "settings": {
+            "shipping-question": "Is your packaging discreet?",
+            "shipping-answer": "<p>Absolutely! No one will know that the package contains the BEST HAIRLOSS TREATMENT IN THE WORLD. <\/p>"
+          }
+        },
+        "8d29b654-be27-4b0e-924d-6db3ca9694b6": {
+          "type": "shipping",
+          "settings": {
+            "shipping-question": "What is the estimated delivery time?",
+            "shipping-answer": "<p>Your Traya products will be delivered in a week from your date of purchase<\/p>"
+          }
+        },
+        "7364944a-c2a2-44fe-b10b-64e63432fb30": {
+          "type": "shipping",
+          "settings": {
+            "shipping-question": "Does Traya deliver internationally?",
+            "shipping-answer": "<p>Yes. We do deliver internationally, however, international shipping charges will be applied and delivery time will depend upon the customs regulation of your country<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ba99c455-dd29-4cbe-a0c6-ca9969ed5303",
+        "8df965b4-5cc8-49de-b4fd-dd63d85c8102",
+        "cab33204-edbe-4cfa-9da8-1a9c66954898",
+        "6e811a8a-4609-43cd-babb-56eb90af374e",
+        "702717f5-e5c1-4702-a599-066e834340f2",
+        "c2a8a7c9-b604-4269-aff9-3e58ad0c69d9",
+        "2420acfa-aa17-44e3-96d7-fc2bb45058b7",
+        "9e1c20af-5782-44a5-90f5-8b55165f11c1",
+        "919fc62d-14b5-491d-bb67-35700fbd18bf",
+        "624f48c2-7d09-4b08-97a9-c8647b694ec4",
+        "80097ea1-a501-41d0-a77c-2c877f5f2a21",
+        "fdf6fa57-5c26-4375-8384-523a844264b8",
+        "5ad4da08-2e11-4eef-907b-ff9624732a1f",
+        "8122a393-7ed8-4440-9226-5d1125d7e080",
+        "386256ee-0527-4d13-a33a-54655fd87a67",
+        "96920d40-e7ce-4e05-9096-7f73f3c11088",
+        "2cf4f33f-de86-4f8c-b480-f53279cf76ae",
+        "7925861b-4dd4-4d7e-83c9-ad5321c2b531",
+        "8f78f1af-b859-4f20-89da-7ef5bd62701d",
+        "e154671e-88ed-49ce-80e3-e73b38f81c4e",
+        "23618777-02df-4b85-9f21-2459d3362c54",
+        "431d1584-d3bc-45ad-a567-80fc761ad3e2",
+        "fadd1b94-3125-4c70-8300-8193ef56fb11",
+        "bed4ab38-3dc9-443d-964a-815c1f0367e3",
+        "d3056d58-7533-4c53-8a90-189ddcd03693",
+        "6b99a548-5d74-4994-a024-772d6b85b047",
+        "2d49ed34-a30e-48b4-9707-d603e488bb6f",
+        "03de7231-49f7-4e37-be3c-56cfe2c11f5b",
+        "c2b3362e-8a9f-4b6b-8e06-2b31173059fa",
+        "b2142b43-8130-474e-97f1-5854558ed987",
+        "ceaeeb71-d7fa-4b3f-8b7d-e94b68fb0eda",
+        "9ab1fdb5-b06c-40d0-ad70-12bbd38bcd88",
+        "4e8c18c9-fce0-4f8b-a3cd-274e88e2c3e9",
+        "c7cb373e-0a15-4afc-8b19-c2fa7de61293",
+        "5e38fab3-df3b-45b4-a1d8-a11ba81b76ec",
+        "22640d58-2477-414d-b659-0944cf7febe8",
+        "0b9ec452-2a32-4d86-a7c9-67210eb9a863",
+        "1921211d-c84f-45b7-bd1e-e470a69cff3d",
+        "8d29b654-be27-4b0e-924d-6db3ca9694b6",
+        "7364944a-c2a2-44fe-b10b-64e63432fb30"
+      ],
+      "settings": {
+      }
+    },
+    "166486257795df232c": {
+      "type": "two-side-images-and-text",
+      "blocks": {
+        "8f108698-74a2-46d4-90ea-aa941d16f3b2": {
+          "type": "columns",
+          "settings": {
+            "name": "Arjun, Thrissur, Kerala",
+            "main_img": "shopify:\/\/shop_images\/hemant01_db7f5da8-75f0-408a-ac98-802f7902d421.jpg",
+            "date": "14 Sep 2020",
+            "rating": 5,
+            "desc": "<p>I never paid attention on my hair and lost quite a lot of them. I think taking traya’s hair loss treatment is the best thing i have done to my hair. Not only did I see the new growth but the thickness and quality has also improved.<\/p>",
+            "used_for": "4 months"
+          }
+        },
+        "21b40d91-3940-4042-8ccd-bd49639041c8": {
+          "type": "columns",
+          "settings": {
+            "name": "Vivek, Mumbai",
+            "main_img": "shopify:\/\/shop_images\/Vivek02_0d946838-732c-416f-8850-957fe0e01db9.png",
+            "date": "10 MAY 2020",
+            "rating": 5,
+            "desc": "<p>The results have been amazing! In just 2 months I’ve seen great improvements. My barber was also impressed.<\/p>",
+            "used_for": "2 Months"
+          }
+        },
+        "52c44513-d45b-4934-9b3a-b306bb102c5a": {
+          "type": "columns",
+          "settings": {
+            "name": "Darpan, Gujarat",
+            "main_img": "shopify:\/\/shop_images\/Darpan02_7bc62d47-15a4-48ea-aea4-c84bf6ea7717.png",
+            "date": "14 Sep 2020",
+            "rating": 5,
+            "desc": "<p>I started to see regrowth from third month and even the patch on my scalp has started to cover. Best service and the best treatment!<\/p>",
+            "used_for": "5 Months"
+          }
+        },
+        "8283a2a7-4a6c-499b-8121-1a14fd91d882": {
+          "type": "columns",
+          "settings": {
+            "name": "Hemant Shah",
+            "main_img": "shopify:\/\/shop_images\/hemant02_22aa36a8-9546-48a2-ba34-0a23cb2a2f49.jpg",
+            "date": "2 Aug 2021",
+            "rating": 5,
+            "desc": "<p>Great service. I loved the fact that you can talk to your hair coach in case of queries. They are truly supportive and help you stay commited on the journey. I never thought I could see new hair growth.<\/p>",
+            "used_for": "4 Months"
+          }
+        },
+        "28fae24f-d153-4e75-bec6-71a5a3bb602f": {
+          "type": "columns",
+          "settings": {
+            "name": "Anupam Thakuria",
+            "main_img": "shopify:\/\/shop_images\/anupam02_1af2b047-8bab-4a70-9d54-55716a82e158.jpg",
+            "date": "24 july 2020",
+            "rating": 5,
+            "desc": "<p>I took the hair assessment and realized that my hair loss was more than just genetic.<br\/><br\/>I went ahead with the recommended treatment plan and could see visible results within just 3 months.<\/p>",
+            "used_for": "5 Months"
+          }
+        },
+        "6689495a-07bf-4e1f-a5a9-baa3c2fa6ad5": {
+          "type": "columns",
+          "settings": {
+            "name": "Pavan",
+            "main_img": "shopify:\/\/shop_images\/pavan02_421470ae-a011-4435-9999-bf534fdce390.jpg",
+            "date": "14 Feb 2021",
+            "rating": 5,
+            "desc": "<p>I am super impressed with Traya's hair loss treatment. Let me start off by saying that all their products are formulated by doctors. Knowing that I have hair experts and doctors monitoring my treatment is really the best part of the experience. Really recommend this.<\/p>",
+            "used_for": "4 Months"
+          }
+        },
+        "a6bbeaa9-72d4-4994-9225-5e1ec892b541": {
+          "type": "columns",
+          "settings": {
+            "name": "Siddharth",
+            "main_img": "shopify:\/\/shop_images\/siddharth02_97633e7f-34d1-4af3-92d7-1ad19c9d6f07.jpg",
+            "date": "4 March 2020",
+            "rating": 5,
+            "desc": "<p>I was losing a lot of hair due to the lockdown and desperate for a solution, that is when a friend recommended Traya.  I gave it a shot and after 4 months of use, I can definitely say that their holistic approach to treating hair loss with both ayurveda and allopathy just works.<\/p>",
+            "used_for": "4 Months"
+          }
+        },
+        "fa80108d-e7d0-46a4-9651-8d8fd84d3304": {
+          "type": "columns",
+          "settings": {
+            "name": "Anonymous",
+            "main_img": "shopify:\/\/shop_images\/anonymous02_78c33f96-f15e-4a4f-aba0-ef6af35f34fb.jpg",
+            "date": "15 Aug 2021",
+            "rating": 5,
+            "desc": "<p>Results in just 5 months, couldn't believe my eyes when I saw hair growth on my head. Anyone with hair problems should get on their plan. It works like magic.<\/p>",
+            "used_for": "5 Months"
+          }
+        },
+        "02d096c5-f95f-46b7-865d-b7293159a464": {
+          "type": "columns",
+          "settings": {
+            "name": "Akash Agarwal",
+            "main_img": "shopify:\/\/shop_images\/akash02_7b1f646a-72ed-4ea2-9738-965ef1dab3d5.jpg",
+            "date": "2 Feb 2021",
+            "rating": 5,
+            "desc": "<p>I came to Traya with a bald patch and I did not expect any drastic results. My motive was to stop further hair loss, after dedicatedly following the plan and one can tell how it has changed my hair. I have baby hair all over my scalp and thicker growth. This is a dream, thank you guys you are the best!<\/p>",
+            "used_for": "8 Months"
+          }
+        },
+        "2bc600f8-e2a4-479b-8879-3edf6e958c57": {
+          "type": "columns",
+          "settings": {
+            "name": "Shivyogi Hiremath",
+            "main_img": "shopify:\/\/shop_images\/shivyogi02_263647ba-d2d0-45a1-a8c0-1d9204d4b2ea.jpg",
+            "date": "20 Aug 2021",
+            "rating": 5,
+            "desc": "<p>The treatment considered of proper diet, hair care products and supplements supporting your hair growth. I followed for 3-4 months and the results were amazing.<\/p>",
+            "used_for": "4 Months"
+          }
+        }
+      },
+      "block_order": [
+        "8f108698-74a2-46d4-90ea-aa941d16f3b2",
+        "21b40d91-3940-4042-8ccd-bd49639041c8",
+        "52c44513-d45b-4934-9b3a-b306bb102c5a",
+        "8283a2a7-4a6c-499b-8121-1a14fd91d882",
+        "28fae24f-d153-4e75-bec6-71a5a3bb602f",
+        "6689495a-07bf-4e1f-a5a9-baa3c2fa6ad5",
+        "a6bbeaa9-72d4-4994-9225-5e1ec892b541",
+        "fa80108d-e7d0-46a4-9651-8d8fd84d3304",
+        "02d096c5-f95f-46b7-865d-b7293159a464",
+        "2bc600f8-e2a4-479b-8879-3edf6e958c57"
+      ],
+      "settings": {
+        "regimen_heading1": "TRAYA 2X2 REGIMEN",
+        "image_section1": "shopify:\/\/shop_images\/regimen_578x_0aadc91c-612c-4702-8e03-2599be3276be.webp",
+        "text_content1": "2min",
+        "text_content2": "twice a day",
+        "paragraphs1": "Follow a simple daily routine. Best results when used for 5 months.",
+        "button_texts1": "GET A HAIR DIAGNOSIS",
+        "button_links1": "",
+        "regimen_heading2": "TRAYA’S HOLISTIC CURE FOR HAIRLOSS",
+        "sub_heading": "",
+        "sub_heading_title2": "",
+        "plus_icon_text": "",
+        "text_discripion": "",
+        "button_text1": "Testimonials",
+        "mobile_button_link": "",
+        "button_link1": "shopify:\/\/pages\/reviews",
+        "mobile_button_text": ""
+      }
+    }
+  },
+  "order": [
+    "16641659571489de99",
+    "main",
+    "1663689848dbd4a98e",
+    "166486257795df232c"
+  ]
+}

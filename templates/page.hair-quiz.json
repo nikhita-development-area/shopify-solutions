@@ -1,0 +1,171 @@
+{
+  "sections": {
+    "main": {
+      "type": "hair-quiz",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Mask_group.png",
+        "mob_image": "shopify:\/\/shop_images\/Mask_group_1.png",
+        "content": "<h3>Why take the hair quiz?<\/h3>\n<p>When we tell you how many treatments for hair loss, hair damage, and other hair and scalp issues fail to work because they are taken without understanding specific hair needs, it will astonish you. To solve this dilemma of people not finding results despite trying every hair care routine, we came up with an idea that could change the game. We found that the key was the diagnosis. You might use the best shampoos and products, but if they are simply not meant for your specific hair needs, they will not help. Hence, our experts and doctors started building a tool that could help with an in-depth understanding of the actual cause of the problem, which would in turn lead to the best-suited solution. Therefore, taking this quiz on hair care is an easy and quick way to diagnose the type and triggers of your hair\/scalp concerns, which will help you get better recommendations and treatments; so that you keep moving steadily towards thicker, longer, and healthier locks.<\/p>\n<h3>How do we review your hair online?<\/h3>\n<p>Our online hair assessment quiz has been carefully devised by experienced doctors and experts, who have curated questions to understand your hair and scalp type, health conditions, family history, age, diet, and lifestyle. Using the answers to these questions, they analyse the nature and causes of your hair condition and recommend a treatment that is specifically tailored to your hair's needs. This comprehensive assessment allows for the enhancement of the results and helps you get the best out of your hair.<\/p>\n<h3>How did we build this quiz?<\/h3>\n<p>After realizing that diagnosis was the key to unravelling the root causes behind hair concerns, we decided to develop a tool that could help people with the same. Hence, when others were busy selling shampoos and oils, we were on our quest to find a scientific solution to this fairly common problem. We kept digging to figure out the root and this led us to the crux of the analysis. Hence, with the help of doctors and experts from the field, we brought these analytical techniques to reality, in the form of an online quiz. Since the goal is being able to help more people understand their hair and hair problems, the Hair Test is conveniently accessible online and is absolutely free.<\/p>\n<h3>Who was involved in building this quiz?<\/h3>\n<p>Cracking the code to healthy hair is not easy, and it’s definitely not a layman's cup of tea. That’s why we rely on experts from the field. The Hair Quiz is carefully curated with the help of doctors and qualified professionals from the fields of Dermatology, Ayurveda, and Nutrition. Our dermatologists and trichologists have ensured that the hair quiz contains questions that help assess all the anatomical and genetic aspects of the hair and the scalp, while Ayurvedic doctors develop questions that help examine internal imbalances or triggers that might contribute to compromised hair health. Nutritionists and dieticians focus on enquiring about deficiencies and nutritional limitations that might hinder healthy hair growth. Together, they also cover the remaining details to complete the analysis. This combination of 3 science expertise gives a detailed understanding of internal as well as external factors of hair health.<\/p>\n<h3>Who should take this quiz?<\/h3>\n<p>For starters, if you are facing hair and scalp issues like hair thinning, excessive hair fall, receding hairline, broadening partition, dandruff, itchy scalp, bald spots or patches, this hair care quiz will definitely help you understand the situation better, and will recommend best-suited products for you. After you order the recommended products, a team of doctors would approve your case and also recommend the dosage through a digital prescription along with a diet plan. But that’s not it, because the hair quiz is not just for people with specific hair and scalp conditions. It is for anyone who aspires to have a better quality of hair that is healthy inside out.<\/p>\n<h3>What kind of science do we use to determine the results?<\/h3>\n<p>Well, it’s not just one, but a combination of 3 sciences. Because one of the main reasons why people facing hair issues don’t see results is due to their one-dimensional approach. Combining Dermatology, Ayurveda, and Nutrition creates a powerful synergistic fusion that covers all the fundamentals of diagnosing and treating hair problems.In a nutshell, an in-depth analysis can provide insights into what your hair actually needs and the probable cause behind why it behaves the way it does. Hence, check out Traya's FREE hair test, a curated list of quizzes on hair care that can help you better understand your hair so that you can get the best products and treatments. Because good products and healthy lifestyle practices are essential for strong and beautiful hair, but so is identifying hair's specific requirements.<\/p><p><\/p>",
+        "content2": "<div class=\"faq-content\">\n<h2>FAQs<\/h2>\n<h3>What hair product should I use?<\/h3>\n<p>Not all hair types are the same, nor are all hair concerns. To understand what hair products one should use, it is essential to first analyse the texture, type, metabolism, and other underlying factors that impact hair and scalp health. This can be done with the help of the quiz, which diagnoses your hair and scalp condition and recommends the best-suited products accordingly.<\/p>\n<h3>Why should I take this hair quiz?<\/h3>\n<p>The Hair Quiz essentially helps you understand and identify the factors and triggers that impact your hair quality and helps you choose the best products as well as solutions according to them. This ensures that your hair stays in the best possible health, and is not facing the wrath of unsuitable ingredients or treatments.<\/p>\n<h3>What shampoo should I use?<\/h3>\n<p>A suitable shampoo can help you clear up the buildup, dirt, excess sebum, and sweat from your hair. However, not all shampoos suit all hair and scalp types. In fact, some shampoos with harsh chemicals and allergens can cause dryness and irritation. Hence, the shampoo that you should use should be selected based on your hair type, allergies, scalp conditions, and overall suitability. Taking the hair type quiz can help you analyse these factors and will recommend you the most suitable shampoo that will support your hair quality.<\/p>\n<\/div>"
+      }
+    },
+    "e49b234e-3c19-4f42-9a2d-37c1e2a83c56": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16520015052978__e49b234e-3c19-4f42-9a2d-37c1e2a83c56-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Diagnose the root cause of your hair fall | Traya Hair Quiz",
+            "heading_size": "h2"
+          }
+        },
+        "template--16520015052978__e49b234e-3c19-4f42-9a2d-37c1e2a83c56-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Traya, we recognize the impact of hair fall on your confidence and wellbeing. Our Traya Hair Quiz is crafted to identify the root cause of your hair fall. Based on the analysis you receive a doctor-recommended, personalized treatment plan. This plan is not just a one-size-fits-all solution but a targeted approach to tackle your unique hair fall issues.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--16520015052978__e49b234e-3c19-4f42-9a2d-37c1e2a83c56-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "TAKE THE HAIR QUIZ",
+            "button_link": "https:\/\/form.traya.health\/questions?cohort=1&location=StartDiagnosisPage"
+          }
+        }
+      },
+      "block_order": [
+        "template--16520015052978__e49b234e-3c19-4f42-9a2d-37c1e2a83c56-heading-1",
+        "template--16520015052978__e49b234e-3c19-4f42-9a2d-37c1e2a83c56-text-1",
+        "template--16520015052978__e49b234e-3c19-4f42-9a2d-37c1e2a83c56-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_26.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "learn_hair_quiz_7EmLkw": {
+      "type": "learn-hair-quiz",
+      "blocks": {
+        "text_z6apKj": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hair-quiz1.png",
+            "para": "Your Diagnosis and Stage",
+            "content": "There are multiple types of hair loss but what is yours? Know by giving Traya’s Hair Quiz. We tell you your diagnosis, your stage stating how far you are from your ideal hair growth and if we can help you! Mind you- Traya only provides a solution if we can help you. If not, we’ll tell you what to do next!"
+          }
+        },
+        "text_ACX8UU": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group26_1.webp",
+            "para": "The reason behind your Hair Problem",
+            "content": "Is it stress, nutritional deficiency, hormones or just genetics that is causing your hair fall? Or Is it something else altogether? The hair test will tell you the exact reasons behind your hair problem and it’s not always your genes!"
+          }
+        },
+        "text_mAmMLY": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DSC09205_2_1_ec67c916-148d-4ce1-9042-ba67093cabb4.webp",
+            "para": "We’ll give you a personalised Solution",
+            "content": "Telling you the reason and diagnosis isn’t enough if we don’t tell you how to resolve your issue! Traya creates a doctor-recommended, personalised treatment plan based on your hair quiz. We don’t stop there. Once you buy the plan, we also provide you support by our doctor-trained hair coaches who guide you throughout your journey!"
+          }
+        }
+      },
+      "block_order": [
+        "text_z6apKj",
+        "text_ACX8UU",
+        "text_mAmMLY"
+      ],
+      "settings": {
+        "Section_title": "Here is what the HAIR QUIZ will tell you!",
+        "Sub_title": "From your stage to reason to the solution, your hair quiz tells you everything   you need to have to start with your hair transformation."
+      }
+    },
+    "faq_hair_doctors_8VGXKi": {
+      "type": "faq-hair-doctors",
+      "blocks": {
+        "faq_dFpKp3": {
+          "type": "faq",
+          "settings": {
+            "ques": "How is Traya treatment personalised?",
+            "ans": "<p>Traya personalizes treatment plans by analysing your hair quiz results and looking at your hair loss root causes. We consider factors including your hair loss stage, type of hair loss, the internal and external reason\/s, your age, and your medical history like Thyroid or PCOS while curating this kit. This personalized approach ensures that the treatment is tailored to the root causes of your hair loss and delivers optimal results. <\/p>"
+          }
+        },
+        "faq_PGaWYQ": {
+          "type": "faq",
+          "settings": {
+            "ques": "How has the hair quiz been created?",
+            "ans": "<p>The hair quiz has been co-created with doctors and medical professionals using advanced AI technology. It analyses various factors, including your root cause\/s, age, hair loss stage, lifestyle, and medical history, to determine the cause of hair fall and recommend personalised treatments.  <\/p>"
+          }
+        },
+        "faq_nbXxFU": {
+          "type": "faq",
+          "settings": {
+            "ques": "What inputs are taken into consideration on the hair quiz?",
+            "ans": "<p>The Traya hair quiz comprehensively analyzes various factors, including your age, hair loss stage, lifestyle, medical history & more to determine the underlying reasons for hair loss and offer personalized treatment recommendations. It includes questions about gut health, energy levels, nutritional deficiencies, stress levels, etc providing a holistic understanding of your health. Additionally, it considers factors like pregnancy and menopause for females to tailor treatments to your current situation. <\/p><p>Furthermore, a scalp picture is taken and examined as part of the diagnosis process, ensuring a comprehensive assessment of your hair and scalp health.<\/p>"
+          }
+        },
+        "faq_ftUH79": {
+          "type": "faq",
+          "settings": {
+            "ques": "How does Traya diagnose my hair problems online?",
+            "ans": "<p>Traya's online hair diagnosis is doctor-backed and hassle-free. It captures your health details and a clear scalp photo to assess the pattern and extent of hair loss, eliminating the need for physical tests. This process provides reliable insights for treatment recommendations.<\/p>"
+          }
+        },
+        "faq_Q9XF9m": {
+          "type": "faq",
+          "settings": {
+            "ques": "Will Traya's treatment work for me?",
+            "ans": "<p>The only way to find out if Traya's treatment will work for you is by taking the hair quiz. If a plan is recommended to you, then the answer is yes. We treat every condition except Alopecia Areata and people in stage 6. For everyone else, Traya's treatment will work if you stay regular with it. Consistency is key here. If you still don't get results after following the plan, we offer a 100% money-back guarantee. So take the hair quiz and start with the treatment plan if haven't already.<\/p>"
+          }
+        },
+        "faq_87HmNk": {
+          "type": "faq",
+          "settings": {
+            "ques": "Has Traya seen success with Genetic hair loss?",
+            "ans": "<p>With Traya, there is hope for managing genetic hair loss, especially when detected early. 93% of our customers have experienced positive results with our holistic treatment approach. To discover how Traya can assist you, take our free hair quiz to identify the root causes of your hair loss <a href=\"https:\/\/form.traya.health\/questions?cohort=1&location=StartDiagnosisPage&page=hair-quiz\" title=\"https:\/\/form.traya.health\/questions?cohort=1&location=StartDiagnosisPage&page=hair-quiz\">Begin the quiz<\/a> .<\/p>"
+          }
+        },
+        "faq_44EJK8": {
+          "type": "faq",
+          "settings": {
+            "ques": "What is the expected duration of my treatment?",
+            "ans": "<p>Typically, people in the initial stages of hair fall (stages 1 and 2) start to see results in 5-6 months. But several factors determine the actual treatment duration which include your hair loss stage, age, root causes, underlying health problems and the type of hair loss you're experiencing.<\/p><p>Traya's treatment happens in 3 phases: <\/p><p>1. In the first phase, you will notice early signs of improvement in the root causes- including digestion, sleep quality, gut health, energy levels, etc.<\/p><p>2. In the second phase, we start to work on improving your scalp and follicle health which will reduce your hair fall<\/p><p>3. In the third phase, you will start to notice baby hair growth. <\/p><p>To find out how long it will take for your treatment, check your report after taking the hair quiz, or log in to your profile if you are an existing customer.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_dFpKp3",
+        "faq_PGaWYQ",
+        "faq_nbXxFU",
+        "faq_ftUH79",
+        "faq_Q9XF9m",
+        "faq_87HmNk",
+        "faq_44EJK8"
+      ],
+      "settings": {
+        "heading": "FAQs",
+        "show_faq": 5,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "e49b234e-3c19-4f42-9a2d-37c1e2a83c56",
+    "learn_hair_quiz_7EmLkw",
+    "faq_hair_doctors_8VGXKi"
+  ]
+}

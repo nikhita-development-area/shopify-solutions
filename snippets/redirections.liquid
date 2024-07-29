@@ -1,0 +1,101 @@
+{% comment %}
+{%- if request.path contains '/blogs/hair-care/tagged'
+  or request.path contains 'blogs/5-day-detox-challenge-for-hair-growth'
+  or request.path
+    contains '/blogs/everything-you-need-to-know-about-minoxidil-shedding-excess-hair-fall-after-applying-minoxidil'
+  or request.path contains '/blogs/how-to-prevent-white-hair-delay-greying-and-hair-loss-due-to-scalp-ageing'
+  or request.path contains '/blogs/heres-how-your-traya-hair-loss-treatment-is-curated'
+  or request.path contains '/blogs/a-case-study-of-treating-male-pattern-baldness-with-a-holistic-treatment'
+-%}{% endif %}
+{% endcomment %}
+  {%- if request.path contains '/collections/products' -%}
+    <meta http-equiv="refresh" content="0; url=/collections/all-products">
+  <script>
+    window.location.href="/collections/all-products";
+  </script>
+<!--   <meta http-equiv="refresh" content="0; url=/blogs/hair-care">
+  <script>
+    window.location.href="/blogs/hair-care";
+  </script> -->
+{%- elsif request.path contains '/collections/products' -%}
+  <meta http-equiv="refresh" content="0; url=/collections/all-products">
+  <script>
+    window.location.href="/collections/all-products";
+  </script>
+{%- elsif template == 'list-collections' -%}
+  <meta http-equiv="refresh" content="0; url=/collections/all-products">
+  <script>
+    window.location.href="/collections/all-products";
+  </script>
+{%- endif -%}
+{%- if request.path contains '/blogs/hair-care/brahmi-for-hair' -%}
+  <meta http-equiv="refresh" content="0; url=/blogs/hair-care/bacopa-monnieri">
+  <script>
+    window.location.href="/blogs/hair-care/bacopa-monnieri";
+  </script>
+{%- endif -%}
+{%- if request.path contains '/collections/products/products/hair-vitamins' -%}
+  <meta http-equiv="refresh" content="0; url=/products/hair-vitamins">
+  <script>
+    window.location.href="/products/hair-vitamins";
+  </script>
+{%- endif -%}
+{%- if request.path contains '/blogs/hair-care/products/pcos-santulan-for-pcos-and-hormone-related-hair-loss' -%}
+  <meta http-equiv="refresh" content="0; url=/products/pcos-santulan-for-pcos-and-hormone-related-hair-loss">
+  <script>
+    window.location.href="/products/pcos-santulan-for-pcos-and-hormone-related-hair-loss";
+  </script>
+{%- endif -%}
+{% if request.path contains '/policies/refund-policy' %}
+  <script>
+    window.location.href = '/pages/money-back-policy'
+  </script>
+{% endif %}
+{% if request.path contains '/blogs/hair-care/%E0%A4%95%E0%A4%AE-%E0%A4%89%E0%A4%AE%E0%A5%8D%E0%A4%B0-%E0%A4%AE%E0%A5%87%E0%A4%82-%E0%A4%AC%E0%A4%BE%E0%A4%B2-%E0%A4%9D%E0%A4%A1%E0%A4%BC%E0%A4%A8%E0%A5%87-%E0%A4%95%E0%A5%87-%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A4%A3-%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%A7%E0%A4%BE%E0%A4%A8-%E0%A4%94%E0%A4%B0-%E0%A4%AC%E0%A4%9A%E0%A4%BE%E0%A4%B5' %}
+  <script>
+    window.location.href = '/blogs/hair-care/kam-umar-me-baal-jhadne-ke-karan'
+  </script>
+{% endif %}
+{% if request.path contains '/blogs/hair-care/%E0%A4%B5%E0%A4%BF%E0%A4%9F%E0%A4%BE%E0%A4%AE%E0%A4%BF%E0%A4%A8-%E0%A4%95%E0%A5%80-%E0%A4%95%E0%A4%AE%E0%A5%80-%E0%A4%B8%E0%A5%87-%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A5%87-%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%87-%E0%A4%B0%E0%A5%8B%E0%A4%97' %}
+  <script>
+    window.location.href = '/blogs/hair-care/vitamin-ki-kami-se-hone-wale-rog'
+  </script>
+{% endif %}
+{% if request.path contains '/blogs/hair-care/%E0%A4%96%E0%A4%9C%E0%A5%82%E0%A4%B0-%E0%A4%96%E0%A4%BE%E0%A4%A8%E0%A5%87-%E0%A4%95%E0%A5%87-%E0%A4%AB%E0%A4%BE%E0%A4%AF%E0%A4%A6%E0%A5%87-%E0%A4%94%E0%A4%B0-%E0%A4%A8%E0%A5%81%E0%A4%95%E0%A4%B8%E0%A4%BE%E0%A4%A8-khajur-khane-ke-fayde' %}
+  <script>
+    window.location.href = '/blogs/hair-care/khajur-khane-ke-fayde-aur-nuksaan'
+  </script>
+{% endif %}
+{% if request.path contains '/blogs/hair-care/%E0%A4%93%E0%A4%AE%E0%A5%87%E0%A4%97%E0%A4%BE-3-%E0%A4%95%E0%A5%88%E0%A4%AA%E0%A5%8D%E0%A4%B8%E0%A5%82%E0%A4%B2-%E0%A4%96%E0%A4%BE%E0%A4%A8%E0%A5%87-%E0%A4%95%E0%A5%87-%E0%A4%AB%E0%A4%BE%E0%A4%AF%E0%A4%A6%E0%A5%87-fish-oil-capsules-benefits-in-hindi' %}
+  <script>
+    window.location.href = '/blogs/hair-care/omega-3-capsule-khaane-ke-fayde-fish-oil-capsules-benefits-in-hindi'
+  </script>
+{% endif %}
+{% if request.path contains '/blogs/hair-care/%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A5%81%E0%A4%B7%E0%A5%8B%E0%A4%82-%E0%A4%95%E0%A5%87-%E0%A4%B2%E0%A4%BF%E0%A4%8F-%E0%A4%85%E0%A4%B2%E0%A4%B8%E0%A5%80-%E0%A4%95%E0%A5%87-%E0%A4%AB%E0%A4%BE%E0%A4%AF%E0%A4%A6%E0%A5%87-%E0%A4%94%E0%A4%B0-%E0%A4%A8%E0%A5%81%E0%A4%95%E0%A4%B8%E0%A4%BE%E0%A4%A8-flaxseed-benefits-for-men-in-hindi' %}
+  <script>
+    window.location.href = '/blogs/hair-care/purushon-ke-liye-alsi-ke-fayde-flaxseed-benefits-for-men-in-hindi'
+  </script>
+{% endif %}
+{% if request.path == '/pages/press' %}
+  <script>
+    window.location.href = '/pages/press-release'
+  </script>
+{% endif %}
+{% if request.path contains '/blogs/hair-care/best-hair-treatment-in-india' %}
+  <script>
+    window.location.href = '/pages/best-hair-treatment-in-india'
+  </script>
+{% endif %}
+
+
+{% if request.path contains '/blogs/hair-care/shatavari-plant' %}
+  <script>
+    window.location.href = 'https://traya.health/blogs/hair-care/शतावरी-के-फायदे-महिलाओं-के-लिए-shatavari-benefits-in-hindi'
+  </script>
+{% endif %}
+
+{%- if request.path == '/collections/all' -%}
+  <script>
+    window.location.href="/collections/all-products";
+  </script>
+{%- endif -%}

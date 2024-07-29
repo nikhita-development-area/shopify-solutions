@@ -1,0 +1,159 @@
+<div class="container text-center pt-5 pb-5">
+    <h3 class="male_foundation_heading mb-3">
+      {{ section.settings.headings1 }}
+    </h3>
+    <p class="male_foundation_p mt-4">
+      {{ section.settings.male_foundation_p }}
+    </p><br><br>
+    <div class="row mobile_image_card_slider">
+      {% for block in section.blocks %}
+        <div class="col-md-2 col-6 col-lg-2 mb-4 mb-lg-0 text-center">
+          <div class="image_card">
+            {% if block.settings.logo_image %}
+              <img class="lazyload mb-4 d-block" data-src="{{ block.settings.logo_image | img_url:'x90'}}"/>
+            {% endif %}
+          </div>
+          <div class="content">
+            <p class="image_card_heading">
+              {{ block.settings.image_heading }}
+            </p>
+            <p class="image_card_paragraph">
+              {{ block.settings.image_paragraph }}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+{% schema %}
+  {
+    "name": "foundation hair growth",
+    "settings":[
+      {
+        "type": "text",
+        "id": "headings1",
+        "label": "headings1"
+      },
+      {
+        "type": "text",
+        "id": "male_foundation_p",
+        "label": "pragraph"
+      }
+    ],
+      "blocks":[
+        {
+          "type": "Head",
+          "name": "Strong-Hair-growth",
+          "settings":[
+         {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Select Image"
+        },
+       {
+          "type": "text",
+          "id": "image_heading",
+          "label": "Image Heading"
+        },
+        {
+          "type": "text",
+          "id": "image_paragraph",
+          "label": "Image Description"
+        }
+      ]
+    }
+  ],  
+  "presets":[
+      {
+        "name":"Foundation Hair Growth",
+        "category":"custom"
+      }
+  ]
+}
+{% endschema %}
+
+<style>
+  .male_foundation_heading{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -.22px;
+    color: #414042;
+  }
+  .male_foundation_p{
+    font-size:17px;
+    color: #414042;
+  }
+  .image_card_heading{
+    font-size:15px;
+    font-weight:bold;
+    margin-bottom:0.5rem!important;
+  }
+  .image_card_paragraph{
+    font-size:18px;
+  }
+  .image_card img {
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: 767.98px) and (min-width: 576px) {
+   .male_foundation_heading{
+    font-size: 32px;
+  }
+  .male_foundation_p{
+    font-size: 13px;
+    line-height: 25px;
+    color: #414042;
+  }
+  .image_card_heading{
+    font-size:15px;
+    font-weight:bold;
+    margin-bottom:0.5rem!important;
+  }
+  .image_card_paragraph{
+    font-size:18px;
+  }
+  }
+ 
+  @media only screen and (max-width: 575.98px){
+  .male_foundation_heading{
+    font-size:28px;
+    font-weight:700;
+    line-height:1.25;
+    letter-spacing: -.22px;
+    color: #414042;
+  }
+  .male_foundation_p{
+    font-size:13px;
+  }
+  .image_card_heading{
+    font-size:15px;
+    font-weight:bold;
+    margin-bottom:0.5rem!important;
+  }
+  .image_card_paragraph{
+    font-size:13px;
+  }
+}
+</style>
+      
+<script>
+    $(document).ready(function(){
+    $('.mobile_image_card_slider').slick({
+          mobileFirst: true,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          autoplay: false,
+          autoplaySpeed: 2000,
+          arrows: false,
+          dots:false,
+          adaptiveHeight: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: "unslick"
+            }
+          ]
+        });
+});
+</script>

@@ -1,0 +1,96 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "647eb77d-b154-4d94-93ec-d9d9652ad9e7": {
+          "type": "text",
+          "settings": {
+            "options_name": "Hair"
+          }
+        },
+        "d9e3ea56-cb6f-47e0-b711-21709ea1aa53": {
+          "type": "text",
+          "settings": {
+            "options_name": "Dandruff"
+          }
+        },
+        "9a05b10f-3e86-4e1c-93d6-84eed82a39a5": {
+          "type": "text",
+          "settings": {
+            "options_name": "Gut"
+          }
+        },
+        "9f4753b2-4376-48e1-bbfd-663542d4f6e4": {
+          "type": "text",
+          "settings": {
+            "options_name": "Stress"
+          }
+        },
+        "56fff7d8-9157-4901-bb4a-ee7e72eb5b04": {
+          "type": "text",
+          "settings": {
+            "options_name": "PCOS "
+          }
+        },
+        "42e8b57a-820e-4b97-9c59-edef53c9e899": {
+          "type": "text",
+          "settings": {
+            "options_name": "Hormone"
+          }
+        },
+        "d163ecc3-806f-4631-a879-d00d7283ac5d": {
+          "type": "text",
+          "settings": {
+            "options_name": "Thyroid"
+          }
+        }
+      },
+      "block_order": [
+        "647eb77d-b154-4d94-93ec-d9d9652ad9e7",
+        "d9e3ea56-cb6f-47e0-b711-21709ea1aa53",
+        "9a05b10f-3e86-4e1c-93d6-84eed82a39a5",
+        "9f4753b2-4376-48e1-bbfd-663542d4f6e4",
+        "56fff7d8-9157-4901-bb4a-ee7e72eb5b04",
+        "42e8b57a-820e-4b97-9c59-edef53c9e899",
+        "d163ecc3-806f-4631-a879-d00d7283ac5d"
+      ],
+      "settings": {
+        "collection_image": "shopify:\/\/shop_images\/Frame_1000007757_519bbf84-b014-412f-acbd-05a1a801bde6.webp",
+        "collection_name": "Our Treatment Plans",
+        "products_per_page": 24,
+        "columns_desktop": 3,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "61c49b54-9f4d-4f26-88f0-072aca0605cb": {
+      "type": "products-seo-keywords",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "61c49b54-9f4d-4f26-88f0-072aca0605cb"
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "doctor_details_fiA3X3": {
+      "type": "doctor-details",
+      "blocks": {
+        "text_Bkz88X": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Sonal",
+            "user_content": "Hair transplant ke liye Dr. ko choose karna mera best decision tha, results dekh kar khush hu."
+          }
+        },
+        "text_UY6bPa": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "M",
+            "user_name": "Manoj",
+            "user_content": "Dr. ki advice ne meri lifestyle mein positive change laya hai, skin health mein bhi improvement hua."
+          }
+        },
+        "text_c74L3A": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "D",
+            "user_name": "Disha",
+            "user_content": "Dr. Aakanksha solved my acne problems and she is very understanding, highly recomended."
+          }
+        }
+      },
+      "block_order": [
+        "text_Bkz88X",
+        "text_UY6bPa",
+        "text_c74L3A"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Dr_Aakansha.webp",
+        "doctor_name": "Dr. Aakanksha Gupta",
+        "specialization": "MBBS, MD - Dermatology , Venereology & Leprosy Dermatologist, Cosmetologist, Trichologist, Pediatric Dermatologist | 5 years",
+        "education": "MBBS, MD (Dermatology)",
+        "registration_no": "2019\/04\/2003",
+        "ratings": "4.5\/5",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "Dr. Aakanksha Gupta is a Senior Resident Doctor at Sion Hospital and has been the Chief Consultant Dermatologist at her own clinic, Dr. Aakanksha Gupta's Skin Clinic in Mumbai. She also serves as a Consultant Dermatologist at Kayakalp Clinics in Mumbai. Dr. Gupta specialises in dermatosurgery, with a fellowship scheduled for 2024."
+      }
+    },
+    "qa_accordion_4hahyW": {
+      "type": "QA-accordion",
+      "blocks": {
+        "faq_XUexKQ": {
+          "type": "faq",
+          "settings": {
+            "Question": "What is dermatosurgery?",
+            "Answer": "Dermatosurgery is the surgery of damaged skin after detailed analysis."
+          }
+        },
+        "faq_TfhCna": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do people visit Dr Aakanksha Gupta?",
+            "Answer": "Patients visit Dr. Aakanksha Gupta for diagnosis and treatment of hair and skin-related issues"
+          }
+        },
+        "faq_rzb6gn": {
+          "type": "faq",
+          "settings": {
+            "Question": "What does  Dr Aakanksha Gupta Specialize in?",
+            "Answer": "Dr. Gupta specializes in dermatosurgery and is set to pursue a fellowship in this field in 2024."
+          }
+        }
+      },
+      "block_order": [
+        "faq_XUexKQ",
+        "faq_TfhCna",
+        "faq_rzb6gn"
+      ],
+      "settings": {
+        "Accordiontitle1": "",
+        "Accordiontitle2": ""
+      }
+    },
+    "doctor_slide_NQN9EE": {
+      "type": "doctor-slide",
+      "blocks": {
+        "text_adaC7P": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Siddhi Sonawane",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Siddhi_69e310aa-8b4d-41e9-b58a-e3b338cf20f7.png",
+            "specialist": "DERMATOLOGIST | COSMETOLOGIST,",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_09a07296-d27a-4096-8eb3-2348712bc827.png",
+            "PageUrl": "shopify:\/\/pages\/siddhi-sonawane"
+          }
+        },
+        "text_RNc43Q": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Sangeeta Menon",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Sangeeta_Menon-1_compact_db3ee615-d365-4859-8e1c-91fa4ccc9466.png",
+            "specialist": "DIETICIAN | NUTRITIONIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/sangeeta-menon"
+          }
+        },
+        "text_94nfdf": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Harish Balaji. R",
+            "doctorImage": "shopify:\/\/shop_images\/dr.harish_compact_8705e678-693a-4c80-a8e2-9e9580a997b3.png",
+            "specialist": "DERMATOLOGIST | MD | AESTHETIC SURGEON,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-harish"
+          }
+        }
+      },
+      "block_order": [
+        "text_adaC7P",
+        "text_RNc43Q",
+        "text_94nfdf"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "doctor_details_fiA3X3",
+    "qa_accordion_4hahyW",
+    "doctor_slide_NQN9EE"
+  ]
+}

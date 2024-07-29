@@ -1,0 +1,78 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<div class="page-width my-md-5 my-4 {{ page__hndl }}">
+  <div class="d-flex flex-wrap justify-content-center safe-and-science">
+    <div class="col-md-2 col-3 cstm_new_badge">
+      <img
+        class="lazyload m-auto d-block"
+        data-src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/5_9257cd3d-50bf-470b-87da-d6080aa70181_80x.png"
+      >
+      <p style="text-align: center;">NON TOXIC</p>
+    </div>
+    <div class="col-md-2 col-3 cstm_new_badge">
+      <img
+        class="lazyload m-auto d-block"
+        data-src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/4_2c5d63a7-3040-46db-a913-8d420d19cca6_80x.png"
+      >
+      <p style="text-align: center;">MADE SAFE</p>
+    </div>
+    <div class="col-md-2 col-3 cstm_new_badge">
+      <img
+        class="lazyload m-auto d-block"
+        data-src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/1_872b82a1-a841-41af-baf8-9af8aa2f07fa_80x.png"
+      >
+      <p style="text-align: center;">ALLERGY FREE</p>
+    </div>
+    <div class="col-md-2 col-3 cstm_new_badge">
+      <img
+        class="lazyload m-auto d-block"
+        data-src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/2_2419fbfa-8ebe-4686-992c-19e5b6c58ec5_80x.png"
+      >
+      <p style="text-align: center;">CRUELTY FREE</p>
+    </div>
+    <div class="col-md-2 col-3 cstm_new_badge">
+      <img
+        class="lazyload m-auto d-block"
+        data-src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/6_a75f45d9-d174-4ffb-9e00-7c7f2bdd4135_80x.png"
+      >
+      <p style="text-align: center;">VEGAN FRIENDLY</p>
+    </div>
+    <div class="col-md-2 col-3 cstm_new_badge">
+      <img
+        class="lazyload m-auto d-block"
+        data-src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/3_3b568eb0-f275-4250-9229-a5729996e502_80x.png"
+      >
+      <p style="text-align: center;">DOCTOR RECOMMENDED</p>
+    </div>
+  </div>
+<!--   <div class="text-center">
+    <a
+      id="{% if page.handle == 'pcos' %}female-hair-test-button6 {% elsif page.handle == 'post-pregnancy' %}female-hair-test-button6 {% elsif page.handle == 'menopause' %}female-hair-test-button6 {% elsif page.handle == 'thyroid' %}female-hair-test-button6 {% else %}femalev1-hair-test-button4 {% endif %}"
+      href="https://form.traya.health/female?cohort=1&location=TrayaJourney&page={{ page__hndl }}"
+      class="start-journey-btn btn btn-dark mt-3 shadow hair-form-actn-link f-hair-test-btn position-relative"
+      >Take The Hair Test <span>&trade;</span></a
+    >
+  </div> -->
+</div>
+
+{% style %}
+  @media only screen and (max-width: 767.98px) {
+    .cstm_new_badge img {
+      width: 55px;
+    }
+  }
+  @media only screen and (max-width: 575.98px) {
+    .safe-and-science {
+      row-gap: 25px;
+    }
+    .cstm_new_badge p {
+      font-size: 10px;
+    }
+  }
+{% endstyle %}

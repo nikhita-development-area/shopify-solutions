@@ -1,0 +1,90 @@
+<!-- Sections -> female-safety.liquid -->
+
+<div class="container female-safety" page_type="normal">
+  <h2 class="text-center font-weight-bold l-0 main-heading" style="color: #939393;">{{ section.settings.safety-head1 }}</h2>
+  <h2 class="text-center font-weight-bold l-0 main-heading">{{ section.settings.safety-head2 }}</h2>
+  
+  <div class="female-safety-img-txt mt-5">
+    {% for block in section.blocks %}
+      <div class="female-safety-img position-relative mx-2">
+        <div><img src="{{ block.settings.safety-img | img_url: 'master' }}" height="auto" width="auto" alt="Safety Images" /></div>
+        <div class="position-absolute female-safety-txt">
+          <p>{{ block.settings.safety-txt }}</p>
+        </div> 
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .female-safety .female-safety-img {border-radius: 20px;}
+   .female-safety-img .female-safety-txt {left: 20px; bottom: 10px; font-size: 32px; font-weight: 600; width: 199px; line-height: 40px;}
+  
+  @media(max-width: 767.98px) {
+    .female-safety .female-safety-img .female-safety-txt {font-size: 20px; width: 159px; line-height: 30px;}
+  }
+</style>
+
+<script>
+  $(document).ready(function() {
+    $('.female-safety-img-txt').slick({
+      autoplay: true,
+      autoplaySpeed: 3000,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            centerMode: true,
+            centerPadding: '60px',
+            dots: true
+          }
+        }
+      ]
+    });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Female Safety",
+    "tag": "section",
+    "class": "female-safety",
+    "settings": [
+      {
+        "type": "text",
+        "id": "safety-head1",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "safety-head2",
+        "label": "Sub-Title"
+      }
+    ],
+    "blocks":[
+      {
+        "name": "Safety",
+        "type": "custom",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "safety-img",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id": "safety-txt",
+            "label": "Enter Text"
+          }
+        ]
+      }
+    ],
+    "presets": [{"name": "Female Safety"}]
+  }
+{% endschema %}

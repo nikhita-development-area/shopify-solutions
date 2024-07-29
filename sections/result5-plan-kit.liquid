@@ -1,0 +1,511 @@
+{% if page.handle == 'result5' %}
+{% assign one_month_discount = 0 %}
+{% assign three_month_discount = 25 %}
+{% endif %}
+  
+  <div class="product-section-list">
+    <h2 class="font-weight-bold l-0 text-center mb-md-5 pb-lg-5 section-title mt-4"><span data-user-name class="text-capitalize"></span>’s Hair Regrowth Treatment Plan</h2>
+    <div class="container">
+      <div class="row shadow cstm_row">
+        <div class="shadow-none p-0 overflow-hidden col-lg-4 mr-md-4 m-3 d-block d-lg-none">
+          <div class="card_heading_text m-2 position-relative">
+            <p>Save more while</p>
+            <p class="card_heading_P">you grow more</p>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow  p-0 overflow-hidden col-lg-4 select-plan shadow-none d-block d-lg-none cstm_radio_card bg-transparent ppppppppppppp" onChange="ChangePrice();">
+          <h2 class="font-weight-bold card-header l-0 bg-tradewind shadow text-center mb-md-5 text-capitalize text-white d-none d-lg-block">Select your plan</h2>
+          <div class="card-body pb-md-4">
+            <label for="1_month" class=" month-plan-1" >
+              <input type="radio" id="1_month" name="month" value="1">
+              <onemonth class="radio_content"><span class="total__discount_price_1" style="display:none"></span><span> 1 Month Plan </span><span><span class="font-weight-bold">@ &nbsp;<span class="total-price-1 pr-1 discounted-price"></span> </span><del class="one_month_tt_price font-weight-normal">₹ 5,290</del></span></onemonth>
+              <span class="radio_content_msg"><span> Pay for 1 month and receive 1st kit</span><span class="save_pct"><span class="main-persentage text-danger" data-discount="{{one_month_discount}}">0%</span></span></span>
+            </label>
+            <label for="3_month" class="active month-plan-4">
+              <input type="radio" id="3_month" checked name="month" value="4">
+              <onemonth class="radio_content"> <span class="total-price-3 discounted-price" style="display:none"></span> <span> 4 Months Plan</span> <span> <span class="font-weight-bold">@ &nbsp;<span class="total__discount_price_3 pr-1" style=""></span> </span><del class="three_month_tt_price font-weight-normal">₹ 5,290</del></span></onemonth>
+              <span class="radio_content_msg"> <span> Pay for 4 months and receive all 4 kits together</span> <span class="save_pct"><span class="main-persentage text-danger" data-discount="{{three_month_discount}}">0%</span> </span></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="card border-1 p-0 col-lg-4 mr-lg-4 m-3 m-lg-0 order-lg-2 d-none d-lg-block" one_month_planCard>
+          <div class="card-header bg-tradewind shadow text-lg-center pt-lg-5 pt-3 px-lg-1 cstm_cardHeader">
+            <h2 class="mb-0 l-0 font-weight-bold text-white text-capitalize plan-text">1 Month Plan</h2>
+            <span class="text-white text-lg-center one_month_header_msg">Pay for 1 month and receive 1st kit</span>
+          </div>
+          <div class="card-body pb-0 pb-md-0 cstm_card_body">
+            <div class="d-flex justify-content-between align-items-center align-items-lg-start mb-3 mb-md-4">
+              <span class="align-items-center d-flex font-size-18">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-3">
+                  <circle cx="22" cy="22" r="22" fill="#68AA9E"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M26.9366 24.2737H24.0158C23.5729 24.2737 23.2249 23.901 23.2249 23.4516C23.2249 22.9912 23.5729 22.6295 24.0158 22.6295H26.9366C27.3794 22.6295 27.7274 22.9912 27.7274 23.4516C27.7274 23.901 27.3794 24.2737 26.9366 24.2737ZM31.8922 19.3097C31.4704 18.8055 31.0486 18.5753 30.4054 18.5753H16.1654C15.828 18.5753 15.5538 18.3123 15.5222 17.9605L15.3218 15.5053C15.2902 15.1326 15.0266 14.8268 14.6681 14.7599L12.1533 14.3664C11.721 14.2996 11.3097 14.5966 11.2359 15.0449C11.1621 15.4833 11.4574 15.9108 11.8791 15.9875L13.4713 16.2725L14.4414 28.2208C14.5574 29.6676 15.7173 30.7845 17.1196 30.7845H28.6235C29.9626 30.7845 31.1014 29.7662 31.2912 28.3841L32.2929 21.1939C32.3878 20.5373 32.314 19.8139 31.8922 19.3097Z" fill="white"/>
+                </svg>
+                <span class="tt_card_text">Your Hair growth kit</span>
+              </span>
+              <p class="font-size-15 total-price tt_card_text" data-1Month data-3Month>₹ 2150/-</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center align-items-lg-start mb-3 mb-md-4">
+              <span class="align-items-center d-flex font-size-18">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-3">
+                  <circle cx="22" cy="22" r="22" fill="#68AA9E"/>
+                  <path d="M28.4056 32L24.7906 28.5192L26.6838 26.6937L28.4056 28.3542L35.1108 21.9083L37 23.7351L28.4056 31.9987V32ZM23.0501 28.8918H11V26.3134H23.0501V28.8918ZM28.4056 23.7351H11V21.1567H28.4056V23.7351ZM28.4056 18.5784H11V16H28.4056V18.5784Z" fill="#EFF5FC"/>
+                </svg>
+                <span class="tt_card_text">Customized doctor prescription</span>
+              </span>
+              <p class="font-size-15 docotr-fee tt_card_text" data-docotr-fee="100000">₹ 1000/-</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center align-items-lg-start mb-3 mb-md-4">
+              <span class="align-items-center d-flex font-size-18">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-3">
+                  <circle cx="22" cy="22" r="22" fill="#68AA9E"/>
+                  <path d="M23.6667 19.7778V24.2222H30.6667V19.7778H23.6667ZM21.3333 19.7778H14.3333V24.2222H21.3333V19.7778ZM23.6667 29.7778H30.6667V26.4444H23.6667V29.7778ZM21.3333 29.7778V26.4444H14.3333V29.7778H21.3333ZM23.6667 14.2222V17.5556H30.6667V14.2222H23.6667ZM21.3333 14.2222H14.3333V17.5556H21.3333V14.2222ZM30.6667 12C31.9553 12 33 12.9949 33 14.2222V29.7778C33 31.0051 31.9553 32 30.6667 32H14.3333C13.0447 32 12 31.0051 12 29.7778V14.2222C12 12.9949 13.0447 12 14.3333 12H30.6667Z" fill="#EFF5FC"/>
+                </svg>
+                <span class="tt_card_text">Ayurvedic diet plan</span>
+              </span>
+              <p class="font-size-15 diet-plan tt_card_text" data-diet-plan="50000">₹ 500/-</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center align-items-lg-start mb-3 mb-md-4">
+              <span class="align-items-center d-flex font-size-18">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-3">
+                  <circle cx="22" cy="22" r="22" fill="#68AA9E"/>
+                  <path d="M22.5 34L19 31H14.3333C13.0447 31 12 30.1046 12 29V16C12 14.8954 13.0447 14 14.3333 14H30.6667C31.9553 14 33 14.8954 33 16V29C33 30.1046 31.9553 31 30.6667 31H26L22.5 34ZM14.3333 16V29H20.1667L22.5 31L24.8333 29H30.6667V16H14.3333ZM27.1667 26.986H17.8333V26.6C17.9714 24.5051 20.055 22.8978 22.5 23C24.945 22.8978 27.0286 24.5051 27.1667 26.6V26.985V26.986ZM22.5 22C21.8748 22.0186 21.2686 21.8139 20.8262 21.4347C20.3838 21.0555 20.1449 20.5359 20.1667 20C20.1453 19.4642 20.3842 18.9447 20.8266 18.5656C21.2689 18.1865 21.8749 17.9817 22.5 18C23.1251 17.9817 23.7311 18.1865 24.1734 18.5656C24.6158 18.9447 24.8547 19.4642 24.8333 20C24.8551 20.5359 24.6162 21.0555 24.1738 21.4347C23.7314 21.8139 23.1252 22.0186 22.5 22Z" fill="#EFF5FC"/>
+                </svg>
+                <span class="tt_card_text">Personal hair coach</span>
+              </span>
+              <p class="font-size-15 hair-coach tt_card_text" data-hair-coach="50000">₹ 500/-</p>
+            </div>
+          </div>
+          <div class="card-footer border-0 bg-transparent p-0 pt-lg-2">
+            <hr>
+            <div class="align-items-center d-flex justify-content-end mb-2 mb-lg-0">
+              <span class="Cardcstm_tt_price">@ &nbsp;</span><span class="total-price total__discout_price_cstm mr-3 Cardcstm_tt_price"></span>
+              <!--               <span class="align-items-center d-flex font-size-18">Total</span> -->
+              <p class="font-size-18 hair-coach mr-3"><del class="all-total-price"></del></p>
+            </div>
+
+            <div class="align-items-center mb-3 mb-md-4 text-center text-danger font-weight-bold d-none">
+              Offer Price <span class="persentage" data-discount="{{one_month_discount}}"> (59% off)</span> <span class="total-price total__discout_price_cstm"></span>
+            </div>
+            <div class="p-3">
+            <button id="add-to-cart-result-page" class="btn w-100 d-flex justify-content-center align-items-center btn-dark card_buy_now">
+              <span>{{"Buy Now"}}</span>
+            </button>
+          </div>
+          </div>
+          <div class="rounded-circle top_pct_text"><div class="p-2 pt-3 pt-lg-auto text-center per_off_msg"><span class="mr-1 ml-1" top_pct_text>20%</span><span class="mr-1 ml-1 off_msg">off</span></div></div>
+        </div>
+
+        <div class="card border-1 p-0  col-lg-4 mr-md-0 m-3 m-lg-0 order-md-3" three_month_planCard>
+          <div class="card-header bg-tradewind shadow text-lg-center pt-lg-5 pt-3 px-lg-1 cstm_cardHeader">
+            <h2 class="mb-0 l-0 font-weight-bold text-white plan-title text-capitalize plan-text">4 Months Plan</h2>
+             <span class="text-white text-lg-center three_month_header_msg">Pay for 4 months and receive all 4 kits together</span>
+          </div>
+          <div class="card-body pb-0 pb-md-0">
+            <div class="d-flex justify-content-between align-items-center align-items-lg-start mb-3 mb-md-4">
+              <span class="align-items-center d-flex font-size-18">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-3">
+                  <circle cx="22" cy="22" r="22" fill="#68AA9E"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M26.9366 24.2737H24.0158C23.5729 24.2737 23.2249 23.901 23.2249 23.4516C23.2249 22.9912 23.5729 22.6295 24.0158 22.6295H26.9366C27.3794 22.6295 27.7274 22.9912 27.7274 23.4516C27.7274 23.901 27.3794 24.2737 26.9366 24.2737ZM31.8922 19.3097C31.4704 18.8055 31.0486 18.5753 30.4054 18.5753H16.1654C15.828 18.5753 15.5538 18.3123 15.5222 17.9605L15.3218 15.5053C15.2902 15.1326 15.0266 14.8268 14.6681 14.7599L12.1533 14.3664C11.721 14.2996 11.3097 14.5966 11.2359 15.0449C11.1621 15.4833 11.4574 15.9108 11.8791 15.9875L13.4713 16.2725L14.4414 28.2208C14.5574 29.6676 15.7173 30.7845 17.1196 30.7845H28.6235C29.9626 30.7845 31.1014 29.7662 31.2912 28.3841L32.2929 21.1939C32.3878 20.5373 32.314 19.8139 31.8922 19.3097Z" fill="white"/>
+                </svg>
+                <span class="tt_card_text">Your Hair growth kit</span>
+              </span>
+              <p class="font-size-15 total-price tt_card_text" data-1Month data-3Month>₹ 2150/-</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center align-items-lg-start mb-3 mb-md-4">
+              <span class="align-items-center d-flex font-size-18">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-3">
+                  <circle cx="22" cy="22" r="22" fill="#68AA9E"/>
+                  <path d="M28.4056 32L24.7906 28.5192L26.6838 26.6937L28.4056 28.3542L35.1108 21.9083L37 23.7351L28.4056 31.9987V32ZM23.0501 28.8918H11V26.3134H23.0501V28.8918ZM28.4056 23.7351H11V21.1567H28.4056V23.7351ZM28.4056 18.5784H11V16H28.4056V18.5784Z" fill="#EFF5FC"/>
+                </svg>
+                <span class="tt_card_text">Customized doctor prescription</span>
+              </span>
+              <p class="font-size-15 docotr-fee tt_card_text" data-docotr-fee="100000">₹ 1000/-</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center align-items-lg-start mb-3 mb-md-4">
+              <span class="align-items-center d-flex font-size-18">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-3">
+                  <circle cx="22" cy="22" r="22" fill="#68AA9E"/>
+                  <path d="M23.6667 19.7778V24.2222H30.6667V19.7778H23.6667ZM21.3333 19.7778H14.3333V24.2222H21.3333V19.7778ZM23.6667 29.7778H30.6667V26.4444H23.6667V29.7778ZM21.3333 29.7778V26.4444H14.3333V29.7778H21.3333ZM23.6667 14.2222V17.5556H30.6667V14.2222H23.6667ZM21.3333 14.2222H14.3333V17.5556H21.3333V14.2222ZM30.6667 12C31.9553 12 33 12.9949 33 14.2222V29.7778C33 31.0051 31.9553 32 30.6667 32H14.3333C13.0447 32 12 31.0051 12 29.7778V14.2222C12 12.9949 13.0447 12 14.3333 12H30.6667Z" fill="#EFF5FC"/>
+                </svg>
+                <span class="tt_card_text">Ayurvedic diet plan</span>
+              </span>
+              <p class="font-size-15 diet-plan tt_card_text" data-diet-plan="50000">₹ 500/-</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center align-items-lg-start mb-3 mb-md-4">
+              <span class="align-items-center d-flex font-size-18">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-3">
+                  <circle cx="22" cy="22" r="22" fill="#68AA9E"/>
+                  <path d="M22.5 34L19 31H14.3333C13.0447 31 12 30.1046 12 29V16C12 14.8954 13.0447 14 14.3333 14H30.6667C31.9553 14 33 14.8954 33 16V29C33 30.1046 31.9553 31 30.6667 31H26L22.5 34ZM14.3333 16V29H20.1667L22.5 31L24.8333 29H30.6667V16H14.3333ZM27.1667 26.986H17.8333V26.6C17.9714 24.5051 20.055 22.8978 22.5 23C24.945 22.8978 27.0286 24.5051 27.1667 26.6V26.985V26.986ZM22.5 22C21.8748 22.0186 21.2686 21.8139 20.8262 21.4347C20.3838 21.0555 20.1449 20.5359 20.1667 20C20.1453 19.4642 20.3842 18.9447 20.8266 18.5656C21.2689 18.1865 21.8749 17.9817 22.5 18C23.1251 17.9817 23.7311 18.1865 24.1734 18.5656C24.6158 18.9447 24.8547 19.4642 24.8333 20C24.8551 20.5359 24.6162 21.0555 24.1738 21.4347C23.7314 21.8139 23.1252 22.0186 22.5 22Z" fill="#EFF5FC"/>
+                </svg>
+                <span class="tt_card_text">Personal hair coach</span>
+              </span>
+              <p class="font-size-15 hair-coach tt_card_text" data-hair-coach="50000">₹ 500/-</p>
+            </div>
+          </div>
+          <div class="card-footer border-0 bg-transparent p-0">
+            <hr>
+            <div class="align-items-center d-flex justify-content-end mb-2 mb-lg-0">
+              <span class="Cardcstm_tt_price">@ &nbsp;</span><span class="total-price total__discout_price_cstm mr-3 Cardcstm_tt_price"></span>
+              <!--               <span class="align-items-center d-flex font-size-18">Total</span> -->
+              <p class="font-size-18 hair-coach mr-3"><del class="all-total-price"></del></p>
+            </div>
+
+            <div class="align-items-center mb-3 mb-md-4 text-center text-danger font-weight-bold d-none">
+              Offer Price <span class="persentage" data-discount="{{one_month_discount}}"> (59% off)</span> <span class="total-price total__discout_price_cstm"></span>
+            </div>
+            <div class="p-3">
+            <button id="add-to-cart-result-page" class="btn w-100 d-flex justify-content-center align-items-center btn-dark card_buy_now">
+              <span>{{"Buy Now"}}</span>
+            </button>
+          </div>
+          </div>
+          <div class="rounded-circle top_pct_text"><div class="p-2 pt-3 pt-lg-auto text-center per_off_msg"><span class="mr-1 ml-1" top_pct_text>20%</span><span class="mr-1 ml-1 off_msg">off</span></div></div>
+        </div>
+
+        <div class="card border-1 p-0 overflow-hidden col-lg-4 mr-lg-4 m-3 m-lg-0 order-lg-1 cstm_card justify-content-end" style="background:#F9FFFE">
+          <div class="card_heading_text m-2 mt-lg-5 position-relative d-none d-lg-block cstm_cardHeader">
+            <p class="ml-3">Save more while</p>
+            <p class="card_heading_P ml-3">you grow more</p>
+          </div>
+          <div class="d-flex mx-3 pt-2 pt-lg-auto mb-0 mt-lg-5 position-relative mb-lg-0">
+            <div class="p-2 p-lg-3">
+              <p class="vertical-text">Your hair regrowth journey</p>
+            </div>
+            <div class="months_Structure ml-3 pb-3 pb-lg-auto">
+              <div class="pl-4 mb-3 pb-lg-4 ms_div position-relative">
+                <p class="fw-bold m-0">1-2 Months</p>
+                <span>Treat the root cause of hair loss</span>
+              </div>
+              <div class="pl-4 mb-3 pb-lg-4 ms_div position-relative">
+                <p class="fw-bold m-0">3-4 Months</p>
+                <span>Complete hair fall control</span>
+              </div>
+              <div class="pl-4 mb-3 pb-lg-4 ms_div position-relative">
+                <p class="fw-bold m-0">4-5 Months</p>
+                <span>Grow new set of hair</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "Result5 plan kit",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Result5 Plat Kit",
+        "category": "custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .result5 .product-section-list .section-title {
+    font-size: 48px;
+    letter-spacing: .04em;
+  }
+  .result5 .product-section-list .card {
+    flex: 1 31.22%;
+    border-radius: 12px;
+  }
+  .result5 .cstm_cardHeader {
+    border-radius: 12px 12px 0px 0px !important;
+  }
+  .result5 .plan-text {
+    font-size: 32px;
+    letter-spacing: normal;
+  }
+  .result5 .cstm_cardHeader span {
+    letter-spacing: normal;
+  }
+  .result5 .top_pct_text {
+    background: #498A7E;
+    border: 6px solid #FFFFFF;
+    box-shadow: 0px 0px 7px 1px rgb(0 0 0 / 25%);
+    position: absolute;
+    top: -8%;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 93px;
+    height: 93px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .result5 .per_off_msg {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .result5 .top_pct_text span {
+    font-size: 32px;
+    line-height: 26px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-family: fredoka_oneregular !important;
+    font-style: normal;
+  }
+{% if page.handle == 'result5' %}
+@media only screen and (min-width: 999px) {
+  .d-flex.justify-content-between.align-items-center.align-items-lg-start {
+    align-items: center !important;
+  }
+  .ms_div p {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.05em;
+  }
+  .ms_div span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+  }
+}
+  .card-body p.tt_card_text {
+    width: 26%;
+    text-align: right;
+    font-weight: 700;
+    color: #4a4a4a;
+    font-size: 15px;
+  }
+  .card-body .align-items-center.d-flex.font-size-18 {
+    letter-spacing: normal;
+  }
+  .card-footer hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+  }
+  .card_heading_text p {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #498A7E;
+  }
+  .card_heading_P::after {
+    content: url(https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Arrow_3.png?v=1652776488);
+    position: absolute;
+    bottom: 1%;
+    margin-left: 5px;
+  }
+  .result5 .product-section-list .vertical-text {
+/*     writing-mode: vertical-lr;
+    width: 211px; */
+    height: 23px;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: .05em;
+    color: #498a7e;
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: 38%;
+    left: -21%;
+  }
+  .result5 .product-section-list .vertical-text {
+    top: 42%;
+    left: 0;
+    transform: translateX(-50%) rotate(-90deg);
+  }
+  .result5 .ms_div::before {
+    content: url(https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Vector.png?v=1652775558);
+    position: absolute;
+    top: -3%;
+    left: -12px;
+    transform: translate(0px, 3%);
+  }
+  .result5 .months_Structure {
+    border-left: 2.5px solid #58595B;
+  }
+  .select-plan label {
+    padding: 9px 20px;
+    position: relative;
+    background: transparent;
+    border-radius: 10px;
+  }
+  .select-plan label {
+    border: 2px solid #68aa9e;
+    /* padding-left: 30px; */
+    border-radius: 5px !important;
+    width: 100%;
+    padding: 9px 10px;
+    background: #fff;
+  }
+  .select-plan input {
+    position: absolute;
+    left: 4px;
+    top: 13px;
+  }
+  .select-plan label input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    /* margin-top: 11px; */
+    font: inherit;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid #68aa9e;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+  onemonth.radio_content {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    font-size: 14.4px;
+    letter-spacing: normal;
+  }
+  .radio_content_msg {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    letter-spacing: normal;
+  }
+  .select-plan label.active {
+    background-color: #68aa9e;
+    border: 2px solid #68aa9e;
+    color: #fff;
+  }
+  .select-plan label input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    /* box-shadow: inset 1em 1em #68aa9e; */
+    background-color: CanvasText;
+  }
+  .select-plan label input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  .tt_card_text {
+    font-size: 16px;
+    color: #4a4a4a;
+    font-weight: 500;
+  }
+  .result5 .product-section-list .Cardcstm_tt_price {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: normal;
+  }
+  .result5 .page-result-hero .main-section .visitor-info h3 {
+    font-size: 24px;
+    letter-spacing: .04em;
+  }
+  .result5 button#add-to-cart-result-page {
+    background-color: #ffbe1c;
+    border-color: #ffbe1c;
+    border-radius: 12px;
+  }
+  .save_pct {
+    background: #F4F4F4;
+    padding: 0px 5px;
+    border-radius: 15px;
+    color: #D03535;
+  }
+  @media only screen and (max-width: 999px) {
+    .result5 .product-section-list .vertical-text {
+      left: 12px;
+    }
+    .ms_div p {
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 33px;
+      letter-spacing: 0.05em;
+    }
+    .ms_div span {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 14px;
+      letter-spacing: 0.05em;
+    }
+    .result5 .product-section-list .cstm_row {
+      background: #F9FFFE;
+      border-radius: 12px !important;
+      margin: 5px;
+    }
+    .card_heading_text p {
+      font-size: 28px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+    }
+    .card_heading_P::after {
+      transform: rotate(90deg);
+    }
+    .result5 .product-section-list .card {
+      flex: 1 100%;
+    }
+    .select-plan label {
+      width: 100%;
+    }
+    .result5 .top_pct_text span {
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: normal;
+    }
+    .result5 .top_pct_text {
+      top: -4%;
+      left: auto;
+      transform: translateX(0%);
+      right: -12px;
+      width: 64px;
+      height: 64px;
+      border: 3px solid #FFFFFF;
+    }
+    .result5 .plan-text {
+      font-size: 28px;
+    } 
+    .three_month_header_msg {
+      font-size: 13.5px !important;
+    }
+    .tt_card_text {
+      font-size: 13px !important;
+    }
+    .cstm_card {
+      border: none !important;
+      margin-bottom: 0px !important;
+    }
+    .result5 .product-section-list .vertical-text {
+      font-size: 13px;
+    }
+    .ms_div p {
+      font-size: 16px;
+      line-height: 33px;
+      letter-spacing: 0.05em;
+    }
+    .ms_div span {
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 0.05em;
+    }
+    .our-experts .doctors-section .doctor-slider h5 {
+      font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 767.98px) {
+    .result5 .product-section-list .section-title {
+      font-size: 28px;
+    }
+    .cstm_row {
+      margin: auto;
+    }
+  }
+{% endif %}
+{% endstyle %}

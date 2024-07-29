@@ -1,0 +1,351 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1664025500e5840e49": {
+      "type": "custom-img-banner",
+      "blocks": {
+        "987f6c7c-e913-42f7-b741-2e497b46ed1d": {
+          "type": "content",
+          "settings": {
+            "heading_coach": "",
+            "subheading_coach": ""
+          }
+        }
+      },
+      "block_order": [
+        "987f6c7c-e913-42f7-b741-2e497b46ed1d"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "166417785331b22939": {
+      "type": "image-banner",
+      "blocks": {
+        "16641778538fd0fc1b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "India’s Only Holistic Hair <br>Restoration Programme",
+            "heading_size": "h1"
+          }
+        },
+        "16641778538fd0fc1b-1": {
+          "type": "text",
+          "settings": {
+            "heading1": "For Advanced Stages of Hair Loss",
+            "text": "See Complete Regrowth In Less Than 12 Months",
+            "text_style": "body"
+          }
+        },
+        "16641778538fd0fc1b-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Book Free Consultation",
+            "button_link_1": "https:\/\/form.traya.health\/v2\/mini-questions?cohort=1",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "16641778538fd0fc1b-0",
+        "16641778538fd0fc1b-1",
+        "16641778538fd0fc1b-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/banner_a589641d-36c0-4b9a-b353-f038901d583e.webp",
+        "mblimage": "shopify:\/\/shop_images\/banner_600x_f23ad267-f59c-40c5-a406-fd3dd31fed6b.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "16640254953be55ef9": {
+      "type": "transplant-treatment",
+      "blocks": {
+        "81b37d18-4230-48b6-a767-42ef074ee704": {
+          "type": "Pre-Treatment",
+          "settings": {
+            "pre-Treatment-heading": "Consultation and Pre- Treatment",
+            "pre-Treatment-desc1": "Depending upon the type and stage of your hair loss,the procedure is charted. You will have to pay a visit to the surgeon in order to conduct a few tests. This will help the surgeon evaluate the density of the donor area, angle of existing hair, angle of hair in the hair line and determine the overall aesthetic experience.",
+            "pre-Treatment-desc2": "Our licensed doctors will examine your condition by conducting the Trichogram Test along with the Hair Pull test to determine your hair and scalp health.",
+            "pre-Treatment-des-img": "shopify:\/\/shop_images\/Group_2_1_1.png",
+            "pre-Treatment-mob-img": "shopify:\/\/shop_images\/img2_cb0192de-3565-4d7b-a9ae-0cb41c3bf928_1.png"
+          }
+        },
+        "0d9fe7cd-2141-43f8-a61c-c62882af5e61": {
+          "type": "PRP-Treatment",
+          "settings": {
+            "prp-Treatment-heading": "Transplant Surgery and PRP Treatment",
+            "prp-Treatment-desc1": "After studying your medical reports, our trained surgeon will prepare for the Transplant surgery. We use the most promising FUE method of hair restoration in which hair follicles are extracted from the back of head under local anaesthesia with the help of special micro punches and implanted in the bald area. The surgery is painless and leaves no scars.",
+            "prp-Treatment-desc2": "After the surgery, a PRP treatment is conducted which gives higher density and reduces the catagen loss of transplanted hair, speeds recovery of skin, fastens appearance of new anagen hair in FUE transplant patients & activates existing dormant follicles",
+            "prp-Treatment-des-img": "shopify:\/\/shop_images\/2-02_1_1.jpg",
+            "prp-Treatment-mob-img": "shopify:\/\/shop_images\/2-02_1_2.jpg"
+          }
+        },
+        "e1e12766-2c23-4bac-80cc-f7dc03278c77": {
+          "type": "maintenance-kit",
+          "settings": {
+            "maintenance-kit-heading": "After Care and Maintenance Kit",
+            "maintenance-kit-desc1": "We provide you medications combining the best of Dermatology, Ayurveda and Nutrition and a diet plan to ensure that you do not see hair loss months after your transplant.",
+            "maintenance-kit-desc2": "Your maintenance kit comprises tablets, vitamins, serums and oils that work on reducing the internal factors of hair loss such as gut health, digestion, deficiency, sleep, stress and hormonal imbalance. Your personal hair coach will help you along your journey and constantly monitor your case post-surgery.",
+            "maintenance-kit-des-img": "shopify:\/\/shop_images\/COMBO_7_-_IMAGE_2_2_1_b4f16ec5-7d8f-4c41-afa3-d10586d6243f.png",
+            "maintenance-kit-mob-img": "shopify:\/\/shop_images\/COMBO_7_-_IMAGE_2_2_2_917ebb40-fcf5-4dd2-a34d-e88ab82e5d47.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "81b37d18-4230-48b6-a767-42ef074ee704",
+        "0d9fe7cd-2141-43f8-a61c-c62882af5e61",
+        "e1e12766-2c23-4bac-80cc-f7dc03278c77"
+      ],
+      "settings": {
+        "transplant_head": "Permanent, Natural Looking Hair Results"
+      }
+    },
+    "16640255645722c1f8": {
+      "type": "transplant-no-effect",
+      "blocks": {
+        "769dae0d-13bf-477a-937d-5b469a037bd9": {
+          "type": "Side-Effect",
+          "settings": {
+            "side-effect": "Hair Diagnosis & Scalp Analysis"
+          }
+        },
+        "b388c7b5-8d7e-4c5f-8ad9-a3acd7eced5a": {
+          "type": "Side-Effect",
+          "settings": {
+            "side-effect": "FUE Hair Transplant"
+          }
+        },
+        "519bcd18-f052-4a98-8c64-addb3ecfa38e": {
+          "type": "Side-Effect",
+          "settings": {
+            "side-effect": "PRP Session"
+          }
+        },
+        "96a44226-678e-407b-8c41-f4e6a420cbc2": {
+          "type": "Side-Effect",
+          "settings": {
+            "side-effect": "Unlimited Doctor Consultation"
+          }
+        },
+        "007bacc5-8926-48ea-a096-aff388b85389": {
+          "type": "Side-Effect",
+          "settings": {
+            "side-effect": "Unlimited Hair Coach Access"
+          }
+        },
+        "a87643c2-cb2d-4861-a42a-1ee9929bb3f8": {
+          "type": "Side-Effect",
+          "settings": {
+            "side-effect": "12-Month Traya Hair Kit"
+          }
+        },
+        "6422d160-0dc5-4030-8568-3f8bde2f917a": {
+          "type": "Side-Effect",
+          "settings": {
+            "side-effect": "Customized Nutrition Plan"
+          }
+        }
+      },
+      "block_order": [
+        "769dae0d-13bf-477a-937d-5b469a037bd9",
+        "b388c7b5-8d7e-4c5f-8ad9-a3acd7eced5a",
+        "519bcd18-f052-4a98-8c64-addb3ecfa38e",
+        "96a44226-678e-407b-8c41-f4e6a420cbc2",
+        "007bacc5-8926-48ea-a096-aff388b85389",
+        "a87643c2-cb2d-4861-a42a-1ee9929bb3f8",
+        "6422d160-0dc5-4030-8568-3f8bde2f917a"
+      ],
+      "settings": {
+        "side-effect-heading": "No Side Effect, Pain Free And Cost- Effective Programme",
+        "des-img": "shopify:\/\/shop_images\/cost-effective-PC-image_950x_f2ac94fb-98ad-40c7-97aa-dfbe5dd7326e.jpg",
+        "mob-img": "shopify:\/\/shop_images\/cost-effectice-mobile-image_578x_dde065df-c3df-48f3-abd8-f44ab8fa7376.jpg",
+        "side-effect-last": "* Price is for 1,500 grafts. Price will vary if more<br>or less grafts are implanted"
+      }
+    },
+    "1664025545140b6a7f": {
+      "type": "transplant-complete-care",
+      "blocks": {
+        "d33e2606-52c6-40af-9f26-0bae2f18b3e2": {
+          "type": "Steps",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/consulation_hair_analysys_160x160_2x_9384daf7-0d17-4b82-ad71-7fc37c42d5cb.png",
+            "icon-text": "Consultation & Hair Analysis"
+          }
+        },
+        "75d50637-150c-4ff4-bc02-feb26ce36418": {
+          "type": "Steps",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/certified_160x160_2x_9b00acb3-f5d8-4bdc-9066-7ac4caee8cb1.png",
+            "icon-text": "Certified Surgeons & Clinics"
+          }
+        },
+        "097bb00d-416d-455c-ac88-1dbd0aa828a9": {
+          "type": "Steps",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/most_advanced_160x160_2x_57a8fe65-8852-46cb-8773-17608fe161c3.png",
+            "icon-text": "Most Advanced Technology"
+          }
+        },
+        "b4705298-6ff8-4a3e-9156-6e5524e5fedd": {
+          "type": "Steps",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/no_cost_160x160_2x_23d231aa-7353-4766-9e45-c06d07576a93.png",
+            "icon-text": "No Cost EMI plans"
+          }
+        },
+        "af4bd9b8-e080-4c06-b413-7a2133c745c2": {
+          "type": "Steps",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/personal_hair_coach_160x160_2x_27c3cd1b-034a-42f5-9b91-61ded5b6e67c.png",
+            "icon-text": "Personal Hair Coach"
+          }
+        },
+        "1f020d88-0088-4531-8917-f95e7b44bace": {
+          "type": "Steps",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Highly_effective_medicine_160x160_2x_b174f891-7094-4307-a01c-eabebfdbbb96.png",
+            "icon-text": "Highly Effective Medication"
+          }
+        }
+      },
+      "block_order": [
+        "d33e2606-52c6-40af-9f26-0bae2f18b3e2",
+        "75d50637-150c-4ff4-bc02-feb26ce36418",
+        "097bb00d-416d-455c-ac88-1dbd0aa828a9",
+        "b4705298-6ff8-4a3e-9156-6e5524e5fedd",
+        "af4bd9b8-e080-4c06-b413-7a2133c745c2",
+        "1f020d88-0088-4531-8917-f95e7b44bace"
+      ],
+      "settings": {
+        "Care_heading": "Traya’s Promise Of Complete Care",
+        "care_bk_color": "#e9ece9"
+      }
+    },
+    "16640261394eb38e1d": {
+      "type": "FAQs",
+      "blocks": {
+        "341ab878-5756-4784-80d8-b7d4bc12320d": {
+          "type": "text",
+          "settings": {
+            "question": "Who should go for this treatment?",
+            "answer": "Anyone who is above stage 4 and is looking to regrow their hair along the hairline or the crown region should opt for Traya’s Hair Restoration Programme."
+          }
+        },
+        "ee65f23f-1768-4b23-b488-58abdbda5560": {
+          "type": "text",
+          "settings": {
+            "question": "How to know if I am eligible for the procedure?",
+            "answer": "If you are confident about getting a hair transplant, there are a few things you should keep in mind. If you have hair loss since birth or due to a wound\/ injury, or suffer from any blood-borne diseases or haemophilia, have a history of poor wound healing or are allergic to anaesthesia or have any serious health complications you cannot undergo transplant. Speak to our doctors to know more."
+          }
+        },
+        "513297fa-e3fc-4403-8d1d-9fd56221ddce": {
+          "type": "text",
+          "settings": {
+            "question": "Will my hair fall out after the transplant?",
+            "answer": "Traya’s Hair Restore Programme is a permanent solution. Usually people notice hair fall and balding after a transplant. But Traya offers a whole package which focuses on post- care and aims at reducing the root causes behind hair loss so as to slow down the hair shedding. Traya’s maintenance kit also contains all your hair essentials that keep your hair healthy for long."
+          }
+        },
+        "6f847c98-c9ac-481a-9d4c-c827a65c5713": {
+          "type": "text",
+          "settings": {
+            "question": "How long does it take to heal from the surgery?",
+            "answer": "FUE transplant heals faster since there is almost no bleeding during transplant. And although you can continue your daily activities after a day's time. Healing differs from person to person. Your doctor and hair coach will guide you on this better."
+          }
+        },
+        "32453903-bbad-4e05-bd46-b9d65d84cc6b": {
+          "type": "text",
+          "settings": {
+            "question": "How long will my hair transplant take to grow?",
+            "answer": "Your doctor will chart out a plan of recovery and hair growth for you after your transplant.  Sinceevery case is different the regrowth will differ. At Traya we promise complete hair growth in 12 months, that’s how confident we are in the process."
+          }
+        },
+        "54ac794c-e318-479d-a1ad-227e7232bf40": {
+          "type": "text",
+          "settings": {
+            "question": "How many grafts will I need?",
+            "answer": "The number varies on the basis of 2 factors- the extent of your hair loss and the density of your existing hair. The number of grafts needed depends on a mere hundred to several thousands and your surgeon will be the best person to assist you with it. In order to give you a rough estimate, this visual should help."
+          }
+        }
+      },
+      "block_order": [
+        "341ab878-5756-4784-80d8-b7d4bc12320d",
+        "ee65f23f-1768-4b23-b488-58abdbda5560",
+        "513297fa-e3fc-4403-8d1d-9fd56221ddce",
+        "6f847c98-c9ac-481a-9d4c-c827a65c5713",
+        "32453903-bbad-4e05-bd46-b9d65d84cc6b",
+        "54ac794c-e318-479d-a1ad-227e7232bf40"
+      ],
+      "settings": {
+        "faq_head": "FAQ's",
+        "faq_bk_color": "",
+        "accordion_id": "Transplant-Accordion"
+      }
+    },
+    "3a360fc0-26a2-4421-9c1f-638db462e46d": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15873801257138__3a360fc0-26a2-4421-9c1f-638db462e46d-16650424721f92a1a3-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download_55722458-e2a4-4ee6-8ea0-b818f6087065.png",
+            "mbl_image": "shopify:\/\/shop_images\/image_3_7c516c57-97bf-434e-a64f-d98382c239de.webp",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "1,00,000+ Indians trust Traya<br>\nwith their HAIR",
+            "subheading-2": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "left"
+          }
+        }
+      },
+      "block_order": [
+        "template--15873801257138__3a360fc0-26a2-4421-9c1f-638db462e46d-16650424721f92a1a3-0"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "small",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1664025500e5840e49",
+    "166417785331b22939",
+    "16640254953be55ef9",
+    "16640255645722c1f8",
+    "1664025545140b6a7f",
+    "16640261394eb38e1d",
+    "3a360fc0-26a2-4421-9c1f-638db462e46d"
+  ]
+}

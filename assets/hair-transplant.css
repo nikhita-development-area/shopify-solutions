@@ -1,0 +1,141 @@
+.doc_details_top_ht {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 22px;
+  padding: 16px;
+}
+
+.doctor_deatils_main.ht_main {
+  margin: 16px 0;
+}
+.doc_detail_left_ht {
+  /* padding: 10px; */
+  width: 50%;
+}
+.doc_detail_right_ht {
+  width: 50%;
+}
+.doc_detail_right_ht {
+  padding: 10px;
+}
+.doc_detail_right_ht {
+  position: relative;
+}
+.doc_detail_right_ht::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #e0e0e0;
+}
+.doc_profile_ht {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.82px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  margin:0;
+  color:#999999;
+}
+.doc_exp_ht {
+   color:#999999;
+}
+.doc_fee_ht {
+   color:#999999;
+   font-weight:700;
+   padding: 8px 0;
+}
+.doc_add_details_ht {
+  color:#999999;
+  font-family: Nunito Sans !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.82px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+.doc_add_details_ht {
+  margin-right:110px;
+  margin-left:16px;
+}
+.doc_name_ht strong {
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24.55px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #414042;
+
+}
+@media screen and (max-width: 768px) {
+  .doc_details_top_ht {
+    flex-direction: column;
+    padding: 0;
+    margin: 20px;
+  }
+  .doc_detail_right_ht::before {
+    top: 0;
+    width: 90%;
+    height: 1px;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  .doc_detail_left_ht {
+    width: 100%;
+    padding: 16px 12px;
+    padding-bottom: 0;
+  }
+  .doc_detail_right_ht {
+    width: 100%;
+  }
+  .doc_detail_right_ht {
+    padding-top: 15px;
+  }
+  .address::before {
+    width: 1px; /* Reduce width of the vertical line for smaller screens */
+  }
+  .doc_add_details_ht p {
+    padding: 20px;
+  }
+  .doc_add_details_ht {
+    margin-right: 47px;
+    margin-left: 0;
+    padding:16px 12px;
+  }
+  .doc_name_ht {
+    font-size: 24px;
+  }
+  .doc_profile_ht {
+    margin: 0;
+    color: #999999;
+  }
+  .doc_exp_ht {
+    margin: 0;
+    color: #999999;
+  }
+  .doc_fee_ht {
+    color: #999999;
+  }
+  .doc_add_details_ht {
+     color: #999999;
+  }
+  .blog-banner-one {
+    margin:20px;
+    border-radius:10px;
+  }
+  .cs_main {
+    border-radius: 10px;
+    margin: 20px;
+  }
+  .related-article_main_ht {
+    margin: 20px;
+    border-radius: 10px;
+  }
+}

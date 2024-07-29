@@ -1,0 +1,767 @@
+var getUrlParameter = function getUrlParameter(sParam) {
+  var sPageURL = window.location.search.substring(1),
+      sURLVariables = sPageURL.split('&'),
+      sParameterName,
+      i;
+
+  for (i = 0; i < sURLVariables.length; i++) {
+    sParameterName = sURLVariables[i].split('=');
+
+    if (sParameterName[0] === sParam) {
+      return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+    }
+  }
+};
+
+var id = getUrlParameter('id');
+
+var cohort = getUrlParameter('cohort');
+
+if (id) {
+  localStorage.setItem('resultco', id);
+}
+
+id = localStorage.getItem('resultco');
+  var baseUrls = {
+  DEV: 'https://api.dev.hav-g.in/',
+  PROD: 'https://api.hav-g.in/'
+}
+var tokens = {
+  DEV:{ 
+    "Authorization": "Bearer e2623576-930b-48b6-81e2-a3cb5e37f47d"
+  },
+  PROD: { 
+    "Authorization": "Bearer d7ef603e-71ea-44a1-93f2-2bacd08c4a90"
+  }
+}
+var token = tokens.PROD;
+var baseUrl = baseUrls.PROD;
+var liveendpoint = 'https://api.hav-g.in/dgReport?id=';
+ 
+if (cohort == 2) {
+  liveendpoint = baseUrl + 'dgReport/v2?id=';
+} else {
+  liveendpoint = baseUrl + 'dgReport/v1?id=';
+}
+ // liveendpoint = baseUrl + 'dgReport/v3?id=';
+    var newapi = baseUrl + 'dgReport/v5?id=';
+   liveendpoint = newapi;
+
+  if(id){
+
+    jQuery(document).ready(function($){
+
+      jQuery.ajax({
+        url: liveendpoint+id,
+        dataType: 'json',
+        headers: token
+      })
+      .done(function(data){
+        //         console.log(data);
+        displayComboProduct(data.response);
+        $('[data-user-name]').text("Your");
+        $('[data-user-stage]').text(data.response.stage);
+        var User_Analysis = data.response;
+        if(User_Analysis.stage == "Coin Size Patch"){
+          $('#typeOfLoss').text("Alopecia Areata");
+        }if(User_Analysis.stage == "Heavy Hair Fall Across The Head"){
+          $('#typeOfLoss').text("Telogen Effluvium");
+        }
+
+
+        $('#ourdia li').hide();
+        $('.nav-tabs .nav-item').hide();
+        var rootCause = data.rootCauseAnalysis;
+
+        let count=1;
+        if (rootCause.genetic == "Yes" && count < 5){
+          $('#genetics').css('display','flex');
+          $('#nav-genetics-tab').show();
+          if(count == 1){
+            $('#nav-genetics-tab').click();
+          }
+          count++;
+        } 
+        if (rootCause.digestion == "Yes" && count < 5){
+          $('#digestion').css('display','flex');
+          $('#nav-digestion-tab').show();
+          if(count == 1){
+            $('#nav-digestion-tab').click();
+          }
+          count++;
+        }
+        if (rootCause.stress == "Yes" && count < 5){
+          $('#stress').css('display','flex');
+          $('#nav-stress-tab').show();
+          if(count == 1){
+            $('#nav-stress-tab').click();
+          }
+          count++;
+        }
+        if (rootCause.sleep == "Yes" && count < 5){
+          $('#sleepissues').css('display','flex');
+          $('#nav-sleep-tab').show();
+          if(count == 1){
+            $('#nav-sleep-tab').click();
+          }
+          count++;
+        }        
+        if (rootCause.deficiency == "Yes" && count < 5){
+          $('#deficiency').css('display','flex');
+          $('#nav-deficiency-tab').show();
+          count++;
+        }
+        if (rootCause.Dieting == "Yes" && count < 5){
+          $('#weightloss').css('display','flex');
+          $('#nav-weight-tab').show();
+          count++;
+        }
+        if (rootCause.nutrition == "Yes" && count < 5){
+          $('#nutrition').css('display','flex');
+          $('#nav-nutrition-tab').show();
+          count++;
+        }
+        if (rootCause.lifestyle == "Yes" && count < 5){
+          $('#lifestyle').css('display','flex');
+          $('#nav-lifestyle-tab').show();
+          count++;
+        }
+        if (rootCause.malfunction == "Yes" && count < 5) {
+          $('#malfunction').css('display','flex');
+          $('#nav-malfunction-tab').show();
+          count++;
+        }
+        if(count <= 4){
+          $('.nav-tabs').addClass('three-root-cause');
+        }
+
+        if(User_Analysis.gender == "M"){
+          $('[data-gender]').text("Male");
+          $('.review-resultco-F').remove();
+          if(User_Analysis.stage == "Stage-1"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/male01.svg");
+          }else if(User_Analysis.stage == "Stage-2"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/male02.svg");
+          }else if(User_Analysis.stage == "Stage-3"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/male03.svg");
+          }else if(User_Analysis.stage == "Stage-4"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/male04.svg");
+          }else if(User_Analysis.stage == "Stage-5"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/male05.svg");
+          }else if(User_Analysis.stage == "Stage-6"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/male06.svg");
+          }else if(User_Analysis.stage == "Coin Size Patch"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/male-stage-coin.svg");
+          }else if(User_Analysis.stage == "Heavy Hair Fall Across The Head"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/hair-fall-male.svg");
+          }
+        }else{
+          $('.review-resultco-M').remove();
+          $('[data-gender]').text("Female")
+          if(User_Analysis.stage == "Stage-1"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/new-stage01.svg");
+          }else if(User_Analysis.stage == "Stage-2"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/new-stage02.svg");
+          }else if(User_Analysis.stage == "Stage-3"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/new-stage03.svg");
+          }else if(User_Analysis.stage == "Stage-4"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/new-stage04.svg");
+          }else if(User_Analysis.stage == "Stage-5"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/new-stage05.svg");
+          }else if(User_Analysis.stage == "Stage-6"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/new-stage06.svg");
+          } else if(User_Analysis.stage == "Coin Size Patch"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/female-stage-coin.svg");
+          }else if(User_Analysis.stage == "Heavy Hair Fall Across The Head"){
+            $('[data-stage-img]').attr('src',"//cdn.shopify.com/s/files/1/0100/1622/7394/files/hair-fall-female.svg");
+          }
+
+        }
+        setTimeout(function(){
+          jQuery('.result_product_slides').slick({
+            mobileFirst: true,
+            arrows: false,
+            dots:true,
+            adaptiveHeight: true,
+            responsive: [
+              {
+                breakpoint: 760,
+                settings: "unslick"
+              }
+            ]
+          });
+          $('.result-combo-pr-image .product-single__media').slick({
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.product-single__thumbnails'
+          });
+          $('.product-single__thumbnails').slick({
+            arrows: false,
+            slidesToShow: 5,
+            infinite: true,
+            asNavFor: '.product-single__media',
+            focusOnSelect: true
+          });
+          $('.slick-items-container-result').slick();
+        },1300);
+
+
+      });
+
+      var position=0;
+      var scrollTo='';
+      var container = $('.main-content');
+      $('#ourdia>li a').click(function(e){
+        e.preventDefault();
+        var attr =$(this).attr('href').split('#')[1];
+        scrollTo = $('#'+attr);
+        scrollTo.trigger('click');
+        position = scrollTo.offset().top
+        - container.offset().top
+        + container.scrollTop()-200;
+        $("html").animate({ scrollTop: position }, 600);
+      });
+
+    });
+    jQuery('body').on('click', '.add-to-cart-result-page', function() {
+      jQuery.ajax({
+        type: "POST",
+        url: '/cart/clear.js',
+        success: function(){
+          setTimeout(function(){
+            checkout();
+          },1000);
+        },
+        dataType: 'json'
+      });
+
+    });
+
+    jQuery('body').on('click', '.buyNowResult2', function() {
+
+      jQuery.ajax({
+        type: "POST",
+        url: '/cart/clear.js',
+        success: function(){
+          buyItNow();
+        },
+        dataType: 'json'
+      });
+
+    });
+  }
+
+var variantsID = 0;
+function displayProduct(data) {
+var $ = jQuery;
+  var r = Object.assign(data.User_Analysis, data.Recommendations);
+
+  $('.productt').hide();
+  if (r.Health_tatva === 'Yes') {
+    $('#healthTatva').show();
+    getProductByHandle('herbal-tablets');
+    var Desc = 'Ayurvedic herbs to boost absorption of nutrients for improved energy and hair health';
+  }
+  if (r.Hair_ras === 'Yes') {
+    $('#hairRasa').show();
+    getProductByHandle('hair-fall-tablets');
+    var Desc = 'Better hair quality & delayed greying with herbs like shatavari and bhringraj';
+  }
+  if (r.Gut_shuddi === 'Yes') {
+    $('#gutShuddhi').show();
+    getProductByHandle('avipattikar-digestion-tablets');
+    var Desc = 'Ayurvedic herbs for improved digestion, gut health and hair';
+  }
+  if (r.Minoxidil === 'Yes' && r.gender === 'M') {
+    getProductByHandle('traya-minoxidil-5');
+    $('#hairSerum').show();
+    var Desc = 'Minoxidil 5% for male androgenic alopecia hair loss and hair growth';
+  }
+  if (r.Minoxidil === 'Yes' && r.gender === 'F') {
+    getProductByHandle('minoxidil-2');
+    $('#hairSerum').show();
+    var Desc = 'Minoxidil 2% treatment for female androgenic alopecia hair loss and hair growth';
+  }
+  if (r.Shampoo === 'Normal') {
+    $('#shampooDarmotology').show();
+    getProductByHandle('shampoo');
+    var Desc = 'Chemical-free hair and scalp cleanser shampoo';
+  }
+  if (r.Shampoo === 'Anti dandruff') {
+    $('#hairAntidandruff').show();
+    getProductByHandle('anti-dandruff-shampoo');
+    var Desc = 'Made with antifungal ingredients for getting rid of dandruff of all types';
+  }
+  if (r.Hair_vitamin === 'Yes') { 
+    $('#hairVitamins').show();
+    getProductByHandle('hair-vitamins');
+    var Desc = '100% Vegetarian supplements for hair to combat vitamin deficiency related hair loss';
+  }
+
+  if (r.Serum === 'Yes') {
+    $('#hairRootserum').show();
+    getProductByHandle('recap-serum-for-hair-fall-control');
+    var Desc = 'Patented hair growth serum with redensyl, biotin and caffeine';
+  }
+  
+  if (r.Hair_ras === 'Yes') {
+    getProductByHandle('hair-growth-herbs');
+    var Desc = 'Better hair quality & delayed greying with herbs like shatavari and bhringraj';
+  }
+
+  if (r.Scalp_oil === 'Yes' || r.Scalp_oil === 'bergamot and ylang ylang') {
+    $('#scalpOil').show();
+    getProductByHandle('herbal-hair-oil');
+    var Desc = 'Herbal hair oil with essential oils, customised based on scalp and hair type';
+  }
+
+  if (r.Kevon === 'Yes') {
+    getProductByHandle('kevon-lotion-1');
+  }
+  
+  if (r.Nasal === 'Yes') {
+    getProductByHandle('shatavari-ghrita');
+    var Desc = 'Ayurvedic nasal drops for nourishing hair follicles and reducing sleep-related hair loss';
+  }
+  
+  if(r.gender === 'M'){
+    $('[data-gender]').append('Male');
+  } else {
+    $('[data-gender]').append('Female');
+  }
+  
+}
+function displayComboProduct(data) {
+  var $ = jQuery;
+  var products = [];
+
+  let mainImageUrl = '';
+  var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+  
+   $('.result-page .product-single__thumbnails').empty();
+  $('.result-combo-pr-image .product-single__media').empty();
+  if((data.Hair_Oil == "Yes") && (data.Hair_Ras == "Yes") && (data.Hair_Vitamin == "Yes") && (data.Ketoconazole_shampoo == "Yes") && (data.Kevon == "Yes")){
+	mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/COMBO2.jpg';
+          let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+				<img class="product-single__thumbnail-image" src="${mainImageUrl}" alt="Combo Image">
+              </li>`;
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+    
+  }else if((data.Hair_Oil == "Yes") && (data.Hair_Ras == "Yes") && (data.RCP == "Yes")){
+    mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/COMBO_image.jpg';
+    let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/COMBO_image.jpg" alt="Combo Image">
+              </li>`;
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+  }else if((data.Hair_Vitamin == "Yes") && (data.Hair_Ras == "Yes") && (data.RCP == "Yes") &&  (data.Defence_Shampoo == "Yes")){
+    mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/COMBO6.jpg';
+    let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+<img class="product-single__thumbnail-image" src="${mainImageUrl}" alt="Combo Image">
+              </li>`;
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+  }else if((data.Minoxidil_5 == "Yes") && (data.Hair_Ras == "Yes") && (data.Hair_Vitamin == "Yes") &&  (data.Defence_Shampoo == "Yes")){
+    mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/COMBO1.jpg';
+    let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/COMBO1.jpg" alt="Combo Image">
+              </li>`;
+    
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+  }else if((data.Minoxidil_2 == "Yes") && (data.Hair_Ras == "Yes") && (data.Hair_Vitamin == "Yes") &&  (data.Defence_Shampoo == "Yes")){
+    mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/combo_2.jpg';
+    let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/combo_2.jpg" alt="Combo Image">
+              </li>`;
+   
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+  }else{
+  mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/default_image.jpg';
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+                        sizes="445px" srcset="${mainImageUrl}">`;
+    let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+                	<img class="product-single__thumbnail-image" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/default_image.jpg" alt="Combo Image">
+                   </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+  }
+  
+  if(data.Defence_Shampoo == "Yes"){
+    products.push({'handle': "shampoo"});
+      mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/defence_shampoo.jpg';
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+     let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/defence_shampoo.jpg" alt="Defence Shampoo">
+              </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+  }
+  if(data.Hair_Oil == "Yes"){
+    products.push({'handle': "herbal-hair-oil"});
+     mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/scalp_oil.jpg';
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+     let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/scalp_oil.jpg" alt="Hair Oil">
+              </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+  }
+  if(data.Hair_Ras == "Yes"){
+    products.push({'handle': "hair-growth-herbs"});
+     mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/hair_ras-08.jpg';
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+     let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/hair_ras-08.jpg" alt="Hair Ras">
+              </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+  }
+  if(data.Hair_Vitamin == "Yes"){
+    products.push({'handle': "hair-vitamins"});
+    mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/hair_vitamin.jpg';
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+     let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/hair_vitamin.jpg" alt="Hair Vitamin">
+              </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+  }
+  if(data.Ketoconazole_shampoo == "Yes"){
+    products.push({'handle': "anti-dandruff-shampoo"});
+    mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/anti_dandruff.jpg';
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+     let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/anti_dandruff.jpg" alt="Anti Dandruff Sampoo">
+              </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+  }
+  if(data.Kevon == "Yes"){
+    products.push({'handle': "kevon-lotion-1"});
+    mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/KEVON-13.jpg';
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+    let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/KEVON-13.jpg" alt="Kevon">
+              </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+  }
+  if(data.Minoxidil_2 == "Yes"){
+    products.push({'handle': "minoxidil-2"});
+    mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/minoxidil_2.jpg';
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+    let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/minoxidil_2.jpg" alt="Minoxidil 2Ml">
+              </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+  }
+  if(data.Minoxidil_5 == "Yes"){
+    products.push({'handle': "traya-minoxidil-5"});
+    mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/minoxidil_5.jpg';
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+    let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/minoxidil_5.jpg" alt="Minoxidil 5Ml">
+              </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+    $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+  }
+   if(data.RCP == "Yes"){
+    products.push({'handle': "recap-serum-for-hair-fall-control"});
+       mainImageUrl = '//cdn.shopify.com/s/files/1/0100/1622/7394/files/recap_serum.jpg';
+  	var mainImageTag = `<img id="FeaturedMedia--25101940654258" class="feature-row__image rounded-lg product-featured-media lazyautosizes lazyloaded" alt="Healthy Gut Combo"
+               sizes="445px" srcset="${mainImageUrl}">`;
+      let thumbImage =`<li class="result_thumbnails-item product-single__thumbnail">
+                <img class="product-single__thumbnail-image" src="${mainImageUrl}" alt="ReCaP Serum">
+              </li>`;
+      $('.result-page .product-single__thumbnails').append(thumbImage);
+      $('.result-combo-pr-image .product-single__media').append(mainImageTag);
+     
+  }
+    
+  products.forEach(e => {
+    getProductByHandle(e.handle);
+  });
+}
+
+var prices = 0;
+var variantsIDs = [];
+function getProductByHandle(handle) {
+var $ = jQuery;
+  jQuery.getJSON('/products/'+handle+'.js', function(product) {
+    var p = product.price;
+    prices = prices + p;
+    $('#price').html('₹' + JSON.stringify(prices).slice(0, -2) + '');
+    var discountPrice, discountedPrice, discount ;
+    var selectedMonth = $('.select-plan [name="month"]:checked').closest('label');
+    discount = selectedMonth.find('.main-persentage').data('discount');
+    discountPrice = (prices *discount)/100;
+    discountedPrice = prices - discountPrice;
+//  1 month discount price
+    var month_1_des=$('.month-plan-1').find('.main-persentage').data('discount');
+    var month_3_des=$('.month-plan-3').find('.main-persentage').data('discount');
+    var discount_month_1=prices-((prices *month_1_des)/100);
+    $('.price[data-price]').html(theme.Currency.formatMoney(prices, theme.moneyFormat));
+    $('.all-total-price').html(theme.Currency.formatMoney(discountedPrice*3, theme.moneyFormat));
+//     $('.total-price').html(theme.Currency.formatMoney(discountedPrice*3, theme.moneyFormat));
+    $('.total-price').html(theme.Currency.formatMoney(discountedPrice*3, theme.moneyFormat));
+    $('.total__discout_price_cstm').html(theme.Currency.formatMoney(discountedPrice*3, theme.moneyFormat));
+    $('.total-price-1').html(theme.Currency.formatMoney(prices, theme.moneyFormat));
+    $('.total-price-3').html(theme.Currency.formatMoney(prices * 3, theme.moneyFormat));
+   $('[data-1month]').attr('data-1month', prices).attr('data-3month', discountedPrice*3);
+    $('.total__discount_price_1').html(theme.Currency.formatMoney(discount_month_1, theme.moneyFormat));
+    $('.total__discount_price_3').html(theme.Currency.formatMoney(discountedPrice*3, theme.moneyFormat));
+   /* added by neeraj   */ 
+    var fee = parseInt($('[data-docotr-fee]').attr('data-docotr-fee')); 
+    $('[data-docotr-fee]').html(theme.Currency.formatMoney(fee * $('.select-plan [name="month"]:checked').val(), theme.moneyFormat));
+     
+    var dietPlan = parseInt($('[data-diet-plan]').attr('data-diet-plan'));  
+    $('[data-diet-plan]').html(theme.Currency.formatMoney(dietPlan * $('.select-plan [name="month"]:checked').val(), theme.moneyFormat));
+
+    var hairCoach = parseInt($('[data-hair-coach]').attr('data-hair-coach'));  
+    $('[data-hair-coach]').html(theme.Currency.formatMoney(hairCoach * $('.select-plan [name="month"]:checked').val(), theme.moneyFormat));
+    
+    var total__fess=(discountedPrice * $('.select-plan [name="month"]:checked').val())+(fee * $('.select-plan [name="month"]:checked').val())+(dietPlan * $('.select-plan [name="month"]:checked').val())+(hairCoach * $('.select-plan [name="month"]:checked').val());
+    $('.all-total-price').html(theme.Currency.formatMoney(total__fess, theme.moneyFormat));
+    
+    var fees_charge = (fee * $('.select-plan [name="month"]:checked').val())+(dietPlan * $('.select-plan [name="month"]:checked').val())+(hairCoach * $('.select-plan [name="month"]:checked').val());
+   
+    var percent_discount=100 - Math.round((((total__fess - fees_charge)/total__fess)*100));
+    $('.persentage').text('('+percent_discount +'% Off)');
+    
+    var total_fees_charge_month_1=(discount_month_1* $('.month-plan-1 [name="month"]').val())+(fee * $('.month-plan-1 [name="month"]').val())+(dietPlan * $('.month-plan-1 [name="month"]').val())+(hairCoach * $('.month-plan-1 [name="month"]').val());
+    var fees_charge_month_1=(fee * $('.month-plan-1 [name="month"]').val())+(dietPlan * $('.month-plan-1 [name="month"]').val())+(hairCoach * $('.month-plan-1 [name="month"]').val());
+    var percent_discount_month_1=100 - Math.round((((total_fees_charge_month_1 - fees_charge_month_1)/total_fees_charge_month_1)*100));
+    $('.month-plan-1 .main-persentage').text('('+percent_discount_month_1+'% Off)');
+    
+    var total_fees_charge_month_3=(discountedPrice* $('.month-plan-3 [name="month"]').val())+(fee * $('.month-plan-3 [name="month"]').val())+(dietPlan * $('.month-plan-3 [name="month"]').val())+(hairCoach * $('.month-plan-3 [name="month"]').val());
+    var fees_charge_month_3=(fee * $('.month-plan-3 [name="month"]').val())+(dietPlan * $('.month-plan-3 [name="month"]').val())+(hairCoach * $('.month-plan-3 [name="month"]').val());
+    var percent_discount_month_3 = 100 - Math.round((((total_fees_charge_month_3 - fees_charge_month_3)/total_fees_charge_month_3)*100));
+    $('.month-plan-3 .main-persentage').text('('+month_3_des+'% Off)');
+    //$('#add-to-cart-result-page').html('Buy Now <span>( '+$('.select-plan [name="month"]:checked').val()+' Month Plan )</span>');
+    
+    /* added by neeraj end  */
+   
+    var qty = parseInt($('[name="month"]:checked').val());
+    if(qty == 1){
+      var discount = '22%';
+    } else if(qty == 3){
+      var discount = '33%';
+    }
+
+    if(getCookie("GuestForm_id")){
+    variantsIDs.push({
+      'id': product.variants[0].id,
+      'quantity': qty,
+      properties: {
+        '_result_id': id
+      }
+    });
+    }else{
+    variantsIDs.push({
+      'id': product.variants[0].id,
+      'quantity': qty
+    });
+    }
+    
+  });
+
+    fetch('/products/'+handle+'?view=result-product-list')
+    .then(response => {
+      return response.text();
+    }).then(result => {
+      var html = result;
+        $('.product-section .container > .row').append(html);
+    });
+  
+}
+
+function checkout() {
+  var $ = jQuery,plan;
+  var qty =$('[name="month"]:checked').val();
+  if(qty == 3){
+    plan = "3 Months Plan";
+  var formData = {
+    'items': variantsIDs,
+    sections: 'cart-drawer'
+  }
+  }else{
+    plan = "1 Month";
+    var formData = {
+      'items': variantsIDs,
+      sections: 'cart-drawer'
+    }
+  }
+  variantsIDs.forEach(e => {
+    e.quantity = qty;
+    e.properties = {'plan' : plan};
+  });
+
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => {
+    return response.json();
+  }).then(result => { 
+    var t = document.querySelector('cart-drawer');
+    let cart_drawer = result.sections['cart-drawer'];
+    CartDrawerUpdate(t, cart_drawer);
+  }).catch((error) => {
+    console.error('Error:', error);
+  });
+}
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+function buyItNow() {
+  var $ = jQuery,plan;
+  var qty =$('[name="month"]:checked').val();
+  let formData = {
+    'items': variantsIDs,
+    sections: 'cart-drawer'
+  };
+  if(qty == 3){
+    plan = "3 Months Plan";
+    var acturl = '/cart/checkout?discount=Result5'
+  }else{
+    plan = "";
+    var acturl = '/cart/checkout'
+  }
+  variantsIDs.forEach(e => {
+    e.quantity = qty;
+    e.properties = {'Plan' : plan};
+  });
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => {
+    document.location.href = acturl;
+    return response.json();
+  }).then(result => { 
+    var t = document.querySelector('cart-drawer');
+    let cart_drawer = result.sections['cart-drawer'];
+    CartDrawerUpdate(t, cart_drawer);
+  }).catch((error) => {
+    console.error('Error:', error);
+  });
+}
+
+function ChangePrice(){
+  var $ = jQuery;
+  var getMonth = $('.select-plan [name="month"]:checked');
+  var mainLabel = $(getMonth).closest('label');
+  var price = mainLabel.find('.discounted-price').text(),
+      mainPer = mainLabel.find('.main-persentage').text(),
+      month = $('.select-plan [name="month"]:checked').val();
+  var selectedMonth = $('.select-plan [name="month"]:checked').closest('label'); 
+  var discount_month=$('.select-plan [name="month"]:checked').val();
+  var discountPrice, discountedPrice, discount ;
+  discount = selectedMonth.find('.main-persentage').data('discount');
+  discountPrice = (prices *discount)/100;
+  discountedPrice = prices - discountPrice;
+  
+  $('.select-plan label.active').removeClass('active');
+  
+  if($('.select-plan [name="month"]:checked').val() == 1){    
+    var dataMonth = $('[data-1month]').attr('data-1month')
+    $('.plan-title').text('1 month plan');    
+    }else{
+      var dataMonth = $('[data-1month]').attr('data-3month');
+      $('.plan-title').text('3 months plan');
+      }
+  $('.select-plan [name="month"]:checked').closest('label').addClass('active');
+  var fee = parseInt($('[data-docotr-fee]').attr('data-docotr-fee')); 
+  $('[data-docotr-fee]').html(theme.Currency.formatMoney(fee * $('.select-plan [name="month"]:checked').val(), theme.moneyFormat));
+  
+  var dietPlan = parseInt($('[data-diet-plan]').attr('data-diet-plan'));  
+  $('[data-diet-plan]').html(theme.Currency.formatMoney(dietPlan * $('.select-plan [name="month"]:checked').val(), theme.moneyFormat));
+  
+  var hairCoach = parseInt($('[data-hair-coach]').attr('data-hair-coach'));  
+  $('[data-hair-coach]').html(theme.Currency.formatMoney(hairCoach * $('.select-plan [name="month"]:checked').val(), theme.moneyFormat));
+  
+//   $('.all-total-price').html(theme.Currency.formatMoney(dataMonth, theme.moneyFormat))
+var total__fess=(discountedPrice * $('.select-plan [name="month"]:checked').val())+(fee * $('.select-plan [name="month"]:checked').val())+(dietPlan * $('.select-plan [name="month"]:checked').val())+(hairCoach * $('.select-plan [name="month"]:checked').val());
+var fees_charge=(fee * $('.select-plan [name="month"]:checked').val())+(dietPlan * $('.select-plan [name="month"]:checked').val())+(hairCoach * $('.select-plan [name="month"]:checked').val());
+    $('.persentage').text(mainPer);
+  
+  var percent_discount=Math.round((((total__fess - fees_charge)/total__fess)*100.00));
+//   $('.persentage').text('('+percent_discount +'% Off)');
+ 
+  
+
+//   console.log('discountPrice', discountPrice, 'discountedPrice', discountedPrice);
+
+  var discount = mainLabel.find('.main-persentage').data('discount');
+    
+//     $('.all-total-price').html(theme.Currency.formatMoney(prices * discount_month, theme.moneyFormat));
+    $('.all-total-price').html(theme.Currency.formatMoney(total__fess, theme.moneyFormat));
+//     $('.total-price').not('.discounted-price').html(theme.Currency.formatMoney(discountedPrice*3, theme.moneyFormat));
+    $('.total-price,.price[data-price]').not('.discounted-price').html(theme.Currency.formatMoney(discountedPrice * discount_month, theme.moneyFormat));
+    $('.total__discout_price_cstm').html(theme.Currency.formatMoney(discountedPrice * discount_month, theme.moneyFormat));
+  //  window.open('https://traya.health/discount/33%2525off','_blank');
+    //$('#add-to-cart-result-page').html('Buy Now <span>( '+discount_month+' Month Plan )</span>');
+    $('#Quantity-product-combo-new').val(discount_month);
+  if(parseInt(discount) > 0){
+  //$('[data-del-price]').show();
+  $('[data-del-price]').html(theme.Currency.formatMoney(prices * 3, theme.moneyFormat)).show().parent().addClass('w-75');  
+  }else{
+ $('[data-del-price]').html(theme.Currency.formatMoney(prices, theme.moneyFormat)).hide().parent().removeClass('w-75'); 
+  }
+  
+}
+  
+
+  var position=0;
+      var scrollTo='';
+      var container = $('.main-content');
+      jQuery('.result-gl-rvw').click(function(e, $){
+        e.preventDefault();
+        var attr =$(this).attr('href').split('#')[1];
+        scrollTo = $('#'+attr);
+        scrollTo.trigger('click');
+        position = scrollTo.offset().top
+        - container.offset().top
+        + container.scrollTop()-60;
+        $("html").animate({ scrollTop: position }, 600);
+      });
+  
+//   $(window).on('scroll', function() { 
+//     if ($(window).scrollTop() >= $('.resultco .site-footer').offset().top - window.innerHeight) {
+//       $('.sticky-btn').css('position', 'static');
+//     } else {
+//       $('.sticky-btn').css('position', 'fixed');
+//     }
+//   });

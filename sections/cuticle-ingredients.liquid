@@ -1,0 +1,97 @@
+<!-- section/cuticle-ingredients.liquid -->
+<div class="container pb-md-2 pb-0 cuticle-ind d-none" page_type="cuticle">
+  <h3 class="result-cuticle-title l-0 font-weight-bold text-center">{{ section.settings.title }}</h3>
+  <!-- <===========================for desktop======================================================> -->
+  <div class="cstm_main_figma mb-0">
+    {% for block in section.blocks %}
+      <div class="cstm_child_new_figma {% if block.settings.wrapping_txt_img == 'row-reverse' %}reverse{% endif %}">
+        <div class="cstm_child_figma py-4 py-md-0" style="background-image: url('{{ block.settings.image | img_url:"master" }}')">
+          {% assign mobile_image = block.settings.image_mobile | default: block.settings.image %}
+          <div class="ind-mob-img">
+            <img src="{{ mobile_image | img_url:'master' }}" width="300" height="" alt="Ingredient-{{ forloop.index }}" title="Ingredient {{ forloop.index }}" loading="eager"/>
+          </div>
+          <div class="ind-content">
+            <h4 class="inner_figma_text l-0 text_Fredoka">{{ block.settings.block_title }}</h4>
+            <ul class="tr_texts">
+              {% assign tags = block.settings.tags | split: ',' %}
+              {% for tag in tags %}
+                <li class="tag pb-2">{{ tag }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Curticle Ingredients",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Title"
+      }
+    ],
+    "blocks":[
+     {
+       "type":"text",
+       "name":"content",
+       "settings":[
+        {
+          "type":"text",
+          "id":"block_title",
+          "label":"Title"
+        },
+        {
+           "type":"textarea",
+           "id":"tags",
+           "label":"Tags",
+           "info": "Add tag with comma ex. Softness,Shiny Hair"
+        },
+        {
+          "type":"image_picker",
+          "id":"image",
+          "label":"Image for desktop"
+        },
+        {
+          "type":"image_picker",
+          "id":"image_mobile",
+          "label":"Image for mobile",
+          "info": "If mobile image different from desktop Image"
+        },
+        {
+          "type": "select",
+          "id": "wrapping_txt_img",
+          "label": "Wrapping text image for mobile",
+          "options": [
+            {
+              "value": "row",
+              "label": "row"
+            },
+            {
+              "value": "row-reverse",
+              "label": "row-reverse"
+            }
+          ]
+        }
+       ]
+     }
+    ],
+    "presets":[
+      {
+        "name":"Curticle Ingredients"
+      }
+    ]
+  }
+{% endschema %}
+{% style %}
+  @media only screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .cstm_main_figma .slick-track {
+      margin: auto;
+    }
+  }
+{% endstyle %}

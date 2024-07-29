@@ -1,0 +1,307 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email-form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email-form"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "166305128294ae82a7": {
+      "type": "doctor-details",
+      "blocks": {
+        "text_qygEKE": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "M",
+            "user_name": "Manoj",
+            "user_content": "Dr. ki advice ne meri lifestyle mein positive change laya hai, skin health mein bhi improvement hua."
+          }
+        },
+        "text_YGerCD": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "V",
+            "user_name": "Vikas",
+            "user_content": "Dr. Kalyani's laser treatment helped lighten my scars, highly recommended!"
+          }
+        },
+        "text_iYWNfP": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "R",
+            "user_name": "Rajesh",
+            "user_content": "Dr. Kalyani ne meri wife ki skin problems bahut acche se treat ki, we are so grateful."
+          }
+        }
+      },
+      "block_order": [
+        "text_qygEKE",
+        "text_YGerCD",
+        "text_iYWNfP"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Dr_Kalyani.png",
+        "doctor_name": "Dr. Kalyani Deshmukh",
+        "specialization": "MBBS Bachelor of Medicine and Bachelor of Surgery, MD - Dermatology| 4 YEARS",
+        "education": "MBBS, MD (Dermatology)",
+        "registration_no": "2016\/10\/4453",
+        "ratings": "5\/5",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "Dr. Kalyani Deshmukh brings 7 years of experience in dermatology, specializing in the diagnosis of complex conditions and performing advanced dermatosurgical procedures. Her areas of expertise include clinical dermatology, trichology, dermatosurgery, and aesthetic medicine."
+      }
+    },
+    "1663051295ef2f3597": {
+      "type": "QA-accordion",
+      "blocks": {
+        "6fa898de-78b5-4655-ae1a-b012966439ba": {
+          "type": "faq",
+          "settings": {
+            "Question": "What is  trichology?",
+            "Answer": "Trichology is a specialisation in hair and scalp health."
+          }
+        },
+        "c9f4c5d6-3ac0-41b0-85e6-e58ee8d033fb": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do patients visit Dr Kalyani Deshmukh?",
+            "Answer": "Patients visit Dr. Deshmukh for conditions like scalp acne\/allergies and dry scalp."
+          }
+        },
+        "8fec75d3-d7e4-471a-822b-61879e7e84a8": {
+          "type": "faq",
+          "settings": {
+            "Question": "What does Dr. Kalyani specialize in?",
+            "Answer": "Dr. Kalyani specialises in clinical dermatology, trichology, dermatosurgery, and aesthetic medicine"
+          }
+        },
+        "b4ded07e-5796-46dc-b86f-54f1bfe05d71": {
+          "type": "Publications",
+          "settings": {
+            "PublicationsContent": "The use of forceps for creating sustained pressure for slit skin smear – JAAD 2019 Feb"
+          }
+        },
+        "4080c8e1-f56e-4520-ac47-5f0e0a4adfd7": {
+          "type": "Publications",
+          "settings": {
+            "PublicationsContent": "More efficacious extraction of molluscum bodies with angled forceps – JAAD 2019 Feb"
+          }
+        },
+        "aab97715-d159-4be0-85de-364e9c51c631": {
+          "type": "Publications",
+          "settings": {
+            "PublicationsContent": "Clinical profile of Tinea Pseudoimbricata: an observational study from a tertiary care institution in western Maharashtra, India’ – IJORD March 2020"
+          }
+        },
+        "e70af548-048c-425e-b5ff-434f02af5663": {
+          "type": "Publications",
+          "settings": {
+            "PublicationsContent": "The role of topical tacrolimus in adherence to antifungal therapy in recalcitrant tinea incognito: a preliminary nonrandomized controlled study – IJORD Nov 2018"
+          }
+        },
+        "6fc11b82-6a76-4f56-b9ba-acc7bb5a232c": {
+          "type": "Publications",
+          "settings": {
+            "PublicationsContent": "Clinic-epidemiological study of topical steroid damaged skin and its effects – IJSR June 2020"
+          }
+        }
+      },
+      "block_order": [
+        "6fa898de-78b5-4655-ae1a-b012966439ba",
+        "c9f4c5d6-3ac0-41b0-85e6-e58ee8d033fb",
+        "8fec75d3-d7e4-471a-822b-61879e7e84a8",
+        "b4ded07e-5796-46dc-b86f-54f1bfe05d71",
+        "4080c8e1-f56e-4520-ac47-5f0e0a4adfd7",
+        "aab97715-d159-4be0-85de-364e9c51c631",
+        "e70af548-048c-425e-b5ff-434f02af5663",
+        "6fc11b82-6a76-4f56-b9ba-acc7bb5a232c"
+      ],
+      "settings": {
+        "Accordiontitle1": "Publications",
+        "Accordiontitle2": ""
+      }
+    },
+    "1663051303343eb795": {
+      "type": "doctor-slide",
+      "blocks": {
+        "d7299e03-410e-4620-b476-dc501501bf77": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Siddhi Sonawane",
+            "doctorImage": "shopify:\/\/shop_images\/9814da57-362f-484e-8e96-552a54fae9c2_532bbea6-399b-4ceb-9224-93b07e69ddde.jpg",
+            "specialist": "DERMATOLOGIST | COSMETOLOGIST,",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/siddhi-sonawane"
+          }
+        },
+        "ad9db156-99e2-4429-80e4-3434a2c1b60a": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Sangeeta Menon",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Sangeeta_Menon-1_compact_f6f857e8-df9e-4d0c-9a4f-3a5e4d59cd22.png",
+            "specialist": "DIETICIAN | NUTRITIONIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/sangeeta-menon"
+          }
+        },
+        "6d99ff8c-f8c3-482e-80c9-08076d6996c5": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Harish Balaji. R",
+            "doctorImage": "shopify:\/\/shop_images\/dr.harish_compact_618a6300-f9a1-4fe6-b780-748f8d8a0c62.png",
+            "specialist": "DERMATOLOGIST | MD | AESTHETIC SURGEON,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-harish"
+          }
+        },
+        "3134cc22-9bb4-42ab-93bc-26cd07632c3c": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr.Shailendra Chaubey",
+            "doctorImage": "shopify:\/\/shop_images\/Chaubey_compact_0936c6a4-d63f-450e-a76b-52e95315ba60.png",
+            "specialist": "HEALTH EDUCATOR | AYURVEDIC PRACTITIONER,",
+            "experience": "15 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/shailendra-chaubey"
+          }
+        },
+        "2511d371-18be-4b10-8709-197e9ad74f1f": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Dr. Jaspreet Sarna",
+            "doctorImage": "shopify:\/\/shop_images\/doct1_270x270_76dbdb54-9db4-4ab1-b703-af1f6f88172e.png",
+            "specialist": "DERMATOLOGIST | HAIR SPECIALIST,",
+            "experience": "11 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-jaspreet"
+          }
+        },
+        "b644f915-f274-4653-858c-1af32c78bf58": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Nishita Suratkal",
+            "doctorImage": "shopify:\/\/shop_images\/Group_102352436_5e061c31-5568-4289-a423-545f2150d9b0.png",
+            "specialist": "DIETICIAN | NUTRITIONIST",
+            "experience": "5 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/nishita-suratkal"
+          }
+        },
+        "b6ba2d2f-02e2-4177-b0d1-4d87a2862a3d": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Dr. Moyna Vakil",
+            "doctorImage": "shopify:\/\/shop_images\/dr.Moyna-1_large_7f324788-81f4-4aa8-bedf-0d7b2039fabe.png",
+            "specialist": "Dietician ,Nutritionist",
+            "experience": "10YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/moyna-vakil"
+          }
+        },
+        "ba99c569-7b97-4185-8252-a8bea95cab27": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Shefali Saini",
+            "doctorImage": "shopify:\/\/shop_images\/dr_Shefali_6d8c17e2-4bb6-42b9-95a2-4e900cb9b9d4.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "shopify:\/\/pages\/shefali-saini"
+          }
+        },
+        "9d8de5db-6496-4202-bdc7-ca4d03f0315d": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Dhwani Saxena",
+            "doctorImage": "shopify:\/\/shop_images\/Dr._dhwani.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "5 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_a94c890a-7e0a-4620-bf47-689acc8c0e68.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_c74a1b89-8159-4c5f-b352-2f6cbece7605.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-dhwani"
+          }
+        }
+      },
+      "block_order": [
+        "d7299e03-410e-4620-b476-dc501501bf77",
+        "ad9db156-99e2-4429-80e4-3434a2c1b60a",
+        "6d99ff8c-f8c3-482e-80c9-08076d6996c5",
+        "3134cc22-9bb4-42ab-93bc-26cd07632c3c",
+        "2511d371-18be-4b10-8709-197e9ad74f1f",
+        "b644f915-f274-4653-858c-1af32c78bf58",
+        "b6ba2d2f-02e2-4177-b0d1-4d87a2862a3d",
+        "ba99c569-7b97-4185-8252-a8bea95cab27",
+        "9d8de5db-6496-4202-bdc7-ca4d03f0315d"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "newsletter",
+    "166305128294ae82a7",
+    "1663051295ef2f3597",
+    "1663051303343eb795"
+  ]
+}

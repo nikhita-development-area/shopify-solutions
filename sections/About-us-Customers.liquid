@@ -1,0 +1,162 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<div class="container">
+  <div class="aboutimg">
+    {% if section.settings.about-us-DES-IMG != blank %}
+      <img class="d-none d-md-block" src="{{ section.settings.about-us-DES-IMG | img_url:'' }}">
+    {% endif %}
+    {% if section.settings.about-us-MOB-IMG != blank %}
+      <img class="d-md-none" src="{{ section.settings.about-us-MOB-IMG | img_url:'' }}">
+    {% endif %}
+    {% if section.settings.about-us-MOB-IMG != blank or section.settings.about-us-MOB-IMG != blank %}
+      <div class="aboutimgup text-wrap text-center text-md-left">
+        <h2 class="about-us-img_up_t1">{{ section.settings.heading1 }}</h2> 
+        <h3 class="about-us-img_up_t2">{{ section.settings.heading2 }}</h3>
+        <p class="about-us-img_up_t3">{{ section.settings.paragraph }}</p>
+        <a id="hairtestcta" class="btn btn-dark" data-resultForm href="{{ section.settings.link }}&page={{ page__hndl }}">{{ section.settings.linktext }} <sup>&trade;</sup></a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+ {
+    "name": "About Us Customers",
+    "settings": [ 
+        {
+          "type":"image_picker",
+           "label":"Select Image",
+           "id" : "about-us-DES-IMG"
+        },
+        {
+          "type":"image_picker",
+           "label":"Select Image",
+           "id" : "about-us-MOB-IMG"
+        },
+        {
+          "type":"text",
+          "label":"Enter First Heading",
+          "id":"heading1"
+        },
+        {
+          "type":"text",
+          "label":"Enter Second Heading",
+          "id":"heading2"
+        },
+        {
+          "type": "text",
+          "label": "Enter Text",
+          "id": "paragraph"
+        },
+        {
+          "type": "url",
+          "label": "Button link",
+          "id": "link"
+        },
+        {          
+          "type": "text",
+          "label": "Button text",
+          "id": "linktext",
+          "default": "Click Here"
+        }
+                 
+      ],
+     
+            "presets":[
+          {
+          "name":"About Us Customers",
+          "category":"Custom"
+          }]
+ }
+      
+{% endschema %}
+<style>
+  #shopify-section-{{ section.id }} .aboutimg img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+ .aboutimg {
+    position: relative;
+    height: 602px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .aboutimgup {
+    position: absolute;
+    top: 60px;
+    left: 55px;
+    max-width: 520px;
+    background: #fff;
+    padding: 82px 45px;
+  }
+  .about-us-img_up_t1 {
+    font-size: 101.6px;
+    font-weight: 900;
+    line-height: .8;
+    letter-spacing: -1.02px;
+  }
+  .about-us-img_up_t2 {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -.18px;
+  }
+  .about-us-img_up_t3 {
+    font-size: 21px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: -.53px;
+    max-width: 362px;
+  }
+  @media only screen and (max-width: 767.98px){
+  #shopify-section-{{ section.id }} .container {
+    padding: 0;
+  }
+  .aboutimg {
+    height: 720px;
+    border-radius: 0px;
+  }
+  .aboutimgup {
+    top: 50%;
+    left: 0;
+    max-width: 297px;
+    background: #fff;
+    padding: 67px 26px;
+    right: 0;
+    margin: 0 auto;
+    transform: translateY(-50%);
+  }
+  .about-us-img_up_t1 {
+    font-size: 85px;
+  }
+  .about-us-img_up_t2 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -.15px;
+  } 
+  .about-us-img_up_t3 {
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: -.16px;
+    max-width: 236px;
+    color: #939598;
+  }
+  }
+  @media only screen and (max-width: 767.98px) and (min-width: 576px) {
+    .aboutimgup, .about-us-img_up_t3 {
+      max-width: 375px;
+    }
+  }
+</style>

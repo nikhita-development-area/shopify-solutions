@@ -1,0 +1,111 @@
+<div class="container">
+  <div class="quest_sepeator"> </div>
+  <h2 class="head text-center mt-5 mb-4 py-md-3">{{ section.settings.quest_heading }}</h2>
+  <div class="row text-center text-md-left">
+    <div class="col-md-6">
+      {% if section.settings.quest_desc != blank %}
+      <p class="our_quest_desc my-2 my-md-4">{{ section.settings.quest_desc }}</p>
+      {% endif %}
+    </div>
+    <div class="quest_images col-md-6 order-md-first">
+      {% if section.settings.desk_img != blank %}
+      <img class="d-none d-md-block w-100 rounded-lg my-4" src="{{ section.settings.desk_img |img_url:' '}}"/>
+      {% endif %}
+      {% if section.settings.mob_img != blank %}
+      <img class="d-md-none w-100 rounded-lg my-2" src="{{ section.settings.mob_img |img_url:'master'}}"/>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+ {
+    "name": "About Us Our Quest",
+    "settings": [
+                  {
+                    
+                    "type": "text",
+                    "label": "Heading Text",
+                    "id": "quest_heading"
+                   },
+                 {
+                  "type":"image_picker",
+                   "label":"Select Image",
+                     "id" : "desk_img"
+                },
+                 {
+                  "type":"image_picker",
+                   "label":"Select Image Mobile",
+                     "id" : "mob_img"
+                },
+                {
+                    
+                    "type": "text",
+                    "label": "Discription Text",
+                    "id": "quest_desc"
+                }
+      ],
+     
+            "presets":[
+          {
+          "name":"About Us Our Quest",
+          "category":"Custom"
+          }]
+ }
+      
+{% endschema %}
+<style>
+    .quest_sepeator {
+      position: relative;
+    }
+    .quest_sepeator:before {
+      content: '';
+      width: 10%;
+      height: 8px;
+      position: absolute;
+      background: #414042;
+      border-radius: 6px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    .head {
+      font-size: 51px;
+      font-weight: bold;
+      line-height: 0.76;
+      letter-spacing: -0.26px;
+      color: #414042;
+    }
+  .our_quest_desc {
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: -.24px;
+    color: #939598;
+  }
+  @media only screen and (max-width: 767.98px) and (min-width: 576px) {
+    .quest_sepeator:before {
+      width: 25%;
+    }
+    .head {
+      font-size: 33px;
+      letter-spacing: -0.15px;
+      line-height: 1;
+    }
+    .our_quest_desc {
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: -.16px;
+    }
+  }
+  @media only screen and (max-width: 575.98px){
+    .quest_sepeator:before {
+      width: 25%;
+    }
+    .head {
+      font-size: 35px;
+    }
+    .our_quest_desc {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  }
+</style>
+

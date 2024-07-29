@@ -1,0 +1,74 @@
+<!-- Sections -> stage-safe-scientific -->
+
+{% if section.settings.enable_scientific %}
+<div class="container d-md-none stage-scientific" style="display: none;">
+  <h2 class="font-weight-bold text-center mb-3 scientific-title">{{ section.settings.scientific_title }}</h2>
+
+  <div class="scientific-card">
+    {% for block in section.blocks %}
+      <div class="text-center scientific-data">
+        <img src="{{ block.settings.scientific_img | img_url: 'master' }}" />
+        <p class="text-center">{{ block.settings.scientific_name }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<style>
+  .scientific-title {font-size: 24px; line-height: 30px; letter-spacing: 0em; color: #3F3F3F;}
+  .scientific-card {padding: 10px 0;}
+  .scientific-data {margin-bottom: 10px; border: 1px solid #EEEEEE; box-shadow: 0px 4px 4px 0px #0000000F; border-radius: 8px; margin: 0 5px; height: 90px !important;}
+  .scientific-data img {margin: 5px auto; min-height: 52px;}
+  .scientific-data p {font-size: 12px; font-weight: 600; line-height: 16px;}
+</style>
+
+<script>
+  $(document).ready(function(){
+    $('.scientific-card').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1, 
+      autoplay: true,
+      autoplaySpeed: 3000,
+      dots: 'false',
+      arrows: 'false',
+    });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Stage 2 & 3 Safe Scienti",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_scientific",
+        "label": "Enable Scientific Section"
+      },
+      {
+        "type": "text",
+        "id": "scientific_title",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Scientific Card",
+        "type": "gallery",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "scientific_img",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id": "scientific_name",
+            "label": "Name"
+          }
+        ]
+      }
+    ],
+    "presets": [{"name": "Stage 2 & 3 Safe Scientific"}]
+  }
+{% endschema %}

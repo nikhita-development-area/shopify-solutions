@@ -1,0 +1,68 @@
+{% layout none %}
+
+  <div class="box-section traya_3x_box">
+    <div class="topview-kit">
+    <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352683.png?v=1681979164">
+    <p> Must have</p>
+    </div>
+    <div class="row m-auto pt-md-3">
+      <div class="col-md-4 col-12 p-0 counsult_img product-image">
+        <img src="{{ product.featured_media.preview_image |  img_url: '' }}">
+          <h2>{{product.metafields.custom.product_title}}</h2>
+          <h2>{{ product.price | money }}</h2>
+        <img class="google-review" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352682.png?v=1681979071">
+      </div>
+      <div class="col-md-8 col-12">
+          <h3 class="main-details">
+          {{ product.metafields.custom.sub_heading }}
+          </h3>
+          <h3 class="keytitle">Key Ingredients</h3>
+          <div class="product-image-container key-details position-relative">
+            <div class="product-image_1 combo-icons">
+              <div class="key-data"> 
+              {% assign iconimage = product.metafields.custom.key_ingredients_icon.value  %}
+              {% assign icontext = product.metafields.custom.key_ingredients_text | split:'##' %}
+             
+              {% if iconimage %}
+                {% assign sizes = icontext.size | minus:1  %}
+                <div class="both">
+                    {% for i in iconimage %}
+                      <div class="icontext">
+                        <img src={{ i | image_url }}>
+                        <p>{{ icontext[forloop.index0] }}</p>
+                      </div>
+                    {% endfor %} 
+                </div>
+              {% endif %}
+              </div> 
+            </div>
+          </div>
+    
+          <div class="bottom-re-growth position-relative">
+            <div class="re-growth-bottom-icon position-relative">
+              <div class="image_box">
+                <img class="image2" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/4_2c5d63a7-3040-46db-a913-8d420d19cca6_75x_1_5.png?v=1682432020"/>
+                <p class="holistic">Made Safe</p>
+                </div>
+              <div class="image_box">
+                <img class="image2" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/LOGOS_26_1.png?v=1682432020"/>
+                <p class="holistic">Cruelty free</p>
+              </div>
+              <div class="image_box">
+                <img class="image2" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/LOGOS_39_1.png?v=1682432019"/>
+                <p class="holistic">Allergen free</p>
+              </div>
+              <div class="image_box">
+                <img class="image2" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/LOGOS_11_1.png?v=1682432020"/>
+                <p class="holistic">Doctor recommended</p>
+              </div>
+            </div>
+            <p>Ayurveda Proprietary Medicine</p>
+          </div>
+      </div>
+    </div>
+</div>
+
+ 
+
+

@@ -1,0 +1,568 @@
+t <div class="male-product">
+  {% if section.settings.banner_image != blank %}
+    <div class="male-hero-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-9 d-none d-md-block">
+            <div class="s-hero-text text-center text-md-left text-center">
+            {% if section.settings.Heading1 != blank %}
+              <p class="heading1">{{ section.settings.Heading1 }}</p>
+            {% endif %}
+            {% if section.settings.sub-heading != blank %}
+              <p class="font-weight-bold mt-2 text-dark sub-heading">{{ section.settings.sub-heading }}</p>
+            {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="male-lp-stages stages-section rounded-lg px-md-3 mb-4 mb-md-0 px-4 px-sm-5">
+        <div class="text-center d-md-none mb-4">
+        {% if section.settings.Heading1 != blank %}
+              <p class="heading1">{{ section.settings.Heading1 }}</p>
+        {% endif %}
+        {% if section.settings.sub-heading != blank %}
+          <p class="font-weight-bold mt-2 text-dark sub-heading">{{ section.settings.sub-heading }}</p>
+        {% endif %}
+        </div>
+        {% if section.settings.stage_heading1 != blank %}
+          <h2 class="text-center stage_heading_section">{{ section.settings.stage_heading1 }}</h2>
+        {% endif %}
+        <div class="row">
+        {% for block in section.blocks %}
+        {% if block.type == 'stage' %}
+          <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0 text-center">
+            <p class="logo_text1">Stage {{ forloop.index }}</p>
+            {% if block.settings.stage_image != blank %}
+              <div class="stages-img">
+                <a href="#" data-toggle="modal" data-target="#exampleModalCenter{{ forloop.index }}">
+                  <img src="{{ block.settings.stage_image | img_url:'medium'}}"/>      
+                </a>
+              </div>
+            {% endif %}
+            {% if block.settings.stage_paragraph != blank %}
+              <p class="male-product">{{ block.settings.stage_paragraph }}</p>
+            {% endif %}
+            </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <section class="male-lp-combos" id="HairlineCombo">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center text-md-left mb-4 mb-md-0">
+          <p class="combo-text mb-3">Hair Growth Combos</p>
+          <p class="fw-light">Combos based on Stage of hair loss condition for best results.</p>
+          <p class="fw-light">Stages as defined by Norwards Scale.</p>
+        </div>
+
+        <div class="col-md-3 text-center" hidden>
+          <div class="mlp-product-grid">
+            <div class="mlp-pro-img">
+              <img alt="mlp-Combo-02" src="{{ 'mlp-Combo-02.webp' | asset_img_url: '555x' }}">
+            </div>
+            <h5 class="fw-bold">Anti-Dandruff Combo</h5>
+            <p>Well, we strongly recommend treating dandruff before you start on any of the  hair regrowth treatments.</p>
+            <p><a href="/products/anti-dandruff-kit" class="btn btn-dark">BUY NOW</a></p>
+          </div>
+        </div>
+
+        {% for block in section.blocks %}
+        {% if block.type == 'combo' %}
+        {% assign product = all_products[block.settings.feature_product] %}
+        {%- assign current_variant = product.selected_or_first_available_variant -%}
+        {%- assign compare_at_price = current_variant.compare_at_price -%}
+        {%- assign price = current_variant.price -%}
+
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="mlp-product-grid">
+            <a href="{{ product.url }}">
+            <div class="mlp-pro-img mb-3">
+              {% if block.settings.product_img != blank %}
+              <img alt="{{ block.settings.product_img | escape }}" src="{{ block.settings.product_img | img_url: '555x' }}">
+              {% else %}
+              <img alt="{{ product.featured_image | escape }}" src="{{ product.featured_image | img_url: '555x' }}">
+              {% endif %}
+            </div>
+            <h3 class="fw-bold">{{ product.title }}  </h3>
+            </a>
+
+            <p>{{ block.settings.product_desc }}</p>
+
+            <div class="male-lp-stages p-0 pt-2 rounded-lg transform-none">
+
+              <h5 class="font-size-18 font-weight-bold mb-3">Recommended for:</h5>
+
+              <div class="row">
+
+                {% if block.settings.stage_1 %}
+                {% for block in section.blocks offset: 2 limit:1 %}
+                <div class="col-3 col-md-4 col-lg-3 mb-4 text-center pt-0">
+                  <div class="stages-img my-0">
+                    <a href="#" data-toggle="modal" data-target="#exampleModalCenter{{ forloop.index }}"><img alt="{{ block.settings.stage_image | escape }}" src="{{ block.settings.stage_image | img_url: '120x120' }}"></a>
+                  </div>
+                  <h6 class="fw-bold">Stage {{ forloop.index }}</h6>
+                </div>
+                {% endfor %}
+                {% endif %}
+
+                {% if block.settings.stage_2 %}
+                {% for block in section.blocks offset: 2 %}
+                {% if forloop.index == 2 %}
+                <div class="col-3 col-md-4 col-lg-3 mb-4 text-center pt-0">
+                  <div class="stages-img my-0">
+                    <a href="#" data-toggle="modal" data-target="#exampleModalCenter{{ forloop.index }}"><img alt="{{ block.settings.stage_image | escape }}" src="{{ block.settings.stage_image | img_url: '120x120' }}"></a>
+                  </div>
+                  <h6 class="fw-bold">Stage {{ forloop.index }}</h6>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+
+                {% if block.settings.stage_3 %}
+                {% for block in section.blocks offset: 2 %}
+                {% if forloop.index == 3 %}
+                <div class="col-3 col-md-4 col-lg-3 mb-4 text-center pt-0">
+                  <div class="stages-img my-0">
+                    <a href="#" data-toggle="modal" data-target="#exampleModalCenter{{ forloop.index }}"><img alt="{{ block.settings.stage_image | escape }}" src="{{ block.settings.stage_image | img_url: '120x120' }}"></a>
+                  </div>
+                  <h6 class="fw-bold">Stage {{ forloop.index }}</h6>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+
+                {% if block.settings.stage_4 %}
+                {% for block in section.blocks offset: 2 %}
+                {% if forloop.index == 4 %}
+                <div class="col-3 col-md-4 col-lg-3 mb-4 text-center pt-0">
+                  <div class="stages-img my-0">
+                    <a href="#" data-toggle="modal" data-target="#exampleModalCenter{{ forloop.index }}"><img alt="{{ block.settings.stage_image | escape }}" src="{{ block.settings.stage_image | img_url: '120x120' }}"></a>
+                  </div>
+                  <h6 class="fw-bold">Stage {{ forloop.index }}</h6>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+
+                {% if block.settings.stage_5 %}
+                {% for block in section.blocks offset: 2 %}
+                {% if forloop.index == 5 %}
+                <div class="col-3 col-md-4 col-lg-3 mb-4 text-center pt-0">
+                  <div class="stages-img my-0">
+                    <a href="#" data-toggle="modal" data-target="#exampleModalCenter{{ forloop.index }}"><img alt="{{ block.settings.stage_image | escape }}" src="{{ block.settings.stage_image | img_url: '120x120' }}"></a>
+                  </div>
+                  <h6 class="fw-bold">Stage {{ forloop.index }}</h6>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+
+                {% if block.settings.stage_6 %}
+                {% for block in section.blocks offset: 2 %}
+                {% if forloop.index == 6 %}
+                <div class="col-3 col-md-4 col-lg-3 mb-4 text-center pt-0">
+                  <div class="stages-img my-0">
+                    <a href="#" data-toggle="modal" data-target="#exampleModalCenter{{ forloop.index }}"><img alt="{{ block.settings.stage_image | escape }}" src="{{ block.settings.stage_image | img_url: '120x120' }}"></a>
+                  </div>
+                  <h6 class="fw-bold">Stage {{ forloop.index }}</h6>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+
+              </div>
+            </div>
+            {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false, product: product %}
+
+            {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
+            <div class="product__price mb-4">
+              <div>
+                {% include 'product-price', variant: current_variant, show_vendor: section.settings.show_vendor %}
+                <small>(Inclusive of all taxes)</small>
+              </div>
+            </div>
+
+            <p class="text-danger">FREE shipping on all orders</p>
+
+            <input name="id" value="{{ product.variants.first.id }}" type="hidden" />
+            <input type="hidden" name="return_to" value="/checkout" />
+
+<!--             <button type="submit" name="add"
+                    {% unless current_variant.available %} aria-disabled="true"{% endunless %}
+                    aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
+                    class="btn btn-dark product-form__cart-submit w-auto"
+                    {% if settings.enable_ajax %}aria-haspopup="dialog"{% endif %}
+                    data-add-to-cart>
+              <span data-add-to-cart-text>
+                {% unless current_variant.available %}
+                {{ 'products.product.sold_out' | t }}
+                {% else %}
+                Buy Now
+                {% endunless %}
+              </span>
+            </button> -->
+            
+            <a href="{{ product.url }}" class="btn btn-dark">BUY NOW</a>
+
+            {% endform %}
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>
+  
+</div>
+
+{% for block in section.blocks %}
+{% if block.type == 'stage' %}
+<div class="modal fade" id="exampleModalCenter{{ forloop.index }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+    <div class="border-0 modal-content rounded-lg">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center letter-spacing-normal">
+        <h4 class="font-weight-bold">Stage {{ forloop.index }}</h4>
+        {{ block.settings.stage_desc }}
+        {% if block.settings.stage_product != '' %}
+        {% assign product = all_products[block.settings.stage_product] %}
+        <a href="{{ product.url }}" style="font-size: 15px;" class="btn btn-dark product-form__cart-submit w-auto mb-0">Buy Now</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+  
+{% schema %}
+  {
+    "name": "male-combo-banner",
+    "settings":[
+      {
+        "type": "image_picker",
+        "id": "banner_image",
+        "label": "gallery_image"
+      },
+      {
+        "type": "text",
+        "id": "Heading1",
+        "label": "Heading1"
+      },
+      {
+        "type": "text",
+        "id": "sub-heading",
+        "label": "sub-heading"
+      },
+      {
+        "type": "text",
+        "id": "stage_heading1",
+        "label": "sub-heading"
+      }
+    ],  
+    "blocks":[
+      {
+      "type": "combo",
+      "name": "Product",
+      "settings": [
+  		{
+          "type": "product",
+          "id": "feature_product",
+          "label": "Select product"
+        },
+  		{
+          "type": "image_picker",
+          "id": "product_img",
+          "label": "Custom Product Image"
+        },
+        {
+          "type": "richtext",
+          "id": "product_desc",
+          "label": "Add Short Description"
+        },
+  		{
+          "type": "header",
+          "content": "Recommended for"
+        },
+  		{
+          "type": "checkbox",
+          "id": "stage_1",
+          "label": "Stage 1"
+        },
+  		{
+          "type": "checkbox",
+          "id": "stage_2",
+          "label": "Stage 2"
+        },
+  		{
+          "type": "checkbox",
+          "id": "stage_3",
+          "label": "Stage 3"
+        },
+  		{
+          "type": "checkbox",
+          "id": "stage_4",
+          "label": "Stage 4"
+        },
+  		{
+          "type": "checkbox",
+          "id": "stage_5",
+          "label": "Stage 5"
+        },
+  		{
+          "type": "checkbox",
+          "id": "stage_6",
+          "label": "Stage 6"
+        }
+        ]
+      },
+      {
+        "type": "stage",
+        "name": "male-combo-page",
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "stage_image",
+            "label": "gallery_image"
+          },
+          {
+            "type": "text",
+            "id": "stage_paragraph",
+            "label": "Stage_paragraph"
+          },
+          {
+            "type": "textarea",
+            "id": "stage_desc",
+            "label": "Enter Popup Text"
+          },
+          {
+           "type": "product",
+           "id": "stage_product",
+           "label": "Select product For Stage"
+          }
+        ]
+      }
+    ],  
+    "presets":[
+      {
+        "name":"male-combo-banner",
+        "category":"custom"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .container-fluid{
+    max-width: 95%;
+    width: 100%;
+  }
+  .male-hero-section{
+    background-image:url("{{ section.settings.banner_image | img_url:'master'}}");
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:640px;
+    background-position: center;
+  }
+  .heading1 {
+    font-size: 50px;
+    font-weight: 900!important;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 63px;
+    letter-spacing: normal;
+  }
+  .s-hero-text {
+    max-width:560px;
+    padding-top:150px;
+  }
+  .male-lp-stages {
+    padding: 40px 0;
+    background: #fff;
+  }
+  .sub-heading {
+    margin-top: 16px;
+    border-top: 1px solid #000;
+    padding-top: 16px;
+    font-size: 28px;
+    max-width: 420px;
+  }
+  .stage_heading_section{
+    font-size: 65px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: -.22px;
+    margin-bottom: 30px;
+  }
+  .single-sep {
+    width: 80px;
+    height: 1px;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    background: #414042;
+  }
+  .stages-img{
+    border: 1px solid #000;
+    display: inline-block;
+    border-radius: 100%;
+    width: 100%;
+    padding-top: calc(100% - 2px);
+    position: relative;
+  }
+  .stages-img a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .stages-img a img{
+    width: 80px;
+    margin: 0 auto;
+  }
+  .male-product{
+    font-size:16px;
+    font-family: Nunito Sans,sans-serif!important;
+    color: #414042;
+  }
+  .logo_text1{
+    font-size:15px;
+    font-weight:bold;
+    margin-top:0;
+  }
+  .mlp-product-grid p+p+p {
+    min-height: 135px;
+  }
+  .malecombo .stages-section {
+    margin-top: -14%;
+  }
+  @media only screen and (max-width: 400px){
+    .male-hero-section{
+      background-image:url("{{ section.settings.banner_image | img_url:'master'}}");
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-position: center bottom;
+      height:540px;
+    }
+    .male-lp-stages{
+      margin-top: -85%;
+      padding: 40px 0;
+      background: #fff;
+    }
+    .stage_heading{
+      font-size:30px;
+    }
+   .mobile_view_text{
+      font-size:25px;
+      line-height: 1.25;
+      letter-spacing: -.22px;
+    }
+  .stage_heading_section{
+    font-size:30px;
+     color: #414042;
+    }
+    .male-product{
+      font-size:14px;
+      text-align:center;
+    }
+  }
+ 
+  @media only screen and (max-width: 575.98px){   
+   .male-lp-stages{
+      margin-top: -85%;
+      padding: 40px 0;
+      background: #fff;
+    }
+    .stage_heading{
+      font-size:30px;
+      color: #414042;
+    }
+   .mobile_view_text{
+      font-size:25px;
+      line-height: 1.25;
+      letter-spacing: -.22px;
+    }
+  .stage_heading_section{
+    font-size:30px;
+    color: #414042;
+  }
+  .male-product{
+    font-size:14px;
+    text-align:center;
+  }
+}
+  .letter-spacing-normal {
+    letter-spacing: normal !important;
+  }
+  .male-lp-combos p {
+    font-size: 18px;
+  }
+  .combo-text {
+    font-size: 44px !important;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: -.22px;
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    .stage_heading_section {
+      font-size: 44px;
+    }
+    .mlp-product-grid p+p, .mlp-product-grid p+p+p {
+      min-height: 160px;
+    }
+  }
+  @media only screen and (max-width: 767.98px) {
+    .heading1 {
+      font-size: 35px;
+    }
+    .sub-heading {
+      font-size: 18px;
+    }
+    .stage_heading_section {
+      font-size: 30px;
+    }
+    .malecombo .male-lp-stages {
+      padding: 10px 0;
+    }
+    .combo-text {
+      font-size: 35px !important; 
+    }
+    .male-lp-combos p {
+      font-size: 16px;
+    } 
+    .fw-light {
+      margin-bottom: 0;
+    }
+    .mlp-product-grid p+p+p {
+      min-height: 100px;
+    }
+  }
+  @media only screen and (max-width: 575.98px) {
+    .sub-heading {
+      font-size: 16px;
+    }
+    .combo-text {
+      font-size: 30px !important;
+    }
+    .male-lp-combos .row {
+      margin: auto;
+    }
+    .malecombo .stages-section {
+      margin-top: -120%;
+    }
+  }
+</style>

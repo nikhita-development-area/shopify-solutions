@@ -1,0 +1,155 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "doctor_details_Bjg4bg": {
+      "type": "doctor-details",
+      "blocks": {
+        "text_rDRDyr": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "K",
+            "user_name": "Kamala",
+            "user_content": "Hair care ke liye Dr. ka guidance best tha, healthier hair mile."
+          }
+        },
+        "text_44w6LG": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "V",
+            "user_name": "Vipul",
+            "user_content": "Dr. ke acne treatment se mujhe teen mahine mein hi farak dikhna shuru ho gaya."
+          }
+        },
+        "text_zdKaMe": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Shilpa",
+            "user_content": "Dr. ke suggestions se not only my skin, but overall health improved hui."
+          }
+        }
+      },
+      "block_order": [
+        "text_rDRDyr",
+        "text_44w6LG",
+        "text_zdKaMe"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Dr_Pawan.webp",
+        "doctor_name": "Dr. Pawan singh",
+        "specialization": "MBBS, MD (DERMATOLOGY) |   7 YEARS",
+        "education": "MBBS, MD (Dermatology, venereology & leprosy)",
+        "registration_no": "MMC2015\/020\/663",
+        "ratings": "4.6\/5",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "Dr. Pawan Singh is highly qualified with an MBBS and an MD in Dermatology, Venereology, and Leprosy.  Dr. Singh has also pursued a fellowship in aesthetic lasers and hair transplant, further enhancing his expertise in dermatological treatments and cosmetic procedures."
+      }
+    },
+    "qa_accordion_RLcxnJ": {
+      "type": "QA-accordion",
+      "blocks": {
+        "faq_zaD7Nw": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do people visit Dr. Pawan?",
+            "Answer": "People visit Dr, Vandana for various hair and scalp issues."
+          }
+        },
+        "faq_bMBX4T": {
+          "type": "faq",
+          "settings": {
+            "Question": "What does Dr Pawan specialise in?",
+            "Answer": "His expertise is in dermatological treatments and cosmetic procedures."
+          }
+        }
+      },
+      "block_order": [
+        "faq_zaD7Nw",
+        "faq_bMBX4T"
+      ],
+      "settings": {
+        "Accordiontitle1": "",
+        "Accordiontitle2": ""
+      }
+    },
+    "doctor_slide_pz8hi6": {
+      "type": "doctor-slide",
+      "blocks": {
+        "text_CRrXHW": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Dhwani Saxena",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Dhwani_Saxena.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "5 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-dhwani"
+          }
+        },
+        "text_ibiTiR": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Siddhi Sonawane",
+            "doctorImage": "shopify:\/\/shop_images\/9814da57-362f-484e-8e96-552a54fae9c2_5eeef0b3-1a93-44e5-afb5-2304c1a710a0.jpg",
+            "specialist": "DERMATOLOGIST | COSMETOLOGIST,",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_09a07296-d27a-4096-8eb3-2348712bc827.png",
+            "PageUrl": "shopify:\/\/pages\/siddhi-sonawane"
+          }
+        },
+        "text_CNWX4N": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Shefali Saini",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Shefali_79c32e40-1947-4a30-8292-8f5d3ca1d112.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/shefali-saini"
+          }
+        },
+        "text_QRwgfD": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Dhwani Saxena",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Dhwani_Saxena.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "5 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_09a07296-d27a-4096-8eb3-2348712bc827.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-dhwani"
+          }
+        }
+      },
+      "block_order": [
+        "text_CRrXHW",
+        "text_ibiTiR",
+        "text_CNWX4N",
+        "text_QRwgfD"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "doctor_details_Bjg4bg",
+    "qa_accordion_RLcxnJ",
+    "doctor_slide_pz8hi6"
+  ]
+}

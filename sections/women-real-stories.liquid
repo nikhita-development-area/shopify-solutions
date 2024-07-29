@@ -1,0 +1,76 @@
+<!-- section/women-real-stories.liquid -->
+<div class="container women-real-stories d-none" page_type="cuticle">
+  <p class="result-cuticle-title">{{ section.settings.title }}</p>
+  <p class="section-description pb-3">{{ section.settings.description }}</p>
+  <div class="row stories">
+    {% for block in section.blocks %}
+      <div class="col-12 col-md-4 mb-2 mb-md-0 women__card">
+        <div class="card border rounded-lg">
+          <div class="card__inner ratio"><img src="{{ block.settings.image | img_url: '450x' }}" width="400" height="100%" alt="Image {{ forloop.index }}" title="Image {{ forloop.index }}" loading="eager"></div>
+          <div class="card__content">
+            <p class="cart-title">{{ block.settings.text }}</p>
+            {% assign tags = block.settings.tags | split: ',' %}
+            {% for tag in tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+            <p class="name">{{ block.settings.name }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Women real stories",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Women real stories"
+      },
+      {
+        "type": "textarea",
+        "id": "description",
+        "label": "Description",
+        "default": "1,00,000+ Indian women just like you have achieved their hair goals with us.  Join the league of Traya Heroes."
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Content",
+        "type": "text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Description"
+          },
+          {
+            "type": "textarea",
+            "id": "tags",
+            "label": "Tag",
+            "info": "Add tag with comma ex. Softness,Shiny Hair"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Women name",
+            "default": "Manvi"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Women real stories"
+      }
+    ]
+  }
+{% endschema %}

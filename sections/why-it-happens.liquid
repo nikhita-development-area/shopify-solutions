@@ -1,0 +1,271 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<div class="container section-{{ section.id }}-padding">
+    <div class="pb-3">
+      {% if section.settings.heading != blank %}
+        <p class="text-center why_it_happens_heading d-none d-md-block m-0">{{ section.settings.heading }}</p>
+      {% endif %}
+      {% if section.settings.mobile_heading != blank %}
+        <p class="text-center why_it_happens_heading d-md-none m-0">{{ section.settings.mobile_heading }}</p>
+      {% endif %}
+    </div>
+  {% if section.blocks.size != 0 %}
+    <div class="d-flex flex-wrap align-items-start mb-0 why_haapens_causes_wrapper">
+      {%- for block in section.blocks -%}
+        <div class="mx-2 col-12 rounded-lg d-flex flex-wrap justify-content-center pb-md-3 why_happen_cause_wrap" style="background: {{ block.settings.background_color }};">
+          {% if block.settings.image != blank %}
+          <div class="cause_image_wrapper col-12">
+            {%- assign width = block.settings.image.width | divided_by: 2 -%}
+            {%- assign height = block.settings.image.height | divided_by: 2 -%}
+            {%- assign alt = block.settings.image.alt | default: 'Icon' -%}
+            {{ block.settings.image | image_url: width: 250 | image_tag: width: width, height: height, alt: alt, title: alt, loading: 'lazy', class: 'm-auto d-block cause_image' }}
+          </div>
+          {% endif %}
+          <div class="col-md-11 pt-3 text_area">
+            {% if block.settings.cause_name != blank %}<p class="m-0 pb-md-5 pb-4 text-center cause_name position-relative">{{ block.settings.cause_name }}</p>{% endif %}
+            {% if block.settings.cause_description != blank %}<div class="pb-md-4 pb-3"><p class="m-0 px-4 py-2 text-center cause_description text-white font-weight-bold">{{ block.settings.cause_description }}</p></div>{% endif %}
+            {% if block.settings.how_happens != blank %}<p class="m-0 pb-md-4 pb-2 text-center font-weight-bold how_happens">{{ block.settings.how_happens }}</p>{% endif %}
+            {% if block.settings.how_happens_description != blank %}<p class="m-0 pb-md-3 pb-2 text-center how_happens_description">{{ block.settings.how_happens_description }}</p>{% endif %}
+            {% if block.settings.signs != blank %}<p class="m-0 pb-md-4 pb-2 text-center signs font-weight-bold">{{ block.settings.signs }}</p>{% endif %}
+            {% if block.settings.sign_description != blank %}<p class="m-0 pb-md-3 pb-3 text-center sign_description">{{ block.settings.sign_description }}</p>{% endif %}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <!-- Slick Total No. of Slide & Current Slide No. -->
+    <div class="slider-info1 font-weight-bold text-center" style="font-size: 16px; color: #C4695B;">
+      <span class="current-slide1">1</span>/<span class="total-slides1"></span>
+    </div>
+    <!-- Slick Total No. of Slide & Current Slide No. -->
+  
+  {% endif %}
+  {% if section.settings.btn_text != blank and section.settings.btn_url != blank %}
+    <div class="text-center pt-4">
+      <a href="{{ section.settings.btn_url }}&page={{ page__hndl }}" id="hairtestcta" class="why_happens_btn btn btn-dark">{{ section.settings.btn_text }}</a>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Why It Happens",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Settings"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Enter Desktop Heading",
+        "info": "Desktop Heading"
+      },
+      {
+        "type": "text",
+        "id": "mobile_heading",
+        "label": "Enter Mobile Heading",
+        "info": "Mobile Heading"
+      },
+      {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Enter Button Text",
+        "info": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "btn_url",
+        "label": "Enter Button Url",
+        "info": "Button Url"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "type": "why_happens",
+        "name": "Why Happens",
+        "settings": [
+          {
+            "type": "color",
+            "id": "background_color",
+            "label": "Select Background Color",
+            "info": "Background Color",
+            "default": "#fff"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select Image",
+            "info": "Image"
+          },
+          {
+            "type": "text",
+            "id": "cause_name",
+            "label": "Enter Cause Name",
+            "info": "Cause Name"
+          },
+          {
+            "type": "text",
+            "id": "cause_description",
+            "label": "Enter Cause Description",
+            "info": "Cause Description"
+          },
+          {
+            "type": "text",
+            "id": "how_happens",
+            "label": "Enter Happens Cause",
+            "info": "Happens Cause",
+            "default": "How does it happen?"
+          },
+          {
+            "type": "text",
+            "id": "how_happens_description",
+            "label": "Enter Happens Cause Description",
+            "info": "Happens Cause Description"
+          },
+          {
+            "type": "text",
+            "id": "signs",
+            "label": "Enter Sign",
+            "info": "Sign"
+          },
+          {
+            "type": "text",
+            "id": "sign_description",
+            "label": "Enter Sign Description",
+            "info": "Sign Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Why It Happens"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  #shopify-section-{{ section.id }} .why_happen_cause_wrap {margin-top: 5rem;}
+  #shopify-section-{{ section.id }} .cause_image_wrapper {height:80px;}
+  #shopify-section-{{ section.id }} .text_area {min-height: 530px;}
+  #shopify-section-{{ section.id }} .cause_image {position: relative;top: -100%;}
+  #shopify-section-{{ section.id }} .why_it_happens_heading {font-size: 48px;line-height: 65.47px;font-weight: 800;}
+  #shopify-section-{{ section.id }} .cause_name {font-size: 32px;line-height: 37.92px;font-weight: 800;color: #C4695B;}
+  #shopify-section-{{ section.id }} .cause_name:before {content: '';position: absolute;top: 70%;left: 50%;transform: translate(-50%, -25%);width: 35%;height: 3px;background: #C4695B;}
+  #shopify-section-{{ section.id }} .cause_description {font-size: 20px;line-height: 22px;background: #E49A8F;border-radius: 5px;}
+  #shopify-section-{{ section.id }} .how_happens, #shopify-section-{{ section.id }} .signs {font-size: 30px;line-height: 40.5px;}
+  #shopify-section-{{ section.id }} .how_happens_description, #shopify-section-{{ section.id }} .sign_description {font-size: 20px;line-height: 30px;font-weight: 300;}
+  .why_haapens_causes_wrapper:not(.slick-initialized) > .why_happen_cause_wrap:first-of-type ~* {display: none !important;}
+  #shopify-section-{{ section.id }} .why_haapens_causes_wrapper .slick-dots li.slick-active button:before {color: #C4695B;}
+  #shopify-section-{{ section.id }} .why_haapens_causes_wrapper .slick-dots li button:before {color: #D9D9D9;opacity: 1;}
+  #shopify-section-{{ section.id }} .why_happens_btn {background: #C4695B;border: 1px solid #C4695B;}
+  
+  .why_haapens_causes_wrapper .slick-dots {position: relative; top: 30px;} /* Slick Total No. of Slide & Current Slide No. */
+  .slider-info1 {position: relative; bottom: 30px;} /* Slick Total No. of Slide & Current Slide No. */
+  
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .why_it_happens_heading {font-size: 40px;line-height: 55.47px;}
+    #shopify-section-{{ section.id }} .cause_image_wrapper {height:60px;}
+    #shopify-section-{{ section.id }} .text_area {min-height: 560px;}
+    #shopify-section-{{ section.id }} .cause_image {width: 120px;height: 120px;}
+    #shopify-section-{{ section.id }} .why_happen_cause_wrap {margin-top: 4rem;}
+    #shopify-section-{{ section.id }} .cause_name {font-size: 26px;line-height: 30.92px;}
+    #shopify-section-{{ section.id }} .cause_description {font-size: 16px;line-height: 20px;}
+    #shopify-section-{{ section.id }} .how_happens, #shopify-section-{{ section.id }} .signs {font-size: 24px;line-height: 34.5px;}
+    #shopify-section-{{ section.id }} .how_happens_description, #shopify-section-{{ section.id }} .sign_description {font-size: 16px;line-height: 26px;}
+  }
+  @media only screen and (max-width: 767.98px) {
+    #shopify-section-{{ section.id }} .why_it_happens_heading {font-size: 20px;line-height: 27.28px;}
+    #shopify-section-{{ section.id }} .why_happen_cause_wrap {margin-top: 3rem;}
+    #shopify-section-{{ section.id }} .text_area {min-height: 505px;}
+    #shopify-section-{{ section.id }} .cause_image_wrapper {height:50px;}
+    #shopify-section-{{ section.id }} .cause_image {width: 100px;height: 100px;}
+    #shopify-section-{{ section.id }} .cause_name {font-size: 16px;line-height: 18.96px;}
+    #shopify-section-{{ section.id }} .cause_description {font-size: 14px;line-height: 20px;}
+    #shopify-section-{{ section.id }} .how_happens, #shopify-section-{{ section.id }} .signs {font-size: 14px;line-height: 18.9px;}
+    #shopify-section-{{ section.id }} .how_happens_description, #shopify-section-{{ section.id }} .sign_description {font-size: 12px;line-height: 18px;}
+  }
+{% endstyle %}
+
+<!-- Slick Total No. of Slide & Current Slide No. -->
+<script>  
+  // $(document).ready(function() {
+  //   $('.why_haapens_causes_wrapper').slick({
+  //     slidesToShow: 1,
+  //     slidesToScroll: 1,
+  //     infinite: false,
+  //     autoplay: true,
+  //     autoplaySpeed: 5000,
+  //     arrows: false,
+  //     dots: true,
+  //   });
+  // })
+  
+  $(document).ready(function () {
+    var $slider = $('.why_haapens_causes_wrapper');
+    var $currentSlide = $('.current-slide1');
+    var $totalSlides = $('.total-slides1');
+  
+    $slider.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 3000
+    });
+  
+    // Update Total Slides Count
+    $totalSlides.text($slider.slick('getSlick').slideCount);
+  
+    // Update Current Slide Number
+    $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+      $currentSlide.text(nextSlide + 1);
+    });
+  });
+</script>
+<!-- Slick Total No. of Slide & Current Slide No. -->

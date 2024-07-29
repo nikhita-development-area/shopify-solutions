@@ -1,0 +1,481 @@
+.container_hair-calculator .calculator_pricing-container {
+  display: flex;
+}
+
+.container_hair-calculator .calculator {
+  background: #f1f1f1;
+  padding: 16px 24px;
+  width: 65%;
+}
+
+.container_hair-calculator h1 {
+  text-align: center;
+}
+
+.container_hair-calculator .hairloss-area {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container_hair-calculator .area-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+
+.container_hair-calculator .area-btn {
+  border: 1px solid #d4d4d4;
+  padding: 14px 18px;
+  /* margin: 0 5px; */
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.container_hair-calculator .area-btn.selected {
+  background-color: #b7d340;
+}
+
+.container_hair-calculator .area-path.selected {
+  fill: #b7d340;
+}
+
+.container_hair-calculator .hairloss-image {
+  width: 100%;
+  max-width: 300px;
+}
+
+.container_hair-calculator .slider-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.container_hair-calculator #graft-needed,
+.container_hair-calculator #hair-count {
+  /* width: 100px; */
+  padding: 8px 43px;
+  text-align: center;
+  margin-top: 5px;
+  background-color: #f4f4f4;
+  font-weight:400;
+}
+
+.container_hair-calculator .calculate-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #a4d95b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.container_hair-calculator .cost-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.container_hair-calculator #range-container .range-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container_hair-calculator #range-container #range-bar {
+  width: 100%;
+}
+
+.container_hair-calculator #range-container #range-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #D4D4D4;
+  outline: none;
+  margin: 0;
+}
+#range-container {
+  padding: 25px 38px 16px 38px;
+}
+
+.container_hair-calculator #range-container .inputParent {
+  position: relative;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.container_hair-calculator #range-container .inputSpan {
+  height: 6px;
+  display: block;
+  position: absolute;
+  /* background: #b7d340; */
+  background: #9C9C9C;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container_hair-calculator #range-container #range-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #9C9C9C;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.container_hair-calculator #range-container #range-bar::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #a4d95b;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.container_hair-calculator .results {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.container_hair-calculator .results .result-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_hair-calculator .results .result-item label {
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.82px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  margin-bottom: 0;
+}
+.cost-calculator {
+  font-family: "Nunito Sans";
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 43.65px;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+.container_hair-calculator .results .result-item span {
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+}
+
+.container_hair-calculator .cost-container h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.container_hair-calculator .cost-container p {
+  margin: 10px 0;
+}
+.container_hair-calculator .how-to {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.container_hair-calculator .offer {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.container_hair-calculator .hair_calculate_btn {
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-top: 10px;
+  background: #414042;
+  color: #a4d95b;
+  padding: 10px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.container_hair-calculator .pricing-desktop {
+  width: 35%;
+  background: #d4d4d4;
+  padding: 20px;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container_hair-calculator .pricing-desktop .result-item {
+  background: #ffffff;
+  /* margin: 24px; */
+  padding: 14px;
+  border-radius: 8px;
+}
+
+.container_hair-calculator .pricing-desktop .result-item .pricing {
+  ont-family: "Nunito Sans";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 54.56px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.container_hair-calculator .pricing-desktop .pricing_desktop_btn {
+  margin: 0 -20px;
+  margin-top: 85px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background: #414042;
+  color: white;
+  gap: 15px;
+}
+
+.container_hair-calculator .how_to_use {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  padding-left:0;
+}
+
+.container_hair-calculator .how_to_use h2 {
+  margin-top: 0;
+}
+
+.container_hair-calculator .step {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.container_hair-calculator .step .number {
+  width: 32px;
+  height: 32px;
+  background-color: #999999;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  margin-right: 8px;
+  position: relative;
+}
+
+.container_hair-calculator .step p {
+  margin: 0;
+}
+
+.container_hair-calculator .step:not(:last-child) .number:after {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #999999;
+  z-index: 0;
+}
+
+.container_hair-calculator .pricing-mobile {
+  display: none;
+}
+
+.container_hair-calculator h1 {
+  font-family: "Nunito Sans" !important;
+  font-size: 32px;
+  font-weight: revert-layer;
+  line-height: 43.65px;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+.hairloss-area label {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.1px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+.range-text {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.1px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #414042;
+}
+.result-item {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.82px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+div#calculate_btn {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.82px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.pricing {
+  font-family: Nunito Sans;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 54.56px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+.pricing_text {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.1px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #999999;
+  padding: 5px;
+  padding-bottom: 13px;
+}
+.how_to_use h2 {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 19.1px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+.how_to_use p {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.1px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+@media screen and (max-width: 500px) {
+  .container_hair-calculator {
+    padding: 0;
+  }
+
+  .container_hair-calculator .pricing-desktop {
+    display: none;
+  }
+
+  .container_hair-calculator .calculator {
+    width: 100%;
+  }
+
+  .container_hair-calculator .pricing-mobile {
+    display: block;
+    padding: 50px 40px 30px;
+  }
+
+  .container_hair-calculator .calculator_pricing-container {
+    flex-direction: column;
+  }
+  .container_hair-calculator #product_cost {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    font-weight: 700;
+    font-family: Nunito Sans !important;
+    font-size: 16px;
+    line-height: 21.82px;
+    letter: 1%;
+  }
+
+  .container_hair-calculator .hair_test_btn {
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    background: #414042;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: Nunito Sans !important;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.4px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .container_hair-calculator .hair_test_btn small {
+    font-family: Nunito Sans;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15.6px;
+    text-align: left;
+    margin-left: 5px;
+  }
+
+  .container_hair-calculator .pricing-mobile .pricing {
+    font-family: Nunito Sans !important;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 54.56px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+    text-align: center;
+  }
+
+  .container_hair-calculator .pricing-mobile .pricing_text {
+    text-align: center;
+  }
+  .container_hair-calculator .results .result-item {
+    width: 50%;
+  }
+  .container_hair-calculator .results {
+    width: 100%;
+  }
+  .container_hair-calculator #graft-needed {
+    padding: 10px;
+    width: 100%;
+  }
+  .container_hair-calculator #hair-count {
+    padding: 7px;
+    width: 100%;
+  }
+  .container_hair-calculator .hair_calculate_btn {
+    max-width: unset;
+  }
+  div#calculate_btn {
+    text-align: center;
+    width: 100%;
+  }
+  .pricing-mobile {
+    background: #f1f1f1;
+  }
+}
+@media screen and (min-width: 501px) {
+  .pricing-desktop .pricing {
+    font-size: 20px;
+  }
+}

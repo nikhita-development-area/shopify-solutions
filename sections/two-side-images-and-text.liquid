@@ -1,0 +1,534 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<section class="section-regimen-and-results bg-white pb-5 py-5">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h5 class="regimen_section_title d-none d-md-block text-center my-4">
+          {{ section.settings.regimen_heading1 }}
+        </h5>
+        <div class="image_section1 d-none d-md-block d-none-page w-100">
+          <img src="{{ section.settings.image_section1 | img_url:''}}">
+        </div>
+        <div class="mobile_view_image d-md-none">
+          <img class="w-100" src="{{ section.settings.image_section1 | img_url:''}}">
+        </div>
+        <div class="traya-regimen-content">
+          <div class="text-content text-center">
+            <p class="sub_heading_title d-md-none text-center">
+              {{ section.settings.regimen_heading1 }}
+            </p>
+            <h2>
+              <strong class="d-block">
+                {{ section.settings.text_content1 }}
+              </strong>
+               {{ section.settings.text_content2 }}
+            </h2>
+            <h4 class="text_paragraph">
+              {{ section.settings.paragraphs1 }}
+            </h4>
+          </div>
+        </div>
+        <div class="page_button_link text-center py-4 d-none d-md-block mt-4">
+          <a id="hairtestcta" href="{{ section.settings.button_links1 }}&page={{ page__hndl }}" class="text-white btn btn-dark">
+            {{ section.settings.button_texts1 }} <sup>&trade;</sup>
+          </a> 
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h5 class="regimen_section_title d-none d-md-block text-center my-4">
+          {{ section.settings.regimen_heading2 }}
+        </h5>
+        {% if page.handle == 'faq' or page.handle == 'traya-ingredients' %}
+          <div class="the-results">
+          <div id="shopify-section-home-section-the-results" class="shopify-section">
+          <section id="the-results" class="section-the-results">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="title-bold ">The Results</h2>
+                </div>
+                <div class="row twoSide-review-slide">
+                    {%- for block in section.blocks -%}
+                    <div class="slick-Bothside">
+                        <div class="box-item-review" id="block-{{ block.id }}">
+                            <div class="text-center">
+                                {% if block.settings.main_img != blank %}
+                                <img class="w-100 mb-3" src="{{ block.settings.main_img | img_url: "master" }}"
+                                    alt="Image Not Found">
+                                {% endif %}
+                            </div>
+                            <h5>{{ block.settings.name }}</h5>
+                            <div class="d-flex justify-content-between" style="padding-bottom:16px;">
+                                <p class="fw-light text-uppercase dat-p">{{ block.settings.date }}</p>
+                                <div class="star-rating">
+                                    <span class="icon-star">
+                                        {%- for i in (1..5) -%}
+                                        {%- if i > block.settings.rating -%}{%- break -%}{%- else -%}★{%- endif -%}
+                                        {%- endfor -%}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="mb-3 resl-desc">{{ block.settings.desc }}</div>
+                            <div class="d-flex justify-content-between resl-btm">
+                                <div class="pr-3">
+                                    <p>
+                                        <strong class="d-block">Kit Purchased</strong>
+                                        On complete Traya recommended plan
+                                    </p>
+                                </div>
+                                <div style="width: 50%; text-align: right;">
+                                    <p>
+                                        <strong class="d-block">Used for</strong>
+                                        {{ block.settings.used_for }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+          </section>
+          </div>
+          </div>
+          {% else %}
+         <div class="result-section container">
+          <div class="section-title threefold_section-title text-center my-4">
+            <h2 class="title-with-line">
+              {{ section.settings.sub_heading_title2 }}
+            </h2>
+          </div>
+          <div class="content-wrapper text-center px-2 thre-fld three_field_img">
+            <p class="sub-heading py-4">
+              {{ section.settings.sub_heading }}
+            </p>
+            <h5 class="plus_icon_text mb-4 pt-4 pt-md-2">
+              <span class="text-green">
+               {{ section.settings.plus_icon_text }}
+              </span>
+            </h5>
+            <p class="description mb-md-5 mb-3 mt-5">
+              {{ section.settings.text_discripion }}
+            </p>
+            <div class="mobile_button_link text-center py-4 d-md-none">
+              <a href="{{ section.settings.mobile_button_link }}" class="text-white btn btn-dark">
+                {{ section.settings.mobile_button_text }}
+              </a> 
+            </div>
+          </div>
+        </div>
+          {% endif %}
+        {% if section.settings.button_link1 != blank and section.settings.button_text1 != blank %}
+        <div class="page_button_link text-center py-4 d-none d-md-block mt-4">
+          <a href="{{ section.settings.button_link1 }}" class="text-white btn btn-dark">
+            {{ section.settings.button_text1 }}
+          </a> 
+        </div>
+      {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Two-side-image-&-text",
+  "settings":[
+    {
+      "type": "text",
+      "id": "regimen_heading1",
+      "label": "Left Site heading",
+      "default": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_section1",
+      "label": "image-section1"
+    },
+     {
+      "type": "text",
+      "id": "text_content1",
+      "label": "Bold Text",
+      "default": "content"
+    },
+    {
+      "type": "text",
+      "id": "text_content2",
+      "label": "bold text-content",
+      "default": "content"
+    },
+    {
+      "type": "text",
+      "id": "paragraphs1",
+      "label": "Left side text",
+      "default": "content"
+    },
+    {
+      "type": "text",
+      "id": "button_texts1",
+      "label": "Left Site Button",
+      "default": "Quick links"
+    },
+    {
+      "type": "url",
+      "id": "button_links1",
+      "label": "Left Button link"
+    },
+     {
+      "type": "text",
+      "id": "regimen_heading2",
+      "label": "Right Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile_view",
+      "label": "Right image"
+    },
+    {
+      "type": "text",
+      "id": "sub_heading",
+      "label": "sub-heading",
+      "default": "content"
+    },
+     {
+      "type": "text",
+      "id": "sub_heading_title2",
+      "label": "Right bold content",
+      "default": "content"
+    },
+    {
+      "type": "html",
+      "id": "plus_icon_text",
+      "label": "Three content",
+      "default": "content"
+    },
+    {
+      "type": "text",
+      "id": "text_discripion",
+      "label": "Right Discription",
+      "default": "content"
+    },
+    {
+      "type": "text",
+      "id": "button_text1",
+      "label": "Right side button",
+      "default": "Quick links"
+    },
+     {
+      "type": "url",
+      "id": "mobile_button_link",
+      "label": "Right Button link"
+    },
+    {
+      "type": "url",
+      "id": "button_link1",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "mobile_button_text",
+      "label": "mobile-button-text",
+      "default": "Quick links"
+    }   
+  ],
+  "blocks": [
+    {
+      "type": "columns",
+      "name": "FAQ RESUT",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "image_picker",
+          "id": "main_img",
+          "label": "Select Image"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Enter Date"
+        },
+        
+        {
+           "type": "range",
+           "id": "rating",
+            "label": "Star Rating",
+            "default": 5,
+            "min": 1,
+              "max": 5
+                },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Description"
+        }, 
+        {
+          "type": "text",
+          "id": "used_for",
+          "label": "Used For"
+        }
+        
+      ]
+    }
+  ],
+  "presets":[
+                {
+                  "name":"Two-side-image-&-text"
+                }
+            ]
+}
+{% endschema %}
+
+<style>
+ .regimen_section_title{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.38;
+  }
+  .image_section1{
+    position:relative;
+  }
+  .image_section1 img{
+    width:100%;
+  }
+  .sub_heading_title{
+    font-size: 16px;
+    line-height: 1.61;
+    color: #414042;
+  }
+
+  .section-regimen-and-results .the-regimen .text-content {
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+}
+  .traya-regimen-content .text-content .d-block{
+    font-size:75px;
+    font-weight:600;
+    line-height:1.47;
+    letter-spacing:-0.75px;
+    color: #414042;
+  }
+  .traya-regimen-content .text-content h2{
+    font-size: 51px;
+    font-weight: 300;
+    line-height: 0.74;
+    letter-spacing: -0.26px;
+    color: #414042;
+  }
+  .text_paragraph{
+    font-size: 24px;
+    line-height: 1.47;
+    letter-spacing: -0.26px;
+    color: #231f20;
+    padding: 25px 0px 30px 0px;
+  }
+  .result-section{
+    background-image: url('https://cdn.shopify.com/s/files/1/0563/7187/1811/files/desktop-01.webp?v=1664173275');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:689px;
+  }
+  p.sub-heading {
+    font-size: 18px;
+    line-height: 1.61;
+    color: #414042;
+  }
+ .plus_icon_text .text-green{
+    line-height: 1.03;
+    color: #414042;
+    font-size: 19px;
+    font-weight:600;
+  }
+/*   .text-green span{
+    color: #95b266;
+    margin:8px;
+    font-weight:500;
+  } */
+  .description{
+    font-size: 24px;
+    line-height: 1.8;
+    letter-spacing: -0.24px;
+    color:#000;
+  }
+  .page_button_link a{
+    font-weight:500;
+    font-size:18px;
+  }
+  .section-title .title-with-line {
+    font-size: 44px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: -.22px;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    text-align: center;
+}
+  .traya-regimen-content .text-content {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    width: 96%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+ @media only screen and (max-width: 767px){
+    .traya-regimen-content .text-content .d-block{
+      font-size: 45px;
+    }
+   .text_paragraph{
+    font-size: 16px;
+    padding-bottom: 20px;
+    padding-top: 0;
+    line-height: 23px;
+   }
+    .traya-regimen-content .text-content .d-block{
+      font-size: 45px;
+    }
+    .mobile_view_image img{
+      border-radius:10px;
+    }
+   .traya-regimen-content .text-content .d-block{
+      font-size:50px;
+      font-weight:600;
+    }
+    .traya-regimen-content .text-content h2{
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.74;
+    letter-spacing: -0.26px;
+    color: #414042;
+  }
+  .text_paragraph{
+    font-size: 17px;
+    line-height: 1.47;
+    letter-spacing: -0.26px;
+    color: #231f20;
+    font-weight:300;
+    padding: 25px 0px 30px 0px;
+    margin-top:-25px;
+  }
+  .result-section{
+    background-image: url('https://cdn.shopify.com/s/files/1/0563/7187/1811/files/Mobile-012.webp?v=1664257135');
+    background-repeat: no-repeat;
+    margin-top:20px;
+    border-radius:10px;
+  }
+  .three_field_img{
+    background-image: url('https://cdn.shopify.com/s/files/1/0563/7187/1811/files/home-sec.webp?v=1664255767');
+    background-size:contain;
+    background-repeat: no-repeat;
+  }
+  .sub-heading{
+    max-width: 147px;
+    margin: 0 auto;
+    font-size:12px!important;
+  }
+  .plus_icon_text .text-green{
+    line-height: 1.03;
+    color: #414042;
+    font-size: 12px;
+    font-weight:600;
+  }
+  .description{
+    font-size: 16px!important;
+  }
+  .mobile_button_link a{
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 9px 17px;
+  }
+  .result-section .section-title h2{
+    padding-top: 62% !important; 
+    font-size:30px!important;
+  }
+}
+
+/*   FAQ result */
+
+       .section-the-results h5 {
+        font-size: 21px;
+        font-weight: 800;
+        line-height: 1.29;
+    }
+    .section-the-results .dat-p {
+        font-size: 18px;
+        letter-spacing: 0.09px;
+    }
+    .resl-desc p {
+        font-size: 21px;
+        font-weight: 300;
+        line-height: 1.35;
+        letter-spacing: -1.05px;
+        color: #6d6e71;
+
+    }
+    .resl-btm p {
+        font-size: 15px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.27;
+        letter-spacing: 0.08px;
+    }
+    .resl-btm p strong {
+        font-weight: 700;
+    }
+    .section-the-results .d-block {
+        font-size: 15px;
+        letter-spacing: 0.08px;
+    }
+  .star-rating .icon-star {
+    color: #ffcc00;
+    font-size: 23px;
+}
+    @media only screen and (max-width: 767px) {
+        .section-the-results .section-title .title-bold {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+    }
+  @media only screen and (max-width: 767px){
+.section-regimen-and-results .the-results {
+    background-color: #f1f2f2!important;
+    border-radius: 18px!important;
+    margin-top: 16px;
+    }
+}
+  #shopify-section-home-section-the-results #the-results {
+    padding-left: 46px;
+    padding-right: 42px;
+}
+  .section-regimen-and-results .the-results, .section-regimen-and-results .the-regimen {
+    background-color: #f1f2f2;
+    border-radius: 18px;
+}
+  .twoSide-review-slide, .slick-next:before, .slick-prev:before {
+    font-family: slick;
+    font-size: 0px;
+    line-height: 1;
+    opacity: .75;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  .twoSide-review-slide {
+    opacity: 1;
+  }
+/*   End */
+</style>
+

@@ -1,0 +1,714 @@
+{
+  "sections": {
+    "hair_transplant_graph_zATgne": {
+      "type": "hair-transplant-graph",
+      "settings": {
+      }
+    },
+    "e5dc57fa-edf1-4b11-b340-e50e333c4822": {
+      "type": "banner-hair-doctors",
+      "settings": {
+        "heading": "",
+        "para": "Find the top %s experienced hair transplant doctors in {{ article.title }} and solve your hair concerns.",
+        "heading_sec": "Can your hair loss be managed without a Transplant?",
+        "para_sec": "93% saw results*",
+        "content": "Traya recommends a plan ONLY if we are sure we can help you. That's how confident we are with our treatment. If not, we'll recommend a transplant and guide you through the process.",
+        "button": "Take the Hair Test",
+        "btn_url": "https:\/\/form.traya.health\/questions?cohort=1&location=TopBar&page=home",
+        "image": "shopify:\/\/shop_images\/Frame_102353442.png",
+        "traya_logo": "shopify:\/\/shop_images\/Group_0df6943b-219f-498d-ae53-27a33f77bb64.png",
+        "image_mob": "shopify:\/\/shop_images\/Frame_102353436_3.png"
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "15fc91cd-c2af-465c-a20b-95e09b574181": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_92286839-0a5a-4eb2-9f4b-59e262a77eee.webp",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "7b91c78c-27ba-4fb1-83bd-71d18d98ff11": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/author_Dr.-Shailendra-Chaubey-BAMS_300x_3fb01719-6325-4801-b35b-3fb773a91669.jpg",
+            "author_name": "Dr. Shailendra Chaubey, BAMS",
+            "author_position": "Ayurveda Practioner",
+            "author_bio": "A modern-day Vaidya with 11 years of experience. He is the founder of Dr. Shailendra Healing School that helps patients recover from chronic conditions through the Ayurvedic way of life."
+          }
+        },
+        "7c227a5a-c9dc-41a4-be67-56fd9744afb4": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Dr_Sangeeta_Menon_300x_009e3334-f965-46b9-85d7-b547cc685a18.png",
+            "author_name": "Sangeeta Menon",
+            "author_position": "Nutritionist",
+            "author_bio": "Dr. Menon is a Nutritionist with a degree in Food Science. She is a certified Fitness Trainer with expertise in Sports Nutrition. She is also the Founder and Director of a Health Cafe in Vapi and has authored various e-books on Amazon"
+          }
+        },
+        "b761ad45-3280-4d16-81f8-7eef59284725": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "f95aded9-b7f4-48c4-be79-dca47d88b76a": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "29425351-1f2e-4a75-a247-4a87d748256c": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "84b4ac73-7493-40c2-8155-86358861af79": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "13869846-ceec-47ed-ab13-21ea7644aa00": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Dr._Kalyani_300x_5fb11722-1461-4fcc-b309-9d8646b7ee6e.png",
+            "author_name": "Dr. Kalyani Deshmukh, M.D.",
+            "author_position": "Dermatologist",
+            "author_bio": "Dr. Deshmukh is an MD (Dermatology, Venerology, and Leprosy) with more than 4 years of experience. She successfully runs her own practice and believes that a personalized service maximizes customer satisfaction."
+          }
+        },
+        "456976c8-b942-4614-9cd1-42004bfc2b6b": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Dr._Kalyani_300x_5fb11722-1461-4fcc-b309-9d8646b7ee6e.png",
+            "author_name": "Dr. Kalyani Deshmukh, M.D.",
+            "author_position": "Dermatologist",
+            "author_bio": "Dr. Deshmukh is an MD (Dermatology, Venerology, and Leprosy) with more than 4 years of experience. She successfully runs her own practice and believes that a personalized service maximizes customer satisfaction."
+          }
+        },
+        "3d8acab4-b839-4f30-aa4d-9e5f522e6c53": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Dr._Kalyani_300x_5fb11722-1461-4fcc-b309-9d8646b7ee6e.png",
+            "author_name": "Dr. Kalyani Deshmukh, M.D.",
+            "author_position": "Dermatologist",
+            "author_bio": "Dr. Deshmukh is an MD (Dermatology, Venerology, and Leprosy) with more than 4 years of experience. She successfully runs her own practice and believes that a personalized service maximizes customer satisfaction."
+          }
+        },
+        "462dc1c2-f409-4a87-95fc-cb7cb58d802f": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "520c3ccc-f765-4591-a0d6-9b49b404d7be": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "12af5e35-878e-465e-845c-723f4c5a5248": {
+          "type": "featured-blog",
+          "settings": {
+            "articles": "hair-care\/15-ayurvedic-foods-for-awesome-hair"
+          }
+        },
+        "79737074-71a4-497f-9bdf-426bc0f8607c": {
+          "type": "featured-blog",
+          "settings": {
+            "articles": "hair-care\/telogen-effluvium-symptoms-treatment-and-how-to-recover"
+          }
+        },
+        "cb9d174c-5706-4394-8dc5-12903a9f8ed6": {
+          "type": "featured-blog",
+          "settings": {
+            "articles": "hair-care\/does-having-diabetes-cause-hair-loss"
+          }
+        },
+        "c003d9ab-47b7-4724-a713-c268a51cee6e": {
+          "type": "featured-blog",
+          "settings": {
+            "articles": ""
+          }
+        }
+      },
+      "block_order": [
+        "15fc91cd-c2af-465c-a20b-95e09b574181",
+        "7b91c78c-27ba-4fb1-83bd-71d18d98ff11",
+        "7c227a5a-c9dc-41a4-be67-56fd9744afb4",
+        "b761ad45-3280-4d16-81f8-7eef59284725",
+        "f95aded9-b7f4-48c4-be79-dca47d88b76a",
+        "29425351-1f2e-4a75-a247-4a87d748256c",
+        "84b4ac73-7493-40c2-8155-86358861af79",
+        "13869846-ceec-47ed-ab13-21ea7644aa00",
+        "456976c8-b942-4614-9cd1-42004bfc2b6b",
+        "3d8acab4-b839-4f30-aa4d-9e5f522e6c53",
+        "462dc1c2-f409-4a87-95fc-cb7cb58d802f",
+        "520c3ccc-f765-4591-a0d6-9b49b404d7be",
+        "12af5e35-878e-465e-845c-723f4c5a5248",
+        "79737074-71a4-497f-9bdf-426bc0f8607c",
+        "cb9d174c-5706-4394-8dc5-12903a9f8ed6",
+        "c003d9ab-47b7-4724-a713-c268a51cee6e"
+      ],
+      "disabled": true,
+      "settings": {
+        "blog_show_author": true,
+        "blog_show_date": true,
+        "show_share_buttons": true,
+        "ad_link": ""
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email-form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email-form"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "e3126fd9-6c43-4abf-9a15-2368778eb0e6": {
+      "type": "Comment-form",
+      "disabled": true,
+      "settings": {
+        "heading": "Leave a comment"
+      }
+    },
+    "72a279eb-46dd-43d7-8b00-1deca969458a": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Recommended Products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "single-and-kits",
+        "products_to_show": 12,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "74a5f580-ea99-4e70-99c6-01479f7df391": {
+      "type": "doctors-list",
+      "blocks": {
+        "e0882683-2db2-44b0-bd96-6c770be36959": {
+          "type": "Banner",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/desktop_image.png",
+            "image_mob": "shopify:\/\/shop_images\/mobile-img_9d47d971-6c9c-4084-843b-255e7cbc1f4c.png",
+            "title": "Save on travel time &amp; effort",
+            "paragraph_img": "Get doctor recommended plans from the comfort of your home with Traya.",
+            "btn_text": "Take the Hair Test",
+            "btn_url": ""
+          }
+        },
+        "e77d9c22-310f-4f49-8e96-2f2fc668b6b9": {
+          "type": "Banner",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/RRT599_1.png",
+            "image_mob": "shopify:\/\/shop_images\/RRT599_1.png",
+            "title": "Know the ‘why’ of Hair Fall",
+            "paragraph_img": "Traya’s Hair Test helps you find the root cause of your hair fall.",
+            "btn_text": "Take the Hair Test",
+            "btn_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "e0882683-2db2-44b0-bd96-6c770be36959",
+        "e77d9c22-310f-4f49-8e96-2f2fc668b6b9"
+      ],
+      "settings": {
+        "heading": "Hair doctors in",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "per_page": 4,
+        "image_position": 5
+      }
+    },
+    "d454ce76-4c76-402c-bafa-353889c92422": {
+      "type": "choose-hair-doctors",
+      "settings": {
+        "heading": "What is  Hair Transplantation?",
+        "content": "<p>Hair transplant surgery involves relocating hair from areas of the body with healthy hair growth to balding or thinning regions on the scalp. This procedure, also referred to as hair restoration or hair replacement, is typically considered by individuals who have advanced hair loss and have had no success with other hair loss treatments<\/p>"
+      }
+    },
+    "931469af-a017-427a-8176-941f6204d933": {
+      "type": "cost-hair-doctors",
+      "settings": {
+        "heading": "Indications for Hair Transplant",
+        "content": "<p>When contemplating a hair transplant, two key factors to consider are the size of the balding area and the extent of hair loss. If you have a large balding area or have been experiencing hair loss for many years, you're more likely to benefit from a transplant. Particularly, if your hair loss has advanced beyond the 5th stage of the Norwood Scale of Hair Loss, a transplant may be necessary. However, for hair loss that hasn't progressed to this stage, exploring natural treatment options and making lifestyle adjustments can greatly improve your chances of hair regrowth and enhancement, enabling you to avoid invasive procedures.<\/p>"
+      }
+    },
+    "b885a5c5-678f-40d4-846e-dcef0e74641d": {
+      "type": "conditions-hair-doctors",
+      "settings": {
+        "heading": "Hair Transplant Method",
+        "content": "<p>Hair transplant surgery can be broken down into 3 simple processes. It starts with choosing the extraction process and then implantation followed by the healing and hair growth:<\/p><ul><li><strong>Extraction Process<\/strong>:<\/li><\/ul><ol><li> Follicular Unit Transplantation (FUT): A small strip of skin with hair is taken from the back of your head. <\/li><li>Follicular Unit Extraction (FUE): Instead of removing a strip of skin, individual hair follicles are extracted directly from the scalp with a special tool.<\/li><\/ol><ul><li><strong>Implantation:<\/strong> After extraction, the hair is kept in a condition suitable for regrowth. During implantation, the surgeon creates tiny incisions in the balding or thinning areas of your scalp. The prepared hair follicles are then inserted into these incisions, one by one.<\/li><li><strong> Healing and Hair Growth:<\/strong> Post-surgery, the scalp undergoes a healing period. The transplanted hair initially falls out, but new hair begins to grow from these follicles within a few months. It's crucial to maintain the transplanted hair, as the procedure isn't permanent.<\/li><\/ul><p><\/p>"
+      }
+    },
+    "conditions_hair_doctors_FdPM9y": {
+      "type": "conditions-hair-doctors",
+      "settings": {
+        "heading": "Breakdown of Factors Influencing   {{ article.title }}  Hair Transplant Expenses",
+        "content": "<ul><li>Choice of Hair Transplant Technique - Options include FUE (Follicular Unit Extraction), FUT (Follicular Unit Transplant), and DHT (Direct Hair Transplant).<\/li><li>Professional Fees for Consultation and Surgery - Costs attributed to the doctor's expertise and time during consultation and operation.<\/li><li>Condition Severity Level - Price variations based on the extent of hair loss or baldness.<\/li><li>Graft Quantity Utilization - Impact on cost depending on how many grafts are required for the procedure.<\/li><li>Extraction Method Employed - Financial implications of the chosen method for extracting hair follicles.<\/li><li>Session Count Required for Completion - The total number of sessions needed and how it affects overall expenses.<\/li><\/ul>"
+      }
+    },
+    "cost_hair_doctors_BQdkHG": {
+      "type": "cost-hair-doctors",
+      "settings": {
+        "heading": "Should I get a Hair Transplant?",
+        "content": "<p>If you satisfy the following conditions, you need to get a hair transplant: <\/p><ul><li>Large Balding Area <\/li><li>You have had hair loss for many years <\/li><li>Hair loss beyond 5th Stage of the Norwood Scale of Hair Los<\/li><\/ul><p>However, for hair loss that hasn't progressed to this stage, exploring natural treatment options and making lifestyle adjustments can greatly improve your chances of hair regrowth and enhancement, enabling you to avoid invasive procedures.<\/p>"
+      }
+    },
+    "average_cost_hair_doctors_8C8AJz": {
+      "type": "average_cost-hair-doctors",
+      "blocks": {
+        "average_cost_6c394V": {
+          "type": "average_cost",
+          "settings": {
+            "variables": "Up to 1000 Hair Grafts",
+            "price_range": "Rs. 40,000\/-"
+          }
+        },
+        "average_cost_EyhfJx": {
+          "type": "average_cost",
+          "settings": {
+            "variables": "Above 1000-1500 Hair Grafts",
+            "price_range": "Rs. 52,500\/-"
+          }
+        },
+        "average_cost_LipBNa": {
+          "type": "average_cost",
+          "settings": {
+            "variables": "Above 1500-2000 Hair Grafts",
+            "price_range": "Rs. 70,000\/-"
+          }
+        },
+        "average_cost_6QbaKY": {
+          "type": "average_cost",
+          "settings": {
+            "variables": "Above 2000-2500 Hair Grafts",
+            "price_range": "Rs. 87,500\/-"
+          }
+        },
+        "average_cost_HMJ8Fj": {
+          "type": "average_cost",
+          "settings": {
+            "variables": "Above 2500-3000 Hair Grafts",
+            "price_range": "Rs. 105,000\/-"
+          }
+        },
+        "average_cost_G7J4xE": {
+          "type": "average_cost",
+          "settings": {
+            "variables": "Above 3000-3500 Hair Grafts",
+            "price_range": "Rs. 115,000\/-"
+          }
+        },
+        "average_cost_Gfab3G": {
+          "type": "average_cost",
+          "settings": {
+            "variables": "Above 3500-4000 Hair Grafts",
+            "price_range": "Rs. 145,000"
+          }
+        },
+        "average_cost_gKMzYj": {
+          "type": "average_cost",
+          "settings": {
+            "variables": "PRP per session",
+            "price_range": "Rs. 8000\/-"
+          }
+        }
+      },
+      "block_order": [
+        "average_cost_6c394V",
+        "average_cost_EyhfJx",
+        "average_cost_LipBNa",
+        "average_cost_6QbaKY",
+        "average_cost_HMJ8Fj",
+        "average_cost_G7J4xE",
+        "average_cost_Gfab3G",
+        "average_cost_gKMzYj"
+      ],
+      "settings": {
+      }
+    },
+    "faq_hair_doctors_bD9E6a": {
+      "type": "faq-hair-doctors",
+      "blocks": {
+        "faq_ggQzT4": {
+          "type": "faq",
+          "settings": {
+            "ques": "What are the factors influencing the cost of a Hair Transplant procedure?",
+            "ans": "<p>The cost of a hair transplant procedure is influenced by several factors:<\/p><ul><li><strong>Type of Procedure: <\/strong>FUT (Follicular Unit Transplantation), where a strip of skin is removed, typically costs less than FUE (Follicular Unit Extraction), which involves extracting individual hair follicles. FUE requires more time and specialized skills.<\/li><li><strong>Extent of Hair Loss:<\/strong> The larger the area of baldness, the more grafts are needed, increasing the cost. If you're seeking higher hair density, this also adds to the expense.<\/li><li><strong>Doctor's Expertise: <\/strong>The experience and reputation of the doctor performing the transplant can significantly impact the cost.<\/li><li><strong>Location of the Clinic: <\/strong>Clinics located in popular areas of the city often charge more, reflecting their investment in modern technology and infrastructure.<\/li><\/ul><p>Therefore, when considering a hair transplant in a specific city, these factors collectively contribute to the overall cost of the procedure.<\/p>"
+          }
+        },
+        "faq_LWkUGB": {
+          "type": "faq",
+          "settings": {
+            "ques": "FUT vs FUE Which hair transplant procedure costs more?",
+            "ans": "<p>Typically, in {{ article.title }}, the cost of Follicular Unit Transplantation (FUT) is lower than that of Follicular Unit Extraction (FUE). This difference in cost is due to the methodologies used in each procedure. The FUE technique involves the extraction of individual hair follicles, which requires specialized tools and a higher level of expertise from medical professionals. Conversely, in the FUT method, doctors remove a strip of skin from the patient, which, while simpler and less time-consuming, results in more significant scarring. <\/p>"
+          }
+        },
+        "faq_TzT3nQ": {
+          "type": "faq",
+          "settings": {
+            "ques": "What are the potential side effects and complications of getting a hair transplant?",
+            "ans": "<p>Hair transplant surgery, like any medical procedure, carries potential side effects and complications. Some of the common ones include:<\/p><ul><li>Bleeding and Infection: As with any surgery, there's a risk of bleeding and infection, although these are usually minor and manageable.<\/li><li>Scarring: Both FUT and FUE methods can leave scars. <\/li><li>Pain and Swelling: Some degree of pain and swelling around the surgery area is common, but it typically subsides within a few days.<\/li><li>Numbness or Itching: Temporary numbness or itching may occur in the treated areas.<\/li><li>Folliculitis: This is inflammation of the hair follicles, which can occur when new hairs start to grow.<\/li><li>Shock Loss: Sometimes, the transplanted or even surrounding hair can fall out after the procedure, known as \"shock loss”. This is usually temporary.<\/li><li>Unnatural-Looking Hair: If the procedure isn't done skillfully, the transplanted hair might look unnatural.<\/li><li>Failure to Grow: In some cases, transplanted hair might not take root and grow as expected.<\/li><\/ul>"
+          }
+        },
+        "faq_c6Ani6": {
+          "type": "faq",
+          "settings": {
+            "ques": "What is the price range for hair transplants in {{ article.title }}?",
+            "ans": "<p>The price range for hair transplant in {{ article.title }} ranges anywhere from Rs. 80,000 to 3.5 Lakhs depending on the extent of hair loss, transplant procedure, expertise of doctor and cost of living in the area in {{ article.title }} <\/p>"
+          }
+        },
+        "faq_pcJja4": {
+          "type": "faq",
+          "settings": {
+            "ques": "What is the usual duration of a hair transplant surgery procedure?",
+            "ans": "<p>The usual session duration can last from 4 to 8 hours. However, for extensive hair loss requiring a large number of grafts, the procedure might be planned over two consecutive days. In cases where multiple sessions are needed, the entire process could span several months, with each session lasting several hours and spaced out to allow for healing between sessions.<\/p>"
+          }
+        },
+        "faq_9Lyfqx": {
+          "type": "faq",
+          "settings": {
+            "ques": "How many sessions are required for a complete hair transplant?",
+            "ans": "<p>The usual duration of a hair transplant surgery procedure can range from a single session to multiple sessions spaced several months apart. The number of sessions required for a complete hair transplant also depends on the individual's hair loss extent and the desired density. <\/p>"
+          }
+        },
+        "faq_PgJeqq": {
+          "type": "faq",
+          "settings": {
+            "ques": "What age is it most advisable to get a hair transplant?",
+            "ans": "<p>It's generally advisable to wait until at least the early 30s for a hair transplant. This is because getting a transplant too early might result in an unnatural-looking hairline as hair loss progresses. Moreover, if you are at an early stage, a transplant may not be required and a non-invasive, natural treatment can also help.<\/p>"
+          }
+        },
+        "faq_jEHwJG": {
+          "type": "faq",
+          "settings": {
+            "ques": "Which treatments are considered best for male pattern baldness?",
+            "ans": "<p>At an early stage, natural and holistic treatments such as Traya’s hair treatment can help with Male Pattern Baldness. However, in advanced stages (Stage 5+ of Norwood scale of Hair loss), invasive procedures like a Hair Transplant may help for Male Pattern Baldness. You can give <a href=\"https:\/\/form.traya.health\/questions?\"><span style=\"text-decoration:underline\">Traya’s Free Hair test<\/span><\/a> to find out your stage, hair loss type, reason behind your hair loss and the best treatment option for your hair loss. <\/p>"
+          }
+        },
+        "faq_DBwtb7": {
+          "type": "faq",
+          "settings": {
+            "ques": "What potential adverse effects can occur following a Hair Transplant procedure?",
+            "ans": "<p>he potential adverse effects of a transplant can include infection, bleeding, scarring, unnatural-looking tufts of hair, and a condition called shock loss, where the hair in the treated area falls out and then typically grows back. These are general potential side effects of any surgery and transplant is no exception.  <\/p>"
+          }
+        },
+        "faq_CrN7br": {
+          "type": "faq",
+          "settings": {
+            "ques": "Are there any known complications or risks involved in undergoing a hair transplant?",
+            "ans": "<p>Along with potential risks such as infection, bleeding and scarring, complications due to a hair transplant can also include graft failure, where the transplanted hair does not take root and grow, and continued hair loss in non-treated areas, which can affect the overall appearance.<\/p>"
+          }
+        },
+        "faq_tEGpPt": {
+          "type": "faq",
+          "settings": {
+            "ques": "Can you describe the typical recovery timeline and process after receiving a hair transplant?",
+            "ans": "<p>The typical recovery timeline after a hair transplant involves several stages:<\/p><ul><li>Immediate post-surgery: Swelling, redness, and some discomfort can be expected.<\/li><li>First few weeks: Scabs form around the graft areas and shed along with the transplanted hair, leading to what is known as shock loss.<\/li><li>1 to 3 months: The hair begins to grow from the transplanted follicles.<\/li><li>6 to 12 months: Significant hair growth should be visible, with the final results often seen around 12 to 18 months post-surgery.<\/li><\/ul><p>It's essential to follow post-operative care instructions closely to ensure the best outcome and minimise risks. Moreover, it is important to understand that hair transplantation is not a permanent solution and you still need to maintain your hair post the transplant procedure. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_ggQzT4",
+        "faq_LWkUGB",
+        "faq_TzT3nQ",
+        "faq_c6Ani6",
+        "faq_pcJja4",
+        "faq_9Lyfqx",
+        "faq_PgJeqq",
+        "faq_jEHwJG",
+        "faq_DBwtb7",
+        "faq_CrN7br",
+        "faq_tEGpPt"
+      ],
+      "settings": {
+        "heading": "FAQs",
+        "show_faq": 5,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "849a3ffa-1cdd-44ab-84ce-95373df2c036": {
+      "type": "nearby-city-hair-doctors",
+      "blocks": {
+        "city_Wh9CGU": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Mumbai",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/mumbai"
+          }
+        },
+        "city_LPFiPY": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Gwalior",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/gwalior"
+          }
+        },
+        "city_izp6ae": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Noida",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/noida"
+          }
+        },
+        "city_Q7RVdJ": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant  in Delhi",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/delhi"
+          }
+        },
+        "city_xj7xd4": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant  Kolkata",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/kolkata"
+          }
+        },
+        "city_WeA6j9": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant  in Chennai",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/chennai"
+          }
+        },
+        "city_ApGUb8": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant  in Bangalore",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/bangalore"
+          }
+        },
+        "city_9F4HEc": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Jaipur",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/jaipur"
+          }
+        },
+        "city_7fw447": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Hyderabad",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/hyderabad"
+          }
+        },
+        "city_z3KRG6": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Agra",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/agra"
+          }
+        },
+        "city_GnHKjz": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Kota",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/kota"
+          }
+        },
+        "city_GqakpR": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Varanasi",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/varanasi"
+          }
+        },
+        "city_Qg8jT7": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Pune",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/pune"
+          }
+        },
+        "city_RTX3bH": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant  in Udaipur",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/udaipur"
+          }
+        },
+        "city_q6HJEk": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Faridabad",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/faridabad"
+          }
+        },
+        "city_yQyPAp": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Transplant in Ahmedabad",
+            "url": "https:\/\/traya.health\/blogs\/hair-transplant\/ahmedabad"
+          }
+        }
+      },
+      "block_order": [
+        "city_Wh9CGU",
+        "city_LPFiPY",
+        "city_izp6ae",
+        "city_Q7RVdJ",
+        "city_xj7xd4",
+        "city_WeA6j9",
+        "city_ApGUb8",
+        "city_9F4HEc",
+        "city_7fw447",
+        "city_z3KRG6",
+        "city_GnHKjz",
+        "city_GqakpR",
+        "city_Qg8jT7",
+        "city_RTX3bH",
+        "city_q6HJEk",
+        "city_yQyPAp"
+      ],
+      "settings": {
+        "heading": "Hair Transplant in Nearby Cities of India"
+      }
+    },
+    "f1fa644a-872e-4e13-9eb4-d376cc97ea0a": {
+      "type": "you-may-like",
+      "blocks": {
+        "4e40d696-3720-470b-9c13-53cbfa4189fb": {
+          "type": "text",
+          "settings": {
+            "article": "hair-care\/stages-of-receding-hairline",
+            "date": "",
+            "url": "https:\/\/traya.health\/blogs\/hair-care\/stages-of-receding-hairline",
+            "readmore": "Read more"
+          }
+        },
+        "text_K3YMaF": {
+          "type": "text",
+          "settings": {
+            "article": "hair-care\/redensyl-vs-minoxidil-which-one-is-better",
+            "date": "",
+            "url": "https:\/\/traya.health\/blogs\/hair-care\/redensyl-vs-minoxidil-which-one-is-better",
+            "readmore": "Read more"
+          }
+        },
+        "text_8nqNhD": {
+          "type": "text",
+          "settings": {
+            "article": "hair-care\/trichologist-vs-dermatologist-for-hair",
+            "date": "",
+            "url": "https:\/\/traya.health\/blogs\/hair-care\/trichologist-vs-dermatologist-for-hair",
+            "readmore": "Read more"
+          }
+        }
+      },
+      "block_order": [
+        "4e40d696-3720-470b-9c13-53cbfa4189fb",
+        "text_K3YMaF",
+        "text_8nqNhD"
+      ],
+      "settings": {
+        "title": "You may like",
+        "hair_test": "Take the Hair Test",
+        "hair_test_url": "https:\/\/form.traya.health\/questions?cohort=1&location=TopBar&page=home"
+      }
+    },
+    "banner_blog_hcQtWP": {
+      "type": "banner-blog",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "banner_blog_cta_nrhVWw": {
+      "type": "banner-blog-cta",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "hair_transplant_graph_zATgne",
+    "e5dc57fa-edf1-4b11-b340-e50e333c4822",
+    "main",
+    "newsletter",
+    "e3126fd9-6c43-4abf-9a15-2368778eb0e6",
+    "72a279eb-46dd-43d7-8b00-1deca969458a",
+    "74a5f580-ea99-4e70-99c6-01479f7df391",
+    "d454ce76-4c76-402c-bafa-353889c92422",
+    "931469af-a017-427a-8176-941f6204d933",
+    "b885a5c5-678f-40d4-846e-dcef0e74641d",
+    "conditions_hair_doctors_FdPM9y",
+    "cost_hair_doctors_BQdkHG",
+    "average_cost_hair_doctors_8C8AJz",
+    "faq_hair_doctors_bD9E6a",
+    "849a3ffa-1cdd-44ab-84ce-95373df2c036",
+    "f1fa644a-872e-4e13-9eb4-d376cc97ea0a",
+    "banner_blog_hcQtWP",
+    "banner_blog_cta_nrhVWw"
+  ]
+}

@@ -1,0 +1,1153 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "test_result_hinglish_YUzgzp": {
+      "type": "test-result-hinglish",
+      "settings": {
+      }
+    },
+    "201d730d-62d5-48ba-97aa-4588750bc1a4": {
+      "type": "treatment-month-plan",
+      "settings": {
+      }
+    },
+    "result_products_6XVwAP": {
+      "type": "result-products",
+      "settings": {
+      }
+    },
+    "stage1_why_you_should_hinglish_8xefpL": {
+      "type": "stage1-why-you-should-hinglish",
+      "blocks": {
+        "gallery_jTNbWW": {
+          "type": "Gallery",
+          "settings": {
+            "stage_img": "shopify:\/\/shop_images\/Frame_1000006337_373b4a51-96ab-4baa-8731-f1068763c8d3.png",
+            "stage_txt": "Stage 1",
+            "percentage_img": "shopify:\/\/shop_images\/Frame_1000006351.png",
+            "percentage_value": "80%"
+          }
+        },
+        "gallery_NzYxqM": {
+          "type": "Gallery",
+          "settings": {
+            "stage_img": "shopify:\/\/shop_images\/Frame_1000006337_1.png",
+            "stage_txt": "Stage 3",
+            "percentage_img": "shopify:\/\/shop_images\/Frame_232498d0-3307-444e-b5f6-a74562be98df.png",
+            "percentage_value": "50%"
+          }
+        },
+        "gallery_R7DD6c": {
+          "type": "Gallery",
+          "settings": {
+            "stage_img": "shopify:\/\/shop_images\/Frame_1000006337_2.png",
+            "stage_txt": "Stage 5",
+            "percentage_img": "shopify:\/\/shop_images\/Frame_1000006352.png",
+            "percentage_value": "30%"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_jTNbWW",
+        "gallery_NzYxqM",
+        "gallery_R7DD6c"
+      ],
+      "settings": {
+        "why_title": "Aap ko abhi kyun start karna chahiye?",
+        "why_para": "Aap jitni jaldi treatment shuru karte hain, aap ke hair loss ko rokna utna hi asaan hota hain. Apne active hair follicles ko bachane ke liye aur apna hairline maintain karne ke liye, aaj hi shuru karein."
+      }
+    },
+    "pcos_causing_male_rp_mKNrCB": {
+      "type": "PCOS-causing-MaleRP",
+      "settings": {
+      }
+    },
+    "new_testimonial_hinglish_BhRWwU": {
+      "type": "new-testimonial-hinglish",
+      "settings": {
+      }
+    },
+    "customer_review_hinglish_P6EtjT": {
+      "type": "customer-review-Hinglish",
+      "blocks": {
+        "revies_ELRjDk": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Apaar",
+            "customer_img1": "shopify:\/\/shop_images\/Jan_17_2022..png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Dec_10_2022_1.png",
+            "customer_txt2": "Month 10",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_30_2023.png",
+            "customer_txt3": "Month 18",
+            "review_date": "01 Dec 2022",
+            "review_details": "Hair fall ka issue mujhe 2 saal se tha mainly because of dandruff. Mujhe Traya ka approach to hair fall kaafi wholesome laga and that's why I went for it. I actually saw my dandruff get controlled in just 2-3 weeks.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_q8DeiD": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Rajendra Kumar",
+            "customer_img1": "shopify:\/\/shop_images\/July_13_2023.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/September_02_2023.png",
+            "customer_txt2": "Month 6",
+            "customer_img3": "shopify:\/\/shop_images\/Nov_02_2023_1.png",
+            "customer_txt3": "Month 10",
+            "review_date": "25 Oct 2022",
+            "review_details": "2020 se mai hair fall ko leke bohot hi pareshaan tha. Traya ke ads dekh ke maine socha chalo try kar lete hai. Treatment ke first 10-15 days me thoda hair fall kam hua aur dheere dheere maine accha hair growth notice kiya. Jab baal nahi the tab accha nahi lagta tha but ab baal aa gaye so I am happy.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_CGEaKJ": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ajay",
+            "customer_img1": "shopify:\/\/shop_images\/May_16_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Sep_30_2022_1.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_01_2022_1.png",
+            "customer_txt3": "Month 18",
+            "review_date": "20 Nov 2022",
+            "review_details": "I went to lots of doctors for my hair fall. They used to give me tablets but I didn't see any results. I had almost given up until I saw Trayas ads. I have seen amazing results with the treatment and even recommended it to my friends!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_T3yNnd": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Himanshu",
+            "customer_img1": "shopify:\/\/shop_images\/Apr_10_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jun_13_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Jul_31_2022_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "20 Jul 2022",
+            "review_details": "Agar mujhe Traya 2 saal pehle milta toh kaafi acha hota. Abhi toh mere empty patches cover ho rahe hai aur baby hairs bhi dikh rahe hai. Hair coaches bohot friendly hai, toh problems unke saath share karne bhi easy hota hai. It's the best thing about Traya.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_f4WpTx": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Sanju",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_30_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Sep_07_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_05_2023_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "28 Dec 2022",
+            "review_details": "Mere papa ki tarah, mujhe bhi genetic hair loss tha aur mujhe laga iska kuch nahi hoga. Fir I saw Traya's ad where they were talking about genetic hair loss and woh solve bhi ho sakta hai. Maine hair test le liya aur after 2-3 months mujhe hair growth dikha.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_JJDafX": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Rohan Ambastha",
+            "customer_img1": "shopify:\/\/shop_images\/Oct_31_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Dec_05_2022_2.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_11_2023_2.png",
+            "customer_txt3": "Month 12",
+            "review_date": "28 Nov 2022",
+            "review_details": "When I shifted to Bangalore, suddenly hair fall start hua. Maine onion try kiya, vitamins khaya par kuch kaam nahi kiya. I used to search a lot about hair treatments and I found Traya. What convinced me is that they work on hair fall by understanding what is messed up inside. Traya se mera hair fall 1.5 months mein stop ho gaya.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_PHJT3E": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Lokesh Naik",
+            "customer_img1": "shopify:\/\/shop_images\/May_30_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_25_2022.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_28_2023_1.png",
+            "customer_txt3": "Month 15",
+            "review_date": "5 Apr 2023",
+            "review_details": "Mere baalo mein kaafi dandruff aur fungus jam gayi thi. Main treatment options dhund hi raha tha ki mujhe Traya mila. 3 mahino ke andar, mujhe results dikhne lage. Mujhe mere crown aur hairline, dono jagah hair growth dikhne lagi.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_kQpRTD": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Bhumi",
+            "customer_img1": "shopify:\/\/shop_images\/Before_3_1f39139a-4bf1-412d-9b97-e06c61c01b1d.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Screenshot_2024-01-02_135615_1.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/After_3_663f42b2-02cf-46b2-9fb6-2520d0e701ba.png",
+            "customer_txt3": "Month 12",
+            "review_date": "24 Dec 2023",
+            "review_details": "Bohot saalo se ad dekh ke maine minoxidil, shampoo, tel sab try kiya but results nahi aate the. Fir Traya dikha toh socha try kar leta hoon.Traya ka treatment lene ke baad mere crown area mein ek hair la layer form hua hai. Traya sirf ek product nahi deta but ek proper kit deta hai jisse mujhe results dikhe.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_wKGV7p": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Vaibhav",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_03_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Aug_16_2022_1.png",
+            "customer_txt2": "Month 8",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_18_2023_1.png",
+            "customer_txt3": "Month 12",
+            "review_date": "8 Jan 2023",
+            "review_details": "I always wanted an Ayurvedic treatment for my hair kyunki uske side effects nahi hote hain. Search karte waqt maine dekha ki Traya gives you an ayurvedic treatment toh maine try kiya. Their products are very good, there are no side effects and I saw results in a few months.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        }
+      },
+      "block_order": [
+        "revies_ELRjDk",
+        "revies_q8DeiD",
+        "revies_CGEaKJ",
+        "revies_T3yNnd",
+        "revies_f4WpTx",
+        "revies_JJDafX",
+        "revies_PHJT3E",
+        "revies_kQpRTD",
+        "revies_wKGV7p"
+      ],
+      "settings": {
+        "cstm-stage_hinglish": "cstm-stage_hinglish_2",
+        "customer-head": "Humare Success Stories"
+      }
+    },
+    "customer_review_hinglish_tq7CwC": {
+      "type": "customer-review-Hinglish",
+      "blocks": {
+        "revies_JJDafX": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Rohan Ambastha",
+            "customer_img1": "shopify:\/\/shop_images\/Oct_31_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Dec_05_2022_2.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_11_2023_2.png",
+            "customer_txt3": "Month 12",
+            "review_date": "28 Nov 2022",
+            "review_details": "When I shifted to Bangalore, suddenly hair fall start hua. Maine onion try kiya, vitamins khaya par kuch kaam nahi kiya. I used to search a lot about hair treatments and I found Traya. What convinced me is that they work on hair fall by understanding what is messed up inside. Traya se mera hair fall 1.5 months mein stop ho gaya.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_PHJT3E": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Lokesh Naik",
+            "customer_img1": "shopify:\/\/shop_images\/May_30_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_25_2022.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Aug_28_2023_1.png",
+            "customer_txt3": "Month 15",
+            "review_date": "5 Apr 2023",
+            "review_details": "Mere baalo mein kaafi dandruff aur fungus jam gayi thi. Main treatment options dhund hi raha tha ki mujhe Traya mila. 3 mahino ke andar, mujhe results dikhne lage. Mujhe mere crown aur hairline, dono jagah hair growth dikhne lagi.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_kQpRTD": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Bhumi",
+            "customer_img1": "shopify:\/\/shop_images\/Before_3_1f39139a-4bf1-412d-9b97-e06c61c01b1d.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Screenshot_2024-01-02_135615_1.png",
+            "customer_txt2": "Month 8",
+            "customer_img3": "shopify:\/\/shop_images\/After_3_663f42b2-02cf-46b2-9fb6-2520d0e701ba.png",
+            "customer_txt3": "Month 12",
+            "review_date": "24 Dec 2023",
+            "review_details": "Bohot saalo se ad dekh ke maine minoxidil, shampoo, tel sab try kiya but results nahi aate the. Fir Traya dikha toh socha try kar leta hoon.Traya ka treatment lene ke baad mere crown area mein ek hair la layer form hua hai. Traya sirf ek product nahi deta but ek proper kit deta hai jisse mujhe results dikhe.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_wKGV7p": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Vaibhav",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_03_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Aug_16_2022_1.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_18_2023_1.png",
+            "customer_txt3": "Month 12",
+            "review_date": "8 Jan 2023",
+            "review_details": "I always wanted an Ayurvedic treatment for my hair kyunki uske side effects nahi hote hain. Search karte waqt maine dekha ki Traya gives you an ayurvedic treatment toh maine try kiya. Their products are very good, there are no side effects and I saw results in a few months.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_Mcwp6F": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Syed Saif",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_01_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/image_a4651803-aeac-41d4-a727-fb76ec60ab8d.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Feb_18_2023_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "6 Feb 2023",
+            "review_details": "Mujhe 2 years se hair fall ho raha tha. Pehle bhi treatment karaya tha but kuch khaas results nahi mile. Fir Traya ke ads dekh kar maine unpe thoda research kya. Mujhe laga isse mere baal wapas aa sakte hai toh maine treatment start kiya. Maine 4-5 months mein results dekhe aur mere friends aur family bhi results se shock ho gaye.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_QRAV6y": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Varun Kumar",
+            "customer_img1": "shopify:\/\/shop_images\/May_12_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_08_2022_1.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Sep_18_2023_2.png",
+            "customer_txt3": "Month 15",
+            "review_date": "2 Nov 2022",
+            "review_details": "Hair fall ke wajah se mera confidence bohot low tha. Traya ka treatment leke mere hair wapas aaye toh mujhe bohot accha laga. My advice is treatment aur diet roz follow karenge toh results dikhenge.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_eFFqjk": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Soubhagya Patel",
+            "customer_img1": "shopify:\/\/shop_images\/Jul_05_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_04_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Feb_02_2023_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "26 Jan 2023",
+            "review_details": "Mujhe 4-5 saal se hair fall hai. Maine kabhi bhi koi treatment nahi liya fir mere friend ne Traya recommend kiya. Woh actually khud bhi use karta tha. Uske results dekh ke hi maine treatment start kiya. Aur fir mujhe bhi hair growth dikhne laga.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_QfRY8m": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Manish",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_30_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Sep_12_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_14_2022_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "10 Dec 2022",
+            "review_details": "Mujhe pichle 1-1.5 years se hair fall ka problem ho raha tha aur Traya ka ad dekhne ke baad, maine finally isey solve karne ka decision liya. Mujhe mere baal badhane they, to regularly main medicines leta tha aur Hair Coach ne bhi mujhe bohot motivate kiya regular rehne ke liye.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        }
+      },
+      "block_order": [
+        "revies_JJDafX",
+        "revies_PHJT3E",
+        "revies_kQpRTD",
+        "revies_wKGV7p",
+        "revies_Mcwp6F",
+        "revies_QRAV6y",
+        "revies_eFFqjk",
+        "revies_QfRY8m"
+      ],
+      "settings": {
+        "cstm-stage_hinglish": "cstm-stage_hinglish_3",
+        "customer-head": "Humare Success Stories"
+      }
+    },
+    "customer_review_hinglish_Wi3dnP": {
+      "type": "customer-review-Hinglish",
+      "blocks": {
+        "revies_Mcwp6F": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Syed Saif",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_01_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/image_a4651803-aeac-41d4-a727-fb76ec60ab8d.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Feb_18_2023_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "6 Feb 2023",
+            "review_details": "Mujhe 2 years se hair fall ho raha tha. Pehle bhi treatment karaya tha but kuch khaas results nahi mile. Fir Traya ke ads dekh kar maine unpe thoda research kya. Mujhe laga isse mere baal wapas aa sakte hai toh maine treatment start kiya. Maine 4-5 months mein results dekhe aur mere friends aur family bhi results se shock ho gaye.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_QRAV6y": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Varun Kumar",
+            "customer_img1": "shopify:\/\/shop_images\/May_12_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_08_2022_1.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/Sep_18_2023_2.png",
+            "customer_txt3": "Month 15",
+            "review_date": "2 Nov 2022",
+            "review_details": "Hair fall ke wajah se mera confidence bohot low tha. Traya ka treatment leke mere hair wapas aaye toh mujhe bohot accha laga. My advice is treatment aur diet roz follow karenge toh results dikhenge.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_eFFqjk": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Soubhagya Patel",
+            "customer_img1": "shopify:\/\/shop_images\/Jul_05_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Nov_04_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Feb_02_2023_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "26 Jan 2023",
+            "review_details": "Mujhe 4-5 saal se hair fall hai. Maine kabhi bhi koi treatment nahi liya fir mere friend ne Traya recommend kiya. Woh actually khud bhi use karta tha. Uske results dekh ke hi maine treatment start kiya. Aur fir mujhe bhi hair growth dikhne laga.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_QfRY8m": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Manish",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_30_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Sep_12_2022_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_14_2022_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "10 Dec 2022",
+            "review_details": "Mujhe pichle 1-1.5 years se hair fall ka problem ho raha tha aur Traya ka ad dekhne ke baad, maine finally isey solve karne ka decision liya. Mujhe mere baal badhane they, to regularly main medicines leta tha aur Hair Coach ne bhi mujhe bohot motivate kiya regular rehne ke liye.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_biUy7p": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ved",
+            "customer_img1": "shopify:\/\/shop_images\/Feb_03_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_25_2022_1.png",
+            "customer_txt2": "Month 9",
+            "customer_img3": "shopify:\/\/shop_images\/May_08_2023_1.png",
+            "customer_txt3": "Month 14",
+            "review_date": "03 May 2023",
+            "review_details": "Maine jab treatment shuru kiya, tab main utna regular nahi tha. But jabse maine isey regularly follow karne ka effort liya, mujhe dheere dheere acche results dikhne lage. Ab log mujhe compliments dete hain aur bolte hai ki mere baal kitne ghane ho gaye hain. I'm very happy.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_XBeibY": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Saddam",
+            "customer_img1": "shopify:\/\/shop_images\/Jul_05_2022_3.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Mar_22_2023_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_10_2023_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "3 Dec 2023",
+            "review_details": "College ke dino se hi mera hair fall shuru ho gaya tha. Bohot saare doctors ko dikhaaye lekin koi results nahi mile. Phir jab Traya ka treatment shuru kiya, 3-4 mahine mein hi results dikhne shuru ho gaye. Mere Hair Coach ne mujhe bohot motivate aur guide kiya aur ab mera overall health aur confidence, dono bohot acche condition mein hain!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_m78TPN": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ajay Kumar",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_16_2023_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Oct_04_2023_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_04_2024_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "28 Sep 2023",
+            "review_details": "Mujhe pichle 15 saal se hair fall ka problem tha aur maine to umeed chor di thi, ki baal wapas ayenge. Lekin ek dost ke recommendation pe Traya ka treatment maine shuru kiya. Aur maine medicines ke saath-saath diet aur yoga dono follow kiya - jisse mere 90% baal wapas aa chuke hain!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_CVmqgd": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Dev Singh",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_18_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_11_2023_1.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Nov_14_2023_1.png",
+            "customer_txt3": "Month 6",
+            "review_date": "7 Nov 2023",
+            "review_details": "4 saal se hair fall ka problem ho raha tha. PRP treatment try kiya lekin koi khaas result nahi mila. Lekin Traya ka routine regularly follow karna jab shuru kiya - to ab lag raha hai ki din aur raat ka difference hain mere baalo mein. Mujhe 3 mahine mein hi thoda baby hair growth dekhna shuru kar dya tha and mere Hair Coach ne mujhe regular rehne ke liye bohot motivate kiya.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        }
+      },
+      "block_order": [
+        "revies_Mcwp6F",
+        "revies_QRAV6y",
+        "revies_eFFqjk",
+        "revies_QfRY8m",
+        "revies_biUy7p",
+        "revies_XBeibY",
+        "revies_m78TPN",
+        "revies_CVmqgd"
+      ],
+      "settings": {
+        "cstm-stage_hinglish": "cstm-stage_hinglish_4",
+        "customer-head": "Humare Success Stories"
+      }
+    },
+    "customer_review_hinglish_6QtbEJ": {
+      "type": "customer-review-Hinglish",
+      "blocks": {
+        "revies_biUy7p": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ved",
+            "customer_img1": "shopify:\/\/shop_images\/Feb_03_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_25_2022_1.png",
+            "customer_txt2": "Month 8",
+            "customer_img3": "shopify:\/\/shop_images\/May_08_2023_1.png",
+            "customer_txt3": "Month 14",
+            "review_date": "03 May 2023",
+            "review_details": "Maine jab treatment shuru kiya, tab main utna regular nahi tha. But jabse maine isey regularly follow karne ka effort liya, mujhe dheere dheere acche results dikhne lage. Ab log mujhe compliments dete hain aur bolte hai ki mere baal kitne ghane ho gaye hain. I'm very happy.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_XBeibY": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Saddam",
+            "customer_img1": "shopify:\/\/shop_images\/Jul_05_2022_3.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Mar_22_2023_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_10_2023_1.png",
+            "customer_txt3": "Month 7",
+            "review_date": "3 Dec 2023",
+            "review_details": "College ke dino se hi mera hair fall shuru ho gaya tha. Bohot saare doctors ko dikhaaye lekin koi results nahi mile. Phir jab Traya ka treatment shuru kiya, 3-4 mahine mein hi results dikhne shuru ho gaye. Mere Hair Coach ne mujhe bohot motivate aur guide kiya aur ab mera overall health aur confidence, dono bohot acche condition mein hain!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_m78TPN": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ajay Kumar",
+            "customer_img1": "shopify:\/\/shop_images\/Jun_16_2023_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Oct_04_2023_1.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_04_2024_1.png",
+            "customer_txt3": "Month 8",
+            "review_date": "28 Sep 2023",
+            "review_details": "Mujhe pichle 15 saal se hair fall ka problem tha aur maine to umeed chor di thi, ki baal wapas ayenge. Lekin ek dost ke recommendation pe Traya ka treatment maine shuru kiya. Aur maine medicines ke saath-saath diet aur yoga dono follow kiya - jisse mere 90% baal wapas aa chuke hain!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_CVmqgd": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Dev Singh",
+            "customer_img1": "shopify:\/\/shop_images\/Aug_18_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_11_2023_1.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Nov_14_2023_1.png",
+            "customer_txt3": "Month 6",
+            "review_date": "7 Nov 2023",
+            "review_details": "4 saal se hair fall ka problem ho raha tha. PRP treatment try kiya lekin koi khaas result nahi mila. Lekin Traya ka routine regularly follow karna jab shuru kiya - to ab lag raha hai ki din aur raat ka difference hain mere baalo mein. Mujhe 3 mahine mein hi thoda baby hair growth dekhna shuru kar dya tha and mere Hair Coach ne mujhe regular rehne ke liye bohot motivate kiya.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_ej4rPi": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Jagan Mohan",
+            "customer_img1": "shopify:\/\/shop_images\/Dec_02_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Aug_31_2023.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Dec_20_2023.png",
+            "customer_txt3": "Month 5",
+            "review_date": "13 Dec 2023",
+            "review_details": "Main apne hair fall solutions dhundte waqt bahut research-oriented tha. Main 44 saal ka hoon aur log iss umar mein baal wapas laane ke khwaab nahi rakhte. But, thanks to Traya - mujhe kaafi saara hair growth dikha. Maine apna routine regularly follow kiya aur ek bhi din miss nahi kiya. Agar main kar sakta hoon, aap bhi kar sakte ho.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_fCgEUW": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Rajesh Joshi",
+            "customer_img1": "shopify:\/\/shop_images\/Sep_29_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Dec_18_2022.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Jan_05_2023_2.png",
+            "customer_txt3": "Month 6",
+            "review_date": "2 Jan 2023",
+            "review_details": "Maine itne products try kiye - onion oils, shampoos to treat my hair fall lekin kuch bhi kaam nahi aaya. But Traya ke customer reviews genuine lage to maine bhi shuru kiya. Mere Hair Coach hamesha mujhe positively motivate karte they aur aaj usi ke wajah se mere almost saare baal wapas aa gaye hain. Mere aas paas log shock ho gaye hai mere itne acche results dekh kar.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_Yrt3GD": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Yaseen",
+            "customer_img1": "shopify:\/\/shop_images\/Sep_28_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jan_26_2023.png",
+            "customer_txt2": "Month 7",
+            "customer_img3": "shopify:\/\/shop_images\/Jul_05_2023.png",
+            "customer_txt3": "Month 11",
+            "review_date": "27 Jun 2023",
+            "review_details": "Kaafi logo ne mujhe bola ki - \"Genetic hair fall hain to kuch nahi ho sakta.\" Lekin Traya ne isey galat saabit kar dya. Mujhe pata bhi nahi tha ki hair fall ke internal root causes bhi hote hain. Maine apna routine strictly follow kiya aur mera 1 mahine ke andar hair fall stop ho gaya. Aur itna accha hair growth dekh ke, main aur meri puri family bohot khush hain.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_wHNMJE": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Sourabh Ambildhuke",
+            "customer_img1": "shopify:\/\/shop_images\/Dec_01_2022_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Apr_14_2023.png",
+            "customer_txt2": "Month 6",
+            "customer_img3": "shopify:\/\/shop_images\/Sep_17_2023.png",
+            "customer_txt3": "Month 9",
+            "review_date": "12 Sep 2023",
+            "review_details": "Maine apna hair fall bahut time tak ignore kiya. 2020 mein, finally maine decide kiya ki iska kuch karna padega. Traya ka ad dekha aur unke customer reviews bhi padhein. Usse mujhe treatment shuru karne ka confidence mila. Mujhe kaafi zyada energetic feel hone laga aur abhi main apne baalo se bahut khush hoon.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_NUP4mj": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Krantilal Suresh",
+            "customer_img1": "shopify:\/\/shop_images\/May_24_2023.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Jul_26_2023.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Nov_02_2023_7e2fd8cd-422e-4ff4-ae66-711ed7856438.png",
+            "customer_txt3": "Month 6",
+            "review_date": "25 Oct 2023",
+            "review_details": "Mera hair fall ka problem itna bura tha ki bohot kam baal reh gaye mere they mere scalp pe. Ek dost ne Traya recommend kiya to maine  treatment shuru kiya. Aur 3 mahine ke andar hi mujhe baby hair growth dekhna shuru ho gaya tha. I was very happy ki maine sahi jagah efforts lagaye hain. Maine Traya ka community group bhi join kiya tha - waha pe jo bhi mere doubts hote they, unke jawab mil jaate they aur proper guidance bhi milta tha.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        }
+      },
+      "block_order": [
+        "revies_biUy7p",
+        "revies_XBeibY",
+        "revies_m78TPN",
+        "revies_CVmqgd",
+        "revies_ej4rPi",
+        "revies_fCgEUW",
+        "revies_Yrt3GD",
+        "revies_wHNMJE",
+        "revies_NUP4mj"
+      ],
+      "settings": {
+        "cstm-stage_hinglish": "cstm-stage_hinglish_5",
+        "customer-head": "Humare Success Stories"
+      }
+    },
+    "customer_review_hinglish_GxYTVa": {
+      "type": "customer-review-Hinglish",
+      "blocks": {
+        "revies_YYjYAK": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Uddeshya",
+            "customer_img1": "shopify:\/\/shop_images\/Uddeshya01_300x_4c51e29f-1d12-44df-94c7-e71e8b2de6bd.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Uddeshya02_300x_921c4a78-34b8-4f77-9551-775547339218.jpg",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Uddeshya03_300x_e746d8f1-e039-43ee-8ba1-4b2c0e35bd9c.jpg",
+            "customer_txt3": "Month 6",
+            "review_date": "15 Nov 2021",
+            "review_details": "2016 mein jab mujhe TB hua tha, tab se mera hair loss shuru ho gaya. Maine ummeed chorne se pehle, dermatologists aur treatments try kiye they. Mujhe Traya ka three science combination wala cheez bahut accha laga tha. Product kits use karne ke baad, mujhe ghane baalo ke saath-saath, hair fall bhi kam hota hua nazar aaya.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_KVAjgE": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Rajat Sadh",
+            "customer_img1": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_300x_93ca08ad-9a26-431e-9be5-e83d334cd5ad.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/month_4_300x_3fb66938-dd6c-4fb4-b3c4-9cbf5d46ffcd.jpg",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_1_300x_afb0b676-652a-4589-b14e-646c94c0efcb.jpg",
+            "customer_txt3": "Month 8",
+            "review_date": "21st Feb 2022",
+            "review_details": "Mujhe apne hair loss ke liye surgery nahi karwani thi aur phir mujhe Traya mila. Unhone mujhe 8 mahino mein hi mere poore baal wapas laane mein help ki hain. Thank you so much! Main apne results se bahut khush hoon.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_mjC4nr": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Anonymous",
+            "customer_img1": "shopify:\/\/shop_images\/Month-a1_300x_1.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Month-a1_300x_1.jpg",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Month-a5_300x_982f0e9d-ccbc-4806-b6b9-05cae2075224.jpg",
+            "customer_txt3": "Month 5",
+            "review_date": "15th August 2021",
+            "review_details": "Sirf 5 mahino mein results - mujhe to yakeen hi nahi ho raha tha. Jis kisiko bhi hair problems hain, unhe ye plan try karna chahiye. Ye jaadu ki tarah kaam karta hain.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_6RiGtz": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Sunil Bhadouriya",
+            "customer_img1": "shopify:\/\/shop_images\/Month_1_3_300x_669c0791-76d3-4cbe-9f8c-7eb09a5cee8e.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Month_5_300x_cd0d7c8c-ddc9-41c2-b84f-78309f3933b9.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Month_7_1_300x_18514b4a-141e-43ae-889c-3596cd96ed89.jpg",
+            "customer_txt3": "Month 7",
+            "review_date": "9th Apr 2022",
+            "review_details": "Maine Traya ke baare mein Quora mein padha. Reviews toh positive hi lag rahe they, isiliye maine socha try karke dekhte hain. Isne meri itni help ki hain and main abhi clearly fark dekh sakta hoon.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_8wDAix": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Sandeep",
+            "customer_img1": "shopify:\/\/shop_images\/april_2023__1__360.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Before_3_19160c21-bcf3-4742-80d1-279e2f7d7df8.png",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/December_20221.png",
+            "customer_txt3": "Month 6",
+            "review_date": "04th Oct 2023",
+            "review_details": "Main Traya ke liye bana tha, aur Traya mere liye. 6 mahine baad, mujhe 80% improvement dikh gayi hain. Traya ke disciplined routine aur Hair Coaches ki constant support se main aagey badhta raha.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_AbMxnH": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Taukeer Ali",
+            "customer_img1": "shopify:\/\/shop_images\/July_2022.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/December_2022_2.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/After_8.png",
+            "customer_txt3": "Month 7",
+            "review_date": "08 0ct 2023",
+            "review_details": "Main pichle 10 saal se hair fall se deal kar raha hoon. Lekin Traya meri life mein bas ek simple routine lekar aaya. Bas 7 mahino ke andar, mujhe visible results ke saath zyada energetic bhi feel hota hain. Traya ne sach mein meri hair journey badal ke rakh di.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_HgK6bN": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Sourabh",
+            "customer_img1": "shopify:\/\/shop_images\/December_2022_07bcf90f-8927-428f-9697-d43d95e5a305.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/June_2023.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/After_1_8e4710ab-a111-4685-8ee7-6f13fe13fdde.png",
+            "customer_txt3": "Month 7",
+            "review_date": "07th oct 2023",
+            "review_details": "College se hi hair loss ka problem shuru ho gaya tha - aur maine hair transplant ki jagah, Traya ko chuna. Bharosemand, bharpoor support aur positive results mere Traya journey ke pillars ban gaye hain. Mere acche results dekh kar, mere dosto ko bhi Traya start karne ka motivation mila.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_UrKbg6": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ayan",
+            "customer_img1": "shopify:\/\/shop_images\/ayan_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/1669788100790_20221130_113016_720.jpg",
+            "customer_txt2": "Month 3",
+            "customer_img3": "shopify:\/\/shop_images\/ayan_3.png",
+            "customer_txt3": "Month 5",
+            "review_date": "21 oct  2023",
+            "review_details": "Mere mid-20s mein hi, hair loss ka problem shuru ho gaya tha. COVID ke baad, mere visible bald patch ne mere confidence ko bahut hurt kiya. Shuru-shuru mein Traya ne results nahi dikhayein, lekin 3 mahine baad, kamaal ka regrowth dikhne laga! Mera bald patch gayab ho gaya hain aur mera hair quality aur density behtar ho gaye hain.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_XAxCd9": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ashis beniya",
+            "customer_img1": "shopify:\/\/shop_images\/february_2023_360.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/april_2023_360.png",
+            "customer_txt2": "Month 6",
+            "customer_img3": "shopify:\/\/shop_images\/after__7__360_286e061e-c05f-4fcd-b1be-7f4fcd02c895.png",
+            "customer_txt3": "Month 9",
+            "review_date": "19th oct  2023",
+            "review_details": "Pichle 2-3 saalo se mujhe hair fall ho raha hain. Ghar ke nuskhe aur doctor visits kaam nahi aayein. Traya shuru karne ke 5-6 mahine baad, mere baalo ki quality improve hui aur hair regrowth bhi dikh gayi. Aur mujhe jab bhi zaroorat padti thi, Hair Coaches hamesha support karne ke liye ready rehte they.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_e86b025f-ff5c-4c81-b96f-9efd53fef8e5.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_tH9jyg": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Jagan Mohan",
+            "customer_img1": "shopify:\/\/shop_images\/December_2022_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/July_2023.png",
+            "customer_txt2": "Month 8",
+            "customer_img3": "shopify:\/\/shop_images\/After_2_1ce4c3e5-07f4-400a-b8d5-bf40392c2c70.png",
+            "customer_txt3": "Month 12",
+            "review_date": "19th oct 2023",
+            "review_details": "Mujhe 2012-13 se hair loss ho raha tha. Jab Ayurvedic treatments kaam nahi aayein, tab maine surgery consider kiya. Lekin end mein Traya try kiya - unke testimonials real lage aur mujhe hope mila. In the end, Traya ne acche results diye and I am satisfied.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        }
+      },
+      "block_order": [
+        "revies_YYjYAK",
+        "revies_KVAjgE",
+        "revies_mjC4nr",
+        "revies_6RiGtz",
+        "revies_8wDAix",
+        "revies_AbMxnH",
+        "revies_HgK6bN",
+        "revies_UrKbg6",
+        "revies_XAxCd9",
+        "revies_tH9jyg"
+      ],
+      "settings": {
+        "cstm-stage_hinglish": "cstm-stage_hinglish_TE",
+        "customer-head": "Humare Success Stories"
+      }
+    },
+    "stage1_journey_hinglish_jXLXpr": {
+      "type": "stage1-journey-hinglish",
+      "settings": {
+        "journey_title": "Aap ki Journey Kaisi Dikhegi?"
+      }
+    },
+    "66d88f09-a613-462b-b9d2-3adddbb55ee0": {
+      "type": "stage1-doctors",
+      "blocks": {
+        "1244f778-1b9a-4f3c-9dcd-79e9e3797d8d": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_1_8932d6a6-9ebf-458b-887b-6aed5dcee1da.png",
+            "doctors_name": "Dr. Harish Balaji",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "b45df35d-888e-4f75-ba3b-79aa1469c5ca": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_2_35c4af69-06e8-44e8-a862-7b621d8ef9cd.png",
+            "doctors_name": "Dr. Siddhi Sonawane",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "4a2c04f6-6fc0-4340-b997-7c376a535dd5": {
+          "type": "Gallery",
+          "disabled": true,
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_3_1331786f-b7f1-4602-b4ee-4e27e790aa46.png",
+            "doctors_name": "Dr. Aarushi Mittal",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353025.png"
+          }
+        },
+        "1d9a0352-2aed-4375-ad8b-d2b00ab2e3ea": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_4_5cd5d8ab-55d8-4207-ab86-93d46b7d2afa.png",
+            "doctors_name": "Dr. Dhwani Saxena",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353025.png"
+          }
+        },
+        "044f2589-cf20-4ded-8448-48fed121ba9f": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_5_45fbc0ca-d182-496b-acbc-c781f8309327.png",
+            "doctors_name": "Dr. Kalyani Deshmukh",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353025.png"
+          }
+        },
+        "f507c2cd-ee61-4a25-9687-e81c368ee016": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_6_b5866a73-947a-479a-bd41-06620497c2bd.png",
+            "doctors_name": "Dr. Shreya Deoghare",
+            "doctors_expert": "M.B.B.S, MD (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "f3ca30d1-46c8-4ca0-8ace-ff4c5ac884cd": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_7_dfb5f648-ed21-4111-9993-930921e7d773.png",
+            "doctors_name": "Dr. Shweta Tripati",
+            "doctors_expert": "M.B.B.S, PG (Dermatology)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_9234a15e-bbbb-4ea3-8277-4efa87a66a32.png"
+          }
+        },
+        "d7cd7285-3d30-4e05-aa79-5a3087af2fe1": {
+          "type": "Gallery",
+          "settings": {
+            "doctors_img": "shopify:\/\/shop_images\/Mask_group_03f96e17-673c-4ece-989e-2b3d398bc210.png",
+            "doctors_name": "Dr. Shailendra Chaubey",
+            "doctors_expert": "B.A.M.S (Ayurvedic Practitioner)",
+            "ratings_img": "shopify:\/\/shop_images\/Frame_102353024_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "1244f778-1b9a-4f3c-9dcd-79e9e3797d8d",
+        "b45df35d-888e-4f75-ba3b-79aa1469c5ca",
+        "4a2c04f6-6fc0-4340-b997-7c376a535dd5",
+        "1d9a0352-2aed-4375-ad8b-d2b00ab2e3ea",
+        "044f2589-cf20-4ded-8448-48fed121ba9f",
+        "f507c2cd-ee61-4a25-9687-e81c368ee016",
+        "f3ca30d1-46c8-4ca0-8ace-ff4c5ac884cd",
+        "d7cd7285-3d30-4e05-aa79-5a3087af2fe1"
+      ],
+      "settings": {
+        "doctors_title": "Humare Doctors se Mile"
+      }
+    },
+    "stage1_holistic_safe_hinglish_gGrC4m": {
+      "type": "stage1-holistic-safe-hinglish",
+      "blocks": {
+        "gallery_htB47g": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/Layer_1_c6a3f0fa-8a52-4a50-90b5-4626e9063f73.png",
+            "svg_txt": "NO SIDE EFFECTS"
+          }
+        },
+        "gallery_PyTWhw": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/Layer_1_2_64757acd-4dbd-4dda-8f7f-30af7352946e.png",
+            "svg_txt": "DERMATOLOGICALLY TESTED"
+          }
+        },
+        "gallery_GADBpP": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/Group_c4464c50-adfb-4575-9ebf-475daba3b899.png",
+            "svg_txt": "100% HERBAL ACTIVES"
+          }
+        },
+        "gallery_MJJakt": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/logos_720_3_2edec946-fd52-4ecf-b8a6-233f705ba874.png",
+            "svg_txt": "VEGAN FRIENDLY"
+          }
+        },
+        "gallery_XdffKb": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/logos_720_6_b625b254-bd2f-4a31-bf31-05d6dba8f50b.png",
+            "svg_txt": "ALLERGEN FREE"
+          }
+        },
+        "gallery_xkYaQH": {
+          "type": "Gallery",
+          "settings": {
+            "svg_html": "shopify:\/\/shop_images\/logos_720_4_1e06d60b-b637-4f7a-ac8b-30531aa3e783.png",
+            "svg_txt": "DOCTOR APPROVED"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_htB47g",
+        "gallery_PyTWhw",
+        "gallery_GADBpP",
+        "gallery_MJJakt",
+        "gallery_XdffKb",
+        "gallery_xkYaQH"
+      ],
+      "settings": {
+        "holistic_txt": "Hair Loss ke liye Traya ka Holistic Plan",
+        "holistic_para": "Hum teen sciences ke best qualities ko combine karte hain. Natural ingredients ka istemaal karke, hum aapke treatment se best results dene ki koshish karte hain.",
+        "safe_txt": "Safe aur Scientific"
+      }
+    },
+    "male_treatment_plan_hinglish_iaUrDz": {
+      "type": "male-treatment-plan-hinglish",
+      "settings": {
+      }
+    },
+    "community_banner_FgU7Gf": {
+      "type": "community-banner",
+      "settings": {
+        "comm_desk_banner": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_de78e955-af5b-43c4-ac97-91126668484f.png",
+        "comm_mob_banner": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1_efc87370-e5c5-4141-b277-288baecb5b5f.png",
+        "comm_content": "Apne treatment ke dauran, apne sawalo ke turant <br> jawab paayein."
+      }
+    },
+    "aldrich_faq_HQ3WPe": {
+      "type": "aldrich-faq",
+      "blocks": {
+        "gallery_h7r3pB": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Kit deliver hone me kitna samay lagega?<\/p>",
+            "aldrich_ans": "<p>Traya ke products aam taur par aapke purchase date se 3-5 working days ke andar deliver kiye jaate hain.<\/p>"
+          }
+        },
+        "gallery_gpXwhw": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Mujhe mera prescription kab aur kaise milega?<\/p>",
+            "aldrich_ans": "<p>Jab aap apne customized kit ke liye order karte hain, Traya ke doctors aapke test results ko review karte hain, treatment ko approve karte hain, aur ek digital prescription banate hain. Uske baad, ye prescription app par available hota hai. Vaise toh aap apne Traya registered mobile number ka use karke website par login karke bhi prescription access kar sakte hain.<\/p>"
+          }
+        },
+        "gallery_hcCHdF": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Hair coach kaun hai aur kya karte hai?<\/p>",
+            "aldrich_ans": "<p>Traya ke hair coaches ko doctors ke dwara hair science aur product knowledge par mahino tak training ki jaati hai. Ye aapke hair regrowth journey ke dauran aapko guide karte hain. Wo aapko treatment shuru karne mein madad karte hain, aapke progress ko track karte hain, aur zaroorat parne par treatment mein zaroori badlav karne ki advice dete hain, taki aapko behtar results mil sake. Hair coaches ke sath aap app se bhi kabhi bhi appointment book kar sakte hain.<\/p>"
+          }
+        },
+        "gallery_EPcCNX": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Traya ne mere baalo ki jaanch online kaise ki?<\/p>",
+            "aldrich_ans": "<p>Traya ka online hair test doctors ke saath milkar banaya gaya hai. Isme aapke treatment plan ko banate waqt dhyan mein lene wali sabhi swasthya sthitiyan shaamil ki gayi hain, jo aapke balo ke ilaj mein mahatvapurn hai. Scalp ki tasveer ke dwara balo ke girne ki prakriti aur star ko jaancha jata hai, jisse kisi bhi physical test ki zaroorat nahi hoti.<\/p>"
+          }
+        },
+        "gallery_nEKJpJ": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Mujhe results kab tak dikhenge?<\/p>",
+            "aldrich_ans": "<p>Behtar results aam taur par 5 se 12 mahino ke beech mein dikhte hain, yeh aapke stage, umar aur balo ke girne ke prakar par depend karta hai. Halaanki, aapko 2-3 mahino ke andar hi baalon ka girna kam hone, dandruff control ya digestion, neend aur energy levels mein sudhar dekhne ko mil sakta hai.<\/p>"
+          }
+        },
+        "gallery_Tcqjdn": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Mujhe mera diet plan kaha se milega?<\/p>",
+            "aldrich_ans": "<p>Aap apne pasand ke cuisine aur anya preferences ke adhar par Traya app par customized diet plan bana sakte hain, jab aapne order place kar diya hai. Vaise toh aap apne diet plan ko website par login karke bhi access kar sakte hain.<\/p>"
+          }
+        },
+        "gallery_zQxBVC": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Kya Traya ke treatment se genetic hair fall kam hoga?<\/p>",
+            "aldrich_ans": "<p>Traya ki speciality genetic hair loss ko rokne aur manage karne mein hai. Halaanki, agar aap balo ke girne ke advanced stage (stage 6 ya 7) par hain ya fir balo ka girna 5 se 10 saal se pehle hua hai, toh fir wapas lane ke chances bahut kam hain, kyunki aapke paas sufficient active hair follicles ho sakte hain.<\/p>"
+          }
+        },
+        "gallery_JaYjzG": {
+          "type": "Gallery",
+          "settings": {
+            "aldrich_ques": "<p>Kya Traya ka treatment mere liye kaam karega?<\/p>",
+            "aldrich_ans": "<p>Haan,Traya hair loss Stage 1 se leke stage 4 tak sabse acha kaam karta hai,93% log jinhone 5 month tak traya ka treatment istemaal kiya hai unhone positive results dekhe hai.2.5 Lakh se jyada log ne traya use kiya hai hair loss ke liye<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_h7r3pB",
+        "gallery_gpXwhw",
+        "gallery_hcCHdF",
+        "gallery_EPcCNX",
+        "gallery_nEKJpJ",
+        "gallery_Tcqjdn",
+        "gallery_zQxBVC",
+        "gallery_JaYjzG"
+      ],
+      "settings": {
+        "enable_faq_accordion": true,
+        "aldrich_title": "FAQ's"
+      }
+    },
+    "0b019c2e-cb1d-4cda-87ec-953926008b27": {
+      "type": "buy-now-atc",
+      "settings": {
+        "heading": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "test_result_hinglish_YUzgzp",
+    "201d730d-62d5-48ba-97aa-4588750bc1a4",
+    "result_products_6XVwAP",
+    "stage1_why_you_should_hinglish_8xefpL",
+    "pcos_causing_male_rp_mKNrCB",
+    "new_testimonial_hinglish_BhRWwU",
+    "customer_review_hinglish_P6EtjT",
+    "customer_review_hinglish_tq7CwC",
+    "customer_review_hinglish_Wi3dnP",
+    "customer_review_hinglish_6QtbEJ",
+    "customer_review_hinglish_GxYTVa",
+    "stage1_journey_hinglish_jXLXpr",
+    "66d88f09-a613-462b-b9d2-3adddbb55ee0",
+    "stage1_holistic_safe_hinglish_gGrC4m",
+    "male_treatment_plan_hinglish_iaUrDz",
+    "community_banner_FgU7Gf",
+    "aldrich_faq_HQ3WPe",
+    "0b019c2e-cb1d-4cda-87ec-953926008b27"
+  ]
+}

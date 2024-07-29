@@ -1,0 +1,149 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "doctor_details_VqLghr": {
+      "type": "doctor-details",
+      "blocks": {
+        "text_qz3Xrf": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "M",
+            "user_name": "Mona",
+            "user_content": "Dr. ki treatment aur care ne mujhe impress kiya, always a great experience."
+          }
+        },
+        "text_eK6pg7": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "I",
+            "user_name": "Ishaan",
+            "user_content": "Dr. is surely expert in hair loss treatment, I saw difference in just few months."
+          }
+        },
+        "text_bLAAg8": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "K",
+            "user_name": "Kunal",
+            "user_content": "Skin treatments se mera face ab glow karta hai, thanks to Dr.Vandana."
+          }
+        }
+      },
+      "block_order": [
+        "text_qz3Xrf",
+        "text_eK6pg7",
+        "text_bLAAg8"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Dr_Vandana.png",
+        "doctor_name": "Dr. Vandana Verma",
+        "specialization": "Dermatologist and Hair Transplant Surgeon MD Dermatology & VL Fellowship in Hair Transplant (Israel) Member AHRS (India) |  8 YEARS",
+        "education": "MBBS, MD (Dermatology)",
+        "registration_no": "MMC 2015\/04\/2146",
+        "ratings": "4.7\/5",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "Dr. Vandana Verma, with an MD in Dermatology from Mahatma Gandhi Mission Medical College and an MBBS from Dr. DY Patil Medical College, operates a successful practice in South Delhi. She has performed over 300 hair transplant surgeries and specializes in various cosmetology procedures, including botox, fillers, laser treatments, and microneedling."
+      }
+    },
+    "qa_accordion_xaTdxH": {
+      "type": "QA-accordion",
+      "blocks": {
+        "faq_4rcrBa": {
+          "type": "faq",
+          "settings": {
+            "Question": "What is cosmetology?",
+            "Answer": "The professional skill or practice of beautifying the face, hair, and skin."
+          }
+        },
+        "faq_jf8hUP": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do people visit Dr. Vandana Verma?",
+            "Answer": "Patients seek Dr. Vandana Verma for various hair and scalp issues."
+          }
+        },
+        "faq_f4tTUk": {
+          "type": "faq",
+          "settings": {
+            "Question": "What does Dr. Vandana Verma specialise in?",
+            "Answer": "She specialises in cosmetology procedures such as botox, fillers, laser treatments, and microneedling, and has a substantial track record in hair transplant surgeries."
+          }
+        }
+      },
+      "block_order": [
+        "faq_4rcrBa",
+        "faq_jf8hUP",
+        "faq_f4tTUk"
+      ],
+      "settings": {
+        "Accordiontitle1": "",
+        "Accordiontitle2": ""
+      }
+    },
+    "doctor_slide_i8XiJ3": {
+      "type": "doctor-slide",
+      "blocks": {
+        "text_igihkc": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Harish Balaji. R",
+            "doctorImage": "shopify:\/\/shop_images\/dr.harish_compact_8705e678-693a-4c80-a8e2-9e9580a997b3.png",
+            "specialist": "DERMATOLOGIST | MD | AESTHETIC SURGEON,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-harish"
+          }
+        },
+        "text_JdDdPK": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Kalyani Deshmukh",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Kalyani.png",
+            "specialist": "DERMATOLOGIST | HAIR SPECIALIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/5star-1.png",
+            "PageUrl": "shopify:\/\/pages\/kalyani-deshmukh"
+          }
+        },
+        "text_qKMPPy": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr.Shailendra Chaubey",
+            "doctorImage": "shopify:\/\/shop_images\/Chaubey_compact_94feda1e-2064-42a0-b2d8-90aaf8b0ee62.png",
+            "specialist": "HEALTH EDUCATOR | AYURVEDIC PRACTITIONER,",
+            "experience": "15 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/shailendra-chaubey"
+          }
+        }
+      },
+      "block_order": [
+        "text_igihkc",
+        "text_JdDdPK",
+        "text_qKMPPy"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "doctor_details_VqLghr",
+    "qa_accordion_xaTdxH",
+    "doctor_slide_i8XiJ3"
+  ]
+}

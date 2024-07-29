@@ -1,0 +1,116 @@
+<div class="container text-center">
+    <h2 class="doctors_heading text-center">{{ section.settings.doc_heading }}</h2>
+    <div class="row doctor_slider">
+      {% for block in section.blocks %}
+        <div class="col-4">
+          {% if block.settings.doc_image != blank %}
+            <img class="m-auto" src="{{ block.settings.doc_image | img_url:'270x270' }}" alt="{{ block.settings.doc_name }}">
+            <p class="doc_name pb-4 mt-4 text-left">{{ block.settings.doc_name }}</p>
+            <div class="my-3 text-left">
+              <p class="doc_desc">{{ block.settings.doc_desc }}</p>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <a class="btn btn-dark" href="{{ section.settings.linkbln }}">{{ section.settings.sidelinktextln }}</a>
+</div>
+
+{% schema %}
+  {
+    "name": "Our Doctors",
+    "settings": [
+        {
+          "type": "text",
+          "label": "Heading Text",
+          "id": "doc_heading"
+        },
+        {
+          "type": "url",
+          "label": "Button link",
+          "id": "linkbln"
+        },
+        {
+          "type": "text",
+          "label": "Button text",
+          "id": "sidelinktextln",
+          "default": "Click Here"
+        }           
+      ],
+    "blocks": [
+      {
+        "name": "Our Doctor",
+        "type": "image",
+        "settings": [
+          {
+            "type":"image_picker",
+            "label":"Select Image",
+            "id" : "doc_image"
+          },
+          {
+            "type": "text",
+            "label": "Doctor Name",
+            "id": "doc_name"
+          },
+          {
+            "type": "text",
+            "label": "Doc Description",
+            "id": "doc_desc"
+          }
+        ]
+      }
+    ],
+      "presets":[
+        {
+          "name":"Our Doctors",
+          "category":"Custom"
+        }
+      ]
+ }
+{% endschema %}
+  <style>
+    .doctors_heading {
+      font-size: 44px;
+      font-weight: 800;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.25;
+      letter-spacing: -.22px;
+      margin-bottom: 30px;
+      padding-top: 40px;
+      position: relative;
+    }
+    .doctors_heading:before {
+      content: '';
+      width: 10%;
+      height: 8px;
+      position: absolute;
+      background: #414042;
+      border-radius: 6px;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%);
+    }
+    .doc_name {
+      font-size: 16px;
+      font-weight: normal;
+      letter-spacing: 0.08px;
+    }
+    #shopify-section-{{ section.id }} .doc_name strong {
+      font-size: 21px;
+    }
+    .doc_desc {
+      color: #6d6e71;
+      letter-spacing: -1.05px;
+      font-weight: 300;
+      font-size: 20px;
+    }
+    @media only screen and (max-width: 767.98px) {
+      .doctors_heading {
+        font-size: 30px;
+      }
+      .doctors_heading:before {
+        width: 25%;
+      }
+    }
+  </style>

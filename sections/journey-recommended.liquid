@@ -1,0 +1,207 @@
+<div class="container">
+    <p class="section-title">{{ section.settings.plantitle}}</p>
+    <div class="row">
+      <div class="col-md-9 mx-auto">
+
+        <div class="row">
+
+          <div class="col-md-6 mb-5 mb-md-0">
+            <div class="border-0 card px-5 py-4 rounded-lg shadow bg-light">
+              <img src="{{ section.settings.planimg | img_url: '' }}" alt="plan-img" class="col-md-9 mx-auto">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex">
+              <span class="mr-2">
+                <svg width="28" height="20" viewBox="0 0 54 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M23.384 21.064V44.104H0.0560004V29.272C0.0560004 23.704 1.016 18.664 2.936 14.152C4.952 9.63999 8.312 5.03199 13.016 0.327991L21.368 7.096C16.76 11.896 13.88 16.552 12.728 21.064H23.384ZM53.192 21.064V44.104H29.864V29.272C29.864 23.704 30.824 18.664 32.744 14.152C34.76 9.63999 38.12 5.03199 42.824 0.327991L51.176 7.096C46.568 11.896 43.688 16.552 42.536 21.064H53.192Z" fill="#515151"/>
+                </svg>
+              </span>
+              <h3 class="l-0">
+               {{ section.settings.plancontent}}
+               <span class="ml-2">
+                  <svg width="28" height="20" viewBox="0 0 54 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.616 23.936L30.616 0.896004L53.944 0.896002L53.944 15.728C53.944 21.296 52.984 26.336 51.064 30.848C49.048 35.36 45.688 39.968 40.984 44.672L32.632 37.904C37.24 33.104 40.12 28.448 41.272 23.936L30.616 23.936ZM0.807993 23.936L0.807991 0.896007L24.136 0.896005L24.136 15.728C24.136 21.296 23.176 26.336 21.256 30.848C19.24 35.36 15.88 39.968 11.176 44.672L2.82399 37.904C7.43199 33.104 10.312 28.448 11.464 23.936L0.807993 23.936Z" fill="#515151"/>
+                  </svg>
+                </span>
+              </h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="plan-section pt-5 mt-5">
+      <div class="section-title-line"></div>
+      <p class="section-title">{{ section.settings.customisedtitle}}</p>
+      <div class="row">
+        <div class="col-md-9 mx-auto">
+          <div class="row">
+                   {% for block in section.blocks %}
+         {% if block.type == 'text' %}
+            <div class="col-md-6">
+              <h4 class="py-3 mb-0">{{ block.settings.treatmenttext}}</h4>
+            </div>
+            {% endif %}
+                     {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="result-seen mt-4 py-5">
+    <div class="container">
+      <h2 class="section-title">{{ section.settings.allmonthtitle}}</h2>
+
+      <div class="row justify-content-center">
+        {% for block in section.blocks %}
+       {% if block.type == 'scalpimg' %}
+       {% if block.settings.scalp-img1 != blank and block.settings.month1 != blank %}
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="scalpitem">
+            <img src="{{ block.settings.scalp-img1 | img_url: '284x232' }}" alt="month 1">
+            <span class="font-weight-bold">{{ block.settings.month1 }}</span>
+          </div>
+        </div>
+        {% endif %}
+        {% if block.settings.scalp-img2 != blank and block.settings.month2 != blank %}
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="scalpitem">
+            <img src="{{ block.settings.scalp-img2 | img_url: '284x232' }}" alt="month 3">
+            <span class="font-weight-bold">{{ block.settings.month2}}</span>
+          </div>
+        </div>
+        {% endif %}
+        {% if block.settings.scalp-img3 != blank and block.settings.month3 != blank %}
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="scalpitem">
+            <img src="{{ block.settings.scalp-img3 | img_url: '284x232' }}" alt="month 4">
+            <span class="font-weight-bold">{{ block.settings.month3}}</span>
+          </div>
+        </div>
+        {% endif %}
+                 {% endif %}
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% include 'patient-journey' %}
+{% schema %}
+  {
+    "name": "Journey Recommended",
+    "settings": [
+         {
+          "id": "plantitle",
+          "type": "text",
+          "label": "Plan Title"
+          },
+          {
+          "id": "planimg",
+          "type": "image_picker",
+          "label": "Plan Image"
+          },
+          {
+          "id": "plancontent",
+          "type": "text",
+          "label": "Plan content"
+          },
+          {
+          "id": "customisedtitle",
+          "type": "text",
+          "label": "Customised Title"
+          },
+        {
+          "id": "allmonthtitle",
+          "type": "text",
+          "label": "All Months Title"
+          }
+    ],
+    "blocks": [
+     {
+       "name": "Treatment Plan",
+       "type": "text",
+       "settings": [
+          {
+            "type": "text",
+            "id": "treatmenttext",
+            "label": "Treatment Text"
+          }
+       ]
+     },
+      {
+       "name": "scalp img",
+       "type": "scalpimg",
+       "settings": [
+          {
+            "type": "text",
+            "id": "month1",
+            "label": "Month"
+          },  
+         {
+          "id": "scalp-img1",
+          "type": "image_picker",
+          "label": "Scalp Image"
+          },
+                {
+            "type": "text",
+            "id": "month2",
+            "label": "Month"
+          },  
+         {
+          "id": "scalp-img2",
+          "type": "image_picker",
+          "label": "Scalp Image"
+          },
+                {
+            "type": "text",
+            "id": "month3",
+            "label": "Month"
+          },  
+         {
+          "id": "scalp-img3",
+          "type": "image_picker",
+          "label": "Scalp Image"
+          }
+       ]
+         }
+       ],
+          "presets":[
+          {
+          "name":"Journey Recommended"
+          }
+      ]
+  }
+{% endschema %}
+<style>
+/*   .scalpitem img{
+    object-fit: cover;
+    height: 232px;
+    width: 284px;
+    margin: auto;
+  } */
+   .scalpitem span {
+     font-size:16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    padding: 5px 14px 2px;
+}
+  .result-seen {
+    background: #bbe1ce;
+}
+  .patient-journey p{
+    font-size:15px;
+  }
+   .patient-journey h5{
+     font-size: 21px;
+    font-weight: 800;
+    line-height: 1.29;
+    color: #007bff;
+   }
+</style>

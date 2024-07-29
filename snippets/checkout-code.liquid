@@ -1,0 +1,596 @@
+{% style %}
+  .seprator_down_success {
+    text-align: center;
+    margin-top: 15px;
+}
+.mobile-bookacall {background: #B7D340;}
+.mobile-bookacall:hover {background: #414042;}
+.mobile-bookacall a {color: #414143;}
+.mobile-bookacall:hover a {color: #fff;}
+ .rounded-lg.border.px-5.pt-4.pb-3.pb-md-4.success {
+/*     display: flex;
+    justify-content: flex-start; */
+    align-items: center;
+       padding: 16px !important;
+    background: #F5F5F5;
+    border: none !important;
+       border-radius: 5px !important;
+}
+  .success_alignment_thanku img {
+    max-width: 50px;
+        margin-right: 15px !important;
+}
+  .rounded-lg {
+    border-radius: 0.7rem !important;
+  }
+  .order-summary__sections {
+    height: 100%
+  }
+  .step__footer__continue-btn.btn {
+    cursor: pointer;
+    display: inline-block;
+    background-color: #1878b9;
+    background-clip: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px transparent solid;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    padding: 0.7em;
+    text-align: center;
+    position: relative;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  }
+  .step__footer__continue-btn.btn:hover {
+    background: #1878b9;
+    border-color: #1878b9;
+    color: #fff;
+  }
+  .logo.logo--left:hover {
+    background: transparent;
+  }
+  .main__footer {
+    border-top: 0;
+  }
+  .chekout-order-status-main {
+    display: flex;
+    /* justify-content: center; */
+    padding-top: 10px;
+}
+  .chekout-order-amount {
+    position: relative;
+    color: #414042;
+    opacity: 0.7;
+    font-size: 18px;
+    line-height: initial;
+    font-family: Nunito Sans,sans-serif!important;
+    padding: 0 !important;
+    border-left: 2px solid #414042;
+    padding-left: 10px !important;
+  }
+  .chekout-order-id {
+    position: relative;
+    color: #414042;
+    opacity: 0.7;
+    font-size: 18px;
+    line-height: initial;
+    font-family: Nunito Sans,sans-serif!important;
+    padding: 0 !important;
+    padding-right: 10px !important;
+  }
+/*   .chekout-order-id:after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60%;
+    height: 2px;
+    background: #71C065;
+  } */
+  .chekout-order-name {
+    color: #414042;
+    opacity: 0.7;
+    font-size: 20px;
+    line-height: initial;
+    font-family: Nunito Sans,sans-serif!important;
+    padding: 0 !important;
+    margin-top: 15px !important;
+  }
+  .order-status {
+    color: #212529;
+    opacity: 0.9;
+    font-size: 28px;
+    line-height: initial;
+    font-family: fredoka_oneregular!important;
+  }
+  .checkout-journey {
+    font-size: 20px;
+    line-height: 15px;
+    color: #000;
+    font-family: Nunito Sans,sans-serif!important;
+  }
+  .text-black {
+    color: #000;
+  }
+  .order-placed, .doctor-prescription, .order-shipped, .order-delivered, .start-plan {
+    position: relative;
+    font-size: 14px;
+  }
+  .order-placed:before, .doctor-prescription:before, .order-shipped:before, .order-delivered:before, .start-plan:before {
+    content: '1';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #828282;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -2%;
+    top: -12%;
+    transform: translate(1px, 0px);
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .doctor-prescription:before {
+    content: '2';
+  }
+  .order-shipped:before {
+    content: '3';
+  }
+  .order-delivered:before {
+    content: '4';
+  } 
+  .start-plan:before {
+    content: '5';
+  }
+  .border.active-status:before {
+    background: #B7D340;
+  }
+  .border-green {
+    border-color: #B7D340 !important;
+  }
+  .success {
+    max-width: 100%;
+    margin: auto;
+  }
+  .infos {
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-radius: 0.7rem;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .login-track {
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    font-family: Nunito Sans,sans-serif!important;
+  }
+  .login-btn {
+    background: #B7D340;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #414143;
+    font-family: Nunito Sans,sans-serif!important;
+    padding: 1rem 70px;
+    width: 100%;
+  }
+  .login-btn:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  .infos h3, .infos p, .traya-coach {
+    font-family: Nunito Sans,sans-serif!important;
+  }
+  .traya-coach-1 {
+    font-size: 20px;
+    line-height: 15px;
+    color: #000;
+  }
+  .coach-2 {
+    flex: 1 35%;
+  }
+  .coach-1 {
+    flex: 1 65%;
+  }
+  .traya-coach-2 {
+    font-size: 16px;
+    line-height: 21px;
+    color: #000;
+  }
+  .traya-coach .login-btn {
+    padding: 1rem 1.2rem;
+  }
+  .infos h3 {
+    font-size: 16px;
+    color: #414143;
+    font-weight: 700;
+  }
+  .infos p {
+    font-size: 16px;
+    color: #414143;
+  }
+  .infos .content-box__row:nth-child(1), .infos .section:nth-child(1), .infos .thank-you__additional-content, .infos .content-box:nth-child(1), .infos .content-box:nth-child(2) {
+    display: none;
+  }
+  .infos .content-box__row {
+    padding: 1em 0.5em 0em;
+    background: #fafafa;
+  }
+  .infos .content-box, .infos .content-box-spacing {
+    margin: 0;
+    border: 0;
+  }
+  .infos .section {
+    padding: 0;
+  }
+/*   .seperator:after, .breadcrumbs:after {
+    content: '';
+    width: 111%;
+    height: 2px;
+    background: rgb(65 65 67 / 50%);
+    position: absolute;
+    bottom: 0;
+  } */
+  a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #414143;
+  }
+  .text-grey {
+    color: #808080;
+  }
+  .text-chargrey {
+    color: #4C4C4C;
+  }
+  .checkout-customer-info.collapsed:after {
+    transform: translate(0px, -50%) rotate(180deg);
+  }
+  .checkout-customer-info {
+    font-size: 14px;
+    line-height: 15px;
+    color: #000;
+    font-family: Nunito Sans,sans-serif!important;
+  }
+  .checkout-customer-info:after {
+    content: '';
+    position: absolute;
+    background: url('//cdn.shopify.com/s/files/1/0100/1622/7394/files/angle-down.png');
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 8px;
+    right: 4%;
+    top: 50%;
+    transform: translate(0px, -50%);
+  }
+  .bk__color {
+    background: #71c0651a;
+    border: 1px solid #71c0651a;
+  }
+  .login-btn:hover svg path {
+    fill: white;
+  }
+  .customer__info {
+    cursor: pointer;
+  }
+  .step__footer__info {
+    margin-bottom: 0;
+  } 
+  .step__footer__continue-btn.btn {
+    padding: 0.7em 0.6em;
+  }
+  .steps-check {
+    row-gap: 15px;
+  }
+  .modal-backdrop--is-visible .modal{
+    display:block !important;  
+    left:0;
+    right:0;
+    height: auto;
+    overflow: visible;
+  }
+  .js .modal-backdrop{
+    background-color: rgba(0,0,0,0.6) !important;
+  }
+  @media(min-width:767px){
+  .modal {
+    border-radius: 8px;
+    margin: 4em auto 5%;
+    max-width: 55em;
+    width: 90%;
+  }
+}
+  @media only screen and (max-width: 1350px) and (min-width: 1275px) {
+    .checkout-journey-steps {
+      -ms-flex: 0 0 45%;
+      flex: 0 0 45%;
+      max-width: 45%;
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+    .steps-check {
+      justify-content: space-between;
+      row-gap: 10px;
+    }
+  }
+  @media only screen and (max-width: 1274px) and (min-width: 1000px) {
+    .checkout-journey-steps {
+      -ms-flex: 0 0 65%;
+      flex: 0 0 65%;
+      max-width: 100%;
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+    .steps-check {
+      row-gap: 10px;
+    }
+  }
+   @media only screen and (max-width: 999px) {
+  header.banner {
+    display: block;
+}
+  .main__header .logo__image {
+      display:none;
+    }
+     .sticky#bannertnq{
+      position: fixed;
+      width: 100%;
+      background: #fff;
+      z-index: 999;
+     }
+   }
+  @media only screen and (max-width: 767px) {
+    .order-status {font-size: 22px;}
+    .chekout-order-amount, .chekout-order-id {font-size: 15px;}
+    header.banner {
+      display: block;
+    }
+    .main__header .logo__image {
+      display:none;
+    }
+    .main__content {
+      padding-bottom: 4em;
+    }
+    .coach h4{
+      font-size:21px !important;
+    }
+     .coach p{
+      font-size:16px !important;
+    }
+    .success {
+      max-width: 100%;
+    }
+    .traya-coach-1 {
+      font-size: 23px;
+    }
+    .traya-coach-2 {
+      font-size: 12px;
+    }
+    .infos .content-box__row {
+      background: transparent;
+    }
+    .seperator:after {
+      content: unset;
+    }
+    .breadcrumbs:after {
+      content: unset;
+    }
+    .traya-coach:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: #41414380;
+      border-radius: 6px;
+      left: 0;
+    }
+    .display-table .order-summary-toggle__inner {
+      display: flex;
+      align-items: center;
+    }
+    .display-table .order-summary-toggle__total-recap {
+      display: none;
+      margin: 0;
+    }
+    /* span.order-summary-toggle__text.order-summary-toggle__text--show {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+  } */
+    .order-summary-toggle__dropdown {
+      position: absolute;
+      right: 5px;
+      top: 10px;
+    }
+    .order-summary-toggle__text {position: relative;}
+    .display-table .order-summary-toggle__total-recap dd {
+      margin-bottom: 0;
+    }
+    .display-table .order-summary-toggle__total-recap dd {
+      margin-right: 5px; 
+    }
+    dl.order-summary-toggle__total-recap.total-recap dd~dd {
+      margin-right: 0px
+    }
+    .main__footer {
+      border-top: 1px solid #e6e6e6;
+      margin-bottom: 2rem;
+    } 
+    .steps-check {
+      row-gap: 5px;
+    }
+    .checkout-journey {
+      font-size: 15px;
+    }
+    .order-summary-toggle{
+      
+    }
+    aside [role="complementary"]{
+      margin-top: -12px;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    /* .coach {
+      min-height: 250px;
+    } */
+    .checkout-journey-steps {
+      -ms-flex: 0 0 91.666667%;
+      flex: 0 0 91.666667%;
+      max-width: 91.666667%;
+    }
+    .login-btn {
+      padding: 1rem 3.5rem;
+    }
+    .traya-coach .login-btn {
+      padding: 0.8rem;
+    }
+    .coach-1 {
+      flex: 1 55%;
+    }
+    .coach-2 {
+      flex: 1 45%;
+    }
+    .traya-coach-1 {
+      font-size: 20px;
+    }
+  }
+  .coach {
+    text-align: center;
+    padding-top: 25px;
+}
+  .coach h4 {
+    color: #414042;
+    font-size: 34px;
+    opacity: 1;
+    font-weight: 200;
+}
+  .coach p span {
+    color: #B7D340;
+}
+.coach p {
+    color: #414042;
+    font-size: 24px;
+}
+  .traya-coach.position-relative.coach-2 {
+    margin-top: 30px !important;
+}
+  .px-3.py-4.mt-2.mt-md-3.px-md-0.py-md-4.position-relative.checkout-traya-journey.seperator {
+    padding-bottom: 35px !important;
+}
+  .book_call_thanku {
+    text-align: center;
+    padding-top: 30px;
+}
+  .book_call_thanku h2 {
+    color: #717171;
+    font-size: 20px;
+    font-weight: 600;
+}
+  .book_call_thanku p {
+    margin-bottom: 40px;
+}
+  li.policy-list__item:hover a {
+    color: #b7d340 !important;
+    background: transparent;
+}
+  .order-summary-toggle__text {
+    color: #414042;
+  }
+  .order-summary-toggle__icon {
+    fill: #414042;
+  }
+  .order-summary-toggle__dropdown {
+    fill: #414042;
+}
+
+{% endstyle %}
+
+
+<script>
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("bannertnq");
+
+function myFunction() {
+  if ($(window).scrollTop() >= 50) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<script>
+  $(document).ready(function() {
+    var order__id = '{{ order.order_number }}';
+    var order__amount = '{{ order.total_price }}';
+    var order__amounts = parseInt(order__amount.replace(/\D/g, ''))/100;
+    
+    var order_res_amount = order__amounts.toFixed(2).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
+    var Order = $('.d-md-none').find('.os-order-number').text();
+    var name = $('.d-md-none').find('.os-header__title').text();
+    var CUSName = name.replace(/[^a-zA-Z ]/g, '');
+    var cusname = CUSName.replace(/^\s+|\s+$/gm,'');
+    var OrderID = Order.replace ( /[^\d.]/g, '' );
+    var ID = parseInt(OrderID);
+    $('[chekout-order-id]').text('Order ID #' + order__id);
+    $('[chekout-order-amount]').text('Amount : ₹' +order_res_amount);
+    $('[chekout-order-name]').text(cusname);
+  });
+  $('.position-relative.bk__color').click(function() {
+    var status = $(this);
+    var info = status.parent('.customer__info').find('.infos');
+    var btn = status.parent('.customer__info').find('.checkout-customer-info');
+    btn.toggleClass('collapsed');
+    info.toggleClass('d-none');
+  });
+
+ var gender = localStorage.getItem('user__gender');
+      var synthetic_ID = localStorage.getItem('caseId');
+      // console.log('id>>', synthetic_ID);
+      // console.log('gender>>', gender);
+      $(".thanku_page_book").attr("href", "https://form.traya.health/pages/reschedule-slot/" + synthetic_ID );
+  
+  let viewcontent = localStorage.getItem('viewcontent');
+// console.log("viewcontent", viewcontent);
+ 
+  if(viewcontent != 'login') {
+   
+    $('.checkout-traya-journey').find('[login--status]').removeClass('d-none');
+    $('.checkout-traya-journey').find('[login--status]').addClass('d-flex');
+  }
+</script>
+
+<!-- Thank You Page Sticky Book A Call Button Below The Banner -->
+<!-- <script>
+  $(document).ready(function() {
+    // var trayaCoach = $(".traya-coach");
+    var trayaCoach = $(".main-TY-page");
+    var stickyBtn = $(".bottom-sticky-btn");
+
+    $(window).scroll(function() {
+      var trayaCoachTop = trayaCoach.offset().top;
+      var scrollTop = $(window).scrollTop();
+      var spaceFromTop = trayaCoachTop - scrollTop;
+
+      if(spaceFromTop <= 140) {
+        stickyBtn.show();
+      }else {
+        stickyBtn.hide();
+      }
+    });
+  });
+</script> -->
+<!-- Thank You Page Sticky Book A Call Button Below The Banner -->

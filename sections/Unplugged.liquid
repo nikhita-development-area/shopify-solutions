@@ -1,0 +1,267 @@
+<div class="main_unplugged container pb-0">
+  <div class="mx-2 my-md-3 my-2 {% if template.name == 'index' or request.path contains 'blogs/hair-doctors' %} text-center{% endif %}">
+      <h2 class="head font-weight-bold l-0">{{ section.settings.unplugged-head }}</h2>
+      <p class="content l-0">{{ section.settings.unplugged-para }}</p>
+  </div>
+  <div class="unplugged-data">
+   {% for block in section.blocks %}
+     <div class="cstm-video-thumbnail unplugged m-2 my-md-3{% if template.name != "index" %} p-2{% endif %}" data-video-id="{{ block.settings.YT-video-ID }}" starttime="{{ block.settings.startTime }}">
+       <p class="name1 mb-2 l-0">{{ block.settings.name1 }}</p>
+       <div class="txt-date d-flex justify-content-between{% if template.name != "index" %} mb-2{% endif %}">
+           <span class="l-0 name_span">{{ block.settings.name2 }}</span>
+           <span class="l-0 date_span">{{ block.settings.date }}</span>
+       </div>
+       {% assign width = block.settings.thumbnail-img.width | divided_by: 2 %}
+        {% assign height = block.settings.thumbnail-img.height | divided_by: 2 %}
+        {% assign alt = 'Image-' | append: forloop.index %}
+        {{ block.settings.thumbnail-img | image_url: width: width | image_tag: width: width, height: height, alt: alt, title: alt, loading: 'lazy', class: 'w-100 h-100' }}
+     </div>      
+    {% endfor %}
+    </div>
+<div class="cstm-video-popup" id="cstm-popup">
+  <span class="cstm-close-btn" onclick="cstmClosePopup()">X</span>
+  <iframe class="cstm-Yt-Iframe" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+  <div class="cstm-PageOverlay d-block"></div>
+</div>
+
+{% schema %}
+  {
+  "name": "unplugged Section",
+  "tag": "section",
+  "class":"unplugged-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "unplugged-head",
+      "label": "Enter the heading"
+    },
+    {
+      "type": "text",
+      "id": "unplugged-para",
+      "label": "Enter the para"
+    }
+  ],
+  "blocks":[
+    {
+      "name":"Blocks",
+      "type": "text",
+      "settings":[
+        {
+          "type": "text",
+          "id": "name1",
+          "label": "Enter the name 1"
+        },
+        {
+          "type": "text",
+          "id": "name2",
+          "label": "Enter the name 2"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Enter the date"
+        },
+        {
+          "type": "image_picker",
+          "id": "thumbnail-img",
+          "label": "drag the thumbnail img"
+        },
+        {
+          "type": "text",
+          "id": "YT-video-ID",
+          "label": "Enter the YT-video-ID"
+        },
+        {
+          "type": "text",
+          "id": "startTime",
+          "label": "Enter starting time",
+          "default": "0"
+        }
+      ]
+    }
+  ],
+   "presets":[
+    {
+        "name":"unplugged Section",
+        "category": "custom"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  {% if template.name == 'index' %}
+    .main_unplugged .head{font-size: 40px;}
+    .main_unplugged  .cstm-video-popup{padding: 0px;}
+    {% endif %}
+  {% if template.name != "index" %}
+  .unplugged-data .unplugged{
+    background: #F7F7F7;
+  }
+  {% endif %}
+   .unplugged-data .unplugged span{
+     font-size: 12px;
+   }
+  .unplugged-data .unplugged p{
+     font-size: 14px;
+   }
+  .main_unplugged a:hover{
+    text-decoration-none
+  }
+  .main_unplugged .content {
+    color: #7C7C7C;
+  }
+  .name_span{
+    font-weight: 700;
+  }
+  .date_span{
+    color: #7C7C7C;
+    font-weight: 600;
+  }
+   .cstm-video-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      background: #fff;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .cstm-close-btn {     
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      cursor: pointer;
+      font-weight: 900;
+      font-size: 18px;
+      background: #414042;
+      padding: 6px 14px;
+      border-radius: 50%;
+      color: #ffffff;
+    }
+  .cstm-Yt-Iframe{
+    width: 600px;
+    height: 400px;
+  }
+  .cstm-video-thumbnail{
+    cursor: pointer;
+  }
+  .cstm-PageOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    background: #363636;
+    transition: opacity 0.3s ease-in-out,visibility 0.3s ease-in-out;
+  }
+  .cstm-PageOverlay.is-visible{
+    opacity: .5;
+    visibility: visible;
+  }
+  body.cstm-no-scroll{
+    overflow: hidden;
+  }
+  @media(max-width: 749px){
+  {% if template.name == "index" %}
+    .main_unplugged .head{
+      font-size: 30px;
+      line-height: 38px;
+    }
+   .cstm-Yt-Iframe{
+      width: 350px;
+      height: 250px;
+    }
+  {% else %}
+    .main_unplugged .head{
+      font-size: 24px;
+      line-height: 28px;
+    }
+   .cstm-Yt-Iframe{
+      width: 278px;
+      height: 211px;
+    }
+  {% endif %}
+    .cstm-close-btn {
+      font-size: 10px;
+      padding: 3px 8px;
+    }
+    .main_unplugged .content{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .unplugged-data .slick-list.draggable{
+      padding-right: 70px;
+    }
+    .unplugged-data .slick-dots li button:before{
+      font-size: 35px;
+    }
+    .cstm-video-popup {
+      padding: 8px;
+    }
+  }
+</style>
+<script>
+$(document).ready(function(){
+  $('.unplugged-data').slick({
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    arrows: false,
+    dots: true,
+  {% if template.name == 'index' or request.path contains 'blogs/hair-doctors' %}
+     infinite: true,
+    autoplay: false,
+    {% else %}
+    autoplay: true,
+    {% endif %}   
+    autoplaySpeed: 2000,
+   responsive: [
+    {
+      breakpoint: 989,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2
+      }
+    },
+      {
+        breakpoint: 749,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+      }
+    }
+  ]
+  });
+});
+  const overLay = document.querySelector('.cstm-PageOverlay');
+  const noScroll = document.querySelector('body');
+  const thumbnails = document.querySelectorAll('.cstm-video-thumbnail');
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener('click', () => {
+      const videoId = thumbnail.getAttribute('data-video-id');
+      const startTime = thumbnail.getAttribute('starttime');
+      const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&start=${startTime}`;
+      const popup = document.getElementById('cstm-popup');
+      const iframe = popup.querySelector('.cstm-Yt-Iframe');
+      iframe.src = videoUrl;
+      popup.style.display = 'block';
+      overLay.classList.add('is-visible');
+      noScroll.classList.add('cstm-no-scroll');
+    });
+  });
+
+function cstmClosePopup() {
+  const popup = document.getElementById('cstm-popup');
+  const iframe = popup.querySelector('.cstm-Yt-Iframe');
+  iframe.src = '';
+  popup.style.display = 'none';
+  overLay.classList.remove('is-visible');
+  noScroll.classList.remove('cstm-no-scroll');
+}
+
+</script>

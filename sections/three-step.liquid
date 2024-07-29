@@ -1,0 +1,173 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+  <div class="hair-steps page-width section-{{ section.id }}-padding">
+    {% if page.handle == 'native' %}
+    <p class="section-title">How Do I Get Started?</p>
+      {% endif %}
+  <div class="row three_step_slides">
+    {% for block in section.blocks %}
+  <div class="box_step-three">
+    
+    <div class="three_step_image">
+       <div class="three_step_detail">
+      <h3>{{ block.settings.title }}</h3>
+      <h6 class="">{{ block.settings.content }}</h6>
+   </div>
+       <img src="{{ block.settings.Image | img_url: 'master' }}" alt="three_step">
+     </div>
+  
+  </div>
+
+  {% endfor %}
+ 
+  </div>
+     <div class="text-center mb-3">
+  <a id="hairtestcta" href="https://form.traya.health/questions?cohort=1&amp;location=customers review&amp;page=home" class="start-journey-btn btn btn-dark my-3 shadow hair-form-actn-link" style="pointer-events: auto;">{{ section.settings.button_text }}<sup>™</sup></a>
+  </div>
+  </div>
+  <style>
+    .hair-steps a:hover{
+      text-decoration:none;
+    }
+    @media screen and (max-width: 749px) {
+      .three_step_slides{
+        display:block !important;
+      }
+      .hair-steps .text-center a#hairtestcta {
+    margin-top: 0 !important;
+}
+      .three_step_image {
+    box-shadow: none !important;
+}
+      .page-width.mx-3.mx-md-auto {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+}
+    }
+    .hair-steps a#hairtestcta {
+    margin-top: 50px !important;
+}
+   .three_step_detail h6 {
+    font-size: 17px;
+    overflow-wrap: break-word;
+    letter-spacing: 0;
+}
+    .three_step_detail h6 span {
+    background: #3F3F3F;
+    color: #fff;
+    padding: 0 5px;
+    line-height: 28px;
+}
+    .three_step_detail {
+    position: relative;
+    top: 16px;
+    padding: 0 10px;
+    text-align: left;
+    margin-bottom: 40px;
+    min-height: 110px;
+}
+   .three_step_detail h3 {
+    color: #3F3F3F;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0;
+   }
+   .three_step_image {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0px 8px 3px rgb(0 0 0 / 18%);
+}
+    .three_step_image img{
+    max-width: 100%;
+}
+   .three_step_slides {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    column-gap: 20px;
+    flex-wrap: inherit;
+}
+    .box_step-three {
+    display: block;
+    width: 33.33%;
+    position: relative;
+    padding: 0 0;
+}
+  </style>
+{% schema %}
+  {
+    "name": "Three step Slide",
+    "settings": [
+      {
+            "type": "text",
+            "id": "button_text",
+            "label": "BUtton",
+            "default":"Take The Hair Test"
+          },
+      {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+    ],  
+    "blocks": [
+     {
+       "name": "ThreeStep",
+       "type": "text",
+       "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Name"
+          },
+          {
+            "type": "html",
+            "id": "content",
+            "label": "Description"
+          },
+          {
+            "type":"image_picker",
+            "label" :"Image",
+            "id" :"Image"
+         }
+       
+       ]
+}    
+      
+ ],
+      "presets": [
+    {
+      "name": "Three step Slide"
+    }
+  ]
+  }
+{% endschema %}

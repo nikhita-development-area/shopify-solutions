@@ -1,0 +1,420 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+  {% elsif template == 'index.login-lead' %}
+  {% assign page__hndl = 'home_login_lead' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<div class="{{ page__hndl }} three_fold{% if template.suffix == 'cholestrol' %} cholestrol-way{% endif %}">
+  {%- assign three_fold_bkImage = section.settings.three_fold_bk_image -%}
+    {% if section.settings.three_fold_heading != blank and template.suffix == 'cholestrol' %}
+      <div class="three_fold_heading pt-4 pt-md-0 text-center"> 
+        <p class="three-fold-head">{{ section.settings.three_fold_heading }}</p> 
+      </div>
+    {% endif %}
+  <div class="{% if template.suffix == 'cholestrol' %}cholestrol-container{% else %}container{% if page.handle == 'femalev11' %} my-md-0 my-4{% endif %}{% endif %}">
+   {% if  template != 'index.login-lead' %}
+    {% if section.settings.three_fold_heading != blank and template.suffix != 'cholestrol' %}
+      <div class="three_fold_heading text-center{% if page.handle == 'femalev11' %} d-none d-md-block{% endif %}"> 
+        <p class="three-fold-head{% if page.handle == 'femalev11' %} text-black{% endif %}">{{ section.settings.three_fold_heading }}</p> 
+      </div>
+    {% endif %}
+    {% endif %}
+    <div class="{% if template.suffix == 'cholestrol' %}page_link {% endif %}content__wrapper text-center px-2">
+      {% if template == 'index.login-lead' %}
+      <div class="three_fold_heading text-center"> 
+        <p class="login-heading three-fold-head">{{ section.settings.three_fold_heading }}</p> 
+      </div>
+        {% endif %}
+      {% if section.settings.three_fold_heading != blank and template.suffix != 'cholestrol' and page.handle == 'femalev11' %}
+        <div class="three_fold_heading text-center d-md-none pt-5"> 
+          <p class="three-fold-head text-black pt-5">{{ section.settings.three_fold_heading }}</p> 
+        </div>
+      {% endif %}
+      {% if section.settings.subheading != blank %}<p class="subheading{% if page.handle == 'femalev11' %} py-4{% endif %}
+      {% if page.handle == 'femalev11' %} mb-md-0 mb-3{% else %} mb-0{% endif %}">{{ section.settings.subheading }}</p> {% endif %}
+      {% if section.settings.content__ways != blank %}<h5 class="{% if page.handle == 'femalev11' %}femalev11_content_ways pt-md-5 pt-4 pb-4{% else %}content_ways mb-4 pt-5 pt-md-2{% endif %}">{{ section.settings.content__ways }}</h5> {% endif %}
+      {% if template == 'index.login-lead' %}<p class="revamp_sub_content">*As per an internal study conducted in December 2022</p>{% endif %}
+      {% if page.handle == 'femalev11' %}<h5 class="mb-4 pt-md-2 animate"><span>Ayurveda</span><span>Dermatology</span><span>Nutrition</span><span> </span></h5>{% endif %}
+      {% if section.settings.description != blank %}<p class="{% if page.handle == 'femalev11' %}femalev11-description{% else %}description{% endif %} mb-md-5 mb-3">{{ section.settings.description }}</p> {% endif %}
+      {% if section.settings.linkb != blank and section.settings.sidelinktext != blank %}
+        <a id="{% if page.handle == 'female' or page.handle == 'new-female' or page.handle == 'femalev2' %}female-hair-test-button4
+      {% elsif page.handle == 'femalev1' %}femalev1-hair-test-button4{% elsif product.handle == 'complete-hair-growth-kit' %}kitproduct-hair-test-button4
+      {% else %}hairtestcta{% endif %}" class="btn btn-dark take-the-hair-test{% if page.handle == 'femalev11' %} btn-hair-test f-hair-test-btn position-relative{% endif %}
+      {% if page.handle == 'home-app' or page.handle == "download-traya-app" %}d-none{% endif %}"
+          
+      href="{% if request.path contains '/blogs/hair-care/' %}https://form.traya.health/questions?cohort=1&amp;location=Ingredients&page={{ request.path | replace: '/blogs/', 'blogs_' | replace: '/', '_' }}&utm_campaign=blogs_hc_Ingredients
+        {% elsif request.path contains '/blogs/hair-doctors/' %}https://form.traya.health/questions?cohort=1&amp;location=Ingredients&page={{ request.path | replace: '/blogs/', 'blogs_' | replace: '/', '_' }}&utm_campaign=blogs_hd_Ingredients 
+        {% else %}{{ section.settings.linkb }}&page={{ page__hndl }}{% endif %}">
+        {% if page.handle == 'female' %}TAKE FREE HAIR TEST{% else %}{{ section.settings.sidelinktext }}{% endif %} <sup>TM</sup></a> {% endif %}
+      
+      {% if page.handle == 'home-app' or page.handle == "download-traya-app" %}
+      <div class="download-app text-center">
+        <a href="https://trayahealth.app.link/GsBfukBlAHb" class="btn btn-dark mt-3 mt-md-4 shadow" id="app_download_cta" target="_blank">DOWNLOAD THE APP</a>
+      </div>
+      {% endif %}
+  </div>
+  </div>
+</div>
+  
+{% schema %}
+ {
+    "name": "Three Fold Way",
+    "settings": [ 
+        {
+          "type":"image_picker",
+          "label":"Select Image",
+          "id" : "three_fold_bk_image"
+        },
+        { 
+          "type": "text",
+          "label": "Heading text1",
+          "id": "three_fold_heading"
+        },
+        { 
+          "type": "text",
+          "label": "Heading text2",
+          "id": "subheading"
+        },
+        { 
+          "type": "text",
+          "label": "Heading text3",
+          "id": "content__ways"
+        },
+        { 
+          "type": "text",
+          "label": "Description",
+          "id": "description"
+        },
+        {
+          "type": "url",
+          "label": "Button link",
+          "id": "linkb"
+        },
+        {
+          "type": "text",
+          "label": "Button text",
+          "id": "sidelinktext",
+          "default": "Click Here"
+        } 
+        ],
+        "presets":[
+          {
+            "name":"Three Fold Way",
+            "category":"Custom"
+          }
+        ]
+ }
+      
+{% endschema %}
+{% style %}
+  {% if template.suffix != 'cholestrol' %}
+  .three_fold {
+      background: url('{{ three_fold_bkImage | img_url:" "}}');
+      background-repeat: no-repeat,no-repeat;
+      background-size: 100%;
+      padding: 30px 0 20px;
+  }
+  @media only screen and (max-width: 767.98px) {
+  p.login-heading.three-fold-head {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+}
+    .three_fold {
+      background: none;
+      padding: 0px;
+    }
+    .content__wrapper {
+/*       background: url('{{ three_fold_bkImage | img_url:" "}}'); */
+       background: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Banner_823b89aa-cb54-4b0d-955d-c80f82b82659.jpg?v=1679054007');
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding: 0;
+    }
+    body.gradient.template-page.home-app .content__wrapper, body.gradient.template-page.download-traya-app .content__wrapper, body.gradient.template-page.femalev1 .content__wrapper, body.gradient.template-page.female .content__wrapper, body.gradient.template-page.femalev2 .content__wrapper {
+      /*       background: url('{{ three_fold_bkImage | img_url:" "}}'); */
+      background: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/image_64c8726c-795b-47fe-bc97-a9346c5f365d.png?v=1689683257');
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding: 0;
+    }
+    
+    {% if template == 'index.login-lead' %}
+    .content__wrapper {
+/*       background: url('{{ three_fold_bkImage | img_url:" "}}'); */
+       background: url('https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_102353352.png?v=1693286996');
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 0;
+    }
+      {% endif %}
+    
+  }
+  {% endif %}
+{% endstyle %}
+{% if page.handle == 'homev5' %}
+  {% style %}
+    @media only screen and (min-width: 769px){
+      .three-fold-head{
+        padding-top:40px;
+      }
+      .section-title{
+        padding-top:40px!important;
+      }
+    }
+   {% endstyle %}
+{% endif %}
+{% style %}
+  .home_login_lead.three_fold p.description.mb-md-5.mb-3 span {
+    font-weight: bold;
+}
+.template-page.femalev2 p.three-fold-head , .template-page.female p.three-fold-head, .template-page.femalev1 p.three-fold-head {
+    margin-bottom: 15px !important;
+}
+/*   .three-fold-head:before {
+    content: '';
+    width: 10%;
+    height: 8px;
+    position: absolute;
+    background: #414042;
+    border-radius: 6px;
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%);
+  } */
+  .three-fold-head {
+    font-size: 44px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: -.22px;
+    margin-bottom: 30px!important;
+    position: relative;
+/*     padding-top:40px; */
+  }
+  .subheading {
+    font-size: 18px;
+    line-height: 1.61;
+    color: #414042;
+    padding:24px 0!important;
+    letter-spacing:0;
+  }
+  .content__wrapper {
+    max-width: 690px;
+    margin: 0 auto;
+  }
+  .content_ways {
+    line-height: 1.03;
+    color: #414042;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: normal;
+  }
+  .description {
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: -0.24px;
+    color: #939598;
+  }
+  @media only screen and (max-width: 767.98px){
+    p.revamp_sub_content {
+    font-size: 8px;
+}
+    .home_login_lead.three_fold .content_ways {
+    font-size: 16px;
+    padding-top: 0 !important;
+    font-weight: bold !important;
+    margin-bottom: 5px !important;
+}
+      .home_login_lead.three_fold .container {
+    padding: 0 0 !important;
+}
+    .home_login_lead.three_fold .subheading {
+       font-size: 14px;
+    max-width: 100%;
+    font-weight: 400;
+}
+    .three-fold-head:before {
+      width: 25%;
+    }
+    .three-fold-head {
+      font-size: 30px;
+    }
+    .subheading {
+      font-size: 12px;
+      max-width: 147px;
+      margin: 0 auto;
+    }
+    .content_ways {
+      font-size: 12px;
+    }
+    .description {
+      font-size: 16px;
+    } 
+  }
+{% endstyle %}
+{% if template.suffix == 'cholestrol' %}
+  {% style %}
+    .cholestrol-way .three-fold-head {
+      margin-bottom: 0px !important;
+      margin-top: 30px;
+    }
+    .cholestrol-container {
+      background: url('{{ three_fold_bkImage | img_url:" "}}');
+      background-repeat: no-repeat,no-repeat;
+      padding: 82px 140px;
+      background-size: 100%;
+    }
+    .cholestrol-way .content__wrapper {
+      max-width: inherit;
+    }
+    .cholestrol-way .description {
+      font-size: 36px;
+      line-height: initial;
+      letter-spacing: initial;
+      color: #414042;
+    }
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    .cholestrol-way .description {
+      font-size: 24px;
+    }
+    .cholestrol-container {
+      padding: 50px 100px;
+      background-position: center;
+    }
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    .cholestrol-way .description {
+      font-size: 20px;
+    }
+    .cholestrol-container {
+      padding: 30px 90px;
+      background-position: center;
+    }
+  }
+  @media only screen and (max-width: 767.98px) and (min-width: 576px) {
+    .cholestrol-container {
+      padding: 45px 65px;
+      background-position: center;
+    }
+    .cholestrol-way .description {
+      font-size: 18px;
+    }
+  }
+  @media only screen and (max-width: 575.98px) {
+    .cholestrol-container {
+      padding: 15px 40px;
+      background-position: center;
+    }
+    .cholestrol-way .description {
+      font-size: 15px;
+    }
+  }
+  {% endstyle %}
+  {% elsif page.handle == 'femalev11' %}
+    {% style %}
+      .three-fold-head {
+        margin-bottom: 0!important;
+      }
+      .subheading {
+        padding: 0 !important;
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 600;
+        color: #000;
+      }
+      .femalev11_content_ways {
+        font-size: 23px;
+        line-height: 33px;
+        color: #000000cc;
+        letter-spacing: normal;
+        position: relative;
+      }
+      .femalev11-description {
+        font-size: 23px;
+        line-height: 33px;
+        letter-spacing: normal;
+        color: #000000b3;
+      }
+      .three_fold {
+        background-position: left -40px,right top;
+      }
+      .femalev11_content_ways:before {
+        content: '';
+        position: absolute;
+        background: #B4CA6C;
+        height: 1.5px;
+        top: 0;
+        width: 85%;
+        left: 50%;
+        transform: translate(-50%, 10px);
+      }
+      .animate>span {
+        display: none;
+        font-weight: 700;
+        font-size: 46.8947px;
+        line-height: 39px;
+        color: #b4ca6ccc;
+      }
+      .animate>span.active {
+    	display: block !important;
+      }
+      @media only screen and (max-width: 767.98px) {
+        .three_fold .container {
+          padding: 0;
+        }
+        .three-fold-head {
+          font-size: 20.98px;
+        }
+        .subheading {
+          font-size: 16px;
+          line-height: 19px;
+        }
+        .femalev11_content_ways {
+          font-size: 18.0325px;
+          line-height: 25px;
+        }
+        h5.animate span {
+          font-size: 33px;
+          line-height: 29px;
+        }
+        .femalev11-description {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+      .home_login_lead.three_fold p.subheading.mb-0 {
+    padding: 0 0 10px !important;
+}
+      .home_login_lead.three_fold h5.content_ways.mb-4.pt-5.pt-md-2 {
+    margin: 0 !important;
+    font-weight: bold !important;
+    font-size: 32px;
+}
+
+      p.revamp_sub_content {
+    font-size: 12px;
+    color: rgba(65, 64, 66, 1);
+    margin-top: 5px;
+}
+    {% endstyle %}
+    <script async>
+      if(jQuery('.animate').length > 0 ){
+        jQuery('.animate > span:first-child').addClass('active');
+        var select_el = jQuery('.animate > span');
+        setInterval(function(){
+          if(select_el.hasClass('active')){
+            jQuery('.animate > span.active').removeClass('active').next().addClass('active');
+          }
+          if(jQuery('.animate > span:last-child').hasClass('active')){
+            jQuery('.animate > span:last-child').removeClass('active');
+            jQuery('.animate > span:first-child').addClass('active');
+          }
+        }, 1000);
+      }
+    </script>
+{% endif %}

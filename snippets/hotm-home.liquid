@@ -1,0 +1,67 @@
+<div class="container hotm">
+  <div class="hotm_text position-relative my-3">
+    <p class="hotm_hero font-fredoka">Hero</p>
+    <p class="hotm_month mt-md-4 mt-4">of the month</p>
+  </div>
+</div>
+<style>
+.hotm{
+  margin-top:6rem;
+}
+  .hotm_text .hotm_hero{
+    font-size: 130px;
+    line-height: 70px;
+    text-align: center;
+    color: #58595B;
+  }
+  .hotm_text .hotm_month{
+    font-size: 80px;
+    line-height: 60px;
+    text-align: center;
+    color: #58595B;
+  } 
+  .hotm_text:after{
+    content:url(//cdn.shopify.com/s/files/1/0100/1622/7394/files/hero_page_muscle_4_300x.png);
+    position:absolute;
+    display:block;
+    right: calc(0%);
+    transform: translateX(-12%);
+    transform: translateY(-15%);
+    top: -12%;
+
+  }
+  .hotm_text:before{
+    content:url(//cdn.shopify.com/s/files/1/0100/1622/7394/files/hero_page_muscle_5_300x.png);
+    position:absolute;
+    display:block;
+    left: calc(0%);
+    transform: translateX(-12%);
+    transform: translateY(-15%);
+    top: -12%;
+
+  }
+
+  @media only screen and (max-width: 767px) {
+    .hotm_text .hotm_hero{
+      font-size: 40px;
+      line-height: 38px;
+    }
+    .hotm_text .hotm_month{
+      font-size: 30px;
+      line-height: 0px;
+    }
+    .hotm_text:before{
+      content:url(//cdn.shopify.com/s/files/1/0100/1622/7394/files/hero_page_muscle_5_120x.png);
+      position:absolute;
+      left: calc(8%);
+      top: calc(-35%);
+    }
+    .hotm_text:after{
+      content:url(//cdn.shopify.com/s/files/1/0100/1622/7394/files/hero_page_muscle_4_120x.png);
+      position:absolute;
+      right: calc(10%);
+      top: calc(-35%);
+    }
+
+  }
+</style>

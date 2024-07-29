@@ -1,0 +1,214 @@
+<div class="transplant-care px-md-5">
+  {% if section.settings.transplant_head != blank %}
+    <p class="font-weight-bold text-center transplant-care-heading">{{ section.settings.transplant_head }}</p>
+  {% endif %}
+<div class="px-3 p-md-0">
+  <ul class="nav nav-pills mb-md-3 row translant-steps" id="pills-tab" role="tablist">
+    <li class="nav-item col-12 col-md-4">
+      <a class="nav-link text-center font-weight-normal active" id="pills-pre-treatment-tab" data-toggle="pill" href="#pills-pre-treatment" role="tab" aria-controls="pills-pre-treatment" aria-selected="true">Consultation and Pre- Treatment</a>
+    </li>
+    <li class="nav-item col-12 col-md-4">
+      <a class="nav-link text-center font-weight-normal" id="pills-prp-treatment-tab" data-toggle="pill" href="#pills-prp-treatment" role="tab" aria-controls="pills-prp-treatment" aria-selected="false">Transplant Surgery and PRP Treatment</a>
+    </li>
+    <li class="nav-item col-12 col-md-4">
+      <a class="nav-link text-center font-weight-normal" id="pills-maintenance-kit-tab" data-toggle="pill" href="#pills-maintenance-kit" role="tab" aria-controls="pills-maintenance-kit" aria-selected="false">After Care and Maintenance Kit</a>
+    </li>
+  </ul>
+</div>
+  <div class="tab-content pt-md-4" id="pills-tabContent">
+    <div class="tab-pane fade p-4 p-md-0 show active" id="pills-pre-treatment" role="tabpanel" aria-labelledby="pills-pre-treatment-tab">
+      <div class="Pre-Treatment row">
+      {% for block in section.blocks %}
+        {% if block.type == 'Pre-Treatment' %}
+          {% if block.settings.pre-Treatment-heading != blank and block.settings.pre-Treatment-desc1 != blank and block.settings.pre-Treatment-desc2 != blank %}
+            <div class="m-auto col-12 col-md-7">
+              <p class="font-weight-bold treatment-heading">{{ block.settings.pre-Treatment-heading }}</p>
+              <p class="treatment-description">{{ block.settings.pre-Treatment-desc1 }}</p>
+              <p class="treatment-description">{{ block.settings.pre-Treatment-desc2 }}</p>
+            </div>
+          {% endif %}
+            <div class="col-12 col-md-5 mt-3 mt-md-0">
+              {% if block.settings.pre-Treatment-des-img != blank%}
+                <img src="{{ block.settings.pre-Treatment-des-img | img_url: ' ' }}" class="d-none d-md-block m-auto pr-4">
+              {% endif %}
+              {% if block.settings.pre-Treatment-mob-img != blank %}
+                <img src="{{ block.settings.pre-Treatment-mob-img | img_url: ' ' }}" class="d-md-none m-auto p-2" width="100%">
+              {% endif %}
+            </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    </div>
+    <div class="tab-pane fade p-4 p-md-0" id="pills-prp-treatment" role="tabpanel" aria-labelledby="pills-prp-treatment-tab">
+      <div class="PRP-Treatment row">
+      {% for block in section.blocks %}
+        {% if block.type == 'PRP-Treatment' %}
+          {% if block.settings.prp-Treatment-heading != blank and block.settings.prp-Treatment-desc1 != blank and block.settings.prp-Treatment-desc2 != blank  %}
+            <div class="m-auto col-12 col-md-7">
+              <p class="font-weight-bold treatment-heading">{{ block.settings.prp-Treatment-heading }}</p>
+              <p class="treatment-description">{{ block.settings.prp-Treatment-desc1 }}</p>
+              <p class="treatment-description">{{ block.settings.prp-Treatment-desc2 }}</p>
+            </div>
+          {% endif %}
+            <div class="col-12 col-md-5 mt-3 mt-md-0">
+              {% if block.settings.prp-Treatment-des-img != blank %}
+                <img src="{{ block.settings.prp-Treatment-des-img | img_url: ' ' }}" class="d-none d-md-block m-auto pr-4">
+              {% endif %}
+              {% if block.settings.prp-Treatment-mob-img != blank %}
+                <img src="{{ block.settings.prp-Treatment-mob-img | img_url: ' ' }}" class="d-md-none m-auto p-2" width="100%">
+              {% endif %}
+            </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    </div>
+    <div class="tab-pane fade p-4 p-md-0" id="pills-maintenance-kit" role="tabpanel" aria-labelledby="pills-maintenance-kit-tab">
+      <div class="maintenance-kit row">
+      {% for block in section.blocks %}
+        {% if block.type == 'maintenance-kit' %}
+          {% if block.settings.maintenance-kit-heading != blank and block.settings.maintenance-kit-desc1 != blank and block.settings.maintenance-kit-desc2 != blank %}
+            <div class="m-auto col-12 col-md-7">
+              <p class="font-weight-bold treatment-heading">{{ block.settings.maintenance-kit-heading }}</p>
+              <p class="treatment-description">{{ block.settings.maintenance-kit-desc1 }}</p>
+              <p class="treatment-description">{{ block.settings.maintenance-kit-desc2 }}</p>
+            </div>
+          {% endif %}
+            <div class="col-12 col-md-5 mt-3 mt-md-0">
+              {% if block.settings.maintenance-kit-des-img != blank %}
+                <img src="{{ block.settings.maintenance-kit-des-img | img_url: ' ' }}" class="d-none d-md-block m-auto pr-4">
+              {% endif %}
+              {% if block.settings.maintenance-kit-mob-img != blank %}
+                <img src="{{ block.settings.maintenance-kit-mob-img | img_url: ' ' }}" class="d-md-none m-auto p-2" width="100%">
+              {% endif %}
+            </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Transplant Treatment Care",
+    "settings": [
+      {
+        "type": "text",
+        "id": "transplant_head",
+        "label": "Enter Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Pre-Treatment",
+        "type": "Pre-Treatment",
+        "settings": [
+          {
+            "type": "text",
+            "id": "pre-Treatment-heading",
+            "label": "Enter Pre-Treatment Heading"
+          },
+          {
+            "type": "text",
+            "id": "pre-Treatment-desc1",
+            "label": "Enter Pre-Treatment Description"
+          },
+          {
+            "type": "text",
+            "id": "pre-Treatment-desc2",
+            "label": "Enter Pre-Treatment Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "pre-Treatment-des-img",
+            "label": "Select Pre-Treatment Desktop Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "pre-Treatment-mob-img",
+            "label": "Select Pre-Treatment Mobile Image"
+          }
+        ]
+      },
+      {
+        "name": "PRP-Treatment",
+        "type": "PRP-Treatment",
+        "settings": [
+          {
+            "type": "text",
+            "id": "prp-Treatment-heading",
+            "label": "Enter PRP-Treatment Heading"
+          },
+          {
+            "type": "text",
+            "id": "prp-Treatment-desc1",
+            "label": "Enter PRP-Treatment Description"
+          },
+          {
+            "type": "text",
+            "id": "prp-Treatment-desc2",
+            "label": "Enter PRP-Treatment Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "prp-Treatment-des-img",
+            "label": "Select PRP-Treatment Desktop Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "prp-Treatment-mob-img",
+            "label": "Select PRP-Treatment Mobile Image"
+          }
+        ]
+      },
+      {
+        "name": "maintenance-kit",
+        "type": "maintenance-kit",
+        "settings": [
+          {
+            "type": "text",
+            "id": "maintenance-kit-heading",
+            "label": "Enter manitenace-kit Heading"
+          },
+          {
+            "type": "text",
+            "id": "maintenance-kit-desc1",
+            "label": "Enter manitenace-kit Description"
+          },
+          {
+            "type": "text",
+            "id": "maintenance-kit-desc2",
+            "label": "Enter manitenace-kit Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "maintenance-kit-des-img",
+            "label": "Select manitenace-kit Desktop Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "maintenance-kit-mob-img",
+            "label": "Select manitenace-kit Mobile Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Transplant Treatment Care",
+        "category": "custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  @media only screen and (max-width: 767.98px) {
+    .transplant .nav-pills .nav-link {
+      margin-bottom: 0 !important;
+      font-size: 12px !important;
+      text-align: left !important;
+      letter-spacing: normal;
+    } 
+  }
+{% endstyle %}

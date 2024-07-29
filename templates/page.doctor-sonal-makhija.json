@@ -1,0 +1,155 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "doctor_details_FYPFTc": {
+      "type": "doctor-details",
+      "blocks": {
+        "text_Hwgkz7": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "N",
+            "user_name": "Neha",
+            "user_content": "Dr. ne mere doubts clear kiye aur treatment samjhaya, making me feel secure."
+          }
+        },
+        "text_6HCfbL": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "A",
+            "user_name": "Anita",
+            "user_content": "Dr. ki advice ne meri lifestyle mein positive change laya hai, skin health mein bhi improvement hua."
+          }
+        },
+        "text_qTr8wk": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "K",
+            "user_name": "Kamal",
+            "user_content": "Hair care ke liye Dr. ka guidance best tha, achhe results mile.\""
+          }
+        }
+      },
+      "block_order": [
+        "text_Hwgkz7",
+        "text_6HCfbL",
+        "text_qTr8wk"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Dr_Sonal_Makhija.webp",
+        "doctor_name": "Dr. Sonal Makhija",
+        "specialization": "MBBS, MD (Dermatology)|  10 YEARS",
+        "education": "MBBS, MD (Dermatology)",
+        "registration_no": "07M2592",
+        "ratings": "5\/5",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "Dr. Sonal Makhija has over a decade of experience in both medical dermatology\/venereology and aesthetic dermatology. Her expertise is in treatments including lasers, energy-based devices, injectables, and dermatosurgery. Dr. Makhija is a published author in dermatology textbooks and reputable journals, with a focus on innovations in dermatology."
+      }
+    },
+    "qa_accordion_3Ar8XT": {
+      "type": "QA-accordion",
+      "blocks": {
+        "faq_r4hyPV": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do people visit Dr. Sonal?",
+            "Answer": "Patients seek Dr. Sonal Makhija for skin, hair, and nail-related problems."
+          }
+        },
+        "faq_fbjrMR": {
+          "type": "faq",
+          "settings": {
+            "Question": "What does Dr Sonal Specialize in?",
+            "Answer": "Dr. Makhija is skilled in lasers, energy-based devices, injectables, and dermatosurgery"
+          }
+        }
+      },
+      "block_order": [
+        "faq_r4hyPV",
+        "faq_fbjrMR"
+      ],
+      "settings": {
+        "Accordiontitle1": "",
+        "Accordiontitle2": ""
+      }
+    },
+    "doctor_slide_JVhqTM": {
+      "type": "doctor-slide",
+      "blocks": {
+        "text_Wi94N4": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Siddhi Sonawane",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Siddhi_69e310aa-8b4d-41e9-b58a-e3b338cf20f7.png",
+            "specialist": "DERMATOLOGIST | COSMETOLOGIST,",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_09a07296-d27a-4096-8eb3-2348712bc827.png",
+            "PageUrl": "shopify:\/\/pages\/siddhi-sonawane"
+          }
+        },
+        "text_a7kNKE": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Shefali Saini",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Shefali_79c32e40-1947-4a30-8292-8f5d3ca1d112.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_09a07296-d27a-4096-8eb3-2348712bc827.png",
+            "PageUrl": "shopify:\/\/pages\/shefali-saini"
+          }
+        },
+        "text_9tWWz6": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Dhwani Saxena",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Dhwani_Saxena.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "5 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-dhwani"
+          }
+        },
+        "text_QrFjEi": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Sangeeta Menon",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Sangeeta_Menon-1_compact_db3ee615-d365-4859-8e1c-91fa4ccc9466.png",
+            "specialist": "DIETICIAN | NUTRITIONIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/sangeeta-menon"
+          }
+        }
+      },
+      "block_order": [
+        "text_Wi94N4",
+        "text_a7kNKE",
+        "text_9tWWz6",
+        "text_QrFjEi"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "doctor_details_FYPFTc",
+    "qa_accordion_3Ar8XT",
+    "doctor_slide_JVhqTM"
+  ]
+}

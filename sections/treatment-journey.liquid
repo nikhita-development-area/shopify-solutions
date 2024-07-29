@@ -1,0 +1,188 @@
+  <div class="container">
+    
+    {% include 'breadcrumbs' %}
+
+    <p class="section-title">{{ section.settings.heading_TJ }}</p>
+
+    <img src="{{ section.settings.userScalp | img_url: '' }}" alt="shivyogi01">
+
+    <div class="condition-section pt-5 text-center pb-4">
+       {% for block in section.blocks %}
+         {% if block.type == 'Diagnosis' %}
+      <p class="section-title">{{ block.settings.Diagnosis }}</p>
+      <p class="doctor-con font-size-18 mb-4">{{ block.settings.DiagnosisContent }}</p>
+
+      <div class="condition d-flex justify-content-center">
+
+        <div class="item px-2 px-md-4 text-center">
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="{{ block.settings.icon1 | img_url: '100x' }}" alt="condition01" class="mh-100">
+          </div>
+          <p class="doctor-con font-size-18 mt-3">{{ block.settings.iconText1 }}</p>
+        </div>
+        <div class="item px-2 px-md-4 text-center">
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="{{ block.settings.icon2 | img_url: '100x' }}" alt="condition02" class="mh-100">
+          </div>
+          <p class="doctor-con font-size-18 mt-3">{{ block.settings.iconText2 }}</p>
+        </div>
+        <div class="item px-2 px-md-4 text-center">
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="{{ block.settings.icon3 | img_url: '100x' }}" alt="condition03" class="mh-100">
+          </div>
+          <p class="doctor-con font-size-18 mt-3">{{ block.settings.iconText3 }}</p>
+        </div>
+
+      </div>
+      {% endif %}
+         {% endfor %}
+    </div>
+
+  </div>
+  {% for block in section.blocks %}
+  {% if block.type == 'Doctors' %}
+    <div class="doctor py-5">
+      <div class="d-flex justify-content-center">
+    <img class="rounded-circle mb-3" src="{{ block.settings.doctorImg | img_url: '190x' }}" alt="doctor01">
+      </div>
+      <div class="bg-white col-11 col-md-8 content mx-auto pb-4 pt-5 px-0 px-4 rounded-lg text-center">
+        <h3>{{ block.settings.doctorName }}</h3>
+      <p class="doctor-con font-size-18">{{ block.settings.doctorcontent }}</p>
+      </div>
+    </div>
+  {% endif %}
+  {% endfor %}
+{% schema %}
+  {
+    "name": "Treatment Journey",
+    "settings": [
+       {
+          "id": "heading_TJ",
+          "type": "text",
+          "label": "Treatment Journey Heading"
+          },
+          {
+          "id": "userScalp",
+          "type": "image_picker",
+          "label": "Scalp Image"
+          }
+    ],
+    "blocks": [
+     {
+       "name": "Scalp Diagnosis",
+       "type": "Diagnosis",
+       "settings": [
+          {
+            "type": "text",
+            "id": "Diagnosis",
+            "label": "Diagnosis Text"
+          },
+           {
+            "type": "text",
+            "id": "DiagnosisContent",
+            "label": "Diagnosis Content"
+          },
+          {
+          "id": "icon1",
+          "type": "image_picker",
+          "label": "Icon 1"
+          },
+           {
+          "id": "iconText1",
+          "type": "text",
+          "label": "Text 1"
+          },  {
+          "id": "icon2",
+          "type": "image_picker",
+          "label": "Icon 2"
+          },
+           {
+          "id": "iconText2",
+          "type": "text",
+          "label": "Text 2"
+          },  {
+          "id": "icon3",
+          "type": "image_picker",
+          "label": "Icon 3"
+          },
+           {
+          "id": "iconText3",
+          "type": "text",
+          "label": "Text 3"
+          }
+        
+       ]
+},     
+      {
+       "name": "Doctors",
+       "type": "Doctors",
+       "settings": [
+          {
+            "type": "text",
+            "id": "PublicationsContent",
+            "label": "Title"
+          },  
+         {
+          "id": "doctorImg",
+          "type": "image_picker",
+          "label": "Doctor Image"
+          },
+            {
+          "id": "doctorName",
+          "type": "text",
+          "label": "Doctor Name"
+          },
+          {
+          "id": "doctorcontent",
+          "type": "html",
+          "label": "Doctor Content"
+          }
+       ]
+}  
+ ],
+          "presets":[
+          {
+          "name":"Treatment Journey"
+          }
+      ]
+  }
+{% endschema %}
+<style>
+  .doctor{
+   background: #68aa9f;
+  }
+  .doctor-con{
+    font-size:18px;
+  }
+  .doctor img{
+    border: 6px solid #fff;
+  }
+  .item img{
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 100%;
+    padding: 20px;
+  }
+  .doctor h3{
+    font-weight:700;
+  }
+  .plan-section h4{
+    font-size: 24px;
+    border-bottom: 2px solid #000;
+  }
+  .scalpitem{
+    position: relative;
+    padding-top: 80%;
+    border: 3px solid #fff;
+    }
+    .scalpitem img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>

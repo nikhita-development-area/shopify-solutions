@@ -1,0 +1,57 @@
+<script defer="defer">
+  var getUrlParameter = function getUrlParameter(sParam) {
+  var sPageURL = window.location.search.substring(1),
+      sURLVariables = sPageURL.split('&'),
+      sParameterName,
+      i;
+  for (i = 0; i < sURLVariables.length; i++) {
+    sParameterName = sURLVariables[i].split('=');
+    if (sParameterName[0] === sParam) {
+      return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+    }
+  }
+};
+let discount = getUrlParameter('discount');
+let qParameter = window.location.search.substring(1).split(/&(.*)/s)[1];
+var cart = getUrlParameter('cart');
+var variantsIDs = []; 
+if(cart){
+  cart = cart.split('?')[0];
+  var items = cart.split(',');
+  for(var i in items){
+    let item = items[i];
+    variantsIDs.push({
+      'id': item.split(':')[0],
+      'quantity': item.split(':')[1]
+    });
+  }
+  function buyItNow() {
+    let formData = {'items': variantsIDs};
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    }).then(response => {
+      if(qParameter){
+       document.location.href = `/cart?${qParameter}`;
+      }else{
+        document.location.href = '/cart';
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  }
+  fetch('/cart/clear.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then(response => {
+    buyItNow();
+  });    
+}
+</script>

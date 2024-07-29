@@ -1,0 +1,313 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email-form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email-form"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "1663048147371cde7e": {
+      "type": "doctor-details",
+      "blocks": {
+        "text_tqgEr6": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "K",
+            "user_name": "Kiran",
+            "user_content": "Acne scars ke liye Dr. ka treatment bahut achha hai, finally confident feel kar raha hoon.\""
+          }
+        },
+        "text_7EHnqq": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "P",
+            "user_name": "Parth",
+            "user_content": "Thanks to Dr. Saini, my acne is finally under control; her personalized care made all the difference"
+          }
+        },
+        "text_nFxfRT": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "J",
+            "user_name": "Jyoti",
+            "user_content": "Mere skin problems ka  Dr. ne bahut acche se ilaj kiya, ab kaafi comfortable hoon."
+          }
+        },
+        "294f54a3-2d46-41f0-93a6-171f4e403eda": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "R",
+            "user_name": "Rohan",
+            "user_content": "Trust Dr. Saxena for your hair related issues! Her kind and professional approach in understanding my hair fall condition and then formulating the treatment plan has helped me improve my hair growth."
+          }
+        },
+        "6d621270-c952-49cf-84cf-e2a346d5f447": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "R",
+            "user_name": "Rishi",
+            "user_content": "I am grateful to Dr. Saxena for giving me a head full of hair again. Her expertise and experience in the hair profession, and Traya's support have resulted in significant reduction of my hair fall and helped me to achieve my desired hair regrowth."
+          }
+        },
+        "5eae0963-d402-450a-bb35-6e1d0f581e60": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "V",
+            "user_name": "Vedant",
+            "user_content": "Choosing Traya was the best decision I ever made for my hair fall issue. Dr. Saxena guided me throughout the journey, and her expertise has made a lot of difference in improving my hair growth."
+          }
+        },
+        "c1894353-69fa-467b-b239-f730a1e72e2b": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "J",
+            "user_name": "Joseph",
+            "user_content": "I would definitely recommend Dr. Saxena and Traya for anyone struggling with hair fall. The holistic approach followed by Dr. Saxena, combined with Traya's effective products, have helped me get a beautiful head of hair again!"
+          }
+        },
+        "b27ba6e9-7d11-4e3a-9e1c-763344b10faf": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "R",
+            "user_name": "Ritika",
+            "user_content": "Dr. Saxena is an amazing hair specialist who helped me with my hair fall issues, and her personalised treatment plan has worked wonders for me. Couldn't thank her enough!"
+          }
+        },
+        "fd09d7c4-1a2d-4a1c-b997-007450bfae19": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "S",
+            "user_name": "Saumya",
+            "user_content": "Dr. Sangeeta is very helpful. I consulted her a couple of times and she always motivated me to focus on my diet and exercise regularly."
+          }
+        }
+      },
+      "block_order": [
+        "text_tqgEr6",
+        "text_7EHnqq",
+        "text_nFxfRT",
+        "294f54a3-2d46-41f0-93a6-171f4e403eda",
+        "6d621270-c952-49cf-84cf-e2a346d5f447",
+        "5eae0963-d402-450a-bb35-6e1d0f581e60",
+        "c1894353-69fa-467b-b239-f730a1e72e2b",
+        "b27ba6e9-7d11-4e3a-9e1c-763344b10faf",
+        "fd09d7c4-1a2d-4a1c-b997-007450bfae19"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Dr_Dhwani_Saxena.webp",
+        "doctor_name": "Dr. Dhwani Saxena",
+        "specialization": "MBBS, MD - Dermatology , Venereology & Leprosy |  5 years",
+        "education": "MBBS, MD (Dermatology)",
+        "registration_no": "2017\/08\/3940",
+        "ratings": "4.8\/5",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "Dr. Dhwani Saxena completed her M.D. from Government Medical College and served as a senior resident at KEM College, Mumbai. Dr. Saxena received her hair transplantation training from the Indian Society of Hair Restoration. With experience in assisting or performing over 200+ hair surgeries, she is a skilled expert in her field."
+      }
+    },
+    "16630481793e6018f8": {
+      "type": "QA-accordion",
+      "blocks": {
+        "7bd3f780-0144-4136-8079-072bed5a2107": {
+          "type": "faq",
+          "settings": {
+            "Question": "Who is a Dermatologist?",
+            "Answer": "A dermatologist  is a medical expert who specialises in treating skin and hair related conditions."
+          }
+        },
+        "adb24550-7354-450a-b6a2-fd30db239ce3": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do patients visit Dr Dhwani Saxena?",
+            "Answer": "Patients consult Dr. Saxena for hair transplants and other hair-related conditions."
+          }
+        },
+        "e124f037-dd41-4855-b6f4-e1da43fea7ec": {
+          "type": "faq",
+          "settings": {
+            "Question": "What does Dr Dhwani Specialise in?",
+            "Answer": "Dr. Saxena specialises in hair transplantation and has completed extensive training in this area, having assisted or performed over 200 hair surgeries."
+          }
+        },
+        "8140ad15-7888-43d0-9eb4-bcfb89fa4d7b": {
+          "type": "Awards",
+          "disabled": true,
+          "settings": {
+            "AwardsContent": "Best Female Entrepreneur Vapi, 2019"
+          }
+        },
+        "cba381d1-3639-4890-a0b5-17d667d161d6": {
+          "type": "Publications",
+          "disabled": true,
+          "settings": {
+            "PublicationsContent": "My Amazon e-book on Kindle, “Nine months of my baby” for entrepreneurs."
+          }
+        }
+      },
+      "block_order": [
+        "7bd3f780-0144-4136-8079-072bed5a2107",
+        "adb24550-7354-450a-b6a2-fd30db239ce3",
+        "e124f037-dd41-4855-b6f4-e1da43fea7ec",
+        "8140ad15-7888-43d0-9eb4-bcfb89fa4d7b",
+        "cba381d1-3639-4890-a0b5-17d667d161d6"
+      ],
+      "settings": {
+        "Accordiontitle1": "",
+        "Accordiontitle2": ""
+      }
+    },
+    "1663048184762c8b78": {
+      "type": "doctor-slide",
+      "blocks": {
+        "dade3740-efdc-4640-bc55-645acf84ce9b": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Harish Balaji. R",
+            "doctorImage": "shopify:\/\/shop_images\/dr.harish_compact_618a6300-f9a1-4fe6-b780-748f8d8a0c62.png",
+            "specialist": "DERMATOLOGIST | MD | AESTHETIC SURGEON,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-harish"
+          }
+        },
+        "6ce1d5e0-9eba-49d8-bb8e-cfdc9c71238b": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr.Shailendra Chaubey",
+            "doctorImage": "shopify:\/\/shop_images\/Chaubey_compact_0936c6a4-d63f-450e-a76b-52e95315ba60.png",
+            "specialist": "HEALTH EDUCATOR | AYURVEDIC PRACTITIONER,",
+            "experience": "15 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/shailendra-chaubey"
+          }
+        },
+        "4ffd98a5-7f91-4341-a0cf-e1399790b069": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Shefali Saini",
+            "doctorImage": "shopify:\/\/shop_images\/dr_Shefali_6d8c17e2-4bb6-42b9-95a2-4e900cb9b9d4.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/shefali-saini"
+          }
+        },
+        "7e4d7fb6-b425-41ec-a44a-11bbeaed211c": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Nishita Suratkal",
+            "doctorImage": "shopify:\/\/shop_images\/Group_102352436_5e061c31-5568-4289-a423-545f2150d9b0.png",
+            "specialist": "DIETICIAN | NUTRITIONIST",
+            "experience": "5YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/nishita-suratkal"
+          }
+        },
+        "79c3b738-4612-45fc-8fd4-7f150cf6d497": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Siddhi Sonawane",
+            "doctorImage": "shopify:\/\/shop_images\/9814da57-362f-484e-8e96-552a54fae9c2.jpg",
+            "specialist": "DERMATOLOGIST | COSMETOLOGIST,",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "4.5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856.png",
+            "PageUrl": "shopify:\/\/pages\/siddhi-sonawane"
+          }
+        },
+        "98e82fe1-5a36-445c-8569-bbaba0224233": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Kalyani Deshmukh",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Kalyani-1_compact_ef50a4f5-47ea-415e-ba4f-0df0def67e7a.png",
+            "specialist": "DERMATOLOGIST | HAIR SPECIALIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1.png",
+            "rating": "5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "shopify:\/\/pages\/kalyani-deshmukh"
+          }
+        },
+        "46cea106-782d-400f-860f-7d8d87a507fc": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "doctorName": "Dr. Moyna Vakil",
+            "doctorImage": "shopify:\/\/shop_images\/dr.Moyna-1_large_7f324788-81f4-4aa8-bedf-0d7b2039fabe.png",
+            "specialist": "Dietician ,Nutritionist",
+            "experience": "10 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_28fc9d82-ee93-431d-b655-56a0fb22edb0.webp",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_large_b6232b33-0d24-438c-8645-1d348bd459dc.png",
+            "PageUrl": "https:\/\/traya.health\/pages\/moyna-vakil"
+          }
+        }
+      },
+      "block_order": [
+        "dade3740-efdc-4640-bc55-645acf84ce9b",
+        "6ce1d5e0-9eba-49d8-bb8e-cfdc9c71238b",
+        "4ffd98a5-7f91-4341-a0cf-e1399790b069",
+        "7e4d7fb6-b425-41ec-a44a-11bbeaed211c",
+        "79c3b738-4612-45fc-8fd4-7f150cf6d497",
+        "98e82fe1-5a36-445c-8569-bbaba0224233",
+        "46cea106-782d-400f-860f-7d8d87a507fc"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "newsletter",
+    "1663048147371cde7e",
+    "16630481793e6018f8",
+    "1663048184762c8b78"
+  ]
+}

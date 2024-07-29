@@ -1,0 +1,1937 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "cdd3ff85-ed6f-4aa0-9f8c-8cba1394eeea": {
+      "type": "female-banner-slider",
+      "blocks": {
+        "bfff24b1-791a-4665-b6d4-6ebe398b8773": {
+          "type": "gallery",
+          "settings": {
+            "desk_img": "shopify:\/\/shop_images\/Group_1_3_6aaddbf8-e8af-404e-890e-cd6965c12a2b.png",
+            "mob_img": "shopify:\/\/shop_images\/Frame_102353360_67f75bd9-0690-4544-8496-f8da44fa2259.png",
+            "heading_text": "Facing Hair Loss?",
+            "sub_heading_text": "Bas chupaane se nahi rukta.\u2028<br>Find the <span>Root Cause.<\/span>",
+            "sub_heading_text2": "93% Saw Results*",
+            "sub_heading_text3": "",
+            "button_text": "TAKE THE HAIR TEST",
+            "button_url": "https:\/\/form.traya.health\/female?cohort=1&location=RootCauses",
+            "customers_svg": "shopify:\/\/shop_images\/Vector_1.svg",
+            "customers_content": "8 Lakhs + Customers",
+            "customers_content2": "",
+            "content_position": "middle-left"
+          }
+        },
+        "60dd0c48-e71c-4ea3-be20-302bf9af8ce4": {
+          "type": "gallery",
+          "settings": {
+            "desk_img": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1_b4b53e03-8109-4ba6-804c-2f84b95e97e3.png",
+            "mob_img": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_9e024fb0-7bad-401c-bd93-46a5acd772f0.jpg",
+            "heading_text": "Goodness of herbal ingredients mixed with clinically proven molecules",
+            "sub_heading_text": "",
+            "sub_heading_text2": "Visible Hair Growth in 84 Days*",
+            "sub_heading_text3": "",
+            "button_text": "TAKE THE HAIR TEST",
+            "button_url": "https:\/\/form.traya.health\/female?cohort=1&location=RootCauses",
+            "customers_content": "",
+            "customers_content2": "",
+            "content_position": "middle-center"
+          }
+        },
+        "74cade62-186d-4c5c-9eba-1da18e2ffa2c": {
+          "type": "gallery",
+          "settings": {
+            "desk_img": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_c8096654-db0e-423d-be90-ad9b47ce58c5.png",
+            "mob_img": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_d31e9691-13f7-436e-8969-a141f4ac0d62.jpg",
+            "heading_text": "Because One product won’t solve all your hair concerns",
+            "sub_heading_text": "",
+            "sub_heading_text2": "Doctor recommended",
+            "sub_heading_text3": "You need a regime that works from  <br>inside out",
+            "button_text": "TAKE THE HAIR TEST",
+            "button_url": "https:\/\/form.traya.health\/female?cohort=1&location=RootCauses",
+            "customers_content": "",
+            "customers_content2": "",
+            "content_position": "middle-left"
+          }
+        }
+      },
+      "block_order": [
+        "bfff24b1-791a-4665-b6d4-6ebe398b8773",
+        "60dd0c48-e71c-4ea3-be20-302bf9af8ce4",
+        "74cade62-186d-4c5c-9eba-1da18e2ffa2c"
+      ],
+      "settings": {
+      }
+    },
+    "1663823771acb5bafd": {
+      "type": "slideshow",
+      "blocks": {
+        "166382377116817d84-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_102352657.webp",
+            "mbl_image": "shopify:\/\/shop_images\/mobile_banner_10_2.webp",
+            "heading": "93% saw results*",
+            "heading_size": "h1",
+            "subheading": "Thick Voluminous Hair <br>Now Possible",
+            "subheading-2": "With Traya’s Holistic 3 Science Formula",
+            "button_label": "TAKE THE HAIR TEST",
+            "link": "https:\/\/form.traya.health\/female?cohort=1&location=HomeSlideshow",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 10,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "left"
+          }
+        }
+      },
+      "block_order": [
+        "166382377116817d84-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "16638237978dbe31f5": {
+      "type": "logo-bar",
+      "blocks": {
+        "1663310543fa4cb22c-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/003_45350490-3f83-4360-aad7-1dd5d44bdba2.png",
+            "link": "shopify:\/\/pages\/press"
+          }
+        },
+        "1663310543fa4cb22c-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/007_1b7f2712-99e2-4e10-86ab-a53e62d0e247.jpg",
+            "link": "shopify:\/\/pages\/press"
+          }
+        },
+        "1663310543fa4cb22c-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/009_e3baaf5f-4d89-4a8e-95f2-be304d03723a.jpg",
+            "link": ""
+          }
+        },
+        "1663310543fa4cb22c-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/006_d8c2158b-82e2-42ab-8914-3c0e9a3744f4.png",
+            "link": ""
+          }
+        },
+        "2900f6b0-5824-49be-b1f1-da9c56a9f6cb": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/005_711c722d-b488-4862-8549-28990c21731a.jpg",
+            "link": ""
+          }
+        },
+        "86b4d6b2-3465-4ef4-b13c-e5fcda85bef4": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/001_7274eafc-0433-4379-b914-e000c388ef8e.png",
+            "link": ""
+          }
+        },
+        "04b64c56-64f4-418a-8602-305465be9d41": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/004_5ca260c5-a56d-4d4c-8592-9cbd53a19c86.png",
+            "link": ""
+          }
+        },
+        "8b989111-043d-451a-8a05-4a9f8d65806b": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/008_b322bc9e-feee-43ec-9bc1-cb9d2d59bd1d.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1663310543fa4cb22c-0",
+        "1663310543fa4cb22c-1",
+        "1663310543fa4cb22c-2",
+        "1663310543fa4cb22c-3",
+        "2900f6b0-5824-49be-b1f1-da9c56a9f6cb",
+        "86b4d6b2-3465-4ef4-b13c-e5fcda85bef4",
+        "04b64c56-64f4-418a-8602-305465be9d41",
+        "8b989111-043d-451a-8a05-4a9f8d65806b"
+      ],
+      "settings": {
+        "title": "",
+        "showMarquee": false,
+        "showslide": false
+      }
+    },
+    "32e30758-a1e7-4775-b780-1810a8663e70": {
+      "type": "female-collection-slide",
+      "blocks": {
+        "b4bc626b-59b4-4532-bd5d-e915f1202685": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Jayna_c5c2efa9-d0d7-4b5d-a07d-fc86c7fb09f9.png"
+          }
+        },
+        "0ad27778-d59b-4a98-91c2-8f8580c96a9f": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_1023222_1.png"
+          }
+        },
+        "57d2678b-66da-4ea5-95c6-6e4dde1362d3": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_1023223.png"
+          }
+        },
+        "c3809e72-7c70-4e7d-977c-3b9b93986fd1": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Frame_102353323_3.png"
+          }
+        },
+        "0a655e2c-d897-4600-8b8b-5b101adf1db0": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Poonam_09af7a18-72a4-4d90-b3aa-c85421710e82.png"
+          }
+        },
+        "5ca72c05-428e-43cd-9c87-3b17c77a2bbe": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Anuradha.png"
+          }
+        },
+        "c9cd9bb8-24be-44f7-a5bc-efcf92fdac28": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Anuu.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b4bc626b-59b4-4532-bd5d-e915f1202685",
+        "0ad27778-d59b-4a98-91c2-8f8580c96a9f",
+        "57d2678b-66da-4ea5-95c6-6e4dde1362d3",
+        "c3809e72-7c70-4e7d-977c-3b9b93986fd1",
+        "0a655e2c-d897-4600-8b8b-5b101adf1db0",
+        "5ca72c05-428e-43cd-9c87-3b17c77a2bbe",
+        "c9cd9bb8-24be-44f7-a5bc-efcf92fdac28"
+      ],
+      "settings": {
+        "hide_text": "",
+        "slide_class": "female-reviews py-md-4",
+        "Heading": "Real Women, Real Stories",
+        "padding_top": 36,
+        "padding_bottom": 24
+      }
+    },
+    "1fa2f2c3-0827-4381-a31a-9b467cdf4b73": {
+      "type": "female-collection-slide",
+      "blocks": {
+        "d9e86b6a-c97f-47e1-a260-0431af9974ef": {
+          "type": "text",
+          "settings": {
+            "link": "#",
+            "Image": "shopify:\/\/shop_images\/Frame_5.png"
+          }
+        },
+        "90f9a8b3-53c1-4503-8cd8-cea27a9a3541": {
+          "type": "text",
+          "settings": {
+            "link": "#",
+            "Image": "shopify:\/\/shop_images\/Group_102353052_48f6cd3b-ca92-43d2-a186-1a609ec2c7e6.png"
+          }
+        },
+        "231ad156-c354-401d-8362-b29e78d95b05": {
+          "type": "text",
+          "settings": {
+            "link": "#",
+            "Image": "shopify:\/\/shop_images\/Group_102353054_1_1.png"
+          }
+        },
+        "e6550b5b-253a-4627-9c8f-e7a54045c1ea": {
+          "type": "text",
+          "settings": {
+            "link": "#",
+            "Image": "shopify:\/\/shop_images\/Group_102353054_337887a7-6d09-486b-826d-9c1c8ca0056a.png"
+          }
+        },
+        "8658dff5-5e75-4932-ad84-f04a11e8f0cc": {
+          "type": "text",
+          "settings": {
+            "link": "#",
+            "Image": "shopify:\/\/shop_images\/Group_102353055_1d0498ec-317b-4966-9c18-b5c168e416e4.png"
+          }
+        },
+        "5ff812f3-8b92-41b6-96eb-a6149b83629c": {
+          "type": "text",
+          "settings": {
+            "link": "#",
+            "Image": "shopify:\/\/shop_images\/Group_102353056_79c32ad9-2e07-4628-a624-b5644c18e760.png"
+          }
+        },
+        "4c873de6-140e-42da-839e-d818f9583ea3": {
+          "type": "text",
+          "settings": {
+            "link": "#",
+            "Image": "shopify:\/\/shop_images\/Group_102353058_1.png"
+          }
+        },
+        "ee632109-fc8d-4b68-99dc-e25bc86445dc": {
+          "type": "text",
+          "settings": {
+            "link": "#",
+            "Image": "shopify:\/\/shop_images\/Group_102353059_1838d893-deec-422c-af20-de7c9ad1db15.png"
+          }
+        },
+        "4e98eb8d-c567-4cf9-9181-0780bb490eb6": {
+          "type": "text",
+          "settings": {
+            "link": "#",
+            "Image": "shopify:\/\/shop_images\/Group_102353060_a3857144-b6c1-4bff-b07c-9769271bffc8.png"
+          }
+        }
+      },
+      "block_order": [
+        "d9e86b6a-c97f-47e1-a260-0431af9974ef",
+        "90f9a8b3-53c1-4503-8cd8-cea27a9a3541",
+        "231ad156-c354-401d-8362-b29e78d95b05",
+        "e6550b5b-253a-4627-9c8f-e7a54045c1ea",
+        "8658dff5-5e75-4932-ad84-f04a11e8f0cc",
+        "5ff812f3-8b92-41b6-96eb-a6149b83629c",
+        "4c873de6-140e-42da-839e-d818f9583ea3",
+        "ee632109-fc8d-4b68-99dc-e25bc86445dc",
+        "4e98eb8d-c567-4cf9-9181-0780bb490eb6"
+      ],
+      "settings": {
+        "hide_text": "show",
+        "slide_class": "femalev2_cursor female-reviews py-md-4",
+        "Heading": "Different Hair Problems Different Root Causes",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "16644486865a19040b": {
+      "type": "root-cause",
+      "blocks": {
+        "1be13d81-8e82-42a7-a54c-40fb5657d096": {
+          "type": "rootm",
+          "settings": {
+            "headingM": "",
+            "maleContent": "",
+            "rootCauseImgF": "shopify:\/\/shop_images\/icn5_853d6cc5-7f6a-46f7-9271-f471ad0c1bc9.png",
+            "headingF": "Postpartum",
+            "femaleContent": "Excessive Hair fall 4 to 6 months after delivery. Get natural, breastfeeding safe treatment"
+          }
+        },
+        "55400697-ba53-4cc5-911c-0ea76a4626dc": {
+          "type": "rootm",
+          "settings": {
+            "headingM": "",
+            "maleContent": "",
+            "rootCauseImgF": "shopify:\/\/shop_images\/icn2_7e02cbd0-4069-4b39-9257-05c34057ac58.png",
+            "headingF": "Nutrition",
+            "femaleContent": "Nutrients build the hair fibre and define texture, quality and strength. Deficiency leads to hair fall."
+          }
+        },
+        "0cca93b9-f2a2-452d-acd2-9c0dd5d55318": {
+          "type": "rootm",
+          "settings": {
+            "headingM": "",
+            "maleContent": "",
+            "rootCauseImgF": "shopify:\/\/shop_images\/icn6_fc69e034-3201-4e04-ab90-73daebc4bd76.png",
+            "headingF": "Stress & Sleep",
+            "femaleContent": "Stress shifts hair root to rest phase leading to excessive hair fall."
+          }
+        },
+        "946f7345-4ead-47f0-ab35-04f20d59fa61": {
+          "type": "rootm",
+          "settings": {
+            "headingM": "",
+            "maleContent": "",
+            "rootCauseImgF": "shopify:\/\/shop_images\/icn10_bc4abbf7-6a90-40b9-a8de-4d983833e1a3.png",
+            "headingF": "Hormone Imbalance & PCOS",
+            "femaleContent": "Excessive androgen hormones lead to hair fall that is slow but makes the scalp visible"
+          }
+        },
+        "a66f11b9-3b77-474f-877e-ccd4d8e614fd": {
+          "type": "rootm",
+          "settings": {
+            "headingM": "",
+            "maleContent": "",
+            "rootCauseImgF": "shopify:\/\/shop_images\/icn9_d8ed08d7-9478-4d79-a461-efaf855b4596.png",
+            "headingF": "Menopause",
+            "femaleContent": "The shift in hormones accelerates hair fall leading to widening-partition of hair (Female pattern hair fall)"
+          }
+        },
+        "98b22339-991e-4806-8c31-2110ecbb3e1b": {
+          "type": "rootm",
+          "settings": {
+            "headingM": "",
+            "maleContent": "",
+            "rootCauseImgF": "shopify:\/\/shop_images\/icn1_c4fb1816-7704-49d3-a436-b8a3fa0d34d6.png",
+            "headingF": "Genetics",
+            "femaleContent": "DHT(androgenic alopecia) causes hair roots to shrink and hair to thin and fall out."
+          }
+        },
+        "ccf2f84b-2a39-438d-baed-07436192e478": {
+          "type": "rootm",
+          "settings": {
+            "headingM": "",
+            "maleContent": "",
+            "rootCauseImgF": "shopify:\/\/shop_images\/icn8_9dbd525a-e525-4e4b-994c-ff8bc862c23a.png",
+            "headingF": "Weight",
+            "femaleContent": "Poor energy levels is a sign that your weight or metabolism could be the real cause of hair fall."
+          }
+        },
+        "365f72ef-5961-480a-8931-dbd6c6a05c20": {
+          "type": "rootm",
+          "settings": {
+            "headingM": "",
+            "maleContent": "",
+            "rootCauseImgF": "shopify:\/\/shop_images\/icn13_1071d08e-7b0f-4b90-aff7-c41e8e1d561c.png",
+            "headingF": "Environment",
+            "femaleContent": "Pollution, sun, chemical exposure to hair especially keratin and straightening treatments trigger hair fall."
+          }
+        }
+      },
+      "block_order": [
+        "1be13d81-8e82-42a7-a54c-40fb5657d096",
+        "55400697-ba53-4cc5-911c-0ea76a4626dc",
+        "0cca93b9-f2a2-452d-acd2-9c0dd5d55318",
+        "946f7345-4ead-47f0-ab35-04f20d59fa61",
+        "a66f11b9-3b77-474f-877e-ccd4d8e614fd",
+        "98b22339-991e-4806-8c31-2110ecbb3e1b",
+        "ccf2f84b-2a39-438d-baed-07436192e478",
+        "365f72ef-5961-480a-8931-dbd6c6a05c20"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Find The Root Cause Of Your Hair Fall",
+        "sub_title": "We use nature to target the root causes of your hair fall",
+        "DeskRootMale": "shopify:\/\/shop_images\/banner_4973e255-2d8a-4c31-be13-3bef5995cb27.jpg",
+        "DeskRootFemale": "shopify:\/\/shop_images\/banner_b3ba6f38-b8e8-43ae-bea2-0d79b4afb055.jpg",
+        "btn_link": "https:\/\/form.traya.health\/female?cohort=1&location=RootCauses",
+        "buttontitle": "TAKE THE HAIR TEST",
+        "rootcause-undertext": ""
+      }
+    },
+    "1664514446420a4dc0": {
+      "type": "ThreeFold-Way",
+      "settings": {
+        "three_fold_bk_image": "shopify:\/\/shop_images\/Frame_102353347.jpg",
+        "three_fold_heading": "The Threefold Way",
+        "subheading": "TRAYA’S HOLISTIC PLAN FOR HAIR FALL",
+        "content__ways": "AYURVEDA+DERMATOLOGY+NUTRITION",
+        "description": "Our approach combines the goodness of three sciences. With ingredients from the most authentic sources, we personalize your treatment delivering assured results.",
+        "linkb": "https:\/\/form.traya.health\/female?cohort=1&location=Ingredients",
+        "sidelinktext": "Take The Hair Test"
+      }
+    },
+    "166382381876793f6e": {
+      "type": "swirl-video",
+      "settings": {
+        "heading": "",
+        "html_area": "<div id=\"swirl-short-videos\" data-code=\"hnl8qkiv\" data-sw=\"1\"><\/div>\n<div class=\"swirl-short-videos-M\" data-playlist=\"GTMU3z\"><\/div>"
+      }
+    },
+    "f8892752-7736-451d-884c-c345c0bd2d12": {
+      "type": "Single-Traya",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "16645144751281a304": {
+      "type": "traya-journey",
+      "blocks": {
+        "e39a92fc-069a-4342-a4c9-f77a61706826": {
+          "type": "content",
+          "settings": {
+            "heading": "Take the Hair Test",
+            "content": "An online test that assess the root cause of your hair loss <br> <br>",
+            "read_time": "(takes 2-4 mins)",
+            "icon": "shopify:\/\/shop_images\/Frame_102353348_3.png",
+            "card_link_text": "Take the Hair Test<sup>TM<\/sup>",
+            "card_link": "https:\/\/form.traya.health\/female?cohort=1&location=Journey"
+          }
+        },
+        "ea79f216-52a1-4e6b-949c-2e74af08f037": {
+          "type": "content",
+          "settings": {
+            "heading": "Buy the Plan",
+            "content": "On the basis of your responses, a team of doctors recommend a treatment plan.",
+            "read_time": "(takes 5 mins)",
+            "icon": "shopify:\/\/shop_images\/Frame_102353348_1.png",
+            "card_link_text": "",
+            "card_link": "https:\/\/form.traya.health\/female?cohort=1&location=Journey"
+          }
+        },
+        "1872f16d-c5e5-4b5b-a423-c8293b88b13d": {
+          "type": "content",
+          "settings": {
+            "heading": "Get Hair Coach Guidance",
+            "content": "After you buy the plan, Traya's expert Hair Coaches assist you and get you started on your hair growth journey.",
+            "read_time": "(takes 3-5 mins)",
+            "icon": "shopify:\/\/shop_images\/Frame_102353348_2.png",
+            "card_link_text": "",
+            "card_link": "https:\/\/form.traya.health\/female?cohort=1&location=Journey"
+          }
+        }
+      },
+      "block_order": [
+        "e39a92fc-069a-4342-a4c9-f77a61706826",
+        "ea79f216-52a1-4e6b-949c-2e74af08f037",
+        "1872f16d-c5e5-4b5b-a423-c8293b88b13d"
+      ],
+      "custom_css": [
+        ".traya-main {margin-bottom: 20px;}"
+      ],
+      "settings": {
+        "title": "Here Is How It Will Work",
+        "sub_title": "",
+        "btn_text": "",
+        "btn_link": "https:\/\/form.traya.health\/female?cohort=1&location=TrayaJourney"
+      }
+    },
+    "0db2b343-320e-43c5-92c7-fea3bd1e3d55": {
+      "type": "female-collection-slide",
+      "blocks": {
+        "eeeee553-c513-4e9a-bd98-061c9bf3711c": {
+          "type": "text",
+          "settings": {
+            "link": "shopify:\/\/products\/scalp-oil-with-dandruff-therapy-booster-shots",
+            "Image": "shopify:\/\/shop_images\/Group_102352715.png"
+          }
+        },
+        "78463f31-25ad-49c9-9f8b-a70df5003949": {
+          "type": "text",
+          "settings": {
+            "link": "shopify:\/\/products\/shampoo",
+            "Image": "shopify:\/\/shop_images\/Group_102352726_e4ae1b78-4e25-4495-9953-695aeb07698b.png"
+          }
+        },
+        "e9fa7345-2e53-4673-afaa-f1a42b589e4e": {
+          "type": "text",
+          "settings": {
+            "link": "shopify:\/\/products\/hair-vitamins",
+            "Image": "shopify:\/\/shop_images\/Group_102352728.png"
+          }
+        },
+        "b6e2e7e3-05fb-46a2-be35-1771ffd66dfe": {
+          "type": "text",
+          "settings": {
+            "link": "shopify:\/\/products\/recap-serum-for-hair-fall-control",
+            "Image": "shopify:\/\/shop_images\/Group_102352727.png"
+          }
+        },
+        "c89bcada-c78a-410a-a378-3e76d89c1e65": {
+          "type": "text",
+          "settings": {
+            "link": "shopify:\/\/products\/avipattikar-digestion-tablets",
+            "Image": "shopify:\/\/shop_images\/Group_102352725.png"
+          }
+        },
+        "433486ef-ed5b-4ade-a57e-2feb23ebef1c": {
+          "type": "text",
+          "settings": {
+            "link": "shopify:\/\/products\/shatavari-ghrita",
+            "Image": "shopify:\/\/shop_images\/Group_102352724.png"
+          }
+        },
+        "56186ed9-328b-40f5-ab97-a2ded08e9e04": {
+          "type": "text",
+          "settings": {
+            "link": "shopify:\/\/products\/pcos-santulan-for-pcos-and-hormone-related-hair-loss",
+            "Image": "shopify:\/\/shop_images\/Group_102352712.png"
+          }
+        },
+        "9b9ef820-e1ba-4e92-b7e3-9e10fb1ff672": {
+          "type": "text",
+          "settings": {
+            "link": "shopify:\/\/products\/thyro-santulan-tablets-for-supporting-thyroid-health",
+            "Image": "shopify:\/\/shop_images\/Group_102352686.png"
+          }
+        },
+        "47591a7c-668e-4570-a4d1-59e8d19b9fd9": {
+          "type": "text",
+          "settings": {
+            "link": "shopify:\/\/products\/meno-santulan-tablets-for-menopause-support-and-menopausal-hair-fall",
+            "Image": "shopify:\/\/shop_images\/Group_102352684.png"
+          }
+        },
+        "a6aa0782-0b8c-497f-87f6-d8a5b0122f62": {
+          "type": "text",
+          "settings": {
+            "link": "shopify:\/\/products\/mom-santulan-tablets-for-hair-fall-in-post-pregnancy-or-post-childbirth-period",
+            "Image": "shopify:\/\/shop_images\/Group_102352680.png"
+          }
+        }
+      },
+      "block_order": [
+        "eeeee553-c513-4e9a-bd98-061c9bf3711c",
+        "78463f31-25ad-49c9-9f8b-a70df5003949",
+        "e9fa7345-2e53-4673-afaa-f1a42b589e4e",
+        "b6e2e7e3-05fb-46a2-be35-1771ffd66dfe",
+        "c89bcada-c78a-410a-a378-3e76d89c1e65",
+        "433486ef-ed5b-4ade-a57e-2feb23ebef1c",
+        "56186ed9-328b-40f5-ab97-a2ded08e9e04",
+        "9b9ef820-e1ba-4e92-b7e3-9e10fb1ff672",
+        "47591a7c-668e-4570-a4d1-59e8d19b9fd9",
+        "a6aa0782-0b8c-497f-87f6-d8a5b0122f62"
+      ],
+      "disabled": true,
+      "settings": {
+        "hide_text": "",
+        "slide_class": "",
+        "Heading": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "a475b325-ecd0-408d-a3eb-0f1847a50f85": {
+      "type": "female-collection-slide",
+      "blocks": {
+        "c9331ede-2e98-4160-af16-59995dd46832": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Group_102353057_db19cefb-c15b-4815-bd1b-d1331a244eb8.png"
+          }
+        },
+        "a3071bb7-1a72-46f4-b232-35067679f31f": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Group_102353038_86467b43-e83e-4f1a-bbc6-7fd781f8caee.png"
+          }
+        },
+        "264ab49d-1894-42da-a273-0c4fb810976a": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Group_102353037_9fc27f45-c708-4469-87e5-3883d82909a6.png"
+          }
+        },
+        "110c8a52-bee7-4c30-b9b1-7f9c63a9e7ab": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Group_102353041_1.png"
+          }
+        },
+        "45ab31cf-e128-486d-ae76-f3d1c64f724e": {
+          "type": "text",
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Group_102353058_811e48b9-474c-49e3-96c0-d364cadccbaf.png"
+          }
+        },
+        "fdc4215b-4a76-4fca-9eaa-57c2ebceefbe": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "Image": "shopify:\/\/shop_images\/Group_102353037_9fc27f45-c708-4469-87e5-3883d82909a6.png"
+          }
+        },
+        "249c7523-6f38-49b4-9526-e6edfab2c069": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "c9331ede-2e98-4160-af16-59995dd46832",
+        "a3071bb7-1a72-46f4-b232-35067679f31f",
+        "264ab49d-1894-42da-a273-0c4fb810976a",
+        "110c8a52-bee7-4c30-b9b1-7f9c63a9e7ab",
+        "45ab31cf-e128-486d-ae76-f3d1c64f724e",
+        "fdc4215b-4a76-4fca-9eaa-57c2ebceefbe",
+        "249c7523-6f38-49b4-9526-e6edfab2c069"
+      ],
+      "settings": {
+        "hide_text": "",
+        "slide_class": "femalev2_cursor female-reviews",
+        "Heading": "Solutions For <span>Different Hair Concerns<\/span>",
+        "padding_top": 36,
+        "padding_bottom": 32
+      }
+    },
+    "1664514543742d7211": {
+      "type": "doctor-slide",
+      "blocks": {
+        "752a97b6-f98c-489a-ad2a-f7915a084637": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Dhwani Saxena",
+            "doctorImage": "shopify:\/\/shop_images\/Mask_group_3_c2a21d4e-e4b7-443c-ad12-fe31640c9177.png",
+            "specialist": "Dermatologist",
+            "experience": "",
+            "rating": "",
+            "ratingstar": "shopify:\/\/shop_images\/Frame_102353354.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-dhwani"
+          }
+        },
+        "626e97bf-b203-40d7-991e-d22792d41696": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Shefali Saini",
+            "doctorImage": "shopify:\/\/shop_images\/dr_Shefali_95dfd2db-9391-4cac-9ee2-6bfdc3a00d0a.png",
+            "specialist": "Dermatologist",
+            "experience": "",
+            "rating": "",
+            "ratingstar": "shopify:\/\/shop_images\/Frame_102353353.png",
+            "PageUrl": "shopify:\/\/pages\/shefali-saini"
+          }
+        },
+        "e987d63d-5656-4252-981a-d1e7ca1d3baf": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr Shailendra Chaubey",
+            "doctorImage": "shopify:\/\/shop_images\/doctor02_09ad53b3-8f4b-4b68-bf6d-03fd817d6024.png",
+            "specialist": "Ayurveda Practitioner",
+            "experience": "",
+            "rating": "",
+            "ratingstar": "shopify:\/\/shop_images\/Frame_102353354.png",
+            "PageUrl": "shopify:\/\/pages\/shailendra-chaubey"
+          }
+        },
+        "fb8cf9c6-f93d-42e0-a1a8-1da6b6bc98dc": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Harish Balaji. R",
+            "doctorImage": "shopify:\/\/shop_images\/Mask_group_8b95a60d-e24f-4ebd-b23d-9b58741db4af.png",
+            "specialist": "Dermatologist",
+            "experience": "",
+            "rating": "",
+            "ratingstar": "shopify:\/\/shop_images\/Frame_102353353.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-harish"
+          }
+        },
+        "92a03fd8-68b6-4995-bb48-2cc9cbceab69": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Sangeeta Menon",
+            "doctorImage": "shopify:\/\/shop_images\/doctor03_dc777297-6a00-46b3-b1af-2e07496da526.png",
+            "specialist": "Nutritionist",
+            "experience": "",
+            "rating": "",
+            "ratingstar": "shopify:\/\/shop_images\/Frame_102353354.png",
+            "PageUrl": "shopify:\/\/pages\/sangeeta-menon"
+          }
+        },
+        "113239f2-4d0d-40b1-aede-23da9e370f2a": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Kalyani Deshmukh",
+            "doctorImage": "shopify:\/\/shop_images\/Mask_group_4_316517e8-b9ab-4403-b168-936376b04664.png",
+            "specialist": "Trichologist and ...",
+            "experience": "",
+            "rating": "",
+            "ratingstar": "shopify:\/\/shop_images\/Frame_102353355.png",
+            "PageUrl": "shopify:\/\/pages\/kalyani-deshmukh"
+          }
+        },
+        "4b2da1ca-4103-4888-b206-fd914b6d15b5": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Siddhi Sonawane",
+            "doctorImage": "shopify:\/\/shop_images\/Mask_group_1_6c52f896-cbcd-490f-bc3f-90a258cfb9e3.png",
+            "specialist": "Dermatologist",
+            "experience": "",
+            "rating": "",
+            "ratingstar": "shopify:\/\/shop_images\/Frame_102353024.png",
+            "PageUrl": "shopify:\/\/pages\/siddhi-sonawane"
+          }
+        }
+      },
+      "block_order": [
+        "752a97b6-f98c-489a-ad2a-f7915a084637",
+        "626e97bf-b203-40d7-991e-d22792d41696",
+        "e987d63d-5656-4252-981a-d1e7ca1d3baf",
+        "fb8cf9c6-f93d-42e0-a1a8-1da6b6bc98dc",
+        "92a03fd8-68b6-4995-bb48-2cc9cbceab69",
+        "113239f2-4d0d-40b1-aede-23da9e370f2a",
+        "4b2da1ca-4103-4888-b206-fd914b6d15b5"
+      ],
+      "settings": {
+      }
+    },
+    "customer_reviews_female_KT88dH": {
+      "type": "customer-reviews-female",
+      "blocks": {
+        "content_NU9eTA": {
+          "type": "content",
+          "settings": {
+            "name": "Arundhati Munje",
+            "gender": "F",
+            "used_for": "",
+            "review_on": "31st Dec 2021",
+            "kit_purchased": "",
+            "content": "I had been losing my hair for about two years. I tried to convince myself that it wasn't noticeable but I knew it was and so did everyone else who saw me. I started my treatment with Traya and not only is the problem solved, but people are noticing how much it's grown back.”",
+            "icon_1": "shopify:\/\/shop_images\/Arundhati_Munje_51003_before_300x_300x_1_300x_22c2f547-1ac0-45c2-88aa-59946e1daae2.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Arundhati_Munje_51003_after_300x_1_300x_3944c61d-96b7-472f-8873-016fd7d09fe2.jpg",
+            "month_title_2": "Month 3",
+            "icon_3": "shopify:\/\/shop_images\/Arundhati_Munje_51003_after_300x_1_300x_2a17c8fa-8db9-40c9-ba7c-04e582f1b9d4.jpg",
+            "month_title_3": "Month 8",
+            "month_title_4": "",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_0cbc5716-e14a-4446-97a5-6e6c3eff5a2c.png",
+            "star_value": "5.0"
+          }
+        },
+        "content_7VinEB": {
+          "type": "content",
+          "settings": {
+            "name": "Saumya",
+            "gender": "F",
+            "used_for": "",
+            "review_on": "6th Nov 2021",
+            "kit_purchased": "",
+            "content": "I was losing hair due to stress and other things but Traya analyzed everything perfectly and sent me a treatment plan. After such great results, my relatives have also started using Traya. Thank you, Raveena my Hair coach (you are wonderful) for such amazing help.”",
+            "icon_1": "shopify:\/\/shop_images\/Saumya1_300x_300x_a5d03aac-82b7-4eee-a5c7-18bef4ddf016.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Saumya4_300x_300x_fa818fb5-0f3e-4195-a5da-25bcd3c1c264.jpg",
+            "month_title_2": "Month 4",
+            "icon_3": "shopify:\/\/shop_images\/Saumya5_300x_300x_d67cef7c-5e69-4a46-bd31-381949836384.jpg",
+            "month_title_3": "Month 5",
+            "month_title_4": "",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_0cbc5716-e14a-4446-97a5-6e6c3eff5a2c.png",
+            "star_value": "5.0"
+          }
+        },
+        "content_8jaiy9": {
+          "type": "content",
+          "settings": {
+            "name": "Anonymous",
+            "gender": "F",
+            "used_for": "",
+            "review_on": "23rd Oct 2021",
+            "kit_purchased": "",
+            "content": "I have been suffering from androgenetic alopecia for a while and my hair line as receding had tried other big brands but it didn't work much.Then I came across Traya and the results were amazing. It's quite pocket-friendly.",
+            "icon_1": "shopify:\/\/shop_images\/Anonymous1_300x_300x_94fc5fbf-51c3-4348-ad14-5c1e88cf2e47.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Anonymous3_300x_300x_4d684c7e-b5a0-46d6-b3d1-1244f6e346aa.jpg",
+            "month_title_2": "Month 3",
+            "icon_3": "shopify:\/\/shop_images\/Anonymous5_300x_300x_64a5f9b4-bad6-4c58-9866-88302125bc19.jpg",
+            "month_title_3": "Month 9",
+            "month_title_4": "",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_0cbc5716-e14a-4446-97a5-6e6c3eff5a2c.png",
+            "star_value": "5.0"
+          }
+        },
+        "content_DAC3NH": {
+          "type": "content",
+          "settings": {
+            "name": "Shweta Divecha",
+            "gender": "F",
+            "used_for": "",
+            "review_on": "20th August 2021",
+            "kit_purchased": "",
+            "content": "By giving myself a complete lifestyle change inspired and instructed by Traya. I have never been more happier and confident. Still hoping more progress.",
+            "icon_1": "shopify:\/\/shop_images\/Month-d1_300x_300x_300x_6bad4997-7d0e-4b4d-97a6-efa318be8fb7.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Month-d2_300x_300x_97ac117f-1e9c-4b75-b757-d4d49952b26a.jpg",
+            "month_title_2": "Month 2",
+            "icon_3": "shopify:\/\/shop_images\/Month-d4_300x_300x_300x_baf61a30-5ec8-4f0e-8bb4-8a53ce260932.jpg",
+            "month_title_3": "Month 4",
+            "month_title_4": "",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_0cbc5716-e14a-4446-97a5-6e6c3eff5a2c.png",
+            "star_value": "5.0"
+          }
+        },
+        "content_PUMX6W": {
+          "type": "content",
+          "settings": {
+            "name": "Swati",
+            "gender": "F",
+            "used_for": "",
+            "review_on": "17th August 2021",
+            "kit_purchased": "",
+            "content": "It takes time guys, but you won't regret it. My hair grew back stronger and my overall hair quality improved. Thank you Raveena, my hair coach, she really held me accountable and kept me on track. Super happy customer.”",
+            "icon_1": "shopify:\/\/shop_images\/Month-b1_300x_300x_1_90bba183-be2f-4893-8206-af60c5af6ca9.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Month-b3_300x_300x_ac0a3248-94b1-4565-bdd5-7436f700f59e.jpg",
+            "month_title_2": "Month 3",
+            "icon_3": "shopify:\/\/shop_images\/Month-b5_300x_300x_5561f7df-2f5d-4db8-ad26-dbb94c6b7f98.jpg",
+            "month_title_3": "Month 5",
+            "month_title_4": "",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_0cbc5716-e14a-4446-97a5-6e6c3eff5a2c.png",
+            "star_value": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_NU9eTA",
+        "content_7VinEB",
+        "content_8jaiy9",
+        "content_DAC3NH",
+        "content_PUMX6W"
+      ],
+      "settings": {
+        "title": "Our Pride - Our Results",
+        "sub_title": "",
+        "btn_text": "",
+        "btn_link": ""
+      }
+    },
+    "814ed861-85dd-4b1c-8192-215bd329d1e0": {
+      "type": "icon-with-slider",
+      "blocks": {
+        "template--16063935545522__814ed861-85dd-4b1c-8192-215bd329d1e0-168061461428424aaf-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_102352665.png",
+            "mbl_image": "shopify:\/\/shop_images\/Frame_102352664_1.png",
+            "heading": "You are not ALONE!",
+            "heading_size": "h1",
+            "subheading": "It's time we talk about <br> women's hair fall",
+            "details": "Healthy Hair Heroines is a safe space for women to seek",
+            "imgicon": "shopify:\/\/shop_images\/Group_102352735.png",
+            "subheading-2": "",
+            "button_label": "JOIN US HERE",
+            "link": "https:\/\/chat.whatsapp.com\/EfWNm48o6Ul4FecOVelEYs",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--16063935545522__814ed861-85dd-4b1c-8192-215bd329d1e0-168061461428424aaf-0"
+      ],
+      "disabled": true,
+      "custom_css": [
+
+      ],
+      "settings": {
+        "layout": "grid",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "bc37d094-f0a3-466b-b1fb-347b4d6a9b15": {
+      "type": "femalev1-products",
+      "blocks": {
+        "4673012a-5c22-4d0e-91ed-cd034d287f24": {
+          "type": "product",
+          "settings": {
+            "products": "herbal-tablets"
+          }
+        },
+        "bba0718f-a7ae-45e9-8e48-984db670de01": {
+          "type": "product",
+          "settings": {
+            "products": "scalp-oil-with-dandruff-therapy-booster-shots"
+          }
+        },
+        "df5b42eb-350c-48ae-8cf1-57e03c103648": {
+          "type": "product",
+          "settings": {
+            "products": "shatavari-ghrita"
+          }
+        },
+        "fc37ccbf-3fd3-4f06-8e26-8fc31557f741": {
+          "type": "product",
+          "settings": {
+            "products": "hair-growth-herbs"
+          }
+        },
+        "1bbd7221-36f6-4484-8e65-0bc40ee70e91": {
+          "type": "product",
+          "settings": {
+            "products": "avipattikar-digestion-tablets"
+          }
+        },
+        "8c8ab1ec-6749-4b18-abdd-fa0615f0f096": {
+          "type": "product",
+          "settings": {
+            "products": "shampoo"
+          }
+        },
+        "4044533a-42fe-4991-b7f3-1be32b138c81": {
+          "type": "product",
+          "settings": {
+            "products": "recap-serum-for-hair-fall-control"
+          }
+        },
+        "e1b3c0d9-27e5-4d1f-9761-59d2f0b473db": {
+          "type": "product",
+          "settings": {
+            "products": "hair-vitamins"
+          }
+        },
+        "b497c22a-26f2-4eb2-bfa0-43d0b3df7087": {
+          "type": "product",
+          "settings": {
+            "products": "anti-dandruff-shampoo"
+          }
+        },
+        "4d663ec2-79fd-4d92-91ee-c32ee84feb2e": {
+          "type": "product",
+          "settings": {
+            "products": "pcos-santulan-for-pcos-and-hormone-related-hair-loss"
+          }
+        },
+        "ec9476a0-9aed-4e88-9d9e-285d7148aa25": {
+          "type": "product",
+          "settings": {
+            "products": "mom-santulan-tablets-for-hair-fall-in-post-pregnancy-or-post-childbirth-period"
+          }
+        },
+        "c88e5399-4c34-43b5-8ea9-82fe6c0b05d0": {
+          "type": "product",
+          "settings": {
+            "products": "thyro-santulan-tablets-for-supporting-thyroid-health"
+          }
+        },
+        "93881708-b1ab-4612-bd3a-9c9ae28a540c": {
+          "type": "product",
+          "settings": {
+            "products": "meno-santulan-tablets-for-menopause-support-and-menopausal-hair-fall"
+          }
+        }
+      },
+      "block_order": [
+        "4673012a-5c22-4d0e-91ed-cd034d287f24",
+        "bba0718f-a7ae-45e9-8e48-984db670de01",
+        "df5b42eb-350c-48ae-8cf1-57e03c103648",
+        "fc37ccbf-3fd3-4f06-8e26-8fc31557f741",
+        "1bbd7221-36f6-4484-8e65-0bc40ee70e91",
+        "8c8ab1ec-6749-4b18-abdd-fa0615f0f096",
+        "4044533a-42fe-4991-b7f3-1be32b138c81",
+        "e1b3c0d9-27e5-4d1f-9761-59d2f0b473db",
+        "b497c22a-26f2-4eb2-bfa0-43d0b3df7087",
+        "4d663ec2-79fd-4d92-91ee-c32ee84feb2e",
+        "ec9476a0-9aed-4e88-9d9e-285d7148aa25",
+        "c88e5399-4c34-43b5-8ea9-82fe6c0b05d0",
+        "93881708-b1ab-4612-bd3a-9c9ae28a540c"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "The Essentials",
+        "subheading": ""
+      }
+    },
+    "166452217156cff4e1": {
+      "type": "safe-and-scientific",
+      "blocks": {
+        "07eb3f21-b141-4edb-8f8b-e992d804155b": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/Layer_1_42a9bc26-2238-4ff2-8062-a95d39537cd9.png",
+            "traya-section1": "VEGAN FRIENDLY"
+          }
+        },
+        "fbe6a5a7-16d0-4e57-b494-33093d66c0fe": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/Group_c4464c50-adfb-4575-9ebf-475daba3b899.png",
+            "traya-section1": "100% HERBAL"
+          }
+        },
+        "07b2e1e9-15a3-4623-a10d-2150374bea44": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/Layer_1_c6a3f0fa-8a52-4a50-90b5-4626e9063f73.png",
+            "traya-section1": "NO SIDE EFFECTS"
+          }
+        },
+        "c140ce03-79ae-4fb1-a86a-82afb6dd5053": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/Group_102353399.png",
+            "traya-section1": "DOCTOR RECOMMENDED"
+          }
+        },
+        "d2ca6699-0fac-47b9-88cf-b698f5bfbfb9": {
+          "type": "Head",
+          "settings": {
+            "section_traya": "shopify:\/\/shop_images\/Layer_1_2_64757acd-4dbd-4dda-8f7f-30af7352946e.png",
+            "traya-section1": "DERMATOLOGICALLY TESTED"
+          }
+        }
+      },
+      "block_order": [
+        "07eb3f21-b141-4edb-8f8b-e992d804155b",
+        "fbe6a5a7-16d0-4e57-b494-33093d66c0fe",
+        "07b2e1e9-15a3-4623-a10d-2150374bea44",
+        "c140ce03-79ae-4fb1-a86a-82afb6dd5053",
+        "d2ca6699-0fac-47b9-88cf-b698f5bfbfb9"
+      ],
+      "settings": {
+        "title": "Safe And Scientific",
+        "slider_transplant": "shopify:\/\/shop_images\/Banner_a3f520b0-07b3-43fd-9ba5-52f99995c4c3.png",
+        "mobile_view": "shopify:\/\/shop_images\/Female-Safe_Scientific-mobile_1_993b7884-bafd-4f3e-9840-bd5972fa2e93.webp"
+      }
+    },
+    "2x2_section_jDge7R": {
+      "type": "2x2-section",
+      "disabled": true,
+      "custom_css": [
+        ".text-content {top: 50%; width: 100%; max-width: 100%; display: flex; flex-direction: column; align-items: center; left: 0;}",
+        ".traya-regimen-content .text-content h2 {font-size: 56px; font-family: fredoka_oneregular !important; color: #c4695b; margin-bottom: 25px; order: 1;}",
+        ".traya-regimen-content .headening {font-size: 28px; width: 68%; margin: 0 auto; order: 2;}",
+        ".traya-regimen-content .sub-heading {font-size: 26px; font-weight: 800; order: 3;}",
+        ".traya-regimen-content .btn {order: 4; width: 42%;}"
+      ],
+      "settings": {
+        "heading_regimen": "Let's tackle our hair struggles together.",
+        "subheading_regimen": "Hair Fall Queries?",
+        "subheading_regimen_two": "Join our community to get answers to all your hair queries by certified hair coaches. ",
+        "link_two": "https:\/\/chat.whatsapp.com\/Ho12qM6tXgiJr2ENwFKPha",
+        "linktext_two": "JOIN THE GROUP",
+        "coach_image_desktop": "shopify:\/\/shop_images\/Frame_1000007795_00bc809c-7d3c-474a-a481-96da7fee27c3.webp",
+        "coach_image_mobile": "shopify:\/\/shop_images\/Frame_1000007796_21a9fa94-d9cd-4764-8a49-f501f0f8e238.webp"
+      }
+    },
+    "community_section_KqPNUE": {
+      "type": "community-section",
+      "custom_css": [
+        "@media only screen and (min-width: 767px) {.traya-regimen-content .female.text-content.text-center {left: 0; }}"
+      ],
+      "settings": {
+        "heading_regimen": "Let's tackle our hair struggles together.",
+        "subheading_regimen": "Hair Fall Queries?",
+        "heading_color": "#c4695b",
+        "subheading_regimen_two": "Join our community to get answers to all your hair queries by certified hair coaches. ",
+        "link_two": "https:\/\/chat.whatsapp.com\/Ho12qM6tXgiJr2ENwFKPha",
+        "linktext_two": "JOIN THE GROUP",
+        "coach_image_desktop": "shopify:\/\/shop_images\/Frame_1000007795_00bc809c-7d3c-474a-a481-96da7fee27c3.webp",
+        "coach_image_mobile": "shopify:\/\/shop_images\/Frame_1000007796_21a9fa94-d9cd-4764-8a49-f501f0f8e238.webp"
+      }
+    },
+    "166451450597c2775b": {
+      "type": "2x2-section",
+      "settings": {
+        "heading_regimen": "",
+        "subheading_regimen": "<strong class=\"d-block\">Follow the simple<br> \ntreatment plan.\n<\/strong>",
+        "subheading_regimen_two": "Customised as per your root causes.",
+        "link_two": "shopify:\/\/pages\/the-science",
+        "linktext_two": "THE SCIENCE",
+        "coach_image_desktop": "shopify:\/\/shop_images\/FLPB.jpg",
+        "coach_image_mobile": "shopify:\/\/shop_images\/Mask_group_9_a380465f-7d9d-4c6d-b250-36830d626cb0.png"
+      }
+    },
+    "5c16b718-14c9-47c2-a55e-4aa1a5bacdd3": {
+      "type": "google-reviews",
+      "blocks": {
+        "4eef49fd-fd35-44c3-9988-d31c5a9a4438": {
+          "type": "columns",
+          "settings": {
+            "name": "Monika Venkateswaran",
+            "rating": 5,
+            "desc": "<p>Had very good results in just 7 months, my coach Ritu and others helped me a lot with my journey, please wait for minimum 6 to 7 months , I had a lot of results in 6 th and 7 th month, I had slight hairfall initially, then 2 to 3 months later hair fall stopped a lot, then 5th to 7 th month hair started regrowing. Thanks a lot traya team and my coach Ritu. I feel more confident now.<\/p>"
+          }
+        },
+        "43563891-b9c7-4cc6-a64d-f5be51037372": {
+          "type": "columns",
+          "settings": {
+            "name": "shabhnam t",
+            "rating": 5,
+            "desc": "<p>Am so happy for using ur products .Thank you very much for ur products.priya u r a good trainer ,i could correct my path through ur advices Thank you whole team  ♥️<\/p>"
+          }
+        },
+        "72067b51-e93c-4ab1-9be8-fc1601faa8ff": {
+          "type": "columns",
+          "settings": {
+            "name": "Sunarthi Roy",
+            "rating": 5,
+            "desc": "<p>AMAZING RESULTS<\/p>"
+          }
+        },
+        "ea3a1502-e0dd-4ab5-98fc-dbfec881c72d": {
+          "type": "columns",
+          "settings": {
+            "name": "Dipa Jyothi",
+            "rating": 4,
+            "desc": "<p>It took time, but the results are surely there, give it a shot!<\/p>"
+          }
+        },
+        "6ba15471-bfdf-4e21-aa53-1400331eb0a8": {
+          "type": "columns",
+          "settings": {
+            "name": "Divya Tewatia",
+            "rating": 5,
+            "desc": "<p>Such amazing results I can't beleive my eyes<\/p>"
+          }
+        },
+        "acf6a37a-7d0f-4239-8d73-3bbf4aa7a054": {
+          "type": "columns",
+          "settings": {
+            "name": "Sushmita Chanda",
+            "rating": 5,
+            "desc": "<p>I thought i was on the verge on losing my hair and then I found Traya, it has done something unbelievable, Thankyou TRAYA<\/p>"
+          }
+        },
+        "3502b50b-31a1-4740-be27-f23dbfd590aa": {
+          "type": "columns",
+          "settings": {
+            "name": "Pratibha Kale",
+            "rating": 5,
+            "desc": "<p>I never seen any products like them. It is so so good.  I suggest people to try. It js best u can do for ur health<\/p>"
+          }
+        },
+        "359f2488-6f2a-440d-b00f-0ff94fb3a9fd": {
+          "type": "columns",
+          "settings": {
+            "name": "Amrita Sinha",
+            "rating": 5,
+            "desc": "<p>Traya...thank you so much for bringing my confidence back by making my hair beautiful and voluminous as before...I simply love it....<\/p>"
+          }
+        },
+        "52d78cbf-5597-4d50-8991-91dbe29ff5b4": {
+          "type": "columns",
+          "settings": {
+            "name": "Puja Sethia",
+            "rating": 5,
+            "desc": "<p>So happy for choosing Traya for my hair and health<\/p>"
+          }
+        },
+        "666c5166-b1db-4221-a2c4-e4b734a0757b": {
+          "type": "columns",
+          "settings": {
+            "name": "pooja sahu",
+            "rating": 5,
+            "desc": "<p>I used the product for 3 months and I saw the  improvement in the growth of my hair.The product is very nice.Thanks to my hair coach @krinal sah mam for answering all my stupid questions and giving me the right instructions and always there for supporting me.Thanks to  Traya Health for giving the useful& beneficial product.<\/p>"
+          }
+        },
+        "7cc454fe-288a-404f-ba9b-4cccfb63e463": {
+          "type": "columns",
+          "settings": {
+            "name": "aishwarya raut",
+            "rating": 5,
+            "desc": "<p>Happy with the result.<br\/>After using the traya shampoo my scalp is clear and have less hair fall and my hair looks healthy, soft and shiny<\/p>"
+          }
+        },
+        "199e379f-1f60-4394-bb3a-a902f52def92": {
+          "type": "columns",
+          "settings": {
+            "name": "Poonam Beniwal",
+            "rating": 5,
+            "desc": "<p>I am very satisfied with how they work, and how their plan is curated according to my needs<\/p>"
+          }
+        },
+        "21a7f2ef-8ccc-4af3-ae41-ac11be7bb162": {
+          "type": "columns",
+          "settings": {
+            "name": "Poornima shetty",
+            "rating": 5,
+            "desc": "<p>Really proud to be on Traya regimen <\/p>"
+          }
+        },
+        "e25ef85c-2d8f-4ba1-ac1d-d3aeb585fd5e": {
+          "type": "columns",
+          "settings": {
+            "name": "Yazala Monica",
+            "rating": 5,
+            "desc": "<p>Love the results I have acheived with their help <\/p>"
+          }
+        },
+        "18f841d5-91a9-496c-bbd2-2114b4fd5b43": {
+          "type": "columns",
+          "settings": {
+            "name": "Nandini Seenivasan",
+            "rating": 5,
+            "desc": "<p>Thanks to Traya and Sakshi for all the support, have seen good results with the products<\/p>"
+          }
+        },
+        "fc46ee2c-fadb-42b6-80de-aa321975d384": {
+          "type": "columns",
+          "settings": {
+            "name": "Sunidhi Gaur",
+            "rating": 5,
+            "desc": "<p>Started my journey with Traya on 11th September 2021, they assigned me SAKSHI DOSHI as my hair coach. I must say, it has been a rewarding experience, with Sakshi checking up on me, not only about my hair health but also about my stress levels, intake and mental health; which are major players when it comes to your hair health. I have oily dandruff, which was causing a lot of hair fall, but I am happy to report, as of 16th December 2021, my hair fall is negligible, and my hair is shiny even after using hair colour. I am impressed by the persistent follow-ups and personalised experience. Great job Traya, and thank you, Sakshi :)<\/p>"
+          }
+        },
+        "b638789f-a1d1-4e1f-ad86-32ad22430b97": {
+          "type": "columns",
+          "settings": {
+            "name": "Zoya Afroz",
+            "rating": 5,
+            "desc": "<p>It's been a wonderful experience with you guys and I am really happy with the results. Each and Every medicine,shampoo and scalp oil are effective and easy to use.Their relationship manager specially Sakshi Doshi is very friendly yet professional.Thankyou so much because of you 70%of my hair related problems are way gone and I am very sure that at the end of my treatment it will be 💯<br\/>So thank you so much Traya Health...you guys are doing great job.keep going❤️❤️❤️<\/p>"
+          }
+        },
+        "6f300ec5-10a2-4225-b41a-4a971285656a": {
+          "type": "columns",
+          "settings": {
+            "name": "Monisha Battula",
+            "rating": 5,
+            "desc": "<p>I was desperately looking for help to treat my hair concerns and I'm glad I found Traya. Cannot explain how much my hair coach Uriah has been a support to me, she's always a text away and has been very patient in listening to all my chattering about hair problems, and give appropriate treatment. Appreciate the unconditional support 🤗 Been recommending Traya to most of my friends and patients. Thank you heaps!!!<\/p>"
+          }
+        },
+        "fb2774d0-cdf8-47e2-a35c-84e567c87c7c": {
+          "type": "columns",
+          "settings": {
+            "name": "Sowmya Sethumadhavan",
+            "rating": 5,
+            "desc": "<p>Hi. I'm Sowmya. I have been using  Traya Health since Aug 2021 after I saw an ad on Insta. I'm so thankful to Traya health, especially Raveena, my hair coach. She has been helping me since the time I took the scalp analysis. Traya worked wonders on my hair. I was losing hair due to stress and other things, but they analysed everything perfectly and had sent my treatment plan and diet plan. In my 1st use itself I could find some difference and after 1 month I saw visible changes in my hair. Kudos to the staff at Traya health for having excellent professionalism as they check on us frequently regarding our issues and concerns. After I started seeing great results, my cousin and my brother also have started using Traya recently. Once again thankyou Traya health and Raveena( you are wonderful) for such amazing help  <\/p>"
+          }
+        },
+        "5d3ed95c-f5e3-4edf-9298-0d1b378be16e": {
+          "type": "columns",
+          "settings": {
+            "name": "Aaliya",
+            "rating": 5,
+            "desc": "<p>I literally have the most kindest , sweetest , caring  hair coach ever , Krinal Shah 💯 .  After using Traya products I’ve been experiencing the kind of change that I wanted on my hair scalp . Looking forward to see more great changes 😊<br\/>I’m so happy with the way how my hair coach treats me . It’s like I have a coach plus a good friend who understands and helps with my problems. So much love for you Krinal  ❤️<br\/>Traya products is definitely bringing a good difference  it’s only been two weeks 😍 (really happy).<\/p>"
+          }
+        },
+        "49d9ceab-8bc9-411d-8f8e-ce9f8589ac66": {
+          "type": "columns",
+          "settings": {
+            "name": "Amita Verma",
+            "rating": 5,
+            "desc": "<p>I have been using Traya Hair Treatment since 2 months. & I'm soo happy. I'm still using this and now my hairfall is very less and hoping if I continue using this.  & I will recommend this to everyone.            Thanq ,  (Traya Health )ccc<\/p>"
+          }
+        },
+        "b5355ead-5aa2-4d12-b8e3-f53ff4dba1ec": {
+          "type": "columns",
+          "settings": {
+            "name": "Salma Ansari",
+            "rating": 5,
+            "desc": "<p>I used traya hair ras pills for three months and i noticed reducing hairfall problem.. happy with this product..<\/p>"
+          }
+        },
+        "bad930d9-19dd-452c-917a-d7c19b545fb2": {
+          "type": "columns",
+          "settings": {
+            "name": "Dhanashri Deshmukh",
+            "rating": 5,
+            "desc": "<p>Thank you so much coach Raveena for helping me out from my hair loss to hair growth journey... All the best 👍 keep helping 😀ccccc<\/p>"
+          }
+        },
+        "4f9f1422-006e-4683-a040-59ed352e6002": {
+          "type": "columns",
+          "settings": {
+            "name": "Monika Dwivedi",
+            "rating": 5,
+            "desc": "<p>My experience with Traya has been amazing. I continued the meds for ~6 months and my hair fall issue has resolved to a great extent. Ritu, my primary SPOC, has been super helpful and prompt at all times. Kudos to the team!<\/p>"
+          }
+        },
+        "017ee2e0-d53f-4ce8-a603-f1edbddd2db0": {
+          "type": "columns",
+          "settings": {
+            "name": "Sangita gaokar",
+            "rating": 4,
+            "desc": "<p>I was getting lot of hairfall and I was totally fed-up on my hair scalp after consuming lot of medicines than I have seen traya  page online  and When I started using traya kit after completion of 3 months I have seen very good results on my scalp and I am happy for it.. and thanks to traya and special thanks to my traya hair coach who used to take update of my hair treatment ...thank u traya team🙂<\/p>"
+          }
+        },
+        "0cff51c2-b7c5-41bd-a332-5aa0860cfaa7": {
+          "type": "columns",
+          "settings": {
+            "name": "Rashmi Mishra",
+            "rating": 5,
+            "desc": "<p>Really love the serum and other products, have been really helpful in regaining my hair strength and health<\/p>"
+          }
+        },
+        "9f36d7c3-6111-4ce0-aa88-daae96fc82dc": {
+          "type": "columns",
+          "settings": {
+            "name": "Chaitanya Andhavarapu",
+            "rating": 5,
+            "desc": "<p>Excellent results and service was so good individual follow up every week made it better<br\/><br\/>I would recommend it to everybody<br\/><br\/>thanks sneha who followed with me continuously for results<\/p>"
+          }
+        },
+        "09d1fac8-7624-4c69-b8ce-84f67ea7674b": {
+          "type": "columns",
+          "settings": {
+            "name": "Malathi Balajee",
+            "rating": 4,
+            "desc": "<p>I have been taking Traya hair treatment for the past six months , and have seen a considerable change in my hair fall , and hair density , thank you Traya, persistence is the key here .<\/p>"
+          }
+        },
+        "c4299536-45d8-434d-8d92-07324a0c94f6": {
+          "type": "columns",
+          "settings": {
+            "name": "Ayushi Garg",
+            "rating": 4,
+            "desc": "<p>It has been a great experience with Traya. The only key to get desired results is consistency. M really happy how it has helped me with my hair fall problems.. I can say that after 2.5 months of following the diet and the taking the meds, my hair are in much better shape than they were. My Hair coach Ritu has guided me through this whole process and made it possible for me.. so a big thank you to her and team for this. :)<\/p>"
+          }
+        },
+        "25764801-580e-46dc-a74d-eb2e853105e8": {
+          "type": "columns",
+          "settings": {
+            "name": "Sanjukta Sanyal",
+            "rating": 5,
+            "desc": "<p>As a mother,I was extremely worried about my teenage daughter's hair condition. I chanced upon Traya and approached you.A very helpful team always making sure that a regular follow up is done.The hair health has improved a lot since I started and I am very pleased with the results. Thank you Traya..Thank you Mallika for being just a call away.<\/p>"
+          }
+        },
+        "f9b6c796-bb84-463b-a254-9d6dbbb062d7": {
+          "type": "columns",
+          "settings": {
+            "name": "Debaleena Dey",
+            "rating": 5,
+            "desc": "<p>The products of Traya are great. They have guided me well on their website quiz and after using the products I have seen amazing results. My hair is much more healthy, voluminous and shiny. It also helped me to reduce hair fall and grow my hair longer.<\/p>"
+          }
+        },
+        "3e3e2393-56d7-4ef8-aa28-8db5049e7a6a": {
+          "type": "columns",
+          "settings": {
+            "name": "Sambhavi Pandey",
+            "rating": 5,
+            "desc": "<p>I have been with Traya only for 3 months now, and I can feel the difference in my scalp and hair to a great extent.  Even people around me have started noticing the difference in the quality and volume of my hair. The scalp looks good, there is new hair growth and negligible hairfall. The hair coach-Poornima in my case- is extremely helpful. She takes regular updates, conveys to me what all the doctor says as well as what's good for my hair. She is quick on her feet to help me with any queries. I am grateful that I stumbled upon Traya and gave it a Go. Anyone with hair problems, should 100% take their help.<\/p>"
+          }
+        },
+        "bab0615e-f0ea-4153-81c6-92b8a9c82936": {
+          "type": "columns",
+          "settings": {
+            "name": "Mayuri Patani",
+            "rating": 5,
+            "desc": "<p>Traya is a must for those who want to get rid of hair fall. The kind of personal attention they give in this journey is remarkable. In my case, nikita and traya products have become my blessings. My hair fall has stopped completely in merely 2 months n this is actually a miracle for me. ❤️ Sooo happy with this n now looking forward towards healthy hair growth. 🤞<\/p>"
+          }
+        },
+        "a3d42829-60b5-4589-982c-057697afc804": {
+          "type": "columns",
+          "settings": {
+            "name": "Srividhya ch",
+            "rating": 4,
+            "desc": "<p>My hairfall has been drastic for couple of years,  no amount of oiling or medication helped. But when i stated my journey with Traya its shown very little difference in past 5 months but i do have small baby hairs emerging around my forehead,  its definitely a moral boost for someone who saw only hairfall.<\/p>"
+          }
+        },
+        "4c5dd5f7-dc22-4316-ad65-6ba07990fbbe": {
+          "type": "columns",
+          "settings": {
+            "name": "Bhawana Singh",
+            "rating": 5,
+            "desc": "<p>Since i have started using Traya hair care regime, my hair have really improved a lot. This regime is also helping me in stress management and to get better sleep. I would highly recommend Traya.<\/p>"
+          }
+        },
+        "bfbb562e-9171-4e2d-befd-eb1cbcc4e3ea": {
+          "type": "columns",
+          "settings": {
+            "name": "Amisha Jha",
+            "rating": 5,
+            "desc": "<p>I used the complete customised kit for females.<br\/>I had severe hair loss problem and it helped in reducing it.<br\/>Their medicines have helped a lot in improving my over-all health too. I would definitely recommend<br\/>it to everyone who wants to treat hair loss.<\/p>"
+          }
+        },
+        "86c2e7c9-0bd8-496d-893a-736206adf0e3": {
+          "type": "columns",
+          "settings": {
+            "name": "Priyanki Kumari",
+            "rating": 4,
+            "desc": "<p>I am really satisfied with the results of traya products...it worked in my case .I suggest  not to ignore hair fall .\"Traya\"is here to solve at earliest phase.. patience is the key of success.so,be patience and Traya it <\/p>"
+          }
+        },
+        "414c4d00-84c6-41f9-809d-0cb810b1250d": {
+          "type": "columns",
+          "settings": {
+            "name": "Heramba Bantwal",
+            "rating": 5,
+            "desc": "<p>I was actually making a habit of keeping a buzzcut due to my extensive hairfall. Came across a fb post of tatva got in touch with their team and after using their treatment after 2 months I'm experiencing the changes in my hair. Also special thanks to Zahra for keeping a check on my treatment asking about my progress and keeping the positive energy up in me.<\/p>"
+          }
+        },
+        "4fe747f7-a1c0-455e-983e-7bf048c71da0": {
+          "type": "columns",
+          "settings": {
+            "name": "Jaya Rajmalani",
+            "rating": 5,
+            "desc": "<p>Hi I used Traya brand for hairfall since December 16 2020 and finally my hair fall stopped .This product help me a lot as I was quite depressed as I had too much of hair fall .Thank you so much<\/p>"
+          }
+        },
+        "8562dea3-44e3-4493-ac50-beed58bf8719": {
+          "type": "columns",
+          "settings": {
+            "name": "Ankita biswas",
+            "rating": 5,
+            "desc": "<p>The Serum is Great. Its very effective if you hv baldness problem. U cn notice visible result within 30 days.<br\/><\/p>"
+          }
+        },
+        "37656743-3396-43a2-a073-f369e80afb7c": {
+          "type": "columns",
+          "settings": {
+            "name": "Sonia Hair Studio",
+            "rating": 5,
+            "desc": "<p>The product is very good<br\/>The results were visible after 15 itself<br\/>Must try essential hair food<\/p>"
+          }
+        },
+        "b5602025-c5ce-46de-8a82-093fa70f1a05": {
+          "type": "columns",
+          "settings": {
+            "name": "Shahina Shaikh",
+            "rating": 4,
+            "desc": "<p>I was so worried about my hair, I heard about tatva from my son and thought to try it out.. since then I’ve been very pleased<\/p>"
+          }
+        },
+        "daade501-e5c0-4db8-9190-373312761fe0": {
+          "type": "columns",
+          "settings": {
+            "name": "Karishma Dalvi",
+            "rating": 5,
+            "desc": "<p>Kudos to the Traya team!<br\/>I have only one thing to say that I am glad that i found Traya!!!<\/p>"
+          }
+        },
+        "9fdfd8c2-d776-4a3d-a8be-f0abe91b13ef": {
+          "type": "columns",
+          "settings": {
+            "name": "Ambika Singh",
+            "rating": 4,
+            "desc": "<p>Very nice customised kit for every hair issues<\/p>"
+          }
+        },
+        "7d61b26c-c4eb-4d6a-a68d-84f44ac4acc4": {
+          "type": "columns",
+          "settings": {
+            "name": "Ankita Jambani",
+            "rating": 5,
+            "desc": "<p>All thanks to poornima for her guidance n always availability 😊<\/p>"
+          }
+        },
+        "0eab123f-69ae-44cc-b9b8-f055c6f612ac": {
+          "type": "columns",
+          "settings": {
+            "name": "Pavithra Kopuri",
+            "rating": 5,
+            "desc": "<p>it's good<\/p>"
+          }
+        },
+        "0f63dbd9-4369-4965-8438-8da7b7969fd1": {
+          "type": "columns",
+          "settings": {
+            "name": "Ridhima Achaliya",
+            "rating": 5,
+            "desc": "<p>Amazing results!!!<\/p>"
+          }
+        },
+        "5cf68dc4-c98e-44d0-86ea-b5f90b13969f": {
+          "type": "columns",
+          "settings": {
+            "name": "Nirmala Akoijam",
+            "rating": 5,
+            "desc": "<p>Outstanding results!!<\/p>"
+          }
+        },
+        "b92878c9-4132-4ae6-8b2e-e97645a0cb56": {
+          "type": "columns",
+          "settings": {
+            "name": "Nisha Lonan",
+            "rating": 5,
+            "desc": "<p>I got results I didnt even expect, cant beleiev my eyes, thank god I got on their plan<\/p>"
+          }
+        },
+        "9a96dd7d-9ac7-4778-a9c8-4ec9e7d72731": {
+          "type": "columns",
+          "settings": {
+            "name": "Vidya V nath",
+            "rating": 5,
+            "desc": "<p>satisfied with their approach of customised treatment plan, according to my own needs<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "4eef49fd-fd35-44c3-9988-d31c5a9a4438",
+        "43563891-b9c7-4cc6-a64d-f5be51037372",
+        "72067b51-e93c-4ab1-9be8-fc1601faa8ff",
+        "ea3a1502-e0dd-4ab5-98fc-dbfec881c72d",
+        "6ba15471-bfdf-4e21-aa53-1400331eb0a8",
+        "acf6a37a-7d0f-4239-8d73-3bbf4aa7a054",
+        "3502b50b-31a1-4740-be27-f23dbfd590aa",
+        "359f2488-6f2a-440d-b00f-0ff94fb3a9fd",
+        "52d78cbf-5597-4d50-8991-91dbe29ff5b4",
+        "666c5166-b1db-4221-a2c4-e4b734a0757b",
+        "7cc454fe-288a-404f-ba9b-4cccfb63e463",
+        "199e379f-1f60-4394-bb3a-a902f52def92",
+        "21a7f2ef-8ccc-4af3-ae41-ac11be7bb162",
+        "e25ef85c-2d8f-4ba1-ac1d-d3aeb585fd5e",
+        "18f841d5-91a9-496c-bbd2-2114b4fd5b43",
+        "fc46ee2c-fadb-42b6-80de-aa321975d384",
+        "b638789f-a1d1-4e1f-ad86-32ad22430b97",
+        "6f300ec5-10a2-4225-b41a-4a971285656a",
+        "fb2774d0-cdf8-47e2-a35c-84e567c87c7c",
+        "5d3ed95c-f5e3-4edf-9298-0d1b378be16e",
+        "49d9ceab-8bc9-411d-8f8e-ce9f8589ac66",
+        "b5355ead-5aa2-4d12-b8e3-f53ff4dba1ec",
+        "bad930d9-19dd-452c-917a-d7c19b545fb2",
+        "4f9f1422-006e-4683-a040-59ed352e6002",
+        "017ee2e0-d53f-4ce8-a603-f1edbddd2db0",
+        "0cff51c2-b7c5-41bd-a332-5aa0860cfaa7",
+        "9f36d7c3-6111-4ce0-aa88-daae96fc82dc",
+        "09d1fac8-7624-4c69-b8ce-84f67ea7674b",
+        "c4299536-45d8-434d-8d92-07324a0c94f6",
+        "25764801-580e-46dc-a74d-eb2e853105e8",
+        "f9b6c796-bb84-463b-a254-9d6dbbb062d7",
+        "3e3e2393-56d7-4ef8-aa28-8db5049e7a6a",
+        "bab0615e-f0ea-4153-81c6-92b8a9c82936",
+        "a3d42829-60b5-4589-982c-057697afc804",
+        "4c5dd5f7-dc22-4316-ad65-6ba07990fbbe",
+        "bfbb562e-9171-4e2d-befd-eb1cbcc4e3ea",
+        "86c2e7c9-0bd8-496d-893a-736206adf0e3",
+        "414c4d00-84c6-41f9-809d-0cb810b1250d",
+        "4fe747f7-a1c0-455e-983e-7bf048c71da0",
+        "8562dea3-44e3-4493-ac50-beed58bf8719",
+        "37656743-3396-43a2-a073-f369e80afb7c",
+        "b5602025-c5ce-46de-8a82-093fa70f1a05",
+        "daade501-e5c0-4db8-9190-373312761fe0",
+        "9fdfd8c2-d776-4a3d-a8be-f0abe91b13ef",
+        "7d61b26c-c4eb-4d6a-a68d-84f44ac4acc4",
+        "0eab123f-69ae-44cc-b9b8-f055c6f612ac",
+        "0f63dbd9-4369-4965-8438-8da7b7969fd1",
+        "5cf68dc4-c98e-44d0-86ea-b5f90b13969f",
+        "b92878c9-4132-4ae6-8b2e-e97645a0cb56",
+        "9a96dd7d-9ac7-4778-a9c8-4ec9e7d72731"
+      ],
+      "settings": {
+        "Heading": "Google Reviews",
+        "color_star": "#eeaf2e"
+      }
+    },
+    "4ee10f08-0416-4159-b93f-85d9bf5d1662": {
+      "type": "faq-vox-view",
+      "blocks": {
+        "3875f94b-3aee-471d-9f05-b51f7962f474": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353085.png",
+            "question": "Will Traya treatment work for me?",
+            "answer": "<p>Yes! Traya will absolutely work for you if your hair loss is between Stages 1-4. (To find out your stage. Take the FREE hair test). Traya’s Holistic 3 Science Formula uses the goodness of Dermatology Ayurveda and Nutrition to help with your hair loss. Our Women Santulan Technology works on specific women needs depending on her existing condition like Pregnancy, Menopause, problems like PCOS along with hair loss. This technology compliments Traya’s Holistic 3 Science Formula, along with our FDA-approved Growth Actives and your own personalised diet to ensure you have the healthy hair you deserve.<\/p>"
+          }
+        },
+        "b58b68ad-6022-41ab-892f-37b2d3d595aa": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353087.png",
+            "question": "Is Traya treatment safe for women?",
+            "answer": "<p>Absolutely! Traya’s hair growth treatment is not only safe and toxin free but also doctor-prescribed.  Traya's treatment plans also have NO SIDE EFFECTS. Traya’s treatment uses Ayurvedic herbs and FDA approved hair growth actives which are very safe and incredibly effective for your hair.<\/p>"
+          }
+        },
+        "8fd640e8-d78c-4f40-8a85-dbd5fac7c82f": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353084.png",
+            "question": "What will my Traya treatment contain?",
+            "answer": "<p>Traya's holistic & personalised treatment plan combines 3 Sciences of Dermatology, Ayurveda and Nutrition which includes FDA-approved dermatology products, and natural Ayurvedic supplements. You also get a digital prescription signed by doctors, a personal hair coach who guides you throughout the treatment and a healing diet plan which will support your internal health to  ensure you have the healthy hair you deserve.<\/p>"
+          }
+        },
+        "5feec5a1-8fb5-44e9-ba98-54a7d291dbf6": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353082.png",
+            "question": "How to start Traya Treatment?",
+            "answer": "<p>It is incredibly easy! Take Traya’s free hair test from the button on the banner (scroll up to the topmost section) .Once you've taken the hair test and have uploaded your scalp picture, a customised kit will be recommended to you based on the root cause of your hair fall, type and stage of hair loss. You can then proceed to buy the doctor-recommended treatment plan. Once you place the order, Traya's doctors will prescribe your treatment and create a digital prescription for you.  <br\/>You will be able to access this prescription by scanning the QR code on your kit when it is delivered and start the treatment!<\/p>"
+          }
+        },
+        "f3a18621-722c-4784-9b45-72b7a219cca7": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353083.png",
+            "question": "When will I see results? \/ How long will the treatment take?",
+            "answer": "<p>Hair growth is a gradual process. Traya’s treatment takes care of your overall health therefore, you will start seeing small changes in your body within a  month. For your hair to grow back, it will take an average of about 5 months on  regularly using the complete treatment plan. However, the exact time to see these results may vary depending on factors like your age, type, stage, and the causes behind your hair loss like stress, hormonal imbalances, poor diet, etc.<br\/>Staying consistent with our treatment also ensures faster, more effective results, as over 2.5 lakh other Indians have already seen.<\/p>"
+          }
+        },
+        "5e14984c-9925-4c3d-a2e2-9ffdcf1ab1ac": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353086.png",
+            "question": "Will Traya’s treatment make my hair thicker?",
+            "answer": "<p>Yes, Traya’s treatment helps promote hair growth and thickness by using our holistic 3 science formula which combines the goodness of ayurveda, dermatological  products and the right nutrition which helps improve the overall health of your hair, making it thicker and stronger.<br\/><\/p>"
+          }
+        },
+        "eac4c8fc-2fbd-471c-8cb7-2d4162e87e02": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353088.png",
+            "question": "Can Traya treatment reduce dandruff?",
+            "answer": "<p>Yes, Traya's antifungal treatment gets rid of both mild & heavy dandruff by preventing the growth of dandruff-causing fungus which helps improve your scalp health and soothes it. It also makes sure that the flakiness and itchiness you might be having is also reduced.<\/p>"
+          }
+        },
+        "904d59ad-6295-4d4d-ace3-6e339822fe52": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Group_102353089.png",
+            "question": "Can women of all ages see results with  Traya’s treatment?",
+            "answer": "<p>Yes, Traya's treatment helps women of all age groups (16+). We work hard to ensure that your treatment plan is customised and personalised to your age, hair fall type, your stage and internal root causes of your hair fall.  Traya’s treatment is effective for everyone from teenagers and new moms, to even menopausal women suffering from hair loss.  However, since age is a big factor when it comes to seeing results the time for positive visible results might vary. <br\/>You will also have a  hair coach assigned to you to ensure that we are able to give you the support you personally require on your journey.<\/p>"
+          }
+        },
+        "c63bcc2b-fa5d-4884-862c-82cdc6af3ce0": {
+          "type": "faq",
+          "settings": {
+            "bgimage": "shopify:\/\/shop_images\/Mask_group_4_25a67c91-a92a-431b-9a19-67376297608e.png",
+            "question": "Who is Traya hair coach?",
+            "answer": "<p>The Traya hair coach will be your point of contact throughout the treatment. They will be assigned to you once your order is placed, to help you stay on track, and guide you throughout the treatment journey, take updates from doctors to monitor your progress and follow up with you to ensure better results. They will also be available for you to reach out too whenever you have doubts about your treatment.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "3875f94b-3aee-471d-9f05-b51f7962f474",
+        "b58b68ad-6022-41ab-892f-37b2d3d595aa",
+        "8fd640e8-d78c-4f40-8a85-dbd5fac7c82f",
+        "5feec5a1-8fb5-44e9-ba98-54a7d291dbf6",
+        "f3a18621-722c-4784-9b45-72b7a219cca7",
+        "5e14984c-9925-4c3d-a2e2-9ffdcf1ab1ac",
+        "eac4c8fc-2fbd-471c-8cb7-2d4162e87e02",
+        "904d59ad-6295-4d4d-ace3-6e339822fe52",
+        "c63bcc2b-fa5d-4884-862c-82cdc6af3ce0"
+      ],
+      "settings": {
+        "title": "FAQ's"
+      }
+    },
+    "90a3ec32-fbee-4951-ab5f-1bb3f3903458": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--15976672788658__90a3ec32-fbee-4951-ab5f-1bb3f3903458-1672912756656462ff-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Disclaimers",
+            "icon": "none",
+            "row_content": "<p>The claims and results mentioned are based on multiple internal studies and customer research surveys that Traya has conducted with a statistically significant sample size of users who were under expert observation and guidance<\/p><p><\/p><p><strong>93% saw results*<\/strong><\/p><p>Traya conducted an internal study over both men and females facing hair fall and 93% saw results* after using the complete Traya treatment consistently for a period of 5 months. This study was conducted in December 2022. <\/p><p><\/p><p><strong>5-month money-back guarantee<\/strong><\/p><p>Traya’s 100% money-back policy is valid only if you have been regular with the complete treatment plan for a period of 5 whole consecutive months. Each customised hair kit is valid for only 30 days. If any individual has not seen any regrowth or control in hair fall, you can ask for a refund. However, once you apply for the 5-month - money-back policy, the team would then do a thorough check on consumer regularity based on every order date. An exception to this policy is for those customers undergoing serious health conditions like autoimmune diseases and cancer. <\/p><p><\/p><p><strong>Traya’s Holistic 3 Science Formula <\/strong><\/p><p>Traya’s 3 Science Formula is a synergistic mix of Ayurveda, Allopathy & Food Science designed specifically to cater to hair loss conditions stemming from multiple root causes. With clinically tested ingredients and adaptogenic herbs, Traya’s Science-Backed formula clears internal blockages and boosts hair regeneration naturally. When blended with a healing dietary plan, it delivers great results in attaining long-term hair growth. <\/p><p><\/p><p><strong>Traya Free hair test (™) <\/strong><\/p><p>Traya’s Hair Dx test is powered by a proprietary algorithm to examine a user's hair & health profile. With the help of a distinctive image-capturing technique & physician- formulated examination, it is able to precisely diagnose the type, stage & root causes of a certain hair loss condition. <\/p><p><\/p><p><strong>2 lakh+ Indians <\/strong><\/p><p>Traya Free hair test (™) has been taken by more than 2 lakh+ Indians - Data acquired from Traya customers. <\/p><p><\/p><p><strong>Ayush Certified  - <\/strong>Digest Boost, Cholest Vati and Consti Clear are Ayush Certified Products.<\/p><p>Traya’s Ayurvedic Products are based on natural and Ayurvedic formulations. These are completely safe for human use, but it is possible that certain ingredients may cause allergic reactions to some individuals. <\/p><p><\/p><p><strong>Accurate hair diagnosis <\/strong><\/p><p>The Traya free hair test (™) is a proprietary algorithm developed with the help of our in-house doctors that provides Accurate hair and health diagnosis, provided you mention all the correct details about yourself. It gives a precise diagnosis about the type, stage and root cause of a specific hair fall condition.<\/p><p><\/p><p><strong>Long Lasting Visible Hair Results<\/strong> <\/p><p>Traya’s complete treatment gives visible and long-lasting results provided you’re on Traya’s hair maintenance kit. Since Traya works on the internal root causes of hair fall and hence our customers have seen long lasting results<\/p><p><\/p><p><strong>Trusted by 70+ Doctors<\/strong><\/p><p>Traya has been tried and loved by over 70 doctors all over India to maintain healthy hair growth. <\/p><p><\/p><p><strong>Award Winning Trusted Brand<\/strong><\/p><p>India’s Healthcare Excellence initiated by Brands Impact has awarded Traya as the Most Effective Haircare Product of the Year 2022 <\/p><p><\/p><p><strong>FDA approved ingredients <\/strong><\/p><p>Traya contains hair growth actives like minoxidil and DHT blocker which are FDA approved to treat hair fall. These are completely safe for human use, but it is possible that certain ingredients may cause allergic reactions to some individuals.<\/p><p> <\/p><p><strong>Traya Women Santulan (™)<\/strong><\/p><p>Traya’s Women Santulan is a unique technology that uses a combination of herbs treated in a specific manner (<strong>kalpa<\/strong>) to meet the bio-specific needs of women going through different stages of life. Santulan is a supplementary range to Traya’s 3 Science Formula which balances and nourishes the body inside-out delivering long-lasting hair growth results and overall health.<\/p><p>Hair Growth Plan starts at Rs 1699 pm* - The price mentioned is for a male of age 23 with stage 1 type hair fall based on the results of the hair test taken on the website. Prices may vary for individual customers depending on the results of the hair test and internal root causes<\/p><p>Hair Growth Plan starts at Rs 2000 pm* - The price mentioned is for a male of age 25 with stage 1 type hair fall based on the results of the hair test taken on the website. Prices may vary for individual customers depending on the results of the hair test and internal root causes<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15976672788658__90a3ec32-fbee-4951-ab5f-1bb3f3903458-1672912756656462ff-0"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "d6084d52-2152-45fe-96c5-dfcb0a7f6af6": {
+      "type": "faqs-with-collapsible",
+      "blocks": {
+        "template--16063935545522__d6084d52-2152-45fe-96c5-dfcb0a7f6af6-1680249566b7a59602-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need to follow the diet?",
+            "icon": "none",
+            "row_content": "<p>Diet is important because everything we eat affects our body and our hair. Certain foods we normally eat in our daily life like sugary sweets and dairy harm our internal health which leads to poor health for our hair. That's why Traya's nutritionists create a customised diet plan considering the root cause of your hair fall, and is designed to provide the right environment for healthy hair growth while ensuring that your internal health is awesome!<\/p>",
+            "page": ""
+          }
+        },
+        "template--16063935545522__d6084d52-2152-45fe-96c5-dfcb0a7f6af6-1680249566b7a59602-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to see results?",
+            "icon": "none",
+            "row_content": "<p>On an average, customers see results with Traya's treatment in 5 months. However, the exact time to see these results also depends on factors like age, type, stage, and the causes behind your hair loss like stress,hormonal imbalances, poor diet, etc. Staying consistent with our treatment also ensures faster, more effective results, as over 2.5 lakh other Indians have already seen.<\/p>",
+            "page": ""
+          }
+        },
+        "template--16063935545522__d6084d52-2152-45fe-96c5-dfcb0a7f6af6-1680249566b7a59602-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where is my prescription?",
+            "icon": "none",
+            "row_content": "<p>When your kit is delivered, you can access your digital prescription by scanning the code inside the box. You can also view your prescription by logging into the Traya app or website.<\/p>",
+            "page": ""
+          }
+        },
+        "template--16063935545522__d6084d52-2152-45fe-96c5-dfcb0a7f6af6-1680249566b7a59602-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will Traya’s treatment make my hair thicker?",
+            "icon": "none",
+            "row_content": "<p>Yes, Traya’streatment helps promote hair growth and thickness by using our holistic 3 science formula which combines the goodness of ayurveda, clinically tested products and the right nutrition which creates a healthy environment to improve the overall health of your hair, making it thicker and stronger.<\/p>",
+            "page": ""
+          }
+        },
+        "554ee291-4479-4570-b010-4c2a611e47a3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does the treatment reduce dandruff?",
+            "icon": "none",
+            "row_content": "<p>Yes, Traya's antifungal treatment gets rid of dandruff-causing fungus which helps improve your hair’s health and soothes your scalp while making  sure that the flakiness and itchiness  is reduced. Aloe vera in our treatment helps heal and refreshes your scalp to ensure that you are free from scalp irritation. <\/p>",
+            "page": ""
+          }
+        },
+        "0ab0d1fe-f3c0-4aa8-8dab-4b5e58734b2a": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Traya’s treatment safe?",
+            "icon": "none",
+            "row_content": "<p>Absolutely! Traya's complete treatment is not only safe and toxin free but also doctor-prescribed. Traya's treatment plans also have NO SIDE EFFECTS. <\/p>",
+            "page": ""
+          }
+        },
+        "0d3b00e7-e903-484e-accf-de6b01959dc6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does Traya’s treatment cause allergies?",
+            "icon": "none",
+            "row_content": "<p>Traya's treatment does not contain any harmful chemicals, making it extremely safe for use. However,  It is always advisable to consult with your hair coach, in case you have any specific allergy concerns or skin sensitivities.<\/p>",
+            "page": ""
+          }
+        },
+        "d09f28ef-363f-475b-9594-1201ea9a1819": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can women of all ages take Traya’s treatment?",
+            "icon": "none",
+            "row_content": "<p>Yes, Traya's treatment helps women of all age groups. We work hard to ensure that your treatment plan is customised and personalised to your age group, hair fall type, your stage and internal root causes your hair fall. You will also have a  hair coach assigned to you to ensure that we are able to give you the support you personally require on your journey.<\/p>",
+            "page": ""
+          }
+        },
+        "0a0313d9-d94a-4b3d-8e26-b07531b14921": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can Traya’s treatment be used with other hair care products?",
+            "icon": "none",
+            "row_content": "<p>While Traya's complete treatment works holistically to tackle your hair issues. Organic shampoos, serums can be used for hair care needs. Please ensure when choosing products to use that they are toxin free and won’t have a negative impact on the health of your hair. <\/p>",
+            "page": ""
+          }
+        },
+        "e44232a5-d3c6-4c7d-bb1e-bfdb3bc2d620": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does the treatment help with PCOS related hair fall?",
+            "icon": "none",
+            "row_content": "<p>YES!. Our PCOS Santulan is an ayurvedic formulation that manages PCOS and also balances your hormones. Traya's Santulan technology is designed for women of all ages and stages of life. The Ayurvedic herbs in the santulan ensure incredible internal health, which, combined with the rest of our treatment and diet, helps to reflect on the outside in the form of great hair.<\/p>",
+            "page": ""
+          }
+        },
+        "4866779e-f667-4668-879b-f156e18c6580": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will the treatment help with post-pregnancy (postpartum) related hair fall?",
+            "icon": "none",
+            "row_content": "<p>YES! Post-pregnancy hair fall is a common concern for many women who have recently given birth, and it is caused by hormonal imbalances due to after childbirth Traya's Mom Santulan is designed to support new mothers, address such hormonal imbalances and promote hair growth. We understand the sensitivity and criticality of this stage in a mother’s life, Mom Santulan has been made of ingredients that are plant-based and completely safe for lactating women and their breastfed babies.<\/p>",
+            "page": ""
+          }
+        },
+        "871e31af-5e77-4b5d-9a53-c2b082edb01e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does the treatment help for thyroid related hair fall?",
+            "icon": "none",
+            "row_content": "<p>Yes, thyroid-related hair fall is typically caused by imbalances as a result of poor thyroid function, and Traya's Thyro Santulan is made with ayurvedic herbs  that help control thyroid hormones inside the body naturally.<\/p>",
+            "page": ""
+          }
+        },
+        "b02087ca-32e3-4b62-af91-840b23979cc4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": " Is Minoxidil safe to use for females?",
+            "icon": "none",
+            "row_content": "<p>YES! Minoxidil has been thoroughly researched and tested before being certified to be safe and effective for women. Minoxidil however should not be taken by women when they are pregnant or breastfeeding. It is also advisable to check in with your hair coach if you have any doubts with the application of minoxidil as well. <\/p>",
+            "page": ""
+          }
+        },
+        "f71d38df-fa06-48a4-af80-3edcd82e1d72": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why is my hair falling after I started using Minoxidil?",
+            "icon": "none",
+            "row_content": "<p>If you notice hair shedding in the first few weeks of using minoxidil, it is working for you. When the new hair growth cycle begins, the old hair falls off. This hair loss will be replaced by new hair growth. In the next few weeks, the hair shedding will stop and will be replaced with new healthy hair growth. <\/p>",
+            "page": ""
+          }
+        },
+        "4dcc574d-234c-41b1-84d3-104afd4c56e6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What to do if the scalp becomes dry after using Minoxidil?",
+            "icon": "none",
+            "row_content": "<p>It is normal to notice dryness and flaky scalp within the first 1-2 months of using minoxidil as the scalp is  adjusting to the medication and the dead skin is peeling off. If you still feel like you are experiencing this after 2 months, connect with your hair coach who will help you further.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16063935545522__d6084d52-2152-45fe-96c5-dfcb0a7f6af6-1680249566b7a59602-0",
+        "template--16063935545522__d6084d52-2152-45fe-96c5-dfcb0a7f6af6-1680249566b7a59602-1",
+        "template--16063935545522__d6084d52-2152-45fe-96c5-dfcb0a7f6af6-1680249566b7a59602-2",
+        "template--16063935545522__d6084d52-2152-45fe-96c5-dfcb0a7f6af6-1680249566b7a59602-3",
+        "554ee291-4479-4570-b010-4c2a611e47a3",
+        "0ab0d1fe-f3c0-4aa8-8dab-4b5e58734b2a",
+        "0d3b00e7-e903-484e-accf-de6b01959dc6",
+        "d09f28ef-363f-475b-9594-1201ea9a1819",
+        "0a0313d9-d94a-4b3d-8e26-b07531b14921",
+        "e44232a5-d3c6-4c7d-bb1e-bfdb3bc2d620",
+        "4866779e-f667-4668-879b-f156e18c6580",
+        "871e31af-5e77-4b5d-9a53-c2b082edb01e",
+        "b02087ca-32e3-4b62-af91-840b23979cc4",
+        "f71d38df-fa06-48a4-af80-3edcd82e1d72",
+        "4dcc574d-234c-41b1-84d3-104afd4c56e6"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cdd3ff85-ed6f-4aa0-9f8c-8cba1394eeea",
+    "1663823771acb5bafd",
+    "16638237978dbe31f5",
+    "32e30758-a1e7-4775-b780-1810a8663e70",
+    "1fa2f2c3-0827-4381-a31a-9b467cdf4b73",
+    "16644486865a19040b",
+    "1664514446420a4dc0",
+    "166382381876793f6e",
+    "f8892752-7736-451d-884c-c345c0bd2d12",
+    "16645144751281a304",
+    "0db2b343-320e-43c5-92c7-fea3bd1e3d55",
+    "a475b325-ecd0-408d-a3eb-0f1847a50f85",
+    "1664514543742d7211",
+    "customer_reviews_female_KT88dH",
+    "814ed861-85dd-4b1c-8192-215bd329d1e0",
+    "bc37d094-f0a3-466b-b1fb-347b4d6a9b15",
+    "166452217156cff4e1",
+    "2x2_section_jDge7R",
+    "community_section_KqPNUE",
+    "166451450597c2775b",
+    "5c16b718-14c9-47c2-a55e-4aa1a5bacdd3",
+    "4ee10f08-0416-4159-b93f-85d9bf5d1662",
+    "90a3ec32-fbee-4951-ab5f-1bb3f3903458",
+    "d6084d52-2152-45fe-96c5-dfcb0a7f6af6"
+  ]
+}

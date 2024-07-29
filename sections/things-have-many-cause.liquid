@@ -1,0 +1,462 @@
+<div class="container">
+  {% if section.settings.section-heading != blank %}
+    <p class="section-title">{{ section.settings.section-heading }}</p>
+  {% endif %}
+    <ul class="nav nav-pills mb-3 border-bottom justify-content-between" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="pills-stress-tab" data-toggle="pill" href="#pills-stress" role="tab" aria-controls="pills-stress" aria-selected="true"><span class="color-dot color-dot-orange"></span>Stress</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-hormones-tab" data-toggle="pill" href="#pills-hormones" role="tab" aria-controls="pills-hormones" aria-selected="false"><span class="color-dot color-dot-green"></span>Hormones</a>
+      </li>
+      <li class="nav-item d-none">
+        <a class="nav-link" id="pills-Metabolism-tab" data-toggle="pill" href="#pills-Metabolism" role="tab" aria-controls="pills-Metabolism" aria-selected="false"><span class="color-dot color-dot-peach"></span>Metabolism</a>
+      </li>
+      <li class="nav-item d-none">
+        <a class="nav-link" id="pills-Nutrition-tab" data-toggle="pill" href="#pills-Nutrition" role="tab" aria-controls="pills-Nutrition" aria-selected="false"><span class="color-dot color-dot-purple"></span>Nutrition</a>
+      </li>
+      <li class="nav-item d-none">
+        <a class="nav-link" id="pills-Dosha-Imbalance-tab" data-toggle="pill" href="#pills-Dosha-Imbalance" role="tab" aria-controls="pills-Dosha-Imbalance" aria-selected="false"><span class="color-dot color-dot-blue"></span>Dosha Imbalance</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-Scalp-tab" data-toggle="pill" href="#pills-Scalp" role="tab" aria-controls="pills-Scalp" aria-selected="false"><span class="color-dot color-dot-yellow"></span>Scalp</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-stress" role="tabpanel" aria-labelledby="pills-stress-tab">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+            {% for block in section.blocks %}
+              {% if block.type == 'Stress' %}
+                {% if block.settings.image != blank %}
+                  <img class="lazyload" data-src="{{ block.settings.image | img_url: '200x' }}" />
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            </div>
+            <div class="col-md-8">
+              <div class="accordion" id="Stress" style="background: {{ section.settings.bk-color }};">
+              {% for block in section.blocks %}
+                {% if block.type == 'Stress' %}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="Stress-{{forloop.index}}">
+                    <button class="accordion-button{% if forloop.first == false %} collapsed{% endif %} question" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}-Stress" aria-expanded="{% if forloop.first == false %}false{% else %}true{% endif %}" aria-controls="collapse-{{ forloop.index }}-Stress">
+                      {{ block.settings.question }}</button>
+                  </h2>
+                  <div id="collapse-{{ forloop.index }}-Stress" class="accordion-collapse collapse{% if forloop.first == true %} show{% endif %}" aria-labelledby="Stress-{{forloop.index}}" data-bs-parent="#Stress">
+                    <div class="accordion-body answer">
+                      {{ block.settings.answer }}
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+              {% endfor %}
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="tab-pane fade" id="pills-hormones" role="tabpanel" aria-labelledby="pills-hormones-tab">
+        <div class="accordion" id="Hormones" style="background: {{ section.settings.bk-color }};">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+            {% for block in section.blocks %}
+              {% if block.type == 'Hormones' %}
+                {% if block.settings.image != blank %}
+                  <img class="lazyload" data-src="{{ block.settings.image | img_url: '200x' }}" />
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            </div>
+            <div class="col-md-8">
+              <div class="accordion" id="Hormones" style="background: {{ section.settings.bk-color }};">
+              {% for block in section.blocks %}
+                {% if block.type == 'Hormones' %}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="Hormones-{{forloop.index}}">
+                    <button class="accordion-button{% if forloop.first == false %} collapsed{% endif %} question" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}-Hormones" aria-expanded="{% if forloop.first == false %}false{% else %}true{% endif %}" aria-controls="collapse-{{ forloop.index }}-Hormones">
+                      {{ block.settings.question }}</button>
+                  </h2>
+                  <div id="collapse-{{ forloop.index }}-Hormones" class="accordion-collapse collapse{% if forloop.first == true %} show{% endif %}" aria-labelledby="Hormones-{{forloop.index}}" data-bs-parent="#Hormones">
+                    <div class="accordion-body answer">
+                      {{ block.settings.answer }}
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+              {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pills-Metabolism" role="tabpanel" aria-labelledby="pills-Metabolism-tab">
+        <div class="accordion" id="Metabolism" style="background: {{ section.settings.bk-color }};">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+            {% for block in section.blocks %}
+              {% if block.type == 'Metabolism' %}
+                {% if block.settings.image != blank %}
+                  <img class="lazyload" data-src="{{ block.settings.image | img_url: '200x' }}" />
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            </div>
+            <div class="col-md-8">
+              <div class="accordion" id="Metabolism" style="background: {{ section.settings.bk-color }};">
+              {% for block in section.blocks %}
+                {% if block.type == 'Metabolism' %}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="Metabolism-{{forloop.index}}">
+                    <button class="accordion-button{% if forloop.first == false %} collapsed{% endif %} question" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}-Metabolism" aria-expanded="{% if forloop.first == false %}false{% else %}true{% endif %}" aria-controls="collapse-{{ forloop.index }}-Metabolism">
+                      {{ block.settings.question }}</button>
+                  </h2>
+                  <div id="collapse-{{ forloop.index }}-Metabolism" class="accordion-collapse collapse{% if forloop.first == true %} show{% endif %}" aria-labelledby="Metabolism-{{forloop.index}}" data-bs-parent="#Metabolism">
+                    <div class="accordion-body answer">
+                      {{ block.settings.answer }}
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+              {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pills-Nutrition" role="tabpanel" aria-labelledby="pills-Nutrition-tab">
+        <div class="accordion" id="Nutrition" style="background: {{ section.settings.bk-color }};">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+            {% for block in section.blocks %}
+              {% if block.type == 'Nutrition' %}
+                {% if block.settings.image != blank %}
+                  <img class="lazyload" data-src="{{ block.settings.image | img_url: '200x' }}" />
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            </div>
+            <div class="col-md-8">
+              <div class="accordion" id="Nutrition" style="background: {{ section.settings.bk-color }};">
+              {% for block in section.blocks %}
+                {% if block.type == 'Nutrition' %}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="Nutrition-{{forloop.index}}">
+                    <button class="accordion-button{% if forloop.first == false %} collapsed{% endif %} question" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}-Nutrition" aria-expanded="{% if forloop.first == false %}false{% else %}true{% endif %}" aria-controls="collapse-{{ forloop.index }}-Nutrition">
+                      {{ block.settings.question }}</button>
+                  </h2>
+                  <div id="collapse-{{ forloop.index }}-Nutrition" class="accordion-collapse collapse{% if forloop.first == true %} show{% endif %}" aria-labelledby="Nutrition-{{forloop.index}}" data-bs-parent="#Nutrition">
+                    <div class="accordion-body answer">
+                      {{ block.settings.answer }}
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pills-Dosha-Imbalance" role="tabpanel" aria-labelledby="pills-Dosha-Imbalance-tab">
+        <div class="accordion" id="Dosha-Imbalance" style="background: {{ section.settings.bk-color }};">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+            {% for block in section.blocks %}
+              {% if block.type == 'Dosha-Imbalance' %}
+                {% if block.settings.image != blank %}
+                  <img class="lazyload" data-src="{{ block.settings.image | img_url: '200x' }}" />
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            </div>
+            <div class="col-md-8">
+              <div class="accordion" id="Dosha-Imbalance" style="background: {{ section.settings.bk-color }};">
+              {% for block in section.blocks %}
+                {% if block.type == 'Dosha-Imbalance' %}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="Dosha-Imbalance-{{forloop.index}}">
+                    <button class="accordion-button{% if forloop.first == false %} collapsed{% endif %} question" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}-Dosha-Imbalance" aria-expanded="{% if forloop.first == false %}false{% else %}true{% endif %}" aria-controls="collapse-{{ forloop.index }}-Dosha-Imbalance">
+                      {{ block.settings.question }}</button>
+                  </h2>
+                  <div id="collapse-{{ forloop.index }}-Dosha-Imbalance" class="accordion-collapse collapse{% if forloop.first == true %} show{% endif %}" aria-labelledby="Dosha-Imbalance-{{forloop.index}}" data-bs-parent="#Dosha-Imbalance">
+                    <div class="accordion-body answer">
+                      {{ block.settings.answer }}
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pills-Scalp" role="tabpanel" aria-labelledby="pills-Scalp-tab">
+        <div class="accordion" id="Scalp" style="background: {{ section.settings.bk-color }};">
+           <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+            {% for block in section.blocks %}
+              {% if block.type == 'Scalp' %}
+                {% if block.settings.image != blank %}
+                  <img class="lazyload" data-src="{{ block.settings.image | img_url: '200x' }}" />
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            </div>
+            <div class="col-md-8">
+            <div class="accordion" id="Scalp" style="background: {{ section.settings.bk-color }};">
+            {% for block in section.blocks %}
+              {% if block.type == 'Scalp' %}
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="Scalp-{{forloop.index}}">
+                  <button class="accordion-button{% if forloop.first == false %} collapsed{% endif %} question" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}-Scalp" aria-expanded="{% if forloop.first == false %}false{% else %}true{% endif %}" aria-controls="collapse-{{ forloop.index }}-Scalp">
+                    {{ block.settings.question }}</button>
+                </h2>
+                <div id="collapse-{{ forloop.index }}-Scalp" class="accordion-collapse collapse{% if forloop.first == true %} show{% endif %}" aria-labelledby="Scalp-{{forloop.index}}" data-bs-parent="#Scalp">
+                  <div class="accordion-body answer">
+                    {{ block.settings.answer }}
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "Things have Cause",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section-heading",
+        "label": "Enter Heading"
+      },
+      {
+        "type": "color",
+        "id": "bk-color",
+        "label": "Select Backgound Color",
+        "default": "transparent"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Stress",
+        "type": "Stress",
+        "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+        ]
+      },
+      {
+        "name": "Hormones",
+        "type": "Hormones",
+        "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+        ]
+      },
+      {
+        "name": "Scalp",
+        "type": "Scalp",
+        "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+        ]
+      },
+      {
+        "name": "Metabolism",
+        "type": "Metabolism",
+        "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+        ]
+      },
+      {
+        "name": "Nutrition",
+        "type": "Nutrition",
+        "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+        ]
+      },
+      {
+        "name": "Dosha-Imbalance",
+        "type": "Dosha-Imbalance",
+        "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Things have Cause",
+        "category": "custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .color-dot {
+    width: 14px;
+    height: 14px;
+    background: #9c9c9c;
+    display: inline-block;
+    border-radius: 14px;
+    margin-right: 5px;
+  }
+  .color-dot.color-dot-orange {
+    background: #F9AF5F;
+  }
+  .color-dot.color-dot-green {
+    background: #C2D3A0;
+  }
+  .color-dot.color-dot-peach {
+    background: #EAC4A3;
+  }
+  .color-dot.color-dot-purple {
+    background: #AFAABE;
+  }
+  .color-dot.color-dot-blue {
+    background: #8DC3D8;
+  }
+  .color-dot.color-dot-yellow {
+    background: #F0E6A5;
+  }
+  .template-page.malecombo .question {
+    letter-spacing: normal;
+    background-color: transparent!important;
+    color: #414042!important;
+    text-transform: none!important;
+    font-family: Nunito Sans,sans-serif!important;
+    border-radius: 0;
+    box-shadow: none;
+    padding-left: 0;
+    position: relative;
+    font-size: 18px;
+  }
+  .template-page.malecombo .answer {
+    font-size: 16px;
+  }
+  .template-page.malecombo .answer p {
+    margin-bottom: 0;
+  }
+  .template-page.malecombo .accordion-item {
+    border-bottom: 1px solid black;
+  }
+  .template-page.malecombo .nav-pills .nav-link {
+    border: none;
+    margin: 0px;
+    font-weight: 700;
+  }
+  .template-page.malecombo .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #414042;
+    background-color: transparent;
+    font-weight: 700;
+  }
+  .template-page.malecombo .nav-pills .nav-link.active {
+    border-bottom: 1px solid #000;
+    border-radius: 0
+  }
+  .template-page.malecombo a.assessment-btn:hover, .template-page.malecombo .nav-pills li a:hover {
+    text-decoration: none;
+    background: transparent;
+    color: #414042;
+    font-weight: 700;
+  }
+  .template-page.malecombo .accordion-button::after {
+    background: none;
+    content: '\002B';
+    transition: none;
+  }
+  .template-page.malecombo .accordion-button:not(.collapsed)::after {
+    background-image: none;
+    transform: none;
+    content: '\2212';
+  }
+{% endstyle %}

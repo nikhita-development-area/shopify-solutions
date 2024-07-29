@@ -1,0 +1,155 @@
+<div class="container mt-md-5 mt-0 mb-md-5 mb-2">
+  {% if section.settings.link_url != blank %}
+  <a href="{{ section.settings.link_url }}" class="refer-button">
+    <div class="heros-refer row">
+      <div class="heros-refer-text col-8">
+        <p class="refer-text">{{ section.settings.referFriend }} <span class="font-fredoka refer-heading-span">{{ section.settings.discount }}</span></p>
+        {% if section.settings.on_your_next != blank %}<p class="refer-under-text">{{ section.settings.on_your_next }}</p>{% endif %}
+      </div>
+      <div class="heors-refer-image ml-auto col-4">
+        {% if section.settings.money_des_img != blank and section.settings.money_mob_img != blank %}
+          <img class="d-none d-md-block w-100 lazyload" data-src="{{ section.settings.money_des_img | img_url: ' '}}" alt="money_doodle_3">
+          <img class="d-md-none w-100 img_width lazyload lazyload" data-src="{{ section.settings.money_mob_img | img_url: ' '}}" alt="Mobile-money_doodle_3">
+        {% endif %} 
+      </div>
+    </div>
+  </a>
+  {% endif %}
+  <div style="clear:both"></div>
+</div>
+
+{% schema %}
+  {
+    "name": "refer and earn",
+    "settings": [
+      {
+        "type": "url",
+        "id": "link_url",
+        "label": "Set Path URL"
+      },
+      {
+        "type":"text",
+        "id":"referFriend",
+        "label":"Refer Your friend"
+      },
+      {
+        "type": "text",
+        "id": "discount",
+        "label": "Discount %"
+      },
+      {
+        "type": "text",
+        "id": "on_your_next",
+        "label": "On Your Next Order"
+      },      
+      {
+        "type": "image_picker",
+        "id": "money_des_img",
+        "label": "Money Image"
+      },      
+      {
+        "type": "image_picker",
+        "id": "money_mob_img",
+        "label": "Money Image"
+      }       
+    ],
+    "presets": [
+      {
+        "name": "refer and earn",
+        "category": "Discounting Page"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .heros-refer {
+    background: rgba(169, 182, 153, 0.27);
+    border: 1px solid #A9B699;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 47%);
+    border-radius: 27px;
+    padding: 60px;
+    align-items: center;
+  }
+ .refer-text {
+    font-size: 60px;
+    line-height: 90px;
+    font-weight: 600;
+    color: #000;
+  } 
+  .refer-under-text {
+    font-size: 25px;
+    line-height: 34px;
+    font-weight: 400;
+    color: #000;
+  }
+  .refer-button {
+    text-decoration: none !important;
+  }
+  .refer-heading-span {
+    color: #F19C3E;
+    font-weight: 600!important;
+  }
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    .refer-text {
+      font-size: 50px;
+      line-height: 70px;
+    }
+  }
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    .refer-text {
+      font-size: 36px;
+      line-height: 50px;
+      font-weight: 700;
+    }
+    .refer-under-text {
+      font-size: 17px;
+      line-height: 25px;
+      font-weight: 500;
+    }
+  }
+ @media only screen and (max-width: 767.98px) and (min-width: 576px) {
+    .refer-text {
+      font-size: 28px;
+      line-height: 40px;
+    }
+   .heros-refer {
+      padding: 20px;
+   }
+   .refer-under-text {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+  @media only screen and (max-width: 575.98px) {
+    .refer-text {
+      font-size: 19px;
+      line-height: 26px;
+    }
+    .heros-refer {
+      padding: 15px;
+      border-radius:6px;
+    }
+    .refer-under-text {
+      font-size: 9px;
+      line-height: 11px;
+    }
+    .heros-refer.row {
+      margin: auto;
+    }
+  }
+  @media only screen and (max-width:400px){
+    .refer-text {
+      font-size: 16px;
+      line-height: 25px;
+      margin-bottom: 0;
+    }
+    .heros-refer.row {
+      padding: 15px;
+    }
+   .refer-under-text {
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+{% endstyle %}

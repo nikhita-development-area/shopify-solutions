@@ -1,0 +1,128 @@
+<div class="cuticle-faq container d-none" page_type="cuticle">
+  <p class="result-cuticle-title">{{ section.settings.title }}</p>
+  <div class="div-main">
+    {% for block in section.blocks %}
+      <div class="text_image" id="box-{{ forloop.index }}">
+        <div class="div-image" data-attr="box-{{ forloop.index }}">
+          <img class="class-image" id="image{{ forloop.index }}" src="{{ block.settings.img1 | img_url: "350x" }}" width="300" height="100%" alt="image-{{ forloop.index }}" title="image {{ forloop.index }}" loading="eager"/>
+        </div>
+        <div class="div-text">
+          <p class="class-text" id="text{{ forloop.index }}">{{ block.settings.txt1 }}</p>
+        </div>
+        <div class="div-url">
+          <p class="class-url" id="url-{{ forloop.index }}">
+            Read More <i class="fa fa-long-arrow-right"></i>
+            <img class="arrow-svg" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Subtract.svg?v=1688710234" width="" height="" alt="sub" title="Sub" loading="eager">
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% comment %}{% endcomment %}
+<div class="faq__answer d-none">
+  <div>
+  {% for block in section.blocks %}
+    <div class="d-none FAQ--answer" data-target-id="box-{{ forloop.index }}">
+      <div class="answer_div row rounded-lg">
+        <div class="col-12 p-0 d-flex" style="border-bottom: 2px solid #dee2e6;">
+          <div class="col-11 px-0 py-2">
+            <p class="font-weight-bold faq__question">{{ block.settings.txt1 }}</p>
+          </div>
+          <div class="col-1 px-0 py-2 font-weight-bold text-right faq__close">&times;</div>
+        </div>
+        <div class="col-12 px-0 py-3">
+          <p>{{ block.settings.answer }}</p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Cuticle faq",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "FAQ’s"
+      }
+    ],
+    "blocks":[
+      {
+        "name":"Faq",
+        "type":"image_picker",
+        "settings":[
+          {
+          "type":"image_picker",
+          "id":"img1",
+          "label":"Image"
+          },
+          {
+            "type":"text",
+            "id":"txt1",
+            "label":"Text"
+          },
+          {
+            "type": "text",
+            "id": "answer",
+            "label": "Enter Answer"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Cuticle faq"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  #shopify-section-{{ section.id }} .faq__answer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(0,0);
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+  }
+  #shopify-section-{{ section.id }} .faq__answer:not(.d-none) {
+    z-index: 99;
+  }
+  #shopify-section-{{ section.id }} .answer_div {
+    background: #fff;
+    padding: 10px;
+  }
+  #shopify-section-{{ section.id }} .FAQ--answer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+  }
+  #shopify-section-{{ section.id }} .faq__question, #shopify-section-{{ section.id }} .faq__close {
+    font-size: 18px;
+  }
+  @media only screen and (max-width: 767.98px) {
+    #shopify-section-{{ section.id }} .FAQ--answer {
+      width: 85%;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .class-text, .class-url {
+      font-size: 9px;
+    }
+    .class-text {
+      padding: 8px 10px;
+    }
+  }
+{% endstyle %}

@@ -1,0 +1,49 @@
+<!-- Sections -> referee-terms-conditions -->
+
+<div class="py-4 px-4 px-md-0" style="background: #F6F6F6;">
+  <div class="container terms">
+    <h3 class="font-weight-bold">{{ section.settings.main_heading }}</h3>
+
+    <div class="conditions">
+      {% for block in section.blocks %}
+        <p class="m-md-0">{{ block.settings.main_title }}</p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .terms h3 {font-size: 34px; line-height: 46px; letter-spacing: 0.02em;}
+  .conditions p {font-size: 20px; line-height: 33px;}
+
+  @media screen and (max-width: 767px) {
+    .terms h3 {font-size: 25px; line-height: 35px;}
+    .conditions p {font-size: 12px; line-height: 18px;}
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Terms & Conditions",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main_heading",
+        "label": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Text",
+        "name": "Terms & Conditions",
+        "settings": [
+          {
+            "type": "text",
+            "id": "main_title",
+            "label": "Terms & Conditions"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

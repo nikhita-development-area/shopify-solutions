@@ -1,0 +1,1190 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "15fc91cd-c2af-465c-a20b-95e09b574181": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_92286839-0a5a-4eb2-9f4b-59e262a77eee.webp",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "7b91c78c-27ba-4fb1-83bd-71d18d98ff11": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/author_Dr.-Shailendra-Chaubey-BAMS_300x_3fb01719-6325-4801-b35b-3fb773a91669.jpg",
+            "author_name": "Dr. Shailendra Chaubey, BAMS",
+            "author_position": "Ayurveda Practioner",
+            "author_bio": "A modern-day Vaidya with 11 years of experience. He is the founder of Dr. Shailendra Healing School that helps patients recover from chronic conditions through the Ayurvedic way of life."
+          }
+        },
+        "7c227a5a-c9dc-41a4-be67-56fd9744afb4": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Dr_Sangeeta_Menon_300x_009e3334-f965-46b9-85d7-b547cc685a18.png",
+            "author_name": "Sangeeta Menon",
+            "author_position": "Nutritionist",
+            "author_bio": "Dr. Menon is a Nutritionist with a degree in Food Science. She is a certified Fitness Trainer with expertise in Sports Nutrition. She is also the Founder and Director of a Health Cafe in Vapi and has authored various e-books on Amazon"
+          }
+        },
+        "b761ad45-3280-4d16-81f8-7eef59284725": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "f95aded9-b7f4-48c4-be79-dca47d88b76a": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "29425351-1f2e-4a75-a247-4a87d748256c": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "84b4ac73-7493-40c2-8155-86358861af79": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "13869846-ceec-47ed-ab13-21ea7644aa00": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Dr._Kalyani_300x_5fb11722-1461-4fcc-b309-9d8646b7ee6e.png",
+            "author_name": "Dr. Kalyani Deshmukh, M.D.",
+            "author_position": "Dermatologist",
+            "author_bio": "Dr. Deshmukh is an MD (Dermatology, Venerology, and Leprosy) with more than 4 years of experience. She successfully runs her own practice and believes that a personalized service maximizes customer satisfaction."
+          }
+        },
+        "456976c8-b942-4614-9cd1-42004bfc2b6b": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Dr._Kalyani_300x_5fb11722-1461-4fcc-b309-9d8646b7ee6e.png",
+            "author_name": "Dr. Kalyani Deshmukh, M.D.",
+            "author_position": "Dermatologist",
+            "author_bio": "Dr. Deshmukh is an MD (Dermatology, Venerology, and Leprosy) with more than 4 years of experience. She successfully runs her own practice and believes that a personalized service maximizes customer satisfaction."
+          }
+        },
+        "3d8acab4-b839-4f30-aa4d-9e5f522e6c53": {
+          "type": "author",
+          "disabled": true,
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Dr._Kalyani_300x_5fb11722-1461-4fcc-b309-9d8646b7ee6e.png",
+            "author_name": "Dr. Kalyani Deshmukh, M.D.",
+            "author_position": "Dermatologist",
+            "author_bio": "Dr. Deshmukh is an MD (Dermatology, Venerology, and Leprosy) with more than 4 years of experience. She successfully runs her own practice and believes that a personalized service maximizes customer satisfaction."
+          }
+        },
+        "462dc1c2-f409-4a87-95fc-cb7cb58d802f": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "520c3ccc-f765-4591-a0d6-9b49b404d7be": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "12af5e35-878e-465e-845c-723f4c5a5248": {
+          "type": "featured-blog",
+          "settings": {
+            "articles": "hair-care\/15-ayurvedic-foods-for-awesome-hair"
+          }
+        },
+        "79737074-71a4-497f-9bdf-426bc0f8607c": {
+          "type": "featured-blog",
+          "settings": {
+            "articles": "hair-care\/telogen-effluvium-symptoms-treatment-and-how-to-recover"
+          }
+        },
+        "cb9d174c-5706-4394-8dc5-12903a9f8ed6": {
+          "type": "featured-blog",
+          "settings": {
+            "articles": "hair-care\/does-having-diabetes-cause-hair-loss"
+          }
+        },
+        "c003d9ab-47b7-4724-a713-c268a51cee6e": {
+          "type": "featured-blog",
+          "settings": {
+            "articles": ""
+          }
+        }
+      },
+      "block_order": [
+        "15fc91cd-c2af-465c-a20b-95e09b574181",
+        "7b91c78c-27ba-4fb1-83bd-71d18d98ff11",
+        "7c227a5a-c9dc-41a4-be67-56fd9744afb4",
+        "b761ad45-3280-4d16-81f8-7eef59284725",
+        "f95aded9-b7f4-48c4-be79-dca47d88b76a",
+        "29425351-1f2e-4a75-a247-4a87d748256c",
+        "84b4ac73-7493-40c2-8155-86358861af79",
+        "13869846-ceec-47ed-ab13-21ea7644aa00",
+        "456976c8-b942-4614-9cd1-42004bfc2b6b",
+        "3d8acab4-b839-4f30-aa4d-9e5f522e6c53",
+        "462dc1c2-f409-4a87-95fc-cb7cb58d802f",
+        "520c3ccc-f765-4591-a0d6-9b49b404d7be",
+        "12af5e35-878e-465e-845c-723f4c5a5248",
+        "79737074-71a4-497f-9bdf-426bc0f8607c",
+        "cb9d174c-5706-4394-8dc5-12903a9f8ed6",
+        "c003d9ab-47b7-4724-a713-c268a51cee6e"
+      ],
+      "disabled": true,
+      "settings": {
+        "blog_show_author": true,
+        "blog_show_date": true,
+        "show_share_buttons": true,
+        "ad_link": ""
+      }
+    },
+    "2cfae373-4ab4-4d24-a283-82c74ff964d0": {
+      "type": "banner-hair-doctors",
+      "settings": {
+        "heading": "Best hair doctors in {{ article.title }} in 2024",
+        "para": "Find the top %s experienced hair doctors in {{ article.title }} and solve your hair concerns.",
+        "heading_sec": "",
+        "para_sec": "",
+        "content": "",
+        "button": "",
+        "btn_url": ""
+      }
+    },
+    "0aac9095-8834-45e5-a45d-142340b9afce": {
+      "type": "doctors-list",
+      "blocks": {
+        "c79ff901-f779-4a0e-8330-2a21524df09c": {
+          "type": "Banner",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/desktop_image.png",
+            "image_mob": "shopify:\/\/shop_images\/mobile-img_9d47d971-6c9c-4084-843b-255e7cbc1f4c.png",
+            "title": "Save on travel time &amp; effort",
+            "paragraph_img": "Get doctor recommended plans from the comfort of your home with Traya.",
+            "btn_text": "Take the Hair Test",
+            "btn_url": ""
+          }
+        },
+        "aa7325e0-d15e-4358-ac23-1f2e1afe3747": {
+          "type": "Banner",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/wepik-export-20230807060306yRiv_1_1.png",
+            "image_mob": "shopify:\/\/shop_images\/wepik-export-20230807060306yRiv_1_2.png",
+            "title": "Know the ‘why’ of Hair Fall",
+            "paragraph_img": "Traya’s Hair Test helps you find the root cause of your hair fall.",
+            "btn_text": "Take the Hair Test",
+            "btn_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "c79ff901-f779-4a0e-8330-2a21524df09c",
+        "aa7325e0-d15e-4358-ac23-1f2e1afe3747"
+      ],
+      "settings": {
+        "heading": "Hair doctors in",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "per_page": 10,
+        "image_position": 5
+      }
+    },
+    "f869969e-5f21-4a27-8ba6-dddd6fa713ed": {
+      "type": "faq-hair-doctors",
+      "blocks": {
+        "25951ef9-aff4-4d76-84ba-f949ff2388ae": {
+          "type": "faq",
+          "settings": {
+            "ques": "What are some common hair problems treated by a Hair Doctor?",
+            "ans": "<p>A hair doctor can treat common hair problems such as hair loss, thinning hair, scalp issues like dandruff and psoriasis, and hair damage due to external factors like heat and chemicals. They can diagnose and treat hair loss, provide solutions like hair transplantation, treat scalp problems and help in preventing hair damage.<\/p>"
+          }
+        },
+        "ebc94d10-4f70-499b-ab3a-352d3b71bef7": {
+          "type": "faq",
+          "settings": {
+            "ques": "Why is it Important to Consult a Hair Doctor?",
+            "ans": "<p>Consulting a hair doctor is important for early diagnosis and treatment of hair and scalp conditions, which can prevent further damage and improve the chances of successful treatment. Self-diagnosing and self-treatment can lead to misconceptions and ineffective treatment, making it necessary to seek professional help. Regular hair check-ups can help prevent hair problems and maintain healthy hair. <\/p>"
+          }
+        },
+        "2f6b780b-25f7-4c21-9873-6b8e90af178c": {
+          "type": "faq",
+          "settings": {
+            "ques": "What is the difference between a hair doctor and a dermatologist?",
+            "ans": "<p>A dermatologist is a medical professional who specialises in treating skin, nails, and hair conditions, including hair loss. A hair doctor, or trichologist, focuses specifically on hair and scalp issues. Both can treat hair-related conditions, but a trichologist may offer a more specialised approach for hair and scalp problems.<\/p>"
+          }
+        },
+        "e5b202a3-95a1-4259-af18-3102826ea530": {
+          "type": "faq",
+          "settings": {
+            "ques": "When should I consider seeing a hair doctor in {{ article.title }}?",
+            "ans": "<p>It's advisable to visit a hair doctor if you're experiencing noticeable hair loss, changes in hair texture, persistently itchy or flaky scalp, or other concerning hair or scalp symptoms. Traya’s free online hair test can also help you to find out the cause behind your hair loss problem in the comfort of your home. Regular check-ups can also be beneficial for maintaining healthy hair and scalp.<\/p>"
+          }
+        },
+        "e07a7648-a706-4bbc-8e7c-0fef2805afec": {
+          "type": "faq",
+          "settings": {
+            "ques": "What kind of tests can a hair doctor in {{ article.title }} perform to diagnose hair and scalp conditions?",
+            "ans": "<p>Hair doctors can perform various tests like hair pull tests, hair mineral analysis, scalp biopsies, and blood tests to diagnose hair and scalp conditions. The type of test depends on the individual's symptoms and the doctor's initial assessment.<\/p>"
+          }
+        },
+        "e1caea11-5515-4560-b73c-0b4924126089": {
+          "type": "faq",
+          "settings": {
+            "ques": "Can a hair doctor in {{ article.title }} help me with hair loss due to chemotherapy?",
+            "ans": "<p>Yes, a hair doctor can help manage hair loss due to chemotherapy. They can provide guidance on scalp cooling caps, recommend specific hair care products, or suggest other treatments to stimulate hair growth post-treatment.<\/p>"
+          }
+        },
+        "3492e93a-962d-4746-83f5-576132111241": {
+          "type": "faq",
+          "settings": {
+            "ques": "Are online consultations available with hair doctors in {{ article.title }}?",
+            "ans": "<p>Yes, Traya’s free online hair test can help you to find the root cause behind your hair loss problem in the comfort of your home. Our doctors analyse your hair test and scalp image based on which they diagnose your hair fall problem and give you the perfect treatment plan to control your problem. Our online hair diagnosis is accurate, reliable, and hassle-free. <\/p>"
+          }
+        },
+        "341604b7-f826-48a2-9e9a-5a19563366cb": {
+          "type": "faq",
+          "settings": {
+            "ques": "Where is Traya’s Hair Clinic in {{ article.title }}?",
+            "ans": "<p>Traya offers an online hair loss diagnosis service through a hair test co-developed with medical professionals and advanced AI technology. Thus, we do not have offline hair clinics. Our online platform enables us to identify the root cause of your hair loss and create a personalised treatment plan tailored to your specific hair fall concerns. The online nature of our service provides convenience and accessibility for our users.<\/p>"
+          }
+        },
+        "4f9f0e1f-5ba0-494a-8344-9092d1b76186": {
+          "type": "faq",
+          "settings": {
+            "ques": "Can we visit\/connect with the doctor at Traya?",
+            "ans": "<p>Traya provides a free online hair test to help you get a doctor-prescribed treatment plan to address your hair issues. Our online approach ensures easy and efficient access to medical guidance. Alternatively, we also provide <a href=\"https:\/\/form.traya.health\/doctor-landingV1\"><span style=\"text-decoration:underline\">online doctor consultations<\/span><\/a> for a fee of Rs. 499 if you still wish to consult a doctor before starting your treatment. <\/p>"
+          }
+        },
+        "bdf61b43-471a-4d58-b0f1-b9aeb35d08c3": {
+          "type": "faq",
+          "settings": {
+            "ques": "How long does it take to see results with Traya Treatment?",
+            "ans": "<p>The time frame for witnessing results can vary but typically falls within 5-6 months for Stages 1 and 2 of the hair loss cycle. Several factors, including the type of hair loss, hair loss stage, age, root causes, and more, influence the duration of the treatment process. Traya's comprehensive approach to addressing hair fall involves gradual improvement in various aspects of your health, paving the way for regrowth. <\/p>"
+          }
+        },
+        "1a57c1b2-3c1a-43bb-b8c3-8a7f2a978a17": {
+          "type": "faq",
+          "settings": {
+            "ques": "Do you offer any guarantee with the results?",
+            "ans": "<p>Yes, we are confident about the efficacy of the treatment and thus provide a 100% Money-back guarantee if the treatment kit does not yield results within five months of consistent use. Please refer to our <a href=\"https:\/\/traya.health\/policies\/refund-policy\"><span style=\"text-decoration:underline\">refund policy<\/span><\/a> for complete details about our guarantee policy.<\/p>"
+          }
+        },
+        "f72e427f-4b05-4b23-9a2a-86efb57ed97c": {
+          "type": "faq",
+          "settings": {
+            "ques": "Can Traya’s hair loss solutions help with specific types of hair loss, such as alopecia?",
+            "ans": "<p>Traya's solutions are designed to address various types of hair loss. However, it's important to note that we do not guarantee complete regrowth in cases of Alopecia. We can provide support and management strategies for the condition, but individual results may vary.<\/p>"
+          }
+        },
+        "f89d9e39-508d-4cfc-8208-f242cc96fb39": {
+          "type": "faq",
+          "settings": {
+            "ques": "Why Consult a Hair Doctor Specialist in {{ article.title }}?",
+            "ans": "<p>a. <strong>Professional Diagnosis:<\/strong> Hair doctors can accurately identify the root cause of hair issues, whether they are genetic, environmental, or due to other health conditions.<\/p><p>b. <strong>Effective Treatments: <\/strong>General remedies might not address specific problems. A hair doctor can prescribe treatments tailored to individual needs.<\/p><p>c. <strong>Preventive Care: <\/strong>Apart from treating existing conditions, specialists offer advice on preventing potential hair and scalp issues.<\/p><p>d. <strong>Advanced Treatments:<\/strong> Hair specialists can offer a wide range of therapies, from medications and topical treatments to advanced procedures like laser therapy and hair transplants.<\/p>"
+          }
+        },
+        "e7201be1-9f7a-4bcf-bc48-9c94f4949a2a": {
+          "type": "faq",
+          "settings": {
+            "ques": "Which type of doctor is best for hair?",
+            "ans": "<p>The best type of doctor for hair-related issues is a dermatologist or a trichologist. While dermatologists are medical doctors trained to treat skin, hair, and nails, trichologists specialise specifically in hair and scalp issues. In addition to consulting with a dermatologist or trichologist, you may also consider online diagnosis and treatment options, which can offer convenience and accessibility for addressing hair issues. <\/p>"
+          }
+        },
+        "e71d0eee-788b-4eb4-bd33-ea7a3311f0c3": {
+          "type": "faq",
+          "settings": {
+            "ques": "How can I regrow my lost hair?",
+            "ans": "<p>Regrowing lost hair depends on the cause of the hair loss. Some general tips include:<\/p><p>a. Finding out the root cause of your hair loss<\/p><p>b. Considering a personalised treatment to treat the root cause <\/p><p>c. Eating a balanced diet rich in vitamins and minerals, especially biotin, Vitamin E, and iron.<\/p><p>d. Maintaining a healthy lifestyle with regular exercise and sleep cycle. <\/p>"
+          }
+        },
+        "7e366b45-1cb9-4282-b2ef-ee10c189cd19": {
+          "type": "faq",
+          "settings": {
+            "ques": "Which vitamin is good for hair?",
+            "ans": "<p>Several vitamins are essential for hair health:<\/p><ul><li>Biotin: Stimulates production of keratin in hair and increases rate of growth in hair follicles.<\/li><li>Vitamin C: helps to repair hair damage. By helping in the production of collagen and absorption of iron.<\/li><li>Vitamin B3: Vitamin B3 enhances the growth of healthy hair and luscious hair.<\/li><li>Vitamin E: Helps maintain hair health and improve blood circulation to the scalp.<\/li><li>Vitamin A: Necessary for cell growth, including hair.<\/li><\/ul>"
+          }
+        },
+        "37b80beb-b3d3-43a2-bb44-7c0c49527c38": {
+          "type": "faq",
+          "settings": {
+            "ques": "Can hair loss be reversed?",
+            "ans": "<p>The reversibility of hair loss depends on multiple factors. Conditions like telogen effluvium (temporary hair shedding) can be reversed, but genetic hair loss, like androgenic alopecia, can be challenging to reverse completely and have to be managed. Early intervention, proper treatment, and maintaining scalp health can help in managing and, in some cases, reversing hair loss.<\/p>"
+          }
+        },
+        "2a97f4ab-97f9-4674-8066-4df2460d004f": {
+          "type": "faq",
+          "settings": {
+            "ques": "How can I combat hair fall in {{ article.title }}'s unique climate?",
+            "ans": "<p>Pollution, water quality and other environmental factors can cause damage to your hair and can be one of the many reasons for your hair fall. To manage your hair fall in {{ article.title }} humid and sometimes polluted climate, you can do the following:<\/p><p>- Use a mild shampoo free of Sulphate, Paraben and other harmful chemicals.<\/p><p>- Eat a balanced diet, rich in nutrients and maintain a healthy lifestyle. <\/p><p>- Consult a {{ article.title }} hair specialist for personalised solutions. <\/p>"
+          }
+        },
+        "a4d1b01f-0305-41e1-be02-f19c30a8d173": {
+          "type": "faq",
+          "settings": {
+            "ques": "What are the prevalent causes of hair challenges in {{ article.title }}?",
+            "ans": "<p>Hair fall and other hair related problems can be caused due to multiple reasons including environmental factors and poor internal health. Few common causes of hair challenges in {{ article.title }} include humidity, pollution, stress, and poor diet. <\/p>"
+          }
+        },
+        "d73c9707-4f91-454a-9392-5706d691d90c": {
+          "type": "faq",
+          "settings": {
+            "ques": "What does hair transplantation involve, and how much does it cost in {{ article.title }}?",
+            "ans": "<p>Hair transplantation is a surgical technique that involves removing hair follicles from one part of the body and implanting them in bald spots. The costs vary in {{ article.title }}, ranging from INR 30,000 to INR 1,00,000 or more, depending on factors like the clinic and technique. It is important to manage your hair even after a transplant to ensure sustainable results. <\/p>"
+          }
+        },
+        "33c07649-6051-4572-8a11-7fadcbb08664": {
+          "type": "faq",
+          "settings": {
+            "ques": "How can I arrange an appointment with a renowned hair specialist in {{ article.title }}?",
+            "ans": "<p>To book an appointment with a renowned {{ article.title }} hair specialist:<\/p><p>- Research and choose a reputable specialist or clinic.<\/p><p>- Contact them via provided contact information and book an appointment.<\/p><p>- Attend the consultation for personalised guidance.<\/p><p>You can also opt for Traya's free online hair test for an accessible way to know the root cause of your hair fall and get a personalised treatment. <\/p>"
+          }
+        },
+        "ad484f1e-0fda-4db6-9e6d-20de7c9445ee": {
+          "type": "faq",
+          "settings": {
+            "ques": "Why are hair specialists crucial for maintaining optimal hair health in {{ article.title }}?",
+            "ans": "<p>Hair specialists in {{ article.title }} can help in the following ways:<\/p><p>- Accurate diagnosis of hair issues.<\/p><p>- Customised treatments.<\/p><p>- Access to advanced techniques like hair transplantation.<\/p><p>- Preventive guidance for long-term hair health in {{ article.title }}. <\/p><p>For maintaining optimal hair health, it is important to maintain a healthy lifestyle, eat a nutritious diet and take care of your hair by frequent oiling and washing. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "25951ef9-aff4-4d76-84ba-f949ff2388ae",
+        "ebc94d10-4f70-499b-ab3a-352d3b71bef7",
+        "2f6b780b-25f7-4c21-9873-6b8e90af178c",
+        "e5b202a3-95a1-4259-af18-3102826ea530",
+        "e07a7648-a706-4bbc-8e7c-0fef2805afec",
+        "e1caea11-5515-4560-b73c-0b4924126089",
+        "3492e93a-962d-4746-83f5-576132111241",
+        "341604b7-f826-48a2-9e9a-5a19563366cb",
+        "4f9f0e1f-5ba0-494a-8344-9092d1b76186",
+        "bdf61b43-471a-4d58-b0f1-b9aeb35d08c3",
+        "1a57c1b2-3c1a-43bb-b8c3-8a7f2a978a17",
+        "f72e427f-4b05-4b23-9a2a-86efb57ed97c",
+        "f89d9e39-508d-4cfc-8208-f242cc96fb39",
+        "e7201be1-9f7a-4bcf-bc48-9c94f4949a2a",
+        "e71d0eee-788b-4eb4-bd33-ea7a3311f0c3",
+        "7e366b45-1cb9-4282-b2ef-ee10c189cd19",
+        "37b80beb-b3d3-43a2-bb44-7c0c49527c38",
+        "2a97f4ab-97f9-4674-8066-4df2460d004f",
+        "a4d1b01f-0305-41e1-be02-f19c30a8d173",
+        "d73c9707-4f91-454a-9392-5706d691d90c",
+        "33c07649-6051-4572-8a11-7fadcbb08664",
+        "ad484f1e-0fda-4db6-9e6d-20de7c9445ee"
+      ],
+      "settings": {
+        "heading": "",
+        "show_faq": 5,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "166331054358f54672": {
+      "type": "logo-bar",
+      "blocks": {
+        "1663310543fa4cb22c-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/003_45350490-3f83-4360-aad7-1dd5d44bdba2.png",
+            "link": "shopify:\/\/pages\/press"
+          }
+        },
+        "1663310543fa4cb22c-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/007_1b7f2712-99e2-4e10-86ab-a53e62d0e247_1_-min.jpg",
+            "link": "shopify:\/\/pages\/press"
+          }
+        },
+        "1663310543fa4cb22c-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/009_e3baaf5f-4d89-4a8e-95f2-be304d03723a.jpg",
+            "link": ""
+          }
+        },
+        "1663310543fa4cb22c-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/006_d8c2158b-82e2-42ab-8914-3c0e9a3744f4_1_-min.png",
+            "link": ""
+          }
+        },
+        "2900f6b0-5824-49be-b1f1-da9c56a9f6cb": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/005_711c722d-b488-4862-8549-28990c21731a.jpg",
+            "link": ""
+          }
+        },
+        "86b4d6b2-3465-4ef4-b13c-e5fcda85bef4": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/001_7274eafc-0433-4379-b914-e000c388ef8e_1_-min.png",
+            "link": ""
+          }
+        },
+        "04b64c56-64f4-418a-8602-305465be9d41": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/004_5ca260c5-a56d-4d4c-8592-9cbd53a19c86_1_-min.png",
+            "link": ""
+          }
+        },
+        "8b989111-043d-451a-8a05-4a9f8d65806b": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/008_b322bc9e-feee-43ec-9bc1-cb9d2d59bd1d.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1663310543fa4cb22c-0",
+        "1663310543fa4cb22c-1",
+        "1663310543fa4cb22c-2",
+        "1663310543fa4cb22c-3",
+        "2900f6b0-5824-49be-b1f1-da9c56a9f6cb",
+        "86b4d6b2-3465-4ef4-b13c-e5fcda85bef4",
+        "04b64c56-64f4-418a-8602-305465be9d41",
+        "8b989111-043d-451a-8a05-4a9f8d65806b"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "showMarquee": true,
+        "showslide": false
+      }
+    },
+    "1677755314b59ccb78": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "85a9089b-c1d1-44a6-8409-59e279a3a697": {
+      "type": "swirl-video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "html_area": "<div id=\"swirl-short-videos\" data-code=\"hnl8qkiv\" data-sw=\"1\"><\/div>\n<div class=\"swirl-short-videos-M\" data-playlist=\"ealhzF\"><\/div>"
+      }
+    },
+    "1663314852d8f9983b": {
+      "type": "root-cause",
+      "blocks": {
+        "6b5ed1b7-ce00-47f6-8151-d912840dd966": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/Nutrition_8361c24a-5a0c-4cef-a89c-5dd35b9380c9_1_-min.png",
+            "headingM": "Nutrition",
+            "maleContent": "Eating foods which are not rich in protein, vitamins and minerals blocks hair growth.",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "c572189f-bf88-43db-b31e-4f3808988dea": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/metabolism_7f62e013-8e28-4852-89df-d5f47213095e-min.png",
+            "headingM": "Metabolism",
+            "maleContent": "Slow metabolism can result in your hair becoming dry, brittle, coarse and even break off.",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "fde0437a-1cf2-4d63-ae7d-014fc2be3dbf": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/Hormones_a0ef20a8-7c3b-4c0d-bb6e-3f8936e79904_1.png",
+            "headingM": "Hormones",
+            "maleContent": "DHT hormone attacks your hair follicle thereby causing hair thinning and hair fall.",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "375db7e1-cc6e-487e-bcae-95eebd948f37": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/stress_93148f60-c7ec-418a-ae3a-7652119be7df.png",
+            "headingM": "Stress",
+            "maleContent": "Increased cortisol levels disrupts your hair cycle causing hair loss.",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "fa9643d3-44b8-4826-acbf-353b0e7be4ab": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/Environment_3027745f-7312-4b5f-a454-0d0d9918caf1.png",
+            "headingM": "Environment",
+            "maleContent": "Sweat, heat, dust and pollution can lead to poor health of the hair follicle and eventual hair fall.",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        }
+      },
+      "block_order": [
+        "6b5ed1b7-ce00-47f6-8151-d912840dd966",
+        "c572189f-bf88-43db-b31e-4f3808988dea",
+        "fde0437a-1cf2-4d63-ae7d-014fc2be3dbf",
+        "375db7e1-cc6e-487e-bcae-95eebd948f37",
+        "fa9643d3-44b8-4826-acbf-353b0e7be4ab"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Hair Loss Has Multiple Root Causes",
+        "sub_title": "",
+        "DeskRootMale": "shopify:\/\/shop_images\/Banner_1_410d97a2-8921-4069-a949-38a2366180f4.jpg",
+        "DeskRootFemale": "shopify:\/\/shop_images\/Banner_1_410d97a2-8921-4069-a949-38a2366180f4.jpg",
+        "btn_link": "https:\/\/form.traya.health\/questions?cohort=1&location=RootCauses",
+        "buttontitle": "TAKE THE HAIR TEST",
+        "rootcause-undertext": ""
+      }
+    },
+    "166332440981f760bc": {
+      "type": "ThreeFold-Way",
+      "disabled": true,
+      "settings": {
+        "three_fold_bk_image": "shopify:\/\/shop_images\/home-sec_26f98611-d0f2-4816-8440-1502e24c9ed2.jpg",
+        "three_fold_heading": "The Threefold Way",
+        "subheading": "TRAYA’S HOLISTIC PLAN FOR HAIR FALL",
+        "content__ways": "AYURVEDA<span class=\"text-green mx-2\">+<\/span>DERMATOLOGY<span class=\"text-green mx-2\">+<\/span>NUTRITION",
+        "description": "Our approach combines the goodness of three sciences. With ingredients from the most authentic sources, we personalize your treatment delivering assured results.",
+        "linkb": "https:\/\/form.traya.health\/questions?cohort=1&location=Ingredients",
+        "sidelinktext": "Take The Hair Test"
+      }
+    },
+    "16633254165e35dc71": {
+      "type": "traya-journey",
+      "blocks": {
+        "e39a92fc-069a-4342-a4c9-f77a61706826": {
+          "type": "content",
+          "settings": {
+            "heading": "Take the Hair Test",
+            "content": "An online test that assess the root cause of your hair loss <br> <br>",
+            "read_time": "(takes 2-4 mins)",
+            "icon": "shopify:\/\/shop_images\/in1_large_a6dbc17f-eda3-4133-817d-59267fe834dc.png",
+            "card_link_text": "Take The Hair Test<sup>TM<\/sup>",
+            "card_link": "https:\/\/form.traya.health\/questions?cohort=1&location=HomeSlideshow"
+          }
+        },
+        "ea79f216-52a1-4e6b-949c-2e74af08f037": {
+          "type": "content",
+          "settings": {
+            "heading": "Buy the Plan",
+            "content": "Based on your responses, our doctors recommend a customized hair treatment plan.",
+            "read_time": "(takes 5 mins)",
+            "icon": "shopify:\/\/shop_images\/in2_large_f53022a3-92a1-42fd-bb95-a4c8dafc48eb.png",
+            "card_link_text": "",
+            "card_link": "https:\/\/form.traya.health\/questions?cohort=1&location=HomeSlideshow"
+          }
+        },
+        "1872f16d-c5e5-4b5b-a423-c8293b88b13d": {
+          "type": "content",
+          "settings": {
+            "heading": "Get Hair Coach Guidance",
+            "content": "After you buy the plan, Traya's expert Hair Coaches assist you and get you started on your hair growth journey.",
+            "read_time": "(takes 3-5 months)",
+            "icon": "shopify:\/\/shop_images\/live-chat-01_2.png",
+            "card_link_text": "",
+            "card_link": "https:\/\/form.traya.health\/questions?cohort=1&location=HomeSlideshow"
+          }
+        }
+      },
+      "block_order": [
+        "e39a92fc-069a-4342-a4c9-f77a61706826",
+        "ea79f216-52a1-4e6b-949c-2e74af08f037",
+        "1872f16d-c5e5-4b5b-a423-c8293b88b13d"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "The Traya Journey",
+        "sub_title": "",
+        "btn_text": "",
+        "btn_link": "https:\/\/form.traya.health\/questions?cohort=1&location=TrayaJourney"
+      }
+    },
+    "d924f938-c859-4fda-b411-5ffa5096220c": {
+      "type": "Unplugged",
+      "blocks": {
+        "text_3n8JhP": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "name1": "",
+            "name2": "",
+            "date": "",
+            "thumbnail-img": "shopify:\/\/shop_images\/Frame_3.webp",
+            "YT-video-ID": "RCMhKeoFFAA",
+            "startTime": "79"
+          }
+        },
+        "text_7RxFGG": {
+          "type": "text",
+          "settings": {
+            "name1": "",
+            "name2": "",
+            "date": "",
+            "thumbnail-img": "shopify:\/\/shop_images\/Frame_1_da015a1b-323a-4f48-a0d0-6bb8aadc3282.webp",
+            "YT-video-ID": "tRoxMfwORtU",
+            "startTime": "0"
+          }
+        },
+        "e22b7cfb-2a58-4c74-88f1-a2afcfcb5efa": {
+          "type": "text",
+          "settings": {
+            "name1": "",
+            "name2": "",
+            "date": "",
+            "thumbnail-img": "shopify:\/\/shop_images\/Frame_2.webp",
+            "YT-video-ID": "Uc0j7ROw2EY",
+            "startTime": "0"
+          }
+        },
+        "af264655-9ff6-4847-bdce-947d861e1579": {
+          "type": "text",
+          "settings": {
+            "name1": "",
+            "name2": "",
+            "date": "",
+            "thumbnail-img": "shopify:\/\/shop_images\/Frame_1.webp",
+            "YT-video-ID": "hmu77CDQkIA",
+            "startTime": "0"
+          }
+        },
+        "b8bc8776-3207-484e-8dfb-6e41a214564e": {
+          "type": "text",
+          "settings": {
+            "name1": "",
+            "name2": "",
+            "date": "",
+            "thumbnail-img": "shopify:\/\/shop_images\/Frame_5.webp",
+            "YT-video-ID": "E5S4ClPenio",
+            "startTime": "0"
+          }
+        },
+        "d6ab20b1-91bf-4de5-85b9-d10e83f12d3f": {
+          "type": "text",
+          "settings": {
+            "name1": "",
+            "name2": "",
+            "date": "",
+            "thumbnail-img": "shopify:\/\/shop_images\/Frame_4_4ca56987-2617-4a64-a90b-500500960c70.webp",
+            "YT-video-ID": "euM7HHKnCjA",
+            "startTime": "0"
+          }
+        }
+      },
+      "block_order": [
+        "text_3n8JhP",
+        "text_7RxFGG",
+        "e22b7cfb-2a58-4c74-88f1-a2afcfcb5efa",
+        "af264655-9ff6-4847-bdce-947d861e1579",
+        "b8bc8776-3207-484e-8dfb-6e41a214564e",
+        "d6ab20b1-91bf-4de5-85b9-d10e83f12d3f"
+      ],
+      "disabled": true,
+      "settings": {
+        "unplugged-head": "Why do Influencers love Traya?",
+        "unplugged-para": "Join us to break the hair loss myths and get the right information out."
+      }
+    },
+    "1663329851901d1e49": {
+      "type": "doctor-prescription",
+      "disabled": true,
+      "settings": {
+        "sub_title": "<span class=\"text-green animate\"><span>Dermatology<\/span><span>Ayurveda<\/span><span> Nutrition<\/span><span><\/span><\/span> Doctors <br>build your plan",
+        "title": "Recommended solutions by Doctors",
+        "btn_text": "TAKE THE HAIR TEST",
+        "btn_link": "https:\/\/form.traya.health\/questions?cohort=1&location=Prescription",
+        "banner_image": "shopify:\/\/shop_images\/Prescription_c611d377-6435-4aff-ac10-d7039e587c3c.jpg",
+        "text_1s": "We are not just doctor-backed; <br>we are doctor-recommended.",
+        "text_1": "Products verified <br> by doctors",
+        "text_2": "Dosage as per  <br> your profile",
+        "text_3": "Personalized  <br> diet plan"
+      }
+    },
+    "customer_review_hp_Yhabad": {
+      "type": "customer-review-HP",
+      "blocks": {
+        "revies_6YzEtd": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Uddeshya",
+            "customer_img1": "shopify:\/\/shop_images\/Uddeshya01_300x_4c51e29f-1d12-44df-94c7-e71e8b2de6bd.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Uddeshya02_300x_921c4a78-34b8-4f77-9551-775547339218.jpg",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Uddeshya03_300x_e746d8f1-e039-43ee-8ba1-4b2c0e35bd9c.jpg",
+            "customer_txt3": "Month 6",
+            "review_date": "15th Nov 2021",
+            "review_details": "My hair loss started in 2016 after I was diagnosed with tuberculosis. I had consulted a dermatologist and tried many treatments before nearly giving up hope. I liked Traya’s approach of combining three sciences. After I used the recommended product kits, I have seen a lot of benefits like thicker hair and negligible Hair fall.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_945ae096-c8b7-44c4-a365-ebf8efc2de54.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_kAhBXK": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Arundhati Munje",
+            "customer_img1": "shopify:\/\/shop_images\/Arundhati_Munje_51003_before_300x_62cc385b-b129-4ff9-bb5e-0101c2e1af90_300x_2.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Arundhati_Munje_51003_after_65b7e1f3-620e-4f5f-a6f1-707bc14bfbd1_300x_1.jpg",
+            "customer_txt2": "Month 3",
+            "customer_img3": "shopify:\/\/shop_images\/Arundhati_Munje_51003_after_300x_1.jpg",
+            "customer_txt3": "Month 8",
+            "review_date": "31st Dec 2021",
+            "review_details": "I had been losing my hair for about two years. I tried to convince myself that it wasn't noticeable but I knew it was and so did everyone else who saw me. I started my treatment with Traya and not only is the problem solved, but people are noticing how much it's grown back.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_d6XCat": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Rajat Sadh",
+            "customer_img1": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_300x_93ca08ad-9a26-431e-9be5-e83d334cd5ad.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/month_4_300x_3fb66938-dd6c-4fb4-b3c4-9cbf5d46ffcd.jpg",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_1_300x_afb0b676-652a-4589-b14e-646c94c0efcb.jpg",
+            "customer_txt3": "Month 8",
+            "review_date": "21st Feb 2022",
+            "review_details": "I didn't want to resort to surgery or any other invasive treatment for my hair loss and I found Traya. They have helped me grow back a full head of hair in just eight months. I'm so happy with the results, thank you so much!",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_VgQact": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Saumya",
+            "customer_img1": "shopify:\/\/shop_images\/Saumya1_300x_340cc072-7f32-42ba-b0a2-22217581de51.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Saumya4_300x_7668a2ee-6b01-4f16-9e57-c97ef754d330.jpg",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Saumya5_300x_40cf577f-9ef0-4e1a-a990-0d2c538b348d.jpg",
+            "customer_txt3": "Month 5",
+            "review_date": "6th Nov 2021",
+            "review_details": "I was losing hair due to stress and other things but Traya analyzed everything perfectly and sent me a treatment plan. After such great results, my relatives have also started using Traya. Thank you, Raveena my Hair coach (you are wonderful) for such amazing help.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_945ae096-c8b7-44c4-a365-ebf8efc2de54.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_eFBfzW": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Swati",
+            "customer_img1": "shopify:\/\/shop_images\/Month-b1_300x_797eb0fe-81d1-4e7f-a991-e9e4bf376e49.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Month-b3_300x_f54d629f-cdff-40c9-8e84-895c50bd589c.jpg",
+            "customer_txt2": "Month 4",
+            "customer_img3": "shopify:\/\/shop_images\/Month-b5_300x_1e9650e6-0d6e-468f-ada6-5429e4fae5b7.jpg",
+            "customer_txt3": "Month 6",
+            "review_date": "17th August 2021",
+            "review_details": "It takes time guys, but you won't regret it. My hair grew back stronger and my overall hair quality improved. Thank you Raveena, my hair coach, she really held me accountable and kept me on track. Super happy customer.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_945ae096-c8b7-44c4-a365-ebf8efc2de54.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_YdPRBy": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Sunil Bhadouriya",
+            "customer_img1": "shopify:\/\/shop_images\/Month_1_3_300x_669c0791-76d3-4cbe-9f8c-7eb09a5cee8e.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Month_5_300x_cd0d7c8c-ddc9-41c2-b84f-78309f3933b9.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/Month_7_1_300x_18514b4a-141e-43ae-889c-3596cd96ed89.jpg",
+            "customer_txt3": "Month 7",
+            "review_date": "9th Apr 2022",
+            "review_details": "I read about Traya on Quora. I had read reviews on it and they seemed positive so I thought that I would give it a go.  It's helped me so much and I can tell the difference in how much my hair has grown back.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_RwmaeH": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Shweta Divecha",
+            "customer_img1": "shopify:\/\/shop_images\/Month-d1_300x_300x_fab66140-5117-4d21-8489-378e2144fc04.jpg",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Month-d2_300x_7ffdd82d-3b13-4fca-855d-864da0bd7293.jpg",
+            "customer_txt2": "Month 2",
+            "customer_img3": "shopify:\/\/shop_images\/Month-d5_300x_0cf6fdeb-80e4-4987-a6e0-f84355abae92.jpg",
+            "customer_txt3": "Month 5",
+            "review_date": "20th August 2021",
+            "review_details": "By giving myself a complete lifestyle change inspired and instructed by Traya. I have never been more happier and confident. Still hoping more progress.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_wAKeqi": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Animesh Desai",
+            "customer_img1": "shopify:\/\/shop_images\/After_5.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Before_18c37501-272a-4a0e-a29b-d17176edb35c.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/March_2023.png",
+            "customer_txt3": "Month 9",
+            "review_date": "7th October, 2023",
+            "review_details": "I had been suffering from hair fall from the past 10 years. But when I started my Traya treatment, I started noticing that my hair had become thicker and there was new hair growth even in my bald patches. I took me some time to adjust to the routine but I feel happy now looking at my older pictures and feeling the difference.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_945ae096-c8b7-44c4-a365-ebf8efc2de54.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_HWgEzH": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Preetika Vatsal",
+            "customer_img1": "shopify:\/\/shop_images\/Before_4.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/February_2023.png",
+            "customer_txt2": "Month 3",
+            "customer_img3": "shopify:\/\/shop_images\/After_4_7361e350-6c74-43df-9de1-22a43ee84c4a.png",
+            "customer_txt3": "Month 5",
+            "review_date": "26th October, 2023",
+            "review_details": "I was losing a lot of hair for the past 3-4 years but I didn't pay too much attention to it. But when my husband pointed it out, I researched about Traya and started my routine. I saw a few other women on the website who had similar problems as me, so I was positive about it. I started noticing reduced hair fall from the third month itself and now I have even convinced my husband to get on the treatment.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_FMnATw": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Aniket",
+            "customer_img1": "shopify:\/\/shop_images\/January_2023_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/After_2.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/March_2023_1.png",
+            "customer_txt3": "Month 12",
+            "review_date": "20th October, 2023",
+            "review_details": "3 months into the treatment, I was worried that I wouldn't see any results because of my genetic hair fall condition. But, I was patient and kept a positive mindset and after about 4 months I started noticing visible hair growth on my head. I'm glad I waited for the results and religiously followed the hair coaches' guidance.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_945ae096-c8b7-44c4-a365-ebf8efc2de54.png",
+            "star_value": "4.5"
+          }
+        },
+        "revies_4MY7dn": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Ashok Kumar",
+            "customer_img1": "shopify:\/\/shop_images\/Before_1.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/January_2023.png",
+            "customer_txt2": "Month 5",
+            "customer_img3": "shopify:\/\/shop_images\/After_1.png",
+            "customer_txt3": "Month 10",
+            "review_date": "7th October, 2023",
+            "review_details": "I started noticing excessive hair fall in the last 2-3 years and turned to Traya. The hair fall actually continued in the first 2-3 months of the treatment. But, after about 4 months I could see that my hair density had increased. The best part about it was that the medicines had no side effects and I could follow it without any worry.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304.png",
+            "star_value": "5.0"
+          }
+        },
+        "revies_GU3p3K": {
+          "type": "revies",
+          "settings": {
+            "customer_name": "Sunita Sharma",
+            "customer_img1": "shopify:\/\/shop_images\/March_2023_2.png",
+            "customer_txt1": "Month 1",
+            "customer_img2": "shopify:\/\/shop_images\/Before_3.png",
+            "customer_txt2": "Month 2",
+            "customer_img3": "shopify:\/\/shop_images\/After_3.png",
+            "customer_txt3": "Month 4",
+            "review_date": "21st October, 2023",
+            "review_details": "I've been facing hair loss for the past 8 years and it increased when I was diagnosed with a thyroid problem. Thankfully, I found Traya and smy hair fall reduced just within 2 months into the routine. I was a bit irregular in the beginning, but the hair coaches would always check in with me and ensure that I'm being regular.",
+            "stars": "shopify:\/\/shop_images\/Frame_102353304_945ae096-c8b7-44c4-a365-ebf8efc2de54.png",
+            "star_value": "4.5"
+          }
+        }
+      },
+      "block_order": [
+        "revies_6YzEtd",
+        "revies_kAhBXK",
+        "revies_d6XCat",
+        "revies_VgQact",
+        "revies_eFBfzW",
+        "revies_YdPRBy",
+        "revies_RwmaeH",
+        "revies_wAKeqi",
+        "revies_HWgEzH",
+        "revies_FMnATw",
+        "revies_4MY7dn",
+        "revies_GU3p3K"
+      ],
+      "disabled": true,
+      "settings": {
+        "customer-head": "Our Customers"
+      }
+    },
+    "0017350d-6fab-4d4c-acb4-816a4fb95162": {
+      "type": "choose-hair-doctors",
+      "settings": {
+        "heading": "Choosing the Right Hair Doctor in {{ article.title }}",
+        "content": "<p>When choosing a hair doctor in {{ article.title }} , it is important to consider their qualifications, experience, and specialization. Look for doctors who have received training from recognized institutions for trichology studies in India. Check reviews and ratings from previous patients and evaluate the clinic infrastructure and technology used for effective hair treatments. <\/p><p>Hair loss in {{ article.title }} can be more than just a cosmetic concern. It could indicate underlying health issues caused by environmental factors and stress. By seeking advice from a hair specialist, you can improve your hair quality by promoting overall health and well-being.<\/p>"
+      }
+    },
+    "7de2b8c0-fc27-4ae5-a36b-c9db6c08e004": {
+      "type": "cost-hair-doctors",
+      "settings": {
+        "heading": " The Cost of Seeing a Hair Doctor in {{ article.title }}",
+        "content": "<p>Hair treatments in {{ article.title }} can vary widely in cost depending on the type of treatment and clinic chosen. In {{ article.title }} the average basic treatment costs around 800-1500. However, advanced treatments like hair transplants can cost upwards of INR 50,000. Insurance coverage for hair treatments is limited, with most health insurance plans not covering cosmetic treatments, but some may cover medically necessary treatments. It is important to check with your insurance provider and compare prices across different clinics to find the best value for your money. You can also give Traya’s Free hair test to understand the root cause behind your hair fall problem and get your holistic, personalised treatment plan at a much lower cost. <\/p>"
+      }
+    },
+    "33d49ac0-354f-47f6-a0cc-f91a7a9c0502": {
+      "type": "conditions-hair-doctors",
+      "settings": {
+        "heading": "Types of Hair Conditions Treated by Specialists in {{ article.title }}",
+        "content": "<ul><li><strong>Alopecia<\/strong>: Hair Specialists treatment encompasses various types of hair loss, from pattern baldness to more rare hair loss conditions.<\/li><li><strong>Scalp Conditions:<\/strong> Issues such as dandruff, psoriasis, and fungal infections that compromise the health of the scalp.<\/li><li><strong>Hair Thinning & Breakage:<\/strong> Often a result of lifestyle, genetic predisposition, and environmental factors.<\/li><li><strong>Premature Greying:<\/strong> Early greying of hair before the typical ageing process begins.<\/li><li><strong>Hair Damage:<\/strong> Due to over-styling, chemical treatments, or adverse environmental conditions.<\/li><\/ul>"
+      }
+    },
+    "conditions_hair_doctors_prggCh": {
+      "type": "conditions-hair-doctors",
+      "settings": {
+        "heading": "Which is the Best Hair Treatment in {{ article.title }}?",
+        "content": "<p>The right choice for the best hair fall treatment in {{ article.title }} depends on your age, the stage and cause of your hair fall, and its duration, among other factors. PRP, Hair Transplant, and other advanced hair treatments for regrowth are options for later stages when no natural treatment can work. Traya Health is the Best Hair Treatment in {{ article.title }} that offers an effective solution for those in stages 1-4. Traya's unique holistic approach combines the power of Ayurveda, dermatology, and nutrition, targeting the root causes of hair fall. Give Traya’s free online hair test and get started with the best hair fall treatment right away.<\/p>"
+      }
+    },
+    "f5f2435d-3543-409d-9bb9-8317a9122198": {
+      "type": "nearby-city-hair-doctors",
+      "blocks": {
+        "11992b35-2d5b-427f-a93e-3402a6aa165c": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Mumbai",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/mumbai"
+          }
+        },
+        "1f4e9ea7-88e6-4c8b-ad0c-dc46bfe094c7": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Gwalior",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/gwalior"
+          }
+        },
+        "51fe42f4-fe8f-4a94-8388-90e716911319": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Noida",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/noida"
+          }
+        },
+        "1cae6453-9044-43e4-993b-ec66bf916ffe": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Delhi",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/delhi"
+          }
+        },
+        "d8185ced-c069-4b0f-a098-d97e0a8ef0bf": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Kolkata",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/kolkata"
+          }
+        },
+        "1def8fda-c8f1-4a5e-9da9-7ebc6dd3e2af": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Chennai",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/chennai"
+          }
+        },
+        "497d4614-4a5a-400b-9e1a-51cbe2485478": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Bangalore",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/bangalore"
+          }
+        },
+        "270326d2-3d5a-4ec2-ba4b-78c35c06b496": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Jaipur",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/jaipur"
+          }
+        },
+        "da161a2e-f7ee-4795-8cd1-d2f2f48a37d3": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Hyderabad",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/hyderabad"
+          }
+        },
+        "b9218d4f-4dc6-4bcf-899b-17bfdef7a7a0": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Agra",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/agra"
+          }
+        },
+        "6fcf31cd-ebc0-4ff3-b5bd-7d19be7fd3a5": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in North-Goa",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/north-goa"
+          }
+        },
+        "0f171c4c-5e02-4d40-9ed3-fa969965edd2": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Varanasi",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/varanasi"
+          }
+        },
+        "ed013dd1-7e91-4682-b896-f746339db1a7": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Pune",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/pune"
+          }
+        },
+        "d33eab53-d4c6-42ed-8dbf-ff2e9ea9d47a": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Udaipur",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/udaipur"
+          }
+        },
+        "5d8aa8e4-a0f4-4612-b592-f55b2a69bcb2": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Faridabad",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/faridabad"
+          }
+        },
+        "88470f9a-58f7-44e7-8a8c-9bcb84b5ed30": {
+          "type": "city",
+          "settings": {
+            "city": "Hair Doctors in Ahmedabad",
+            "url": "https:\/\/traya.health\/blogs\/hair-doctors\/ahmedabad"
+          }
+        }
+      },
+      "block_order": [
+        "11992b35-2d5b-427f-a93e-3402a6aa165c",
+        "1f4e9ea7-88e6-4c8b-ad0c-dc46bfe094c7",
+        "51fe42f4-fe8f-4a94-8388-90e716911319",
+        "1cae6453-9044-43e4-993b-ec66bf916ffe",
+        "d8185ced-c069-4b0f-a098-d97e0a8ef0bf",
+        "1def8fda-c8f1-4a5e-9da9-7ebc6dd3e2af",
+        "497d4614-4a5a-400b-9e1a-51cbe2485478",
+        "270326d2-3d5a-4ec2-ba4b-78c35c06b496",
+        "da161a2e-f7ee-4795-8cd1-d2f2f48a37d3",
+        "b9218d4f-4dc6-4bcf-899b-17bfdef7a7a0",
+        "6fcf31cd-ebc0-4ff3-b5bd-7d19be7fd3a5",
+        "0f171c4c-5e02-4d40-9ed3-fa969965edd2",
+        "ed013dd1-7e91-4682-b896-f746339db1a7",
+        "d33eab53-d4c6-42ed-8dbf-ff2e9ea9d47a",
+        "5d8aa8e4-a0f4-4612-b592-f55b2a69bcb2",
+        "88470f9a-58f7-44e7-8a8c-9bcb84b5ed30"
+      ],
+      "settings": {
+        "heading": "Hair Doctors in Nearby Cities of India"
+      }
+    },
+    "8b92f5be-111e-4320-8d01-aadd397ae6c5": {
+      "type": "you-may-like",
+      "blocks": {
+        "168c2aec-f5c7-4898-bad4-1bf33a9c7458": {
+          "type": "text",
+          "settings": {
+            "article": "hair-care\/stages-of-receding-hairline",
+            "date": "12 July",
+            "url": "https:\/\/traya.health\/blogs\/hair-care\/stages-of-receding-hairline",
+            "readmore": "Read more"
+          }
+        },
+        "ed1b6e9e-554b-4fda-84e4-da3b6448db54": {
+          "type": "text",
+          "settings": {
+            "article": "hair-care\/redensyl-vs-minoxidil-which-one-is-better",
+            "date": "12 July",
+            "url": "https:\/\/traya.health\/blogs\/hair-care\/redensyl-vs-minoxidil-which-one-is-better",
+            "readmore": "Read more"
+          }
+        },
+        "b5b6a68d-6428-4902-849f-9db6bab2b301": {
+          "type": "text",
+          "settings": {
+            "article": "hair-care\/trichologist-vs-dermatologist-for-hair",
+            "date": "12 Juy",
+            "url": "https:\/\/traya.health\/blogs\/hair-care\/trichologist-vs-dermatologist-for-hair",
+            "readmore": "Read more"
+          }
+        }
+      },
+      "block_order": [
+        "168c2aec-f5c7-4898-bad4-1bf33a9c7458",
+        "ed1b6e9e-554b-4fda-84e4-da3b6448db54",
+        "b5b6a68d-6428-4902-849f-9db6bab2b301"
+      ],
+      "settings": {
+        "title": "You may like",
+        "hair_test": "Take the Hair Test",
+        "hair_test_url": "https:\/\/form.traya.health\/questions?cohort=1&location=hairtest-HD"
+      }
+    },
+    "banner_blog_NKqN7A": {
+      "type": "banner-blog",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "banner_blog_cta_Rr8mXU": {
+      "type": "banner-blog-cta",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "2cfae373-4ab4-4d24-a283-82c74ff964d0",
+    "0aac9095-8834-45e5-a45d-142340b9afce",
+    "f869969e-5f21-4a27-8ba6-dddd6fa713ed",
+    "166331054358f54672",
+    "1677755314b59ccb78",
+    "85a9089b-c1d1-44a6-8409-59e279a3a697",
+    "1663314852d8f9983b",
+    "166332440981f760bc",
+    "16633254165e35dc71",
+    "d924f938-c859-4fda-b411-5ffa5096220c",
+    "1663329851901d1e49",
+    "customer_review_hp_Yhabad",
+    "0017350d-6fab-4d4c-acb4-816a4fb95162",
+    "7de2b8c0-fc27-4ae5-a36b-c9db6c08e004",
+    "33d49ac0-354f-47f6-a0cc-f91a7a9c0502",
+    "conditions_hair_doctors_prggCh",
+    "f5f2435d-3543-409d-9bb9-8317a9122198",
+    "8b92f5be-111e-4320-8d01-aadd397ae6c5",
+    "banner_blog_NKqN7A",
+    "banner_blog_cta_Rr8mXU"
+  ]
+}

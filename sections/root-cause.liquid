@@ -1,0 +1,307 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<section id="hormons" class="page-width {% if template.suffix == 'cholestrol' %}cholestrol{% endif %}">
+  <div class="{% if template.suffix == 'cholestrol' %}page_link {% endif %}container text-center{% if template.suffix != 'cholestrol' %} mt-0 mt-md-3{% endif %}">
+    <p class="section-title text-capitalize mb-3 mb-md-2">{{ section.settings.title }}</p>
+
+    <!-- Homev1 Page Changes -->
+    {% if page.handle == 'homev1' %}
+      <p class="text-center homev1-sub-title">
+        Traya tackles internal and external factors, treating hair loss over time, helping you achieve your hair goals.
+      </p>
+    {% endif %}
+    <!-- Homev1 Page Changes -->
+
+    {% if page.handle == 'hair-loss-and-how'
+      or page.handle == 'female'
+      or page.handle == 'femalev1'
+      or page.handle == 'new-female'
+    %}
+      <p class="section-sub-title text-capitalize mb-3 mb-md-2">{{ section.settings.sub_title }}</p>
+    {% endif %}
+    {% if page.handle == 'all' %}
+      <div class="row justify-content-center mb-4">
+        <button id="show1" class="men_button font-fredoka border rounded-lg btn_active col-3 col-md-2 mx-2 py-md-2">
+          Men
+        </button>
+        <button id="show2" class="women_button font-fredoka border rounded-lg col-3 col-md-2 mx-2 py-md-2">
+          Women
+        </button>
+      </div>
+    {% endif %}
+    <div class="p1">
+      <img
+        class="d-md-block d-none m-auto pr-0"
+        alt="root_cause"
+        src="{{ section.settings.DeskRootMale | img_url:' ' }}"
+        loading="lazy"
+        title="root cause"
+        width="1010"
+        height="370"
+      >
+      <div class="hormon-slides d-md-none">
+        {% for block in section.blocks %}
+          <div class="hormon-slide mx-2">
+            <img
+              class="d-md-none mb-3 m-auto px-4 py-2"
+              alt="{{ block.settings.headingM }}"
+              src="{{ block.settings.rootCauseImgM | img_url:' ' }}"
+              {% if template.suffix != 'cholestrol' %}
+                width="150" height="118"
+              {% endif %}
+              loading="lazy"
+            >
+            <h4 class="fw-bold"><span class="color-dot color-dot-green"></span>{{ block.settings.headingM }}</h4>
+            <p class="font_description">{{ block.settings.maleContent }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="p2">
+      <img
+        class="d-md-block d-none m-auto pr-0"
+        alt="root_cause"
+        data-src="{{ section.settings.DeskRootFemale | img_url:' ' }}"
+        loading="lazy"
+        title="root cause"
+        width="1010"
+        height="370"
+      >
+      <div class="hormon-slides d-md-none">
+        {% for block in section.blocks %}
+          <div class="hormon-slide">
+            <img
+              class="d-md-none mb-3 lazyload m-auto px-4 py-2"
+              alt="{{ block.settings.headingF }}"
+              data-src="{{ block.settings.rootCauseImgF | img_url:' '}}"
+              {% if template.suffix != 'cholestrol' %}
+                width="150" height="118"
+              {% endif %}
+              loading="lazy"
+            >
+            <h4 class="fw-bold"><span class="color-dot color-dot-green"></span> {{ block.settings.headingF }}</h4>
+            <p class="font_description">{{ block.settings.femaleContent }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% if section.settings['rootcause-undertext'] != blank %}
+      <p class="mt-3 mb-0 underText">{{ section.settings['rootcause-undertext'] }}</p>
+    {% endif %}
+    <a
+      id="
+        {% if page.handle == 'female' or page.handle == 'new-female' %}female-hair-test-button3
+        {% elsif page.handle == 'pcos' %}female-hair-test-button3 {% elsif page.handle == 'menopause' %}female-hair-test-button3
+        {% elsif page.handle == 'thyroid' %}female-hair-test-button3 {% elsif product.handle == 'complete-hair-growth-kit' %}kitproduct-hair-test-button3
+        {% elsif page.handle == 'femalev1' %}femalev1-hair-test-button3 {% elsif page.handle == 'traya-referee' %}Referee-hairtest3 {% else %}hairtestcta{% endif %}"
+      href="{% if request.path contains '/blogs/hair-care/' %}https://form.traya.health/questions?cohort=1&amp;location=headermenu&page={{ request.path | replace: '/blogs/', 'blogs_' | replace: '/', '_' }}&utm_campaign=blogs_hc_RootCauses
+        {% elsif request.path contains '/blogs/hair-doctors/' %}https://form.traya.health/questions?cohort=1&amp;location=headermenu&page={{ request.path | replace: '/blogs/', 'blogs_' | replace: '/', '_' }}&utm_campaign=blogs_hd_RootCauses
+         {% else %}{{ section.settings.btn_link }}&page={{ page__hndl }}{% endif %}"
+          data-resultForm class="btn btn-dark take-the-hair-test mt-4 hair-form-actn-link">
+      {{ section.settings.buttontitle }}
+      <sup>&trade;</sup>
+    </a>
+  </div>
+</section>
+
+{% schema %}
+  {
+  "name": "Root Cause",
+  "class": "root-cause",
+  "settings": [
+    {
+    "type": "text",
+     "id": "title",
+    "label": "Section Title"
+          },
+          {
+    "type": "text",
+     "id": "sub_title",
+    "label": "Section Sub Title"
+          },
+         {
+          "type":"image_picker",
+          "id":"DeskRootMale",
+          "label":" Desk Root Male Image"
+          },
+        {
+          "type":"image_picker",
+          "id":"DeskRootFemale",
+          "label":" Desk Root Female Image"
+          },
+    		{
+        "type": "text",
+        "id": "btn_link",
+        "label": "Button Link",
+        "default":"https://form.traya.health/questions?cohort=1&location=RootCauses"
+      },
+      {
+      "type": "text",
+      "id": "buttontitle",
+      "label": "Button Text",
+       "default":"TAKE THE HAIR TEST"
+      },
+      {
+        "type": "text",
+        "id": "rootcause-undertext",
+        "label": "Enter Last Text"
+      }
+  ],
+     "blocks":[
+      {
+      "name":"Root Cause",
+      "type":"rootm",
+      "settings":[
+
+          {
+          "type":"image_picker",
+          "id":"rootCauseImgM",
+          "label":" Root Cause Image"
+          },
+        {
+          "type": "text",
+           "id": "headingM",
+           "label": "Root Cause Name"
+          },
+        {
+         "type": "text",
+         "id": "maleContent",
+        "label": "Male Content"
+          },
+                    {
+          "type":"image_picker",
+          "id":"rootCauseImgF",
+          "label":" Root Cause Image"
+          },
+        {
+          "type": "text",
+           "id": "headingF",
+           "label": "Root Cause Name"
+          },
+        {
+         "type": "text",
+         "id": "femaleContent",
+        "label": "Male Content"
+          }
+
+      ]
+     }
+   ],
+
+  "presets": [
+          {
+            "name": "Root Cause"
+          }
+        ]
+}
+{% endschema %}
+{% if page.handle == 'all' %}
+  <style>
+     #hormons h4.fw-bold {
+        color: #000;
+      }
+      .p2 {
+        display:none;
+      }
+      .men_button, .women_button {
+        color:#CBCBCB;
+        background: transparent;
+      }
+      .btn_active{
+        color:#000;
+        border-width: 1px 1px 4px !important;
+        border-bottom-color: #B7D340 !important;
+      }
+    .customers-section .months {
+        color: #000;
+        opacity: 0.5;
+      }
+    .hormon-slide::after {
+        content: '';
+        display: block;
+        background: rgb(0 0 0 / 0.3);
+        width: 1.3px;
+        height: 65%;
+        position: absolute;
+        top: 30%;
+      }
+      button#showM, button#showF, #show1, #show2 {
+        min-width: 236px;
+        font-size: 21px;
+        line-height: 25px;
+      }
+      .cholestrol .underText {
+        font-size: 36px;
+      }
+    @media only screen and (max-width: 767.98px) {
+      button#showM, button#showF, #show1, #show2 {
+        min-width: 110px;
+        padding: 6px 0px;
+        font-size: 21px;
+        line-height: 25px;
+      }
+    }
+      /*end Men Women Button Slider*/
+  </style>
+{% endif %}
+{% style %}
+    .cholestrol .underText {
+      font-size: 36px;
+    }
+    @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+      .cholestrol .underText {
+        font-size: 24px;
+      }
+    }
+    @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+      .cholestrol .underText {
+        font-size: 20px;
+      }
+    }
+    @media only screen and (max-width: 767.98px) {
+      .cholestrol .fw-bold {
+        font-size: 24px;
+        color: #414042 !important;
+      }
+      .cholestrol p.font_description {
+        font-size: 18px;
+        padding: 0px 16px;
+      }
+      .cholestrol .section-title {
+        font-size: 25px;
+      }
+      #hormons.cholestrol .container {
+        padding-right: 0px;
+        padding-left: 0px;
+      }
+      .cholestrol .underText {
+        font-size: 20px;
+        line-height: 29px;
+      }
+      .hormon-slides:not(.slick-initialized) > .hormon-slide:first-of-type ~ * {
+        display: none;
+      }
+    }
+  {% if page.handle == 'female' or page.handle == 'femalev1' or page.handle == 'new-female' %}
+      .p1{
+        display:none;
+      }
+      .p2{
+        display:block;
+      }
+    .section-title {
+      margin-bottom: 0px !important;
+    }
+    .section-sub-title {
+      font-size: 18px;
+      font-weight: normal !important;
+    }
+  {% endif %}
+{% endstyle %}

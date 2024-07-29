@@ -1,0 +1,233 @@
+    <section class="stage_six_banner mt-4 pt-5 mt-md-5 position-relative">
+      <div class="container border rounded-lg new-shadow bg-white position-relative stagecontainer mb-5 pb-md-0 pb-5 mt-md-5 mt-3">
+            <div class="container pt-4 pb-md-4 pb-5 text-white">
+                <div class="row my-3 mx-md-0 mx-2 justify-content-between align-items-center user_details position-relative">
+                  <div class="visitor-info6 col-md-8 col-12">
+                    <p class="font-weight-bold userName mt-4 mb-md-4 mb-2">Hi&nbsp;<span data-user-name class="text-capitalize"></span>,</p>
+                    <p class="px-0 mb-md-0 mb-3 mx-auto diagnosed_text1">You’ve been diagnosed with</p>
+                    <p class="font-weight-bold l-0 text-white mt-1"><span id="stage" class="stage6"></span>&nbsp;&nbsp;<br class=d-md-none><span id="typeOfLoss" class="male_pattern"></span></p>
+                  </div>
+                  <div class="col-md-4 col-12 text-center text-md-right user_img_div">
+                    {% comment %}
+                    <img class="p-1 lazyload" data-src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/baldness_prp_600_1.png?v=1662364370">
+                    {% endcomment %}
+                    <img class="p-1 lazyload" data-src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/image_2.png?v=1695301393">
+                  </div>
+                </div>
+                <div class="text-center mt-5 what__happen">
+                
+                  <p class="what_happentext">{% if page.handle == 'result-hi' %}इस स्टेज में क्या होता है? {% elsif page.handle == 'result-hinglish' %}Iss stage mein kya hota hain?{% else %}What happens at this stage?{% endif %}</p>
+                  <p class=" hair_folliclestext">{% if page.handle == 'result-hi' %}<span>आपके अधिकतर हेयर फॉलिकल्स मर चुके हैं और अब बालो का रिग्रोथ नहीं हो सकता।</span>{% elsif page.handle == 'result-hinglish' %}<span>Aap ke maximum hair follicles dead ho chuke hain aur hair regrowth support nahi kar sakte.</span> {% else %}<span class="d-md-none">Most of your hair follicles are dead & cannot show regrowth.</span><span class="d-none d-md-block">Most of your hair follicles are dead and cannot show regrowth.</span>{% endif %}</p>
+
+                  <div class="d-flex row justify-content-center align-items-center">  
+                    <div class="stageIWT col-md-5 col-6">
+                     <img class="p-1 lazyload" data-src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/444_1.png?v=1662438671">
+                       <p class="ADFollicle mt-3 mb-2">{% if page.handle == 'result-hi' %}एक्टिव फॉलिकल{% else %}Active Follicle{% endif %}</p>
+                        <p class="ADregrowth">{% if page.handle == 'result-hi' %}नेचुरल रिग्रोथ संभव है।{% elsif page.handle == 'result-hinglish' %}Natural regrowth possible hain.{% else %}Natural regrowth possible{% endif %}</p>
+                    </div>
+                    <div class="stageIWT col-md-5 col-6">
+                   <img class="p-1 lazyload" data-src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/4432.png?v=1662438671">
+                     <p class="ADFollicle mt-3 mb-2">{% if page.handle == 'result-hi' %}डेड फॉलिकल{% else %}Dead Follicle{% endif %}</p>
+                      <p class="ADregrowth">{% if page.handle == 'result-hi' %}नेचुरल रिग्रोथ संभव नहीं है।{% elsif page.handle == 'result-hinglish' %}Natural regrowth possible nahi hain.{% else %}Intervention required{% endif %}</p>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+        <div class="stage__text text-center d-md-none">
+               <p class="doctorStageText">{% if page.handle == 'result-hi' %}Traya डॉक्टर्स इस स्टेज पर हेयर ट्रांसप्लांट की सलाह देते हैं।{% elsif page.handle == 'result-hinglish' %}Traya doctors iss stage par hair transplant ki salah dete hain.{% else %}Traya doctors recommend a hair transplant at this stage.{% endif %}</p>
+               <p class="knowmoreText mb-md-0 mb-4">{% if page.handle == 'result-hi' %}अधिक जानकारी के लिए, हेयर एक्सपर्ट से बात करे।{% elsif page.handle == 'result-hinglish' %}Adhik jaankari ke liye, hair expert se baat karein.{% else %}Speak with a hair expert to know more.{% endif %}</p>
+          <a class="btn book-appnt-btn" href="https://form.traya.health/v2/mini-questions?cohort=1&location=Prescription">{% if page.handle == 'result-hi' %}फ्री कॉल बुक करें{% elsif page.handle == 'result-hinglish' %}Free Appointment Book Karein{% else %}BOOK A FREE APPOINTMENT{% endif %}</a>
+        </div>
+      </div>
+             <div class="stage__text text-center d-none d-md-block my-5 pt-4 pb-5">
+               <p class="doctorStageText">{% if page.handle == 'result-hi' %}Traya डॉक्टर्स इस स्टेज पर हेयर ट्रांसप्लांट की सलाह देते हैं।{% elsif page.handle == 'result-hinglish' %}Traya doctors iss stage par hair transplant ki salah dete hain.{% else %}Traya doctors recommend a hair transplant at this stage.{% endif %}</p>
+               <p class="knowmoreText">{% if page.handle == 'result-hi' %}अधिक जानकारी के लिए, हेयर एक्सपर्ट से बात करे।{% elsif page.handle == 'result-hinglish' %}Adhik jaankari ke liye, hair expert se baat karein.{% else %}Speak with a hair expert to know more.{% endif %}</p>
+          <a class="btn book-appnt-btn" href="https://form.traya.health/v2/mini-questions?cohort=1&location=Prescription">{% if page.handle == 'result-hi' %}फ्री कॉल बुक करें{% elsif page.handle == 'result-hinglish' %}Free Appointment Book Karein{% else %}BOOK A FREE APPOINTMENT{% endif %}</a>
+        </div>
+    </section>
+
+<style>
+    #shopify-section-{{section.id}}{
+  /*     display: none; */
+    }
+    .stage__text {
+      width: calc(100% - 40%);
+      margin: auto;
+    }
+    .userName{
+      color: #000000;
+      font-size: 24px;
+      line-height: 33px;
+    }
+    .diagnosed_text1{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+      opacity: 0.5;   
+    }
+    .stage6{
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 31px;
+      color: #74C1BC;
+    }
+    .male_pattern{
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 31px;
+      color: #000000;
+      text-transform: capitalize;
+    }
+    .book_appoitment{
+      background:#B7D340;
+      color:#000;
+    }
+    .what_happentext{
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      color: #000;
+    }
+    .hair_folliclestext{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      color: #000000;
+      opacity: 0.8;
+    }
+    .user_img_div img, .stageIWT img{
+      border: 1.18339px solid #b9e2e0;
+      border-radius: 17.7508px;
+    }
+    .user_img_div {
+      padding: 0;
+    }
+    .ADFollicle{
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 22px;
+      text-align: center;
+      color: #000000;
+    }
+    .ADregrowth{
+      font-size: 17px;
+      line-height: 22px;
+      color: #74C1BC;
+      font-weight: 700;
+    }
+    .doctorStageText{
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 38px;
+      text-align: center;
+      color: #000000;
+    }
+    .knowmoreText{ font-weight: 400;
+      font-size: 24px;
+      line-height: 33px;
+      color: #000000;
+      opacity: 0.5;
+    }
+    .stage_six_banner:before{
+      content:"";
+      /* background-image:url("https://cdn.shopify.com/s/files/1/0100/1622/7394/files/bbg.jpg?v=1662365657"); */
+      position:absolute;
+      display:block;
+      top:-2%;
+      height:45%;
+      width:100%;
+      left:0%;
+      background:#74C1BC;
+    }
+    .user_details:after{
+      content: '';
+      position: absolute;
+      bottom: -1.55rem;
+      background-color: #72c5c080;
+      width: 100%;
+      height: 0.6px;
+    }
+    .stagecontainer{
+      width:50%;
+      padding: 0px 40px;
+    }
+    .stage_six_banner .book-appnt-btn {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+     {
+      font-size: 26px;
+      line-height: 31px;
+    }
+    .new-shadow {
+      box-shadow: 0px 2.14342px 2.14342px rgba(0, 0, 0, 0.25);
+    }
+    @media (max-width: 767px){
+      .stage__text {
+        width: calc(100% - 5%);
+      }
+      .visitor-info6{
+        order:2;
+      }
+     .stagecontainer{
+        width:95%;
+        padding: 0px;
+      }
+      .visitor-info6{
+        text-align:center;
+      }
+      .userName{
+        font-size: 20px;
+        line-height: 27px;
+      }
+      .diagnosed_text1{
+        font-size: 14px;
+        line-height: 19px;  
+      }
+      .stage6, male_pattern{
+        font-size: 24px;
+        line-height: 29px;
+      }
+      .what_happentext {
+        font-size: 20px;
+        line-height: 27px;
+      }
+      .ADFollicle{
+        font-size: 14px;
+        line-height: 18px;
+      }
+      .ADregrowth{
+        font-size: 13px;
+        line-height: 17px;
+        color: #000;
+      }
+      .doctorStageText {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      .knowmoreText {
+        font-size: 18px;
+        line-height: 25px;
+      }
+      .hair_folliclestext {
+        width: 270px;
+        margin: 0px auto 1rem;
+        opacity: 0.9;
+      }
+      .what__happen {
+        position: relative;
+      }
+      .what__happen:after {
+        content: '';
+        position: absolute;
+        bottom: -1.55rem;
+        background-color: #72c5c080;
+        width: 100%;
+        height: 0.6px;
+        left: 0;
+      }
+    }
+</style>

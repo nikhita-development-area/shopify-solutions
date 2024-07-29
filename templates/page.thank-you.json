@@ -1,0 +1,34 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1663916016a1edf9d7": {
+      "type": "thankyou-page-section",
+      "settings": {
+        "thank-text": "Thank you",
+        "thank-content": "We’ve received your payment of Rs 499\/-"
+      }
+    },
+    "16639167937ef90bfe": {
+      "type": "custom-text-image",
+      "settings": {
+        "heading3": "Consultation call with your dermat has been scheduled.",
+        "paragraph1": "Go ahead and create your medical file",
+        "mobile_image": "shopify:\/\/shop_images\/mobile-img_1.webp",
+        "footer_text": "This will enable the doctor to better assess your case",
+        "mobile_view_image": "shopify:\/\/shop_images\/mobile-img_1.webp"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1663916016a1edf9d7",
+    "16639167937ef90bfe"
+  ]
+}

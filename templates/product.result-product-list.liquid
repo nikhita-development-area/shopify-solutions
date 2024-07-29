@@ -1,0 +1,85 @@
+{% layout none %}
+<div class="col-md-12" bis_skin_checked="1" style="" aria-hidden="true" tabindex="0" role="tabpanel" id="slick-slide10" aria-describedby="slick-slide-control10">
+   <div class="product-item card border-0 shadow mt-1 p-3 p-md-4 h-100 mb-0 position-relative co_bdr" bis_skin_checked="1">
+     <div class="male_pro_badges">
+       <ul>
+         {% if product.metafields.custom.product_title == "Anti - Dandruff 2% Night Lotion" or product.metafields.custom.product_title == "Defence Shampoo" or product.metafields.custom.product_title == "Hair Vitamins" or product.metafields.custom.product_title == "Minoxidil 2%" or product.metafields.custom.product_title == "Minoxidil 5%" or product.metafields.custom.product_title == "RECAP SERUM" or product.metafields.custom.product_title == "Anti-Dandruff Shampoo" %}
+          <li>
+            {% render 'dermotology-svg' %}
+            {% if product.metafields.custom.product_title == "Anti-Dandruff Shampoo"  or product.metafields.custom.product_title == "Anti - Dandruff 2% Night Lotion" %} 
+              {% render 'dandruff-svg' %}
+            {% endif %}
+          </li>
+         {% else %}
+         <li>
+          {% render 'ayurveda-svg' %}
+          {%  if product.metafields.custom.product_title == "Scalp Oil with Dandruff Therapy" %}
+            {% render 'dandruff-svg' %}
+          {% endif %}
+         </li>
+         {% endif %}
+         <li class="must-have">{% render 'must-have-svg' %}
+          <p class="d-block d-md-none" ><img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353153.png?v=1686832865" alt="rating-ihttps://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353143.png?v=1686747158mg"></p>
+         </li>
+       </ul>
+     </div>
+     <div class="male_product_list_flex">
+       <div class="col-12 col-md-5 gender-m-stage-1-pro" bis_skin_checked="1">
+         <img src="{{ product.featured_media.preview_image |  img_url: '600x' }}" class= "male_pro_img mx-auto" alt="{{ product.title | truncate: 10 }}" title="{{ product.title }}" loading="lazy" width="420" height="420" />
+       </div>
+       <div class="col-12 col-md-7 gender-m-stage-1-pro pl-0 pl-md-3" bis_skin_checked="1">
+      <div class="row shadow-none pb-0" bis_skin_checked="1">
+         <div class="male_prod_tit col-12" bis_skin_checked="1">
+            <h6 class="font-weight-bold text-uppercase mt-md-4 d-md-none" data-product-name="" style="font-size: 15px; letter-spacing: normal; padding-right: 3.5rem;">
+				{{ product.metafields.custom.product_title }}
+			</h6>
+            <h4 class="font-weight-bold mb-3 text-uppercase d-none d-md-block" data-product-name="" style="max-width:98%; letter-spacing: normal; font-size: 24px;">
+				{{ product.metafields.custom.product_title }}
+			</h4>
+         </div>
+
+        <div class="price-on-top" bis_skin_checked="1">
+         <h5 class="font-weight-bold mb-0 text-tradewind d-none d-md-block" style="font-size: 30px;">{{ product.price | money }}</h5>
+         <h6 class="font-weight-bold mb-0 text-tradewind d-md-none w-100">{{ product.price | money }}</h6>
+      </div>
+        <div class="male_pro_rating">
+      <p><img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353153.png?v=1686832865" alt="rating-ihttps://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353143.png?v=1686747158mg"></p>
+        </div>
+      
+            {% assign result-benifits = product.metafields.custom.result_benifits | split: '&&' | first %} 
+            {% assign eng-benifits = result-benifits | split: ',' %}
+
+
+            {% assign male-result-benefits = product.metafields.custom.male_result_benefits %} 
+            {% assign male-eng-benefits = male-result-benefits | split: ',' %}
+       
+                <ul class="cstm_english">
+                    {% for benifits in male-eng-benefits %}
+                    <li {% if benifits contains 'Hair growth' or benifits contains 'Hair Growth' %}class="toChange"{% endif %}>{{ benifits }}</li>
+                    {% endfor %}
+                </ul>
+
+            {% assign result-benifits-hi = product.metafields.custom.result_benifits | split: '&&' | last %} 
+            {% assign hi-benifits = result-benifits-hi | split: ',' %}
+            <ul class="cstm_result-hi">
+              {% for benifits in hi-benifits %}
+               <li>{{ benifits }}</li>
+              {% endfor %}
+            </ul>
+        
+         {%- assign subtitle = product.metafields.custom.result_subtitle | split: '&&' | first -%}
+          {%- assign subtitle-hi = product.metafields.custom.result_subtitle | split: '&&' | last -%}
+
+         {%- assign male-subtitle =  product.metafields.custom.male_result_dosage -%}
+     
+        <p class="male_pro_dosage"><span class="cstm_result-hi">{{ subtitle-hi }}</span><span class="cstm_english">{{ male-subtitle }}</span></p>
+            
+         </div>
+      </div>
+     </div>
+<!--      {%- assign ingredients = product.metafields.custom.result_ingredients | split: '&&' | first -%}
+     {%- assign ingredients-hi = product.metafields.custom.result_ingredients | split: '&&' | last -%}
+      <p class="cstm_result-hi"><span class="font-weight-bold">जड़ी-बूटियाँ: </span><span>{{ ingredients-hi }}</span></p>
+      <p class="cstm_english"><span class="font-weight-bold">Ingredients: </span><span>{{ ingredients }}</span></p> -->
+   </div>
+</div>

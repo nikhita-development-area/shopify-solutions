@@ -1,0 +1,99 @@
+<section id="news" class="new-tra">
+  <div class="container">
+    <p class="section-title">{{section.settings.heading}}</p>
+    <div class="mt-5 mt-md-3 section-title-line"> </div>
+    <div class="row">
+      {%- for block in section.blocks -%}
+      <div class="slide__slide col-md-4 col-lg-3 mb-4 mb-md-5">
+        {% if block.settings.link != blank %}
+        <a href="{{ block.settings.link }}" class="logo-bar__link" target="_blank">
+          <img data-src="{{ block.settings.image | img_url: '350x350' }}" alt="{{ block.settings.image.alt | escape }}" class="w-100 mb-3 main-img-press border lazyload">
+          <div class="slide-info">
+            {% if block.settings.news_image != blank %}
+            <img data-src="{{ block.settings.news_image | img_url: '100x' }}" alt="{{ block.settings.image.alt | escape }}" class="mb-3 lazyload">
+            {% endif %}
+            <p class="news-block-title">{{ block.settings.name }}</p>
+          </div>
+        </a> {% endif %}
+      </div>
+      {%- endfor -%}
+      
+    </div>
+  </div>
+</section>
+<style>
+  .new-tra .slide-info h4
+  {
+    font-size: 23.4px;
+    font-weight: bold;
+    line-height: 1.33; 
+  }
+  .new-tra .slide-info p
+  {
+    font-size: 16px;
+    letter-spacing: 0.09px;
+
+  }
+  @media only screen and (max-width: 767px){
+    .new-tra .section-title h2{font-size: 30px;
+      text-align: center;}
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Traya In News",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "columns",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "280 x 280px .jpg recommended"
+        },
+		{
+          "type": "image_picker",
+          "id": "news_image",
+          "label": "News Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link",
+          "info": "Optional"
+        }
+      ]
+    }
+  ],
+          "presets":[
+          {
+          "name":"Traya In News"
+          }
+          ]
+  }
+{% endschema %}
+
+<style>
+
+ #news .slide__slide img.main-img-press{
+    height: 247px;
+    width: 247px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+</style>

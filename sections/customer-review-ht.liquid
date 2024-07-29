@@ -1,0 +1,218 @@
+{{ 'customer-review-ht.css' | asset_url | stylesheet_tag }}
+
+<div class="testimonial-container testimonial-container--{{ section.id }} ht_section">
+  {% if section.settings.section_heading != blank %}
+    <h2 class="ht_testimonial_heading" id="hr_customer_review">{{ section.settings.section_heading }}</h2>
+  {% endif %}
+  <div class="testimonial-slider">
+    {%- for block in section.blocks -%}
+      <div class="testimonial-card">
+        {% if block.settings.stage != blank %}
+          <div class="stage">{{ block.settings.stage }}</div>
+        {% endif %}
+        <div class="images" style="display:flex;">
+          {% if block.settings.image_1 != blank %}
+            <img
+              src="{{ block.settings.image_1 | image_url }}"
+              alt="Desktop Image"
+              class=""
+              width=""
+              height=""
+            >
+          {% endif %}
+         
+          {% if block.settings.image_2 != blank %}
+            <img
+              src="{{ block.settings.image_2 | image_url }}"
+              alt="Desktop Image"
+              class=""
+              width=""
+              height=""
+            >
+          {% endif %}
+          {% if block.settings.image_3 != blank %}
+            <img
+              src="{{ block.settings.image_3 | image_url }}"
+              alt="Desktop Image"
+              class=""
+              width=""
+              height=""
+            >
+          {% endif %}
+        </div>
+        <div class="month_text">
+           {% if block.settings.month_1 != blank %}
+            <div>{{ block.settings.month_1 }}</div>
+             {% endif %}
+          {% if block.settings.month_3 != blank %}
+            <div>{{ block.settings.month_3 }}</div>
+             {% endif %}
+          {% if block.settings.month_5 != blank %}
+            <div>{{ block.settings.month_5 }}</div>
+             {% endif %}
+        </div>
+        <div class="info">
+          <div class="name_verified_wrapper" style="display:flex">
+          {% if block.settings.customer_name != blank %}
+            <h3>{{ block.settings.customer_name }}</h3>
+          {% endif %}
+            <span style="color:#39AB74; display:flex; align-items:center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M14.3733 7.16015L13.4667 6.10679C13.2933 5.90679 13.1533 5.53345 13.1533 5.26679V4.13345C13.1533 3.42679 12.5733 2.84679 11.8667 2.84679H10.7333C10.4733 2.84679 10.0933 2.70679 9.89334 2.53345L8.84 1.62679C8.38 1.23345 7.62667 1.23345 7.16 1.62679L6.11334 2.54012C5.91334 2.70679 5.53334 2.84679 5.27334 2.84679H4.12C3.41334 2.84679 2.83334 3.42679 2.83334 4.13345V5.27345C2.83334 5.53345 2.69334 5.90679 2.52667 6.10679L1.62667 7.16681C1.24 7.62681 1.24 8.37348 1.62667 8.83348L2.52667 9.89348C2.69334 10.0935 2.83334 10.4668 2.83334 10.7268V11.8668C2.83334 12.5735 3.41334 13.1535 4.12 13.1535H5.27334C5.53334 13.1535 5.91334 13.2935 6.11334 13.4668L7.16667 14.3735C7.62667 14.7668 8.38 14.7668 8.84667 14.3735L9.9 13.4668C10.1 13.2935 10.4733 13.1535 10.74 13.1535H11.8733C12.58 13.1535 13.16 12.5735 13.16 11.8668V10.7335C13.16 10.4735 13.3 10.0935 13.4733 9.89348L14.38 8.84015C14.7667 8.38015 14.7667 7.62015 14.3733 7.16015ZM10.7733 6.74015L7.55334 9.96015C7.46 10.0535 7.33334 10.1068 7.2 10.1068C7.06667 10.1068 6.94 10.0535 6.84667 9.96015L5.23334 8.34681C5.04 8.15348 5.04 7.83348 5.23334 7.64015C5.42667 7.44681 5.74667 7.44681 5.94 7.64015L7.2 8.90015L10.0667 6.03345C10.26 5.84012 10.58 5.84012 10.7733 6.03345C10.9667 6.22679 10.9667 6.54679 10.7733 6.74015Z" fill="#39AB74"/>
+              </svg>
+             <span class="verified_text">Verified</span> 
+            </span>
+          </div>    
+          {% if block.settings.location_name != blank %}
+            <p class="loaction_name">{{ block.settings.location_name }}</p>
+          {% endif %}
+          {% if block.settings.rating != blank %}
+            <p class="rating">
+              {{ block.settings.rating }}
+              <span class="star">&#9733;</span>
+               <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+               <span class="star">&#9733;</span>
+               <span class="star">&#9733;</span>
+            </p>
+          {% endif %}
+          {% if block.settings.paragraph != blank %}
+            <p class="customer_content_ht">{{ block.settings.paragraph }}</p>
+          {% endif %}
+          {% if block.settings.reviewed_date != blank %}
+            <p class="date">{{ block.settings.reviewed_date }}</p>
+          {% endif %}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+<style>
+  .testimonial-container--{{ section.id }} .slick-arrow {
+    bottom: -80px;
+    top: unset;
+  }
+
+  .testimonial-container--{{ section.id }} .slick-prev {
+    right: 60px;
+    left: unset;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    margin-right: 16px;
+    padding-left: 7px;
+  }
+  
+  .testimonial-container--{{ section.id }} .slick-next {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    padding-right: 7px;
+    right: 12px;
+  }
+  .testimonial-container {
+    padding-top: 100px;
+    padding-bottom: 48px;
+  }
+  @media screen and (max-width: 700px) {
+    .testimonial-container {
+     padding-top: 38px;
+     padding-bottom: 38px;
+     margin-bottom: 0;
+     }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Customer Review Hair-T",
+  "settings": [
+    {
+        "type":"text",
+        "id":"section_heading",
+        "label":"Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Column",
+      "settings": [
+        {
+            "type":"text",
+            "id":"stage",
+            "label":"Stage"
+        },
+        {
+          "type":"image_picker",
+          "id":"image_1",
+          "label":"Image 1"
+        },
+        {
+          "type":"text",
+          "id":"month_1",
+          "label":"Month 1"
+        },
+         {
+          "type":"image_picker",
+          "id":"image_2",
+          "label":"Image 2"
+        },
+        {
+          "type":"text",
+          "id":"month_3",
+          "label":"Month 3"
+        },
+         {
+          "type":"image_picker",
+          "id":"image_3",
+          "label":"Image 2"
+        },
+        {
+          "type":"text",
+          "id":"month_5",
+          "label":"Month 5"
+        },
+        {
+          "type":"text",
+          "id":"customer_name",
+          "label":"Customer Name"
+        },
+        {
+          "type":"text",
+          "id":"location_name",
+          "label":"Location"
+        },
+        {
+          "type":"text",
+          "id":"rating",
+          "label":"Add Your Rating Here"
+        },
+        {
+          "type": "text",
+          "id": "paragraph",
+          "label": "Paragraph"
+        },
+        {
+        "type":"text",
+        "id":"reviewed_date",
+        "label":"Provided Reviewed On"
+        }
+      ]
+    }
+  ],
+    "presets": [
+        {
+          "name": "Customer Review Hair Transplant",
+          "category": "Text"
+        }
+      ]
+}
+{% endschema %}

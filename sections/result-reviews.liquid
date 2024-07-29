@@ -1,0 +1,233 @@
+<!-- Google review -->
+{% unless product.handle contains 'hair-growth-serum' %}
+<section id="google-reviews" class="section-the-results" data-section-type="review">
+  <div class="container">
+        <p class="section-title{% if page.handle == 'all-products' %} text-center text-md-left{% endif %}">{{section.settings.Heading}}</p>
+  <div class="row google-review-slide" >
+      {%- for block in section.blocks -%}
+        <div class="slick-item-box">
+        <div class="box-item" id="block-{{ block.id }}">
+        {% if block.settings.main_img != blank %}
+          <img class="w-100 mb-3" src="{{ block.settings.main_img | img_url: '350x' }}" alt="Image Not Found">
+          {% endif %}
+          <h5>{{ block.settings.name }}</h5>
+          <div class="d-flex justify-content-between">
+            <p class="fw-light text-uppercase date-p">{{ block.settings.date }}</p>
+            <div class="star-rating">
+                            <span class="icon-star">
+                                {%- for i in (1..5) -%}
+                                    {%- if i > block.settings.rating -%}{%- break -%}{%- else -%}★{%- endif -%}
+                                {%- endfor -%}
+                            </span>
+                      </div>
+                  </div>
+          <div class="mb-3 resl-desc">{{ block.settings.desc }}</div>
+          <div class="d-flex justify-content-between reslt-bttm">
+            <div class="pr-3">
+              <p>
+                <strong class="d-block">Kit Purchased</strong>
+                On complete Traya recommended plan
+              </p>
+            </div>
+            <div style="width: 50%; text-align: right;">
+              <p>
+                <strong class="d-block">Used for</strong>
+                {{ block.settings.used_for }}
+              </p> 
+            </div>
+          </div>         
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+    
+</section>
+{% endunless %}
+ <style>
+  .section-the-results h5
+  {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.29;
+  }
+  .section-the-results .date-p 
+  {
+    font-size: 18px;
+    letter-spacing: 0.09px;
+  }
+  .resl-desc p
+  {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.35;
+    letter-spacing: -1.05px;
+    color: #6d6e71;
+
+  }
+  .resl-btm p {
+
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: 0.08px;
+  }
+  .resl-btm p  strong { font-weight: 700;}
+
+  .section-the-results .d-block{
+    font-size: 15px; 
+    letter-spacing: 0.08px;
+  }
+
+  .section-the-results h5
+  {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.29;
+  }
+  .resl-btm p {
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: 0.08px;
+  }
+  .resl-btm p  strong { font-weight: 700;}
+
+  .section-the-results .d-block{
+    font-size: 15px; 
+    letter-spacing: 0.08px;
+  }
+
+  .review-bdr::after {
+    content: '';
+    display: block;
+    width: 1.5px;
+    height: 70%;
+    background: rgb(0 0 0 / 0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(30%);
+    }
+
+   .section-id-{{ section.id }} .icon-star {
+    color: {{ section.settings.color_star }};
+  }
+  .star-rating .icon-star{
+    color: #ffcc00;
+    font-size: 23px;
+  }
+.slick-item-box {
+    padding: 20px;
+    padding-: 42px;
+}
+.reslt-bttm p {
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: 0.08px;
+}  
+</style>
+
+{% schema %}
+  
+{
+    "name": " Result Reviews",
+    "settings": [
+        {
+            "id": "Heading",
+            "type": "text",
+            "label": "Add Heading"
+        },
+       {
+        "type": "color",
+        "id": "color_star",
+        "label": "Star color",
+        "default": "#eeaf2e"
+      }
+    ],"blocks": [
+    {
+      "type": "columns",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "image_picker",
+          "id": "main_img",
+          "label": "Select Image"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Enter Date"
+        },
+        
+        {
+           "type": "range",
+           "id": "rating",
+            "label": "Star Rating",
+            "default": 5,
+            "min": 1,
+              "max": 5
+                },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Description"
+        }, 
+        {
+          "type": "text",
+          "id": "used_for",
+          "label": "Used For"
+        }
+        
+      ]
+    }
+  ],
+       "presets": [
+        {
+            "name": "Result Reviews",
+            "category": "Result Reviews"
+        }
+    ]
+
+}
+  
+
+{% endschema %}
+
+<script>
+
+  $('.google-review-slide').slick({  
+    infinite: true,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: true,
+      responsive: [
+          {
+              breakpoint: 640,
+              settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000
+              }
+          }
+      ]
+ 
+  });
+
+</script>

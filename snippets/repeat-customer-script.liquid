@@ -1,0 +1,92 @@
+<script type="text/lazyload">
+  var currentURL = window.location.href;
+  var dataItems = getUrlParameter('items');
+  var discount_type = getUrlParameter('discount_type');
+  var discount_value = getUrlParameter('discount_value');
+  var discount_code = getUrlParameter('discount');
+  var order_count = getUrlParameter('order_count');
+  var month_count = Number.parseInt(order_count);
+  
+ if(dataItems){
+    dataItems = dataItems.split('&')[0];
+    var variant_IDs = dataItems.split('/')[0].split(',');
+    for(var i in variant_IDs){
+      let item = variant_IDs[i].split('?')[0];
+      let varId = item.split(':')[0],qty;
+      if(varId == '37856221626546') {
+       qty = '0';
+      }else {
+       qty = item.split(':')[1];
+      }
+     console.log(variantsIDs);
+      variantsIDs.push({
+        'id': varId,
+        'quantity': qty,
+        'properties': {
+          'repeatCustomerOffer': discount_code,
+          'discount_type': discount_type,
+          'discount_value': discount_value
+        }
+      });
+    }
+  }
+  
+  //code by Shubham
+  var utm_campaign = getUrlParameter('customer_name');
+  var campaignName = utm_campaign.split('_');
+  var UserName = campaignName[0];
+    $('[data-user-name]').text(UserName);
+    $('[monthcount]').text(order_count);
+    $('[kitcount]').text(month_count+1);
+    // $('.result-repeat-url').text(month_count+1);
+    $('[result-repeat-url]').attr("href", currentURL);
+  
+$(document).ready(function(){
+    $.ajax({
+    type: "POST",
+    url: '/cart/clear.js',
+    success: function(){
+      checkout();
+    },
+    dataType: 'json'
+  });
+   if ($(window).width() < 768) {
+    $(".repeat-customer-products").slick({ infinite: !0, slidesToShow: 1, slidesToScroll: 1, dots: !0, arrows: !1, autoplay: false });
+}
+});  
+function checkout() {
+    let formData = {
+      'items': variantsIDs,
+      sections: 'cart-drawer'
+    };
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => {
+      localStorage.setItem('User_location', "cart");
+      return response.json();
+    }).then(result => { 
+      var t = document.querySelector('cart-drawer');
+      let cart_drawer = result.sections['cart-drawer'];
+      CartDrawerUpdate(t, cart_drawer);
+    }).catch((error) => {
+      console.error('Error:', error);
+    });
+  }
+
+$('body').on('click', '#add-to-cart-result-page', function() {
+  $.ajax({
+    type: "POST",
+    url: '/cart/clear.js',
+    success: function(){
+      checkout();
+    },
+    dataType: 'json'
+  });
+});
+
+</script>

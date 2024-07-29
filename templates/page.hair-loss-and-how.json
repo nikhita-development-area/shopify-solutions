@@ -1,0 +1,235 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "2e739c97-72fe-4486-9032-e22c57b22a30": {
+      "type": "hair-loss-how-banner",
+      "settings": {
+        "how-hair": "Hair and How",
+        "the-root": "Get to the root cause of hair loss",
+        "hair-loss": "Hair loss is a condition that is caused by a number of internal factors. Traya curates a treatment plan depending upon your age, stage and type of hair loss. With the concept of health first hair later, we treat the root cause of the hair loss by targeting key imbalances in the body.",
+        "image-plant": "shopify:\/\/shop_images\/shutterstock_1624645447_1_e3c7eaa1-7418-4c98-822f-e781ccbb4db2.png"
+      }
+    },
+    "1663918958bca7b461": {
+      "type": "type-of-hair-loss",
+      "blocks": {
+        "82d29ee6-8741-429d-922f-61f2e29f8dae": {
+          "type": "content1",
+          "settings": {
+            "content_heading": "Androgenic alopecia",
+            "content_text": "<p>Male or Female pattern hair loss is the most common type of hair loss that begins with hair thinning, receding hairline and widening partition. This hair loss is genetic in nature.<\/p>",
+            "content_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_24.jpg"
+          }
+        },
+        "42aaa35e-18fb-4dd4-b9ee-86b906c5752b": {
+          "type": "content1",
+          "settings": {
+            "content_heading": "Telogen Effluvium",
+            "content_text": "<p>Telogen Effluvium (TE) is characterised by hair thinning or increased hair shedding throughout the scalp.<\/p>",
+            "content_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_23_632a8995-0ebf-4a61-9eec-ee611ba441d4.jpg"
+          }
+        },
+        "b933dd24-60ae-472b-871c-48dd88b98d4d": {
+          "type": "content1",
+          "settings": {
+            "content_heading": "Traction Alopecia",
+            "content_text": "<p>Traction alopecia is a gradual form of alopecia caused by pulling force being applied to the hair. It is very common in those that often do their hair in ponytails, pigtails and braids.<\/p>",
+            "content_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_25.jpg"
+          }
+        },
+        "47facc0e-b156-4c6e-9153-a953c287f24e": {
+          "type": "content",
+          "settings": {
+            "slidelogo_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_25.jpg",
+            "logos_heading": "Pattern Baldness Stage  1"
+          }
+        },
+        "edd4df3b-ae6d-4a47-8d22-f190bc8373fd": {
+          "type": "content",
+          "settings": {
+            "slidelogo_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_23_632a8995-0ebf-4a61-9eec-ee611ba441d4.jpg",
+            "logos_heading": "fxffdgcg"
+          }
+        },
+        "60abd637-326c-4a01-a252-0a172934e5ce": {
+          "type": "content",
+          "settings": {
+            "slidelogo_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_25.jpg",
+            "logos_heading": "WEWEW"
+          }
+        },
+        "0c7f8751-4ebe-4b52-ba50-18d4a36a7e96": {
+          "type": "content",
+          "settings": {
+            "slidelogo_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_23_632a8995-0ebf-4a61-9eec-ee611ba441d4.jpg",
+            "logos_heading": "KHIHJK"
+          }
+        },
+        "803f5e54-ea5c-42b8-b646-4712e25a1df4": {
+          "type": "content",
+          "settings": {
+            "slidelogo_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_23.jpg",
+            "logos_heading": "JHIHIHJI"
+          }
+        },
+        "c6f44463-1cec-4146-a396-ef20e2839347": {
+          "type": "content",
+          "settings": {
+            "slidelogo_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_23_632a8995-0ebf-4a61-9eec-ee611ba441d4.jpg",
+            "logos_heading": "dsdssdsd"
+          }
+        },
+        "a09bfe18-0f61-4eff-8d93-ef739f897a41": {
+          "type": "content",
+          "settings": {
+            "slidelogo_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_24.jpg",
+            "logos_heading": "fdefdefdef"
+          }
+        },
+        "50894454-ca16-4167-904f-88ba2084de16": {
+          "type": "content",
+          "settings": {
+            "slidelogo_image": "shopify:\/\/shop_images\/ezgif.com-gif-maker_23_632a8995-0ebf-4a61-9eec-ee611ba441d4.jpg",
+            "logos_heading": "dsfeff"
+          }
+        }
+      },
+      "block_order": [
+        "82d29ee6-8741-429d-922f-61f2e29f8dae",
+        "42aaa35e-18fb-4dd4-b9ee-86b906c5752b",
+        "b933dd24-60ae-472b-871c-48dd88b98d4d",
+        "47facc0e-b156-4c6e-9153-a953c287f24e",
+        "edd4df3b-ae6d-4a47-8d22-f190bc8373fd",
+        "60abd637-326c-4a01-a252-0a172934e5ce",
+        "0c7f8751-4ebe-4b52-ba50-18d4a36a7e96",
+        "803f5e54-ea5c-42b8-b646-4712e25a1df4",
+        "c6f44463-1cec-4146-a396-ef20e2839347",
+        "a09bfe18-0f61-4eff-8d93-ef739f897a41",
+        "50894454-ca16-4167-904f-88ba2084de16"
+      ],
+      "settings": {
+        "text-hloss": "Types Of Hair Loss"
+      }
+    },
+    "1663737237ab9cb89a": {
+      "type": "root-cause",
+      "blocks": {
+        "6b5ed1b7-ce00-47f6-8151-d912840dd966": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/Nutrition_8361c24a-5a0c-4cef-a89c-5dd35b9380c9.png",
+            "headingM": "Nutrition",
+            "maleContent": "Eating foods which are not rich in protein, vitamins and minerals blocks hair growth.",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "c572189f-bf88-43db-b31e-4f3808988dea": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/metabolism_7f62e013-8e28-4852-89df-d5f47213095e.png",
+            "headingM": "Metabolism",
+            "maleContent": "Slow metabolism can result in your hair becoming dry, brittle, coarse and even break off.",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "fde0437a-1cf2-4d63-ae7d-014fc2be3dbf": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/Hormones_a0ef20a8-7c3b-4c0d-bb6e-3f8936e79904_1.png",
+            "headingM": "Hormones",
+            "maleContent": "DHT hormone attacks your hair follicle thereby causing hair thinning and hair fall.",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "375db7e1-cc6e-487e-bcae-95eebd948f37": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/stress_93148f60-c7ec-418a-ae3a-7652119be7df.png",
+            "headingM": "Stress",
+            "maleContent": "Increased cortisol levels disrupts your hair cycle causing hair loss.",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "fa9643d3-44b8-4826-acbf-353b0e7be4ab": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/Environment_3027745f-7312-4b5f-a454-0d0d9918caf1.png",
+            "headingM": "Environment",
+            "maleContent": "Sweat, heat, dust and pollution can lead to poor health of the hair follicle and eventual hair fall.",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        }
+      },
+      "block_order": [
+        "6b5ed1b7-ce00-47f6-8151-d912840dd966",
+        "c572189f-bf88-43db-b31e-4f3808988dea",
+        "fde0437a-1cf2-4d63-ae7d-014fc2be3dbf",
+        "375db7e1-cc6e-487e-bcae-95eebd948f37",
+        "fa9643d3-44b8-4826-acbf-353b0e7be4ab"
+      ],
+      "settings": {
+        "title": "Your Hair Loss Is Internal",
+        "sub_title": "Know what’s causing your hair loss",
+        "DeskRootMale": "shopify:\/\/shop_images\/Men_root_causes_3_76fe8b01-4dd2-4823-9e6d-58fb9704582d.jpg",
+        "btn_link": "https:\/\/form.traya.health\/questions?cohort=1&location=RootCauses",
+        "buttontitle": "TAKE THE HAIR TEST",
+        "rootcause-undertext": ""
+      }
+    },
+    "1663739539873198dd": {
+      "type": "hair-loss-treatment",
+      "blocks": {
+        "0b040c0d-2077-4d38-ade1-c47a440da41a": {
+          "type": "text",
+          "settings": {
+            "treatment_name": "Dermatology",
+            "treatment_content": "Dermatological treatments have the most effective results as the ingredients                used have been clinically tested. They also have proven efficacy rates and are said                to deliver speedy results."
+          }
+        },
+        "d43decca-c594-427a-9454-61f569e6771a": {
+          "type": "text",
+          "settings": {
+            "treatment_name": "Ayurveda",
+            "treatment_content": "Ayurveda is a slow science but works on bringing about holistic healing of the body.                It goes to the root of your ailment and brings about internal balance. As a science                it is completely safe and natural, and hence suitable for all."
+          }
+        },
+        "cfefb571-cc11-4eb7-b87a-73cf134dc0b2": {
+          "type": "text",
+          "settings": {
+            "treatment_name": "Nutrition",
+            "treatment_content": "Hair requires nutrients to grow, therefore nutrition and supplementation become                crucial for speedy hair growth. A proper diet plan with hair healthy foods will                help maintain hair health"
+          }
+        }
+      },
+      "block_order": [
+        "0b040c0d-2077-4d38-ade1-c47a440da41a",
+        "d43decca-c594-427a-9454-61f569e6771a",
+        "cfefb571-cc11-4eb7-b87a-73cf134dc0b2"
+      ],
+      "settings": {
+        "sectiontitle": "What Is Included In The Plan?",
+        "btnurl": "https:\/\/form.traya.health\/questions?cohort=1&amp;location=TrayaJourney",
+        "button_text": "Take The Hair Test"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "2e739c97-72fe-4486-9032-e22c57b22a30",
+    "1663918958bca7b461",
+    "1663737237ab9cb89a",
+    "1663739539873198dd"
+  ]
+}

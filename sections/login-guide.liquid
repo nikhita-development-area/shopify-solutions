@@ -1,0 +1,104 @@
+<div class="container login-guide">
+ 
+  <div class="login_guide_images">
+    <a id="myPlanHome" talk_to_coach="" href="https://form.traya.health/pages/reschedule-slot/c9beed25-31ab-4710-8c5e-67a38a1697f7" class="coach_btn">
+   <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_1_3.png?v=1691063839" alt="guidance-image">
+    <p>Talk to<br> Hair Coach</p>
+    </a>
+  </div>
+  <div class="login_guide_images">
+     <a view_diet_plan href="/blogs/diet-plan/customised-diet-plan-code-2506?_pos=4&amp;_sid=5ede16cf2&amp;_ss=r">
+   <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_1_1_1.png?v=1691063839" alt="guidance-image">
+    <p>My Diet<br> Plan</p>
+    </a>
+  </div>
+  <div class="login_guide_images">
+    <a login_prescription href="https://myrecords.traya.health/prescription">
+   <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_1_2_1.png?v=1691063839" alt="guidance-image">
+    <p>My<br> Prescription</p>
+    </a>
+  </div>
+  <div class="login_guide_images">
+    <a class="reorder_btn" reorder__btn href="">
+   <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102353236_1.png?v=1691063839" alt="guidance-image">
+    <p>Buy <br>Again</p>
+    </a>
+  </div>
+  
+</div>
+
+<style>
+.login_guide_images p {
+    color: rgba(63, 63, 63, 1);
+    font-weight: bold;
+    font-size: 19px;
+    line-height: normal;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+}
+  .login_guide_images a {
+    text-decoration: none;
+}
+  
+  @media only screen and (max-width: 767.98px){
+    .container.login-guide {
+    display: flex;
+    flex-wrap: wrap;
+}
+    .login_guide_images {
+    width: 50%;
+    position: relative;
+    flex-wrap: wrap;
+}
+  }
+  
+  @media only screen and (min-width: 767.98px){
+    .container.login-guide {
+    display: flex;
+}
+    .login_guide_images {
+    position: relative;
+}
+  }
+  
+</style>
+
+{% schema %}
+  {
+    "name": "Login Guide",
+    "settings": [],
+     "blocks": [
+     {
+       "name": "Images",
+       "type": "text",
+       "settings": [
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+         {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type":"image_picker",
+            "label" :"Image",
+            "id" :"Image"
+         }
+       
+       ]
+}    
+      
+ ],
+    "presets":[
+      {
+        "name":"Login Guide",
+        "category":"Login Guide & Hair Growth"
+      }
+    ]
+  }
+{% endschema %}

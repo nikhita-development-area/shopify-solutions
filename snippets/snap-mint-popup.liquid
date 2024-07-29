@@ -1,0 +1,165 @@
+{{ 'snap-mint.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'snap-mint.js' | asset_url }}" defer="defer"></script>
+<div id="snap-modalon_page">
+   <div class="modal-wrpr popuppiza white_label_normal_3_pies">
+      <div class="snapmint_lowest_emi">
+         <div class="snap_popup_bg">
+            <div class="snap-close-wrpr">
+               <img id="snapModalCloseon_page" onclick="closeSnapPop()"
+                  src="https://assets.snapmint.com/assets/express_checkout/Discount_Images/close_icon.svg">
+            </div>
+            <div class="snap-installment">
+               <div class="snap_cashback_section snap_cashback_banner_section" style="display: none;">
+                  <img
+                     src="https://preemi.snapmint.com/assets/express_checkout/Whitelabel_Images/cashback_banner_label.png">
+                  <span class="snap_cashback_text snap_cashback_info_text">
+                     <span class="snap_popup_cashback_text snap_cashback_percent_text"></span>
+                     <span class="snap_cashback_terms_text" style="cursor: pointer;text-decoration: underline;"
+                        onclick="clickOnTermsAndCondition()">T&C</span></span>
+               </div>
+               <div>
+                  <img src="https://assets.snapmint.com/assets/merchant/traya_logo.png" class="snap_merchant_img">
+                  <div class="snap_merchant_name"><img src="" class="snap_merchant_popup_logo_header"
+                        style="display: none;"><span class=" white_label_comany_name">Traya</span> <b
+                        class="pay_snmpt">Pay Later</b> </div>
+               </div>
+               <div class="snapmint_lowest_emi snap_bg_popup_img"></div>
+
+               <div class="snap_pay_only_text">Pay <span class="snap_only_font_weight">only</span>
+                  <span class="snap_dp_amt_font_weight">&nbsp;₹
+                     <span class="popup_snap_dp_price">333</span><span class="downPayment"></span> Now
+               </div>
+               <div class="snapmint_frame_footer">
+                  <div class="snapmint_frame_footer_icon-wrpr">
+                     <div>0% Interest<br>Installments</div>
+                  </div>
+                  <img class="snap_border_gradient1" src="https://assets.snapmint.com/assets/merchant/traya_line.svg">
+                  <div class="snapmint_frame_footer_icon-wrpr">
+                     <div>0 Extra <br>Cost</div>
+                  </div>
+                  <img class="snap_border_gradient1" src="https://assets.snapmint.com/assets/merchant/traya_line.svg">
+                  <div class="snapmint_frame_footer_icon-wrpr">
+                     <div class="hide-txt">UPI & Cards <br>accepted</div>
+                  </div>
+               </div>
+            </div>
+            <div class="snap_middle_section">
+               <div class="snap_top_middle_section">
+                  <div class="snap_total_order_value_section">
+                     <div class="snap_total_order_value_text">Total Order Value</div>
+                     <div class="snap_total_order_value_amt ">&nbsp;₹
+                        <span class="popup_snap_total_price">999</span>
+                        <span class="total_order_value_popup"> </span>
+                     </div>
+                  </div>
+               </div>
+               <div class="snap_how_works_steps">
+                  <div class="pizza_img_snap">
+                     <img src="https://assets.snapmint.com/assets/merchant/1_3_traya.png">
+                     <div class="price_tst_snap snap_dark_green_clr snap_threepie_emi_amt">&nbsp;₹
+                        <span class="popup_snap_dp_price">333</span>
+                        <span class="downPayment"></span>
+                     </div>
+                     <div class="snap_emi_date snap_dark_green_clr">Pay Now</div>
+                  </div>
+                  <div class="pizza_img_snap">
+                     <img src="https://assets.snapmint.com/assets/merchant/2_3_traya.png">
+                     <div class=" snap_threepie_emi_amt">&nbsp;₹
+                        <span class="popup_snap_dp_price">333</span>
+                        <span class="downPayment"></span>
+                     </div>
+                     <div class="snap_threepie_frst_emi">
+                        <div class="snap_threepie_emi_month enter_emi_date snap_emi_date">3<sup>rd</sup> <span
+                              class="snap_emi_date_1 snap_emi_date">May</span></div>
+                     </div>
+                  </div>
+                  <div class="pizza_img_snap">
+                     <img src="https://assets.snapmint.com/assets/merchant/3_3_traya.png">
+                     <div class=" snap_threepie_emi_amt">&nbsp;₹
+                        <span class="popup_snap_dp_price">333</span>
+                        <span class="downPayment"></span>
+                     </div>
+                     <div class="snap_threepie_second_emi">
+                        <div class="snap_threepie_emi_month enter_emi_date snap_emi_date">3<sup>rd</sup> <span
+                              class="snap_emi_date_2 snap_emi_date">Jun</span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="snap_delivery_fee_text"></div>
+            </div>
+
+            <div class="snap_flex_wl snap_center_wl"><span class="snap_powered_text">Powered by</span><img
+                  src="http://preemi.snapmint.com/assets/merchant/SnapMint_logo_grey.svg" class="snap_powered_img">
+            </div>
+
+
+            <div class="snap_last_section">
+               <div class="snap_how_works_section">
+                  <div class="snap_payment_text snap_font_weight_six"><span class="snap_last_select_text">Select
+                     </span><span class="snap_bold_text"><img src="" class="snap_merchant_popup_logo"
+                           style="display: none;"><span class=" white_label_comany_name">Traya</span> <span
+                           class="pay_snmpt">Pay Later</span> </span><span class="snap_text_checkout">during checkout
+                     </span>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!------ Tnc Html  ------->
+<div id="snap-modalon_sale" style="display: none;">
+   <div class="modal-wrpr">
+      <div class="snap_tnc_section">
+         <div class="snap-close-wrpr"><img id="snapModalCloseon_sale" onclick="snapclosePopup()"
+               src="https://assets.snapmint.com/assets/express_checkout/Discount_Images/close_icon.svg"></div>
+         <div id="return_plan_popup" onclick="returnPlanPopup()" class="snap-back-wrpr"><img class="snap_back_arrow"
+               src="https://preemi.snapmint.com/assets/express_checkout/Whitelabel_Images/snap_tnc_back.svg"></div>
+         <div class="snapmint_lowest_emi">
+            <div class="snap-container">
+               <div class="snap-installment">
+                  <div class="logo_center">
+                     <img src="https://assets.snapmint.com/assets/express_checkout/SnapMint_logo.svg"
+                        class="snap_cb_logo">
+                     <div class="mega-cashback">Mega Cashback Offer</div>
+                     <div class="tnc_text">Terms &amp; Conditions</div>
+                  </div>
+                  <div class="snapmint_frame_footer">
+                     <ul class="list_itemss">
+                        <li class="list_items_style">The offer is valid only for transactions made
+                           through the
+                           Snapmint payment option.
+                        </li>
+                        <li class="list_items_style">The offer is valid only for the first transactions
+                           of
+                           customers through the Snapmint payment option.
+                        </li>
+                        <li class="list_items_style list_items_dynamic"></li>
+                        <li class="list_items_style">The cashback will be processed on the same day in
+                           the
+                           Snapmint wallet on which the last EMI is paid.
+                        </li>
+                        <li class="list_items_style">Cashback is valid only when the customer pays their
+                           EMIs on
+                           time.
+                        </li>
+                        <li class="list_items_style">The offer would not be applicable in case of
+                           canceled or
+                           refunded transactions. In case of a partial refund, the cashback will be
+                           applicable
+                           only on the remaining value.
+                        </li>
+                        <li class="list_items_style">The Offer can be availed only once per user during
+                           the
+                           campaign period.
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,716 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "15fc91cd-c2af-465c-a20b-95e09b574181": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_92286839-0a5a-4eb2-9f4b-59e262a77eee.webp",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "7b91c78c-27ba-4fb1-83bd-71d18d98ff11": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/author_Dr.-Shailendra-Chaubey-BAMS_300x_3fb01719-6325-4801-b35b-3fb773a91669.jpg",
+            "author_name": "Dr. Shailendra Chaubey, BAMS",
+            "author_position": "Ayurveda Practioner",
+            "author_bio": "A modern-day Vaidya with 11 years of experience. He is the founder of Dr. Shailendra Healing School that helps patients recover from chronic conditions through the Ayurvedic way of life."
+          }
+        },
+        "7c227a5a-c9dc-41a4-be67-56fd9744afb4": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Dr_Sangeeta_Menon_300x_009e3334-f965-46b9-85d7-b547cc685a18.png",
+            "author_name": "Sangeeta Menon",
+            "author_position": "Nutritionist",
+            "author_bio": "Dr. Menon is a Nutritionist with a degree in Food Science. She is a certified Fitness Trainer with expertise in Sports Nutrition. She is also the Founder and Director of a Health Cafe in Vapi and has authored various e-books on Amazon"
+          }
+        },
+        "b761ad45-3280-4d16-81f8-7eef59284725": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "f95aded9-b7f4-48c4-be79-dca47d88b76a": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "29425351-1f2e-4a75-a247-4a87d748256c": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "84b4ac73-7493-40c2-8155-86358861af79": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "13869846-ceec-47ed-ab13-21ea7644aa00": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Dr._Kalyani_300x_5fb11722-1461-4fcc-b309-9d8646b7ee6e.png",
+            "author_name": "Dr. Kalyani Deshmukh, M.D.",
+            "author_position": "Dermatologist",
+            "author_bio": "Dr. Deshmukh is an MD (Dermatology, Venerology, and Leprosy) with more than 4 years of experience. She successfully runs her own practice and believes that a personalized service maximizes customer satisfaction."
+          }
+        },
+        "456976c8-b942-4614-9cd1-42004bfc2b6b": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Dr._Kalyani_300x_5fb11722-1461-4fcc-b309-9d8646b7ee6e.png",
+            "author_name": "Dr. Kalyani Deshmukh, M.D.",
+            "author_position": "Dermatologist",
+            "author_bio": "Dr. Deshmukh is an MD (Dermatology, Venerology, and Leprosy) with more than 4 years of experience. She successfully runs her own practice and believes that a personalized service maximizes customer satisfaction."
+          }
+        },
+        "3d8acab4-b839-4f30-aa4d-9e5f522e6c53": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Dr._Kalyani_300x_5fb11722-1461-4fcc-b309-9d8646b7ee6e.png",
+            "author_name": "Dr. Kalyani Deshmukh, M.D.",
+            "author_position": "Dermatologist",
+            "author_bio": "Dr. Deshmukh is an MD (Dermatology, Venerology, and Leprosy) with more than 4 years of experience. She successfully runs her own practice and believes that a personalized service maximizes customer satisfaction."
+          }
+        },
+        "462dc1c2-f409-4a87-95fc-cb7cb58d802f": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "520c3ccc-f765-4591-a0d6-9b49b404d7be": {
+          "type": "author",
+          "settings": {
+            "author_image": "shopify:\/\/shop_images\/Zahra-Hair-Coach_300x_2e33086a-8af6-403e-a8b1-8ba467b90eae.png",
+            "author_name": "Zahra Lokhandwala",
+            "author_position": "Hair Coach",
+            "author_bio": "Zahra is the hair coach-in-chief at Traya. She works closely with the doctors to monitor all cases. She is a fitness freak and has not touched sugar in years!"
+          }
+        },
+        "12af5e35-878e-465e-845c-723f4c5a5248": {
+          "type": "featured-blog",
+          "settings": {
+            "articles": "hair-care\/15-ayurvedic-foods-for-awesome-hair"
+          }
+        },
+        "79737074-71a4-497f-9bdf-426bc0f8607c": {
+          "type": "featured-blog",
+          "settings": {
+            "articles": "hair-care\/telogen-effluvium-symptoms-treatment-and-how-to-recover"
+          }
+        },
+        "cb9d174c-5706-4394-8dc5-12903a9f8ed6": {
+          "type": "featured-blog",
+          "settings": {
+            "articles": "hair-care\/does-having-diabetes-cause-hair-loss"
+          }
+        },
+        "c003d9ab-47b7-4724-a713-c268a51cee6e": {
+          "type": "featured-blog",
+          "settings": {
+            "articles": ""
+          }
+        }
+      },
+      "block_order": [
+        "15fc91cd-c2af-465c-a20b-95e09b574181",
+        "7b91c78c-27ba-4fb1-83bd-71d18d98ff11",
+        "7c227a5a-c9dc-41a4-be67-56fd9744afb4",
+        "b761ad45-3280-4d16-81f8-7eef59284725",
+        "f95aded9-b7f4-48c4-be79-dca47d88b76a",
+        "29425351-1f2e-4a75-a247-4a87d748256c",
+        "84b4ac73-7493-40c2-8155-86358861af79",
+        "13869846-ceec-47ed-ab13-21ea7644aa00",
+        "456976c8-b942-4614-9cd1-42004bfc2b6b",
+        "3d8acab4-b839-4f30-aa4d-9e5f522e6c53",
+        "462dc1c2-f409-4a87-95fc-cb7cb58d802f",
+        "520c3ccc-f765-4591-a0d6-9b49b404d7be",
+        "12af5e35-878e-465e-845c-723f4c5a5248",
+        "79737074-71a4-497f-9bdf-426bc0f8607c",
+        "cb9d174c-5706-4394-8dc5-12903a9f8ed6",
+        "c003d9ab-47b7-4724-a713-c268a51cee6e"
+      ],
+      "disabled": true,
+      "settings": {
+        "blog_show_author": true,
+        "blog_show_date": true,
+        "show_share_buttons": true,
+        "ad_link": ""
+      }
+    },
+    "2cfae373-4ab4-4d24-a283-82c74ff964d0": {
+      "type": "banner-hair-doctors",
+      "settings": {
+        "heading": "Best Dermatologists in {{ article.title }} in 2024",
+        "para": "Find the top %s experienced dermatologists in  {{ article.title }} and solve your hair and skin concerns",
+        "heading_sec": "The power of three doctors now online",
+        "para_sec": "93% saw results*",
+        "content": "Finding the best dermatologists in {{ article.title }}  for your skin and hair concerns can be difficult. Your hair loss and skin conditions are more than cosmetic concerns, they are caused due to environmental conditions, stress and other factors in {{ article.title }} . Here is a list of the best dermatologists in {{ article.title }} to help you seek advice and find a solution for your hair and skin concerns!",
+        "button": "Take the Hair Test",
+        "btn_url": "https:\/\/form.traya.health\/questions?cohort=1&location=TopBar&page=home",
+        "image": "shopify:\/\/shop_images\/Frame_102353442_f120cd9a-fc7a-40c1-b4a7-ba555af09bff.png",
+        "traya_logo": "shopify:\/\/shop_images\/Group_0df6943b-219f-498d-ae53-27a33f77bb64.png",
+        "image_mob": "shopify:\/\/shop_images\/Frame_102353436_3_9dc4527d-8b4f-4972-a527-b17c7a42ca06.png"
+      }
+    },
+    "doctors_list_8aKdnE": {
+      "type": "doctors-list",
+      "settings": {
+        "heading": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "per_page": 4,
+        "image_position": 5
+      }
+    },
+    "0aac9095-8834-45e5-a45d-142340b9afce": {
+      "type": "doctors-list",
+      "blocks": {
+        "c79ff901-f779-4a0e-8330-2a21524df09c": {
+          "type": "Banner",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/desktop_image.png",
+            "image_mob": "shopify:\/\/shop_images\/mobile-img_9d47d971-6c9c-4084-843b-255e7cbc1f4c.png",
+            "title": "Save on travel time &amp; effort",
+            "paragraph_img": "Get doctor recommended plans from the comfort of your home with Traya.",
+            "btn_text": "Take the Hair Test",
+            "btn_url": ""
+          }
+        },
+        "aa7325e0-d15e-4358-ac23-1f2e1afe3747": {
+          "type": "Banner",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/wepik-export-20230807060306yRiv_1_1.png",
+            "image_mob": "shopify:\/\/shop_images\/wepik-export-20230807060306yRiv_1_2.png",
+            "title": "Know the ‘why’ of Hair Fall",
+            "paragraph_img": "Traya’s Hair Test helps you find the root cause of your hair fall.",
+            "btn_text": "Take the Hair Test",
+            "btn_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "c79ff901-f779-4a0e-8330-2a21524df09c",
+        "aa7325e0-d15e-4358-ac23-1f2e1afe3747"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Hair doctors in",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "per_page": 10,
+        "image_position": 5
+      }
+    },
+    "f869969e-5f21-4a27-8ba6-dddd6fa713ed": {
+      "type": "faq-hair-doctors",
+      "blocks": {
+        "faq_GfENWM": {
+          "type": "faq",
+          "settings": {
+            "ques": "When to consult a dermatologist?",
+            "ans": "<p>You should consider consulting a dermatologist for any concerns related to your skin, hair, or nails, especially when:<\/p><ul><li>Over-the-counter treatments have failed.<\/li><li>When you have exhausted all possibilities of Holistic and Natural Treatments.<\/li><li>You notice significant changes in your skin or hair, such as sudden hair loss, a new mole, or a change in an existing mole.<\/li><li>You have persistent skin problems that don’t seem to improve.<\/li><li>You're considering cosmetic treatments for skin or hair issues.<\/li><\/ul>"
+          }
+        },
+        "faq_PLj4Tb": {
+          "type": "faq",
+          "settings": {
+            "ques": "What are the signs that you need to visit a dermatologist?",
+            "ans": "<ul><li>Persistent acne or acne scars.<\/li><li>Unexplained rash, itching, or skin irritation.<\/li><li>Significant hair loss or scalp problems.<\/li><li>Changes in the size, colour, shape, or texture of moles or skin lesions.<\/li><li>Persistent dryness, redness, or flakiness of the skin.<\/li><li>Signs of ageing such as wrinkles, skin discolouration, or loss of skin elasticity that you wish to treat.<\/li><li>Nail disorders, including fungal infections or changes in nail colour or structure.<\/li><\/ul>"
+          }
+        },
+        "faq_Vkxcpw": {
+          "type": "faq",
+          "settings": {
+            "ques": "Which conditions are treated by dermatologists?",
+            "ans": "<p>Dermatologists treat a wide array of conditions including, but not limited to<\/p><ul><li>Acne and acne scars<\/li><li>Eczema and psoriasis<\/li><li>Hair loss disorders like alopecia areata<\/li><li>Rosacea and melasma<\/li><li>Skin cancers, including melanoma, squamous cell carcinoma, and basal cell carcinoma<\/li><li>Nail disorders<\/li><li>Infectious skin diseases caused by bacteria, fungi, or viruses<\/li><li>Genetic skin disorders<\/li><\/ul>"
+          }
+        },
+        "faq_WbDpwE": {
+          "type": "faq",
+          "settings": {
+            "ques": "Can a dermatologist help with acne?",
+            "ans": "<p>Yes, a dermatologist can help you with acne and provide ointments, medicines and treatment options for your acne problem. <\/p>"
+          }
+        },
+        "faq_iczYzE": {
+          "type": "faq",
+          "settings": {
+            "ques": "Is acne treatment within a dermatologist's expertise?",
+            "ans": "<p>Acne treatment is indeed within a dermatologist's expertise. They can tailor treatments based on the type of acne (inflammatory, cystic), its severity, and the patient's skin type and overall health.<\/p>"
+          }
+        },
+        "faq_fLgQri": {
+          "type": "faq",
+          "settings": {
+            "ques": "How can a dermatologist assist in managing hair problems?",
+            "ans": "<p>Dermatologists are equipped to diagnose and treat various hair disorders, including hair loss due to alopecia, scalp infections (such as fungal infections), and hair disorders stemming from systemic diseases or hormonal imbalances<\/p>"
+          }
+        },
+        "faq_fJp86k": {
+          "type": "faq",
+          "settings": {
+            "ques": "Are dermatologists equipped to treat hair problems?",
+            "ans": "<p>Dermatologists use a comprehensive approach to treat hair problems, employing medical treatments, lifestyle modifications, nutritional advice, and, when necessary, surgical options like hair transplantation.<\/p>"
+          }
+        },
+        "faq_qqdtbb": {
+          "type": "faq",
+          "settings": {
+            "ques": "Do dermatologists offer laser treatments?",
+            "ans": "<p>Dermatologists offer a variety of laser treatments for both medical and cosmetic issues, including laser hair removal, treatment of vascular lesions, such as spider veins, skin resurfacing for scars, wrinkles, and sun damage, laser treatment for pigmentation issues like freckles and sunspots. This also depends on the expertise of the dermatologist and the infrastructure of their <\/p>"
+          }
+        },
+        "faq_V9Umgn": {
+          "type": "faq",
+          "settings": {
+            "ques": "Can a dermatologist treat skin problems in children?",
+            "ans": "<p>Yes, dermatologists, especially those who specialize in pediatric dermatology, are trained to treat skin problems in children. From common issues like diaper rash and eczema to more complex conditions such as birthmarks or genetic skin diseases, a dermatologist can treat skin problems in kids. <\/p>"
+          }
+        },
+        "faq_rKtR4c": {
+          "type": "faq",
+          "settings": {
+            "ques": " Can dermatologists treat hair fall and scanty hair?",
+            "ans": "<p>Yes, dermatologists are equipped to diagnose and treat hair fall and scanty hair issues. They can offer treatments based on the underlying cause, which may include nutritional supplements, topical treatments, or hormone therapy. Companies like Traya Health offer holistic hair treatment plans to help manage hair loss and hair thinning. <\/p>"
+          }
+        },
+        "faq_PmHtVg": {
+          "type": "faq",
+          "settings": {
+            "ques": "What can a dermatologist do for hair breakage?",
+            "ans": "<p> Dermatologists can help identify the reasons behind hair breakage, such as nutritional deficiencies or chemical damage, and recommend appropriate treatments or hair care routines to strengthen hair and prevent further damage. You can also give Traya’s free hair test to understand the reason behind your hair loss and get a personalised hair treatment plan made just for you. <\/p>"
+          }
+        },
+        "faq_TLg8Ui": {
+          "type": "faq",
+          "settings": {
+            "ques": "How can dermatologists enhance hair lustre and shine?",
+            "ans": "<p>Dermatologists can suggest specific treatments and hair care products that improve hair health, leading to enhanced lustre and shine. This may include recommendations for vitamins, minerals, and protein treatments.<\/p>"
+          }
+        },
+        "faq_dax6rj": {
+          "type": "faq",
+          "settings": {
+            "ques": "Is it possible to treat split ends with the help of a dermatologist?",
+            "ans": "<p>While trimming is the most direct way to remove split ends, dermatologists can offer advice on preventing future split ends through proper hair care techniques and products that minimize hair damage.<\/p>"
+          }
+        },
+        "faq_gXCNkE": {
+          "type": "faq",
+          "settings": {
+            "ques": "Can a dermatologist improve hair texture?",
+            "ans": "<p>Dermatologists can recommend treatments and products that can help improve the texture of your hair, addressing concerns like dryness or coarseness, and suggesting ways to maintain healthy hair.<\/p>"
+          }
+        },
+        "faq_66gbB4": {
+          "type": "faq",
+          "settings": {
+            "ques": " What treatments do dermatologists offer for boils on the scalp?",
+            "ans": "<p>Dermatologists can treat boils on the scalp by prescribing antibiotics to fight infection or performing incision and drainage if necessary. They can also provide tips on preventing future infections.<\/p>"
+          }
+        },
+        "faq_7dpWHM": {
+          "type": "faq",
+          "settings": {
+            "ques": " How do dermatologists help with dandruff?",
+            "ans": "<p>Dermatologists can recommend medicated shampoos, topical steroids, or antifungal treatments based on the severity and type of dandruff, helping to control flaking and itching. Dandruff can also be managed by using Ketaconozol Shampoo, lotions and anti-dandruff hair oils. <\/p>"
+          }
+        },
+        "faq_hGBaFq": {
+          "type": "faq",
+          "settings": {
+            "ques": " Can alopecia areata – patchy loss of hair – be treated by a dermatologist?",
+            "ans": "<p>Yes, dermatologists treat alopecia areata with various methods, including corticosteroid injections, topical treatments, and sometimes oral medications, aiming to stimulate hair growth.<\/p>"
+          }
+        },
+        "faq_6Y6wRV": {
+          "type": "faq",
+          "settings": {
+            "ques": "What solutions do dermatologists offer for balding, including female and male pattern baldness?",
+            "ans": "<p>Dermatologists can provide a range of treatments for balding, such as topical minoxidil, oral finasteride for men, and possibly hair transplant surgery, depending on the extent of hair loss and patient preference. It is important to understand that hair loss happens due to internal health reasons and has to be managed with a holistic treatment which solves the problem and eventually the symptom that is hair loss. <\/p>"
+          }
+        },
+        "faq_B4bmUA": {
+          "type": "faq",
+          "settings": {
+            "ques": "Where is Traya’s Hair Clinic in Mumbai?",
+            "ans": "<p>Traya does not have a hair clinic in Mumbai as Traya offer an online hair loss diagnosis service through a free hair test co-developed with medical professionals and advanced AI technology. The online platform enables Traya to identify the root cause of your hair loss and create a personalised treatment plan tailored to your specific hair fall concerns. The online nature of this service provides convenience and accessibility for our users without having to find the clinic in Mumbai.<\/p>"
+          }
+        },
+        "faq_TwMEhG": {
+          "type": "faq",
+          "settings": {
+            "ques": "Can we visit\/connect with the doctor at Traya?",
+            "ans": "<p>Traya provides a free online hair test to help you get a doctor-prescribed treatment plan to address your hair fall problems. Traya’s approach ensures easy and efficient access to medical guidance. <\/p>"
+          }
+        },
+        "faq_B6PiTq": {
+          "type": "faq",
+          "settings": {
+            "ques": "How long does it take to see results with Traya Treatment?",
+            "ans": "<p>The time frame for witnessing results with Traya can vary but typically falls within 5-6 months for Stages 1 and 2 of the hair loss cycle. Several factors, including the type of hair loss, hair loss stage, age, root causes, and more, influence the duration of the treatment process. Traya's comprehensive approach to addressing hair fall involves gradual improvement in various aspects of your health, paving the way for regrowth.<\/p>"
+          }
+        },
+        "faq_zjdbAM": {
+          "type": "faq",
+          "settings": {
+            "ques": "Can Traya’s hair loss solutions help with specific types of hair loss, such as alopecia?",
+            "ans": "<p>Traya's solutions are designed to address various types of hair loss. However, it's important to note that we do not guarantee complete regrowth in cases of Alopecia. We can provide support and management strategies for the condition, but individual results may vary.<\/p>"
+          }
+        },
+        "25951ef9-aff4-4d76-84ba-f949ff2388ae": {
+          "type": "faq",
+          "settings": {
+            "ques": "Who is a dermatologist?",
+            "ans": "<p>A dermatologist is a doctor who specializes in the study, diagnosis, treatment, and management of disorders related to the skin, hair, and nails. Dermatologists are equipped to treat over 3,000 conditions, ranging from acne and eczema to skin cancer. They also perform various cosmetic procedures aimed at improving skin and hair appearance.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_GfENWM",
+        "faq_PLj4Tb",
+        "faq_Vkxcpw",
+        "faq_WbDpwE",
+        "faq_iczYzE",
+        "faq_fLgQri",
+        "faq_fJp86k",
+        "faq_qqdtbb",
+        "faq_V9Umgn",
+        "faq_rKtR4c",
+        "faq_PmHtVg",
+        "faq_TLg8Ui",
+        "faq_dax6rj",
+        "faq_gXCNkE",
+        "faq_66gbB4",
+        "faq_7dpWHM",
+        "faq_hGBaFq",
+        "faq_6Y6wRV",
+        "faq_B4bmUA",
+        "faq_TwMEhG",
+        "faq_B6PiTq",
+        "faq_zjdbAM",
+        "25951ef9-aff4-4d76-84ba-f949ff2388ae"
+      ],
+      "settings": {
+        "heading": "",
+        "show_faq": 5,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "0017350d-6fab-4d4c-acb4-816a4fb95162": {
+      "type": "choose-hair-doctors",
+      "settings": {
+        "heading": "Choosing the Right Dermatologist in {{ article.title }}",
+        "content": "<p> To choose the right dermatologist in {{ article.title }}, one should check their qualifications and experience, especially in areas relevant to your hair and skin concerns. Research their reputation through online reviews and personal recommendations and prioritize convenience in terms of clinic location in {{ article.title }} and accessibility. Also, check the consultation fee to manage your budget better and check insurance coverage. Most importantly, ensure you're comfortable with the dermatologist, as this impacts your treatment experience.<\/p>"
+      }
+    },
+    "choose_hair_doctors_jpFeti": {
+      "type": "choose-hair-doctors",
+      "settings": {
+        "heading": "What is the Cost of Seeing a Hair Dermatologist in {{ article.title }}?",
+        "content": "<p>The cost of consulting a dermatologist in {{ article.title }} can vary significantly, influenced by the dermatologist's experience, clinic location, and the specific nature of the consultation. Typically, consultation fees range from INR 500 to INR 2000. Further treatments and medications may incur additional expenses.<\/p>"
+      }
+    },
+    "choose_hair_doctors_8e74t8": {
+      "type": "choose-hair-doctors",
+      "settings": {
+        "heading": "Understanding Your Needs:",
+        "content": "<p>The first step in finding the right care is understanding your specific concerns and what type of specialist you need. Whether it's hair loss, dandruff, acne, eczema, or more complex skin conditions, knowing the basics via free hair tests and a simple google search can help you search for the right expert. <\/p>"
+      }
+    },
+    "choose_hair_doctors_yzyfU9": {
+      "type": "choose-hair-doctors",
+      "settings": {
+        "heading": "Finding the Right Specialist:",
+        "content": "<p>Choosing a dermatologist or hair specialist involves more than just a simple search. Consider the following to ensure you find the best care:<\/p><p>Use online directories and medical platforms that list qualified dermatologists in your area. Consider the dermatologist’s area of expertise and whether it aligns with your needs. Apart from that, you can look for certifications, reviews and testimonials from their customers. You can then schedule a consultation to discuss your concerns and evaluate if the dermatologist is a good fit for you. <\/p>"
+      }
+    },
+    "choose_hair_doctors_KxnEP9": {
+      "type": "choose-hair-doctors",
+      "settings": {
+        "heading": "Popular Treatments for Skin and Hair Health:",
+        "content": "<p><strong>Medications:<\/strong> Topical and oral medications can be effective for various skin and hair conditions.<\/p><p><strong>Holistic Treatments: <\/strong>Since there are many internal health reasons behind hair and skin problems, holistic treatments like Traya’s are becoming popular for skin and hair. <\/p><p><strong>PRP Therapy for Hair Loss<\/strong>: A non-surgical treatment involving the injection of platelet-rich plasma to stimulate hair growth.<\/p><p><strong>Laser Therapy:<\/strong> Used for skin rejuvenation, acne scars, and hair removal.<\/p><p><strong>Surgical Options<\/strong>: Such as hair transplants for permanent hair restoration.<\/p>"
+      }
+    },
+    "7de2b8c0-fc27-4ae5-a36b-c9db6c08e004": {
+      "type": "cost-hair-doctors",
+      "disabled": true,
+      "settings": {
+        "heading": " The Cost of Seeing a Hair Doctor in {{ article.title }}",
+        "content": "<p>Hair treatments in {{ article.title }} can vary widely in cost depending on the type of treatment and clinic chosen. In {{ article.title }} the average basic treatment costs around 800-1500. However, advanced treatments like hair transplants can cost upwards of INR 50,000. Insurance coverage for hair treatments is limited, with most health insurance plans not covering cosmetic treatments, but some may cover medically necessary treatments. It is important to check with your insurance provider and compare prices across different clinics to find the best value for your money. You can also give Traya’s Free hair test to understand the root cause behind your hair fall problem and get your holistic, personalised treatment plan at a much lower cost. <\/p>"
+      }
+    },
+    "33d49ac0-354f-47f6-a0cc-f91a7a9c0502": {
+      "type": "conditions-hair-doctors",
+      "disabled": true,
+      "settings": {
+        "heading": "Types of Hair Conditions Treated by Specialists in {{ article.title }}",
+        "content": "<ul><li><strong>Alopecia<\/strong>: Hair Specialists treatment encompasses various types of hair loss, from pattern baldness to more rare hair loss conditions.<\/li><li><strong>Scalp Conditions:<\/strong> Issues such as dandruff, psoriasis, and fungal infections that compromise the health of the scalp.<\/li><li><strong>Hair Thinning & Breakage:<\/strong> Often a result of lifestyle, genetic predisposition, and environmental factors.<\/li><li><strong>Premature Greying:<\/strong> Early greying of hair before the typical ageing process begins.<\/li><li><strong>Hair Damage:<\/strong> Due to over-styling, chemical treatments, or adverse environmental conditions.<\/li><\/ul>"
+      }
+    },
+    "conditions_hair_doctors_prggCh": {
+      "type": "conditions-hair-doctors",
+      "disabled": true,
+      "settings": {
+        "heading": "Which is the Best Hair Treatment in {{ article.title }}?",
+        "content": "<p>The right choice for the best hair fall treatment in {{ article.title }} depends on your age, the stage and cause of your hair fall, and its duration, among other factors. PRP, Hair Transplant, and other advanced hair treatments for regrowth are options for later stages when no natural treatment can work. Traya Health is the Best Hair Treatment in {{ article.title }} that offers an effective solution for those in stages 1-4. Traya's unique holistic approach combines the power of Ayurveda, dermatology, and nutrition, targeting the root causes of hair fall. Give Traya’s free online hair test and get started with the best hair fall treatment right away.<\/p>"
+      }
+    },
+    "dermatologist_table_PDnWGd": {
+      "type": "dermatologist-table",
+      "blocks": {
+        "average_cost_JgcfnV": {
+          "type": "average_cost",
+          "settings": {
+            "variables": "Recognized by the Medical Council of India",
+            "price_range": "Not recognized by the Medical Council of India"
+          }
+        },
+        "average_cost_dxYAhd": {
+          "type": "average_cost",
+          "settings": {
+            "variables": "MBBS degree followed by specialized training in dermatology",
+            "price_range": "Specialized training or courses in hair care from private entities"
+          }
+        },
+        "average_cost_8j4QLC": {
+          "type": "average_cost",
+          "settings": {
+            "variables": "Can diagnose and treat a wide range of skin, hair, nail issues, and STDs; authorized to perform medical treatments like PRP therapy and FUE hair transplants",
+            "price_range": "Focused on hair care and cosmetic solutions; limited in addressing medical concerns"
+          }
+        },
+        "average_cost_fVDrV7": {
+          "type": "average_cost",
+          "settings": {
+            "variables": "Can perform medical and surgical interventions",
+            "price_range": "Cannot administer medical treatments"
+          }
+        },
+        "average_cost_eAmr3m": {
+          "type": "average_cost",
+          "settings": {
+            "variables": "Systematic and thorough, considering medical history, conducting tests",
+            "price_range": "Primarily cosmetic, with limitations in diagnosing medical conditions"
+          }
+        }
+      },
+      "block_order": [
+        "average_cost_JgcfnV",
+        "average_cost_dxYAhd",
+        "average_cost_8j4QLC",
+        "average_cost_fVDrV7",
+        "average_cost_eAmr3m"
+      ],
+      "settings": {
+        "left_heading": "Dermatologist",
+        "right_heading": "Trichologist",
+        "main_heading": "Dermatologist vs Trichologist for Your Hair & Scalp Troubles",
+        "main_para": "Dermatologists, recognized by the Medical Council of India, are experts who can address a broad spectrum of conditions affecting the skin, hair, nails, and more, due to their extensive medical training. They are qualified to diagnose and treat hair and scalp problems with medical treatments like PRP therapy and FUE hair transplants. On the other hand, cosmetologists and trichologists, not recognized by the Medical Council of India, specialize in the aesthetics of hair care without the medical knowledge to address complex issues. While trichologists can offer advice on hair care and cosmetic concerns, dermatologists provide a medically sound approach to diagnosing and treating hair and scalp issues, making them a more reliable choice for complex conditions. The best choice would be dermatologists who have pursued specialised training in hair. Here are a few differences between a dermatologist and a trichologist:"
+      }
+    },
+    "f5f2435d-3543-409d-9bb9-8317a9122198": {
+      "type": "nearby-city-hair-doctors",
+      "blocks": {
+        "11992b35-2d5b-427f-a93e-3402a6aa165c": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Mumbai",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/mumbai"
+          }
+        },
+        "1f4e9ea7-88e6-4c8b-ad0c-dc46bfe094c7": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Gwalior",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/gwalior"
+          }
+        },
+        "51fe42f4-fe8f-4a94-8388-90e716911319": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Noida",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/noida"
+          }
+        },
+        "1cae6453-9044-43e4-993b-ec66bf916ffe": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Delhi",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/delhi"
+          }
+        },
+        "d8185ced-c069-4b0f-a098-d97e0a8ef0bf": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Kolkata",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/kolkata"
+          }
+        },
+        "1def8fda-c8f1-4a5e-9da9-7ebc6dd3e2af": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Chennai",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/chennai"
+          }
+        },
+        "497d4614-4a5a-400b-9e1a-51cbe2485478": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Bangalore",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/bangalore"
+          }
+        },
+        "270326d2-3d5a-4ec2-ba4b-78c35c06b496": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Jaipur",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/jaipur"
+          }
+        },
+        "da161a2e-f7ee-4795-8cd1-d2f2f48a37d3": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Hyderabad",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/hyderabad"
+          }
+        },
+        "b9218d4f-4dc6-4bcf-899b-17bfdef7a7a0": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Agra",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/agra"
+          }
+        },
+        "6fcf31cd-ebc0-4ff3-b5bd-7d19be7fd3a5": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Bhopal",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/bhopal"
+          }
+        },
+        "0f171c4c-5e02-4d40-9ed3-fa969965edd2": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Varanasi",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/varanasi"
+          }
+        },
+        "ed013dd1-7e91-4682-b896-f746339db1a7": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Pune",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/pune"
+          }
+        },
+        "d33eab53-d4c6-42ed-8dbf-ff2e9ea9d47a": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Udaipur",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/udaipur"
+          }
+        },
+        "5d8aa8e4-a0f4-4612-b592-f55b2a69bcb2": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Faridabad",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/faridabad"
+          }
+        },
+        "88470f9a-58f7-44e7-8a8c-9bcb84b5ed30": {
+          "type": "city",
+          "settings": {
+            "city": "Dermatologists in Ahmedabad",
+            "url": "https:\/\/traya.health\/blogs\/dermatologist\/ahmedabad"
+          }
+        }
+      },
+      "block_order": [
+        "11992b35-2d5b-427f-a93e-3402a6aa165c",
+        "1f4e9ea7-88e6-4c8b-ad0c-dc46bfe094c7",
+        "51fe42f4-fe8f-4a94-8388-90e716911319",
+        "1cae6453-9044-43e4-993b-ec66bf916ffe",
+        "d8185ced-c069-4b0f-a098-d97e0a8ef0bf",
+        "1def8fda-c8f1-4a5e-9da9-7ebc6dd3e2af",
+        "497d4614-4a5a-400b-9e1a-51cbe2485478",
+        "270326d2-3d5a-4ec2-ba4b-78c35c06b496",
+        "da161a2e-f7ee-4795-8cd1-d2f2f48a37d3",
+        "b9218d4f-4dc6-4bcf-899b-17bfdef7a7a0",
+        "6fcf31cd-ebc0-4ff3-b5bd-7d19be7fd3a5",
+        "0f171c4c-5e02-4d40-9ed3-fa969965edd2",
+        "ed013dd1-7e91-4682-b896-f746339db1a7",
+        "d33eab53-d4c6-42ed-8dbf-ff2e9ea9d47a",
+        "5d8aa8e4-a0f4-4612-b592-f55b2a69bcb2",
+        "88470f9a-58f7-44e7-8a8c-9bcb84b5ed30"
+      ],
+      "settings": {
+        "heading": "Hair Doctors in Nearby Cities of India"
+      }
+    },
+    "you_may_like_giXGKz": {
+      "type": "you-may-like",
+      "settings": {
+        "title": "",
+        "hair_test": "Take Traya’s Hair Test",
+        "hair_test_url": "https:\/\/form.traya.health\/questions?cohort=1&location=TopBar&page=home"
+      }
+    },
+    "banner_blog_iGjXay": {
+      "type": "banner-blog",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "banner_blog_cta_DrVVae": {
+      "type": "banner-blog-cta",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "2cfae373-4ab4-4d24-a283-82c74ff964d0",
+    "doctors_list_8aKdnE",
+    "0aac9095-8834-45e5-a45d-142340b9afce",
+    "f869969e-5f21-4a27-8ba6-dddd6fa713ed",
+    "0017350d-6fab-4d4c-acb4-816a4fb95162",
+    "choose_hair_doctors_jpFeti",
+    "choose_hair_doctors_8e74t8",
+    "choose_hair_doctors_yzyfU9",
+    "choose_hair_doctors_KxnEP9",
+    "7de2b8c0-fc27-4ae5-a36b-c9db6c08e004",
+    "33d49ac0-354f-47f6-a0cc-f91a7a9c0502",
+    "conditions_hair_doctors_prggCh",
+    "dermatologist_table_PDnWGd",
+    "f5f2435d-3543-409d-9bb9-8317a9122198",
+    "you_may_like_giXGKz",
+    "banner_blog_iGjXay",
+    "banner_blog_cta_DrVVae"
+  ]
+}

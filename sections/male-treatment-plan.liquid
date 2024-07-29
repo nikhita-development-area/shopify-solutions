@@ -1,0 +1,82 @@
+<!-- Sections -> male-treatment-plan.liquid -->
+
+<div page_type="normal" class="mt-md-4 male-treatment-plan">
+  <p class="text-center main-heading mb-4 pt-3 d-none d-md-block">Not just products but a treatment plan</p>
+  
+  <div class="container pb-md-5">
+    <p class="text-center mb-4 pt-md-5 main-heading d-md-none">Not just products<br>but a treatment plan</p>
+    <p class="text-center fw-bold sub-heading d-none d-md-block mb-4 col3f">Hair growth is all about consistency. We have curated<br>a 360<span>&#176;</span> treatment plan to help you achieve this.</p>
+    <p class="text-center fw-bold sub-heading mb-4 d-md-none col3f">Hair growth is all about consistency. We have curated a 360<span>&#176;</span> treatment plan to help you achieve this.</p>
+    
+    <div class="row card_space">
+      <div class="col-md-6 col-12 m-auto">
+        <div class="mx-3 green-border">
+          <div class="row p-3 m-auto align-items-center justify-content-start consult-1 position-relative">
+            <img data-src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/111.png" class="lazyload d-none d-md-block">
+            <img data-src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/111_25x.png" class="lazyload d-md-none">
+            <p class="font-fredoka ml-3 plan-step p-0">Hair Coach</p>
+          </div>
+          
+          <div class="row m-auto align-items-center pt-md-3">
+            <div class="col-md-4 col-5 p-0 counsult_img order-2 order-md-1">
+              <img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/Ishani_Hair_Coach_Shoot_2_3_42231ac6-b318-4663-a1c9-9182a90bf601.png">
+            </div>
+            <p class="col-md-8 col-7 consult_text order-1 order-md-2">You will be given a personal hair coach that will constantly keep working to help you achieve your goals. They will act as a bridge between you and the doctor.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-12 m-auto">
+        <div class="mx-3 green-border">
+          <div class="row p-3 m-auto align-items-center justify-content-md-start justify-content-end consult-2 position-relative">
+            <img data-src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/222.png" class="lazyload d-md-block d-none">
+            <img data-src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/222_25x.png" class="lazyload d-md-none">
+            <p class="font-fredoka ml-3 plan-step p-0">Healing Diet Plan</p>
+          </div>
+          
+          <div class="row m-auto align-items-center pt-md-3">
+            <div class="col-md-4 col-5 p-0 counsult_img">
+              <img src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/DAILY-01_1.png">
+            </div>
+            <p class="col-md-8 col-7 consult_text">Good hair needs nourishment. Our expert nutritionists curate a healing diet plan to help you absorb nutrients better and build a healthier lifestyle.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .main-heading {font-size: 44px; line-height: 32px; font-weight: bold; letter-spacing: 0em;}
+  .result4 .sub-heading {font-size: 30px; line-height: 38.36px;}
+  .result4 .green-border {background: #fff; border-radius: 10px; border: 1px solid #B7D340;}
+  .result4 .consult-1 img, .result4 .consult-2 img {width: auto !important;}
+  .consult-1:after, .consult-2:after {content: ''; position: absolute; left: 0; bottom: 2%; background: #b7d34080; height: 1px; width: 50%;}
+  .counsult_img img {border-radius: 0 0 0 10px;}
+  .consult_text {font-size: 20px; line-height: 24px; color: #3f3f3f80;}
+  .result4 .plan-step {color: #B7D340; font-size: 30px; line-height: 37.77px;}
+  
+  @media only screen and (max-width: 767.98px) {
+    .main-heading {font-size: 24px;}
+    .result4 .sub-heading {font-size: 13px; line-height: 16.96px;}   
+    .card_space {row-gap: 20px;}
+    .counsult_img.order-2.order-md-1 img {border-radius: 0 0 10px 0 !important;}
+    .consult_text {font-size: 12px; line-height: 15px;}
+    .consult-2:after {right: 0; left: unset;}
+    .result4 .plan-step {font-size: 17px; line-height: 21.4px;}
+  }
+
+  @media only screen and (max-width: 400px) {
+    .result4 .sub-heading {font-size: 15px; line-height: 20.96px;}
+    .consult_text {font-size: 10px; line-height: 13px;}
+    .consult-1:after, .consult-2:after {bottom: 15%;}
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Male Treatment Plan",
+    "settings": [],
+    "presets": [{"name": "Male Treatment Plan"}]
+  }
+{% endschema %}

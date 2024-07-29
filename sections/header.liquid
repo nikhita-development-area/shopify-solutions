@@ -1,0 +1,996 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+  {% elsif template == 'index.login-lead' %}
+  {% assign page__hndl = 'home_login_lead' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+{% comment %}
+<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+{% endcomment %}
+{%- if settings.predictive_search_enabled -%}
+<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
+<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+{% comment %}<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">{% endcomment %}
+<link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- if settings.predictive_search_enabled -%}
+  <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
+{%- if section.settings.menu_type_desktop == 'mega' -%}
+  {% comment %}
+    <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript>{{ 'component-mega-menu.css' | asset_url | stylesheet_tag }}</noscript>
+  {% endcomment %}
+{%- endif -%}
+{%- if settings.cart_type == "drawer" -%}
+  {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag: preload:true }}
+  {{ 'component-cart.css' | asset_url | stylesheet_tag:preload:true }}
+  {{ 'component-totals.css' | asset_url | stylesheet_tag:preload:true }}
+  {{ 'component-price.css' | asset_url | stylesheet_tag:preload:true }}
+  {{ 'component-discounts.css' | asset_url | stylesheet_tag:preload:true }}
+  {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag:preload:true }}
+{%- endif -%}
+
+<noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
+
+<style>
+.myrecords svg {
+    fill: #fff;
+}
+  
+.header-wrapper{
+width: 100%;
+position: fixed;
+top:0;
+}
+#myHeader .container{
+width:100%;
+max-width:95%;
+margin:auto;
+padding-top:0;
+padding-bottom:0;
+}
+.header__icons  .btn-light{
+  letter-spacing:0;
+  background-color: #fff;
+border-color: #fff;
+  }
+
+header-drawer {
+justify-self: start;
+margin-left: -1.2rem;
+}
+.mobile-nav--open .icon-close {
+display: none;
+}
+button.btn--link.site-header__icon.site-header__menu.js-mobile-nav-toggle.mobile-nav--open.d-inline-block{
+background:none;
+border: none;
+}
+
+.header__heading-logo {
+/* max-height:30px; */
+max-width: {{ section.settings.logo_width }}px;
+}
+@media screen and (min-width: 990px) {
+.header-wrapper .page-width{
+padding-left:0;
+padding-right:0;
+}
+header-drawer {
+display: none;
+}
+}
+
+.menu-drawer-container {
+display: flex;
+}
+
+.list-menu {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.list-menu--inline {
+display: inline-flex;
+flex-wrap: wrap;
+}
+
+summary.list-menu__item {
+padding-right: 2.7rem;
+}
+
+.list-menu__item {
+display: flex;
+align-items: center;
+line-height: calc(1 + 0.3 / var(--font-body-scale));
+}
+
+.list-menu__item--link {
+text-decoration: none;
+padding-bottom: 1rem;
+padding-top: 1rem;
+line-height: calc(1 + 0.8 / var(--font-body-scale));
+}
+.profile_icon{
+display: inline-flex;
+}
+.header__icons{
+align-items:center;
+}
+[seemyresult]:hover {
+  text-decoration: none;
+  background: none !important;
+}
+@media screen and (min-width: 750px) {
+.list-menu__item--link {
+padding-bottom: 0.5rem;
+padding-top: 0.5rem;
+}
+
+  .mega-menu-wrapper {
+    padding: 0 44px;
+    background-color: #e0e4e5;
+    background-image: url({{section.settings.background-image | img_url : 'master'}});
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: scroll;
+    height: 100vh;
+}
+}
+@media (max-width: 992px){
+ summary.header__icon.header__icon--menu.header__icon--summary.link.focus-inset{
+    display:none;
+  }
+  }
+@media (max-width: 749px){
+.mega-menu-wrapper {
+    background-color: #e0e4e5;
+    background-image: url({{ section.settings.mbl-background-image | img_url : 'master' }});
+    background-position: bottom right;
+    padding: 0 25px 150px;
+      background-repeat: no-repeat;
+    background-size: cover;
+}
+.mobile-nav-wrapper.js-menu--is-open {
+    height: 100vh;
+    overflow: auto;
+}
+  }
+{% if template == 'page.cholestrol' %}
+  .shopify-section.section-header .header-wrapper{
+    background: #414042!important;
+  }  
+  {% endif %}
+</style>
+
+{%- style -%}
+  .header {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  .section-header {
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+.header__icons_language {
+    padding: 5px 2px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 20px;
+    font-family: Nunito Sans;
+    font-weight: 800;
+  margin-right: 10px;
+}
+a.header__icons_language_hi, a.header__icons_language_hinglish {
+    color: rgb(183, 211, 64);
+    box-shadow: rgba(0, 0, 0, 0.16) 1.19276px 1.19276px 4.77104px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 2px 10px;
+    text-decoration: none;
+}
+a.header__icons_language_en {
+    color: rgb(185, 185, 185);
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+  @media screen and (min-width: 750px) {
+    .section-header {
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .header {
+/*       padding-top: {{ section.settings.padding_top }}px; */
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  @media only screen and (max-width: 767.98px) {
+    span.angle__icons.ml-2 {
+    right: 0;
+    position: absolute;
+}
+    .product_main_list .angle__icons:before{
+      background: transparent;
+    }
+    .mega-menu-wrapper .nav-pills li a:hover .angle__icons .buttons svg>path{
+      fill: #414042;
+      stroke: #414042;
+    }
+    a.\35 -month-back {
+      padding-bottom: 9px !important;
+      padding-top: 5px !important;
+    }
+    .mega-menu-wrapper .nav-list {
+    max-width: 75%;
+}
+    .header_how_nav_main1 {
+    width: 50%;
+}
+    .header_how_nav_main2 {
+    width: 50%;
+}
+    .mega-menu-wrapper .nav-pills li a.product_main_list {
+    border: none !important;
+    border-bottom: none !important;
+      width: 40%;
+      position: relative;
+}
+    .mega-menu-wrapper h2 {
+    font-size: 15px;
+          font-weight: 900;
+    }
+    .mega-menu-wrapper h3 {
+    font-size: 15px;
+      font-weight: bold;
+    font-family: 'nunito-sans-extrabold', sans-serif !important;
+}
+    .mega-menu-wrapper a, .mega-menu-wrapper p {
+    font-size: 14px;
+          letter-spacing: normal;
+}
+    .header_mobile-icon img {
+    max-width: 150px;
+    display: block;
+    margin-bottom: 5px;
+}
+    .header_how_nav_main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+    .product--list2 ul {
+    width: 65%;
+}
+    .main--list2 .product_main_list2:first-child:after {
+    width: 0;
+}
+    .product__list:after {
+    width: 0;
+}
+    .product--list2 ul li {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: unset !important;
+}
+ul.header_nav_bar.nav-pills li.navigation_drop_menu {
+    width: 100%;
+    max-width: 100%;
+    float: unset;
+}
+    li.main--list2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: unset !important;
+}
+    .nav-pills li a:hover {
+    text-decoration: none;
+    background: transparent !important;
+    border-color: transparent !important;
+    color: #414042 !important;
+}
+    .mega-menu-wrapper .nav-pills li a {
+    border-radius: 0;
+  border-bottom: 1px solid #4140427a !important; 
+    border: none;
+    font-size: 14px;
+    font-weight: normal;
+   width: 80%;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #414042;
+    display: inline-block;
+    padding: 2px 0;
+    margin-bottom: 5px;
+    text-decoration: none!important;
+}
+ul.header_nav_bar.nav-pills {
+    position: relative;
+}
+    ul.header_nav_bar.nav-pills li {
+    width: 50%;
+    max-width: 50%;
+    float: left;
+}
+    .header__heading-logo {
+      max-width: 95px;
+    }
+  }
+  .mega-menu-wrapper ul.fsocial-icon.justify-content-start.footer-social.mb-4 {
+    text-align: left !important;
+    justify-content: flex-start !important;
+}
+{%- endstyle -%}
+
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+  <symbol id="icon-search" viewbox="0 0 18 19" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" fill="currentColor"/>
+  </symbol>
+
+  <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+    <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+  </symbol>
+</svg>
+<{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} id="myHeader" class="{{ page__hndl }} {% if template == 'index.login' %}login_header{% endif %} header-wrapper {{ template.name }} color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} page-wid container{% if section.settings.menu != blank %} header--has-menu{% endif %}">
+    {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
+      <details-modal class="header__search">
+        <details>
+          <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+            <span>
+              <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+                <use href="#icon-search">
+              </svg>
+              <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+                <use href="#icon-close">
+              </svg>
+            </span>
+          </summary>
+          <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+            <div class="modal-overlay"></div>
+            <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}" tabindex="-1">
+              {%- if settings.predictive_search_enabled -%}
+                <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+              {%- endif -%}
+                <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+                  <div class="field">
+                    <input class="search__input field__input"
+                      id="Search-In-Modal-1"
+                      type="search"
+                      name="q"
+                      value=""
+                      placeholder="{{ 'general.search.search' | t }}"
+                      {%- if settings.predictive_search_enabled -%}
+                        role="combobox"
+                        aria-expanded="false"
+                        aria-owns="predictive-search-results-list"
+                        aria-controls="predictive-search-results-list"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocorrect="off"
+                        autocomplete="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                      {%- endif -%}
+                    >
+                    <label class="field__label" for="Search-In-Modal-1">{{ 'general.search.search' | t }}</label>
+                    <input type="hidden" name="options[prefix]" value="last">
+                    <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                      <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+                        <use href="#icon-search">
+                      </svg>
+                    </button>
+                  </div>
+
+                  {%- if settings.predictive_search_enabled -%}
+                    <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+                      <div class="predictive-search__loading-state">
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+                  {%- endif -%}
+                </form>
+              {%- if settings.predictive_search_enabled -%}
+                </predictive-search>
+              {%- endif -%}
+              <button type="button" class="modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
+                <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+                  <use href="#icon-close">
+                </svg>
+              </button>
+            </div>
+          </div>
+        </details>
+      </details-modal>
+    {%- endif -%}
+
+    {%- if request.page_type == 'index' -%}
+      <h1 class="header__heading 12">
+    {%- endif -%}
+        {% if page.handle == 'female-result' or  page.handle == 'result4' or  page.handle == 'result-hi' %}
+        {%- if section.settings.logo != blank -%}
+            {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+            {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
+            {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
+              class: 'header__heading-logo',
+              widths: '50, 100, 150, 200, 250, 300, 400, 500',
+              height: logo_height,
+              width: section.settings.logo_width,
+              alt: logo_alt,
+              loading: 'eager'
+            }}
+          {%- else -%}
+            <span class="h2">{{ shop.name }}</span>
+          {%- endif -%}
+      {% else %}
+        <!-- Hair Treatment for Women Page Banner Changes -->
+        {% unless page.handle contains 'hair-loss-treatment-for-women' %}
+        <!-- Hair Treatment for Women Page Banner Changes -->
+
+        
+        <a href="{% if request.path contains '/blogs/hair-doctors' %}https://www.traya.health?location=logo&page={{ request.path | replace: '/blogs/', 'blogs_' | replace: '/', '_'}}&utm_campaign=blogs_hd_logo
+           {% elsif request.path contains '/blogs/hair-transplant' %}https://www.traya.health?location=logo&page={{ request.path | replace: '/blogs/', 'blogs_' | replace: '/', '_'}}&utm_campaign=blogs_ht_logo
+            {% elsif request.path contains '/blogs/hair-care' %}https://www.traya.health?location=logo&page={{ request.path | replace: '/blogs/', 'blogs_' | replace: '/', '_'}}&utm_campaign=blogs_hc_logo
+        
+         {% elsif page.handle == 'cholesterol' %}
+           /pages/cholesterol
+         {% else %}
+           {{ routes.root_url }}
+         {% endif %}" class="header__heading-link link link--text focus-inset">
+          {%- if section.settings.logo != blank -%}
+            {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+            {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
+            {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
+              class: 'header__heading-logo',
+              widths: '50, 100, 150, 200, 250, 300, 400, 500',
+              height: logo_height,
+              width: section.settings.logo_width,
+              alt: logo_alt,
+              title:"image",
+              loading: 'eager'
+            }}
+          {%- else -%}
+            <span class="h2">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+        
+        <!-- Hair Treatment for Women Page Banner Changes -->
+        {% endunless %}
+
+        {% if page.handle contains 'hair-loss-treatment-for-women' %}
+        <a href="/pages/female" class="py-2">
+          <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_8ceb71d0-638f-47f3-956a-1354a391e329.png?v=1696569936" class="women-logo" />
+        </a>
+        {% endif %}
+        <!-- Hair Treatment for Women Page Banner Changes -->
+        
+      {% endif %}
+    {%- if request.page_type == 'index' -%}
+      </h1>
+    {%- endif -%}
+    <div class="header__icons">
+      {% if page.handle == 'result-hi' %}
+        <div class="header__icons_language">
+          <a class="header__icons_language_hi l-0" href="/pages/result-hi">हिन्दी</a>
+          <a class="header__icons_language_en l-0" href="/pages/result4">English</a>
+        </div>
+      {% endif %}
+
+      {% if page.handle == 'result-hinglish' %}
+        <div class="header__icons_language">
+          <a class="header__icons_language_hinglish l-0" href="/pages/result-hinglish">Hinglish</a>
+          <a class="header__icons_language_en l-0" href="/pages/result4">English</a>
+        </div>
+      {% endif %}
+      
+      {% unless page.handle == 'cholesterol' or page.handle == 'result-repeat' or page.handle == "download-traya-app" %}
+        
+      {% if page.handle == 'homev5' %} 
+        <a href="https://form.traya.health/questions?cohort=1&amp;location=TopBar&page={{ page__hndl }}" id="hairtestcta" data-resultform="" class="ml-2 mr-2 mr-md-3 assessment-btn btn-light d-lg-inline-block d-none font-weight-bold mr-3 px-3 py-2 rounded-lg hair-form-actn-link" aria-describedby="a11y-external-message" style="pointer-events: auto;">हेयर टेस्ट लें <sup>&trade;</sup></a>
+        {% else %}
+        <a href="{% if page.handle == 'femalev1' or page.handle == 'female' or page.handle == 'new-female' or page.handle == 'femalev2' %}https://form.traya.health/female?cohort=1&location=TopBar&page={{ page__hndl }} {% elsif request.path contains '/blogs/' %}https://form.traya.health/questions?cohort=1&amp;location=TopBar&page={{ request.path | replace: "/blogs/", "blogs/"| replace: "/", "_" }}{% else %}https://form.traya.health/questions?cohort=1&amp;location=TopBar&page={{ page__hndl }}{% endif %}" id="{% if page.handle == 'femalev1' %}femalev1-hair-test-button1 {% elsif page.handle == 'female' %} female-hair-test-button1{% elsif page.handle == 'pcos' %} female-hair-test-button1 {% elsif page.handle == 'post-pregnancy' %}female-hair-test-button1 {% elsif page.handle == 'menopause' %}female-hair-test-button1 {% elsif page.handle == 'thyroid' %}female-hair-test-button1 {% elsif product.handle == 'complete-hair-growth-kit' %}kitproduct-hair-test-button1 {% else %}hairtestcta{% endif %}" data-resultform="" class="mr-2 mr-md-3 assessment-btn btn-light d-lg-inline-block d-none font-weight-bold mr-3 px-3 py-2 rounded-lg hair-form-actn-link" aria-describedby="a11y-external-message" style="pointer-events: auto;">TAKE THE HAIR TEST <sup>&trade;</sup></a>
+      {% endif %}
+        
+      {% unless page.handle contains 'result' or page.handle == "download-traya-app" %}
+      <span class="myresult d-none">
+        <a seemyresult {% if page.handle == 'homev5' or page.handle == 'result-hi' %} href="/pages/result-hi" {% else %}href="/pages/result4"{% endif %} class="fw-light px-3 py-2 text-white btn btn-link btn--link site-header__icon site-header__menu d-none d-md-inline-block">
+          {% if page.handle == 'homev5' or page.handle == 'result-hi' %} आपका रिजल्ट {% else %}MY RESULTS {% endif %}
+        </a>
+      </span>
+     {% endunless %}
+     {% endunless %}
+     {% unless page.handle contains 'result' %}
+     {% if request.path contains '/blogs/' %}
+      <a href="https://api.whatsapp.com/send/?phone=918828006272&text=Hey%21+I+would+like+to+know+more+about+Traya%21&type=phone_number&app_absent=0" id="header_whatsapp" class="ml-2 mr-1 mr-md-3 d-inline-block fw-light p-0 site-header__icon site-header__menu text-white" aria-describedby="a11y-external-message">
+     {% else %}
+    <a href="https://wa.me/918828006272?text=Hey%21+I+would+like+to+know+more+about+Traya" id="header_whatsapp" class="ml-2 mr-1 mr-md-3 d-inline-block fw-light p-0 site-header__icon site-header__menu text-white" aria-describedby="a11y-external-message">
+     {% endif %}
+        <img class="lazyloaded" alt="WhatsApp" title="WhatsApp" src="//cdn.shopify.com/s/files/1/0100/1622/7394/files/whatsapp-logo_75x.png" width="26" height="26" style="width: 26px;">
+    </a>
+      <a href="https://trayahealth.clickpost.ai/" id="myrecords" class="myrecords header__icon header__icon--cart link focus-inset site-header__icon site-header__menu text-white d-none" aria-describedby="a11y-external-message">
+       <svg height="26" viewBox="0 0 32 32" width="26" xmlns="http://www.w3.org/2000/svg"><g id="_x31_8"><path d="m25 17c.3544922 0 .6816406-.1875.8613281-.4921875.6914063-1.1738281 4.1386719-7.1455078 4.1386719-9.5078125 0-2.7568359-2.2431641-5-5-5s-5 2.2431641-5 5c0 2.3623047 3.4472656 8.3339844 4.1386719 9.5078125.1796875.3046875.5068359.4921875.8613281.4921875zm-2-10c0-1.1025391.8974609-2 2-2s2 .8974609 2 2-.8974609 2-2 2-2-.8974609-2-2z"/><path d="m2 24c0 .3925781.2290039.7480469.5864258.9101563l10.9135742 5.0898437v-12.6799927l-11.5-5.3076782z"/><path d="m23.2773438 17.015625c-.4242554-.7203369-1.0343018-1.7874756-1.6610718-2.9799194l-7.116272 3.2843017v12.6799927l10.9140625-5.0898438c.3564453-.1621093.5859375-.5175781.5859375-.9101562v-6.2712402c-.3001709.173706-.644104.2712402-1 .2712402-.7041016 0-1.3642578-.3769531-1.7226562-.984375z"/><path d="m19.1824951 8.2574463-4.7689209-2.1676025c-.2626953-.1191406-.5644531-.1191406-.8271484 0 0 0-11.0543823 5.0366211-11.0830688 5.0532227l11.496643 5.3061523 7.1584473-3.3040161c-.8409424-1.6708985-1.6328125-3.4710084-1.9759522-4.8877564z"/></g></svg>
+      </a>
+      {% endunless %}
+     {% unless page.handle == 'result-repeat' or page.handle contains 'result' %}
+        <a href="" data-toggle="modal" data-target=".bd-example-modal-sm" class="profile_icon d-inline-block fw-light p-0 site-header__icon site-header__menu text-white" profile>
+          <svg width="26" height="26" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.599 3.07093C6.57216 3.07093 4.91384 4.72925 4.91384 6.75609C4.91384 8.78293 6.57216 10.4412 8.599 10.4412C10.6258 10.4412 12.2842 8.78293 12.2842 6.75609C12.2842 4.72925 10.6258 3.07093 8.599 3.07093ZM8.599 9.21286C7.24777 9.21286 6.14223 8.10731 6.14223 6.75609C6.14223 5.40487 7.24777 4.29932 8.599 4.29932C9.95022 4.29932 11.0558 5.40487 11.0558 6.75609C11.0558 8.10731 9.95022 9.21286 8.599 9.21286Z" fill="#fff"></path>
+          <path d="M8.5987 0C3.83888 0 0 3.83888 0 8.5987C0 10.9326 0.951999 13.0823 2.45677 14.6178C2.82529 14.9863 3.22451 15.3241 3.68516 15.6312C5.06709 16.6139 6.75612 17.1667 8.5987 17.1667C10.4413 17.1667 12.1301 16.5832 13.5122 15.6312C13.9422 15.3241 14.3414 14.9863 14.7406 14.6178C16.2761 13.0516 17.1974 10.9326 17.1974 8.5987C17.1974 3.83888 13.3585 0 8.5987 0ZM8.5987 15.969C6.75612 15.969 5.0978 15.2934 3.80799 14.1879C4.1458 13.0823 5.15922 12.2839 6.35689 12.2839H10.871C12.0687 12.2839 13.0821 13.0823 13.4199 14.1879C12.0994 15.2934 10.4411 15.969 8.59835 15.969H8.5987ZM14.3412 13.2051C13.6963 11.9153 12.3758 11.0555 10.871 11.0555H6.35689C4.82141 11.0555 3.5009 11.946 2.88671 13.2051C1.84258 11.946 1.22839 10.3491 1.22839 8.5987C1.22839 4.54503 4.54503 1.22839 8.5987 1.22839C12.6524 1.22839 15.969 4.54503 15.969 8.5987C15.969 10.3491 15.3548 11.946 14.3414 13.2051H14.3412Z" fill="#fff"></path>
+          </svg>
+        </a>
+    {% endunless %}
+      {%- if shop.customer_accounts_enabled -%}
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
+          {% render 'icon-account' %}
+          <span class="visually-hidden">
+            {%- liquid
+              if customer
+                echo 'customer.account_fallback' | t
+              else
+                echo 'customer.log_in' | t
+              endif
+            -%}
+          </span>
+        </a>
+      {%- endif -%}
+    {% unless page.handle == 'cholesterol' %}
+      <a href="javascript:void(0);" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+        {%- liquid
+          if cart == empty
+            render 'icon-cart-empty'
+          else
+            render 'icon-cart'
+          endif
+        -%}
+        <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+        <div class="cart-count-bubble">
+          <span aria-hidden="true">{{ cart.item_count }}</span>
+        </div>
+      </a>
+    {% endunless %}
+      {% unless page.handle == 'homev5' or page.handle == 'result-repeat' or page.handle contains 'result' %}
+          <button type="button" class="btn--link site-header__icon site-header__menu js-mobile-nav-toggle mobile-nav--open d-inline-block" aria-controls="MobileNav" aria-expanded="false" aria-label="Menu">
+            <img alt="3bar-white" title="3bar-white" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/3bar-white.svg" width="40" height="22" class="icon-hamburger">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" fill="#000" viewBox="0 0 40 40" style="fill:#000"><path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"></path></svg>
+          </button>
+        {% endunless %}
+    </div>
+
+<!-- after click dropdown show -->
+<nav class="mobile-nav-wrapper" role="navigation" style="transform: translateY(-100%)";>
+      <div class="mega-menu-wrapper">
+        <div class="row">
+          <div class="col-md-4 pt-4">
+            {%- assign img_url = section.settings.drawer-logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <a href="/">
+             <img src="{{ section.settings.drawer-logo | img_url: 'master' }}"
+              width="125"
+              height="40"
+              alt="{{ section.settings.drawer-logo.alt | default: shop.name }}"
+              title="image"  
+              class="mb-3"
+              loading="lazy"
+             >
+            </a>
+          </div>
+          <div class="col-md-6 mt-md-5 pt-md-3">
+            <h3>WHAT WE DO</h3>
+            <p class="col-md-9 px-0">We help you take control of your hairloss in a personalised, and scientific way.</p>
+            <ul class="header_nav_bar nav-pills"> 
+              <li class="myresult"><a href="/pages/result4">MY RESULTS</a></li>
+              <li class="hair-form-actn-link"><a href="https://trayahealth.clickpost.ai">Track Order</a></li>
+              <li class="hair-form-actn-link"><a href="https://myrecords.traya.health">My Plan</a></li>
+              <li>
+              <a {% if page.handle == 'homev5' %} href="https://form.traya.health/lg-hi?cohort=1&source=HeaderMenu&page={{ page__hndl }}" 
+                {% elsif template == 'index' %} href="https://form.traya.health/questions?cohort=1&source=HeaderMenu&page={{ page__hndl }}" 
+                {% elsif page.handle == 'new-female' or page.handle == 'femalev1' or page.handle == 'female' or page.handle == 'femalev2' %}href="https://form.traya.health/female?cohort=1&location=TopBar&page={{ page__hndl }}" 
+                 {% elsif request.path contains '/blogs/hair-doctors/' %}href="https://form.traya.health/questions?cohort=1&amp;location=headermenu&page={{ request.path | replace: '/blogs/', 'blogs/' | replace: '/', '_' }}&utm_campaign=blogs_hd_headermenu"
+                  {% elsif request.path contains '/blogs/hair-care/' %} href="https://form.traya.health/questions?cohort=1&amp;location=headermenu&page={{ request.path | replace: '/blogs/', 'blogs/' | replace: '/', '_' }}&utm_campaign=blogs_hc_headermenu"
+                  {% elsif request.path contains '/blogs/hair-transplant/' %}href="https://form.traya.health/questions?cohort=1&amp;location=headermenu&page={{ request.path | replace: '/blogs/', 'blogs/' | replace: '/', '_' }}&utm_campaign=blogs_ht_headermenu"   
+                {% else %} href="https://form.traya.health/questions?cohort=1&source=HeaderMenu&page={{ page__hndl }}" {% endif %} id="hairtestcta" class="hair-form-actn-link" data-resultForm>Hair Test <sup>&trade;</sup></a></li>
+              <li><a href="/collections/all-products">Traya Combos</a></li>
+               <li><a href="/policies/refund-policy" class="5-month-back">Money Back Guarantee</a></li>
+
+<!--               <li><a href="https://form.traya.health/doctor-appointment" class="sheduleAppointmentbtn">BOOK DOCTOR CONSULT @ ₹499/-</a></li> -->
+              {% if customer %}
+              <li><a href="/account">My Account</a></li>
+              {% else %}
+              <li>{% comment %}<a href="https://app.traya.health/">LOG IN</a>{% endcomment %}
+                  <a type="button" class="login_click" data-toggle="modal" data-target=".bd-example-modal-sm">Log In</a>
+                  <a type="button" class="logout_click d-none">Log Out</a>
+                </li>
+              {% endif %}
+              <li><a href="/pages/referral" class="">Referral</a></li>
+              <div class="d-md-none mobile__product__list">
+                  <li class="navigation_drop_menu"><a href="#" class="product_main_list"><span class="">Products</span>&nbsp;
+                  <span class="angle__icons ml-2"><span class="buttons minus d-none m-0"><svg width="15" height="15" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;" xml:space="preserve">
+               <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+               l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+               C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z" fill="#414143"/><g></g>
+             </svg></span>
+             <span class="buttons plus m-0"><svg width="15" height="15" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;" xml:space="preserve">
+             <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+             c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+             s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" fill="#414143"/><g></g>
+             </svg></span>
+          </span></a></li>
+            <div class="product--list d-md-none" style="display: none;">
+                <div class="d-flex">
+                  <ul class="header_sub_nav nav-pills">
+                    <li><a href="/products/hair-growth-herbs" class="product__list">Hair Ras</a></li>
+                    {% comment %}<li><a href="/products/ketoconazole-2-night-lotion" class="product__list">Ketoconazole Lotion</a></li>{% endcomment %}
+                    <li><a href="/products/cholest-vati-natural-metabolic-booster-that-lowers-cholesterol" class="product__list">Cholest vati</a></li>
+                    <li><a href="/products/calm-ras" class="product__list">Calm Ras</a></li>
+                    {% comment %} <li><a href="/products/consti-clear-for-improved-bowel-movement" class="product__list">Consti clear</a></li> {% endcomment %}
+                    <li><a href="/products/hair-vitamin-with-dht-blockers-biotin-and-bhringraj" class="product__list">Hair Vitamin</a></li>
+                    <!-- <li><a href="/products/traya-minoxidil-5" class="product__list">Minoxidil 5%</a></li>
+                    <li><a href="/products/minoxidil-2" class="product__list">Minoxidil 2%</a></li> -->
+<!--                     <li><a href="/products/scalp-controller" class="product__list">Scalp Controller</a></li> -->
+                    <li><a href="/products/shampoo" class="product__list">Defence Shampoo</a></li>
+                    <li><a href="/products/herbal-tablets" class="product__list">Health Tatva</a></li>
+                    <li><a href="/products/avipattikar-digestion-tablets" class="product__list">Gut Shuddhi</a></li>
+                    <li><a href="/products/shatavari-ghrita" class="product__list">Nasal Drops</a></li>
+                    <li><a href="/products/recap-serum-for-hair-fall-control" class="product__list">Re Cap Serum</a></li>
+                    <li><a href="/products/anti-dandruff-shampoo" class="product__list">Anti-Dandruff Shampoo</a></li>
+                    <li><a href="/products/ketoconazole-2-night-lotion" class="product__list">Anti Dandruff lotion</a></li>
+                    <li><a href="/products/digest-boost-for-improved-digestive-ability-traya-health" class="product__list">Digest Boost</a></li>
+                    <!-- <li><a href="/products/meno-santulan-tablets-for-menopause-support-and-menopausal-hair-fall" class="product__list">Meno Santulan</a></li> -->
+                    <li><a href="/products/pcos-santulan-for-pcos-and-hormone-related-hair-loss" class="product__list">PCOS Santulan</a></li>
+                    <li><a href="/products/thyro-santulan-tablets-for-supporting-thyroid-health" class="product__list">Thyro Santulan</a></li>
+                    <li><a href="/products/mom-santulan-tablets-for-hair-fall-in-post-pregnancy-or-post-childbirth-period" class="product__list">Mom Santulan</a></li>
+                    <li><a href="/products/her-santulan" class="product__list">Her Santulan</a></li>
+                    <li><a href="/products/iron-santulan-iron-supplement-for-managing-anaemia-triggered-hair-fall" class="product__list">Iron Santulan</a></li>
+                    <!-- Add Two Product Options on Header Changes -->
+                    <li><a href="/products/traya-hydrate-damage-repair-shampoo-with-baobab-tree-extracts-and-vegan-keratin-100-safe-sulphate-and-paraben-free" class="product__list">Damage Repair shampoo</a></li>
+                    <li><a href="/products/nourish-hair-oil-suitable-for-all-hair-types-100ml-with-argan-oil-castor-oil-rosemary-extract" class="product__list">Nourish Hair Oil</a></li>          
+                    <li><a href="/products/shine-leave-in-serum-anti-frizz-anti-breakage-formula-suitable-for-all-hair-types" class="product__list">Shine Leave-in Serum</a></li>
+                    <li><a href="/products/hair-vitamin-for-her" class="product__list">Hair Vitamin For Her</a></li> 
+                    <!-- Add Two Product Options on Header Changes -->
+                    
+                    <li class="main--list2"><a href="#" class="d-flex product_main_list2 product__list"style="width: fit-content;"><span class="w-80 text-left">Scalp Oil</span>&nbsp;
+                   
+              <div class="angle__icons ml-3"><span class="buttons2 minus2 d-none m-0"><svg width="20" height="20" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;" xml:space="preserve">
+                    <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+                     l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+                     C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z" fill="#414143"/><g></g>
+                     </svg></span>
+                     <span class="buttons2 plus2 m-0"><svg width="20" height="20" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;" xml:space="preserve">
+                     <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                     c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                     s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" fill="#414143"/><g></g>
+                     </svg></span>
+                  </div></a></li>
+               <div class="product--list2" style="display: none;">
+                <div class="d-flex">
+                    <ul class="nav-pills">
+                      <li><a href="/products/scalp-oil-with-growth-oil-shot-100ml" class="product__list">Scalp oil + Growth oil shots</a></li>
+                      <li><a href="/products/scalp-oil-with-calm-oil-shot-100ml" class="product__list">Scalp oil + Calm oil shots</a></li>
+                      <li><a href="/products/scalp-oil-with-dandruff-oil-shot-100ml" class="product__list">Scalp oil + Dandruff oil shots</a></li>
+                      <li><a href="/products/scalp-oil-with-scalp-health-oil-shot-100ml" class="product__list">Scalp oil + Scalp Health oil shots</a></li>
+                    </ul>
+                </div>
+               </div>
+              </ul>
+             </div>
+          </div>
+        </div>
+        <div class="d-none d-md-inline-flex nav-pills header__products__list">
+                <li class="main--list"><a href="#" class="d-flex product_main_list"><span class="w-80">PRODUCTS</span>&nbsp;
+                <div class="angle__icons ml-2"><span class="buttons minus d-none m-0 right-left"><svg width="14" height="18" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.12793 1L0.612043 4.66916C0.29631 4.92569 0.296311 5.40764 0.612043 5.66418L5.12793 9.33333" stroke="black" stroke-width="0.641026" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span>
+         <span class="buttons plus m-0 right-left"><svg width="14" height="18" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 0.5L6.78456 5.12765C7.10533 5.38427 7.10533 5.87214 6.78456 6.12876L1 10.7564" stroke="black" stroke-width="0.641026" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg></span>
+      </div></a></li>
+            <div class="product--list" style="display: none;">
+                <div class="d-flex">
+                  <ul class="nav-pills">
+                    <li><a href="/products/hair-growth-herbs" class="product__list">Hair Ras</a></li>
+                    <li><a href="/products/hair-vitamin-with-dht-blockers-biotin-and-bhringraj" class="product__list">Hair Vitamin</a></li>
+                    <!-- <li><a href="/products/traya-minoxidil-5" class="product__list">Minoxidil 5%</a></li>
+                    <li><a href="/products/minoxidil-2" class="product__list">Minoxidil 2%</a></li> -->
+<!--                     <li><a href="/products/scalp-controller" class="product__list">Scalp Controller</a></li> -->
+                    <li><a href="/products/herbal-tablets" class="product__list">Health Tatva</a></li>
+                    <li><a href="/products/shampoo" class="product__list">Defence Shampoo</a></li>
+                    <li><a href="/products/ketoconazole-2-night-lotion" class="product__list" style="padding-right: 0;">Anti Dandruff Lotion</a></li> <!-- Add Two Product Options on Header Changes Added (style="padding-right: 0;") -->
+                    {% comment %} <li><a href="/products/consti-clear-for-improved-bowel-movement" class="product__list">Consti clear</a></li> {% endcomment %}
+                    <li><a href="/products/cholest-vati-natural-metabolic-booster-that-lowers-cholesterol" class="product__list">Cholest vati</a></li>
+                    <li><a href="/products/calm-ras" class="product__list">Calm Ras</a></li>
+                  </ul>
+                  <ul class="nav-pills">
+                    <li><a href="/products/avipattikar-digestion-tablets" class="product__list">Gut Shuddhi</a></li>
+                    <li><a href="/products/shatavari-ghrita" class="product__list">Nasal Drops</a></li>
+                    <li><a href="/products/recap-serum-for-hair-fall-control" class="product__list">Re Cap Serum</a></li>
+                    <li><a href="/products/anti-dandruff-shampoo" class="product__list" style="padding-right: 0;">Anti-Dandruff Shampoo</a></li> <!-- Add Two Product Options on Header Changes Added (style="padding-right: 0;") -->
+                    <li><a href="/products/digest-boost-for-improved-digestive-ability-traya-health" class="product__list">Digest Boost</a></li>
+                    <!-- <li><a href="/products/meno-santulan-tablets-for-menopause-support-and-menopausal-hair-fall" class="product__list">Meno Santulan</a></li> -->
+                    <li><a href="/products/mom-santulan-tablets-for-hair-fall-in-post-pregnancy-or-post-childbirth-period" class="product__list">Mom Santulan</a></li>
+                    <li><a href="/products/iron-santulan-iron-supplement-for-managing-anaemia-triggered-hair-fall" class="product__list">Iron Santulan</a></li>
+                    <li><a href="/products/pcos-santulan-for-pcos-and-hormone-related-hair-loss" class="product__list">PCOS Santulan</a></li>
+                    <li><a href="/products/thyro-santulan-tablets-for-supporting-thyroid-health" class="product__list">Thyro Santulan</a></li>
+                    <li><a href="/products/her-santulan" class="product__list">Her Santulan</a></li>
+              </ul>
+
+              <!-- Add Two Product Options on Header Changes -->
+              <ul class="nav-pills">
+                <li class="main--list2 d-inline-flex"><a href="#" class="d-flex product_main_list2 product__list" style="height: fit-content;"><span class="w-80 text-left">Scalp Oil</span>&nbsp;
+                    <div class="angle__icons ml-2"><span class="buttons2 minus2 d-none m-0"><svg width="14" height="18" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.12793 1L0.612043 4.66916C0.29631 4.92569 0.296311 5.40764 0.612043 5.66418L5.12793 9.33333" stroke="black" stroke-width="0.641026" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span>
+                     <span class="buttons2 plus2 m-0"><svg width="14" height="18" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 0.5L6.78456 5.12765C7.10533 5.38427 7.10533 5.87214 6.78456 6.12876L1 10.7564" stroke="black" stroke-width="0.641026" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg></span>
+                  </div></a>
+               <div class="product--list2" style="display: none;">
+                <div class="d-flex">
+                    <ul class="nav-pills">
+                      <li><a href="/products/scalp-oil-with-growth-oil-shot-100ml" class="product__list">Scalp oil + Growth oil shots</a></li>
+                      <li><a href="/products/scalp-oil-with-calm-oil-shot-100ml" class="product__list">Scalp oil + Calm oil shots</a></li>
+                      <li><a href="/products/scalp-oil-with-dandruff-oil-shot-100ml" class="product__list">Scalp oil + Dandruff oil shots</a></li>
+                      <li><a href="/products/scalp-oil-with-scalp-health-oil-shot-100ml" class="product__list">Scalp oil + Scalp Health oil shots</a></li>
+                    </ul>
+                </div>
+               </div>
+              </li>
+                <li><a href="/products/traya-hydrate-damage-repair-shampoo-with-baobab-tree-extracts-and-vegan-keratin-100-safe-sulphate-and-paraben-free" class="product__list" style="padding-right: 0;">Damage Repair shampoo</a></li>
+                <li><a href="/products/nourish-hair-oil-suitable-for-all-hair-types-100ml-with-argan-oil-castor-oil-rosemary-extract" class="product__list" style="padding-right: 0;">Nourish Hair Oil</a></li>  
+                <li><a href="/products/shine-leave-in-serum-anti-frizz-anti-breakage-formula-suitable-for-all-hair-types" class="product__list">Shine Leave-in Serum</a></li>
+                <li><a href="/products/hair-vitamin-for-her" class="product__list">Hair Vitamin For Her</a></li>
+              </ul>
+              <!-- Add Two Product Options on Header Changes -->
+                        
+                </div>
+              </div>
+            </div>
+           
+            </ul>
+          </div>
+          <div class="col-md-2 mt-md-5 pt-md-3">
+           <div class="header_how_nav_main">
+           <div class="header_how_nav_main1">
+             <h3>HOW WE DO IT</h3>
+            <ul class="nav-list">
+              {% for link in linklists.how-we-do-it.links %}
+              <li class="{% if link.current %}active{% endif %}">
+                <a href="{{ link.url }}">{{ link.title | escape }}</a>
+              </li>
+              {%- endfor -%}
+            </ul>
+           </div>
+              <div class="header_how_nav_main2">
+            <h3>WHO WE ARE</h3>
+            <ul class="nav-list">
+              {% for link in linklists.who-we-are.links %}
+              <li class="{% if link.current %}active{% endif %}">
+                <a href="{% if link.url contains 'https://traya.health/blogs/hair-care/' %} https://traya.health/blogs/hair-care {% else %}{{ link.url }}{% endif %}">{{ link.title | escape }}</a>
+              </li>
+              {%- endfor -%}
+            </ul>
+              </div>
+           </div>
+            <h3>GET IN TOUCH</h3>
+            <ul class="fsocial-icon justify-content-start footer-social mb-4">
+              <li class="f-s-icon-list ml-0"><a href="https://www.instagram.com/traya.health/" target="_blank"> <img loading="eager" alt="instagram" title="instagram" width="100%" height="100%" src="{{ 'insta.svg' | asset_url }}"></a></li>
+              <li class="f-s-icon-list"><a href="https://www.facebook.com/traya.health/" target="_blank"><img loading="eager" alt="facebook" title="facebook" width="100%" height="100%" src="{{ 'fb.svg' | asset_url }}"></a></li>
+              <li class="f-s-icon-list"><a href="https://api.whatsapp.com/send?phone=918828006272&utm_source=chatwas&utm_medium=chat&utm_campaign=chatbot" target="_blank"><img loading="eager" alt="whatsapp" title="whatsapp" width="100%" height="100%" src="{{ 'whatsapp.svg' | asset_url }}"></a></li>
+            </ul>
+             <h2 class="d-md-none d-block mb-3">EXPERIENCE THE <br>TRAYA MOBILE APP</h2>
+           <div class="d-md-none d-block header_mobile-icon">
+               <a href="https://trayahealth.app.link/xT3UrtZDvyb"><img title="image" alt="image" width="100%" height="100%" loading='lazy' src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/icon-AppStore_lg30tv.png?v=1681909359"></a>
+              <a href="https://trayahealth.app.link/xT3UrtZDvyb"> <img title="image" alt="image" width="100%" height="100%" loading='lazy' src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/icon-GooglePlay_1_zixjxl.png?v=1681909354"></a>
+            </div> 
+      </div>
+        </div>
+      </div>
+    </nav>
+                    
+  </header>
+</{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
+
+{%- if settings.cart_type == "notification" -%}
+  {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
+{%- endif -%}
+
+{%- unless page.handle contains 'doctor-jaspreet' or page.handle contains 'shailendra-chaubey' or page.handle contains 'nishita-suratkal' or page.handle contains 'doctor-harish' or page.handle contains 'sangeeta-menon' or  page.handle contains 'siddhi-sonawane' or page.handle contains 'kalyani-deshmukh' or page.handle contains 'moyna-vakil' -%}
+{% endunless %}
+{%- if request.page_type == 'index' -%}
+  {% assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" %}
+
+{%- endif -%}
+
+<!-- Hair Treatment for Women Page Banner Changes -->
+<style>
+  .women-logo {width: 200px;}
+  @media (max-width: 767.98px) {.women-logo {width: 130px;}}
+</style>
+<!-- Hair Treatment for Women Page Banner Changes -->
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "class": "section-header",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "t:sections.header.settings.logo.label"
+    },
+     {
+      "type": "image_picker",
+      "id": "drawer-logo",
+      "label": "After Menu open logo image"
+    },
+     {
+      "type": "image_picker",
+      "id": "background-image",
+      "label": "Drawer background image"
+    },
+     {
+      "type": "image_picker",
+      "id": "mbl-background-image",
+      "label": "Mobile Drawer background image"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 250,
+      "step": 10,
+      "default": 100,
+      "unit": "t:sections.header.settings.logo_width.unit",
+      "label": "t:sections.header.settings.logo_width.label"
+    },
+    {
+      "type": "select",
+      "id": "logo_position",
+      "options": [
+        {
+          "value": "middle-left",
+          "label": "t:sections.header.settings.logo_position.options__1.label"
+        },
+        {
+          "value": "top-left",
+          "label": "t:sections.header.settings.logo_position.options__2.label"
+        },
+        {
+          "value": "top-center",
+          "label": "t:sections.header.settings.logo_position.options__3.label"
+        }
+      ],
+      "default": "middle-left",
+      "label": "t:sections.header.settings.logo_position.label",
+      "info": "t:sections.header.settings.logo_position.info"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "t:sections.header.settings.menu.label"
+    },
+    {
+      "type": "select",
+      "id": "menu_type_desktop",
+      "options": [
+        {
+          "value": "dropdown",
+          "label": "t:sections.header.settings.menu_type_desktop.options__1.label"
+        },
+        {
+          "value": "mega",
+          "label": "t:sections.header.settings.menu_type_desktop.options__2.label"
+        }
+      ],
+      "default": "dropdown",
+      "label": "t:sections.header.settings.menu_type_desktop.label",
+      "info": "t:sections.header.settings.menu_type_desktop.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_line_separator",
+      "default": true,
+      "label": "t:sections.header.settings.show_line_separator.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_header",
+      "default": true,
+      "label": "t:sections.header.settings.enable_sticky_header.label",
+      "info": "t:sections.header.settings.enable_sticky_header.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.header.settings.margin_bottom.label",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 20
+    }
+  ]
+}
+{% endschema %}

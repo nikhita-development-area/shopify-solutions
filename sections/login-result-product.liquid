@@ -1,0 +1,208 @@
+<div class="MLogin-product-results mb-5" style="display:none;">
+  <p class="login-heading">What goes in my kit?</p>
+  <div class="container">
+    <div class="row Mproduct_slide login_result_product_slides">
+      
+    </div>
+  </div>
+  <div class="login_buynow">
+    <button class="Mlogin_lead_buy_now btn btn-dark">BUY NOW</button>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+  "name": "Login Result Products",
+  "tag": "section",
+  "settings": [],
+  "presets":[
+    {
+      "name":"Login Result Products"
+    }
+  ]
+  }
+{% endschema %}
+
+
+{% style %}
+  button.Mlogin_lead_buy_now.btn.btn-dark {
+    padding: 10px 70px 8px;
+}
+  .login_buynow {
+    text-align: center;
+    margin-top: 10px;
+}
+ ul {
+    list-style: none;
+}
+  .cstm_result-hi {
+    display: none;
+  }
+  .product-item > .row li {
+    list-style: inherit;
+  }
+/*   .price-on-top {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  } */
+
+   .male_pro_badges ul {
+    margin-bottom: 0;
+}
+   @media (max-width: 767.98px) {
+  
+    button.Flogin_lead_buy_now.btn.btn-dark {
+    font-size: 18px;
+}
+
+     .male_pro_badges ul li svg {
+    width: 90px;
+}
+     ul.cstm_english {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+     .male_pro_badges ul {
+    margin-bottom: 0;
+}
+     img.male_pro_img {
+/*     max-width: 300px; */
+}
+     .male_pro_badges img {
+    max-width: 80px;
+}
+   .male_prod_tit h6 {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    margin-bottom: 10px !important;
+      text-align: center;
+}
+     .price-on-top {
+    text-align: center;
+    width: 100%;
+}
+     .col-12.col-md-7.gender-m-stage-1-pro.pl-0.pl-md-3 {
+    padding: 0 !important;
+}
+     ul.cstm_english {
+    text-align: center;
+}
+  ul.cstm_english {
+    text-align: center !important;
+    font-size: 11px !important;
+    padding: 10px 5px !important;
+}
+      .male_pro_rating {
+    display:none;
+}
+    }
+  .result_product_slides .slick-dots li button{
+     font-size: 15px;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     color: #000;
+     font-weight: bold;
+}
+.result_product_slides .slick-dots li.slick-active button:before, .result_product_slides .slick-dots li button:before{
+     content:unset;
+}
+.result_product_slides .slick-dots li.slick-active button{
+     color: #fff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 25px;
+     height: 25px;
+     background: #B7D340;
+     border-radius: 50%;
+}
+   @media (min-width: 767.98px) {
+     .male_pro_rating p img {
+    max-width: 150px !important;
+}
+     p.male_pro_dosage {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  
+}
+  .male_product_list_flex {
+    display: flex;
+        align-items: center;
+}
+   }
+  .male_prod_tit{
+    padding:0px !important;
+  }
+  .male_pro_rating {
+/*     width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px; */
+        position: absolute;
+    top: 0;
+    right: 0;
+}
+  p.male_pro_dosage {
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    color: #3F3F3F;
+}
+  ul.cstm_english{
+    display: flex;
+    justify-content: space-evenly;
+    color: #3F3F3F;
+    font-weight: 700;
+    font-size: 18px;
+    border-top: 1.00067px solid #b7d3404a;
+    border-bottom: 1.00067px solid #b7d3404a;
+    padding: 15px 0;
+    width:100%;
+    margin-top:25px;
+}
+span.ml_benefits_bdr {
+    padding-left: 15px;
+    color:#b7d3404a;
+}
+  .male_pro_badges ul {
+    display: flex;
+    justify-content: space-between;
+}
+  ul.cstm_english li:last-child span.ml_benefits_bdr {
+    display: none;
+}
+  .male_pro_rating p img {
+    max-width: 120px;
+}
+ .result4 .product-item.card.border-0.shadow.mt-1.p-3.p-md-4.h-100.mb-0.position-relative.co_bdr {
+    border: 1.11057px solid #B7D340 !important;
+    border-radius: 10.078px;
+   padding:15px !important;
+ }
+  {% if template == 'index.login-lead' %}
+   .product-item.card.border-0.shadow.mt-1.p-3.p-md-4.h-100.mb-0.position-relative.co_bdr {
+    border: 1.11057px solid #B7D340 !important;
+    border-radius: 10.078px;
+   padding:15px !important;
+ }
+    {% endif %}
+  ul.cstm_english li {
+    position: relative;
+    text-align: center;
+}
+/*   ul.cstm_english li:after {
+    content: "";
+    position: absolute;
+    border-right: 1px solid #eaf2c8;
+    display: block;
+    top: 0%;
+    right: -18%;
+    height: 95%;
+} */
+{% endstyle %}

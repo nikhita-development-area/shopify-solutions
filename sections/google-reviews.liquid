@@ -1,0 +1,190 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+{% if product.handle contains 'hair-growth-serum' or template contains 'index' or page.handle == 'home-app' or page.handle == "download-traya-app" or request.path contains '/blogs/hair-care' %}
+<div id="google-reviews" class="section-the-results" data-section-type="review" page_type="normal">
+  <div class="container {% if template.name =='index' %} mt-3 {% endif %}">
+  <p class="{% if page.handle == 'female-result2' or page.handle == 'female-result-v' %}female-result-heading text-center font-fredoka mb-md-5 mb-4{% else %}section-title font-weight-bold{% endif %}{% if page.handle == 'female' %} female-title-main{% endif %}">{{section.settings.Heading}}</p>
+  <div class="row{% if page.handle == 'all' %} double-google-review-slide{% elsif page.handle == 'female-combo' %} female-combo-slider{% else %} google-review-slide{% endif %}{% if template.suffix == 'resultco' %} pb-5 mb-2{% endif %}">
+    {%- for block in section.blocks -%}
+     <div class="google-slides{% if page.handle == 'customer-stories' %} google_slide_border{% elsif page.handle == 'all' %} position-relative review-border{% endif %}">
+      <div class="box-item{% if page.handle == 'female-combo' %} border-hero p-3{% endif %}" id="block-{{ block.id }}">
+            {% if page.handle == 'all' %}
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <p class="mb-0 font-weight-bold all-username">{{ block.settings.name }}</p>
+                <div class="star-rating">
+                  <span class="icon-star">
+                   {%- for i in (1..5) -%}
+                     {%- if i > block.settings.rating -%}{%- break -%}{%- else -%}★{%- endif -%}
+                   {%- endfor -%}
+                 </span>
+               </div>
+              </div>  
+            {% else %}
+            <div class="star-rating">
+              <span class="icon-star">
+               {%- for i in (1..5) -%}
+               {%- if i > block.settings.rating -%}{%- break -%}{%- else -%}★{%- endif -%}
+               {%- endfor -%}
+               </span>
+             </div>
+            {% endif %}
+            <div class="mb-3 addReadMore showlesscontent resl-desc">{{ block.settings.desc }}</div>
+            {% if page.handle == 'all' %}
+              <p class="pl-0 d-flex align-items-center">
+                <span class="post-name">Posted on&nbsp;</span><span><img alt="google-icon" width="32" height="32" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Google_2015_logo_2.png" loading="lazy"></span>
+              </p>
+            {% else %}
+            <div class="d-flex justify-content-between align-items-center google_review">
+             <p class="mb-0 font-weight-bold username">{{ block.settings.name }}</p>
+              {% unless product.handle contains 'hair-growth-serum' %}
+               <div class="align-items-center d-flex jjj">
+                <img alt="google-icon" width="32" height="32" src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/google-icon.png" loading="lazy">  
+                <p class="pl-2 googleText">Posted on<span class="d-block">Google</span></p>
+              </div>
+                {% endunless %}
+             </div> 
+            {% endif %}
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+    {% if template.suffix == 'holistic-hair-loss-plan' or template.suffix == 'indians-trust-traya' %}
+      <div class="text-center">
+        <a id="hairtestcta" href="https://form.traya.health/questions&page={{ page__hndl }}" class="hair_test_btn btn mt-3 shadow landing-page-btn">HAIR TEST <sup>&trade;</sup></a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+{% style %}
+  .resl-desc p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.35;
+    letter-spacing: -1.05px;
+    color: #6d6e71;
+  }
+  .google_review .username, .googleText {
+    font-size: 16px;  
+  }
+  .section-id-{{ section.id }} .icon-star {
+    color: {{ section.settings.color_star }};
+  }
+  .star-rating .icon-star{
+    color: #ffcc00;
+    font-size: 25px;
+  }
+  .google-slides {
+    padding: 20px;
+    padding-: 42px;
+  } 
+  @media only screen and (max-width: 767.98px) {
+    .resl-desc p, .google_review .username, .googleText {
+      font-size: 15px;
+    }
+  }
+  {% if page.handle == 'customer-stories' %}
+    .google-slides.google_slide_border.slick-slide {
+      border: 3px solid #A9B699;
+      box-shadow: 0 0 8px #00000057;
+      border-radius: 8px;
+      min-height: 215px;
+      margin: 0 10px;
+    }
+  {% endif %}
+  {% if page.handle == 'all' %}
+    .google-slides.review-border:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0px, -50%);
+      height: 80%;
+      background: rgb(0 0 0 / 0.3);
+      width: 0.5px;
+    }
+    .google_review .all-username, .googleText {
+      font-size: 16px;  
+    }
+    .star-rating .icon-star {
+      font-size: 20px;
+    }
+    span.post-name {
+      font-size: 13px;
+      line-height: 17px;
+      font-weight: normal;
+    }
+    @media only screen and (max-width: 767.98px) {
+      .resl-desc p, .google_review .all-username, .googleText {
+        font-size: 15px;
+      }
+    }
+    @media only screen and (max-width: 575.98px) {
+      .row.double-google-review-slide {
+        margin: auto;
+      }
+    }
+  {% endif %}
+  .double-google-review-slide:not(.slick-initialized) > .google-slides:first-of-type ~ *, .google-review-slide:not(.slick-initialized) > .google-slides:first-of-type ~ * {
+      display: none;
+  }
+{% endstyle %}
+
+{% schema %}
+  
+{
+    "name": " Google Review ",
+    "settings": [
+        {
+            "id": "Heading",
+            "type": "text",
+            "label": "Add Heading"
+        },
+       {
+        "type": "color",
+        "id": "color_star",
+        "label": "Star color",
+        "default": "#eeaf2e"
+      }
+    ],"blocks": [
+    {
+      "type": "columns",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+           "type": "range",
+           "id": "rating",
+            "label": "Star Rating",
+            "default": 5,
+            "min": 1,
+              "max": 5
+                },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+       "presets": [
+        {
+            "name": "Google Review",
+            "category": "Google Review"
+        }
+    ]
+
+}
+  
+
+{% endschema %}

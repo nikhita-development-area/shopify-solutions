@@ -1,0 +1,76 @@
+<!--  section/product-image  -->
+<div class="container product-image-{{ section.id }} addition-image ">
+  {% if section.settings.image != blank %}
+    <img src="{{ section.settings.image | escape }}" alt="{{ section.settings.image | escape }}" class="" width="{{ section.settings.width }}%">
+  {% endif %}
+</div>
+{% schema %}
+  {
+    "name": "Product Image",
+    "settings": [
+      {
+        "type": "text",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "desktop",
+        "label": "Desktop",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "mobile",
+        "label": "Mobile",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": -10,
+        "max": 90,
+        "step": 1,
+        "unit": "px",
+        "label": "Margin from above section",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "width",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Image Width",
+        "default": 100
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Image"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+  .product-image{
+    text-align: center;
+  }
+  @media (min-width: 768px){
+    .product-image-{{ section.id }}{
+      margin-top: {{ section.settings.margin_top }}px;
+      {% unless section.settings.desktop %}
+        display: none;
+      {% endunless %}
+    }
+  }
+  @media (max-width: 768px){
+    .product-image-{{ section.id }}{
+      {% unless section.settings.mobile %}
+        display: none;
+      {% endunless %}
+    }
+  }
+</style>

@@ -1,0 +1,150 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "doctor_details_xGLdTJ": {
+      "type": "doctor-details",
+      "blocks": {
+        "text_6hNAyd": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "Y",
+            "user_name": "Yogesh",
+            "user_content": "Dr. ka approach asardar hai, jo mujhe sabse zyada pasand aaya."
+          }
+        },
+        "text_Ee7fVV": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "A",
+            "user_name": "Arjun",
+            "user_content": "Dr. ki treatments se mera hai fall kam hua, very happy with the outcomes."
+          }
+        },
+        "text_XCnUnQ": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "B",
+            "user_name": "Bhavna",
+            "user_content": "Dr ne meri problems to samjha, her understanding made all the difference."
+          }
+        },
+        "text_7NfGhB": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "G",
+            "user_name": "Gaurav",
+            "user_content": "Dr. se consultation ke baad meri skin problems finally solve hui, very effective."
+          }
+        }
+      },
+      "block_order": [
+        "text_6hNAyd",
+        "text_Ee7fVV",
+        "text_XCnUnQ",
+        "text_7NfGhB"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Dr_Divya.webp",
+        "doctor_name": "Dr. Divya Poulose",
+        "specialization": "MBBS, MD (Dermatology)|  5.5 YEARS",
+        "education": "MBBS, MD (Dermatology)",
+        "registration_no": "2022\/08\/7496",
+        "ratings": "4.7\/5",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "Dr. Divya Poulose is a Senior Consultant Dermatologist at Welona Skin and Hair Clinic in Chennai. She completed her MD in Dermatology at Dr. DY Patil Medical College and her MBBS at Jubilee Mission Medical College. Dr. Poulose specializes in dermatology with a focus on skin, hair, and nails, alongside cosmetic procedures like fillers, Botox, PRP, chemical peels, and various lasers."
+      }
+    },
+    "qa_accordion_TcmkaP": {
+      "type": "QA-accordion",
+      "blocks": {
+        "faq_6k4EPw": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do people visit Dr. Divya?",
+            "Answer": "Patients consult Dr. Divya for concerns related to skin, hair, and nails."
+          }
+        },
+        "faq_XGb3dn": {
+          "type": "faq",
+          "settings": {
+            "Question": "What does Dr Divya specialise in?",
+            "Answer": "Dr. Poulose’s expertise includes dermatology with a focus on cosmetic procedures like fillers, Botox, PRP, chemical peels, and various lasers."
+          }
+        }
+      },
+      "block_order": [
+        "faq_6k4EPw",
+        "faq_XGb3dn"
+      ],
+      "settings": {
+        "Accordiontitle1": "",
+        "Accordiontitle2": ""
+      }
+    },
+    "doctor_slide_dzJBGe": {
+      "type": "doctor-slide",
+      "blocks": {
+        "text_FVcndF": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Dhwani Saxena",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Dhwani_Saxena.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "5 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_09a07296-d27a-4096-8eb3-2348712bc827.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-dhwani"
+          }
+        },
+        "text_8B9TT6": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Kalyani Deshmukh",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Kalyani.png",
+            "specialist": "DERMATOLOGIST | HAIR SPECIALIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/5star-1_3fa88a90-eb03-40b7-9705-1e9e734f676c.png",
+            "PageUrl": "shopify:\/\/pages\/kalyani-deshmukh"
+          }
+        },
+        "text_7jXE6U": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr.Shailendra Chaubey",
+            "doctorImage": "shopify:\/\/shop_images\/Chaubey_compact_94feda1e-2064-42a0-b2d8-90aaf8b0ee62.png",
+            "specialist": "HEALTH EDUCATOR | AYURVEDIC PRACTITIONER,",
+            "experience": "15 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_09a07296-d27a-4096-8eb3-2348712bc827.png",
+            "PageUrl": "shopify:\/\/pages\/shailendra-chaubey"
+          }
+        }
+      },
+      "block_order": [
+        "text_FVcndF",
+        "text_8B9TT6",
+        "text_7jXE6U"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "doctor_details_xGLdTJ",
+    "qa_accordion_TcmkaP",
+    "doctor_slide_dzJBGe"
+  ]
+}

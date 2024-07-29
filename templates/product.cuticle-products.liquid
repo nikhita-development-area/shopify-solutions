@@ -1,0 +1,47 @@
+{% layout none %}
+<div class="col-md-6" product_card variant_id="{{ product.variants[0].id }}" price="{{ product.price }}">
+  <div class="row">
+    <!-- <div class="col-12 d-md-none p-0">
+      <p class="mb-0 text-center hydrate__heading">Traya Hydrate + Repair Shampoo & Conditioner</p>
+    </div> -->
+    <div class="col-md-4 px-0 px-2 col-5 h-100">
+      {% assign desimage = product.metafields.custom.cuticle_result_desktop_image %}
+      {% assign mobimage = product.metafields.custom.cuticle_result_image %}
+      <img
+        src="{{ mobimage | img_url: '350x' }}"
+        alt="{{ product.metafields.custom.cuticle_page_name }}"
+        title="{{ product.metafields.custom.cuticle_page_name }}"
+        width="250"
+        height="250"
+        loading="eager"
+        class="d-md-none"
+      >
+      <img
+        src="{{ desimage | img_url: '350x' }}"
+        alt="{{ product.metafields.custom.cuticle_page_name }}"
+        title="{{ product.metafields.custom.cuticle_page_name }}"
+        width="200"
+        height="320"
+        loading="eager"
+        class="d-none d-md-block"
+      >
+    </div>
+    <div class="col-md-8 col-7 h-100 pb-3 pt-md-0 pt-4 pb-md-0">
+      <p class="font-weight-bold m-0 pb-4 cuticle_pd_name">{{ product.metafields.custom.cuticle_page_name }}</p>
+      {% assign productUses = product.metafields.custom.cuticle_page_uses.value %}
+      <ul class="pl-3">
+        {% for uses in productUses %}
+          <li class="l-0 cuticle_pd_uses pb-3">{{ uses | escape }}</li>
+        {% endfor %}
+      </ul>
+      <div class="cuticle_product_prices__list">
+        <p class="font-weight-bold cuticle_product_prices">
+          <span class="cuticle__product__price pr-3 position-relative"><sup>₹</sup>{{ product.price | money_without_currency }}</span>
+          {% if product.metafields.custom.cuticle_product_size != blank %}
+            <span class="pl-2 product__size">{{ product.metafields.custom.cuticle_product_size }}</span>
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

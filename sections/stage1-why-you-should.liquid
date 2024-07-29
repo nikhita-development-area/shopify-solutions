@@ -1,0 +1,107 @@
+<!-- Sections -> stage1-why-you-should.liquid -->
+
+<div class="container why-you-should" style="display: none;">
+  <h3 class="why-you-should-title font-weight-bold text-center">{{ section.settings.why_title }}</h3>
+  <div class="why-you-should-desc text-center my-3 my-md-4">{{ section.settings.why_para }}</div>
+  
+  <div class="why-you-should-stage">
+    {% for block in section.blocks %}
+      <div class="why-you-should-card position-relative py-3 {% if forloop.index == 1 %}border-color{% endif %}">
+        <div class="d-flex flex-column py-3">
+          <p class="position-absolute text-center m-0 here-txt {% if forloop.index != 1 %}d-none{% endif %}">You’re here</p>
+          <image class="mx-auto" src="{{ block.settings.stage_img | img_url: '70x70' }}"></image>
+          <p class="font-weight-bold text-center stage-txt">{{ block.settings.stage_txt }}</p>
+          <p class="text-center stage-years m-0"><i>(<span class="user-age-{{ forloop.index }}"></span> years old)</i></p>
+          
+          <div class="mx-auto my-2">
+            <image src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_1000006338.png?v=1699003173" class="d-none d-md-block"></image>
+            <image src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Line_3_1.png?v=1699249669" class="d-md-none"></image>
+          </div>
+          
+          <div class="mx-auto"> 
+            <image src="{{ block.settings.percentage_img | img_url: '72x72' }}"></image>
+          </div>
+          <p class="percentage-value font-weight-bold text-center mt-3 mb-2">{{ block.settings.percentage_value }}</p>
+          <p class="active-follicle font-weight-bold text-center">Active Follicle</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div class="why-you-should-desc-bottom text-center mt-4 p-2">
+    After <span class="font-weight-bold" style="color: #DA7B7B;">Stage 3,</span> the chance of regrowth <br> decreases significantly.
+  </div>
+</div>
+
+<style>
+  .why-you-should-title {font-size: 44px; line-height: 32px; letter-spacing: 0em; color: #3F3F3F;}
+  .why-you-should-desc {font-size: 18px; line-height: 20px; color: #686868; letter-spacing: 0em; width: 600px; margin: auto;}
+  .why-you-should-stage {display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 70%; margin: auto;}
+  .why-you-should-card {background: #F7F7F7; border-radius: 6px;}
+  .why-you-should-card.border-color {border: 1px solid #76BC5D; box-shadow: 0px 3px 12px 0px #CACACA;}
+  .here-txt {top: 0; left: 50%; transform: translate(-50%, -50%); background: #fff; border-radius: 4px; font-size: 14px; line-height: 12px; letter-spacing: 0em; padding: 5px 10px;}
+  .stage-txt {font-size: 20px; line-height: 20px; margin: 10px 0 5px;}
+  .stage-years {font-size: 12px; line-height: 12px; color: #AAAAAA;}
+  .percentage-value {font-size: 28px; line-height: 28px; color: #76bc5d;}
+  .active-follicle {font-size: 12px; line-height: 12px;}
+  .why-you-should-desc-bottom {background: #FFF1F1; border-radius: 8px; width: 70%; margin: auto; font-size: 20px; line-height: 24px; letter-spacing: 0em;}
+     
+  @media screen and (max-width: 767.98px) {
+    .why-you-should-title {font-size: 24px; line-height: 30px;}
+    .why-you-should-desc {font-size: 12px; line-height: 16px; width: auto;}
+    .why-you-should-stage {width: 100%;}
+    .here-txt {font-size: 10px; width: 80px;}
+    .stage-txt {font-size: 16px; line-height: 20px;}
+    .stage-years {font-size: 10px; line-height: 12px;}
+    .percentage-value {font-size: 24px; line-height: 20px;}
+    .active-follicle {font-size: 10px; line-height: 12px;}
+    .why-you-should-desc-bottom {width: 100%; font-size: 16px; line-height: 22px;}
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Why You Should",
+    "settings": [
+      {
+        "type": "text",
+        "id": "why_title",
+        "label": "Title"
+      },
+      {
+        "type": "html",
+        "id": "why_para",
+        "label": "Paragraph"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Gallery",
+        "name": "Stage1 Gallery",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "stage_img",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id": "stage_txt",
+            "label": "Stage Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "percentage_img",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id": "percentage_value",
+            "label": "Percentage Text"
+          }
+        ]
+      }
+    ],
+    "presets": [{"name": "Why You Should"}]
+  }
+{% endschema %}

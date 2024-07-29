@@ -1,0 +1,482 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "6a347145-fe6d-4176-91f2-08c85ef3e8ca": {
+      "type": "image-banner",
+      "blocks": {
+        "template--15983853863090__6a347145-fe6d-4176-91f2-08c85ef3e8ca-16703127852ce2a613-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "India’s first holistic hair loss plan",
+            "heading_size": "h1"
+          }
+        },
+        "template--15983853863090__6a347145-fe6d-4176-91f2-08c85ef3e8ca-16703127852ce2a613-1": {
+          "type": "text",
+          "settings": {
+            "heading1": "<span class=\"font-fredoka text-white\">93%<\/span> success rates with <span class=\"font-fredoka text-white\">1,00,000+<\/span> Indians",
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "template--15983853863090__6a347145-fe6d-4176-91f2-08c85ef3e8ca-16703127852ce2a613-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Buy Now",
+            "button_link_1": "https:\/\/form.traya.health\/questions",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15983853863090__6a347145-fe6d-4176-91f2-08c85ef3e8ca-16703127852ce2a613-0",
+        "template--15983853863090__6a347145-fe6d-4176-91f2-08c85ef3e8ca-16703127852ce2a613-1",
+        "template--15983853863090__6a347145-fe6d-4176-91f2-08c85ef3e8ca-16703127852ce2a613-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/4_3_1_4a9aab6a-c3df-4755-b400-0a2617595d9c.jpg",
+        "mblimage": "shopify:\/\/shop_images\/dsd.gif",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "159afbc4-1b42-4a0b-8e3c-3b1f34ad1e22": {
+      "type": "logo-bar",
+      "blocks": {
+        "template--15983853863090__159afbc4-1b42-4a0b-8e3c-3b1f34ad1e22-1670312815c5d9c281-0": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--15983853863090__159afbc4-1b42-4a0b-8e3c-3b1f34ad1e22-1670312815c5d9c281-1": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--15983853863090__159afbc4-1b42-4a0b-8e3c-3b1f34ad1e22-1670312815c5d9c281-2": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--15983853863090__159afbc4-1b42-4a0b-8e3c-3b1f34ad1e22-1670312815c5d9c281-3": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15983853863090__159afbc4-1b42-4a0b-8e3c-3b1f34ad1e22-1670312815c5d9c281-0",
+        "template--15983853863090__159afbc4-1b42-4a0b-8e3c-3b1f34ad1e22-1670312815c5d9c281-1",
+        "template--15983853863090__159afbc4-1b42-4a0b-8e3c-3b1f34ad1e22-1670312815c5d9c281-2",
+        "template--15983853863090__159afbc4-1b42-4a0b-8e3c-3b1f34ad1e22-1670312815c5d9c281-3"
+      ],
+      "settings": {
+        "title": "Logo list",
+        "showMarquee": true,
+        "showslide": false
+      }
+    },
+    "b805f30f-e5e3-4513-841c-179f76c2b9c0": {
+      "type": "best-hair-experts",
+      "blocks": {
+        "5de81200-1ca6-4b69-b99f-bafdf8ac3d2e": {
+          "type": "Head",
+          "settings": {
+            "image-text": "shopify:\/\/shop_images\/doctor01_155x155_af51d874-7741-4345-bb5a-58fe12e47963.png",
+            "text-image": "Dr. Jaspreet Sarna",
+            "text-image2": "Dermatologist"
+          }
+        },
+        "97fe0a57-29e7-4437-ae7f-bedb908c5fc6": {
+          "type": "Head",
+          "settings": {
+            "image-text": "shopify:\/\/shop_images\/doctor02_155x155_224669ff-7442-4dd1-b216-b378006c1577.png",
+            "text-image": "Dr Shailendra Chaubey",
+            "text-image2": "Ayurveda Practitioner"
+          }
+        },
+        "45969d11-6c5a-49b2-9bce-54b873fe1c5e": {
+          "type": "Head",
+          "settings": {
+            "image-text": "shopify:\/\/shop_images\/doctor04_155x155_6b537e27-ab4c-484d-89d7-673f3834342c.png",
+            "text-image": "Dr. Shefali Saini",
+            "text-image2": "Dermatologist"
+          }
+        },
+        "29b14d08-e151-42aa-b2f8-e6b014fe888f": {
+          "type": "Head",
+          "settings": {
+            "image-text": "shopify:\/\/shop_images\/doctor03_155x155_1622ded6-5d8f-415c-b551-82d0abbdc222.png",
+            "text-image": "Dr. Sangeeta Menon",
+            "text-image2": "Nutritionist"
+          }
+        },
+        "df36b735-63ed-44e5-a2c1-46c60590d1d6": {
+          "type": "Head",
+          "settings": {
+            "image-text": "shopify:\/\/shop_images\/doctor05_155x155_3cb00104-43b9-452b-a014-3aaffd2d83ba.png",
+            "text-image": "Dr. Kalyani Deshmukh",
+            "text-image2": "Dermatologist and Trichologist"
+          }
+        },
+        "3e01df0c-81d5-4971-a883-b39856d4a3e0": {
+          "type": "Head",
+          "settings": {
+            "image-text": "shopify:\/\/shop_images\/siddhi_150x150_crop_top_692e1764-b74a-479e-b1bf-d2ab29d1bb8a.jpg",
+            "text-image": "Dr. Siddhi S. Rane",
+            "text-image2": "Dermatologist"
+          }
+        }
+      },
+      "block_order": [
+        "5de81200-1ca6-4b69-b99f-bafdf8ac3d2e",
+        "97fe0a57-29e7-4437-ae7f-bedb908c5fc6",
+        "45969d11-6c5a-49b2-9bce-54b873fe1c5e",
+        "29b14d08-e151-42aa-b2f8-e6b014fe888f",
+        "df36b735-63ed-44e5-a2c1-46c60590d1d6",
+        "3e01df0c-81d5-4971-a883-b39856d4a3e0"
+      ],
+      "settings": {
+        "text-chart-heading": "India’s Best Hair Experts From Ayurveda, Dermatology And Nutrition On One Platform",
+        "image-chart": "shopify:\/\/shop_images\/prescription_afe3fce2-3b10-4311-b31b-45a55b5c8946.jpg",
+        "text-chart1": "Products verified <br> by doctors",
+        "text-chart2": "Dosage as per <br> your profile",
+        "text-chart3": "Personalized <br> diet plan"
+      }
+    },
+    "7787144b-26e1-4333-b5ad-e4580ef12b74": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Treatment Plan Basis Your Root Cause",
+        "heading_size": "h1",
+        "description": "<p><\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "single-and-kits",
+        "products_to_show": 12,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "41cd97bc-537d-418e-8073-590c0ed722c0": {
+      "type": "swirl-video",
+      "settings": {
+        "heading": "",
+        "html_area": "<div block=\"\" id=\"swirl-short-videos\" data-code=\"hnl8qkiv\" data-sw=\"1\" display:=\"\"><\/div>"
+      }
+    },
+    "f0421a67-1a1b-423d-909f-78ce18909c77": {
+      "type": "customer-reviews",
+      "blocks": {
+        "026833cc-e184-488a-abb2-8718b967f5d6": {
+          "type": "content",
+          "settings": {
+            "name": "Uddeshya",
+            "gender": "M",
+            "used_for": "4 Months",
+            "review_on": "15th Nov 2021",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "My hair loss started in 2016 after I was diagnosed with tuberculosis. I had consulted a dermatologist and tried many treatments before nearly giving up hope. I liked Traya’s approach of combining three sciences. After I used the recommended product kits, I have seen a lot of benefits like thicker hair and negligible Hair fall.",
+            "icon_1": "shopify:\/\/shop_images\/Uddeshya01_300x_4c51e29f-1d12-44df-94c7-e71e8b2de6bd.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Uddeshya02_300x_921c4a78-34b8-4f77-9551-775547339218.jpg",
+            "month_title_2": "Month 2",
+            "icon_3": "shopify:\/\/shop_images\/Uddeshya03_300x_e746d8f1-e039-43ee-8ba1-4b2c0e35bd9c.jpg",
+            "month_title_3": "Month 3",
+            "month_title_4": ""
+          }
+        },
+        "96fc4eff-f888-4f53-a8ba-6e2107bcb3b3": {
+          "type": "content",
+          "settings": {
+            "name": "Arundhati Munje",
+            "gender": "F",
+            "used_for": "5 Months",
+            "review_on": "31st Dec 2021",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I had been losing my hair for about two years. I tried to convince myself that it wasn't noticeable but I knew it was and so did everyone else who saw me. I started my treatment with Traya and not only is the problem solved, but people are noticing how much it's grown back.",
+            "icon_1": "shopify:\/\/shop_images\/Arundhati_Munje_51003_before_300x_62cc385b-b129-4ff9-bb5e-0101c2e1af90_300x_1.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Arundhati_Munje_51003_after_65b7e1f3-620e-4f5f-a6f1-707bc14bfbd1_300x_1.jpg",
+            "month_title_2": "Month 3",
+            "icon_3": "shopify:\/\/shop_images\/Arundhati_Munje_51003_after_300x_1.jpg",
+            "month_title_3": "Month 5",
+            "month_title_4": ""
+          }
+        },
+        "c20b4ef4-6816-47f8-a5b2-bdc3a21857f5": {
+          "type": "content",
+          "settings": {
+            "name": "Rajat Sadh",
+            "gender": "M",
+            "used_for": "8 months",
+            "review_on": "21st Feb 2022",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I didn't want to resort to surgery or any other invasive treatment for my hair loss and I found Traya. They have helped me grow back a full head of hair in just eight months. I'm so happy with the results, thank you so much!",
+            "icon_1": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_300x_93ca08ad-9a26-431e-9be5-e83d334cd5ad.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/month_4_300x_3fb66938-dd6c-4fb4-b3c4-9cbf5d46ffcd.jpg",
+            "month_title_2": "Month 4",
+            "icon_3": "shopify:\/\/shop_images\/WhatsApp_Image_2022-04-05_at_3.04.58_PM_1_300x_afb0b676-652a-4589-b14e-646c94c0efcb.jpg",
+            "month_title_3": "Month 8",
+            "month_title_4": ""
+          }
+        },
+        "b2992b07-d053-4a98-9e4f-71a2f8d507d3": {
+          "type": "content",
+          "settings": {
+            "name": "Saumya",
+            "gender": "F",
+            "used_for": "5 months",
+            "review_on": "6th Nov 2021",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I was losing hair due to stress and other things but Traya analyzed everything perfectly and sent me a treatment plan. After such great results, my relatives have also started using Traya. Thank you, Raveena my Hair coach (you are wonderful) for such amazing help.",
+            "icon_1": "shopify:\/\/shop_images\/Saumya1_300x_340cc072-7f32-42ba-b0a2-22217581de51.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Saumya4_300x_7668a2ee-6b01-4f16-9e57-c97ef754d330.jpg",
+            "month_title_2": "Month 4",
+            "icon_3": "shopify:\/\/shop_images\/Saumya5_300x_40cf577f-9ef0-4e1a-a990-0d2c538b348d.jpg",
+            "month_title_3": "Month 5",
+            "month_title_4": ""
+          }
+        },
+        "98ac651b-746e-4d80-88ab-4cc90efb1dd4": {
+          "type": "content",
+          "settings": {
+            "name": "Swati",
+            "gender": "F",
+            "used_for": "6 months",
+            "review_on": "17th August 2021",
+            "kit_purchased": "",
+            "content": "It takes time guys, but you won't regret it. My hair grew back stronger and my overall hair quality improved. Thank you Raveena, my hair coach, she really held me accountable and kept me on track. Super happy customer.",
+            "icon_1": "shopify:\/\/shop_images\/Month-b1_300x_797eb0fe-81d1-4e7f-a991-e9e4bf376e49.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Month-b3_300x_f54d629f-cdff-40c9-8e84-895c50bd589c.jpg",
+            "month_title_2": "Month 3",
+            "icon_3": "shopify:\/\/shop_images\/Month-b5_300x_1e9650e6-0d6e-468f-ada6-5429e4fae5b7.jpg",
+            "month_title_3": "Month 5",
+            "icon_4": "shopify:\/\/shop_images\/Month-b6_300x_55e1ac2b-9468-4e00-b8c7-95e1e7640bf5.jpg",
+            "month_title_4": "Month 6"
+          }
+        },
+        "3c7966bc-998b-4bf7-9574-70d4dea3ecc5": {
+          "type": "content",
+          "settings": {
+            "name": "Anonymous",
+            "gender": "M",
+            "used_for": "5 months",
+            "review_on": "15th August 2021",
+            "kit_purchased": "",
+            "content": "Results in just 5 months, couldn't believe my eyes when I saw hair growth on my head. Anyone with hair problems should get on their plan. It works like magic.",
+            "icon_1": "shopify:\/\/shop_images\/Month-a1_300x_1.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Month-a3_300x_1.jpg",
+            "month_title_2": "Month 3",
+            "icon_3": "shopify:\/\/shop_images\/Month-a5_300x_1.jpg",
+            "month_title_3": "Month 5",
+            "month_title_4": ""
+          }
+        },
+        "298a4e3e-7af6-4bba-9c27-77bd38e7d05c": {
+          "type": "content",
+          "settings": {
+            "name": "Sunil Bhadouriya",
+            "gender": "M",
+            "used_for": "7 Months",
+            "review_on": "9th Apr 2022",
+            "kit_purchased": "On complete Traya recommended plan.",
+            "content": "I read about Traya on Quora. I had read reviews on it and they seemed positive so I thought that I would give it a go.  It's helped me so much and I can tell the difference in how much my hair has grown back.",
+            "icon_1": "shopify:\/\/shop_images\/Month_1_3_300x_669c0791-76d3-4cbe-9f8c-7eb09a5cee8e.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Month_5_300x_cd0d7c8c-ddc9-41c2-b84f-78309f3933b9.png",
+            "month_title_2": "Month 5",
+            "icon_3": "shopify:\/\/shop_images\/Month_7_1_300x_18514b4a-141e-43ae-889c-3596cd96ed89.jpg",
+            "month_title_3": "Month 7",
+            "month_title_4": ""
+          }
+        },
+        "c00b55cf-8076-4482-9e0d-79d50d22ebe7": {
+          "type": "content",
+          "settings": {
+            "name": "Shweta Divecha",
+            "gender": "F",
+            "used_for": "3 months",
+            "review_on": "20th August 2021",
+            "kit_purchased": "",
+            "content": "By giving myself a complete lifestyle change inspired and instructed by Traya. I have never been more happier and confident. Still hoping more progress.",
+            "icon_1": "shopify:\/\/shop_images\/Month-d1_300x_300x_fab66140-5117-4d21-8489-378e2144fc04.jpg",
+            "month_title_1": "Month 1",
+            "icon_2": "shopify:\/\/shop_images\/Month-d2_300x_7ffdd82d-3b13-4fca-855d-864da0bd7293.jpg",
+            "month_title_2": "Month 2",
+            "icon_3": "shopify:\/\/shop_images\/Month-d4_300x_300x_4d47d68a-5704-4181-b4ab-7cf68438ea46.jpg",
+            "month_title_3": "Month 4",
+            "icon_4": "shopify:\/\/shop_images\/Month-d5_300x_0cf6fdeb-80e4-4987-a6e0-f84355abae92.jpg",
+            "month_title_4": "Month 5"
+          }
+        }
+      },
+      "block_order": [
+        "026833cc-e184-488a-abb2-8718b967f5d6",
+        "96fc4eff-f888-4f53-a8ba-6e2107bcb3b3",
+        "c20b4ef4-6816-47f8-a5b2-bdc3a21857f5",
+        "b2992b07-d053-4a98-9e4f-71a2f8d507d3",
+        "98ac651b-746e-4d80-88ab-4cc90efb1dd4",
+        "3c7966bc-998b-4bf7-9574-70d4dea3ecc5",
+        "298a4e3e-7af6-4bba-9c27-77bd38e7d05c",
+        "c00b55cf-8076-4482-9e0d-79d50d22ebe7"
+      ],
+      "settings": {
+        "title": "",
+        "sub_title": "",
+        "btn_text": "",
+        "btn_link": ""
+      }
+    },
+    "ebf70ce8-d01b-400b-8697-55a99bd0f742": {
+      "type": "google-reviews",
+      "blocks": {
+        "b5602025-c5ce-46de-8a82-093fa70f1a05": {
+          "type": "columns",
+          "settings": {
+            "name": "TheCmayil",
+            "rating": 4,
+            "desc": "<p>I feel much better after taking up the treatment. The treatment does not just include tablets and minoxidil.<br\/><br\/>Treatment includes ensuring proper sleep cycle and proper diet. Surely there is notable changes after 9 months of treatment.<\/p>"
+          }
+        },
+        "7d61b26c-c4eb-4d6a-a68d-84f44ac4acc4": {
+          "type": "columns",
+          "settings": {
+            "name": "SANJUKTA SANYAL",
+            "rating": 5,
+            "desc": "<p>As a mother,I was extremely worried about my teenage daughter's hair condition. I chanced upon Traya and approached you.A very helpful team always making sure that a regular follow up is done.The hair health has improved a lot since I started and I am very pleased with the results. Thank you Traya..Thank you Mallika for being just a call away.<\/p>"
+          }
+        },
+        "37656743-3396-43a2-a073-f369e80afb7c": {
+          "type": "columns",
+          "settings": {
+            "name": "jithu thomas",
+            "rating": 4,
+            "desc": "<p>I am 25 years old. I have androgenic alopecia. couple of months back I found traya and started its medication. now I am happy with its result. most important thing is patience and consistency. diet is also a key factor. I recommend traya 100%. good customer service.the sooner the better<\/p>"
+          }
+        },
+        "daade501-e5c0-4db8-9190-373312761fe0": {
+          "type": "columns",
+          "settings": {
+            "name": "LOKJEET RANAA..",
+            "rating": 5,
+            "desc": "<p>Before trying traya i had used a lot of other meditation too... Traya was the only one which gave me the best positive results for my hair... Grateful to them<\/p>"
+          }
+        },
+        "9fdfd8c2-d776-4a3d-a8be-f0abe91b13ef": {
+          "type": "columns",
+          "settings": {
+            "name": "Devarshi Desai",
+            "rating": 5,
+            "desc": "<p>I have been following Traya regime since last 9 months now and the results are all to speak for. I had issues regarding hair density and patches. Now I am very much happy and satisfied with the results. In short, Quality & Quantity both have improved for me. Infact, it has been helpful for my body balance as well. Thanks to Sneha for all the help and Cheers to the Traya team👍 👍 👍<\/p>"
+          }
+        },
+        "5cf68dc4-c98e-44d0-86ea-b5f90b13969f": {
+          "type": "columns",
+          "settings": {
+            "name": "Shubham Nikam",
+            "rating": 5,
+            "desc": "<p>It's all about patience and consistency. Traya helped me to grow my hair back, as well as to live a healthy lifestyle with the customized diet. Before Traya I lost all my hopes. If a person like me can grow my hairs back., I'm 100℅ sure with the help of Traya everyone who is facing hair fall issues can grow back their hair. Trust me it's worth it.<\/p>"
+          }
+        },
+        "0f63dbd9-4369-4965-8438-8da7b7969fd1": {
+          "type": "columns",
+          "settings": {
+            "name": "rohit daz",
+            "rating": 5,
+            "desc": "<p>TRAYA'S hairfall treatment has been of great help in reducing my hairfall issue and also regrowing new hair. Also the support staff Poornima who was assigned to me has been  very helpful as she checked on my progress,  provided diet plans and  answering any questions regarding the medication. A great experience overall.<\/p>"
+          }
+        },
+        "0eab123f-69ae-44cc-b9b8-f055c6f612ac": {
+          "type": "columns",
+          "settings": {
+            "name": "Bhawana Singh",
+            "rating": 5,
+            "desc": "<p>Since i have started using Traya hair care regime, my hair have really improved a lot. This regime is also helping me in stress management and to get better sleep. I would highly recommend Traya.<\/p>"
+          }
+        },
+        "9a96dd7d-9ac7-4778-a9c8-4ec9e7d72731": {
+          "type": "columns",
+          "settings": {
+            "name": "Sonia Hair Studio",
+            "rating": 5,
+            "desc": "<p>The product is very good<br\/>The results were visible after 15 itself<br\/>Must try essential hair food<\/p>"
+          }
+        },
+        "b92878c9-4132-4ae6-8b2e-e97645a0cb56": {
+          "type": "columns",
+          "settings": {
+            "name": "Kiran Rajput",
+            "rating": 5,
+            "desc": "<p>IT WORKS! I'm not someone who falls for a trap easily so I researched well before taking this treatment! My research, their treatments and efforts have truly shown results. I like their concept of 3 sciences, it was new to me but they proved it by giving me my desired results! Thanks Tatva<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "b5602025-c5ce-46de-8a82-093fa70f1a05",
+        "7d61b26c-c4eb-4d6a-a68d-84f44ac4acc4",
+        "37656743-3396-43a2-a073-f369e80afb7c",
+        "daade501-e5c0-4db8-9190-373312761fe0",
+        "9fdfd8c2-d776-4a3d-a8be-f0abe91b13ef",
+        "5cf68dc4-c98e-44d0-86ea-b5f90b13969f",
+        "0f63dbd9-4369-4965-8438-8da7b7969fd1",
+        "0eab123f-69ae-44cc-b9b8-f055c6f612ac",
+        "9a96dd7d-9ac7-4778-a9c8-4ec9e7d72731",
+        "b92878c9-4132-4ae6-8b2e-e97645a0cb56"
+      ],
+      "settings": {
+        "Heading": "Google Reviews",
+        "color_star": "#eeaf2e"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "6a347145-fe6d-4176-91f2-08c85ef3e8ca",
+    "159afbc4-1b42-4a0b-8e3c-3b1f34ad1e22",
+    "b805f30f-e5e3-4513-841c-179f76c2b9c0",
+    "7787144b-26e1-4333-b5ad-e4580ef12b74",
+    "41cd97bc-537d-418e-8073-590c0ed722c0",
+    "f0421a67-1a1b-423d-909f-78ce18909c77",
+    "ebf70ce8-d01b-400b-8697-55a99bd0f742"
+  ]
+}

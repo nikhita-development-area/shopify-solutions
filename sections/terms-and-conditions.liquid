@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="terms-and-conditions rounded-lg p-md-5" style="background: {{ section.settings.bk_color }};">
+    <p class="text-left terms_heading fw-bold">{{ section.settings.term_heading }}</p>
+    <ol class="terms-conditions l-0">
+      {% for block in section.blocks %}
+        <li class="terms_and_conditions">{{ block.settings.term_text }}</li>
+      {% endfor %}
+    </ol>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Terms and Conditions",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bk_color",
+        "label": "Select Color"
+      },
+      {
+        "type": "text",
+        "id": "term_heading",
+        "label": "Enter Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Terms and Conditions",
+        "type": "text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "term_text",
+            "label": "Enter Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Terms and Conditions",
+        "category": "text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .terms_heading {
+    font-size: 30px;
+    font-weight:700;
+    color: #585A5B;
+  }
+  .terms-and-conditions{width:85%; margin:auto;}
+  .terms_and_conditions {
+    font-size: 16px;
+    color: #454545;
+    margin-bottom: 1rem;
+    list-style: inherit!important;
+  }
+  .terms_and_conditions::marker {
+    font-weight: bold;
+  }
+  
+  @media only screen and (max-width: 767.98px) and (min-width: 576px) {
+    .terms-and-conditions {
+        padding: 3rem;
+      width:100%;
+    }
+  }  
+  @media only screen and (max-width: 400px) {
+    .terms_heading {
+        font-size: 24px;
+    }
+    .terms_and_conditions {
+      font-size: 13px;
+      width:100%;
+    }
+  }
+{% endstyle %}

@@ -1,0 +1,258 @@
+<div class="bg-section-desk native-bg-image position-relative min__section">
+  <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Rectangle_1_d741a20e-c310-419e-9c18-74110f5ac6cd.png?v=1673526887" class="main-native-img">
+<div class="page-width native-main-banner">
+  <div class="native-heading">
+  <h3 class="text_Fredoka">Honest Truth <br>About Hair Fall</h3>
+  <h4>By Dr.Agni, Dermatologist</h4>
+</div>
+  <div class="native-video">
+  <video width="100%" height="auto" class="vid" poster="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352689.png?v=1673624089" class="main-native-videoimg">
+  <source src="https://cdn.shopify.com/videos/c/o/v/b65116f781354e629cd8290edd7c60a2.mp4" type="video/mp4">
+</video>
+<i id="btn" class="fa fa-play fa-5x"></i>
+  </div>
+</div>
+</div>
+<div class="bg-section-mob native-bg-image position-relative min__section">
+  <img src="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Rectangle_1_1.png?v=1673601512" class="main-native-img">
+<div class="page-width native-main-banner">
+  <div class="native-heading">
+  <h3 class="text_Fredoka">Honest Truth <br>About Hair Fall</h3>
+  <h4>By Dr.Agni, Dermatologist</h4>
+</div>
+  <div class="native-video">
+  <video width="100%" height="auto" class="vids" poster="https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352679_1.png?v=1673624045" class="main-native-videoimg">
+  <source src="https://cdn.shopify.com/videos/c/o/v/5f3b8ce51399469dbe282432f9d08c6a.mp4" type="video/mp4">
+</video>
+<i id="btns" class="fa fa-play fa-5x"></i>
+  </div>
+</div>
+</div>
+
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<script>var playPause = document.getElementById('btn');
+var vid = document.querySelector('.vid');
+
+playPause.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (!vid.paused) {
+        vid.pause();
+      } else {
+        vid.play();
+      }
+      playPause.classList.toggle('fa-play');
+      playPause.classList.toggle('fa-pause');
+      return false;
+    }, false);</script>
+    
+    <script>var playPauses = document.getElementById('btns');
+var vids = document.querySelector('.vids');
+
+playPauses.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (!vids.paused) {
+        vids.pause();
+      } else {
+        vids.play();
+      }
+      playPauses.classList.toggle('fa-play');
+      playPauses.classList.toggle('fa-pause');
+      return false;
+    }, false);</script>
+<style>
+  
+   @media only screen and (max-width: 768px) and (min-width: 992px) {
+     .native-heading h3 {
+    font-size: 30px !important;
+}
+     .native-heading h4 {
+    font-size: 20px !important;
+}
+   }
+  
+  .native-bg-image img {
+    max-width: 100%;
+    width: 100%;
+}
+  .native-video {
+    position: relative;
+}
+  .native .fa-play:before {
+    font-size: 25px;
+    color: #b7d641;
+    background: #638064;
+    padding: 12px 12px 12px 16px;
+    border-radius: 50px;
+}
+   .native .fa-pause:before {
+    font-size: 25px;
+    color: #b7d641;
+    background: #638064;
+    padding: 12px 12px 12px 16px;
+    border-radius: 50px;
+}
+
+  .native #btn {
+    pointer-events: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+  .native #btns {
+    pointer-events: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+  .native-bg-image.position-relative.min__section {
+    position: relative;
+}
+  .native-heading {
+    width: 50%;
+    position: relative;
+}
+  .native-main-banner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -43%);
+    display: flex;
+    justify-content: space-around;
+        align-items: center;
+}
+   .bg-section-mob{
+      display:block;
+    }
+   .bg-section-desk{
+      display:none;
+    }
+  @media screen and (min-width: 768px) {
+    .bg-section-desk{
+      display:block;
+    }
+     .bg-section-mob{
+      display:none;
+    }
+    .native-heading h3 {
+    font-size: 55px;
+    color: #3F3F3F;
+    margin: 0;
+    line-height: 1.2;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+    .native-video {
+    width: 100%;
+}
+.native-heading {
+    width: 100%;
+    position: relative;
+}
+  }
+  @media screen and (max-width: 767px) {
+    h3.text_Fredoka {
+    font-size: 22px !important;
+}
+    .native-heading h4:before {
+    margin-bottom: 15px !important;
+}
+    .native-heading h4:before {
+          font-size: 18px !important;
+      margin-bottom: 10px !important;
+          width: 60.7px;
+    height: 6px;
+    }
+    .native-heading h4 {
+     font-size: 18px !important;
+      margin-bottom: 10px !important;
+}
+  .native-main-banner {
+    display: block !important;
+        padding-top: 50px;
+}
+   .native-video {
+    width: 100% !important;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+.native-heading {
+   width: 100% !important;
+    position: relative;
+  margin-top: 0;
+}
+  }
+  .native-heading h4 {
+    font-size: 27px;
+    margin-top: 0;
+    padding-top: 0;
+    color: #3F3F3F;
+    font-weight: 600;
+}
+  .native-heading h4:before{
+      content: " ";
+    width: 102.7px;
+    height: 8px;
+    border-radius: 4px;
+    left: 0;
+    display: block;
+    position: relative;
+    background: #414042;
+    margin-bottom: 30px;
+  }
+</style>
+{% schema %}
+   {
+    "name": "Video With Text Section",
+     "settings": [
+          {
+          "id": "heading_regimen",
+          "type": "text",
+          "label": "Regimen heading"
+          },
+          {
+          "id": "subheading_regimen",
+          "type": "html",
+          "label": "Regimen Subheading"
+          },
+          {
+          "id": "subheading_regimen_two",
+          "type": "text",
+          "label": "Regimen Lasthead"
+          },
+          {
+          "type": "url",
+          "label": "Button link",
+          "id": "link_two"
+        },
+        {          
+          "type": "text",
+          "label": "Button text",
+          "id": "linktext_two",
+          "default": "Click Here"
+        },
+          {
+          "id": "coach_image_desktop",
+          "type": "image_picker",
+          "label": "Image Desktop"
+          },
+          {
+          "id": "coach_image_mobile",
+          "type": "image_picker",
+          "label": "Image Mobile"
+          }
+  ],
+          "presets":[
+          {
+          "name":"Video With Text Section",
+          "category":"text with img"
+          }
+      ]
+  }
+
+{% endschema %}
+
+<style>
+    </style>

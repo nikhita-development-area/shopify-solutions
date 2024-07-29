@@ -1,0 +1,141 @@
+{
+  "sections": {
+    "170e5893-f309-46f5-9741-c50262591848": {
+      "type": "Blog-page-image",
+      "settings": {
+        "title": "<strong class=\"d-block d-md-inline-block\">Our take<\/strong> on all things hair!",
+        "content": "Not opinions, but facts and science backed information to help you with your hair problems.",
+        "bg_image": "shopify:\/\/shop_images\/banner_256x256_90d0cb55-21b0-4052-a88e-b7355d9b7711.webp",
+        "bg_image_mobile": "shopify:\/\/shop_images\/banner-b_256x256_ca3eff98-60fa-416f-84ff-d37d0aaf519f.webp"
+      }
+    },
+    "d1076204-4d71-48ad-91be-a4eb5457c31c": {
+      "type": "tags_slider",
+      "settings": {
+        "heading": "",
+        "infinite": true,
+        "arrows": false
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "blocks": {
+        "dff2e898-9433-4f1e-957c-b9b57136961b": {
+          "type": "featured-blog",
+          "settings": {
+            "article": "hair-care\/traya-minoxidil-5"
+          }
+        },
+        "09e7178d-6d84-45dc-8e33-7796d0eeb0c8": {
+          "type": "featured-blog",
+          "settings": {
+            "article": "hair-care\/traya-s-all-new-vitamin-capsules-for-better-hair-growth"
+          }
+        },
+        "1b9145e8-7a8e-44ed-b180-556dd78866fe": {
+          "type": "featured-blog",
+          "settings": {
+            "article": "hair-care\/can-ayurveda-reverse-grey-hair"
+          }
+        },
+        "f4e352bd-9de9-4eac-aa4c-9aabf408bb13": {
+          "type": "featured-blog",
+          "settings": {
+            "article": "hair-care\/side-effects-of-minoxidil"
+          }
+        },
+        "aadf5fae-8cc2-4b96-9267-6555709989de": {
+          "type": "featured-blog",
+          "settings": {
+            "article": "hair-care\/finasteride-vs-minoxidil"
+          }
+        }
+      },
+      "block_order": [
+        "dff2e898-9433-4f1e-957c-b9b57136961b",
+        "09e7178d-6d84-45dc-8e33-7796d0eeb0c8",
+        "1b9145e8-7a8e-44ed-b180-556dd78866fe",
+        "f4e352bd-9de9-4eac-aa4c-9aabf408bb13",
+        "aadf5fae-8cc2-4b96-9267-6555709989de"
+      ],
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": false,
+        "show_author": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email-form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email-form"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "0c913c9b-640c-4e65-918f-b1e79850c221": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Recommended Products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "single-and-kits",
+        "products_to_show": 12,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "170e5893-f309-46f5-9741-c50262591848",
+    "d1076204-4d71-48ad-91be-a4eb5457c31c",
+    "main",
+    "newsletter",
+    "0c913c9b-640c-4e65-918f-b1e79850c221"
+  ]
+}

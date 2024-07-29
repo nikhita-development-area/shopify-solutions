@@ -1,0 +1,68 @@
+<!-- section/average_cost-hair-doctors.liquid -->
+<div class="container">
+  <div class="average_cost_hair">
+    <h2 class="city-hd-heading text-left">What is the average cost of a Hair Transplant in {{ article.title }}</h2>
+    <p class="city-hd-content text-left mb-5">The hair transplant cost in {{ article.title }} can vary depending on the factors mentioned above. To provide an idea of the potential costs, refer to the table below:</p>
+    <div class="d-flex justify-content-center">
+      <table>
+      <tbody>
+        <tr>
+          <td> <strong>Variables</strong></td>
+          <td><strong>Price Range </strong></td>
+        </tr>
+        {% for block in section.blocks %}
+         <tr>
+          <td>{{ block.settings.variables }}</td>
+          <td>{{ block.settings.price_range }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Average Cost",
+    "settings": [],
+    "blocks":[
+      {
+        "type": "average_cost",
+        "name": "average cost",
+        "settings": [
+          {
+            "type":"text",
+            "id":"variables",
+            "label":"Add Variables "
+          },
+          {
+            "type":"text",
+            "id":"price_range",
+            "label":"Add Price Range "
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Average Cost"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+.average_cost_hair .city-hd-heading, .average_cost_hair .city-hd-content{
+  color: black;
+}
+@media screen and (max-width: 767px) {
+  .average_cost_hair table tbody tr td {
+       font-size: 16px !important ;
+       padding: 10px;
+       letter-spacing: normal;
+  }
+} 
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

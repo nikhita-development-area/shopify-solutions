@@ -1,0 +1,153 @@
+{% comment %} <div class="banner_blogs container mb-4">
+  <div class="banner_blog_images">
+    <img src="{{ section.settings.desk_img  | img_url: 'master'}}" class="d-none d-md-block"  width="100%" height="100%" loading="lazy" alt="banner image" title="Banner Image">
+    <img src="{{ section.settings.mob_img | img_url:'master' }}" class="d-block d-md-none" width="100%" height="100%" loading="lazy" alt="banner image" title="Banner Image"> 
+  </div> 
+  <a href="https://form.traya.health/questions?cohort=1&location=stickycta&page=blog_{{ article.title }}" id="hairtestctablog" class="assessment-btn btn-dark d-lg-inline-block font-weight-bold px-2 py-2 px-md-5 py-md-3 rounded-lg  hair-form-actn-link">Take the Hair test<sup>TM</sup></a>
+</div> {% endcomment %}
+{% if article.tags contains 'cta_hindi' %}
+  <div class="sticky_content_cta text-center pb-3 mb-2" style="background: #213343;">
+    <div class="d-flex ques_ansr pt-3 align-items-center justify-content-around"><h4 class="acc_quest l-0">आपके बाल झड़ने का कारण क्या है?</h4><span class="arrow"></span></div>
+    <p class="blog_arw_content  p-2 l-0">डॉक्टरों द्वारा डिज़ाइन किया गया Traya का मुफ़्त 2 मिनट का हेयर टेस्ट लें, जो आपके बालों के झड़ने के मूल कारणों की पहचान करने के लिए आनुवांशिक, स्वास्थ्य, जीवनशैली और हार्मोन जैसे 20+ कारकों का विश्लेषण करता है।</p>
+    <a href="https://form.traya.health/questions?cohort=1&location=stickycta&page=blog_{{ article.title }}" id="hairtestctablog" class="assessment-btn text-dark bg-light w-80 text-center blogs_pages_cta font-weight-bold px-2 py-2 px-md-5 py-md-3 rounded-lg hair-form-actn-link">हेयर टेस्ट ले<sup>TM</sup></a>
+  </div>
+{% elsif template.suffix contains 'dermatologist' %}
+  <div class="sticky_content_cta text-center pb-4 mb-2" style="background: #213343;">
+    <div class="d-flex ques_ansr pt-3 align-items-center justify-content-around"><h4 class="acc_quest l-0">What's Causing Your Hair Fall?</h4><span class="arrow"></span></div>
+    <p class="blog_arw_content p-2 l-0">Take Traya's FREE 2-minute hair test, designed by doctors that analyses 20+ factors like genetics, scalp health, lifestyle, and hormones, to identify the root causes of your hair fall.</p>
+    <a href="https://form.traya.health/questions?cohort=1&location=stickycta&page={{ request.path | replace: "/", "_" | replace: '_blogs_', 'blogs_' }}" id="hairtestctablog" class="assessment-btn text-dark bg-light w-80 text-center blogs_pages_cta font-weight-bold px-2 py-2 px-md-5 py-md-3 rounded-lg hair-form-actn-link">Take The Free Hair Test<sup>TM</sup></a>
+  </div>
+  {% elsif template.suffix contains 'hair-doctors' %}
+   <div class="sticky_content_cta text-center pb-4 mb-2" style="background: #213343;">
+    <div class="d-flex ques_ansr pt-3 align-items-center justify-content-around"><h4 class="acc_quest l-0">What's Causing Your Hair Fall?</h4><span class="arrow"></span></div>
+    <p class="blog_arw_content p-2 l-0">Take Traya's FREE 2-minute hair test, designed by doctors that analyses 20+ factors like genetics, scalp health, lifestyle, and hormones, to identify the root causes of your hair fall.</p>
+    <a href="https://form.traya.health/questions?cohort=1&location=stickycta&page={{ request.path | replace: "/", "_" | replace: '_blogs_', 'blogs_' }}&utm_campaign=blogs_hd_stickycta" id="hairtestctablog" class="assessment-btn text-dark bg-light w-80 text-center blogs_pages_cta font-weight-bold px-2 py-2 px-md-5 py-md-3 rounded-lg hair-form-actn-link">Take The Free Hair Test<sup>TM</sup></a>
+  </div>
+  {% elsif template.suffix contains 'hair-transplant' %}
+   <div class="sticky_content_cta text-center pb-4 mb-2" style="background: #213343;">
+    <div class="d-flex ques_ansr pt-3 align-items-center justify-content-around"><h4 class="acc_quest l-0">What's Causing Your Hair Fall?</h4><span class="arrow"></span></div>
+    <p class="blog_arw_content p-2 l-0">Take Traya's FREE 2-minute hair test, designed by doctors that analyses 20+ factors like genetics, scalp health, lifestyle, and hormones, to identify the root causes of your hair fall.</p>
+    <a href="https://form.traya.health/questions?cohort=1&location=stickycta&page={{ request.path | replace: "/", "_" | replace: '_blogs_', 'blogs_' }}" id="hairtestctablog" class="assessment-btn text-dark bg-light w-80 text-center blogs_pages_cta font-weight-bold px-2 py-2 px-md-5 py-md-3 rounded-lg hair-form-actn-link">Take The Free Hair Test<sup>TM</sup></a>
+  </div>
+  
+{% else %}
+  <div class="sticky_content_cta text-center pb-3 mb-2" style="background: #213343;">
+    <div class="d-flex ques_ansr pt-3 align-items-center justify-content-around"><h4 class="acc_quest l-0">What's Causing Your Hair Fall?</h4><span class="arrow"></span></div>
+    <p class="blog_arw_content p-2 l-0">Take Traya's FREE 2-minute hair test, designed by doctors that analyses 20+ factors like genetics, scalp health, lifestyle, and hormones, to identify the root causes of your hair fall.</p>
+    <a href="https://form.traya.health/questions?cohort=1&location=stickycta&page=blog_{{ article.title }}" id="hairtestctablog" class="assessment-btn text-dark bg-light w-80 text-center blogs_pages_cta font-weight-bold px-2 py-2 px-md-5 py-md-3 rounded-lg hair-form-actn-link">Take The Free Hair Test<sup>TM</sup></a>
+  </div>
+  
+{% endif %}
+
+ 
+
+{% schema %}
+  {
+    "name": "Blogs Banner",
+    "settings": [
+          {
+          "type":"image_picker",
+          "id":"desk_img",
+          "label":"Select Desktop Image"
+          },
+          
+          {
+          "type":"image_picker",
+          "id":"mob_img",
+          "label":"Select Mobile Image"
+          }
+      ],
+    "presets":[
+          {
+          "name":"Banner Blogs"
+          }
+      ]
+  }
+{% endschema %}
+
+<style>
+  .banner_blogs {
+    position:relative;
+  }
+  .ques_ansr {
+    cursor: pointer;
+  }
+  .banner_blogs a {
+    pointer-events: auto;
+    position: absolute;
+    top: 64%;
+    left: 6%;
+    font-size: 20px;
+    text-transform: uppercase;
+   
+  }
+  .blogs_pages_cta {
+    display: inline-block;
+  }
+
+.arrow {
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+}
+.open .arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+.acc_quest {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 900;
+  }
+  .blog_arw_content {
+    font-size: 15px;
+    color: #fff;
+  }
+  
+.sticky_content_cta{
+  width: 100%;
+  display: none;
+  max-width: 400px;
+  position: fixed;
+  bottom: -11px;
+  border-top: 4px solid #b8d444;
+  z-index: 99;
+  background: #fff;
+}
+
+  @media screen and (max-width:576px){
+    .banner_blogs a {
+      font-size:11px;
+      left: 11%;
+    }
+    .sticky_content_cta {max-width: 100%;}
+  }
+</style>
+<script>
+document.addEventListener('scroll', function() {
+  let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  let targetHeight = (document.body.scrollHeight * 0.03);
+  
+  document.querySelectorAll('.sticky_content_cta').forEach(item => {
+    if(scrollTop >= targetHeight){
+      item.style.display = "block"
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.sticky_content_cta').forEach(item => {
+    const header = item.querySelector('.arrow');
+    const ques_ansr = item.querySelector(".ques_ansr")
+    const blogs_pages_cta = item.querySelector(".blogs_pages_cta")
+    let blog_arw_content = item.querySelector(".blog_arw_content");
+    ques_ansr.addEventListener('click', () => {
+      item.classList.toggle('open');
+      blog_arw_content.classList.toggle("d-none");
+      blogs_pages_cta.classList.toggle("d-none");
+    });
+  });
+});
+</script>

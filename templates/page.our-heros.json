@@ -1,0 +1,1221 @@
+{
+  "sections": {
+    "1663597862130ea03a": {
+      "type": "hotm-section",
+      "blocks": {
+        "9d5f9e20-4248-472c-a3f6-15130469eb58": {
+          "type": "text",
+          "settings": {
+            "hero_img": "shopify:\/\/shop_images\/selfie01_f37c8626-d709-40de-aae4-fea5adc4ea1f.jpg",
+            "hero_name": "Dhruv Prasad",
+            "hero_age": "28",
+            "hero_address": "Bangalore"
+          }
+        },
+        "9b0f10a5-a5f2-422b-a257-57ba77ea78c8": {
+          "type": "text",
+          "settings": {
+            "hero_img": "shopify:\/\/shop_images\/selfie02_b039b404-eacb-4bcb-94b1-1bf9e967d491.jpg",
+            "hero_name": "Dinesh Bisht",
+            "hero_age": "30",
+            "hero_address": "Lucknow"
+          }
+        },
+        "b8fbd116-fb96-46f8-8521-9c02ac18fbe2": {
+          "type": "text",
+          "settings": {
+            "hero_img": "shopify:\/\/shop_images\/jayna_759bbad6-e5cb-4931-b983-605fcfad1ebf.png",
+            "hero_name": "Jayna",
+            "hero_age": "27",
+            "hero_address": "Hyderabad"
+          }
+        },
+        "c6a10e4f-2d3b-47e3-9949-2bded1c37e49": {
+          "type": "text",
+          "settings": {
+            "hero_img": "shopify:\/\/shop_images\/sharon_941225b6-3734-4c05-9dec-545f1a829c79.png",
+            "hero_name": "Sharon",
+            "hero_age": "29",
+            "hero_address": "Tamil Nadu"
+          }
+        },
+        "5368459d-d5a9-48f8-8a13-e6ff5be59656": {
+          "type": "columns",
+          "settings": {
+            "heading": "The Go Better",
+            "image_1": "shopify:\/\/shop_images\/hero_page_before_a4a955f1-b500-4f1c-8f25-d78e12e0ec17.png",
+            "month-text1": "Month 1",
+            "image_2": "shopify:\/\/shop_images\/hero_page_after_6259d069-93ff-4278-ad8f-d0be9bd77675.png",
+            "month-text2": "Month 6",
+            "color": "#f8ca62",
+            "name": "Dhruv Prasad",
+            "desc": "<p>My hair fall stopped completely after using Traya.<\/p><p> Today I feel much much more confident than before. <\/p><p>I had lost all my hope of regrowing my hair but Traya has truly turned out to be a game-changer.<\/p>",
+            "description": "My hair fall stopped completely after using Traya. Today I feel much much more confident than before. I had lost all my hope of regrowing my hair but Traya has truly turned out to be a game-changer.",
+            "hero-image": "shopify:\/\/shop_images\/selfie01_f37c8626-d709-40de-aae4-fea5adc4ea1f.jpg",
+            "hero-info": "Dhruv Prasad, 28",
+            "hero-address": "Bangalore"
+          }
+        },
+        "da6b0a00-09b3-4cfb-a9bd-6b3cacd7a9eb": {
+          "type": "columns",
+          "settings": {
+            "heading": "Go The Better",
+            "image_1": "shopify:\/\/shop_images\/Artboard_1-2_7394a31a-e4fa-4292-a7b8-1fbd7746e524.png",
+            "month-text1": "Month 1",
+            "image_2": "shopify:\/\/shop_images\/Artboard_2_0d226608-70c2-496b-8e67-fa2f8dab7ce7.png",
+            "month-text2": "Month 6",
+            "color": "#f8ca62",
+            "name": "Dinesh",
+            "desc": "<p>Since I started taking the treatment from Traya & I can see a phenomenal change in my crown area and on the centre part of my scalp. <\/p><p>One can see tiny new hair sprouting out.<\/p>",
+            "description": "Since I started taking the treatment from Traya & I can see a phenomenal change in my crown area and on the centre part of my scalp. One can see tiny new hair sprouting out.",
+            "hero-image": "shopify:\/\/shop_images\/selfie02_b039b404-eacb-4bcb-94b1-1bf9e967d491.jpg",
+            "hero-info": "Dinesh, 25",
+            "hero-address": "Lucknow"
+          }
+        },
+        "2117b177-da19-47f4-9ed1-2093778da117": {
+          "type": "columns",
+          "settings": {
+            "heading": "The Go Better",
+            "image_1": "shopify:\/\/shop_images\/Artboard_5_b13e005e-0f90-4f55-b835-2562026eb738.png",
+            "month-text1": "Month 1",
+            "image_2": "shopify:\/\/shop_images\/jayna_after_73205d6a-bdcb-402d-bd4f-af831d5604cd.png",
+            "month-text2": "Month 5",
+            "color": "#f8ca62",
+            "name": "Jayna",
+            "desc": "<p>It works !! 100% I am using their products from last 5 months and seeing the results, Everything is time taking, that we have to accept.<\/p>",
+            "description": "It works !! 100% I am using their products from last 5 months and seeing the results, Everything is time taking, that we have to accept.",
+            "hero-image": "shopify:\/\/shop_images\/jayna_759bbad6-e5cb-4931-b983-605fcfad1ebf.png",
+            "hero-info": "Jayna, 27",
+            "hero-address": "Hyderabad"
+          }
+        },
+        "e6c8ae68-1f8d-4d76-8c78-3e32d632dd49": {
+          "type": "columns",
+          "settings": {
+            "heading": "The Go Better",
+            "image_1": "shopify:\/\/shop_images\/Artboard_3_d9f6c471-8f44-4219-800c-4d164bd304f3.png",
+            "month-text1": "Month 1",
+            "image_2": "shopify:\/\/shop_images\/Artboard_4_f3959dea-28c3-4e1e-81a1-5cf05052d13a.png",
+            "month-text2": "Month 5",
+            "color": "#f8ca62",
+            "name": "Sharon",
+            "desc": "<p>I have been on the treatment after I delivered my baby. <\/p><p>Traya has been really helpful to my hair loss problem. <\/p><p>I can see drastic change in my hair growth and Hair fall is completely gone.<\/p>",
+            "description": "I have been on the treatment after I delivered my baby. Traya has been really helpful to my hair loss problem. I can see drastic change in my hair growth and Hair fall is completely gone.",
+            "hero-image": "shopify:\/\/shop_images\/sharon_941225b6-3734-4c05-9dec-545f1a829c79.png",
+            "hero-info": "Sharon, 29",
+            "hero-address": "Tamil Nadu"
+          }
+        }
+      },
+      "block_order": [
+        "9d5f9e20-4248-472c-a3f6-15130469eb58",
+        "9b0f10a5-a5f2-422b-a257-57ba77ea78c8",
+        "b8fbd116-fb96-46f8-8521-9c02ac18fbe2",
+        "c6a10e4f-2d3b-47e3-9949-2bded1c37e49",
+        "5368459d-d5a9-48f8-8a13-e6ff5be59656",
+        "da6b0a00-09b3-4cfb-a9bd-6b3cacd7a9eb",
+        "2117b177-da19-47f4-9ed1-2093778da117",
+        "e6c8ae68-1f8d-4d76-8c78-3e32d632dd49"
+      ],
+      "settings": {
+        "heading": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "16638254822d60c904": {
+      "type": "social-reviews",
+      "blocks": {
+        "0eab9312-863b-48c0-b393-5a6c3b4512b4": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/quora-logo-new_120x_728c85fe-5462-4b28-bbbb-6d5045760705.png",
+            "review_name": "Quora.com",
+            "rating": 5,
+            "social": "quora",
+            "link": "https:\/\/www.quora.com\/How-many-of-you-tried-Traya-products-What-are-your-reviews-of-Traya-products?top_ans=303041891",
+            "date": "Answered August 20",
+            "desc": "<p>\"<strong>Cool thing about traya is your hair coach will be there for you throughout the journey.<\/strong>\" Result - Honestly as I said I was sceptical. Tried it, and I can say that use it...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/david_120x_054850ab-d3b3-4333-b9e1-f71928045285.png",
+            "profile_name": "David Paul"
+          }
+        },
+        "deb74062-1b9d-4e4e-9d46-4f16e69cf431": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "A year ago",
+            "desc": "<p>\"<strong>Don't expect it to works like TV ad's you apply night and next morning head full of hair. <\/strong>Jokes apart... I strongly recommend Traya, personally I have started...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/gautham_120x_868c2a5f-d5fd-456a-a5a9-6569e3921a1b.png",
+            "profile_name": "Gautham Kamath"
+          }
+        },
+        "bb84a111-1379-441d-8010-da2094fd7cf9": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/insta-icon_120x_eec945b2-a9e1-479f-99a2-b534b6f12065.png",
+            "review_name": "Instagram",
+            "rating": 5,
+            "social": "instagram",
+            "link": "https:\/\/www.instagram.com\/p\/CTj1o6lllQU\/?utm_source=ig_web_copy_link",
+            "date": "3 weeks ago",
+            "desc": "<p>\"<strong>I have used many products but didn't get any solution. But after using Traya scalp controller for dandruff. I am so happy. It is very effective.<\/strong> It contains neem and...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/manisha_120x_5b8539e8-7056-4c79-85a7-6282300af932.png",
+            "profile_name": "Manisha Khosla"
+          }
+        },
+        "490672ca-b539-466a-83f4-9c4469b39daa": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/quora-logo-new_120x_728c85fe-5462-4b28-bbbb-6d5045760705.png",
+            "review_name": "Quora.com",
+            "rating": 5,
+            "social": "quora",
+            "link": "https:\/\/www.quora.com\/How-many-of-you-tried-Traya-products-What-are-your-reviews-of-Traya-products?top_ans=303041891",
+            "date": "Answered August 27",
+            "desc": "<p>\"<strong>The hairfall stopped after 3 months of treatment the quality of hair is improved it's became thick then what I had earlier.<\/strong> PATIENCE IS A KEY if you wanna...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/raj_120x_1945f6f1-fc84-4a1e-aa29-091bd20cab2a.png",
+            "profile_name": "Raj Shah"
+          }
+        },
+        "df4899c7-653f-46f2-b666-80bf56a9a4e4": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "A month ago",
+            "desc": "<p>\"<strong>Thank you Traya team for giving me such an amazing result. I have only one recommendation - have patience and stick to your diet & medicines.<\/strong> I opted...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/ajay_120x_24760dc2-5464-4a53-9df7-88007776a766.png",
+            "profile_name": "Ajay R"
+          }
+        },
+        "3f1cba75-2d26-43bc-8d1a-838d3d2c1ad0": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/insta-icon_120x_eec945b2-a9e1-479f-99a2-b534b6f12065.png",
+            "review_name": "Instagram",
+            "rating": 5,
+            "social": "instagram",
+            "link": "https:\/\/www.instagram.com\/p\/CMHvw8ohYfB\/?utm_source=ig_web_copy_link",
+            "date": "30 weeks ago",
+            "desc": "<p>\"<strong>I am myself using the products since the past 3-4 months and this is amazing!! And my hair are getting better day by day. <\/strong>It helps to reduce stress and I got...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/vishaal_120x_64564d9d-a0d6-4f56-b6be-cd01d5effcff.png",
+            "profile_name": "Vishaal Krishna"
+          }
+        },
+        "1f060b3b-4bdd-4055-b888-e6e8789c62bb": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "5 months ago",
+            "desc": "<p>\"<strong>I have been with Traya only for 3 months now, and I can feel the difference in my scalp and hair to a great extent.<\/strong> Even people around me have started noticing...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/sambhavi_120x_02ba78c2-58f7-4c57-9907-e4cb162aaa69.png",
+            "profile_name": "Sambhavi Pandey"
+          }
+        },
+        "53fc0048-c3ae-4a72-b3cd-643ccf634d25": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "A week ago",
+            "desc": "<p><strong>\"They're so professional....<br\/>The initial response is expressive and impressive so far....!<\/strong><br\/>Should should give it a chance once....!\"<\/p>",
+            "profile_name": "Mohit Mishra"
+          }
+        },
+        "de04efcd-f846-40cd-8f89-b2db463a98ee": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "A week ago",
+            "desc": "<p><strong>\"I had really good experience with Traya and also have seen much improvement during my hair treatment. <\/strong>Sneha is really knowledgeable and...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/navdeep_120x_846a30ee-f98f-43f5-a20a-133938b428e2.png",
+            "profile_name": "Navdeep"
+          }
+        },
+        "68cecbf5-e606-46a8-b159-fd2758605a74": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 weeks ago",
+            "desc": "<p><strong>\"I feel much better after taking up the treatment. <\/strong>The treatment does not just include tablets and minoxidil. Treatment includes ensuring proper sleep cycle...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/sarveshawra_120x_1f40e528-2048-4423-827b-77364e4e6dd6.png",
+            "profile_name": "Sarveshvara"
+          }
+        },
+        "3e2aca62-25d8-4fa1-8967-e49855aee628": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "4 weeks ago",
+            "desc": "<p><strong>\"I'm a 23 year old guy working in IT sector for past 3½ years. <\/strong>At 2020, I switched another company and started working multiple shifts on rotational...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/ka_120x_7cc1b8ff-2819-4072-bf06-cfe8f7dd5f01.png",
+            "profile_name": "Karthikeyan A"
+          }
+        },
+        "0d48f35c-9395-47d2-ab93-8b3d94401965": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "A month ago",
+            "desc": "<p><strong>\"I never seen any products like them. <\/strong>It is so so good. I suggest people to try. It js best u can do for ur health....\"                                                                                                                                                                                                       <\/p><p>                                                           <\/p><p>     <\/p>",
+            "profile": "shopify:\/\/shop_images\/Angelina_120x_ba7beb07-8c6b-4fb5-adfa-4e814610c4fd.png",
+            "profile_name": "Angelina hale"
+          }
+        },
+        "4babb998-9358-4a4d-98bb-32911b019ea3": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "A month ago",
+            "desc": "<p><strong>\"Great Support By Traya Team And Specially Hair Coach Priya,<\/strong> she motivates to keep treatment on track and results are turning postive.........\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/sagar_120x_5780e7ac-1572-43de-aa76-76fc597090fd.png",
+            "profile_name": "sagar abbot"
+          }
+        },
+        "1e9e46c1-0776-4c16-bf7f-6b56a8628a29": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p>\"<strong>Amazing products visible results in just a month...<\/strong>you have grt team of hair coach i usually attend by a coach her name tabassum, her way of talking is really....\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/dilip_120x_6941e8ca-cf83-42c5-90cb-e283b0f35756.png",
+            "profile_name": "dilip singh vaghela"
+          }
+        },
+        "47de199e-480a-406f-8347-fae6cd3b1cf0": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"Traya...thank you so much for bringing my confidence back by making my hair beautiful and voluminous as before...<\/strong>I simply love it................\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/amrita_120x_08e33748-e75a-4c86-998b-4ecaf8f6cd5a.png",
+            "profile_name": "Amrita Sinha"
+          }
+        },
+        "fe5c574f-aab9-4106-b909-e0f1e0950925": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"Traya provided a great customer experience. <\/strong>Not only did the products help me with the issues, Harshada and team provided great support with regular and thorough...\" <\/p>",
+            "profile": "shopify:\/\/shop_images\/tarun_120x_acded9e5-2a9d-4689-bd44-df7b47216bb7.png",
+            "profile_name": "Tarun Bhasin"
+          }
+        },
+        "d9ea8ed2-235d-4f63-b81b-27eae10441a2": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"The products are really working......<\/strong>and the doctors and my coach Ritu helps me alot to get my hair back.Thanks team traya 😊\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/pooja_120x_ab3e54bf-01e6-4ceb-ab0e-37a57db322e8.png",
+            "profile_name": "pooja sahu"
+          }
+        },
+        "c3e64a14-6489-46b6-8ba4-f584bac16a95": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_daa2ca22-3fac-48f1-b369-7588a9fbf6c2.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"I started traya few months back. <\/strong>After 1st month, i started getting results from second month. I must say, the results are amazing. Product has no side effects...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/befikra_120x_e3e435cc-7f3c-4780-9827-cebf8a0593a9.png",
+            "profile_name": "befikra_ malang"
+          }
+        },
+        "f559b41a-77f6-4652-8755-674480f61096": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"Traya has come as a boon in my life. <\/strong>I was suffering from hair loss and doesn't know where to go, what to do. I visited some dermatologists too however most ...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/raman_120x_2b1eadfb-85f8-4b48-aec8-6530f9438d35.png",
+            "profile_name": "Raman Kaur"
+          }
+        },
+        "cff62ffe-bb56-486f-92d5-3a7660d8a771": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_c1fc224d-93c1-44fd-893b-c4dd0a864e25.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"Starting journey with traya was best decision.<\/strong> I saw very good results in few months. So anyone who is facing issue with hair loss, can really trust traya and can....\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/sachin_120x_940b42a0-94f1-4276-8234-b3a5bf503c2d.png",
+            "profile_name": "sachin magar"
+          }
+        },
+        "7f120758-c9b7-428c-bf6b-85a62e87adf9": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_daa2ca22-3fac-48f1-b369-7588a9fbf6c2.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p>\"<strong>I am glad I came across Traya while surfing through my Instagram. <\/strong>The results are very promising ,the best part I liked apart from the medicines is the way the company...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Aman_Srivastav_120x_d5e6e538-133c-4a7d-8284-53072eb202fe.png",
+            "profile_name": "Aman Srivastav"
+          }
+        },
+        "9f06793a-0ee7-4a78-aacf-3f2998ee9cca": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_daa2ca22-3fac-48f1-b369-7588a9fbf6c2.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"I am extremely grateful to traya and their doctors and its team. <\/strong>Specially to Raveena mam, my hair coach. 7-8 months ago i was losing hope that i am unable to...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/GOPAL_SINGH_TOMAR_120x_aa8c5e66-2fb8-4253-af30-2c5934e6a631.png",
+            "profile_name": "GOPAL SINGH TOMAR"
+          }
+        },
+        "4467029a-e4bb-4db6-97fa-673faee6eb73": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_daa2ca22-3fac-48f1-b369-7588a9fbf6c2.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"Consistency is the key here.<\/strong> I had an overall great experience with Traya in terms of overall result with both the hair levels improving and the quality of the hair....\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Venkatesh_Gopal_120x_e387fcdb-4d2c-468b-bc6b-952d3c6f81a5.png",
+            "profile_name": "Venkatesh Gopal"
+          }
+        },
+        "778c602c-5ce5-4d23-8b6e-52ae89ab2370": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_daa2ca22-3fac-48f1-b369-7588a9fbf6c2.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"I'm Bharat Tulyani Asst. <\/strong>Manager in Excitel Broadband. Mein karib 1 year se hair treatment le raha hoon. Half hair jaa chuke the  treatment bhi liye kafi....\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Bharat_Tulyani_120x_42cac31d-a4c0-4478-b244-323f157cbf98.png",
+            "profile_name": "Bharat Tulyani"
+          }
+        },
+        "afdd8523-c172-48c0-a717-c990b2bd8c90": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_daa2ca22-3fac-48f1-b369-7588a9fbf6c2.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"Traya was truly instrumental in improving my hair health. <\/strong>I could see significant improvement in my hair density and hair texture. The regimen is very...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Pushkar_Athalekar_120x_c90bbac1-42b7-496e-848b-fbec65b9de55.png",
+            "profile_name": "Pushkar Athalekar"
+          }
+        },
+        "1748b9fe-287e-4e13-8e00-df0fe168c981": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_daa2ca22-3fac-48f1-b369-7588a9fbf6c2.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"Hair coach Deepali.. she is very supportive ,<\/strong> I want you to know how much I appreciate the excellent service you guys provided , Your attention to detail, great communication...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Ankit_Lal_120x_e4b137e6-51f1-42a6-b499-1156bda711ad.png",
+            "profile_name": "Ankit Lal"
+          }
+        },
+        "db52abb1-4bb7-4f54-9cee-ab40989c95ba": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_daa2ca22-3fac-48f1-b369-7588a9fbf6c2.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"M having great experience by the team Traya. <\/strong>specially Malika who give me a reminder about my medicines every month asking how everything is going diet...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Vikas_Dabas_120x_3982f12f-2901-43c5-aa8e-3feda962ee88.png",
+            "profile_name": "Vikas Dabas"
+          }
+        },
+        "eb090767-b60f-4d80-8d5d-21b924dababa": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_18523474-86d0-4a95-b490-bcf3f9e21b01.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"Traya has been really helpful to my hair loss problem. <\/strong>I try to be regular on the treatment and the most important support is my hair coach Krinal. She has been....\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/ravi_ranjan_pandey_120x_43388abc-074b-4f93-a29c-c1cfd0e1b089.png",
+            "profile_name": "ravi ranjan pandey"
+          }
+        },
+        "54b40c3e-8820-4048-b5a9-fa4887d4f53f": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_18523474-86d0-4a95-b490-bcf3f9e21b01.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"Hi, I am Sanjib. I was having heavy dandruff issue. <\/strong>It was very uncomfortable feeling while going out or even in the home also. I have tried so many things, changed...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/SANJIB_KUMAR_SAHOO_120x_01d67c06-0efe-4528-bd71-4caaf41e18dd.png",
+            "profile_name": "SANJIB KUMAR SAHOO"
+          }
+        },
+        "c34de70e-de9b-4fd9-86be-1fb08b517b9e": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_18523474-86d0-4a95-b490-bcf3f9e21b01.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"I highly recommend Trya to who are facing hair related issues. <\/strong>It doesn't have any side effects and using combinations Ayurveda and allopathic. I am using all the traya ....\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Bhavin_Hirpara_120x_1b2d7f89-d212-4560-b00a-d0316a249d53.png",
+            "profile_name": "Bhavin Hirpara"
+          }
+        },
+        "f9a8f4a7-afe8-4b1e-a023-d5b49917fdd3": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_18523474-86d0-4a95-b490-bcf3f9e21b01.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"I found out traya when I felt I need to correct my hair issues internally than externally. <\/strong>After consultation I was prescribed few products by the doctor at traya. I’ve been...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Samarth_Ambujakshan_120x_941dad05-4af1-4ade-bd71-4eef4465ca48.png",
+            "profile_name": "Samarth Ambujakshan"
+          }
+        },
+        "4ad0015a-c395-4b61-982a-c1813eba2c7a": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_18523474-86d0-4a95-b490-bcf3f9e21b01.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"Great product. Amazing result in just 4-5 months.<\/strong> Amazing work by Traya Health. I want to say thanks & blessings to TEAM TRAYA HEALTH.🙏🙏🙏🙏\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/dhirendra_kumar_Fase_120x_aac31f76-4482-4aed-abae-666c03dfd4c2.png",
+            "profile_name": "dhirendra kumar Fase"
+          }
+        },
+        "824da62c-cb3b-4acd-bb58-c6fde6ee8ab4": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_18523474-86d0-4a95-b490-bcf3f9e21b01.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"Simply Amazing , They will keep track of your routine every month and the progress. <\/strong>They are very dedicated and approachable. Hair oil is one thing...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/STATUS_120x_152c923d-2c8e-495a-be0e-d079c3d4d921.png",
+            "profile_name": "STATUS"
+          }
+        },
+        "79accc6f-dddb-418b-9632-afb55a31bd39": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_18523474-86d0-4a95-b490-bcf3f9e21b01.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "2 months ago",
+            "desc": "<p><strong>\"Traya was the last hope of my hair loss treatment...<\/strong> and i see my hair growth that I never thought the product is 100% auryvedic and effective hair couch also take...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Nikhil_Patthe_120x_bb807ab0-cc05-46fe-b9e7-46efc97f5a1d.png",
+            "profile_name": "Nikhil Patthe"
+          }
+        },
+        "51cac447-b5e3-4453-91c3-162ef2d26aff": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_18523474-86d0-4a95-b490-bcf3f9e21b01.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "3 months ago",
+            "desc": "<p><strong>\"Its been almost two months since my treatment began in Traya... <\/strong>and I'm really satisfied with the visible results and my overall health and my hair coach priya she helped...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Ashutosh_Singh_120x_983a8d1c-15ff-483d-9c74-e85fd3af3680.png",
+            "profile_name": "Ashutosh Singh"
+          }
+        },
+        "72b857cb-d5e5-4b6c-a77d-3e381917c068": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_18523474-86d0-4a95-b490-bcf3f9e21b01.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "3 months ago",
+            "desc": "<p><strong>\"I have been using traya last 40 days weekly twice and i feel the results no dandruff and itchy, <\/strong>if you use this as instructed its good product for anti dandruff and scalp itch.\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/jagan_120x_504acd57-a4a9-4212-830c-5f1d5e3928c1.png",
+            "profile_name": "jagan"
+          }
+        },
+        "ae7c4820-d3ab-4d29-9e09-8f50fafb6b0b": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_07853d00-d84b-44cc-8580-012b629fa752.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "3 months ago",
+            "desc": "<p><strong>\"loved each and everything from traya. <\/strong>coaches help us in understanding where we are, what we should to do, what we shouldn't do (which is very important)...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Krishna_Koushik_SB_120x_1d6587f4-081b-42a4-b869-0e5a10b48963.png",
+            "profile_name": "Krishna Koushik SB"
+          }
+        },
+        "8c651187-9c83-4a30-ae4a-0577b7402d90": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_07853d00-d84b-44cc-8580-012b629fa752.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "3 months ago",
+            "desc": "<p><strong>\"Hey! Was apprehensive at first because it was my first time getting into something like this. <\/strong>Throughout school and college I was blessed with good hair but after being....\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Siddhartha_Rajiv_120x_0938e5b8-9f0c-442e-ade2-9e0cc6abc87e.png",
+            "profile_name": "Siddhartha Rajiv"
+          }
+        },
+        "5b2e6310-d1c4-47c3-8590-b0fe4811a56b": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_07853d00-d84b-44cc-8580-012b629fa752.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "3 months ago",
+            "desc": "<p><strong>\"Traya Has been a Great Experience.. <\/strong>and I am really Happy with my Coach Priya who is always there ro support me and assist me with my concerns ans queries. The...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Rilesh_Pallicha_120x_cdc97b92-96c7-4efd-95ec-8157552573ab.png",
+            "profile_name": "Rilesh Pallicha"
+          }
+        },
+        "26ea87a6-ae70-42bc-919a-1d001e32ee45": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_07853d00-d84b-44cc-8580-012b629fa752.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "3 months ago",
+            "desc": "<p><strong>Happy with the result.<\/strong><br\/>After using the traya shampoo my scalp is clear and have less hair fall and my hair looks healthy, soft and shiny...................\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/aishwarya_raut_120x_2b71230f-de8d-4ee7-b594-4765adbd2cee.png",
+            "profile_name": "aishwarya raut"
+          }
+        },
+        "432bb576-767a-46d8-93b6-2d0501f9db41": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_07853d00-d84b-44cc-8580-012b629fa752.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "3 months ago",
+            "desc": "<p><strong>\"A big thank you to Traya & kirnal Shah my hair coach. <\/strong>It's been 2 months now that am regularly with my medication and diet. And I can see results already. I am already...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Verlaine_creado_120x_81c31073-67c5-49a8-b678-44fb3654ad24.png",
+            "profile_name": "Verlaine creado"
+          }
+        },
+        "fd623606-9d7d-491d-91c3-0ab9a87a5463": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_07853d00-d84b-44cc-8580-012b629fa752.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "3 months ago",
+            "desc": "<p><strong>\"I used the product for 3 months and I saw the improvement in the growth of my hair. <\/strong>The product is very nice.Thanks to my hair coach @krinal sah mam...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Akshay_kumar_120x_20360873-bee1-4b51-938f-c58525dd6e21.png",
+            "profile_name": "Akshay kumar"
+          }
+        },
+        "2fd14606-a96a-449c-b258-acfe4c06098c": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_07853d00-d84b-44cc-8580-012b629fa752.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "3 months ago",
+            "desc": "<p><strong>\"The team is extremely amazing. <\/strong>From the very first call, they have answered all the silliest of doubts with atmost dedication and have been bery supportive throughout. I....\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Sumit_Soni_120x_0ce12448-1b24-4774-883d-5bf32648e44c.png",
+            "profile_name": "Sumit Soni"
+          }
+        },
+        "41a1d036-5e8d-44ba-a202-20b7fef11643": {
+          "type": "columns",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/google-icon_120x_07853d00-d84b-44cc-8580-012b629fa752.png",
+            "review_name": "Google Reviews",
+            "rating": 5,
+            "social": "google",
+            "link": "https:\/\/www.google.com\/search?q=traya+health&oq=traya+health&aqs=chrome..69i57j0i20i263i512j0i512l3j69i60l3.2306j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3be7c9b64e503c8d:0x175ec2af01b63d77,1,,,",
+            "date": "4 months ago",
+            "desc": "<p><strong>\"Started my journey with Traya on 11th September 2021, <\/strong>they assigned me SAKSHI DOSHI as my hair coach. I must say, it has been a rewarding experience, with...\"<\/p>",
+            "profile": "shopify:\/\/shop_images\/Sunidhi_Gaur_120x_6e344ab7-716f-4fde-8fa2-4e843d2d19e4.png",
+            "profile_name": "Sunidhi Gaur"
+          }
+        }
+      },
+      "block_order": [
+        "0eab9312-863b-48c0-b393-5a6c3b4512b4",
+        "deb74062-1b9d-4e4e-9d46-4f16e69cf431",
+        "bb84a111-1379-441d-8010-da2094fd7cf9",
+        "490672ca-b539-466a-83f4-9c4469b39daa",
+        "df4899c7-653f-46f2-b666-80bf56a9a4e4",
+        "3f1cba75-2d26-43bc-8d1a-838d3d2c1ad0",
+        "1f060b3b-4bdd-4055-b888-e6e8789c62bb",
+        "53fc0048-c3ae-4a72-b3cd-643ccf634d25",
+        "de04efcd-f846-40cd-8f89-b2db463a98ee",
+        "68cecbf5-e606-46a8-b159-fd2758605a74",
+        "3e2aca62-25d8-4fa1-8967-e49855aee628",
+        "0d48f35c-9395-47d2-ab93-8b3d94401965",
+        "4babb998-9358-4a4d-98bb-32911b019ea3",
+        "1e9e46c1-0776-4c16-bf7f-6b56a8628a29",
+        "47de199e-480a-406f-8347-fae6cd3b1cf0",
+        "fe5c574f-aab9-4106-b909-e0f1e0950925",
+        "d9ea8ed2-235d-4f63-b81b-27eae10441a2",
+        "c3e64a14-6489-46b6-8ba4-f584bac16a95",
+        "f559b41a-77f6-4652-8755-674480f61096",
+        "cff62ffe-bb56-486f-92d5-3a7660d8a771",
+        "7f120758-c9b7-428c-bf6b-85a62e87adf9",
+        "9f06793a-0ee7-4a78-aacf-3f2998ee9cca",
+        "4467029a-e4bb-4db6-97fa-673faee6eb73",
+        "778c602c-5ce5-4d23-8b6e-52ae89ab2370",
+        "afdd8523-c172-48c0-a717-c990b2bd8c90",
+        "1748b9fe-287e-4e13-8e00-df0fe168c981",
+        "db52abb1-4bb7-4f54-9cee-ab40989c95ba",
+        "eb090767-b60f-4d80-8d5d-21b924dababa",
+        "54b40c3e-8820-4048-b5a9-fa4887d4f53f",
+        "c34de70e-de9b-4fd9-86be-1fb08b517b9e",
+        "f9a8f4a7-afe8-4b1e-a023-d5b49917fdd3",
+        "4ad0015a-c395-4b61-982a-c1813eba2c7a",
+        "824da62c-cb3b-4acd-bb58-c6fde6ee8ab4",
+        "79accc6f-dddb-418b-9632-afb55a31bd39",
+        "51cac447-b5e3-4453-91c3-162ef2d26aff",
+        "72b857cb-d5e5-4b6c-a77d-3e381917c068",
+        "ae7c4820-d3ab-4d29-9e09-8f50fafb6b0b",
+        "8c651187-9c83-4a30-ae4a-0577b7402d90",
+        "5b2e6310-d1c4-47c3-8590-b0fe4811a56b",
+        "26ea87a6-ae70-42bc-919a-1d001e32ee45",
+        "432bb576-767a-46d8-93b6-2d0501f9db41",
+        "fd623606-9d7d-491d-91c3-0ab9a87a5463",
+        "2fd14606-a96a-449c-b258-acfe4c06098c",
+        "41a1d036-5e8d-44ba-a202-20b7fef11643"
+      ],
+      "settings": {
+        "heading": "Traya Customer Stories"
+      }
+    },
+    "166382581785bc86ce": {
+      "type": "video-review",
+      "blocks": {
+        "48a6fec5-234a-47a9-80e5-f1f67b57013e": {
+          "type": "columns",
+          "settings": {
+            "name": "",
+            "main_video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0100\/1622\/7394\/files\/testimonial-final.mp4?v=1633342798",
+            "desc": "Our hero Mayil has been killing it on the Traya treatment for the past 9 months. Watch him speak about what kept him going and attain steady growth!"
+          }
+        },
+        "8ba38271-8b38-487d-87a8-8aa050cd07d7": {
+          "type": "columns",
+          "settings": {
+            "name": "",
+            "main_video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0100\/1622\/7394\/files\/Shruti-video.mp4?v=1639052943",
+            "desc": "Meet Shruthi, she could control her post pregnancy hair fall in just 3- 4months with Traya."
+          }
+        },
+        "b1419600-910c-47aa-9e06-7e4aa2ab976e": {
+          "type": "columns",
+          "settings": {
+            "name": "",
+            "main_video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0100\/1622\/7394\/files\/Y2Mate-video.mp4?v=1639053402",
+            "desc": "Meet Uddeshya, he saw some exceptional results in 4 months. Hear how he could make it possible in such a short time."
+          }
+        }
+      },
+      "block_order": [
+        "48a6fec5-234a-47a9-80e5-f1f67b57013e",
+        "8ba38271-8b38-487d-87a8-8aa050cd07d7",
+        "b1419600-910c-47aa-9e06-7e4aa2ab976e"
+      ],
+      "settings": {
+        "Heading": "Watch Traya's Magic Unfold"
+      }
+    },
+    "16635940430184e729": {
+      "type": "google-reviews",
+      "blocks": {
+        "b5602025-c5ce-46de-8a82-093fa70f1a05": {
+          "type": "columns",
+          "settings": {
+            "name": "TheCmayil",
+            "rating": 4,
+            "desc": "<p>I feel much better after taking up the treatment. The treatment does not just include tablets and minoxidil.<br\/><br\/>Treatment includes ensuring proper sleep cycle and proper diet. Surely there is notable changes after 9 months of treatment.<\/p>"
+          }
+        },
+        "7d61b26c-c4eb-4d6a-a68d-84f44ac4acc4": {
+          "type": "columns",
+          "settings": {
+            "name": "SANJUKTA SANYAL",
+            "rating": 5,
+            "desc": "<p>As a mother,I was extremely worried about my teenage daughter's hair condition. I chanced upon Traya and approached you.A very helpful team always making sure that a regular follow up is done.The hair health has improved a lot since I started and I am very pleased with the results. Thank you Traya..Thank you Mallika for being just a call away.<\/p>"
+          }
+        },
+        "37656743-3396-43a2-a073-f369e80afb7c": {
+          "type": "columns",
+          "settings": {
+            "name": "jithu thomas",
+            "rating": 4,
+            "desc": "<p>I am 25 years old. I have androgenic alopecia. couple of months back I found traya and started its medication. now I am happy with its result. most important thing is patience and consistency. diet is also a key factor. I recommend traya 100%. good customer service.the sooner the better<\/p>"
+          }
+        },
+        "daade501-e5c0-4db8-9190-373312761fe0": {
+          "type": "columns",
+          "settings": {
+            "name": "LOKJEET RANAA..",
+            "rating": 5,
+            "desc": "<p>Before trying traya i had used a lot of other meditation too... Traya was the only one which gave me the best positive results for my hair... Grateful to them<\/p>"
+          }
+        },
+        "9fdfd8c2-d776-4a3d-a8be-f0abe91b13ef": {
+          "type": "columns",
+          "settings": {
+            "name": "Devarshi Desai",
+            "rating": 5,
+            "desc": "<p>I have been following Traya regime since last 9 months now and the results are all to speak for. I had issues regarding hair density and patches. Now I am very much happy and satisfied with the results. In short, Quality & Quantity both have improved for me. Infact, it has been helpful for my body balance as well. Thanks to Sneha for all the help and Cheers to the Traya team👍 👍 👍<\/p>"
+          }
+        },
+        "5cf68dc4-c98e-44d0-86ea-b5f90b13969f": {
+          "type": "columns",
+          "settings": {
+            "name": "Shubham Nikam",
+            "rating": 5,
+            "desc": "<p>It's all about patience and consistency. Traya helped me to grow my hair back, as well as to live a healthy lifestyle with the customized diet. Before Traya I lost all my hopes. If a person like me can grow my hairs back., I'm 100℅ sure with the help of Traya everyone who is facing hair fall issues can grow back their hair. Trust me it's worth it.<\/p>"
+          }
+        },
+        "4f0fefe3-ff24-4e64-8992-ba3efb6a1eca": {
+          "type": "columns",
+          "settings": {
+            "name": "Pavan",
+            "rating": 5,
+            "desc": "<p>It's been an amazing experience with Traya Health. I've got visible results in less than 3 months of usage. My heartfelt thanks to Ritu who was available at all times to guide me through the entire process and keep me motivated. Thank you.<\/p>"
+          }
+        },
+        "00616430-8572-4d3e-a005-65e73fdc0a1b": {
+          "type": "columns",
+          "settings": {
+            "name": "Vaskar Mech",
+            "rating": 5,
+            "desc": "<p>Great products which actually work.Significant reversal of hairfall. Quite satisfied.  And they go far beyond just sending you the products, actively guiding and helping you through the entire process. A very heartfelt thanks to them.<\/p>"
+          }
+        },
+        "97e0fd63-7656-4890-9136-a321c24b5a53": {
+          "type": "columns",
+          "settings": {
+            "name": "Debaleena Dey",
+            "rating": 5,
+            "desc": "<p>The products of Traya are great. They have guided me well on their website quiz and after using the products I have seen amazing results. My hair is much more healthy, voluminous and shiny. It also helped me to reduce hair fall and grow my hair longer.<\/p>"
+          }
+        },
+        "0f63dbd9-4369-4965-8438-8da7b7969fd1": {
+          "type": "columns",
+          "settings": {
+            "name": "rohit daz",
+            "rating": 5,
+            "desc": "<p>TRAYA'S hairfall treatment has been of great help in reducing my hairfall issue and also regrowing new hair. Also the support staff Poornima who was assigned to me has been  very helpful as she checked on my progress,  provided diet plans and  answering any questions regarding the medication. A great experience overall.<\/p>"
+          }
+        },
+        "5c2989ea-95b3-437b-b03c-b3289b40dca3": {
+          "type": "columns",
+          "settings": {
+            "name": "Lakshay Kalra",
+            "rating": 5,
+            "desc": "<p>The product is really effective. Consistency is the key. Minoxidil works as wonders. Have seen good results in a span of 4 months. The team is really supportive and prompt. Keep up the good work Team Traya :)<\/p>"
+          }
+        },
+        "8368e3f5-e46a-4bcf-9948-ca914bb71372": {
+          "type": "columns",
+          "settings": {
+            "name": "Hitesh Chavan",
+            "rating": 5,
+            "desc": "<p>Extremely good experience... You can see visible results in just 3-4 months... Special thanks to hair coach Poornima for keeping a track of my monthly progress.. will definitely recommend Traya to my friends...<\/p>"
+          }
+        },
+        "aea93216-5b8e-4d25-aecc-7188d1f65e52": {
+          "type": "columns",
+          "settings": {
+            "name": "vasu singh",
+            "rating": 5,
+            "desc": "<p>It's being great journey with traya for 1 year. Start the treatment when left with few hair on scalp now could shine with head full of hair.... Medicine diet everything they give was perfect......<br\/>And I'm thankful to my hair coach ritu. She was present at all places and evertime i need her. And she was excellent to help me with that. Thank you traya and ritu.<\/p>"
+          }
+        },
+        "0a53cc85-a958-47bf-bf41-d41f3cf24cbd": {
+          "type": "columns",
+          "settings": {
+            "name": "ankit ruparel",
+            "rating": 5,
+            "desc": "<p>Great customer service and great solution that is bringing three disciplines of science to your doorstep. Recommend to anyone who wants to sustainable habit To take care of their hair health.<\/p>"
+          }
+        },
+        "75eede70-0304-4262-9235-675363642c94": {
+          "type": "columns",
+          "settings": {
+            "name": "Mayuri patani",
+            "rating": 5,
+            "desc": "<p>Traya is a must for those who want to get rid of hair fall. The kind of personal attention they give in this journey is remarkable. In my case, nikita and traya products have become my blessings. My hair fall has stopped completely in merely 2 months n this is actually a miracle for me. ❤️  Sooo happy with this n now looking forward towards healthy hair growth. 🤞<\/p>"
+          }
+        },
+        "0eab123f-69ae-44cc-b9b8-f055c6f612ac": {
+          "type": "columns",
+          "settings": {
+            "name": "Bhawana Singh",
+            "rating": 5,
+            "desc": "<p>Since i have started using Traya hair care regime, my hair have really improved a lot. This regime is also helping me in stress management and to get better sleep. I would highly recommend Traya.<\/p>"
+          }
+        },
+        "7c8bac21-e802-4efa-bda6-f53ab9c15102": {
+          "type": "columns",
+          "settings": {
+            "name": "Kshitiz Singh",
+            "rating": 5,
+            "desc": "<p>I have been been traya for quite sometime now have seen a lot of hairfall reduce and also seen some hair growth on crown<\/p>"
+          }
+        },
+        "fd1311de-665f-47b3-bfc2-f1c6a8735cf6": {
+          "type": "columns",
+          "settings": {
+            "name": "Abhijeet Pawale",
+            "rating": 5,
+            "desc": "<p>The experience im getting is really great.Poornima mam is outstanding ,the way she guide is really good and understanding for us.Traya hatsoff ,it really works.<\/p>"
+          }
+        },
+        "a25c8844-29c7-4071-aa25-b2f829f7a8be": {
+          "type": "columns",
+          "settings": {
+            "name": "Balkrishna Gaur",
+            "rating": 5,
+            "desc": "<p>Amazing treatment and services! My hair fall stopped in just 2 months...looking forward for some new regrowth. So far its been good and has improved my inner health too. The diet plan given is also helpful.<\/p>"
+          }
+        },
+        "8594b1d3-06dc-4e77-a5e9-54caf8d908e4": {
+          "type": "columns",
+          "settings": {
+            "name": "Santhosh Kumar",
+            "rating": 5,
+            "desc": "<p>It's been great since I'm using Traya kit for 3 months now and my hair fall and dandruff got stopped in the very first month itself and in the next two months it became very strong enough and shiny, I'm really excited to see the regrowth and a great volume of my hair 😊  with the next kits.<\/p>"
+          }
+        },
+        "fe324833-d9da-4bda-ac34-a599decec050": {
+          "type": "columns",
+          "settings": {
+            "name": "tanmay arte",
+            "rating": 5,
+            "desc": "<p>Used the products for 8 months now. Got very good results. My hair loss is genetics so now I just have to maintain my amazing regrowth. I am on the Hair-Forever Maintenance kit which is just a serum, oil and shampoo. I am so happy with the results that I will never shift back to any other brand. Thanks <\/p>"
+          }
+        },
+        "9a96dd7d-9ac7-4778-a9c8-4ec9e7d72731": {
+          "type": "columns",
+          "settings": {
+            "name": "Sonia Hair Studio",
+            "rating": 5,
+            "desc": "<p>The product is very good<br\/>The results were visible after 15 itself<br\/>Must try essential hair food<\/p>"
+          }
+        },
+        "9074ee32-4cb6-4246-aa3f-66b5d262362c": {
+          "type": "columns",
+          "settings": {
+            "name": "Talath",
+            "rating": 5,
+            "desc": "<p>Tried many products available in market but never seen good results as Traya. Best recommended treatment for hari fall and dandruff. Need to stick with the treatment on regular basis to see excellent results.<\/p>"
+          }
+        },
+        "a9ccdd8e-36df-436e-8134-13c0b7cf9f2b": {
+          "type": "columns",
+          "settings": {
+            "name": "BRACT BEAUTY",
+            "rating": 5,
+            "desc": "<p>The range has been really working for my hair. I have been using it for sometime now and the amount of hairfall i get post hairwash has reduced than before. Highly satisfied with the result.<\/p>"
+          }
+        },
+        "b36ce330-943a-4713-b414-a0a52e2bdb51": {
+          "type": "columns",
+          "settings": {
+            "name": "Atiullah Atiullah",
+            "rating": 5,
+            "desc": "<p>My treatment has been going good so far and hair health has improved a lot. Medical team keeps me updated about everything I need to follow and I can feel the change from inside. My inner health has improved and my hair also looks better.<\/p>"
+          }
+        },
+        "cb1da04d-36fb-4b64-95ad-73a0ee6da9cc": {
+          "type": "columns",
+          "settings": {
+            "name": "Raj Kushwaha",
+            "rating": 5,
+            "desc": "<p>Very happy with results and services provided. It takes time and healthy lifestyle along with these medications. So keep calm and follow the process.<\/p>"
+          }
+        },
+        "815b7951-e740-44a9-bf50-2ba2c76af619": {
+          "type": "columns",
+          "settings": {
+            "name": "Ankita Biswas",
+            "rating": 5,
+            "desc": "<p>The Serum is Great. Its very effective if you hv baldness problem. U cn notice visible result within 30 days.<\/p>"
+          }
+        },
+        "28e5ee45-2eab-4350-8529-d5f873d33c54": {
+          "type": "columns",
+          "settings": {
+            "name": "Style with me",
+            "rating": 5,
+            "desc": "<p>I use traya hair growth kit nd i see the magical difference in my hair it actually works really good for ur hairs i love this products<\/p>"
+          }
+        },
+        "fb62b2c8-bc06-4f0e-be44-2f0e7454eaa9": {
+          "type": "columns",
+          "settings": {
+            "name": "Deboleena Mitra Kumar",
+            "rating": 5,
+            "desc": "<p>I simply love Traya products as these are effective and definitely show results if used religiously. Initially I was a bit skeptical about it but now having used it for two months I can assure anyone that this is by far the best thing that one can do to save one's hair. Thank you Traya...<\/p>"
+          }
+        },
+        "b92878c9-4132-4ae6-8b2e-e97645a0cb56": {
+          "type": "columns",
+          "settings": {
+            "name": "Kiran Rajput",
+            "rating": 5,
+            "desc": "<p>IT WORKS! I'm not someone who falls for a trap easily so I researched well before taking this treatment! My research, their treatments and efforts have truly shown results. I like their concept of 3 sciences, it was new to me but they proved it by giving me my desired results! Thanks Tatva<\/p>"
+          }
+        },
+        "ed43c414-7778-4e35-bffc-03fef9a7c9cb": {
+          "type": "columns",
+          "settings": {
+            "name": "Pranav Soni",
+            "rating": 5,
+            "desc": "<p>Amazing products, really help regrow hair. The best part is, it doesn't matter where ever you are located in India, they get in touch through phone and provide proper treatment from the ease of your home. Special thanks to Zahra for reaching out every week for the treatment update. Cheers to the team 👍🏻<\/p>"
+          }
+        },
+        "07cc9bdb-5a5a-4043-be0a-4ff61b5b9f87": {
+          "type": "columns",
+          "settings": {
+            "name": "Satish Yadav",
+            "rating": 5,
+            "desc": "<p>Truly honest. I am on stage 5 hair loss, the team told me in the first consult call that it will take 5 to 8 months to see results. I like that they set the right journey plan. I would definitely recommend the company to every man out there. Save your hair because it's possible.<\/p>"
+          }
+        },
+        "e1bb0224-ba7c-4f0f-b345-7632eff9f748": {
+          "type": "columns",
+          "settings": {
+            "name": "roshan patel",
+            "rating": 5,
+            "desc": "<p>Traya Health is working.. 💯 this medicines are so helpfull to me..  nd i m satisfied with.. this product..<br\/>amazing product.  !!<\/p>"
+          }
+        },
+        "19a89ccd-ad16-4143-ac98-646212417847": {
+          "type": "columns",
+          "settings": {
+            "name": "Savio Philip",
+            "rating": 5,
+            "desc": "<p>Effective treatment if you follow it with dedication.<br\/>They give a dedicated poc(mine was Malika) which is quite helpful.<\/p>"
+          }
+        },
+        "9636803a-ece8-4e35-a4a7-0061e6434433": {
+          "type": "columns",
+          "settings": {
+            "name": "SHAGUN AGARWAL..",
+            "rating": 5,
+            "desc": "<p>it was a nice experience though product are expensive but they really help, i would like to thank malika for her constant motivation and support<\/p>"
+          }
+        },
+        "4e80b80e-e7e8-4309-bfc0-454ba730c5e5": {
+          "type": "columns",
+          "settings": {
+            "name": "Shailendra",
+            "rating": 5,
+            "desc": "<p>My hair regrowth with tatva hasn't been less than a miracle. I never thought my bald spot on the crown area will ever be covered. I took this treatment for 3 months and I got some regrowth! I will continue for better results and more growth.<\/p>"
+          }
+        },
+        "31687e16-1447-41f7-bb76-d5534aaf5e02": {
+          "type": "columns",
+          "settings": {
+            "name": "Mohammed Bilaal",
+            "rating": 5,
+            "desc": "<p>The holistic treatment of traya did not only work on my hair but also increased the overall health of my body. It's a perfect blend of Ayurveda and allopathy and thanks to my health expert Malika ma'am and the rest of the team. I would strongly recommend traya health to everyone.<\/p>"
+          }
+        },
+        "495d06ca-bb8a-4637-b5f6-0aa1f2c506b2": {
+          "type": "columns",
+          "settings": {
+            "name": "Pravin Rawal",
+            "rating": 5,
+            "desc": "<p>My experience with tatva has been great so far. I have started to see regrowth from the past month and would like to continue with the treatment for better results. I have just placed my 4th order with them. They never fail to impress me. Thanks guys!<\/p>"
+          }
+        },
+        "5a0f70df-3191-4c85-9ce3-737771f3e3c9": {
+          "type": "columns",
+          "settings": {
+            "name": "uday panchal",
+            "rating": 5,
+            "desc": "<p>I had severe dandruff and hair fall problem since so many years and tatva's treatment fixed my dandruff in just one month! Effectiveness of their treatment is truly surprising. I'm in my third month now and can see a considerable change in my hair too. Hair fall has stopped and there some new growth too.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "b5602025-c5ce-46de-8a82-093fa70f1a05",
+        "7d61b26c-c4eb-4d6a-a68d-84f44ac4acc4",
+        "37656743-3396-43a2-a073-f369e80afb7c",
+        "daade501-e5c0-4db8-9190-373312761fe0",
+        "9fdfd8c2-d776-4a3d-a8be-f0abe91b13ef",
+        "5cf68dc4-c98e-44d0-86ea-b5f90b13969f",
+        "4f0fefe3-ff24-4e64-8992-ba3efb6a1eca",
+        "00616430-8572-4d3e-a005-65e73fdc0a1b",
+        "97e0fd63-7656-4890-9136-a321c24b5a53",
+        "0f63dbd9-4369-4965-8438-8da7b7969fd1",
+        "5c2989ea-95b3-437b-b03c-b3289b40dca3",
+        "8368e3f5-e46a-4bcf-9948-ca914bb71372",
+        "aea93216-5b8e-4d25-aecc-7188d1f65e52",
+        "0a53cc85-a958-47bf-bf41-d41f3cf24cbd",
+        "75eede70-0304-4262-9235-675363642c94",
+        "0eab123f-69ae-44cc-b9b8-f055c6f612ac",
+        "7c8bac21-e802-4efa-bda6-f53ab9c15102",
+        "fd1311de-665f-47b3-bfc2-f1c6a8735cf6",
+        "a25c8844-29c7-4071-aa25-b2f829f7a8be",
+        "8594b1d3-06dc-4e77-a5e9-54caf8d908e4",
+        "fe324833-d9da-4bda-ac34-a599decec050",
+        "9a96dd7d-9ac7-4778-a9c8-4ec9e7d72731",
+        "9074ee32-4cb6-4246-aa3f-66b5d262362c",
+        "a9ccdd8e-36df-436e-8134-13c0b7cf9f2b",
+        "b36ce330-943a-4713-b414-a0a52e2bdb51",
+        "cb1da04d-36fb-4b64-95ad-73a0ee6da9cc",
+        "815b7951-e740-44a9-bf50-2ba2c76af619",
+        "28e5ee45-2eab-4350-8529-d5f873d33c54",
+        "fb62b2c8-bc06-4f0e-be44-2f0e7454eaa9",
+        "b92878c9-4132-4ae6-8b2e-e97645a0cb56",
+        "ed43c414-7778-4e35-bffc-03fef9a7c9cb",
+        "07cc9bdb-5a5a-4043-be0a-4ff61b5b9f87",
+        "e1bb0224-ba7c-4f0f-b345-7632eff9f748",
+        "19a89ccd-ad16-4143-ac98-646212417847",
+        "9636803a-ece8-4e35-a4a7-0061e6434433",
+        "4e80b80e-e7e8-4309-bfc0-454ba730c5e5",
+        "31687e16-1447-41f7-bb76-d5534aaf5e02",
+        "495d06ca-bb8a-4637-b5f6-0aa1f2c506b2",
+        "5a0f70df-3191-4c85-9ce3-737771f3e3c9"
+      ],
+      "settings": {
+        "Heading": "Google Review",
+        "color_star": "#eeaf2e"
+      }
+    },
+    "1664901583a085e939": {
+      "type": "refer-and-earn",
+      "settings": {
+        "link_url": "shopify:\/\/pages\/referral",
+        "referFriend": "Refer Your friend<br>& Earn flat",
+        "discount": "20 % OFF",
+        "on_your_next": "*on your next order. Offer valid on Rs.2000+",
+        "money_des_img": "shopify:\/\/shop_images\/money_doodle_3_881d2c17-9423-439f-9229-dd6faa233490.png",
+        "money_mob_img": "shopify:\/\/shop_images\/money_doodle_mobile_2.png"
+      }
+    }
+  },
+  "order": [
+    "1663597862130ea03a",
+    "main",
+    "16638254822d60c904",
+    "166382581785bc86ce",
+    "16635940430184e729",
+    "1664901583a085e939"
+  ]
+}

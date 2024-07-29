@@ -1,0 +1,155 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "doctor_details_zj4EWR": {
+      "type": "doctor-details",
+      "blocks": {
+        "text_K8Nz9W": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "A",
+            "user_name": "Aditi",
+            "user_content": "Dr. Sonia understood my problems and gave proper treatment, I would recommend her to everyone."
+          }
+        },
+        "text_67GmAz": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "V",
+            "user_name": "Vishal",
+            "user_content": "Dr. is surely an expert in hair loss treatment, I saw a difference in just few months"
+          }
+        },
+        "text_TJeRRF": {
+          "type": "text",
+          "settings": {
+            "UserFirstLater": "N",
+            "user_name": "Neha",
+            "user_content": "Hair care ke liye Dr. ka guidance best tha, healthier hair mile."
+          }
+        }
+      },
+      "block_order": [
+        "text_K8Nz9W",
+        "text_67GmAz",
+        "text_TJeRRF"
+      ],
+      "settings": {
+        "doctor_image": "shopify:\/\/shop_images\/Dr_Sonia.webp",
+        "doctor_name": "Dr Sonia Tekchandani",
+        "specialization": "DVD, MBBS Dermatologist, Trichologist, Cosmetologist |  24 YEARS",
+        "education": "MBBS, DDV, FAM (Dermatology)",
+        "registration_no": "55780",
+        "ratings": "4.8\/5",
+        "Plan_patients": "",
+        "known_languages": "Hindi, English",
+        "about_doctors": "Dr. Tekchandani brings over 25 years of clinical and teaching experience in dermatology and aesthetic medicine across India and the UAE. She holds an MBBS, a DDV, and a Fellowship in Aesthetic Medicine (FAM). She is known for her exceptional injector skills and aesthetic eye. She is an esteemed speaker and faculty member at major dermatology events like the IADVL, CDSI."
+      }
+    },
+    "qa_accordion_WFEWKC": {
+      "type": "QA-accordion",
+      "blocks": {
+        "faq_AzMJEc": {
+          "type": "faq",
+          "settings": {
+            "Question": "Why do people visit Dr. Sonia?",
+            "Answer": "People seeking expert treatment of skin and hair visit Dr. Sonia."
+          }
+        },
+        "faq_rHxH7q": {
+          "type": "faq",
+          "settings": {
+            "Question": "What does Dr Sonia specialise in?",
+            "Answer": "She is known for her exceptional injector skills and aesthetic eye"
+          }
+        }
+      },
+      "block_order": [
+        "faq_AzMJEc",
+        "faq_rHxH7q"
+      ],
+      "settings": {
+        "Accordiontitle1": "",
+        "Accordiontitle2": ""
+      }
+    },
+    "doctor_slide_WHX8Vh": {
+      "type": "doctor-slide",
+      "blocks": {
+        "text_T9Eycj": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Dhwani Saxena",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Dhwani_Saxena.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "5 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/5star-1_3fa88a90-eb03-40b7-9705-1e9e734f676c.png",
+            "PageUrl": "shopify:\/\/pages\/doctor-dhwani"
+          }
+        },
+        "text_CwRi7m": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Kalyani Deshmukh",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Kalyani.png",
+            "specialist": "DERMATOLOGIST | HAIR SPECIALIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "5\/5",
+            "ratingstar": "shopify:\/\/shop_images\/5star-1_3fa88a90-eb03-40b7-9705-1e9e734f676c.png",
+            "PageUrl": "shopify:\/\/pages\/kalyani-deshmukh"
+          }
+        },
+        "text_47GdUE": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Sangeeta Menon",
+            "doctorImage": "shopify:\/\/shop_images\/Dr.Sangeeta_Menon-1_compact_db3ee615-d365-4859-8e1c-91fa4ccc9466.png",
+            "specialist": "DIETICIAN | NUTRITIONIST,",
+            "experience": "4 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.8\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": ""
+          }
+        },
+        "text_7jrLD8": {
+          "type": "text",
+          "settings": {
+            "doctorName": "Dr. Shefali Saini",
+            "doctorImage": "shopify:\/\/shop_images\/Dr_Shefali_79c32e40-1947-4a30-8292-8f5d3ca1d112.png",
+            "specialist": "Dermatologist l Hair Specialist ",
+            "experience": "6 YEARS Overall Experience",
+            "verified": "shopify:\/\/shop_images\/verified_icon_1_304f00ed-b0d5-4ffe-aaf9-f7c6f8d05920.png",
+            "rating": "4.7\/5",
+            "ratingstar": "shopify:\/\/shop_images\/4_small_1806ef9c-237a-42b7-9bad-61e2e3173856_1.png",
+            "PageUrl": "shopify:\/\/pages\/shefali-saini"
+          }
+        }
+      },
+      "block_order": [
+        "text_T9Eycj",
+        "text_CwRi7m",
+        "text_47GdUE",
+        "text_7jrLD8"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "doctor_details_zj4EWR",
+    "qa_accordion_WFEWKC",
+    "doctor_slide_WHX8Vh"
+  ]
+}

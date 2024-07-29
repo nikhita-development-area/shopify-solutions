@@ -1,0 +1,580 @@
+  var getUrlParameter = function getUrlParameter(sParam) {
+  var sPageURL = window.location.search.substring(1),
+      sURLVariables = sPageURL.split('&'),
+      sParameterName,
+      i;
+
+  for (i = 0; i < sURLVariables.length; i++) {
+    sParameterName = sURLVariables[i].split('=');
+
+    if (sParameterName[0] === sParam) {
+      return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+    }
+  }
+};
+
+var id = getUrlParameter('id'), f_name, C_number, C_email, user__gender, user_gender;
+
+var cohort = getUrlParameter('cohort');
+var factors = [];
+if (id) {
+  localStorage.setItem('user-gender', 'female');
+  localStorage.setItem('rid', id);
+}
+
+id = localStorage.getItem('rid');
+  var baseUrls = {
+  DEV: 'https://api.dev.hav-g.in/',
+  PROD: 'https://api.hav-g.in/'
+}
+var tokens = {
+  DEV:{ 
+    "Authorization": "Bearer e2623576-930b-48b6-81e2-a3cb5e37f47d"
+  },
+  PROD: { 
+    "Authorization": "Bearer d7ef603e-71ea-44a1-93f2-2bacd08c4a90"
+  }
+}
+var token = tokens.PROD;
+var baseUrl = baseUrls.PROD;
+var liveendpoint = 'https://api.hav-g.in/dgReport?id=';
+ 
+if (cohort == 2) {
+  liveendpoint = baseUrl + 'dgReport/v2?id=';
+} else {
+  liveendpoint = baseUrl + 'dgReport/v1?id=';
+}
+ // liveendpoint = baseUrl + 'dgReport/v3?id=';
+    var newapi = baseUrl + 'dgReport/v6?id=';
+   liveendpoint = newapi;
+
+
+  if(id){
+
+    jQuery(document).ready(function($){
+
+      jQuery.ajax({
+        url: liveendpoint+id,
+        dataType: 'json',
+        headers: token
+      })
+      .done(function(data){
+               console.log(data);
+        displayComboProduct(data.Recommendations);
+        let goal = data.User_Analysis.goal;
+        if(goal != null && goal != 'undefined'){
+          goal = goal.replace('{"',"").replace(/","/g,", ").replace(/Anti-/g,'').replace(/More/g,'').replace('"}',"")
+        }else {
+         goal = 'Goal';
+        }
+        let root_cause = `Gut:${data.User_Analysis.gut}, Stress:${data.User_Analysis.stress}`;
+//             let suffering = JSON.parse(JSON.stringify(data.User_Analysis.suffering)).split(',');
+        var suffering_data = data.User_Analysis.suffering_from_conditions;
+        console.log("root_cause", root_cause);
+//         console.log("goal", goal);
+        let Stress = data.User_Analysis.stress;
+        let Genetics = data.User_Analysis.family_genetic;
+        let Digestion = data.User_Analysis.acidity_bloating_gas_indigestion;
+        console.log("stress", Stress);
+        console.log(typeof Stress);
+        if(data.User_Analysis.stage && data.User_Analysis.stage != "None"){factors.push(data.User_Analysis.stage)}
+        console.log("suffering_data", suffering_data);
+        if(suffering_data){
+          let suffering = suffering_data.replace(/^\{|\}$/g,'').split(',');
+//           console.log("..", suffering);
+          for(let i in suffering){
+            if(JSON.parse(suffering[i]) == "None"){
+              // factors.push('Lifestyle');
+            }else if (JSON.parse(suffering[i]).includes("Anemia")){
+              // factors.push('Lifestyle');
+            }else{
+            factors.push(JSON.parse(suffering[i]));
+            }
+          }
+        }
+       if(Genetics == 'Both' || Genetics == 'None'){
+        factors.push('Genetics');
+        console.log("push data Genetics");
+        }
+       if(Stress == 'High' || Stress == 'Moderate'){
+        factors.push('Stress');
+        console.log("push data stress");
+        }
+         factors.push('Lifestyle','Nutrition');
+        if(Digestion == 'Yes'){
+        factors.push('Digestion');
+        console.log("push data Digestion");
+        }
+       
+       console.log("factors", factors);
+       console.log("factors0", factors[0]);
+        $('[data-user-name]').text(data.User_Analysis.first_name);
+        $('.femleBannerTTls [scalp-type]').text(data.User_Analysis.hair_type);
+        $('.femleBannerTTls [hair-concern]').text(goal);
+        $('.femleBannerTTls [root-cause]').text(factors[0]);
+        $('[primary-root]').text(factors[0]);
+        var User_Analysis = data.User_Analysis;
+        // console.log(User_Analysis);
+        f_name = User_Analysis.first_name; 
+        C_number = User_Analysis.phone; 
+        C_email = User_Analysis.email;
+        user__gender = User_Analysis.gender;
+        if(user__gender == 'F') {
+            user_gender = 'Female';
+          }
+
+          $('.root_cause_iconFR .mainFactImages').hide();
+          for(let i in factors){
+            if(i < 5 && i != 0){
+              let factor = factors[i].toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');  
+               //console.log(factor);
+            $(`[${factor}]`).show();
+            }
+            if(i >= 5) break;
+          }
+
+          $('.root_cause_iconFRs .mainFactImages').hide();
+          for(let i in factors){
+            if(i < 5 && i != 0){
+              let factor = factors[0].toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');  
+               // console.log("factorssssssssss", factor);
+            $(`.root_cause_iconFRs [${factor}]`).show();
+            }
+          }
+        
+          $('.RootCause .rootcause_description').hide();
+          for(let i in factors){
+            if(i < 5 && i != 0){
+              let factor = factors[0].toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');  
+               // console.log("factorssssssssss", factor);
+            $(`.RootCause [${factor}]`).show();
+            }
+          }
+          $('.formulation .formulation-text').hide();
+          for(let i in factors){
+            if(i < 5 && i != 0){
+              let factor = factors[0].toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');  
+               // console.log("factorssssssssss", factor);
+            $(`.formulation [${factor}]`).show();
+            }
+          }
+        
+        setTimeout(function(){
+          jQuery('.resco-combo .resco-row').slick({
+            mobileFirst: true,
+            arrows: false,
+            dots:true,
+            adaptiveHeight: true,
+            responsive: [
+              {
+                breakpoint: 760,
+                settings: "unslick"
+              }
+            ]
+          });
+          $('.result-combo-pr-image .product-single__media').slick({
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.product-single__thumbnails'
+          });
+          $('.product-single__thumbnails').slick({
+            arrows: false,
+            slidesToShow: 5,
+            infinite: true,
+            asNavFor: '.product-single__media',
+            focusOnSelect: true
+          });
+          $('.slick-items-container-result').slick();
+        },1300);
+
+         $('#add-to-cart-result-page, .sticky-btn #add-to-cart-result-page, .add-to-cart-result-page').attr('user-mobile',data.User_Analysis.phone);
+      $('#add-to-cart-result-page, .sticky-btn #add-to-cart-result-page, .add-to-cart-result-page').attr('user-email',data.User_Analysis.email);
+      });
+
+      var position=0;
+      var scrollTo='';
+      var container = $('.main-content');
+      $('.mainFactImages p').click(function(e){
+        e.preventDefault();
+        var id = $(this).attr('data-id');
+        $('#nav-tabContent #' + id).addClass('active show').siblings().removeClass('active show');
+        $('#nav-tab #' + id + '-tab').addClass('active').siblings().removeClass('active');
+      });
+
+    });
+    jQuery('body').on('click', '#add-to-cart-result-page', function() {
+      jQuery.ajax({
+        type: "POST",
+        url: '/cart/clear.js',
+        success: function(){
+          checkout();
+        },
+        dataType: 'json'
+      });
+
+    });
+
+  //   jQuery('body').on('click', '.buyNowResult2', function() {
+
+  //     jQuery.ajax({
+  //       type: "POST",
+  //       url: '/cart/clear.js',
+  //       success: function(){
+  //         buyItNow();
+  //       },
+  //       dataType: 'json'
+  //     });
+
+  //   });
+  // }
+
+var variantsID = 0;
+function displayProduct(data) {
+var $ = jQuery;
+  var r = Object.assign(data.User_Analysis, data.Recommendations);
+
+  $('.productt').hide();
+  if (r.Health_tatva === 'Yes') {
+    $('#healthTatva').show();
+    getProductByHandle('herbal-tablets');
+    var Desc = 'Ayurvedic herbs to boost absorption of nutrients for improved energy and hair health';
+  }
+  if (r.Hair_ras === 'Yes') {
+    $('#hairRasa').show();
+    getProductByHandle('hair-fall-tablets');
+    var Desc = 'Better hair quality & delayed greying with herbs like shatavari and bhringraj';
+  }
+  if (r.Gut_shuddi === 'Yes') {
+    $('#gutShuddhi').show();
+    getProductByHandle('avipattikar-digestion-tablets');
+    var Desc = 'Ayurvedic herbs for improved digestion, gut health and hair';
+  }
+  if (r.Defence_shampoo === 'Yes') {
+    getProductByHandle('shampoo');
+    var Desc = 'Chemical-free hair and scalp cleanser shampoo';
+  }
+  if (r.Minoxidil === 'Yes' && r.gender === 'M') {
+    getProductByHandle('traya-minoxidil-5');
+    $('#hairSerum').show();
+    var Desc = 'Minoxidil 5% for male androgenic alopecia hair loss and hair growth';
+  }
+  if (r.Minoxidil === 'Yes' && r.gender === 'F') {
+    getProductByHandle('minoxidil-2');
+    $('#hairSerum').show();
+    var Desc = 'Minoxidil 2% treatment for female androgenic alopecia hair loss and hair growth';
+  }
+  if (r.Minoxidil_2 === 'Yes' && r.gender === 'F') {
+    getProductByHandle('minoxidil-2');
+    $('#hairSerum').show();
+    var Desc = 'Minoxidil 2% treatment for female androgenic alopecia hair loss and hair growth';
+  }
+  if (r.Shampoo === 'Normal') {
+    $('#shampooDarmotology').show();
+    getProductByHandle('shampoo');
+    var Desc = 'Chemical-free hair and scalp cleanser shampoo';
+  }
+  if (r.Shampoo === 'Anti dandruff') {
+    $('#hairAntidandruff').show();
+    getProductByHandle('anti-dandruff-shampoo');
+    var Desc = 'Made with antifungal ingredients for getting rid of dandruff of all types';
+  }
+  if (r.Anti_danruff_shampoo === 'Yes') {
+    $('#hairAntidandruff').show();
+    getProductByHandle('anti-dandruff-shampoo');
+    var Desc = 'Made with antifungal ingredients for getting rid of dandruff of all types';
+  }
+  if (r.Hair_vitamin === 'Yes') { 
+    $('#hairVitamins').show();
+    getProductByHandle('hair-vitamins');
+    var Desc = '100% Vegetarian supplements for hair to combat vitamin deficiency related hair loss';
+  }
+
+  if ((r.Serum === 'Yes') && (r.Hair_vitamin === 'No')) {
+    $('#hairRootserum').show();
+    getProductByHandle('hair-vitamins');
+    var Desc = 'Patented hair growth serum with redensyl, biotin and caffeine';
+  }
+  
+  if (r.Hair_ras === 'Yes') {
+    getProductByHandle('hair-growth-herbs');
+    var Desc = 'Better hair quality & delayed greying with herbs like shatavari and bhringraj';
+  }
+
+  if (r.Scalp_oil === 'Yes' || r.Scalp_oil === 'bergamot and ylang ylang') {
+    $('#scalpOil').show();
+    getProductByHandle('herbal-hair-oil');
+    var Desc = 'Herbal hair oil with essential oils, customised based on scalp and hair type';
+  }
+
+  if (r.Kevon === 'Yes') {
+    // getProductByHandle('kevon-lotion-1');
+     getProductByHandle('ketoconazole-2-night-lotion');
+  }
+  
+  // if (r.Nasya === 'Yes') {
+  //   getProductByHandle('shatavari-ghrita');
+  // }
+
+  // if (r.Nasya === 'No') {
+  //   getProductByHandle('shatavari-ghrita');
+  // }
+
+  if (r.Digest_Boost === 'Yes') {
+      getProductByHandle('digest-boost-for-improved-digestive-ability-traya-health');
+  }
+  
+  if(r.gender === 'M'){
+    $('[data-gender]').append('Male');
+  } else {
+    $('[data-gender]').append('Female');
+  }
+  
+}
+
+var prices = 0;
+var variantsIDs = [];
+function getProductByHandle(handle) {
+var $ = jQuery;
+  jQuery.getJSON('/products/'+handle+'.js', function(product) {
+    
+
+    if (handle === 'customised-diet-plan' || handle === 'prescription-from-ayurveda-doctor-and-dermatologist-included') {
+
+    } else {
+      
+      if(product.title == 'Minoxidil 5% Hair Growth Serum for Hair Fall Control (60 ml)'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352666.png?v=1669811904`
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352666.png?v=1669811904`
+      }
+      if(product.title == 'Hair Vitamin with DHT Blockers | Biotin and Bhringraj'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352726.jpg?v=1670602208`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352733.jpg?v=1670603578`;
+      }
+      if(product.title == 'Hair Ras Ayurvedic Hair Herbs | 100% Natural Hair Supplement with Bhringraj'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/hair_ras_872e175c-9276-4e49-91e5-41b2877c10d6.png?v=1669817147`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/hair_ras_m.png?v=1669870936`;
+      }
+      if(product.title == 'Scalp Oil with Essential Oils for Hair Growth with Bhringraj'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/scalp_oil_1.png?v=1669978451`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/scalp_oil_m_2.png?v=1669978350`;
+      }
+        if(product.handle == 'scalp-oil-with-scalp-therapy-booster-shots'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/scalp_oil_1.png?v=1669978451`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/scalp_oil_m_2.png?v=1669978350`;
+        }
+        if(product.handle == 'scalp-oil-with-growth-therapy-booster-shots'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/scalp_oil_1.png?v=1669978451`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/scalp_oil_m_2.png?v=1669978350`;
+        }
+        if(product.handle == 'scalp-oil-with-dandruff-therapy-booster-shots'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/scalp_oil_1.png?v=1669978451`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/scalp_oil_m_2.png?v=1669978350`;
+        }
+        if(product.handle == 'scalp-oil-with-calm-therapy-booster-shots'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/scalp_oil_1.png?v=1669978451`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/scalp_oil_m_2.png?v=1669978350`;
+        }
+      
+      if(product.title == 'Health Tatva for Energy | Absorption | Immunity | Fatigue'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Health_Tatva_2.jpg?v=1669817264`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/health_tatva_m.png?v=1669873615`;
+      }
+      if(product.title == 'ReCaP Serum for Hair Fall Control and Hair Growth | Contains Redensyl, Procapil and Capixyl (30 ml)'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352732.jpg?v=1670602207`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352736.jpg?v=1670603577`;
+      }
+      if(product.title == 'Minoxidil 2% Hair Growth Serum for Hair Fall Control (60 ml)'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352730.jpg?v=1670602207`
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352737.jpg?v=1670603577`;
+      }
+      if(product.title == 'Gutt Shuddhi for Better Digestion & Gut Health | In 30 Days'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/gut_suddhi.png?v=1669816977`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/gut_suddhi_m.png?v=1669870936`;
+      }
+      if(product.title == 'Traya Nasal Drops with Shatavari for Nourishing Hair Follicles'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/nasal_drop_1.png?v=1669978451`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/nasal_drop_m_3.png?v=1669978350`;
+      }
+      if(product.title == 'Defence shampoo | Mild Shampoo with Biotin (100 ml)'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352727.jpg?v=1670602207`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352734.jpg?v=1670603577`;
+      }
+      if(product.title == 'Anti-Dandruff Shampoo with Ichthammol & Aloevera | Paraben Free'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352729.jpg?v=1670602209`
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352739.jpg?v=1670603578`;
+      }
+      if(product.title == 'Scalp Controller | Plant Based Dandruff Treatment for Itchy Scalp'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352728.jpg?v=1670602208`
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352735.jpg?v=1670603577`;
+      }
+      
+      // if(product.title == 'Kevon 2% Anti-fungal lotion for heavy dandruff'){
+      //   var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352731.jpg?v=1670602207`;
+      //   var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352738.jpg?v=1670603575`;
+      // }
+
+       if(product.title == 'Dandruff night lotion'){
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_507_1.png?v=1670862404`;
+        var resultImgdesk = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Frame_506_1.jpg?v=1670862407`;
+      }
+      
+      if (product.title === 'Gutt Shuddhi for Better Digestion & Gut Health | In 30 Days') {
+        var resultImg = `https://cdn.shopify.com/s/files/1/0100/1622/7394/files/Group_102352666.png?v=1669811904`;
+      }
+      
+      var price = theme.Currency.formatMoney(product.price, theme.moneyFormat)
+      var html = `<div class="col-md-10 pt-2 pt-md-0 result-product m-auto">
+		    <div class="product-item h-100 mb-0">
+					<a href="${product.url}" class="text-decoration-none" tabindex="-1"><img id="${product.handle}" src="${resultImg}" class="mx-auto d-md-none card border-0 rounded-lg shadow"><img id="${product.handle}" src="${resultImgdesk}" class="mx-auto d-none d-md-block card border-0 rounded-lg shadow"></a>
+			</div>
+	</div>`;
+
+
+      var title = $('[data-product-title]').append(product.title);
+
+      $('.product-section .container > .row').append(html);
+
+      $(".product-featured-image").append("<div class='img_wrap'><img id='"+ product.handle + "' src='"+ product.featured_image + "' /></div>");
+      $('#productImg').hide();
+      $('#productDescList').append("<li>"+product.title+"</li>");
+      
+    }
+    var p = product.price, doc_fee = 100000, diet_plan= 50000, hair_coach = 50000, total__price, Percentage;
+    prices = prices + p;
+    total__price = ((doc_fee + diet_plan + hair_coach) + (prices));
+    $('.total-price').html(theme.Currency.formatMoney(prices, theme.moneyFormat));
+    $('[doc_fee]').html(theme.Currency.formatMoney(doc_fee, theme.moneyFormat));
+    $('[diet_plan]').html(theme.Currency.formatMoney(diet_plan, theme.moneyFormat));
+    $('[hair_coach]').html(theme.Currency.formatMoney(hair_coach, theme.moneyFormat));
+    $('.all-total-price').html(theme.Currency.formatMoney(total__price, theme.moneyFormat));
+    $('#add-to-cart-result-page').attr('data-price', prices);
+    Percentage = parseInt(((total__price -prices)/total__price)*100);
+    $('.new-female-off-per').html(Percentage + ' % OFF');
+
+    if(getCookie("GuestForm_id")){
+    variantsIDs.push({
+      'id': product.variants[0].id,
+      'quantity': 1,
+      properties: {
+        '_result_id': id
+      }
+    });
+    }else{
+    variantsIDs.push({
+      'id': product.variants[0].id,
+      'quantity': 1
+    });
+    }
+    
+  });
+
+}
+
+function checkout() {
+  // var $ = jQuery;
+  var formData = {
+    'items': variantsIDs,
+    sections: 'cart-drawer'
+  }
+  variantsIDs.forEach(e => {
+    e.quantity = 1;
+  });
+
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => {
+    return response.json();
+  }).then(result => {
+      var t = document.querySelector('cart-drawer');
+      let cart_drawer = result.sections['cart-drawer'];
+      CartDrawerUpdate(t, cart_drawer);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+}
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+  
+// function buyItNow() {
+//   var $ = jQuery;
+//   var qty =$('[name="month"]:checked').val();
+//   variantsIDs.forEach(e => {
+//     e.quantity = qty;
+//   });
+//   let formData = {
+//     'items': variantsIDs
+//   };
+//   if(qty == 3){
+//   var acturl = '/cart/checkout?discount=Result5'
+//   }else{
+//   var acturl = '/cart/checkout'
+//   }
+
+//   fetch('/cart/add.js', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify(formData)
+//   })
+//   .then(response => {
+//    //$('.site-header__cart.js-drawer-open-right').trigger('click');
+//    document.location.href = acturl;
+//     return response.json();
+//   })
+//   .catch((error) => {
+//     console.error('Error:', error);
+//   });
+// }
+  var position=0;
+      var scrollTo='';
+      var container = $('.main-content');
+      jQuery('.result-gl-rvw').click(function(e, $){
+        e.preventDefault();
+        var attr =$(this).attr('href').split('#')[1];
+        scrollTo = $('#'+attr);
+        scrollTo.trigger('click');
+        position = scrollTo.offset().top
+        - container.offset().top
+        + container.scrollTop()-60;
+        $("html").animate({ scrollTop: position }, 600);
+      });
+
+    $(window).on('scroll', function() { 
+      if ($(window).scrollTop() >= $('[product-section]').offset().top + $('[product-section]').outerHeight() - window.innerHeight) {
+        $('[sticky__btn]').css('display', 'block');
+      } else {
+        $('[sticky__btn]').css('display', 'none');
+      }
+    });
+    
+    $(window).on('scroll', function() { 
+    if ($(window).scrollTop() >= $('.female-result .site-footer').offset().top - window.innerHeight) {
+      $('[sticky__btn]').css('position', 'static');
+    } else {
+      $('[sticky__btn]').css('position', 'fixed');
+    }
+  });
+
+$(document).ready(function(){
+  setTimeout(function(){
+    $('.result_product_slides').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      dots: true,
+      arrows: true,
+      autoplaySpeed: 2000
+    });
+  }, 2500);
+});

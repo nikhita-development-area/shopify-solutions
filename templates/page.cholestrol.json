@@ -1,0 +1,336 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1664709864c344ee0a": {
+      "type": "image-banner",
+      "blocks": {
+        "1664709864e2edafeb-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "1664709864e2edafeb-1": {
+          "type": "text",
+          "settings": {
+            "heading1": "Reverse Cholesterol Naturally <br> By Fixing Your Metabolic Health",
+            "text": "Guaranteed results in 3 months",
+            "text_style": "body"
+          }
+        },
+        "1664709864e2edafeb-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Manage cholesterol",
+            "button_link_1": "shopify:\/\/pages\/baheda",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1664709864e2edafeb-0",
+        "1664709864e2edafeb-1",
+        "1664709864e2edafeb-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/banner-desk_0242ddd3-ee51-46a1-83c8-d3180ef8bdf5.webp",
+        "mblimage": "shopify:\/\/shop_images\/mobile-banner_d7fddcf5-382f-43ec-b335-41b080c97325.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "166435924193f5fd29": {
+      "type": "take-the-first-step",
+      "blocks": {
+        "41bac390-67c9-48b1-af77-afa992358b3f": {
+          "type": "Head",
+          "settings": {
+            "cholestrol_logo": "shopify:\/\/shop_images\/Vata_imbalance_729d3b8c-fbde-4aa5-a97b-5cf4841beb7f.png",
+            "font_title_child_heading": "Vata imbalance",
+            "chol-icon-img1": "shopify:\/\/shop_images\/Joint_pain_7dc983ec-48ab-4124-821f-f818a3d62ddf.png",
+            "font_description_icon1": "Joint pain",
+            "chol-icon-img2": "shopify:\/\/shop_images\/Low_metabolism_8b6200a9-7884-46c1-b8bb-20d0fbc94faa.png",
+            "font_description_icon2": "Low metabolism",
+            "chol-icon-img3": "shopify:\/\/shop_images\/Disturbed_sleep_10c8358b-b149-46df-ae29-2c5d4eb80144.png",
+            "font_description_icon3": "Disturbed sleep",
+            "chol-icon-img4": "shopify:\/\/shop_images\/Lack_of_focus_aebd6364-7d3d-4b00-bb93-355f78863c9a.png",
+            "font_description_icon4": "Lack of focus",
+            "body_text": "#72614e"
+          }
+        },
+        "89986f22-ff4f-4740-9da0-b70f5af3d211": {
+          "type": "Head",
+          "settings": {
+            "cholestrol_logo": "shopify:\/\/shop_images\/Pitta_imbalance_778da9d4-c829-4f12-9201-adf06f9e7d28.png",
+            "font_title_child_heading": "Pitta imbalance",
+            "chol-icon-img1": "shopify:\/\/shop_images\/Hair_loss_5b320a8c-0c42-48d2-a2f2-939ad3086332.png",
+            "font_description_icon1": "Hair loss",
+            "chol-icon-img2": "shopify:\/\/shop_images\/Digestive_problem_a6db0087-9c67-4cd8-8f3e-98aace2b2bb1.png",
+            "font_description_icon2": "Digestive problems",
+            "chol-icon-img3": "shopify:\/\/shop_images\/Excessive_thirst_f4d60351-6413-453a-84c0-7a5c4de8dafc.png",
+            "font_description_icon3": "Excessive thirst",
+            "chol-icon-img4": "shopify:\/\/shop_images\/short_tempered_45caf3a9-7518-4a4f-a1ff-3ff3830621d9.png",
+            "font_description_icon4": "Short tempered",
+            "body_text": "#ffb10c"
+          }
+        },
+        "c9934bd8-6a20-4ffa-ba24-c20c3cec04a6": {
+          "type": "Head",
+          "settings": {
+            "cholestrol_logo": "shopify:\/\/shop_images\/Kapha_imbalance_36ef6716-bc5d-427b-a180-f12e405319c5.png",
+            "font_title_child_heading": "Kapha imbalance",
+            "chol-icon-img1": "shopify:\/\/shop_images\/Low_energy_7c4747a4-f2f3-4230-8e77-e32defd153eb.png",
+            "font_description_icon1": "Low energy",
+            "chol-icon-img2": "shopify:\/\/shop_images\/Loss_of_appetite_87d57670-3bf5-4f02-acf2-ee59e1da5f90.png",
+            "font_description_icon2": "Loss of appetite",
+            "chol-icon-img3": "shopify:\/\/shop_images\/Excessive_Sleeping_large_a223da74-9f76-441b-90fb-8153f0e6de69.png",
+            "font_description_icon3": "Excessive sleeping",
+            "chol-icon-img4": "shopify:\/\/shop_images\/Respiratory_proble_94e52311-f960-4196-b41d-e57ede99f3be.png",
+            "font_description_icon4": "Respiratory problems",
+            "body_text": "#5fb2c5"
+          }
+        }
+      },
+      "block_order": [
+        "41bac390-67c9-48b1-af77-afa992358b3f",
+        "89986f22-ff4f-4740-9da0-b70f5af3d211",
+        "c9934bd8-6a20-4ffa-ba24-c20c3cec04a6"
+      ],
+      "settings": {
+        "cholestrol_heading1": "Take The First Step",
+        "cholestrol_heading2": "Identify your metabolic type (dosha) to restore your metabolic health",
+        "footer_text": "Manage high cholesterol",
+        "button_link": "https:\/\/form.traya.health\/cholesterol-form",
+        "button_text": "Find your dosha"
+      }
+    },
+    "1664340568bee8a8b0": {
+      "type": "root-cause",
+      "blocks": {
+        "79cb9744-5d7e-4315-b125-5378408cf4a6": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/digestion_e762c19a-c0ec-499f-8319-2559f28a58e0.png",
+            "headingM": "Digestion",
+            "maleContent": "Healthy digestive system is responsible for removing waste from the body",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "eb5ce13e-b725-4dc7-8f26-1ef89bee9038": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/weight.png",
+            "headingM": "Weight",
+            "maleContent": "Excessive weight gain is an indicator of high LDL and Triglyceride levels",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "8c778638-ffe9-4f21-9f0a-fd2d5afae55d": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/stress_2468f076-d09c-480a-a3a3-e640fd13991b.png",
+            "headingM": "Sleep",
+            "maleContent": "Disturbed sleep cycles can affect the functioning of the liver",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "78d78260-c0e7-4f8e-b0ad-31e20c807d54": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/stress1.png",
+            "headingM": "Stress",
+            "maleContent": "High levels of stress lead to excessive cholesterol production",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "8f7a49d7-3766-4471-8530-1c75d4335fca": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/medical.png",
+            "headingM": "Medical condition",
+            "maleContent": "Diabetes, Obesity, Hypertension, Thyroid all result in high cholesterol levels",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "2b3b9cb8-f572-4fcb-8bed-ea28393edf68": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/lifestyle_1.png",
+            "headingM": "Lifestyle",
+            "maleContent": "Smoking and alcohol consumption have damaging effects on the liver",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        },
+        "de054713-19a6-4909-97ef-ed3a3dd59eed": {
+          "type": "rootm",
+          "settings": {
+            "rootCauseImgM": "shopify:\/\/shop_images\/metabolism_49253011-724a-4cb2-8e55-f73113992e63.png",
+            "headingM": "Metabolism",
+            "maleContent": "Low metabolism results in the inability of the body to digest cholesterol effectively",
+            "headingF": "",
+            "femaleContent": ""
+          }
+        }
+      },
+      "block_order": [
+        "79cb9744-5d7e-4315-b125-5378408cf4a6",
+        "eb5ce13e-b725-4dc7-8f26-1ef89bee9038",
+        "8c778638-ffe9-4f21-9f0a-fd2d5afae55d",
+        "78d78260-c0e7-4f8e-b0ad-31e20c807d54",
+        "8f7a49d7-3766-4471-8530-1c75d4335fca",
+        "2b3b9cb8-f572-4fcb-8bed-ea28393edf68",
+        "de054713-19a6-4909-97ef-ed3a3dd59eed"
+      ],
+      "settings": {
+        "title": "Build Your Metabolic Health By Fixing These Root Causes",
+        "sub_title": "",
+        "DeskRootMale": "shopify:\/\/shop_images\/cholestrol-root-cause_8b358649-25e7-4f1e-8c95-ac2a5e6625ab.jpg",
+        "btn_link": "https:\/\/form.traya.health\/cholesterol-form",
+        "buttontitle": "FIND MY ROOT CAUSE",
+        "rootcause-undertext": "Manage cholesterol by reducing metabolic imbalance"
+      }
+    },
+    "1664438150c94bbed0": {
+      "type": "ThreeFold-Way",
+      "settings": {
+        "three_fold_bk_image": "shopify:\/\/shop_images\/treatement-plan.webp",
+        "three_fold_heading": "Ayurvedic Personalized Plans",
+        "subheading": "",
+        "content__ways": "",
+        "description": "We recommend 100% natural techniques that work on your internal health and reduce cholesterol levels.",
+        "linkb": "https:\/\/form.traya.health\/cholesterol-form",
+        "sidelinktext": "MANAGE CHOLESTEROL"
+      }
+    },
+    "166455953590b1a94e": {
+      "type": "traya-journey",
+      "blocks": {
+        "0089af7e-ff13-4eae-908c-d2974ea9e45b": {
+          "type": "content",
+          "settings": {
+            "heading": "Know your metabolic type",
+            "content": "Take the test and get a complete diagnosis of your condition and associated risks.",
+            "read_time": "",
+            "icon": "shopify:\/\/shop_images\/step1_691f426a-673f-4c58-9d81-4e5180c5743a.png",
+            "card_link": "https:\/\/form.traya.health\/cholesterol-form"
+          }
+        },
+        "7aad3745-b575-42ba-a95b-8f2c9eb3650b": {
+          "type": "content",
+          "settings": {
+            "heading": "Talk to your doctor",
+            "content": "An Ayurveda doctor will study your case and customize your treatment plan.",
+            "read_time": "",
+            "icon": "shopify:\/\/shop_images\/step2_59be3e02-2053-40ca-8ea8-41c2070b3c0b.png",
+            "card_link": "https:\/\/form.traya.health\/cholesterol-form"
+          }
+        },
+        "088cd1a2-6ab0-45e4-a74f-4361cd7447c0": {
+          "type": "content",
+          "settings": {
+            "heading": "Buy the plan",
+            "content": "Purchase the doctor prescribed plan and see results in around 3 months.",
+            "read_time": "",
+            "icon": "shopify:\/\/shop_images\/step3_08f835f3-81ea-4b83-943b-70d7b1aca7b4.png",
+            "card_link": "https:\/\/form.traya.health\/cholesterol-form"
+          }
+        }
+      },
+      "block_order": [
+        "0089af7e-ff13-4eae-908c-d2974ea9e45b",
+        "7aad3745-b575-42ba-a95b-8f2c9eb3650b",
+        "088cd1a2-6ab0-45e4-a74f-4361cd7447c0"
+      ],
+      "settings": {
+        "title": "The Traya Journey",
+        "sub_title": "",
+        "btn_text": "START MY JOURNEY",
+        "btn_link": "https:\/\/form.traya.health\/cholesterol-form"
+      }
+    },
+    "16646182527a94204c": {
+      "type": "success-stories",
+      "blocks": {
+        "f7ac28eb-702d-4b9a-a532-84da79fe9e4b": {
+          "type": "Head",
+          "settings": {
+            "stories_image": "shopify:\/\/shop_images\/doctor_28ccacbb-3686-4e52-87af-f707f89ac15b.jpg",
+            "success_text_name": "Ashish Malhotra managed cholesterol in 3 months",
+            "success_text_title": "33 years, Bangalore",
+            "success_text_title1": "Traya’s holistic treatment plan is the best choice I’ve made for a healthier lifestyle. I enrolled on the plan because it was all natural and had no side effects. I was devastated with the total cholesterol of  277 though I was new to this disease, I knew I had to manage it. Seeing results in 3 months wasn’t expected but thanks to doctor shailendra who designed a plan for my type and it worked wonders!",
+            "stories_image1": "shopify:\/\/shop_images\/data_b5ba8dcf-7527-416f-9f9c-4dba82e9e668.png",
+            "stories_image2": "shopify:\/\/shop_images\/Ashish-graph_b4e99dfc-8276-40c2-84ff-75d1b643ea78.jpg"
+          }
+        },
+        "bdbf1762-f548-43de-80f8-359cb22a12a1": {
+          "type": "Head",
+          "settings": {
+            "stories_image": "shopify:\/\/shop_images\/vimal_1_99d03382-114e-42ee-9c0b-86b5ea6058b0.jpg",
+            "success_text_name": "Vimal Shah managed cholesterol in 5 months",
+            "success_text_title": "29 years, Surat",
+            "success_text_title1": "It was a life altering experience.I dropped 15kgs of excess weight and my Triglycerides lowered from 178 to 127 in 5 months!! This is unbelievable and had I not gone through this program, I would have thought it impossible to repair and heal myself to good health. The whole customized ayurvedic approach that works on healing and metabolic health is very unique and the health coach is the mainstay of the motivation. Keep it up team Traya!",
+            "stories_image1": "shopify:\/\/shop_images\/Vimal-shah1_69e87e68-0beb-4c5e-a529-6d42cfffea82.jpg",
+            "stories_image2": "shopify:\/\/shop_images\/malhotra_d20c2cbc-7d54-4a5f-85d7-dc66b93e4f9b.png"
+          }
+        },
+        "0247b527-c842-4405-a615-fc2009066711": {
+          "type": "Head",
+          "settings": {
+            "stories_image": "shopify:\/\/shop_images\/vikas_1_c251094b-bdfd-4213-8521-6dd147d1d11f.jpg",
+            "success_text_name": "Vikas Dubey managed  cholesterol in 3 months",
+            "success_text_title": "Age: 39 years, Mumbai",
+            "success_text_title1": "Traya’s holistic treatment plan is the best choice I’ve made for a healthier lifestyle. I enrolled on the plan because it was all natural and had no side effects.",
+            "stories_image1": "shopify:\/\/shop_images\/vikas-dubey_21defa5c-9db5-4db4-aa69-3249fa2d8a85.jpg",
+            "stories_image2": "shopify:\/\/shop_images\/Vikas-dubey-graph_410c91d1-46c6-481a-af12-68f0a138c0f7.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "f7ac28eb-702d-4b9a-a532-84da79fe9e4b",
+        "bdbf1762-f548-43de-80f8-359cb22a12a1",
+        "0247b527-c842-4405-a615-fc2009066711"
+      ],
+      "settings": {
+        "journey_success": "Success Stories",
+        "bk_color": "#f3f3f3",
+        "linkb": "https:\/\/form.traya.health\/cholesterol-form",
+        "sidelinktext": "START MY JOURNEY"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1664709864c344ee0a",
+    "166435924193f5fd29",
+    "1664340568bee8a8b0",
+    "1664438150c94bbed0",
+    "166455953590b1a94e",
+    "16646182527a94204c"
+  ]
+}

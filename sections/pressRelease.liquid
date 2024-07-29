@@ -1,0 +1,152 @@
+  {% assign blocks_per_page = 4 %}
+  {% assign total_pages = section.blocks.size | divided_by: blocks_per_page | plus: 0.2 | ceil %}
+  {% assign current_page = current_page | default: 1 %}
+  {% assign first_block = current_page | minus: 1 | times: blocks_per_page %}
+<div class="main_pressRelease container pb-0 mt-5">
+  <div class="press mx-md-4 my-md-5 my-3">
+      <h2 class="head font-weight-bold l-0">{{ section.settings.pressRelease-head }}</h2>
+      <p class="content l-0">{{ section.settings.pressRelease-para }}</p>
+  </div>
+  <div class="pressRelease-data">
+   {% for block in section.blocks offset: first_block  limit: blocks_per_page %}
+     <a href="{{ block.settings.pressRelease_Url }}" class="text-decoration-none" target="_blank">
+     <div class="pressRelease d-flex my-4 my-md-5 flex-wrap">
+      
+      <div class="img col-md-5 px-0 px-md-3">
+        {% assign width = block.settings.pressRelease_img.width | divided_by: 2 %}
+        {% assign height = block.settings.pressRelease_img.height | divided_by: 2 %}
+        {% assign alt = 'Image-' | append: forloop.index %}
+        {{ block.settings.pressRelease_img | image_url: width: width | image_tag: width: width, height: height, alt: alt, title: alt, loading: 'lazy', class: 'w-100 h-100 rounded' }}
+        {% comment %}
+        <img class="h-100 w-100" src="{{ block.settings.pressRelease_img | img_url: 'master' }}"/>
+        {% endcomment %}
+     </div>
+      <div class="content d-flex justify-content-center flex-column col-md-7">
+        <div class="svg my-4">{{ block.settings.pressRelease_pressName }}</div>
+        <h3 class="pressHead font-fredoka mt-2 mb-5 l-0">{{ block.settings.pressRelease_pressHead }}</h3>
+        <p class="pressContent mb-3 l-0">{{ block.settings.pressRelease_pressContent }}</p>
+        <!-- <a href="{{ block.settings.pressRelease_Url }}" class="readMore btn btn-dark my-0 my-md-3">{{ block.settings.pressRelease_btn }}</a> -->
+      </div>
+    
+    </div> 
+          </a>
+    {% endfor %}
+  </div>
+     
+</div>
+<ul class="pagination cstm-border justify-content-center align-items-center">
+  {% if total_pages > 1 %}
+    {% for page in (1..total_pages) %}
+      <li class="{% if page == current_page %}btn btn-dark{% endif %} px-3"> <a class="{% if page == current_page %}text-white{% endif %} text-decoration-none" href="?page={{ page }}">{{ page }}</a></li>
+    {% endfor %}
+  {% endif %}
+</ul>
+{% schema %}
+{
+  "name": "pressRelease Section",
+  "tag": "section",
+  "class":"pressReleases",
+  "settings": [
+    {
+      "type": "text",
+      "id": "pressRelease-head",
+      "label": "Enter the heading"
+    },
+    {
+      "type": "text",
+      "id": "pressRelease-para",
+      "label": "Enter the para"
+    }
+  ],
+  "blocks":[
+    {
+      "name":"Blocks",
+      "type": "text",
+      "settings":[
+    {
+      "type": "image_picker",
+      "id": "pressRelease_img",
+      "label": "drag the press img"
+    },
+    {
+      "type": "textarea",
+      "id": "pressRelease_pressName",
+      "label": "Enter the sveg of press logo"
+    },
+    {
+      "type": "text",
+      "id": "pressRelease_pressHead",
+      "label": "Enter the press heading"
+    },
+    {
+      "type": "text",
+      "id": "pressRelease_pressContent",
+      "label": "Enter the press content"
+    },
+    {
+      "type": "text",
+      "id": "pressRelease_btn",
+      "label": "Enter the press button text"
+    },
+    {
+      "type": "url",
+      "id": "pressRelease_Url",
+      "label": "Enter the press url"
+    }
+      ]
+    }
+  ],
+   "presets":[
+    {
+        "name":"press release Section",
+        "category": "custom"
+    }
+  ]
+}
+    {% endschema %}
+    <style>
+      .main_pressRelease .head{
+        font-size: 32px;
+      }
+       .main_pressRelease .content{
+        font-size: 20px;
+      }
+      .content .pressHead{
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .content .pressContent{
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .pagination.cstm-border.justify-content-center{
+        border-bottom: 1px solid #DDDDDD;
+        padding-bottom: 23px;
+        margin: 0 20px;
+      }
+      .pressRelease .readMore:hover , .cstm-border .btn.btn-dark{
+        border : 1px solid;
+      }
+      @media(max-width: 989px){
+        .content .pressHead {
+              font-size: 20px;
+        }
+        .content .pressContent{
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+      @media(max-width: 749px){
+        .main_pressRelease .head{
+        font-size: 24px;
+      }
+         .main_pressRelease .content , .content .pressContent{
+            font-size: 16px;         
+      }
+        .pressRelease{
+          border-bottom: 1px solid #DDDDDD;
+            padding-bottom: 24px;
+        }
+      }
+      
+    </style>

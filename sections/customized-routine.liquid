@@ -1,0 +1,257 @@
+{% if template == 'index.login' %}
+  {% assign page__hndl = 'home' %}
+{% elsif template == 'index' %}
+  {% assign page__hndl = 'home' %}
+{% else %}
+  {% assign page__hndl = page.handle %}
+{% endif %}
+
+<div class="container section-{{ section.id }}-padding">
+    <div class="pb-3 pb-md-4">
+      {% if section.settings.desktop_heading_1 != blank and section.settings.desktop_heading_2 != blank %}
+        <p class="d-none d-md-block font-fredoka text-center routine_heading m-0"><span>{{ section.settings.desktop_heading_1 }}</span><br/><span class="routine_subheading">{{ section.settings.desktop_heading_2 }}</span></p>
+      {% endif %}
+      {% if section.settings.mobile_heading_1 != blank and section.settings.mobile_heading_2 != blank %}
+        <p class="d-md-none font-fredoka text-center routine_heading m-0"><span>{{ section.settings.mobile_heading_1 }}</span><br/><span>{{ section.settings.mobile_heading_2 }}</span> <span class="routine_subheading">{{ section.settings.desktop_heading_2 }}</span></p>
+      {% endif %}
+    </div>
+    <div class="pb-3 pb-md-4">
+      {% if section.settings.desktop_description != blank %}
+        <p class="text-center d-none d-md-block customized_routine_description m-0">{{ section.settings.desktop_description }}</p>
+      {% endif %}
+      {% if section.settings.mobile_description != blank %}
+        <p class="text-center d-md-none customized_routine_description m-0">{{ section.settings.mobile_description }}</p>
+      {% endif %}
+    </div>
+  {%- if section.blocks.size != 0 -%}
+    <div class="d-flex flex-wrap pb-4 position-relative customized_routines">
+    {%- for block in section.blocks -%}
+      <div class="col-md-auto col-6 d-flex flex-wrap p-0 pt-5 routines{% if block.settings.seperator == true %} routine_wrapper{% endif %}">
+        {%- if block.settings.routine_image != blank -%}
+          {%- assign width = block.settings.routine_image.width | divided_by: 2 -%}
+          {%- assign height = block.settings.routine_image.height | divided_by: 2 -%}
+          {%- assign alt = block.settings.routine_image.alt | default: 'icon' -%}
+          <div class="col-12 pb-3 routine_image_wrapper">
+          {{ block.settings.routine_image | image_url: width: 220 | image_tag: width: width, height: height, alt: alt, title: alt, loading: 'lazy', class: 'm-auto d-block routine_image shadow' }}
+          </div>
+        {%- endif -%}
+        <div class="col-12 text-center px-1">
+          {%- if block.settings.routine_text != blank -%}
+            <p class="m-0 pb-2 font-weight-bold routine_text">{{ block.settings.routine_text }}</p>
+          {%- endif -%}
+          {%- if block.settings.routine_description != blank -%}
+            <p class="m-0 routine_description">{{ block.settings.routine_description }}</p>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endfor -%}
+    </div>
+  {%- endif -%}
+  {% if section.settings.bottom_text != blank %}
+    <div class="text-center pb-3">
+      <p class="routine_bottom_text">{{ section.settings.bottom_text }}</p>
+    </div>
+  {% endif %}
+  {% if section.settings.button_text != blank and section.settings.button_url != blank %}
+    <div class="text-center">
+      <a class="aldrich_btn text-decoration-none" id="hairtestcta" href="{{ section.settings.button_url }}&page={{ page__hndl }}"><span>{{ section.settings.button_text }}<sup>TM</sup></span></a>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Customized Routine",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Settings"
+      },
+      {
+        "type": "text",
+        "id": "desktop_heading_1",
+        "label": "Enter Heading First Content For Desktop",
+        "info": "Heading First Content For Desktop"
+      },
+      {
+        "type": "text",
+        "id": "desktop_heading_2",
+        "label": "Enter Heading Second Content For Desktop",
+        "info": "Heading Second Content For Desktop"
+      },
+      {
+        "type": "text",
+        "id": "mobile_heading_1",
+        "label": "Enter Heading First Content For Mobile",
+        "info": "Heading First Content For Mobile"
+      },
+      {
+        "type": "text",
+        "id": "mobile_heading_2",
+        "label": "Enter Heading Second Content For Mobile",
+        "info": "Heading Second Content For Mobile"
+      },
+      {
+        "type": "text",
+        "id": "desktop_description",
+        "label": "Enter Description For Desktop",
+        "info": "Description For Desktop"
+      },
+      {
+        "type": "text",
+        "id": "mobile_description",
+        "label": "Enter Description For Mobile",
+        "info": "Description For Mobile"
+      },
+      {
+        "type": "text",
+        "id": "bottom_text",
+        "label": "Enter Bottom Text",
+        "info": "Bottom Text"
+      },
+      {
+        "type": "header",
+        "content": "Button Settings"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Enter Button Text",
+        "info": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Enter Button Url",
+        "info": "Button Url"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "type": "routine",
+        "name": "Routine",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "routine_image",
+            "label": "Select Routine Image",
+            "info": "Routine Image"
+          },
+          {
+            "type": "text",
+            "id": "routine_text",
+            "label": "Enter Routine Text",
+            "info": "Routine Text"
+          },
+          {
+            "type": "text",
+            "id": "routine_description",
+            "label": "Enter Routine Description",
+            "info": "Routine Description"
+          },
+          {
+            "type": "checkbox",
+            "id": "seperator",
+            "label": "Show Seperator",
+            "info": "Show/Hide Seperator",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Customized Routine"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  #shopify-section-{{ section.id }} .routine_heading {font-size: 48px;line-height: 58.08px;}
+  #shopify-section-{{ section.id }} .routine_subheading {color: #C4695B;}
+  #shopify-section-{{ section.id }} .customized_routine_description {font-size: 20px;line-height: 24.2px;font-weight: 300;}
+  #shopify-section-{{ section.id }} .routine_text {font-size: 14px;line-height: 17.56px;}
+  #shopify-section-{{ section.id }} .routine_description {font-size: 12px;line-height: 14px;min-height: 30px;}
+  #shopify-section-{{ section.id }} .routine_bottom_text {font-size: 36px;line-height: 49.1px;}
+  #shopify-section-{{ section.id }} .routine_image {border-radius: 50%;overflow: hidden;}
+  #shopify-section-{{ section.id }} .routine_image_wrapper:before {content: '';position: absolute;top: -25%;left: 50%;transform: translate(-50%, 0);width: 25px;height: 25px;border-radius: 50%;background: rgb(196 105 91);border: 5px solid rgb(196 105 91 / 20%);background-clip: border-box;-webkit-background-clip: padding-box;}
+  #shopify-section-{{ section.id }} .routine_wrapper:before {content: '';position: absolute;border: 1px dashed #9F9F9F;width: 100%;left: 50%;top: 10%;transform: translate(0, 1px);}
+  .customized_routines:not(.slick-initialized) > .routines:first-of-type ~ * {display: none !important;}
+  #shopify-section-{{ section.id }} .aldrich_btn {background: #C4695B;display: inline-block;color: #fff;font-weight: 700;padding: 9px 27px;border-radius: 10px;font-size: 19px;letter-spacing: normal;border: 1px solid #C4695B;}
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .routine_heading {font-size: 40px;line-height: 50.08px;}
+    #shopify-section-{{ section.id }} .customized_routine_description {font-size: 16px;line-height: 22.2px;}
+    #shopify-section-{{ section.id }} .routine_image {height: 100%;}
+    #shopify-section-{{ section.id }} .routine_description {font-size: 9px;line-height: 12px;min-height: 30px;}
+    #shopify-section-{{ section.id }} .routine_text {min-height: 45px;}
+    #shopify-section-{{ section.id }} .routine_image_wrapper:before {top: -35%;}
+    #shopify-section-{{ section.id }} .routine_bottom_text {font-size: 28px;line-height: 36.1px;}
+    #shopify-section-{{ section.id }} .aldrich_btn {font-size: 15px;}
+  }
+  @media only screen and (max-width: 767.98px) {
+    #shopify-section-{{ section.id }} .routine_heading {font-size: 20px;line-height: 24.2px;}
+    #shopify-section-{{ section.id }} .customized_routine_description, #shopify-section-{{ section.id }} .routine_bottom_text {font-size: 12px;line-height: 16.37px;}
+    #shopify-section-{{ section.id }} .aldrich_btn {padding: 9px 17px;border-radius: 5px;font-size: 11px;}
+  }
+{% endstyle %}
+
+<script>
+  $(document).ready(function() {
+    $('.customized_routines').slick({
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 5000,
+      arrows: false,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+          }
+        }
+      ]
+    })
+  });
+</script>

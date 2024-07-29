@@ -1,0 +1,97 @@
+<div class="container after-login-traya-journey my-3">
+  <p class="home-heading font-weight-bold text-center mb-0">
+    <span class="d-none d-md-block">{{ section.settings.heading }}</span>
+    <span class="d-md-none">{{ section.settings.mob-heading }}</span>
+  </p>
+  <div class="after-traya-journey w-20">
+    {% for block in section.blocks %}
+      <div class="">
+        <div class="journey-icons">
+          {% if block.settings.des-img != blank %}
+            <img src="{{ block.settings.des-img | img_url: ' ' }}" class="d-none d-md-block" />
+            <img src="{{ block.settings.des-img | img_url: '250x' }}" class="d-md-none" />
+          {% endif %}
+          <div class="after-login-months">
+            <p class="text-center mt-2 mb-0 journey-months">Month {{ forloop.index }}</p>
+          </div>
+      </div>
+        {% if block.settings.monthdesc != blank %}
+          <p class="text-center mt-2 month-desc text-black">{{ block.settings.monthdesc }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "After Login Traya Journey",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Enter Desktop Heading"
+      },
+      {
+        "type": "text",
+        "id": "mob-heading",
+        "label": "Enter Mobile Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "After Login Traya Journey",
+        "type": "text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "des-img",
+            "label": "select desktop image"
+          },
+          {
+            "type": "text",
+            "id": "monthdesc",
+            "label": "Enter Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "After Login Traya Journey",
+        "category": "custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .month-desc {
+    font-size: 14px;
+    line-height: 19px;
+    width: 90%;
+    margin: auto;
+  }
+  .journey-months {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000;
+    opacity: 0.5;
+  }
+  .journey-icons {
+    position: relative;
+    z-index: 2;
+  }
+  .after-login-months {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, 0px);
+  }
+  @media only screen and (max-width: 767px) {
+    .container.after-login-traya-journey {
+      padding: 0;
+    }
+  }
+{% endstyle %}

@@ -1,0 +1,219 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "9978bb94-01db-4afb-bb19-486f9fe044ee": {
+      "type": "new-slideshow",
+      "settings": {
+        "ref_desk_img": "shopify:\/\/shop_images\/Female_Banner_2_-_opt_1_1.png",
+        "ref_mob_img": "shopify:\/\/shop_images\/Frame_102352740_82daf1ca-0715-4354-ac2d-2f59d08a3ed7.png",
+        "ref_heading_text": "Infused with <br>Plant-Kera Complex<sup>TM<\/sup>",
+        "ref_heading_text_mobile": "Infused with <br>Plant-Kera Complex<sup>TM<\/sup>",
+        "ref_heading_text2": "",
+        "ref_sub_heading_text": "Restores smoothness <br> of dry hair by 83%",
+        "ref_button_text": "",
+        "ref_button_url": ""
+      }
+    },
+    "5e05b8ba-b936-403e-8e91-9629d2db773a": {
+      "type": "logo-bar",
+      "settings": {
+        "title": "",
+        "showMarquee": false,
+        "showslide": false
+      }
+    },
+    "f5cd5fd6-7461-4499-a55a-475911a212ee": {
+      "type": "cuticle-women",
+      "blocks": {
+        "a70130c7-28e5-4978-8c58-b5e392022e85": {
+          "type": "Gallery",
+          "settings": {
+            "women_img": "shopify:\/\/shop_images\/DSC03346_1_8d832ae2-8301-4fff-aa41-6ddab2a3bcc8.png",
+            "women_txt": "“I never felt like styling my hair because they would break. I came across this shampoo, now my hair feels softer”"
+          }
+        },
+        "a529d970-9d2d-4e0b-b04f-db204459c29e": {
+          "type": "Gallery",
+          "settings": {
+            "women_img": "shopify:\/\/shop_images\/DSC07978_edit_1_c8b4b568-59a5-4b3f-8da5-ea84ba63f01b.png",
+            "women_txt": "“Hair feels hydrated, in just 4 washes I have noticed less tangled and more volume”"
+          }
+        },
+        "2a90faf0-0df4-404c-b95e-77594ace74f3": {
+          "type": "Gallery",
+          "settings": {
+            "women_img": "shopify:\/\/shop_images\/DSC07667_edit_1.png",
+            "women_txt": "“I always felt like I’d never find a good hair regimen for me, but I used this and my hair feels easy to manage”"
+          }
+        }
+      },
+      "block_order": [
+        "a70130c7-28e5-4978-8c58-b5e392022e85",
+        "a529d970-9d2d-4e0b-b04f-db204459c29e",
+        "2a90faf0-0df4-404c-b95e-77594ace74f3"
+      ],
+      "settings": {
+        "cuticle_women_title": "Hair Repair, For Real"
+      }
+    },
+    "29ac36f2-627a-4b66-a17b-4639f4b08c20": {
+      "type": "cuticle-damage-occur",
+      "settings": {
+        "damage_success": "This is Where Hair Damage Occurs",
+        "inside_success": "Your hair looks like this on the inside",
+        "damage_occurs_desk_img": "shopify:\/\/shop_images\/Frame_102352738_ee829ed2-1b34-4dc8-866f-59636e1fa2bc.png",
+        "damage_occurs_mob_img": "shopify:\/\/shop_images\/Frame_102352738_ee829ed2-1b34-4dc8-866f-59636e1fa2bc.png"
+      }
+    },
+    "182c63e6-5881-4398-b28c-dff165f00bd0": {
+      "type": "cuticle-hair-damage",
+      "blocks": {
+        "5cbb9561-71aa-40a6-9df8-eb9d9fc1695b": {
+          "type": "Gallery",
+          "settings": {
+            "hair_damage_img": "shopify:\/\/shop_images\/Frame_102352730_f8b6bedc-7dee-4fc0-8224-140388972500.png",
+            "hair_damage_title": "Chemical treatments:",
+            "hair_damage_solution": "<ul><li>Dyeing<\/li><li>Bleaching<\/li><li>Straightening<\/li><\/ul>",
+            "hair_damage_icon": "shopify:\/\/shop_images\/Group_102353308_05a91106-a1a5-4c89-8c28-236358b93616.png"
+          }
+        },
+        "4ed0df18-1fde-4708-9eb0-ab81ddb45e4b": {
+          "type": "Gallery",
+          "settings": {
+            "hair_damage_img": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_3_444a7331-5b7c-4b99-be3f-ce0405be132c.png",
+            "hair_damage_title": "Environmental Factors:",
+            "hair_damage_solution": "<ul><li>UV Light<\/li><li>Pollution<\/li><li>Water Quality<\/li><\/ul>",
+            "hair_damage_icon": "shopify:\/\/shop_images\/Group_102353294_8d5748ad-6fb4-4107-9b4b-89db7c939bf7.png"
+          }
+        },
+        "ca5f7563-4c08-488b-9cca-edcea74b5b37": {
+          "type": "Gallery",
+          "settings": {
+            "hair_damage_img": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_49000b82-777a-4389-8ef2-4b35737dea27.png",
+            "hair_damage_title": "Styling Tools:",
+            "hair_damage_solution": "<ul><li>Combing<\/li><li>Styling<\/li><li>Hot Iron<\/li><\/ul>",
+            "hair_damage_icon": "shopify:\/\/shop_images\/Group_102353293_1db29d5e-92e7-4d3b-abfd-98d566519a0b.png"
+          }
+        }
+      },
+      "block_order": [
+        "5cbb9561-71aa-40a6-9df8-eb9d9fc1695b",
+        "4ed0df18-1fde-4708-9eb0-ab81ddb45e4b",
+        "ca5f7563-4c08-488b-9cca-edcea74b5b37"
+      ],
+      "settings": {
+        "damage_title": "Causes of Hair Damage"
+      }
+    },
+    "4d281b4a-715d-48ce-bf57-196d235073f1": {
+      "type": "cuticle-damage-occur",
+      "settings": {
+        "damage_success": "The Hair Damage Scale",
+        "inside_success": "When hair damage occurs, it does not stop at Level 1, this is how it progresses",
+        "damage_occurs_desk_img": "shopify:\/\/shop_images\/Frame_102352740_2.png",
+        "damage_occurs_mob_img": "shopify:\/\/shop_images\/Frame_102352740_2.png"
+      }
+    },
+    "fbccd435-f102-43e7-82b3-b38bdd28274f": {
+      "type": "cuticle-renewal",
+      "blocks": {
+        "2f439fc2-49ce-482f-82fd-44843f664a52": {
+          "type": "Gallery",
+          "settings": {
+            "renewal_gallery_title": "African Baobab Tree Extract<sup>TM<\/sup>",
+            "renewal_gallery_img": "shopify:\/\/shop_images\/Baobab_leaf_extract_2_f9abf198-708c-47f6-909c-b3305d7722ea.png",
+            "renewal_gallery_content": "Our patented formula uses the goodness of the African Baobab Tree extract, with its collaging-inducing property encourages natural keratin (hair protein) production.",
+            "renewal_gallery_solution": "<ul><li>Restores smoothness by <strong>83%<\/strong> <\/li><li>Makes it <strong>54%<\/strong> easier to comb tangled hair <\/li><li>Eases hair combing by <strong>39% <\/strong><\/li><\/ul>"
+          }
+        },
+        "7aaf8026-9fed-437a-a685-ddd8f64acf06": {
+          "type": "Gallery",
+          "settings": {
+            "renewal_gallery_title": "Vegan Keratin",
+            "renewal_gallery_img": "shopify:\/\/shop_images\/Group_102353272.png",
+            "renewal_gallery_content": "Derived from natural ingredients, it offers deep micro-penetration to reduce hair surface damage and provide long-lasting strength to brittle hair strands.",
+            "renewal_gallery_solution": "<ul><li>Restores damage by <strong>36%<\/strong><\/li><li><strong>20%<\/strong> less breakage while combing<\/li><li>Eases hair combing by <strong>15%<\/strong><\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "2f439fc2-49ce-482f-82fd-44843f664a52",
+        "7aaf8026-9fed-437a-a685-ddd8f64acf06"
+      ],
+      "settings": {
+        "renewal_title": "French Keratin Renewal Technology, Now in India",
+        "renewal_sub_title": "How Traya damage repair regimen works"
+      }
+    },
+    "29c128fd-c497-48c6-8dbb-1869e9bb4c57": {
+      "type": "cuticle-hair-type",
+      "blocks": {
+        "9892415b-9b15-4f9c-83bf-9ef860d236da": {
+          "type": "Gallery",
+          "settings": {
+            "hair_type_img": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_2_adc875ae-2bc4-417c-8538-fbf2e6cf2180.png",
+            "hair_type_txt": "Curly"
+          }
+        },
+        "b18e4c09-4afe-4c3c-9805-b157e2cebc14": {
+          "type": "Gallery",
+          "settings": {
+            "hair_type_img": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1_5b91d5b7-350e-4d47-8d79-4014458d6068.png",
+            "hair_type_txt": "Wavy"
+          }
+        },
+        "a76b95ee-98a7-4faf-bd53-3cab3afb2702": {
+          "type": "Gallery",
+          "settings": {
+            "hair_type_img": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_5f991d3e-7981-4c44-b6db-73f560347d38.png",
+            "hair_type_txt": "Straight"
+          }
+        }
+      },
+      "block_order": [
+        "9892415b-9b15-4f9c-83bf-9ef860d236da",
+        "b18e4c09-4afe-4c3c-9805-b157e2cebc14",
+        "a76b95ee-98a7-4faf-bd53-3cab3afb2702"
+      ],
+      "settings": {
+        "cuticle_type_title": "Scientifically Formulated For All Hair Types",
+        "cuticle_type_sub_title": "Be it curly, wavy or straight, we have <br> your hair damage under control "
+      }
+    },
+    "cae67390-a3e8-4828-aced-13151c2475e6": {
+      "type": "cuticle-regimen",
+      "settings": {
+        "cuticle_regimen_title": "Buy the Damage Repair Regimen Now",
+        "cuticle_collection": "cuticle-collection"
+      }
+    },
+    "d534fb4e-059d-4a70-a0a8-4f738890a137": {
+      "type": "cuticle-damage-occur",
+      "settings": {
+        "damage_success": "The Traya Promise",
+        "inside_success": "At Traya, we focus on giving your hair what’s safe and effective, and most important, what really works.",
+        "damage_occurs_desk_img": "shopify:\/\/shop_images\/Frame_102352737.png",
+        "damage_occurs_mob_img": "shopify:\/\/shop_images\/Frame_102352737_1.png"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "9978bb94-01db-4afb-bb19-486f9fe044ee",
+    "5e05b8ba-b936-403e-8e91-9629d2db773a",
+    "f5cd5fd6-7461-4499-a55a-475911a212ee",
+    "29ac36f2-627a-4b66-a17b-4639f4b08c20",
+    "182c63e6-5881-4398-b28c-dff165f00bd0",
+    "4d281b4a-715d-48ce-bf57-196d235073f1",
+    "fbccd435-f102-43e7-82b3-b38bdd28274f",
+    "29c128fd-c497-48c6-8dbb-1869e9bb4c57",
+    "cae67390-a3e8-4828-aced-13151c2475e6",
+    "d534fb4e-059d-4a70-a0a8-4f738890a137"
+  ]
+}
