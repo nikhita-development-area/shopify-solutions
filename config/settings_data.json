@@ -135,7 +135,7 @@
     "cart_type": "page",
     "show_vendor": false,
     "show_cart_note": true,
-    "cart_drawer_collection": "frontpage",
+    "cart_drawer_collection": "all",
     "checkout_header_image": "shopify:\/\/shop_images\/360_F_498203245_ZzQ8g9MrvURruJHaC9lYJbXRMFX108sF.jpg",
     "checkout_logo_image": "shopify:\/\/shop_images\/mcaffine.png",
     "checkout_logo_position": "left",
