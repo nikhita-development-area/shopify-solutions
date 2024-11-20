@@ -1,1 +1,126 @@
-{"sections":{"block-test":{"type":"section-block","blocks":{"d142f2d6-e575-48c0-aeeb-92859962726c":{"type":"left-block","settings":{"heading":"Summer Sale","sub-heading":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the.","button-text":"shop now","button_link":"shopify:\/\/products\/milkshake-chocolate-180-ml-rs-40-v-bowenpally","paragraph":"$245"}},"f1c98ebe-4a1a-4e98-acfc-6f1b16f28a19":{"type":"left-block","settings":{"heading":"Summer sale 2","sub-heading":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the.","button-text":"shop now","button_link":"shopify:\/\/collections","paragraph":""}}},"block_order":["d142f2d6-e575-48c0-aeeb-92859962726c","f1c98ebe-4a1a-4e98-acfc-6f1b16f28a19"],"disabled":true,"settings":{"home_welcome_message":"Welcome to my shop!","padding_top":36,"padding_bottom":36}},"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Image banner","heading_size":"h0"}},"text":{"type":"text","settings":{"text":"Give customers details about the banner image(s) or content on the template.","text_style":"body"}},"button":{"type":"buttons","settings":{"button_label_1":"Shop all","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading","text","button"],"settings":{"image":"{{ shop.brand.logo }}","image_overlay_opacity":40,"image_height":"large","adapt_height_first_image":false,"desktop_content_position":"bottom-center","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","stack_images_on_mobile":false,"show_text_below":false}},"rich_text":{"type":"rich-text","blocks":{"heading":{"type":"heading","settings":{"heading":"<h1>Talk about your brand<\/h1>","heading_size":"h1"}},"text":{"type":"text","settings":{"text":"<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"}}},"block_order":["heading","text"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":0}},"featured_collection":{"type":"featured-collection","disabled":true,"settings":{"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"all","products_to_show":8,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":true,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":28,"padding_bottom":36}},"collage":{"type":"collage","blocks":{"32e870cb-186d-4670-aac7-a24e7ecc3c75":{"type":"product","settings":{"product":"milkshake-strawberry-180-ml-rs-40-v-dwarka","second_image":false}},"product":{"type":"product","settings":{"product":"epigamia-natural-greek-yogurt-400gm-v-bowenpally","second_image":true}},"3d9c97e4-20b1-4154-8979-af8aaacb317e":{"type":"product","settings":{"product":"milkshake-chocolate-180-ml-rs-40-v-kurla","second_image":false}}},"block_order":["32e870cb-186d-4670-aac7-a24e7ecc3c75","product","3d9c97e4-20b1-4154-8979-af8aaacb317e"],"settings":{"heading":"Multimedia collage","heading_size":"h2","desktop_layout":"left","mobile_layout":"collage","card_styles":"product-card-wrapper","color_scheme":"background-1","padding_top":36,"padding_bottom":36}},"video":{"type":"video","settings":{"heading":"","heading_size":"h1","video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","description":"","full_width":false,"color_scheme":"background-1","padding_top":36,"padding_bottom":36}},"34495eb1-00ec-4914-adb3-ffdb5a0a3e19":{"type":"metaobject-test","custom_css":["h2 {font-size: 30px; font-weight: 600;}",".metaobject-text {color: #000;}",".metaobject--container {display: flex; align-items: center; gap: 5rem; margin: 50px auto;}",".metaobject-img--container {width: 50%; height: 40rem;}",".metaobject-img--container img {width: 100%; height: 100%; object-fit: cover;}",".metaobject-content--container {width: 50%;}"],"settings":{}},"692860df-ac70-48e7-b922-3a06941bea56":{"type":"featured-blog","disabled":true,"settings":{"heading":"Blog posts","heading_size":"h1","blog":"hair-doctors","post_limit":3,"columns_desktop":3,"color_scheme":"background-1","show_image":true,"show_date":true,"show_author":false,"show_view_all":true,"padding_top":36,"padding_bottom":36}},"ef8bed19-3ed5-4fab-af8d-a2642a3523f4":{"type":"prebuild-form-solution","settings":{}},"image_carousel_dMywnp":{"type":"image-carousel","blocks":{"custom_pB86JT":{"type":"custom","settings":{}},"custom_ejFt6J":{"type":"custom","settings":{}},"custom_nAdaQV":{"type":"custom","settings":{}},"custom_GE3CAx":{"type":"custom","settings":{}},"custom_EYAkEY":{"type":"custom","settings":{}},"custom_YXhKtk":{"type":"custom","settings":{}},"custom_9bim7K":{"type":"custom","settings":{}},"custom_kBpzkr":{"type":"custom","settings":{}},"custom_GKeJUq":{"type":"custom","settings":{}}},"block_order":["custom_pB86JT","custom_ejFt6J","custom_nAdaQV","custom_GE3CAx","custom_EYAkEY","custom_YXhKtk","custom_9bim7K","custom_kBpzkr","custom_GKeJUq"],"settings":{}}},"order":["block-test","image_banner","rich_text","featured_collection","collage","video","34495eb1-00ec-4914-adb3-ffdb5a0a3e19","692860df-ac70-48e7-b922-3a06941bea56","ef8bed19-3ed5-4fab-af8d-a2642a3523f4","image_carousel_dMywnp"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "17270754400d504564": {
+      "type": "apps",
+      "blocks": {
+        "smart_stories_smart_stories_gcJqch": {
+          "type": "shopify://apps/smart-stories/blocks/smart-stories/dfb95db1-52c1-4619-9def-bc221ea020d9",
+          "settings": {
+            "story-secret": "kf4PPWAjSaKKfXii",
+            "story-preview-secret": "yxlvKF4eAuDwFaXo",
+            "use_default_settings": true,
+            "data_type": "newest",
+            "dynamic_collection": "shoes",
+            "primary_color": "#000000",
+            "secondary_color": "#000000",
+            "corner_radius": 10,
+            "show_group_name": true,
+            "autoplay_audio": true,
+            "font": "helvetica_n4",
+            "story_name_display": "0",
+            "fill": false,
+            "skew_sync": false,
+            "skew_degree": 4,
+            "full_width": true,
+            "floaty_theme": "0",
+            "floaty_corner_position": "0",
+            "vertical_thumb_spacing": 25,
+            "horizontal_thumb_spacing": 25,
+            "border_thickness": 1,
+            "border_gradient_ratio": 50,
+            "border_gradient_degree": 50
+          }
+        }
+      },
+      "block_order": [
+        "smart_stories_smart_stories_gcJqch"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_collection",
+    "17270754400d504564"
+  ]
+}

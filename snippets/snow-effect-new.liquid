@@ -1,0 +1,97 @@
+<div id="shopify-block-213521638856556604" class="shopify-block shopify-app-block" data-block-handle="snow_flake">
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake" style="left: 79.6241vw; animation-duration: 3.20178s; font-size: 19.1931px; opacity: 0.61296; animation-delay: 7.82162s;">
+      ❄
+    </div>
+  </div>
+</div>
+<style>
+  .snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 999999;
+  }
+
+  .snowflake {
+    position: absolute;
+    top: -30px;
+    user-select: none;
+    color: white;
+    will-change: transform;
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-30vh);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(130vh);
+      opacity: 1;
+    }
+  }
+</style>
+
+<script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const enableSnowflakes = {{ settings.enable_snowflakes }};
+  const numberOfSnowflakes = {{ settings.number_of_snowflakes }};
+  const enableConfetti = {{ settings.enable_confetti }};
+  const particleCount = {{ settings.particle_count }};
+  const animationDisplayOption = "{{ settings.animation_display_option }}";
+
+  // Check if animation should run based on page type
+  const isHomePage = window.location.pathname === '/';
+
+  const shouldRunAnimation =
+    animationDisplayOption === "all_pages" ||
+    (animationDisplayOption === "home_page" && isHomePage);
+
+  if (shouldRunAnimation) {
+    // Snowflake Animation
+    if (enableSnowflakes) {
+      const snowflakesContainer = document.querySelector('.snowflakes');
+
+      function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.textContent = '❄';
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        snowflake.style.animationDuration = Math.random() * 4 + 2 + 's';
+        snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+        snowflake.style.opacity = Math.random() * 0.5 + 0.5;
+        snowflake.style.animationDelay = Math.random() * 10 + 's';
+
+        snowflakesContainer.appendChild(snowflake);
+        snowflake.addEventListener('animationend', () => snowflake.remove());
+      }
+
+      for (let i = 0; i < numberOfSnowflakes; i++) {
+        createSnowflake();
+      }
+      setInterval(createSnowflake, 5000);
+    }
+
+    // Confetti Animation
+    if (enableConfetti) {
+      function launchConfetti() {
+        confetti({
+          particleCount: particleCount,
+          spread: 180,
+        });
+      }
+
+      // Initial burst and timed intervals
+      launchConfetti();
+      setTimeout(launchConfetti, 4000);
+    }
+  }
+});
+
+</script>
