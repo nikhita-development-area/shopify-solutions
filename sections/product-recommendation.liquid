@@ -1,0 +1,362 @@
+{% assign related_products = product.metafields.custom.related_products.value %}
+{% if related_products %}
+  <div class="product-ecommendations--containerpage-width">
+    {% if product.tags.size > 0 %}
+      <h2 class="section-heading product-ecommendations--heading">{{ section.settings.related-products }}</h2>
+      <div class="product-ecommendations--products product-grid">
+          {% for related_product in related_products limit: 4 %}
+            {% if related_product.available == true %}
+            <div class="product-ecommendations--card product-class">
+              <a href="{{ related_product.url }}" style="text-decoration:none;">
+                <!-- Use the product ID in the data-variant-image and data-variant-color attributes for each option -->
+                {% render 'responsivePicture', 
+                  class: , id: 'product-recommendation--image', loading: 'lazy',
+                  desktopImage: related_product.featured_image
+                %}
+                <h3 class="product-title h4 title">{{ related_product.title }}</h3>
+              </a>
+              <div class="price-checkbox">
+                <p class="p-price">{{ related_product.price | money }}</p>
+                <label>
+                  <input
+                    type="checkbox"
+                    class="product-checkbox"
+                    data-variant-id="{{ related_product.variants.first.id }}"
+                  >
+                </label>
+              </div>
+              <!-- Display variants -->
+              <select class="variant-select">
+                {% for variant in related_product.variants %}
+                  <option
+                    class="variant-option"
+                    value="{{ variant.id }}"
+                    data-variant-image="{{ variant.image.src | img_url: 'medium' }}"
+                    data-variant-color="{{ variant.options }}"
+                  >
+                    {{ variant.options | join: ' - ' }}
+                  </option>
+                {% endfor %}
+              </select>
+              <!-- Color swatches -->
+              <div class="color-swatches">
+                {% for variant in related_product.variants %}
+                  <div class="color-swatch" data-variant-color="{{ variant.options }}"></div>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+          {% endfor %}
+      </div>
+    {% endif %}
+  
+    <div class="atc-btn cart-btn">
+      <!-- Display total amount before the "Add to Cart" button -->
+      <!-- <div id="total-amount" style="margin-top: 10px;">Total Amount</div> -->
+      <add-button>
+        <button class="custom-addToCart">Add to Cart</button>
+      </add-button>
+    </div>
+  </div>
+{% endif %}
+
+<style>
+  /* General Styles for Product Recommendations Section */
+.product-ecommendations--containerpage-width {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.product-ecommendations--heading {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.product-ecommendations--products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-ecommendations--card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  padding: 20px;
+}
+
+.product-ecommendations--card:hover {
+  transform: translateY(-5px);
+}
+
+.product-ecommendations--card .product-class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-recommendation--image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  margin: 15px 0 10px;
+}
+
+.p-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+picture#product-recommendation--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.price-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.product-checkbox {
+  margin-left: 10px;
+}
+
+.variant-select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.variant-select option {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.color-swatches {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.color-swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.color-swatch:hover {
+  border-color: #333;
+}
+
+/* Add to Cart Button Section */
+.cart-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.custom-addToCart {
+  background-color: #2a9d8f;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-addToCart:hover {
+  background-color: #219e80;
+}
+
+.custom-addToCart:focus {
+  outline: none;
+}
+picture#product-recommendation--image {
+    display: block;
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+  .product-ecommendations--products {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-title {
+    font-size: 16px;
+  }
+
+  .p-price {
+    font-size: 14px;
+  }
+
+  .variant-select {
+    font-size: 12px;
+  }
+
+  .color-swatches {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-ecommendations--products {
+    grid-template-columns: 1fr;
+  }
+
+  .product-title {
+    font-size: 14px;
+  }
+
+  .p-price {
+    font-size: 12px;
+  }
+
+  .variant-select {
+    font-size: 10px;
+  }
+}
+
+</style>
+<script>
+class CustomEle extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      this.addEventListener("click", (e) => this.handleClick(e));
+
+      // Add event listener to handle variant changes
+      let variantSelects = document.querySelectorAll(".variant-select");
+      variantSelects.forEach((select) => {
+        select.addEventListener("change", () => this.handleVariantChange(select));
+      });
+    }
+
+    handleClick(e) {
+      let selectedProducts = document.querySelectorAll(".product-checkbox:checked");
+      let itemsToAdd = [];
+
+      selectedProducts.forEach((product) => {
+        let variantId;
+        let variantSelect = product.closest(".product-class").querySelector(".variant-select");
+
+        if (variantSelect) {
+          variantId = variantSelect.value;
+        } else {
+          variantId = product.dataset["variantId"];
+        }
+
+        let addQuantity = 1;
+        itemsToAdd.push({ id: variantId, quantity: addQuantity });
+      });
+
+      // Render cart contents after updating the total amount
+      this.renderCartContents(itemsToAdd);
+    }
+
+    renderCartContents(itemsToAdd) {
+      let cart =
+        document.querySelector("cart-notification") ||
+        document.querySelector("cart-drawer");
+
+      fetch("/cart/add.js", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          items: itemsToAdd,
+          sections: cart.getSectionsToRender().map((section) => section.id),
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          
+          console.log({ data });
+          
+          cart.renderContents(data);
+
+          // Uncheck the checkboxes after adding to the cart
+          let selectedProducts = document.querySelectorAll(".product-checkbox:checked");
+          selectedProducts.forEach((product) => {
+            product.checked = false;
+          });
+        });
+    }
+
+    handleVariantChange(select) {
+      // Update the product image and color swatches when the variant changes
+      let productClass = select.closest(".product-class");
+      let selectedVariant = select.options[select.selectedIndex];
+      let variantImage = selectedVariant.dataset.variantImage;
+      let variantColor = selectedVariant.dataset.variantColor;
+
+      if (variantImage) {
+        let productImage = productClass.querySelector("img");
+        productImage.src = variantImage;
+      }
+
+      // Update the color swatches
+      let colorSwatches = productClass.querySelectorAll(".color-swatch");
+      colorSwatches.forEach((swatch) => {
+        if (swatch.dataset.variantColor === variantColor) {
+          swatch.classList.add("selected-swatch");
+        } else {
+          swatch.classList.remove("selected-swatch");
+        }
+      });
+    }
+  }
+// location.reload();
+
+  customElements.define("add-button", CustomEle);
+
+</script>
+
+{% schema %}
+{
+  "name": "Product Recommendations",
+  "class": "product-ecommendations",
+  "settings": [
+    {
+      "type": "text",
+      "id": "related-products",
+      "label": "Related Products"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Recommendations"
+    }
+  ]
+}
+{% endschema %}

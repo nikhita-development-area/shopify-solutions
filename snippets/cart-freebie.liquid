@@ -1,0 +1,581 @@
+<script src="{{ 'cart-freebie.js' | asset_url }}" defer></script>
+<cart-free-gift class="drawer__content">
+  <div class="free-gift-toaster" id="free-gift-toaster"></div>
+    {%- if settings.block-heading != blank -%}
+      <header class="section__header">
+        <div class="text-container">
+          <h2 class="heading h4">{{ settings.block-heading }}</h2>
+        </div>
+      </header>
+    {%- endif -%}
+            {% assign cartTotal = cart.items_subtotal_price | divided_by: 100 %}
+            {% assign shippingThreshold = settings.freegift__threshold_01 | plus: 0 %}
+            {% assign priceBalance = shippingThreshold | minus: cartTotal | times: 100 | money_without_trailing_zeros %}
+
+            {% assign shippingThreshold02 = settings.freegift__threshold_02 | plus: 0 %}
+            {% assign priceBalance02 = shippingThreshold02 | minus: cartTotal | times: 100 | money_without_trailing_zeros %}
+            
+            {% assign shippingThreshold03 = settings.freegift__threshold_03 | plus: 0 %}
+            {% assign priceBalance03 = shippingThreshold03 | minus: cartTotal | times: 100 | money_without_trailing_zeros %}
+
+            {% if cartTotal >= shippingThreshold03 %}
+                <div class="cart-freegift-progress--message">
+                    {{ settings.post_arrival_message }}
+                </div>
+            {% else %}
+                {% if cartTotal < shippingThreshold %}
+                    <div class="cart-freegift--message">
+                        {{ settings.pre_arrival_message | replace: '$', priceBalance }}
+                    </div>
+                {% elsif cartTotal < shippingThreshold02 %}
+                    <div class="cart-freegift--message">
+                        {%  assign freeGiftPreText = settings.pre_arrival_message |  replace: ' a ', ' one more ' %}
+                        {{ freeGiftPreText | replace: '$', priceBalance02 }}
+                    </div>
+                {% elsif cartTotal < shippingThreshold03 %}
+                    <div class="cart-freegift--message">
+                        {%  assign freeGiftPreText = settings.pre_arrival_message |  replace: ' a ', ' one more ' %}
+                        {{ freeGiftPreText | replace: '$', priceBalance03 }}
+                    </div>
+                {% endif %}
+            {% endif %}
+
+            <div class="cart-free-gift--wrapper">
+                {%- for i in (1..3) -%}
+                    <div class="freegift-product--wrapper
+                    {% if forloop.index == 1 and cartTotal < shippingThreshold %}disabled-freebie{% endif %}
+                    {% if forloop.index == 2 and cartTotal < shippingThreshold02 %}disabled-freebie{% endif %} 
+                    {% if forloop.index == 3 and cartTotal < shippingThreshold03 %}disabled-freebie{% endif %}">
+                        {%- assign products = 'free_product-0' | append: i -%}
+                      {% comment %}
+                        {%- render 'freegift-item-card', product: settings[products], show_cta: true -%}
+                      {% endcomment %}
+                      {% assign  product = settings[products] %}
+                          <product-item class="product-item {% unless product.available %}product-item--sold-out{% endunless %}">
+                              <div class="product-item__image-wrapper">
+                                  <label class="free-gift-check-container checkbox-container">
+                                      <input type="checkbox" id="gift-checkbox" >
+                                      <span class="checkmark"></span>
+                                  </label>
+                                  <a
+                                  href="{{ product.url }}"
+                                  class="product-item__aspect-ratio aspect-ratio"
+                                  style="padding-bottom: {{ 100.0 | divided_by: product.featured_media.preview_image.aspect_ratio }}%; --aspect-ratio: {{ product.featured_media.preview_image.aspect_ratio }}">
+                                  <!-- <img
+                                      class="product-item__primary-image"
+                                      loading="lazy"
+                                      data-media-id="{{ product.featured_media.id | escape }}"
+                                      sizes="{{ sizes_attribute }}"
+                                      width="auto"
+                                      height="auto"
+                                      {% render 'image-attributes', image: product.featured_media, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200' %}> -->
+
+                                    <img
+                                      class="cart-item__image"
+                                      id="freebie--image"
+                                      src="{{ product.featured_media | image_url: width: 300 }}"
+                                      alt="{{ product.featured_media.alt | escape }}"
+                                      loading="lazy"
+                                      width="150"
+                                      height="{{ 150 | divided_by: product.featured_media | ceil }}"
+                                    >
+                                  </a>
+                              </div>
+                          
+                              <div class="product-item__info">
+                                  <div class="product-item-meta">
+                                      <a href="{{ product.url }}" class="product-item-meta__title">{{ product.title }}</a>
+                                      <div class="price-atc-wrapper freebie-price--wrapper">
+                                          <button class="cart-freebie-button">
+                                              Freebie
+                                          </button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </product-item>
+                    </div>
+                {% endfor %}
+            </div>
+
+</cart-free-gift>
+<script>
+window.REFRESH_CART = (cart) => {
+   document.documentElement.dispatchEvent(new CustomEvent("cart:refresh", {
+    bubbles: true,
+    detail: {
+      cart: cart,
+      openMiniCart: false
+    }
+  }));
+}
+</script>
+<style>
+  /* Free Gift Toaster Notification */
+.free-gift-toaster {
+    position: fixed;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 20px;
+    min-width: 250px;
+    background-color: #28a745; /* Green background */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.free-gift-toaster[open] {
+    bottom: 30px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* cart shipping bar style */
+.cart-shipping-bar--container {
+    padding: 0 25px 12px 25px;
+}
+
+cart-free-gift .section__header,
+.cart-freegift-progress--message {
+    padding: 0 25px 0 25px;
+}
+
+.cart-shipping-bar-progress--message p,
+.cart-shipping-bar--message p,
+.cart-freegift-progress--message p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.47px;
+    text-align: left;
+    color: #2A431C;
+    text-transform: capitalize;
+}
+
+.cart-shipping-bar--message {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cart-freegift--message {
+    text-align: left;
+}
+
+.shipping-bar--wrapper {
+    background: #D9D9D9;
+    width: 100%;
+    border-radius: 2rem;
+    position: relative;
+}
+
+.shipping-progress-bar {
+    background: #2A431C;
+    display: block;
+    transition: all .5s ease 0s;
+    min-height: 5px;
+    border-radius: 24px;
+}
+
+/* cart recommendations */
+product-list.product-list .scroller {
+    margin: 0;
+}
+
+product-recommendations.section.section--flush .vertical-breather.vertical-breather--tight {
+    padding: 0 16px;
+}
+
+.mini-cart__recommendations .mini-cart__recommendations-list .product-item-meta span.money.buckscc-money {
+    font-size: 12px !important;
+}
+
+product-recommendations .product-item__info.product-item__info--with-button {
+    overflow: hidden;
+}
+
+product-recommendations.section.section--flush .jdgm-star.jdgm--on:before {
+    width: 10px;
+    display: inline-block;
+}
+
+product-recommendations.section.section--flush .jdgm-prev-badge__text {
+    font-size: 9px;
+}
+
+product-recommendations.section.section--flush .product-item__info--with-button {
+    justify-content: flex-start;
+}
+
+product-recommendations.section.section--flush .price-atc-wrapper .money {
+    font-size: 12px !important;
+}
+
+product-recommendations.section.section--flush .price-atc-wrapper .product-item-meta__price-list-container {
+    margin-top: 5px;
+}
+
+product-recommendations.section.section--flush .price-atc-wrapper .product-item__cta.button {
+    background: transparent;
+    border: none;
+    height: auto;
+    width: auto;
+    color: #29421b;
+    padding: 0;
+    margin: 0;
+}
+
+product-recommendations.section.section--flush .price-atc-wrapper .product-item__cta.button svg {
+    width: 25.61px;
+    height: 25.61px;
+    padding: 6px 0px 0px 0px;
+    border-radius: 2.75px 0px 0px 0px;
+    opacity: 1;
+}
+
+product-recommendations.section.section--flush .mini-cart__recommendations .product-item-meta__title {
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+product-recommendations.section.section--flush .product-item__info {
+    padding: 0 8px;
+}
+
+cart-drawer-recommendations.mini-cart__recommendations .price-atc-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+cart-drawer-recommendations.mini-cart__recommendations header.section__header h2 {
+    font-size: 16px;
+    font-weight: 350;
+    line-height: 19.2px;
+    text-align: left;
+}
+
+cart-drawer-recommendations.mini-cart__recommendations header.section__header {
+    margin: 0;
+    border-bottom: 1px solid #2A431C33;
+    padding-bottom: 16px;
+}
+
+cart-drawer-recommendations .cart-drawer-recommendations-wrapper {
+    margin: 24px 0;
+}
+
+cart-drawer-recommendations.mini-cart__recommendations .product-item,
+cart-free-gift product-item.product-item {
+    flex-direction: row;
+    background: #FFFFFF;
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    margin: 35px 10px 25px 0px;
+    width: auto;
+}
+
+cart-drawer-recommendations.mini-cart__recommendations .product-item__aspect-ratio,
+cart-free-gift .product-item__aspect-ratio {
+    width: 100%;
+    height: 100%;
+}
+
+cart-drawer-recommendations.mini-cart__recommendations .aspect-ratio--square img,
+cart-drawer-recommendations.mini-cart__recommendations .aspect-ratio--short img,
+cart-drawer-recommendations.mini-cart__recommendations .aspect-ratio--tall img,
+cart-free-gift img.product-item__primary-image {
+    object-fit: cover;
+}
+
+cart-drawer-recommendations.mini-cart__recommendations .jdgm-prev-badge {
+    display: flex !important;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.mini-cart__recommendations .product-item-meta__title {
+    min-height: 20px;
+    max-height: 20px;
+}
+
+.shipping-estimator {
+    display: none;
+}
+
+.line-item__quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+cart-drawer .product-item-meta__title {
+    line-height: 20px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+cart-drawer .product-item-meta__property-list {
+    margin: 0;
+}
+
+.line-item__content-wrapper {
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.line-item {
+    border-bottom: 1px solid #2A431C33;
+}
+
+.product-item-meta__title,
+.manual_class_cart__price_down #product-issuance-msg {
+    color: #2A431C;
+}
+
+.line-item__content-wrapper .price-list--stack span.buckscc-money {
+    color: #2a431c !important;
+}
+
+.mini-cart__actions .pop_club_cart {
+    margin: 0 !important;
+}
+
+.cart_shipping_note {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 11.48px;
+    text-align: center;
+    color: #7E7E7E;
+}
+
+.button-wrapper,
+.cart_shipping_note {
+    margin-top: 8px;
+}
+
+cart-drawer#mini-cart.drawer--large {
+    padding-bottom: 0;
+}
+
+cart-drawer .mini-cart__drawer-footer {
+    padding-bottom: 20px;
+}
+
+/* free gift card css */
+.freegift-product--wrapper {
+    padding: 10px 28px;
+}
+
+cart-free-gift product-item.product-item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    align-items: center;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.disabled-freebie {
+    background-color: #ccc0;
+    filter: grayscale(100%);
+}
+
+cart-free-gift .product-item__image-wrapper {
+    width: 25%;
+    margin: 0;
+    padding: 10px;
+}
+
+cart-free-gift .product-item__info {
+    width: 75%;
+    padding: 8px 0 8px;
+}
+
+cart-free-gift .jdgm-widget.jdgm-widget {
+    text-align: left;
+    font-size: 12px;
+}
+
+cart-free-gift .section__header {
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: left;
+}
+cart-free-gift .section__header h2.heading {
+    font-size: 16px;
+}
+.price-atc-wrapper.freebie-price--wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+button.cart-freebie-button {
+    width: 62px;
+    height: 26px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, rgba(250, 172, 24, 0.2) 0%, rgba(241, 223, 183, 0.4) 100%);
+    font-size: 12px;
+    text-align: center;
+}
+cart-free-gift .price-atc-wrapper.freebie-price--wrapper span.price {
+    text-decoration: line-through;
+    text-decoration-thickness: 2.2px;
+}
+.free-gift-check-container.checkbox-container {
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    cursor: pointer;
+    top: 15%;
+    left: 9%;
+    z-index: 22;
+    pointer-events: painted;
+}
+.disabled-freebie .free-gift-check-container.checkbox-container{
+    pointer-events: none;
+}
+
+.free-gift-check-container.checkbox-container input {
+    display: none;
+}
+
+.free-gift-check-container .checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid #eee;
+}
+
+.free-gift-check-container .checkmark:after {
+    content: "\2714";
+    font-size: 14px;
+    color: #2a431c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.free-gift-check-container.checkbox-container input:checked+.checkmark:after {
+    display: block;
+    transition: all 0.15s linear;
+    transition-delay: 1s;
+}
+
+.free-gift-check-container .label-text {
+    margin-left: 10px;
+    font-size: 16px;
+}
+.line-item__image-wrapper {
+    width: 25%;
+}
+.line-item__info{
+    width: 75%;
+}
+@media screen and (max-width:741px) {
+    .product-list__inner {
+        gap: 16px;
+    }
+
+    .shopify-section--main-collection .product-list__inner {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .article__main-part img {
+        max-width: 100% !important;
+        height: auto !important;
+        overflow: hidden;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    cart-drawer-recommendations.mini-cart__recommendations .jdgm-widget.jdgm-widget {
+        display: none;
+    }
+
+    cart-drawer-recommendations.mini-cart__recommendations header.section__header {
+        border-bottom: none;
+        position: absolute;
+    }
+
+    cart-drawer-recommendations.mini-cart__recommendations flickity-carousel button.flickity-button.flickity-prev-next-button.next,
+    cart-drawer-recommendations.mini-cart__recommendations flickity-carousel button.flickity-button.flickity-prev-next-button.previous {
+        width: 20px;
+        width: 20px;
+        position: absolute;
+        top: 0;
+    }
+
+    cart-drawer-recommendations.mini-cart__recommendations flickity-carousel button.flickity-button.flickity-prev-next-button.previous {
+        right: 15px;
+    }
+
+    cart-drawer-recommendations.mini-cart__recommendations flickity-carousel button.flickity-button.flickity-prev-next-button.next {
+        right: 0px;
+    }
+
+    cart-drawer-recommendations.mini-cart__recommendations .product-item {
+        width: 110px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    cart-drawer-recommendations.mini-cart__recommendations flickity-carousel button.flickity-button svg {
+        width: 15px;
+        height: 30px;
+    }
+
+    cart-drawer-recommendations.mini-cart__recommendations .product-item__image-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+    cart-free-gift .product-item__image-wrapper {
+        width: 30%;
+    }
+    .free-gift-check-container.checkbox-container {
+        left: 30%;
+    }
+}
+
+@media screen and (min-width: 741px) {
+
+    .cart-shipping-bar-progress--message p,
+    .cart-shipping-bar--message p {
+        font-size: 16px;
+        padding-bottom: 12px;
+    }
+
+    .cart-shipping-bar--container {
+        padding: 0 28px 20px 28px;
+    }
+
+    cart-free-gift .section__header,
+    .cart-freegift--message {
+        padding: 0 28px 0 28px;
+    }
+
+    .mini-cart__recommendations,
+    .cart-drawer--container {
+        overflow-y: scroll;
+    }
+
+    cart-drawer#mini-cart {
+        overflow: visible;
+    }
+}
+</style>
